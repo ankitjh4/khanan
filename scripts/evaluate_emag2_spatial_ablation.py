@@ -39,7 +39,7 @@ FOLD_PATH = OUT / "material_emag2_spatial_ablation_folds.csv"
 VALIDATION_PATH = OUT / "emag2_spatial_ablation_validation.json"
 DICTIONARY_PATH = OUT / "data_dictionary.csv"
 
-RELEASE_VERSION = "v1.0-alpha.5"
+RELEASE_VERSION = "v1.0-alpha.6"
 EXPERIMENT_VERSION = "emag2-spatial-ablation-v0.1"
 EARTH_RADIUS_KM = 6371.0088
 GLOBAL_SEED = 20260910

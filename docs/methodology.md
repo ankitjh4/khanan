@@ -84,7 +84,15 @@ Commodity text used by the v0.6 model is normalized to its 50-target set using a
 - **Geology:** age, supergroup, group, stratigraphy, and map-unit ID are sampled at each centroid from the public Esri India feature service. The service metadata does not identify the polygon source, scale, or reuse license, so the release redistributes only sampled attributes and flags this limitation.
 - **Terrain:** WorldClim 2.1 elevation, derived from SRTM, supplies centroid elevation and reconnaissance-scale slope/relief estimates.
 
-## 9. NGDR/GSI service audit
+## 9. ISRIC SoilGrids 2.0 context
+
+Alpha.6 adds nine modeled soil properties from [ISRIC SoilGrids 2.0](https://docs.isric.org/globaldata/soilgrids/index.html), a CC BY 4.0 global product with native 250 m predictions and quantified uncertainty. KHANAN extracts pH in water, clay, sand, silt, soil organic carbon, cation exchange capacity, total nitrogen, bulk density and coarse fragments for 0–5 cm and 30–60 cm. The official integer storage units are converted to the conventional units documented by ISRIC. Mean, p05 and p95 fields remain separate; p05 and p95 are the lower and upper bounds of the source's 90% prediction interval.
+
+The reproducible build makes 54 WCS requests over 68–98°E and 6–38°N using EPSG:4326, a 1,200 × 1,280 output grid, 0.025-degree cells and nearest-neighbour interpolation. Every GeoTIFF is checked for dimensions, transform, bounds, CRS, dtype and nodata metadata, then SHA-256 hashed. H3 centroids are matched to the nearest WCS output-pixel centre. All rasters align; the maximum join distance is 1.938 km. Minimum national prediction coverage is 99.28%, and no p05/p95 pair is reversed.
+
+Surface and subsoil USDA texture classes are derived after normalizing each mean sand/silt/clay triplet to 100%; the pre-normalization sum is retained. Global SoilGrids predictions are not field assays or deposit evidence, and the models use environmental covariates that can overlap with KHANAN climate, land-cover and terrain features. Alpha.6 therefore publishes the soil layer as context only. Protected ranking-column hashes are identical before and after augmentation. See [`soilgrids_features.md`](soilgrids_features.md) for the extraction contract and limitations.
+
+## 10. NGDR/GSI service audit
 
 The v1.0-alpha.3 pipeline establishes a public guest session at the National Geoscience Data Repository and audits the session-scoped WMS 1.1.1 and WFS 1.0.0 services used by the guest map. The 10 September 2026 audit observed 1,114 named WMS layers and 751 WFS feature types. Eleven nationally relevant feature types were selected across commodity occurrences, critical minerals, mineralization, stream-sediment and soil geochemistry, national soils, magnetics, gravity, lithology and regional geology.
 
@@ -92,7 +100,7 @@ For each selected layer, the pipeline records the WFS feature count, WGS84 bound
 
 The GSI Data Sharing and Accessibility Policy, 2019 distinguishes open viewing from registered download and includes non-transfer and third-party redistribution restrictions for supplied digital data. The WFS schemas also omit essential scientific metadata for several analytical layers, including definitive units, methods, detection limits, survey scale, reduction parameters and missing-value codes. KHANAN therefore publishes only the metadata audit in this release. Raw probes remain in the ignored local source cache and all NGDR feature values are excluded from training, validation and candidate ranking. The exact decision and admission gates are documented in [`ngdr_access_and_integration.md`](ngdr_access_and_integration.md).
 
-## 10. NOAA/NCEI EMAG2v3 magnetic context
+## 11. NOAA/NCEI EMAG2v3 magnetic context
 
 The v1.0-alpha.4 feature pipeline acquires the NOAA/NCEI [EMAG2v3 product](https://www.ncei.noaa.gov/products/earth-magnetic-model-anomaly-grid-2), its error-estimate raster, source-code raster and official format file. Every downloaded file is size-checked and SHA-256 hashed. The source is the two-arc-minute global compilation described by Meyer, Saltus and Chulliat (2017), [DOI 10.7289/V5H70CVX](https://doi.org/10.7289/V5H70CVX). KHANAN selects the anomaly product upward-continued to a consistent 4 km altitude to reduce elevation-basis inconsistency across the national screen.
 
@@ -102,7 +110,7 @@ The standalone feature table contains 88,857 unique H3 cells. Of these, 84,688 (
 
 EMAG2v3 is a heterogeneous satellite, ship, airborne and precompiled-source product. A magnetic anomaly can reflect lithology, structure, depth, processing and survey coverage; it is not direct evidence of a particular mineral, deposit, grade or recoverability. Alpha.4 therefore appends these columns to the national and candidate tables as context but leaves all v0.6 prospectivity scores, classes and ranks unchanged. Material-specific feature ablation, spatial holdout comparison and leakage checks are required before any EMAG2 feature can enter scoring.
 
-## 11. EMAG2 feature-admission ablation
+## 12. EMAG2 feature-admission ablation
 
 Alpha.5 evaluates the incremental magnetic feature family with paired class-balanced logistic models. Positives are deduplicated to unique material/H3 resolution-6 cells. Deterministic pseudo-absence cells must be more than 25 km from every mapped material-positive cell. Whole H3 resolution-3 groups are assigned to spatial folds, and training observations within 50 km of a held-out positive are purged. Distance, density and geological-affinity features are reconstructed inside each fold; training positives use leave-one-out values. Imputation and robust scaling use training-fold statistics only.
 
@@ -110,7 +118,7 @@ The baseline combines geology affinity, terrain, rolling climate and fold-safe p
 
 Fourteen of the 50 retained targets have at least 10 unique positive H3 cells and three positive spatial groups. Nine have a positive pooled AUC change and five decline, but no positive change has a bootstrap lower bound above zero. No material passes the fixed support, coverage, AUC, uncertainty and recall gates. The candidate table hash is unchanged and EMAG2 remains excluded from scoring. See [`emag2_spatial_ablation.md`](emag2_spatial_ablation.md) for the complete protocol and interpretation.
 
-## 12. Material ontology and model eligibility
+## 13. Material ontology and model eligibility
 
 The v1.0-alpha.2 ontology contains 230 unique, typed entities derived from material terms actually observed in the India source tables, plus the retained v0.6 targets. It contains 69 elements, 85 mineral species, and 76 other entities spanning ores, rocks, groups, mixtures, varieties, industrial materials, and energy commodities. Stable typed IDs prevent an element, ore, mineral species, and informal group from being silently treated as the same thing.
 
@@ -124,7 +132,7 @@ Ontology inclusion never confers model eligibility. The geospatial prediction co
 
 Ontology arrays identify names, possible compounds, or representative forms; they do not assert assay, grade, recoverability, mineral processing route, or economic value at a site. Formulas are supplied only for elements, verified species, or defensible compounds. Otherwise the English names are preserved in arrays as requested.
 
-## 13. Reconnaissance score
+## 14. Reconnaissance score
 
 For a material with at least five mapped source records, cell score components are:
 
@@ -148,7 +156,7 @@ and clipped to 0–1. Materials with one to four evidence records receive a low-
 
 The score is a relative reconnaissance index. It is **not a calibrated discovery probability**.
 
-## 14. Spatial validation
+## 15. Spatial validation
 
 Materials with at least 10 mapped India evidence records are evaluated with up to five GroupKFold splits grouped by H3 resolution-3 cells. Each fold trains the same score recipe on geographically separated evidence and compares held-out occurrences with a deterministic sample of grid cells more than 25 km from any catalog evidence.
 
@@ -161,7 +169,7 @@ The comparison cells are not confirmed barren, so these metrics measure catalog-
 
 In v0.1, 15 material models have at least 10 records and spatial validation results. Vanadium's holdout AUC was below the promotion threshold and is therefore not labeled as a candidate even when its raw score is high.
 
-## 15. Candidate promotion rules
+## 16. Candidate promotion rules
 
 A cell is never promoted when it is within 5 km of any mapped source site. For all candidate classes, the top material must have at least 10 source records and the nearest same-material evidence must be more than 25 km and no more than 250 km away.
 
@@ -180,7 +188,7 @@ A cell is never promoted when it is within 5 km of any mapped source site. For a
 
 The national rank sorts passing candidates by validation AUC, then percentile, then score. Neighboring high-ranked H3 cells are usually one regional signal and should be dissolved/clustered before field planning.
 
-## 16. Validation and quality controls
+## 17. Validation and quality controls
 
 The release checks:
 
@@ -203,7 +211,7 @@ The release checks:
 
 Build-time results are written to `outputs/validation_report.json`. A passing report means the pipeline's structural checks passed; it does not validate mineral occurrence in the field.
 
-## 17. What is required for a defensible discovery model
+## 18. What is required for a defensible discovery model
 
 Before using the output to allocate exploration capital, add:
 

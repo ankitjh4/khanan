@@ -5,18 +5,20 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v1.0-alpha.5"
+VERSION = "v1.0-alpha.6"
 
 BUNDLE_MEMBERS = [
     "README.md",
     "assets/README.md",
     "assets/maps/khanan-india-prospectivity-overview-v0.6.png",
     "assets/maps/khanan-emag2-magnetic-context-v0.7.png",
+    "assets/maps/khanan-soilgrids-context-v0.8.png",
     "assets/figures/khanan-emag2-spatial-ablation-v0.1.png",
     "data/README.md",
     "docs/methodology.md",
     "docs/emag2_spatial_ablation.md",
     "docs/ngdr_access_and_integration.md",
+    "docs/soilgrids_features.md",
     "outputs/README.md",
     "scripts/plot_khanan_overview.py",
     "scripts/plot_emag2_context.py",
@@ -24,6 +26,8 @@ BUNDLE_MEMBERS = [
     "scripts/audit_ngdr_services.py",
     "scripts/build_emag2_features.py",
     "scripts/evaluate_emag2_spatial_ablation.py",
+    "scripts/build_soilgrids_features.py",
+    "scripts/plot_soilgrids_context.py",
     "scripts/build_ibm_abandoned_mines.py",
     "scripts/build_material_ontology.py",
     "config/materials.json",
@@ -39,6 +43,7 @@ BUNDLE_MEMBERS = [
     "outputs/india_mining_prospectivity_grid_h3_r6.csv",
     "outputs/india_mining_candidate_areas_validation_gated.csv",
     "outputs/india_emag2v3_magnetic_features_h3_r6.csv",
+    "outputs/india_soilgrids_v2_soil_features_h3_r6.csv",
     "outputs/india_strategic_materials_top50.csv",
     "outputs/india_material_ontology_v1.csv",
     "outputs/material_source_term_crosswalk_v1.csv",
@@ -57,6 +62,7 @@ BUNDLE_MEMBERS = [
     "outputs/material_emag2_spatial_ablation.csv",
     "outputs/material_emag2_spatial_ablation_folds.csv",
     "outputs/emag2_spatial_ablation_validation.json",
+    "outputs/soilgrids_v2_soil_features_validation.json",
     "outputs/nasa_power_rolling_12m_validation.json",
     "outputs/official_critical_blocks_validation.json",
 ]
@@ -72,6 +78,7 @@ HASHED_ARTIFACTS = [
     "india_mining_prospectivity_grid_h3_r6.csv",
     "india_mining_candidate_areas_validation_gated.csv",
     "india_emag2v3_magnetic_features_h3_r6.csv",
+    "india_soilgrids_v2_soil_features_h3_r6.csv",
     "india_strategic_materials_top50.csv",
     "india_material_ontology_v1.csv",
     "material_source_term_crosswalk_v1.csv",
@@ -90,6 +97,7 @@ HASHED_ARTIFACTS = [
     "material_emag2_spatial_ablation.csv",
     "material_emag2_spatial_ablation_folds.csv",
     "emag2_spatial_ablation_validation.json",
+    "soilgrids_v2_soil_features_validation.json",
     "nasa_power_rolling_12m_validation.json",
     "official_critical_blocks_validation.json",
     f"india_mining_dataset_csv_bundle_{VERSION}.zip",

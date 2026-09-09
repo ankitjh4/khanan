@@ -1,0 +1,2051 @@
+{
+  "release_version": "v1.0-alpha.6",
+  "geospatial_feature_version": "v0.8",
+  "feature_version": "soilgrids-v2-h3-r6-v0.1",
+  "build_date": "2026-09-10",
+  "source_accessed_date": "2026-09-10",
+  "source_product_url": "https://docs.isric.org/globaldata/soilgrids/index.html",
+  "source_layers_and_units_url": "https://docs.isric.org/globaldata/soilgrids/SoilGrids_faqs_01.html",
+  "source_access_and_license_url": "https://docs.isric.org/globaldata/soilgrids/SoilGrids_faqs_02.html",
+  "source_wcs_documentation_url": "https://docs.isric.org/globaldata/soilgrids/wcs.html",
+  "source_paper_doi": "https://doi.org/10.5194/soil-7-217-2021",
+  "source_license": "CC BY 4.0",
+  "wcs_request_bbox_epsg4326": [
+    68.0,
+    6.0,
+    98.0,
+    38.0
+  ],
+  "wcs_output_width": 1200,
+  "wcs_output_height": 1280,
+  "wcs_output_resolution_degrees": 0.025,
+  "native_product_resolution_m": 250,
+  "source_raster_count": 54,
+  "source_files": [
+    {
+      "property": "phh2o",
+      "depth": "0-5cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=phh2o_0-5cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 452914,
+      "sha256": "c8e38f9e8d42a1ba5828b364ab5331b6bf81c9603d49dc7040dd0d003a38f905",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987259,
+        "valid_pixel_rate": 0.6427467447916667
+      }
+    },
+    {
+      "property": "phh2o",
+      "depth": "0-5cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=phh2o_0-5cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 499354,
+      "sha256": "40580ebb7fb5c589960494dc0a045184184c3cfd91da73901d0741e7f36352eb",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987259,
+        "valid_pixel_rate": 0.6427467447916667
+      }
+    },
+    {
+      "property": "phh2o",
+      "depth": "0-5cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=phh2o_0-5cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 475761,
+      "sha256": "514b4bb278971165eefa0f53403fb94acf2ac27b580ddf1d62c7919060822763",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987259,
+        "valid_pixel_rate": 0.6427467447916667
+      }
+    },
+    {
+      "property": "phh2o",
+      "depth": "30-60cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=phh2o_30-60cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 459198,
+      "sha256": "d7c994dc5348fc6735ab1b56fa1880a81be00e0ceefbfed3c8629f23c8708bb8",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987259,
+        "valid_pixel_rate": 0.6427467447916667
+      }
+    },
+    {
+      "property": "phh2o",
+      "depth": "30-60cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=phh2o_30-60cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 515387,
+      "sha256": "eb08f86aa88c0e25a6236bf7c5866f2f43e08a09d56958536c747d27029875b7",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987259,
+        "valid_pixel_rate": 0.6427467447916667
+      }
+    },
+    {
+      "property": "phh2o",
+      "depth": "30-60cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fphh2o.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=phh2o_30-60cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 487922,
+      "sha256": "887eb7cd66aae24d0fbd2cf0ba221f2c174ca558f71b83f9ea636f03184b7426",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987259,
+        "valid_pixel_rate": 0.6427467447916667
+      }
+    },
+    {
+      "property": "clay",
+      "depth": "0-5cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fclay.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=clay_0-5cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 978593,
+      "sha256": "80b81952381dc220573a2a91b447c1b0707cdb95ebcae9ccb77fcf9afc7b510a",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "clay",
+      "depth": "0-5cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fclay.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=clay_0-5cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 663161,
+      "sha256": "7109b30f6a15634ba9ae518e9eca2453b8213f8ac9bb5e11566ab7a23d548df1",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "clay",
+      "depth": "0-5cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fclay.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=clay_0-5cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1154197,
+      "sha256": "584e4b5188a30f51a3d44e12137362a18bbd0cfde075938d59d19500c7e6fd8f",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "clay",
+      "depth": "30-60cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fclay.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=clay_30-60cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1002994,
+      "sha256": "d1e7ad8d52973f7f26b67dae50a97627d341873a4889e79b46e66a988213e894",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "clay",
+      "depth": "30-60cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fclay.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=clay_30-60cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 692378,
+      "sha256": "a48c2aeafe9186dc84c18e9fd3a5acc3ba8db1912457d2dbdba62131aba11797",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "clay",
+      "depth": "30-60cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fclay.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=clay_30-60cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1142182,
+      "sha256": "c925753e9c764e7ff34c1479b176a866dd15427cbffdafe3c47d148f2d949b83",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "sand",
+      "depth": "0-5cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsand.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=sand_0-5cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1030139,
+      "sha256": "c309b0cb156ec2ff20a20fcd0f826184100a2f80618ae5d812e8ada377c94a3d",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "sand",
+      "depth": "0-5cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsand.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=sand_0-5cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 944745,
+      "sha256": "2627dea2578e9abc28f0c85e18606e0f3b592ba0b57c5db459db8856452bb953",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "sand",
+      "depth": "0-5cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsand.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=sand_0-5cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1053112,
+      "sha256": "30518d9457d23137f5c029a0386be07a228bf44321aba412dbeb936c35aab120",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "sand",
+      "depth": "30-60cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsand.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=sand_30-60cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1036263,
+      "sha256": "0ca6302a559f1e8d0f30e72ec38181fb0a2c52097f00ec51c0564a76750651ba",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "sand",
+      "depth": "30-60cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsand.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=sand_30-60cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 930162,
+      "sha256": "569823cc1a4747a574cc2e8afe8388bfe2a9795284ee6e7e5f5e3b7b1ba8a539",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "sand",
+      "depth": "30-60cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsand.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=sand_30-60cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1082723,
+      "sha256": "a55d162b85d6a3e66baa13d64e98e4267317e8947036484b2c5a25b8369c2fec",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "silt",
+      "depth": "0-5cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsilt.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=silt_0-5cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1014318,
+      "sha256": "15e83bf4944162316f9ae500fcfd6d83b82c679ab315027848dfc63f8e7730e7",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "silt",
+      "depth": "0-5cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsilt.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=silt_0-5cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 782500,
+      "sha256": "7944f03489c935f8a63cd6738f94d18534380a7ce9581bb2af023221ba99e049",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "silt",
+      "depth": "0-5cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsilt.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=silt_0-5cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1125105,
+      "sha256": "5d8e2516283d9c2c060557dfb3e34f9f0e5e122c96876591495b8c2d0ddaa3a1",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "silt",
+      "depth": "30-60cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsilt.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=silt_30-60cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1009698,
+      "sha256": "17163fbd0dc0631fe2e5e697f794d66478d09a83aa4aac436ebb92dbc503b5e0",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "silt",
+      "depth": "30-60cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsilt.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=silt_30-60cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 758997,
+      "sha256": "4cb9df1fb2b528ae1450980fab509ac94e58e6c528ee97a9cdc0520223d05618",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "silt",
+      "depth": "30-60cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsilt.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=silt_30-60cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1130323,
+      "sha256": "eb866ae39be24730a3f3522302bf2891cb43422a3950e31dfe432e684e0745bf",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "soc",
+      "depth": "0-5cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsoc.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=soc_0-5cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1172320,
+      "sha256": "9b72de4043e66ff87a0d7bf0f8df420ebe098534b2aefaa1086e937d23d79733",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 985320,
+        "valid_pixel_rate": 0.641484375
+      }
+    },
+    {
+      "property": "soc",
+      "depth": "0-5cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsoc.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=soc_0-5cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 710066,
+      "sha256": "4151bcd6578dff4729c8731351bdef15fed2286554efd7b3c5f22db65695809e",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 985320,
+        "valid_pixel_rate": 0.641484375
+      }
+    },
+    {
+      "property": "soc",
+      "depth": "0-5cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsoc.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=soc_0-5cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1416360,
+      "sha256": "8e13d0af6bdfec9c51c90501f40aeb123e2803de06d46f14368becd088667e10",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 985320,
+        "valid_pixel_rate": 0.641484375
+      }
+    },
+    {
+      "property": "soc",
+      "depth": "30-60cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsoc.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=soc_30-60cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1023561,
+      "sha256": "3b71904f5575788879c3c858f9a9cb75adf6457aa641ebd6c3ab8909d13c4f32",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 985320,
+        "valid_pixel_rate": 0.641484375
+      }
+    },
+    {
+      "property": "soc",
+      "depth": "30-60cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsoc.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=soc_30-60cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 498249,
+      "sha256": "969484e95f84aa96ad7c384991c203a6e092455f95c725bba9571d67ea3c6c18",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 985320,
+        "valid_pixel_rate": 0.641484375
+      }
+    },
+    {
+      "property": "soc",
+      "depth": "30-60cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fsoc.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=soc_30-60cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1283042,
+      "sha256": "8fe35a8ec54a95ee631a4b70079b8b3f771c50ad3d28fccb7b69a53658997d57",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 985320,
+        "valid_pixel_rate": 0.641484375
+      }
+    },
+    {
+      "property": "cec",
+      "depth": "0-5cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fcec.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=cec_0-5cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 961829,
+      "sha256": "983f126c6b17f035996d38e3c1ab608010f8aa550f83b0732090e663a7bdfda2",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987259,
+        "valid_pixel_rate": 0.6427467447916667
+      }
+    },
+    {
+      "property": "cec",
+      "depth": "0-5cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fcec.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=cec_0-5cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 720682,
+      "sha256": "5ead368edfbff60e7b24580c7cb73c579ed009080d924fa6b374b6718f3db8a9",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987259,
+        "valid_pixel_rate": 0.6427467447916667
+      }
+    },
+    {
+      "property": "cec",
+      "depth": "0-5cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fcec.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=cec_0-5cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1166551,
+      "sha256": "e50d87519b393c573eb0b8776583039adf44993762c3ba26e82f02e0feac5d49",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987259,
+        "valid_pixel_rate": 0.6427467447916667
+      }
+    },
+    {
+      "property": "cec",
+      "depth": "30-60cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fcec.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=cec_30-60cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 954383,
+      "sha256": "4cd14ebda89c4ec2de7ba377c16f0ef10ff9185194958ecb59c4b0ed58490ca4",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987259,
+        "valid_pixel_rate": 0.6427467447916667
+      }
+    },
+    {
+      "property": "cec",
+      "depth": "30-60cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fcec.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=cec_30-60cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 700287,
+      "sha256": "e6bf89867e9fdbe346e605d335875fd15816f7f22a98ea899e420dbbb42a76c7",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987259,
+        "valid_pixel_rate": 0.6427467447916667
+      }
+    },
+    {
+      "property": "cec",
+      "depth": "30-60cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fcec.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=cec_30-60cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1173081,
+      "sha256": "bac74977c82f9eae0b3f66550e458d859c9b626dc74cd7a4c07509bfab7679ba",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987259,
+        "valid_pixel_rate": 0.6427467447916667
+      }
+    },
+    {
+      "property": "nitrogen",
+      "depth": "0-5cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fnitrogen.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=nitrogen_0-5cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1082850,
+      "sha256": "30e16e6b15b49284fa5125a7a544094b11a2f5f87ffcb15db03b1292e731be0f",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "nitrogen",
+      "depth": "0-5cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fnitrogen.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=nitrogen_0-5cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 642412,
+      "sha256": "ab2b2cf505337a6f2c38b448a89ef00796bc238f0ed53fda0f3302dfe61d4659",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "nitrogen",
+      "depth": "0-5cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fnitrogen.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=nitrogen_0-5cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1346617,
+      "sha256": "da2ec3d108510f84e00c08d257821353ec88aa5868ada2d2d1d07da73f384cc1",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "nitrogen",
+      "depth": "30-60cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fnitrogen.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=nitrogen_30-60cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 968875,
+      "sha256": "0d44a0d98e48aad36a76a4a44b400cf492a0c4ff65cd07d6ad8c367f91620ad6",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "nitrogen",
+      "depth": "30-60cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fnitrogen.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=nitrogen_30-60cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 489590,
+      "sha256": "eef558258e2aea7fdc5a912be1413e99fa9554f10b5ecc35182a5562c86afce9",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "nitrogen",
+      "depth": "30-60cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fnitrogen.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=nitrogen_30-60cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1251113,
+      "sha256": "2148aeabd29500bd8347d9fa29787623ff3951fa321d524e2ff116ed6abe7af4",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "bdod",
+      "depth": "0-5cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fbdod.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=bdod_0-5cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 650659,
+      "sha256": "8b1716bc4a05f6aa29a9fa0f2aab185190f2f766f818447c404bfe7a1717778a",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 984652,
+        "valid_pixel_rate": 0.6410494791666667
+      }
+    },
+    {
+      "property": "bdod",
+      "depth": "0-5cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fbdod.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=bdod_0-5cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 799163,
+      "sha256": "da715a958a2d2ddf5802afd567cf985c02a4a21042b7d2894b891faa1ad358b5",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 984652,
+        "valid_pixel_rate": 0.6410494791666667
+      }
+    },
+    {
+      "property": "bdod",
+      "depth": "0-5cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fbdod.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=bdod_0-5cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 587142,
+      "sha256": "bbf188c0866b6c9bc3586fc5146fe3e8cb705e77672cf1b1cc07bca81c57fdc8",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 984652,
+        "valid_pixel_rate": 0.6410494791666667
+      }
+    },
+    {
+      "property": "bdod",
+      "depth": "30-60cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fbdod.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=bdod_30-60cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 602426,
+      "sha256": "7d7fb276b81399f3fad6e2b8f48df9b9a0f8aced39cf8cf704e1e0bccba85cf5",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 984652,
+        "valid_pixel_rate": 0.6410494791666667
+      }
+    },
+    {
+      "property": "bdod",
+      "depth": "30-60cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fbdod.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=bdod_30-60cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 788997,
+      "sha256": "2658502cfe26931dcf8d66f22158e5747ba48c35b61895c673ca353059479279",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 984652,
+        "valid_pixel_rate": 0.6410494791666667
+      }
+    },
+    {
+      "property": "bdod",
+      "depth": "30-60cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fbdod.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=bdod_30-60cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 541694,
+      "sha256": "d19d30fca638532ee26ccd972da4b9228d4c120298a9995968fcd6c10b345118",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 984652,
+        "valid_pixel_rate": 0.6410494791666667
+      }
+    },
+    {
+      "property": "cfvo",
+      "depth": "0-5cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fcfvo.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=cfvo_0-5cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1044356,
+      "sha256": "01101d8e7b245a703aa3f114f282ed58f304a9bd734f6282f0cf77e2dafa224c",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "cfvo",
+      "depth": "0-5cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fcfvo.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=cfvo_0-5cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 105563,
+      "sha256": "9f912a021bae17643da37421d71fac8647afd252b5dce8db0cb44fa0204a0560",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "cfvo",
+      "depth": "0-5cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fcfvo.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=cfvo_0-5cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1228703,
+      "sha256": "e91a8c6a8c89d1342c6cc223a16cd2e30959e116b199bfb41b0bd59615ee3f74",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "cfvo",
+      "depth": "30-60cm",
+      "prediction": "mean",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fcfvo.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=cfvo_30-60cm_mean&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1070573,
+      "sha256": "0dfda8a991d73c61773799144c7cfe7c019ac9837ffc653e70a5aad8492ccf31",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "cfvo",
+      "depth": "30-60cm",
+      "prediction": "Q0.05",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fcfvo.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=cfvo_30-60cm_Q0.05&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 131337,
+      "sha256": "9209dd636c2f9aba493a2059e80bcb311dc254867d63fc7896d6e5844f7c4b72",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    },
+    {
+      "property": "cfvo",
+      "depth": "30-60cm",
+      "prediction": "Q0.95",
+      "request_url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fcfvo.map&SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage&COVERAGE=cfvo_30-60cm_Q0.95&CRS=EPSG%3A4326&BBOX=68.0%2C6.0%2C98.0%2C38.0&WIDTH=1200&HEIGHT=1280&FORMAT=GEOTIFF_INT16&INTERPOLATION=nearest",
+      "bytes": 1219128,
+      "sha256": "8e2931dcf3d88e35eac0d24f3bc929f990b5422531da1303cb82bb858644b0b5",
+      "raster_metadata": {
+        "width": 1200,
+        "height": 1280,
+        "count": 1,
+        "dtype": "int16",
+        "crs": "EPSG:4326",
+        "nodata": -32768.0,
+        "transform": [
+          0.024999999999999994,
+          0.0,
+          68.0,
+          0.0,
+          -0.024999999999999998,
+          38.0
+        ],
+        "bounds": [
+          68.0,
+          6.0000000000000036,
+          98.0,
+          38.0
+        ],
+        "valid_pixels": 987272,
+        "valid_pixel_rate": 0.6427552083333333
+      }
+    }
+  ],
+  "properties": [
+    "phh2o",
+    "clay",
+    "sand",
+    "silt",
+    "soc",
+    "cec",
+    "nitrogen",
+    "bdod",
+    "cfvo"
+  ],
+  "depth_intervals_cm": [
+    "0-5cm",
+    "30-60cm"
+  ],
+  "prediction_statistics": [
+    "mean",
+    "Q0.05",
+    "Q0.95"
+  ],
+  "feature_rows": 88857,
+  "unique_h3_cells": 88857,
+  "minimum_mean_property_coverage_rate": 0.992819924147788,
+  "minimum_prediction_interval_coverage_rate": 0.992819924147788,
+  "coverage_by_value_column": {
+    "soilgrids_phh2o_0_5cm_mean": 0.9938215334751342,
+    "soilgrids_phh2o_0_5cm_p05": 0.9938215334751342,
+    "soilgrids_phh2o_0_5cm_p95": 0.9938215334751342,
+    "soilgrids_phh2o_30_60cm_mean": 0.9938215334751342,
+    "soilgrids_phh2o_30_60cm_p05": 0.9938215334751342,
+    "soilgrids_phh2o_30_60cm_p95": 0.9938215334751342,
+    "soilgrids_clay_0_5cm_mean": 0.9938215334751342,
+    "soilgrids_clay_0_5cm_p05": 0.9938215334751342,
+    "soilgrids_clay_0_5cm_p95": 0.9938215334751342,
+    "soilgrids_clay_30_60cm_mean": 0.9938215334751342,
+    "soilgrids_clay_30_60cm_p05": 0.9938215334751342,
+    "soilgrids_clay_30_60cm_p95": 0.9938215334751342,
+    "soilgrids_sand_0_5cm_mean": 0.9938215334751342,
+    "soilgrids_sand_0_5cm_p05": 0.9938215334751342,
+    "soilgrids_sand_0_5cm_p95": 0.9938215334751342,
+    "soilgrids_sand_30_60cm_mean": 0.9938215334751342,
+    "soilgrids_sand_30_60cm_p05": 0.9938215334751342,
+    "soilgrids_sand_30_60cm_p95": 0.9938215334751342,
+    "soilgrids_silt_0_5cm_mean": 0.9938215334751342,
+    "soilgrids_silt_0_5cm_p05": 0.9938215334751342,
+    "soilgrids_silt_0_5cm_p95": 0.9938215334751342,
+    "soilgrids_silt_30_60cm_mean": 0.9938215334751342,
+    "soilgrids_silt_30_60cm_p05": 0.9938215334751342,
+    "soilgrids_silt_30_60cm_p95": 0.9938215334751342,
+    "soilgrids_soc_0_5cm_mean": 0.9929774806711907,
+    "soilgrids_soc_0_5cm_p05": 0.9929774806711907,
+    "soilgrids_soc_0_5cm_p95": 0.9929774806711907,
+    "soilgrids_soc_30_60cm_mean": 0.9929774806711907,
+    "soilgrids_soc_30_60cm_p05": 0.9929774806711907,
+    "soilgrids_soc_30_60cm_p95": 0.9929774806711907,
+    "soilgrids_cec_0_5cm_mean": 0.9938215334751342,
+    "soilgrids_cec_0_5cm_p05": 0.9938215334751342,
+    "soilgrids_cec_0_5cm_p95": 0.9938215334751342,
+    "soilgrids_cec_30_60cm_mean": 0.9938215334751342,
+    "soilgrids_cec_30_60cm_p05": 0.9938215334751342,
+    "soilgrids_cec_30_60cm_p95": 0.9938215334751342,
+    "soilgrids_nitrogen_0_5cm_mean": 0.9938215334751342,
+    "soilgrids_nitrogen_0_5cm_p05": 0.9938215334751342,
+    "soilgrids_nitrogen_0_5cm_p95": 0.9938215334751342,
+    "soilgrids_nitrogen_30_60cm_mean": 0.9938215334751342,
+    "soilgrids_nitrogen_30_60cm_p05": 0.9938215334751342,
+    "soilgrids_nitrogen_30_60cm_p95": 0.9938215334751342,
+    "soilgrids_bdod_0_5cm_mean": 0.992819924147788,
+    "soilgrids_bdod_0_5cm_p05": 0.992819924147788,
+    "soilgrids_bdod_0_5cm_p95": 0.992819924147788,
+    "soilgrids_bdod_30_60cm_mean": 0.992819924147788,
+    "soilgrids_bdod_30_60cm_p05": 0.992819924147788,
+    "soilgrids_bdod_30_60cm_p95": 0.992819924147788,
+    "soilgrids_cfvo_0_5cm_mean": 0.9938215334751342,
+    "soilgrids_cfvo_0_5cm_p05": 0.9938215334751342,
+    "soilgrids_cfvo_0_5cm_p95": 0.9938215334751342,
+    "soilgrids_cfvo_30_60cm_mean": 0.9938215334751342,
+    "soilgrids_cfvo_30_60cm_p05": 0.9938215334751342,
+    "soilgrids_cfvo_30_60cm_p95": 0.9938215334751342
+  },
+  "quantile_order_violations": 0,
+  "interval_negative_width_violations": 0,
+  "property_summaries": {
+    "phh2o": {
+      "0_5cm": {
+        "unit": "pH",
+        "valid_rows": 88308,
+        "mean_minimum": 4.8,
+        "mean_median": 7.1,
+        "mean_maximum": 9.4,
+        "median_interval_width_90": 3.3999999999999995
+      },
+      "30_60cm": {
+        "unit": "pH",
+        "valid_rows": 88308,
+        "mean_minimum": 4.8,
+        "mean_median": 7.3,
+        "mean_maximum": 9.4,
+        "median_interval_width_90": 3.6000000000000005
+      }
+    },
+    "clay": {
+      "0_5cm": {
+        "unit": "percent by mass",
+        "valid_rows": 88308,
+        "mean_minimum": 8.5,
+        "mean_median": 29.7,
+        "mean_maximum": 55.3,
+        "median_interval_width_90": 79.4
+      },
+      "30_60cm": {
+        "unit": "percent by mass",
+        "valid_rows": 88308,
+        "mean_minimum": 10.2,
+        "mean_median": 35.0,
+        "mean_maximum": 63.4,
+        "median_interval_width_90": 82.7
+      }
+    },
+    "sand": {
+      "0_5cm": {
+        "unit": "percent by mass",
+        "valid_rows": 88308,
+        "mean_minimum": 3.4,
+        "mean_median": 36.9,
+        "mean_maximum": 72.9,
+        "median_interval_width_90": 67.9
+      },
+      "30_60cm": {
+        "unit": "percent by mass",
+        "valid_rows": 88308,
+        "mean_minimum": 2.4,
+        "mean_median": 33.6,
+        "mean_maximum": 81.5,
+        "median_interval_width_90": 65.5
+      }
+    },
+    "silt": {
+      "0_5cm": {
+        "unit": "percent by mass",
+        "valid_rows": 88308,
+        "mean_minimum": 6.8,
+        "mean_median": 33.2,
+        "mean_maximum": 76.6,
+        "median_interval_width_90": 79.80000000000001
+      },
+      "30_60cm": {
+        "unit": "percent by mass",
+        "valid_rows": 88308,
+        "mean_minimum": 7.8,
+        "mean_median": 31.9,
+        "mean_maximum": 77.1,
+        "median_interval_width_90": 79.2
+      }
+    },
+    "soc": {
+      "0_5cm": {
+        "unit": "g/kg",
+        "valid_rows": 88233,
+        "mean_minimum": 3.3,
+        "mean_median": 18.9,
+        "mean_maximum": 119.8,
+        "median_interval_width_90": 51.800000000000004
+      },
+      "30_60cm": {
+        "unit": "g/kg",
+        "valid_rows": 88233,
+        "mean_minimum": 1.9,
+        "mean_median": 6.6,
+        "mean_maximum": 93.7,
+        "median_interval_width_90": 15.3
+      }
+    },
+    "cec": {
+      "0_5cm": {
+        "unit": "cmol(c)/kg",
+        "valid_rows": 88308,
+        "mean_minimum": 6.3,
+        "mean_median": 24.6,
+        "mean_maximum": 54.6,
+        "median_interval_width_90": 55.7
+      },
+      "30_60cm": {
+        "unit": "cmol(c)/kg",
+        "valid_rows": 88308,
+        "mean_minimum": 5.8,
+        "mean_median": 24.1,
+        "mean_maximum": 56.6,
+        "median_interval_width_90": 54.4
+      }
+    },
+    "nitrogen": {
+      "0_5cm": {
+        "unit": "g/kg",
+        "valid_rows": 88308,
+        "mean_minimum": 0.29,
+        "mean_median": 1.59,
+        "mean_maximum": 15.81,
+        "median_interval_width_90": 4.44
+      },
+      "30_60cm": {
+        "unit": "g/kg",
+        "valid_rows": 88308,
+        "mean_minimum": 0.23,
+        "mean_median": 0.74,
+        "mean_maximum": 13.34,
+        "median_interval_width_90": 1.8699999999999999
+      }
+    },
+    "bdod": {
+      "0_5cm": {
+        "unit": "kg/dm3",
+        "valid_rows": 88219,
+        "mean_minimum": 0.78,
+        "mean_median": 1.42,
+        "mean_maximum": 1.74,
+        "median_interval_width_90": 0.96
+      },
+      "30_60cm": {
+        "unit": "kg/dm3",
+        "valid_rows": 88219,
+        "mean_minimum": 0.83,
+        "mean_median": 1.48,
+        "mean_maximum": 1.83,
+        "median_interval_width_90": 0.95
+      }
+    },
+    "cfvo": {
+      "0_5cm": {
+        "unit": "volume percent",
+        "valid_rows": 88308,
+        "mean_minimum": 2.0,
+        "mean_median": 13.5,
+        "mean_maximum": 50.1,
+        "median_interval_width_90": 65.6
+      },
+      "30_60cm": {
+        "unit": "volume percent",
+        "valid_rows": 88308,
+        "mean_minimum": 2.4,
+        "mean_median": 16.8,
+        "mean_maximum": 50.1,
+        "median_interval_width_90": 73.8
+      }
+    }
+  },
+  "surface_texture_class_distribution": {
+    "clay loam": 42555,
+    "loam": 24088,
+    "clay": 8872,
+    "sandy clay loam": 8607,
+    "silty clay loam": 2182,
+    "silty clay": 1179,
+    "sandy loam": 554,
+    "": 549,
+    "silt loam": 246,
+    "sandy clay": 25
+  },
+  "subsoil_texture_class_distribution": {
+    "clay loam": 46418,
+    "clay": 21656,
+    "loam": 11556,
+    "sandy clay loam": 5794,
+    "silty clay": 1251,
+    "silty clay loam": 739,
+    "sandy loam": 637,
+    "": 549,
+    "sandy clay": 165,
+    "silt loam": 91,
+    "loamy sand": 1
+  },
+  "texture_fraction_sum_surface_pct": {
+    "minimum": 99.89999999999999,
+    "median": 100.0,
+    "maximum": 100.3
+  },
+  "texture_fraction_sum_subsoil_pct": {
+    "minimum": 99.89999999999999,
+    "median": 100.0,
+    "maximum": 100.20000000000002
+  },
+  "maximum_source_grid_distance_km": 1.9383417806595675,
+  "rasters_aligned": true,
+  "candidate_feature_rows": 2784,
+  "candidate_minimum_mean_property_coverage_rate": 0.9982040229885057,
+  "candidate_scores_recomputed": false,
+  "ranking_column_hashes_before": {
+    "national_grid": "fae548eb2a15a557c3228fe781ed1c7a721e9a9f37f375f34b5c1073a50e527f",
+    "candidate_table": "9aeb80ab3bd9f15399738d16c1261e5207ac4f60a16a107059e9d4b576951cf1"
+  },
+  "ranking_column_hashes_after": {
+    "national_grid": "fae548eb2a15a557c3228fe781ed1c7a721e9a9f37f375f34b5c1073a50e527f",
+    "candidate_table": "9aeb80ab3bd9f15399738d16c1261e5207ac4f60a16a107059e9d4b576951cf1"
+  },
+  "core_ranking_columns_unchanged": true,
+  "model_use_status": "Context-only. A separate leakage-aware spatial ablation is required before any property can affect production scores.",
+  "checks_pass": true
+}

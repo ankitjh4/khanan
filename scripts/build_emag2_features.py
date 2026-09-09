@@ -32,7 +32,7 @@ from rasterio.windows import Window
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
 RAW = ROOT / "sources" / "raw" / "emag2v3"
-RELEASE_VERSION = "v1.0-alpha.5"
+RELEASE_VERSION = "v1.0-alpha.6"
 GEOSPATIAL_FEATURE_VERSION = "v0.7"
 FEATURE_VERSION = "emag2v3-h3-r6-v0.1"
 
