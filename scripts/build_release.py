@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v1.0-alpha.2"
+VERSION = "v1.0-alpha.3"
 
 BUNDLE_MEMBERS = [
     "README.md",
@@ -13,8 +13,10 @@ BUNDLE_MEMBERS = [
     "assets/maps/khanan-india-prospectivity-overview-v0.6.png",
     "data/README.md",
     "docs/methodology.md",
+    "docs/ngdr_access_and_integration.md",
     "outputs/README.md",
     "scripts/plot_khanan_overview.py",
+    "scripts/audit_ngdr_services.py",
     "scripts/build_ibm_abandoned_mines.py",
     "scripts/build_material_ontology.py",
     "config/materials.json",
@@ -35,12 +37,14 @@ BUNDLE_MEMBERS = [
     "outputs/material_ontology_validation_v1.json",
     "outputs/material_model_support.csv",
     "outputs/material_model_validation.csv",
+    "outputs/ngdr_service_inventory.csv",
     "outputs/source_registry.csv",
     "outputs/data_dictionary.csv",
     "outputs/validation_report.json",
     "outputs/ibm_nmi_2025_extraction_validation.json",
     "outputs/ibm_mcdr_inspection_validation.json",
     "outputs/ibm_abandoned_mines_validation.json",
+    "outputs/ngdr_service_validation.json",
     "outputs/nasa_power_rolling_12m_validation.json",
     "outputs/official_critical_blocks_validation.json",
 ]
@@ -61,12 +65,14 @@ HASHED_ARTIFACTS = [
     "material_ontology_validation_v1.json",
     "material_model_support.csv",
     "material_model_validation.csv",
+    "ngdr_service_inventory.csv",
     "source_registry.csv",
     "data_dictionary.csv",
     "validation_report.json",
     "ibm_nmi_2025_extraction_validation.json",
     "ibm_mcdr_inspection_validation.json",
     "ibm_abandoned_mines_validation.json",
+    "ngdr_service_validation.json",
     "nasa_power_rolling_12m_validation.json",
     "official_critical_blocks_validation.json",
     f"india_mining_dataset_csv_bundle_{VERSION}.zip",

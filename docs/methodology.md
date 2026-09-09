@@ -84,7 +84,15 @@ Commodity text used by the v0.6 model is normalized to its 50-target set using a
 - **Geology:** age, supergroup, group, stratigraphy, and map-unit ID are sampled at each centroid from the public Esri India feature service. The service metadata does not identify the polygon source, scale, or reuse license, so the release redistributes only sampled attributes and flags this limitation.
 - **Terrain:** WorldClim 2.1 elevation, derived from SRTM, supplies centroid elevation and reconnaissance-scale slope/relief estimates.
 
-## 9. Material ontology and model eligibility
+## 9. NGDR/GSI service audit
+
+The v1.0-alpha.3 pipeline establishes a public guest session at the National Geoscience Data Repository and audits the session-scoped WMS 1.1.1 and WFS 1.0.0 services used by the guest map. The 10 September 2026 audit observed 1,114 named WMS layers and 751 WFS feature types. Eleven nationally relevant feature types were selected across commodity occurrences, critical minerals, mineralization, stream-sediment and soil geochemistry, national soils, magnetics, gravity, lithology and regional geology.
+
+For each selected layer, the pipeline records the WFS feature count, WGS84 bounding box, default SRS, declared geometry and non-geometry XML schema fields. A one-feature GeoJSON request verifies machine-readable access, but the public inventory contains no feature-property values. The selected services report 2,459,737 features in total; this is a live catalog count, not a count of unique samples, mines, deposits or model evidence. Ten capability bounding boxes are plausible WGS84 extents. The regolith layer publishes floating-point sentinel values in its western and southern bounds, so the numeric bounding columns are left blank and the raw capability values and quality flag are preserved separately.
+
+The GSI Data Sharing and Accessibility Policy, 2019 distinguishes open viewing from registered download and includes non-transfer and third-party redistribution restrictions for supplied digital data. The WFS schemas also omit essential scientific metadata for several analytical layers, including definitive units, methods, detection limits, survey scale, reduction parameters and missing-value codes. KHANAN therefore publishes only the metadata audit in this release. Raw probes remain in the ignored local source cache and all NGDR feature values are excluded from training, validation and candidate ranking. The exact decision and admission gates are documented in [`ngdr_access_and_integration.md`](ngdr_access_and_integration.md).
+
+## 10. Material ontology and model eligibility
 
 The v1.0-alpha.2 ontology contains 230 unique, typed entities derived from material terms actually observed in the India source tables, plus the retained v0.6 targets. It contains 69 elements, 85 mineral species, and 76 other entities spanning ores, rocks, groups, mixtures, varieties, industrial materials, and energy commodities. Stable typed IDs prevent an element, ore, mineral species, and informal group from being silently treated as the same thing.
 
@@ -98,7 +106,7 @@ Ontology inclusion never confers model eligibility. The geospatial prediction co
 
 Ontology arrays identify names, possible compounds, or representative forms; they do not assert assay, grade, recoverability, mineral processing route, or economic value at a site. Formulas are supplied only for elements, verified species, or defensible compounds. Otherwise the English names are preserved in arrays as requested.
 
-## 10. Reconnaissance score
+## 11. Reconnaissance score
 
 For a material with at least five mapped source records, cell score components are:
 
@@ -122,7 +130,7 @@ and clipped to 0–1. Materials with one to four evidence records receive a low-
 
 The score is a relative reconnaissance index. It is **not a calibrated discovery probability**.
 
-## 11. Spatial validation
+## 12. Spatial validation
 
 Materials with at least 10 mapped India evidence records are evaluated with up to five GroupKFold splits grouped by H3 resolution-3 cells. Each fold trains the same score recipe on geographically separated evidence and compares held-out occurrences with a deterministic sample of grid cells more than 25 km from any catalog evidence.
 
@@ -135,7 +143,7 @@ The comparison cells are not confirmed barren, so these metrics measure catalog-
 
 In v0.1, 15 material models have at least 10 records and spatial validation results. Vanadium's holdout AUC was below the promotion threshold and is therefore not labeled as a candidate even when its raw score is high.
 
-## 12. Candidate promotion rules
+## 13. Candidate promotion rules
 
 A cell is never promoted when it is within 5 km of any mapped source site. For all candidate classes, the top material must have at least 10 source records and the nearest same-material evidence must be more than 25 km and no more than 250 km away.
 
@@ -154,7 +162,7 @@ A cell is never promoted when it is within 5 km of any mapped source site. For a
 
 The national rank sorts passing candidates by validation AUC, then percentile, then score. Neighboring high-ranked H3 cells are usually one regional signal and should be dissolved/clustered before field planning.
 
-## 13. Validation and quality controls
+## 14. Validation and quality controls
 
 The release checks:
 
@@ -171,10 +179,11 @@ The release checks:
 - 45 IBM NMI 2025 mineral tables, unique extract IDs, and UNFC subtotal arithmetic for every inventory row;
 - 36 IBM MCDR source pages, all 14 regional offices, unique event/latest-view IDs, date parsing and financial-year exceptions, blank coordinates, and explicit non-production/non-exhaustiveness flags;
 - explicit record-level flags and source provenance.
+- 1,114 named NGDR WMS layers, 751 WFS feature types, 11 selected-layer schemas and bounded probes, 2,459,737 reported selected-layer features, and mandatory exclusion of raw NGDR values from public outputs and model evidence.
 
 Build-time results are written to `outputs/validation_report.json`. A passing report means the pipeline's structural checks passed; it does not validate mineral occurrence in the field.
 
-## 14. What is required for a defensible discovery model
+## 15. What is required for a defensible discovery model
 
 Before using the output to allocate exploration capital, add:
 

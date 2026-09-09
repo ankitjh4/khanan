@@ -1,0 +1,137 @@
+{
+  "release_version": "v1.0-alpha.3",
+  "audit_scope": "Metadata and bounded service probes only; no raw NGDR feature values are included in public outputs or model scoring.",
+  "accessed_at_utc": "2026-09-09T21:26:43.324166+00:00",
+  "guest_portal_url": "https://geodataindia.gov.in/guestuser",
+  "ogc_proxy_url": "https://geodataindia.gov.in/guestuser/wmsurl128/",
+  "gsi_policy_url": "https://geodataindia.gov.in/assets/Document_Pdf/4.%20Data%20Dissemination%20policy%202019.pdf",
+  "guest_page_status_code": 200,
+  "wms_named_layer_count": 1114,
+  "wfs_feature_type_count": 751,
+  "selected_layer_rows": 11,
+  "selected_layers_available_in_wms": 11,
+  "selected_layers_available_in_wfs": 11,
+  "selected_layers_with_successful_feature_probe": 11,
+  "selected_layers_with_valid_wgs84_bbox": 10,
+  "selected_layers_with_invalid_or_missing_wgs84_bbox": 1,
+  "selected_layer_feature_count_reported_total": 2459737,
+  "selected_layers": [
+    {
+      "feature_type_name": "cite:commodity_pan_india_mineral_map_ngdr",
+      "feature_count_reported": 2583,
+      "sample_geometry_type": "Point",
+      "declared_geometry_type": "gml:PointPropertyType",
+      "attribute_count": 20,
+      "schema_sha256": "9f93ebab3f72871eecea2d47559dde4fcf7f2a1b52f619a8d4641e476260f05b",
+      "bounded_probe_sha256": "ee11ab95f978f1ccb04e950c572cbff3798c7f59a49e03b07591e4236d302da6"
+    },
+    {
+      "feature_type_name": "cite:critical_mineral_gcs_ngdr",
+      "feature_count_reported": 244,
+      "sample_geometry_type": "Point",
+      "declared_geometry_type": "gml:PointPropertyType",
+      "attribute_count": 21,
+      "schema_sha256": "93486ee26b570288912a23d75acdd2806770b3b7a50ba5e6f9b5efa39ad62a01",
+      "bounded_probe_sha256": "8b532754385a28211ebd5984165e5b394fffd28d4325cf5290f9875e6426bda7"
+    },
+    {
+      "feature_type_name": "cite:mineralization_gcs_ngdr",
+      "feature_count_reported": 11569,
+      "sample_geometry_type": "Point",
+      "declared_geometry_type": "gml:PointPropertyType",
+      "attribute_count": 6,
+      "schema_sha256": "d27a87ac501b1c1fe8e4f3a8c7149bcaa07b8f929b964cad36adef07bc6a4380",
+      "bounded_probe_sha256": "59363d01807ac3e9a63c5b203ff5f2098ac766c1fffa3bad2aae4d73861836c6"
+    },
+    {
+      "feature_type_name": "cite:stream_sediments_gcs_ngdr",
+      "feature_count_reported": 510641,
+      "sample_geometry_type": "Point",
+      "declared_geometry_type": "gml:PointPropertyType",
+      "attribute_count": 71,
+      "schema_sha256": "7a5f4de3f1a5ec229854ad7233ab5bc9d7d61d7e5cca203cf5f95aed90a31644",
+      "bounded_probe_sha256": "836e3c840ecd2c0dd67bdbdceb1beae8f7f13db9e9d5d772d49dd2a3996e62aa"
+    },
+    {
+      "feature_type_name": "cite:soil_c_horizon_gcs_ngdr",
+      "feature_count_reported": 45854,
+      "sample_geometry_type": "Point",
+      "declared_geometry_type": "gml:PointPropertyType",
+      "attribute_count": 71,
+      "schema_sha256": "5b81fd144356d8df5b5d5fe0cb13dcbc6f7e894b9e5cfad1d39436faafee374c",
+      "bounded_probe_sha256": "339a05ce2ee9a812e9a8ff0f271dd75f5363ae1c707cd7454dfe6e6c8b8c8410"
+    },
+    {
+      "feature_type_name": "cite:soil_regolith_gcs_ngdr",
+      "feature_count_reported": 8735,
+      "sample_geometry_type": "Point",
+      "declared_geometry_type": "gml:PointPropertyType",
+      "attribute_count": 71,
+      "schema_sha256": "f297893db725ba6397b58626e472659ffebe3d6cfc97c44b9ede60a4f74fa33a",
+      "bounded_probe_sha256": "c95ff8a82a6e496841450215f13a6610bd695e420fd7e517884938bdd1b5c876"
+    },
+    {
+      "feature_type_name": "cite:india_soil",
+      "feature_count_reported": 42097,
+      "sample_geometry_type": "MultiPolygon",
+      "declared_geometry_type": "gml:MultiPolygonPropertyType",
+      "attribute_count": 23,
+      "schema_sha256": "3157f8e7b4ec3d534c700e72c56b77b462f241750491a6502c9ac5910b1277bc",
+      "bounded_probe_sha256": "9fa55c3a02c41aaed41164476c9d5cc3f2a5a4daa9c41785e923ccc893bc28dd"
+    },
+    {
+      "feature_type_name": "cite:magnetic_gcs_ngdr",
+      "feature_count_reported": 716352,
+      "sample_geometry_type": "Point",
+      "declared_geometry_type": "gml:PointPropertyType",
+      "attribute_count": 8,
+      "schema_sha256": "c29d8d5c522f4cc8da795316b105af235d01373bc2a561618fa8e8acb77b1601",
+      "bounded_probe_sha256": "f5e604bffcba3e3cfe5c6714f4bb85dbde8be9d96c0dd0cc64faa5a9bd85dbc6"
+    },
+    {
+      "feature_type_name": "cite:gravity_gcs_ngdr",
+      "feature_count_reported": 756405,
+      "sample_geometry_type": "Point",
+      "declared_geometry_type": "gml:PointPropertyType",
+      "attribute_count": 9,
+      "schema_sha256": "1cd45d9d6cf860d7c1bf15a2633810eeec59253d39e1fb7162ab16631f436f38",
+      "bounded_probe_sha256": "2107887d250da58579a9b8164622cc320dad27d637838e06231543d8cfb67d01"
+    },
+    {
+      "feature_type_name": "cite:lithology_gcs_ngdr",
+      "feature_count_reported": 360702,
+      "sample_geometry_type": "MultiPolygon",
+      "declared_geometry_type": "gml:MultiPolygonPropertyType",
+      "attribute_count": 27,
+      "schema_sha256": "5982ef598b7024f7b5e578633778fe6cecc39bb7ade373e4a3ebd8f574b42991",
+      "bounded_probe_sha256": "6409443da3e3c053bca13447e34e0d13755826953d47a88353f82bdf48c2a3d3"
+    },
+    {
+      "feature_type_name": "cite:geology_2m_gcs_ngdr",
+      "feature_count_reported": 4555,
+      "sample_geometry_type": null,
+      "declared_geometry_type": "gml:MultiPolygonPropertyType",
+      "attribute_count": 10,
+      "schema_sha256": "c7730e915c2187c5f9fb3491a5fe1e7bc3cc7dd16ec0c166f19685a15d4db04f",
+      "bounded_probe_sha256": "a8c68288a8b906f84cef497aab4878405a1396f64b6befc3a97b099cc88a2719"
+    }
+  ],
+  "raw_cache": {
+    "wms_capabilities.xml": {
+      "bytes": 1467985,
+      "sha256": "953d5c6e5f9ef992169176ff469f10fcd90cb1ee0130f39f5aad437bff493aaf"
+    },
+    "wfs_capabilities.xml": {
+      "bytes": 257235,
+      "sha256": "046eb7f34e967377e975155b3e55f95cc483d1d021c700e4388f53d45faf8780"
+    },
+    "gsi_data_sharing_and_accessibility_policy_2019.pdf": {
+      "bytes": 609660,
+      "sha256": "5ca1cd3938dc3271c8be58a9449c8b685f14972de296ab9d0c8da24819f175c3"
+    }
+  },
+  "public_output_contains_feature_property_values": false,
+  "production_model_uses_ngdr_feature_values": false,
+  "redistribution_decision": "Publish service metadata and reproducibility instructions only until dataset-specific reuse authority and scientific measurement metadata are established.",
+  "checks_pass": true
+}

@@ -123,7 +123,7 @@
   "official_critical_mineral_distinct_offer_lineage_keys": 100,
   "official_critical_mineral_pib_reported_cumulative_offer_count": 88,
   "official_critical_mineral_lineage_reconciliation_status": "not_reconciled",
-  "development_release_version": "v1.0-alpha.2",
+  "development_release_version": "v1.0-alpha.3",
   "material_ontology_v1": {
     "ontology_rows": 230,
     "ima_verified_species": 108,
@@ -141,6 +141,19 @@
     "source_page_last_updated": "2026-09-09",
     "coordinates_published": 0,
     "rows_excluded_from_model_evidence": 82,
+    "checks_pass": true
+  },
+  "ngdr_service_audit": {
+    "selected_layer_rows": 11,
+    "wms_named_layer_count": 1114,
+    "wfs_feature_type_count": 751,
+    "selected_layer_feature_count_reported_total": 2459737,
+    "selected_layers_available_in_wfs": 11,
+    "selected_layers_with_successful_feature_probe": 11,
+    "selected_layers_with_valid_wgs84_bbox": 10,
+    "selected_layers_with_invalid_or_missing_wgs84_bbox": 1,
+    "raw_feature_values_published": false,
+    "model_evidence_status": "not_integrated",
     "checks_pass": true
   }
 }

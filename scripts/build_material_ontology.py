@@ -811,7 +811,7 @@ def main() -> None:
 
     release_validation_path = OUT / "validation_report.json"
     release_validation = json.loads(release_validation_path.read_text(encoding="utf-8"))
-    release_validation["development_release_version"] = "v1.0-alpha.2"
+    release_validation["development_release_version"] = "v1.0-alpha.3"
     release_validation["material_ontology_v1"] = {
         "ontology_rows": validation["ontology_rows"],
         "ima_verified_species": validation["ima_verified_species"],

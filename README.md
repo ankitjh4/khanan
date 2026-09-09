@@ -17,11 +17,13 @@ KHANAN is intended to generate independent, early-stage hypotheses from lawful p
 
 ## Current status
 
-**Development release: v1.0-alpha.2 · Geospatial/model baseline: v0.6 · Active work in progress**
+**Development release: v1.0-alpha.3 · Geospatial/model baseline: v0.6 · Active work in progress**
 
 The current release covers India with 88,857 H3 resolution-6 cells, approximately 36 km² each. It includes 781 public-source site records, 1,504 IBM MCDR inspection events, 82 IBM abandoned-mine inventory records, 722 IBM NMI resource-inventory rows, 199 central critical-mineral auction events, 50 strategic modeling targets, and 2,784 validation-gated candidate cells.
 
 The v1.0 alpha adds a source-derived material ontology with **230 unique entities**: 69 elements, 85 mineral species, and 76 ores, rocks, mineral groups, varieties, industrial materials, energy commodities, mixtures, and related material classes. It audits 450 distinct source terms: 443 are mapped and seven deliberately remain unresolved because the wording is nonspecific. Ontology coverage and prediction eligibility are separate: the validated geospatial model still scores only the 50 explicitly retained v0.6 targets.
+
+Alpha.3 also adds a reproducible metadata audit of the National Geoscience Data Repository guest OGC services. The audit found 1,114 named WMS layers and 751 WFS feature types, then validated 11 nationally relevant mineral, geochemistry, geophysics, soil, lithology and geology layers reporting 2,459,737 features in total. These counts and schemas are catalog evidence only: no NGDR feature values are redistributed or used in the current model because dataset-specific reuse authority and essential units/method metadata remain unresolved.
 
 Candidate scores are reconnaissance indices. They are not probabilities of discovery, resource estimates, reserves, grades, economic valuations, legal concessions, or drill targets.
 
@@ -65,17 +67,17 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 | Terrain | Implemented | Elevation, approximate slope, relief and terrain class. |
 | Weather and climate | Implemented | Daily-derived twelve-month temperature, precipitation, humidity and wind summaries. |
 | Population and demographics | Implemented | Responsible-planning context; not a geological cause of mineralization. |
-| Soil texture, chemistry and regolith | Planned | Direct geological/geochemical features with scale and laboratory-method metadata. |
+| Soil texture, chemistry and regolith | Service catalog audited; not model-integrated | NGDR soil and geochemical schemas/counts are recorded. Raw values remain excluded pending dataset-specific reuse authority, units, methods, detection limits and missingness metadata. |
 | Satellite mineral and alteration signatures | Planned | Multispectral/hyperspectral indices with cloud, season and sensor uncertainty. |
 | Vegetation, crop ecology and phenology | Planned | Possible indirect soil, moisture or geochemical stress signals; must survive independent validation. |
 | Agriculture and aggregate dietary patterns | Research-only/planned | Area-level context only. Never individual-level data and never treated as causal mineral evidence without a defensible scientific mechanism. |
 | Hydrology and groundwater chemistry | Planned | Catchment-aware transport and geochemical anomaly context. |
-| Geophysics, geochemistry and drilling | Planned | Highest-value evidence, subject to lawful access and source licensing. |
+| Geophysics, geochemistry and drilling | NGDR catalog audited; values not integrated | Eleven authoritative layers are machine-readably inventoried. Production use remains gated by access, redistribution, units, methods, scale, processing, leakage and spatial-validation checks. |
 | Infrastructure and environmental constraints | Planned | Roads, rail, power, water, forests, protected areas, archaeology, tenure and social safeguards. |
 
 ## Release files
 
-The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.2.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.2.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); its availability follows the owner's Drive sharing settings, and it is not the current alpha artifact. The uncompressed nationwide grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
+The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.3.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.3.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); its availability follows the owner's Drive sharing settings, and it is not the current alpha artifact. The uncompressed nationwide grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
 
 | File | Rows | Role |
 |---|---:|---|
@@ -94,16 +96,18 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/material_ontology_validation_v1.json` | 1 | Ontology uniqueness, type counts, parser coverage, source hashes, mapping rate and unresolved-term report. |
 | `outputs/material_model_support.csv` | 50 | Evidence counts and support tier by material. |
 | `outputs/material_model_validation.csv` | 50 | Spatial holdout results and reasons a material could not be validated. |
-| `outputs/source_registry.csv` | 26 | Provenance, access/licensing notes, uses and limitations. |
-| `outputs/data_dictionary.csv` | 504 | Field definitions, units and missing-value policies. |
+| `outputs/ngdr_service_inventory.csv` | 11 | Metadata-only inventory of selected NGDR mineral, geochemistry, geophysics, soil, lithology and geology services; no feature values. |
+| `outputs/source_registry.csv` | 28 | Provenance, access/licensing notes, uses and limitations. |
+| `outputs/data_dictionary.csv` | 539 | Field definitions, units and missing-value policies. |
 | `outputs/validation_report.json` | 1 | Cross-dataset counts, join coverage, coordinate checks and guardrails. |
 | `outputs/official_critical_blocks_validation.json` | 1 | Auction count, lineage, provenance and geometry validation. |
 | `outputs/ibm_nmi_2025_extraction_validation.json` | 1 | NMI PDF extraction and UNFC subtotal validation. |
 | `outputs/ibm_mcdr_inspection_validation.json` | 1 | IBM page, fiscal-year, date and document-link validation. |
 | `outputs/ibm_abandoned_mines_validation.json` | 1 | IBM source-page hash, narrative funnel, row counts, material mappings and mandatory model exclusions. |
+| `outputs/ngdr_service_validation.json` | 1 | Live OGC capability hashes, selected-layer counts, bounded-probe checks and redistribution/model exclusions. |
 | `outputs/nasa_power_rolling_12m_validation.json` | 1 | Weather-source checksums, completeness and range checks. |
 | `outputs/india_mining_dataset_companion.xlsx` | — | Legacy v0.6 thirteen-sheet review workbook. It does not yet include the v1 ontology; the CSVs remain authoritative. |
-| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.2.zip` | — | Portable 35-member development bundle, including the full grid, v1 ontology, IBM abandoned-mine layer, validations, project map and plotting script. |
+| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.3.zip` | — | Portable 39-member development bundle, including the full grid, v1 ontology, IBM abandoned-mine layer, NGDR service audit, validations, project map and reproducibility scripts. |
 | `outputs/SHA256SUMS.txt` | — | Integrity hashes for published artifacts. |
 
 ## Repository structure
@@ -117,7 +121,8 @@ KHANAN/
 ├── data/
 │   └── README.md                     # data-layout and distribution policy
 ├── docs/
-│   └── methodology.md                # scientific method, validation and limitations
+│   ├── methodology.md                # scientific method, validation and limitations
+│   └── ngdr_access_and_integration.md # GSI service audit, policy decision and admission gates
 ├── outputs/                          # versioned derived data and release artifacts
 ├── scripts/                          # acquisition, extraction, modeling, validation and plotting
 ├── sources/
@@ -142,6 +147,7 @@ KHANAN/
 - Maintain KHANAN as a structured, versioned repository.
 - Publish reproducible overview maps and machine-readable release bundles.
 - Publish the 230-entity, source-derived ontology and raw-term mapping audit without expanding model eligibility by fiat.
+- Audit the public NGDR/GSI OGC catalog and publish a metadata-only readiness inventory without republishing feature values.
 - Add automated schema, provenance, checksum and regression tests.
 - Introduce changelogs and source freshness reports.
 - Define source-specific redistribution and citation policy before any public release.
@@ -167,6 +173,7 @@ KHANAN/
 
 ### Phase 4 — Geochemistry, geophysics and remote sensing
 
+- **Completed in alpha.3:** audit the NGDR guest OGC catalog, selected layer schemas, reported feature counts, coordinate metadata and GSI dissemination policy.
 - Acquire lawful NGDR/GSI/state geochemical, magnetic, gravity, radiometric and structural datasets.
 - Add multispectral and hyperspectral mineral/alteration indices with sensor provenance.
 - Normalize samples by analytical method, detection limit, medium, depth and survey scale.
@@ -228,6 +235,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/build_ibm_mcdr_inspections.py --refresh
 .venv/bin/python scripts/build_ibm_abandoned_mines.py --refresh
 .venv/bin/python scripts/build_material_ontology.py
+.venv/bin/python scripts/audit_ngdr_services.py
 .venv/bin/python scripts/plot_khanan_overview.py
 .venv/bin/python scripts/build_release.py
 ```
@@ -247,7 +255,7 @@ The XLSX companion is generated by `scripts/build_workbook.mjs` using the Codex 
 
 ## Important current limitations
 
-The release is not an exhaustive current mine/lease register. It still lacks deposit-level NMI coordinates, comprehensive state mine registers, controlling grant status, high-resolution soil/geochemistry/geophysics, drill logs, site-level grade/tonnage/depth, alteration mapping, protected-area and forest-clearance layers, water stress, infrastructure, land tenure and social-license constraints.
+The release is not an exhaustive current mine/lease register. It still lacks deposit-level NMI coordinates, comprehensive state mine registers, controlling grant status, model-admitted high-resolution soil/geochemistry/geophysics, drill logs, site-level grade/tonnage/depth, alteration mapping, protected-area and forest-clearance layers, water stress, infrastructure, land tenure and social-license constraints. NGDR service metadata is now audited, but its raw values remain outside the release and scoring pipeline for the reasons documented in [`docs/ngdr_access_and_integration.md`](docs/ngdr_access_and_integration.md).
 
 One official Biarpalli source table places an Odisha block near 89°E; KHANAN retains and flags the published coordinates. The 143 auction-offer observations reconstruct to 100 distinct published footprints, while the tranche-VIII government release reports 88 cumulative offered blocks. That discrepancy remains explicitly unreconciled.
 

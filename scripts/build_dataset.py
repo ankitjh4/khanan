@@ -239,6 +239,28 @@ SOURCE_REGISTRY = [
         "used_for": "Independent commodity vocabulary and India-reported commodity evidence in the v1 material ontology.",
         "limitations": "Commodity statistics are not deposit locations and U.S. commodity groupings are not an Indian statutory classification.",
     },
+    {
+        "source_id": "SRC_GSI_NGDR_GUEST_OGC_CATALOG",
+        "publisher": "Geological Survey of India, Ministry of Mines, Government of India",
+        "title": "National Geoscience Data Repository guest OGC service catalog",
+        "release_or_reference_date": "live service; audited 2026-09-10",
+        "url": "https://geodataindia.gov.in/guestuser",
+        "download_url": "https://geodataindia.gov.in/guestuser/wmsurl128/",
+        "license_or_access_note": "Guest map and OGC service are publicly viewable. Raw feature redistribution is not authorized by KHANAN; consult the GSI Data Sharing and Accessibility Policy and obtain any required registration or permission.",
+        "used_for": "Metadata-only audit of authoritative mineral, geochemistry, geophysics, soil, lithology, and geology layers. No raw feature values are published or used in scoring in this release.",
+        "limitations": "Live service content can change. Analytical units, methods, detection limits, scale, and redistribution status are not sufficiently established for model integration from service schemas alone.",
+    },
+    {
+        "source_id": "SRC_GSI_DATA_SHARING_POLICY_2019",
+        "publisher": "Geological Survey of India, Ministry of Mines, Government of India",
+        "title": "Data Sharing and Accessibility Policy of Geological Survey of India, 2019",
+        "release_or_reference_date": "2019; audited 2026-09-10",
+        "url": "https://geodataindia.gov.in/assets/Document_Pdf/4.%20Data%20Dissemination%20policy%202019.pdf",
+        "download_url": "https://geodataindia.gov.in/assets/Document_Pdf/4.%20Data%20Dissemination%20policy%202019.pdf",
+        "license_or_access_note": "Policy distinguishes open viewing from registered downloads and imposes GSI attribution and restrictions on transfer or redistribution of supplied thematic data. Obtain authoritative legal review or written permission before republishing raw NGDR features.",
+        "used_for": "Controls KHANAN's access, attribution, caching, redistribution, and derivative-data decision for NGDR/GSI evidence.",
+        "limitations": "KHANAN does not provide legal advice. Applicability can depend on access class, dataset, user category, agreement, and current portal terms.",
+    },
 ]
 
 
