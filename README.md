@@ -72,7 +72,7 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 
 ## Release files
 
-The canonical portable release is `outputs/india_mining_dataset_csv_bundle_v0.6.zip`. The uncompressed nationwide grid is generated locally and deliberately excluded from Git because it exceeds GitHub's ordinary file-size limit.
+The canonical portable release is `outputs/india_mining_dataset_csv_bundle_v0.6.zip`. A verified copy is available from [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL). Drive access follows the file owner's sharing settings. The uncompressed nationwide grid is generated locally and deliberately excluded from Git because it exceeds GitHub's ordinary file-size limit.
 
 | File | Rows | Role |
 |---|---:|---|
