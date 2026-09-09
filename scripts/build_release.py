@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v1.0-alpha.1"
+VERSION = "v1.0-alpha.2"
 
 BUNDLE_MEMBERS = [
     "README.md",
@@ -15,6 +15,7 @@ BUNDLE_MEMBERS = [
     "docs/methodology.md",
     "outputs/README.md",
     "scripts/plot_khanan_overview.py",
+    "scripts/build_ibm_abandoned_mines.py",
     "scripts/build_material_ontology.py",
     "config/materials.json",
     "config/weather_window.json",
@@ -22,6 +23,7 @@ BUNDLE_MEMBERS = [
     "outputs/india_known_mining_sites.csv",
     "outputs/india_ibm_mcdr_inspection_events_2023_2026.csv",
     "outputs/india_ibm_mcdr_latest_inspected_mines.csv",
+    "outputs/india_ibm_abandoned_mine_sites.csv",
     "outputs/india_ibm_nmi_2025_resource_inventory.csv",
     "outputs/india_official_critical_mineral_blocks.csv",
     "outputs/india_official_critical_mineral_mbs_manifest.csv",
@@ -38,6 +40,7 @@ BUNDLE_MEMBERS = [
     "outputs/validation_report.json",
     "outputs/ibm_nmi_2025_extraction_validation.json",
     "outputs/ibm_mcdr_inspection_validation.json",
+    "outputs/ibm_abandoned_mines_validation.json",
     "outputs/nasa_power_rolling_12m_validation.json",
     "outputs/official_critical_blocks_validation.json",
 ]
@@ -46,6 +49,7 @@ HASHED_ARTIFACTS = [
     "india_known_mining_sites.csv",
     "india_ibm_mcdr_inspection_events_2023_2026.csv",
     "india_ibm_mcdr_latest_inspected_mines.csv",
+    "india_ibm_abandoned_mine_sites.csv",
     "india_ibm_nmi_2025_resource_inventory.csv",
     "india_official_critical_mineral_blocks.csv",
     "india_official_critical_mineral_mbs_manifest.csv",
@@ -62,6 +66,7 @@ HASHED_ARTIFACTS = [
     "validation_report.json",
     "ibm_nmi_2025_extraction_validation.json",
     "ibm_mcdr_inspection_validation.json",
+    "ibm_abandoned_mines_validation.json",
     "nasa_power_rolling_12m_validation.json",
     "official_critical_blocks_validation.json",
     f"india_mining_dataset_csv_bundle_{VERSION}.zip",

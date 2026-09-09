@@ -196,6 +196,17 @@ SOURCE_REGISTRY = [
         "limitations": "National/state aggregates are not deposit locations; the source chapter provides no coordinates or polygons and figures are rounded.",
     },
     {
+        "source_id": "SRC_IBM_ABANDONED_MINE_SITES",
+        "publisher": "Indian Bureau of Mines, Ministry of Mines, Government of India",
+        "title": "List of 82 Abandoned Mine Sites Identified for Reclamation",
+        "release_or_reference_date": "source page last-updated date and snapshot access date are recorded in the output; underlying site-identification period not stated",
+        "url": "https://ibm.gov.in/IBMPortal/pages/Abandoned_Mine_Sites",
+        "download_url": "same as URL; the builder establishes the IBM English-language session before caching the page",
+        "license_or_access_note": "Government of India public webpage; retain attribution and verify current IBM website reuse terms.",
+        "used_for": "Authoritative named inventory of 82 abandoned/orphaned mine sites identified for reclamation or rehabilitation, with state, source mineral wording, and earlier lessee.",
+        "limitations": "No district, coordinate, mine code, lease geometry, closure date, or controlling current status is published. Rows are excluded from prospectivity scoring and are not a current all-mines or all-leases register.",
+    },
+    {
         "source_id": "SRC_IMA_CNMNC_MINERAL_LIST_2026_09",
         "publisher": "Commission on New Minerals, Nomenclature and Classification, International Mineralogical Association",
         "title": "The New IMA List of Minerals — A Work in Progress",

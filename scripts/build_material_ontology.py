@@ -32,6 +32,7 @@ CONFIG = ROOT / "config"
 IMA_SOURCE_ID = "SRC_IMA_CNMNC_MINERAL_LIST_2026_09"
 IUPAC_SOURCE_ID = "SRC_IUPAC_PERIODIC_TABLE_2022"
 MCS_SOURCE_ID = "SRC_USGS_MCS_2026"
+IBM_ABANDONED_SOURCE_ID = "SRC_IBM_ABANDONED_MINE_SITES"
 
 ONTOLOGY_PATH = OUT / "india_material_ontology_v1.csv"
 CROSSWALK_PATH = OUT / "material_source_term_crosswalk_v1.csv"
@@ -135,6 +136,7 @@ CURATED_ENTITIES = {
     "Biotite group": ("mineral_group", "", "Group-level term under modern mica nomenclature."),
     "Calcareous shell material": ("industrial_material", "", "Source term limeshell; composition varies."),
     "Cement": ("industrial_material", "", "Manufactured binder; composition varies."),
+    "Chalk": ("rock_or_industrial_material", "", "Soft fine-grained carbonate rock; composition and purity vary."),
     "Chalcedony": ("mineral_variety", "SiO2", "Microcrystalline quartz variety, not a separate IMA species."),
     "Chert": ("rock", "", "Siliceous sedimentary rock; composition varies."),
     "Chlorite group": ("mineral_group", "", "Group-level source term; species and formula vary."),
@@ -142,6 +144,7 @@ CURATED_ENTITIES = {
     "Diatomite": ("rock_or_industrial_material", "", "Biogenic siliceous sedimentary material; composition varies."),
     "Emerald": ("mineral_variety", "Be3Al2Si6O18", "Chromium/vanadium-bearing beryl variety."),
     "Feldspar group": ("mineral_group", "", "Group-level source term; species and formula vary."),
+    "Fire clay": ("industrial_material", "", "Refractory clay commodity comprising variable clay-mineral assemblages."),
     "Garnet group": ("mineral_group", "", "Group-level source term; species and formula vary."),
     "Gemstones": ("material_group", "", "Use-based group rather than a mineral species."),
     "Granite": ("rock", "", "Igneous rock and dimension-stone commodity; composition varies."),
@@ -152,6 +155,7 @@ CURATED_ENTITIES = {
     "Kyanite and related minerals": ("mineral_group", "Al2SiO5", "Industrial grouping of Al2SiO5 polymorphs."),
     "Lignite": ("energy_commodity", "", "Low-rank coal; composition varies."),
     "Lime": ("compound_or_industrial_material", "CaO", "Commercial lime is primarily calcium oxide; products vary."),
+    "Lime kankar": ("rock_or_industrial_material", "", "Impure nodular calcareous material; composition varies. IBM source spells this 'Lime kanker'."),
     "Limestone": ("rock_or_industrial_material", "", "Carbonate rock; commonly calcite-rich but composition varies."),
     "Limonite": ("mineral_mixture_or_ore", "", "Field/ore term for hydrated iron oxides; not one mineral species."),
     "Magnesium compounds": ("compound_group", "", "Commodity group; no single chemical formula."),
@@ -164,6 +168,7 @@ CURATED_ENTITIES = {
     "Natural gas": ("energy_commodity", "", "Hydrocarbon mixture, commonly methane-rich."),
     "Nitrogen (fixed)—ammonia": ("compound_or_industrial_material", "NH3", "Fixed-nitrogen commodity represented by ammonia."),
     "Olivine group": ("mineral_group", "", "Solid-solution mineral group; composition varies."),
+    "Ochre": ("industrial_material", "", "Natural earthy pigment material; mineral composition varies."),
     "Perlite": ("rock_or_industrial_material", "", "Hydrated volcanic glass used as an industrial material."),
     "Petroleum": ("energy_commodity", "", "Complex hydrocarbon mixture; no single chemical formula."),
     "Phosphorite": ("rock_or_ore", "", "Phosphate rock; mineralogy and grade vary."),
@@ -190,6 +195,9 @@ CURATED_ENTITIES = {
     "Vermiculite": ("industrial_mineral_group", "", "Commercial/group term; composition varies."),
     "Wad": ("mineral_mixture_or_ore", "", "Soft hydrous manganese-oxide mixture; not one mineral species."),
     "Wolframite group": ("mineral_group", "(Fe,Mn)WO4", "Solid-solution ore-mineral series/group term."),
+    "White earth": ("industrial_material", "", "Nonspecific source commodity term retained without a chemical formula."),
+    "Laterite": ("rock", "", "Highly weathered residual material; composition and ore significance vary."),
+    "Quartzite": ("rock", "", "Quartz-rich metamorphic rock; composition and purity vary."),
 }
 
 
@@ -278,7 +286,9 @@ ALIASES = {
     "abrasivesmanufactured": ["Abrasives (manufactured)"],
     "alumina": ["Alumina"],
     "cement": ["Cement"],
+    "chalk": ["Chalk"],
     "clays": ["Clay"],
+    "fireclay": ["Fire clay", "Clay"],
     "diamondindustrial": ["Diamond"],
     "feldsparandnephelinesyenite": ["Feldspar group", "Nepheline", "Nepheline syenite"],
     "garnetindustrial": ["Garnet group"],
@@ -292,6 +302,16 @@ ALIASES = {
     "sandandgravelindustrial": ["Sand and gravel (industrial)"],
     "salt": ["Halite"],
     "lime": ["Lime"],
+    "limekanker": ["Lime kankar"],
+    "limekankar": ["Lime kankar"],
+    "laterite": ["Laterite"],
+    "ochre": ["Ochre", "Iron oxide pigments"],
+    "whiteeatrh": ["White earth"],
+    "whiteearth": ["White earth"],
+    "quartzite": ["Quartzite"],
+    "qtrzfelds": ["Quartz", "Feldspar group"],
+    "pbzncu": ["Lead", "Zinc", "Copper"],
+    "barytes": ["Baryte"],
     "phyllite": ["Phyllite"],
     "hornblende": ["Hornblende group"],
     "stonedimension": ["Granite"],
@@ -670,6 +690,10 @@ def main() -> None:
         OUT / "india_ibm_mcdr_inspection_events_2023_2026.csv", "mineral_source",
         "normalized_top50_materials_json", "SRC_IBM_MCDR_INSPECTIONS_2023_2026", "ibm_mcdr_events",
     )
+    grouped_pipeline_terms(
+        OUT / "india_ibm_abandoned_mine_sites.csv", "mineral_source",
+        "normalized_material_names_json", IBM_ABANDONED_SOURCE_ID, "ibm_abandoned_mine_sites",
+    )
 
     auction = pd.read_csv(OUT / "india_official_critical_mineral_blocks.csv", keep_default_na=False)
     auction_terms = Counter()
@@ -690,7 +714,7 @@ def main() -> None:
 
     source_count_columns = [
         "mrds_india", "ibm_nmi_2025", "ibm_mcdr_events",
-        "critical_mineral_auction_events", "usgs_mcs2026_india_rows",
+        "ibm_abandoned_mine_sites", "critical_mineral_auction_events", "usgs_mcs2026_india_rows",
     ]
     ontology_rows = []
     for entity_id, row in entities.items():
@@ -732,7 +756,7 @@ def main() -> None:
     )
 
     validation = {
-        "ontology_version": "v1.0-alpha.1",
+        "ontology_version": "v1.0-alpha.2",
         "ontology_rows": int(len(ontology)),
         "unique_material_ids": int(ontology["material_id"].nunique()),
         "unique_material_names_casefolded": int(ontology["material_name"].str.casefold().nunique()),
@@ -759,6 +783,15 @@ def main() -> None:
         "usgs_mcs2026_source_rows": int(len(mcs)),
         "usgs_mcs2026_india_rows": int(len(india_mcs)),
         "usgs_mcs2026_source_sha256": sha256_file(RAW / "usgs_mcs2026_commodities_data.csv"),
+        "ibm_abandoned_mine_source_terms": int(
+            crosswalk.loc[crosswalk["source_id"].eq(IBM_ABANDONED_SOURCE_ID), "source_term"].nunique()
+        ),
+        "ibm_abandoned_mine_source_terms_mapped": int(
+            crosswalk.loc[
+                crosswalk["source_id"].eq(IBM_ABANDONED_SOURCE_ID)
+                & crosswalk["mapping_status"].eq("mapped")
+            ].shape[0]
+        ),
         "model_eligibility_policy": "Ontology inclusion does not confer model eligibility. Only the 50 explicitly retained v0.6 model targets are scored until separately reviewed and validated.",
     }
     validation["checks_pass"] = bool(
@@ -766,6 +799,8 @@ def main() -> None:
         and validation["legacy_model_targets"] == 50
         and validation["official_india_critical_aggregate_targets"] == 30
         and validation["ima_verified_species"] >= 60
+        and validation["ibm_abandoned_mine_source_terms"] == 26
+        and validation["ibm_abandoned_mine_source_terms_mapped"] == 26
         and validation["crosswalk_mapping_rate"] >= 0.90
         and validation["ima_parser_species_rows"] >= 6_000
     )
@@ -776,13 +811,16 @@ def main() -> None:
 
     release_validation_path = OUT / "validation_report.json"
     release_validation = json.loads(release_validation_path.read_text(encoding="utf-8"))
-    release_validation["development_release_version"] = "v1.0-alpha.1"
+    release_validation["development_release_version"] = "v1.0-alpha.2"
     release_validation["material_ontology_v1"] = {
         "ontology_rows": validation["ontology_rows"],
         "ima_verified_species": validation["ima_verified_species"],
         "iupac_element_entities": validation["iupac_element_entities"],
         "crosswalk_rows": validation["crosswalk_rows"],
+        "crosswalk_source_terms_mapped": validation["crosswalk_source_terms_mapped"],
+        "crosswalk_source_terms_unresolved_or_nonspecific": validation["crosswalk_source_terms_unresolved_or_nonspecific"],
         "crosswalk_mapping_rate": validation["crosswalk_mapping_rate"],
+        "ibm_abandoned_mine_source_terms_mapped": validation["ibm_abandoned_mine_source_terms_mapped"],
         "legacy_model_targets_unchanged": validation["legacy_model_targets"],
         "checks_pass": validation["checks_pass"],
     }

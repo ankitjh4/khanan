@@ -1,15 +1,15 @@
 {
-  "ontology_version": "v1.0-alpha.1",
-  "ontology_rows": 223,
-  "unique_material_ids": 223,
-  "unique_material_names_casefolded": 223,
+  "ontology_version": "v1.0-alpha.2",
+  "ontology_rows": 230,
+  "unique_material_ids": 230,
+  "unique_material_names_casefolded": 230,
   "entity_type_counts": {
     "alloy_or_industrial_material": 1,
     "compound_group": 1,
     "compound_or_industrial_material": 6,
     "element": 69,
     "energy_commodity": 4,
-    "industrial_material": 8,
+    "industrial_material": 11,
     "industrial_material_group": 1,
     "industrial_mineral_group": 3,
     "material_group": 7,
@@ -21,8 +21,8 @@
     "mineral_variety": 4,
     "ore_concentrate_group": 1,
     "ore_group": 1,
-    "rock": 4,
-    "rock_or_industrial_material": 4,
+    "rock": 6,
+    "rock_or_industrial_material": 6,
     "rock_or_ore": 3
   },
   "legacy_model_targets": 50,
@@ -30,11 +30,11 @@
   "official_india_critical_entities_or_group_members": 53,
   "ima_verified_species": 108,
   "iupac_element_entities": 69,
-  "entities_with_direct_source_term_occurrences": 193,
-  "crosswalk_rows": 424,
-  "crosswalk_source_terms_mapped": 417,
+  "entities_with_direct_source_term_occurrences": 200,
+  "crosswalk_rows": 450,
+  "crosswalk_source_terms_mapped": 443,
   "crosswalk_source_terms_unresolved_or_nonspecific": 7,
-  "crosswalk_mapping_rate": 0.9834905660377359,
+  "crosswalk_mapping_rate": 0.9844444444444445,
   "unresolved_terms": [
     {
       "source_id": "SRC_MSTC_CRITICAL_MBS_T1_T8",
@@ -87,6 +87,8 @@
   "usgs_mcs2026_source_rows": 8886,
   "usgs_mcs2026_india_rows": 143,
   "usgs_mcs2026_source_sha256": "582a0aa231aea53d8a97dc8d1cd3dfa5f885cf3760353e3d029d7f0ae4fbaaf5",
+  "ibm_abandoned_mine_source_terms": 26,
+  "ibm_abandoned_mine_source_terms_mapped": 26,
   "model_eligibility_policy": "Ontology inclusion does not confer model eligibility. Only the 50 explicitly retained v0.6 model targets are scored until separately reviewed and validated.",
   "checks_pass": true
 }

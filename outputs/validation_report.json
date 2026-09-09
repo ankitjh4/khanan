@@ -123,14 +123,24 @@
   "official_critical_mineral_distinct_offer_lineage_keys": 100,
   "official_critical_mineral_pib_reported_cumulative_offer_count": 88,
   "official_critical_mineral_lineage_reconciliation_status": "not_reconciled",
-  "development_release_version": "v1.0-alpha.1",
+  "development_release_version": "v1.0-alpha.2",
   "material_ontology_v1": {
-    "ontology_rows": 223,
+    "ontology_rows": 230,
     "ima_verified_species": 108,
     "iupac_element_entities": 69,
-    "crosswalk_rows": 424,
-    "crosswalk_mapping_rate": 0.9834905660377359,
+    "crosswalk_rows": 450,
+    "crosswalk_source_terms_mapped": 443,
+    "crosswalk_source_terms_unresolved_or_nonspecific": 7,
+    "crosswalk_mapping_rate": 0.9844444444444445,
+    "ibm_abandoned_mine_source_terms_mapped": 26,
     "legacy_model_targets_unchanged": 50,
+    "checks_pass": true
+  },
+  "ibm_abandoned_mine_sites": {
+    "published_rows": 82,
+    "source_page_last_updated": "2026-09-09",
+    "coordinates_published": 0,
+    "rows_excluded_from_model_evidence": 82,
     "checks_pass": true
   }
 }
