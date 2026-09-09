@@ -1,0 +1,190 @@
+{
+  "release_version": "v1.0-alpha.4",
+  "geospatial_feature_version": "v0.7",
+  "feature_version": "emag2v3-h3-r6-v0.1",
+  "build_date": "2026-09-10",
+  "source_product_url": "https://www.ncei.noaa.gov/products/earth-magnetic-model-anomaly-grid-2",
+  "source_metadata_url": "https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ngdc.mgg.geophysical_models:EMAG2_V3",
+  "source_doi": "https://doi.org/10.7289/V5H70CVX",
+  "source_files": {
+    "anomaly": {
+      "url": "https://www.ngdc.noaa.gov/geomag/data/EMAG2/EMAG2_V3_UpCont_DataTiff.tif",
+      "bytes": 239593097,
+      "sha256": "719db9d060a423b7292f09fa4312e7d0ebd4e284ba652079b34e3d05be5a370a",
+      "last_modified": "Mon, 19 Jun 2017 17:45:54 GMT",
+      "etag": null
+    },
+    "error": {
+      "url": "https://www.ngdc.noaa.gov/geomag/data/EMAG2/EMAG2_V3_Error_DataTiff.tif",
+      "bytes": 239593097,
+      "sha256": "d0df72096aa75d47d50595996c418d22a1ac4e109196cef48641e18c3a03e1dd",
+      "last_modified": "Mon, 19 Jun 2017 17:45:32 GMT",
+      "etag": null
+    },
+    "source_code": {
+      "url": "https://www.ngdc.noaa.gov/geomag/data/EMAG2/EMAG2_V3_Code.tif",
+      "bytes": 239593097,
+      "sha256": "91333a945d124a6eb309697076583007ee2c4dc2ce55bf5c62b86e5db135a035",
+      "last_modified": "Mon, 19 Jun 2017 17:45:15 GMT",
+      "etag": null
+    },
+    "readme": {
+      "url": "https://www.ngdc.noaa.gov/geomag/data/EMAG2/EMAG2_readme.txt",
+      "bytes": 1741,
+      "sha256": "8a2acb9d1aab322f18ee8269aec5144fcb3e9952708eab319b19223df3887a82",
+      "last_modified": "Fri, 23 Jun 2017 18:50:02 GMT",
+      "etag": null
+    }
+  },
+  "raster_metadata": {
+    "anomaly": {
+      "width": 10800,
+      "height": 5399,
+      "count": 1,
+      "dtype": "float32",
+      "embedded_crs": null,
+      "nodata": -3.4028234663852886e+38,
+      "transform": [
+        0.033333333335,
+        0.0,
+        -0.0166666666675,
+        0.0,
+        -0.033333333335,
+        89.9833333378325
+      ],
+      "bounds": [
+        -0.0166666666675,
+        -89.9833333378325,
+        359.9833333513325,
+        89.9833333378325
+      ]
+    },
+    "error": {
+      "width": 10800,
+      "height": 5399,
+      "count": 1,
+      "dtype": "float32",
+      "embedded_crs": null,
+      "nodata": -3.4028234663852886e+38,
+      "transform": [
+        0.03333335,
+        0.0,
+        -0.016666675,
+        0.0,
+        -0.03333335,
+        89.98337832499998
+      ],
+      "bounds": [
+        -0.016666675,
+        -89.983378325,
+        359.983513325,
+        89.98337832499998
+      ]
+    },
+    "source_code": {
+      "width": 10800,
+      "height": 5399,
+      "count": 1,
+      "dtype": "float32",
+      "embedded_crs": null,
+      "nodata": -3.4028234663852886e+38,
+      "transform": [
+        0.03333335,
+        0.0,
+        -0.016666675,
+        0.0,
+        -0.03333335,
+        89.98337832499998
+      ],
+      "bounds": [
+        -0.016666675,
+        -89.983378325,
+        359.983513325,
+        89.98337832499998
+      ]
+    }
+  },
+  "feature_rows": 88857,
+  "unique_h3_cells": 88857,
+  "valid_anomaly_rows": 84688,
+  "valid_anomaly_rate": 0.953081918138132,
+  "valid_error_rows": 82439,
+  "valid_error_rate": 0.9277715880572155,
+  "missing_anomaly_rows": 4169,
+  "missing_anomaly_rows_with_no_data_source_code": 4169,
+  "native_india_source_rows": 81992,
+  "native_india_source_rate": 0.9227410333457128,
+  "ambiguous_or_no_data_source_rows": 6418,
+  "source_code_distribution": {
+    "1": {
+      "label": "West Asia",
+      "rows": 96
+    },
+    "20": {
+      "label": "India",
+      "rows": 29665
+    },
+    "21": {
+      "label": "East India",
+      "rows": 52327
+    },
+    "27": {
+      "label": "Middle East",
+      "rows": 15
+    },
+    "101": {
+      "label": "Arabian",
+      "rows": 25
+    },
+    "102": {
+      "label": "Arabian aeromag",
+      "rows": 119
+    },
+    "108": {
+      "label": "Indian",
+      "rows": 192
+    },
+    "888": {
+      "label": "Ambiguous",
+      "rows": 1370
+    },
+    "999": {
+      "label": "No data",
+      "rows": 5048
+    }
+  },
+  "anomaly_nt_summary": {
+    "minimum": -793.7504272460938,
+    "median": 4.521584987640381,
+    "maximum": 802.4978637695312
+  },
+  "error_nt_summary": {
+    "minimum": 100.0,
+    "median": 176.0,
+    "maximum": 226.0
+  },
+  "maximum_source_grid_distance_km": 2.578502323249113,
+  "raster_transform_alignment_max_abs_degrees": 4.498716747036724e-05,
+  "candidate_feature_rows": 2784,
+  "candidate_valid_anomaly_rate": 0.9863505747126436,
+  "candidate_valid_error_rate": 0.9691091954022989,
+  "candidate_scores_recomputed": false,
+  "model_use_status": "Integrated into the national and candidate tables as contextual features; admission to scoring requires a separate spatial ablation and leakage audit.",
+  "float_columns_written_with_six_decimal_places": [
+    "emag2_upcont_anomaly_nt",
+    "emag2_upcont_abs_anomaly_nt",
+    "emag2_upcont_local_mean_nt_3x3",
+    "emag2_upcont_local_std_nt_3x3",
+    "emag2_upcont_local_range_nt_3x3",
+    "emag2_anomaly_percentile_india_h3",
+    "emag2_anomaly_robust_z_india_h3",
+    "emag2_abs_robust_z_india_h3",
+    "emag2_error_estimate_nt",
+    "emag2_error_raw_value",
+    "emag2_abs_signal_to_error_ratio",
+    "emag2_source_grid_longitude",
+    "emag2_source_grid_latitude",
+    "emag2_source_grid_distance_km"
+  ],
+  "checks_pass": true
+}

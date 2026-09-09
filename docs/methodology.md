@@ -92,7 +92,17 @@ For each selected layer, the pipeline records the WFS feature count, WGS84 bound
 
 The GSI Data Sharing and Accessibility Policy, 2019 distinguishes open viewing from registered download and includes non-transfer and third-party redistribution restrictions for supplied digital data. The WFS schemas also omit essential scientific metadata for several analytical layers, including definitive units, methods, detection limits, survey scale, reduction parameters and missing-value codes. KHANAN therefore publishes only the metadata audit in this release. Raw probes remain in the ignored local source cache and all NGDR feature values are excluded from training, validation and candidate ranking. The exact decision and admission gates are documented in [`ngdr_access_and_integration.md`](ngdr_access_and_integration.md).
 
-## 10. Material ontology and model eligibility
+## 10. NOAA/NCEI EMAG2v3 magnetic context
+
+The v1.0-alpha.4 feature pipeline acquires the NOAA/NCEI [EMAG2v3 product](https://www.ncei.noaa.gov/products/earth-magnetic-model-anomaly-grid-2), its error-estimate raster, source-code raster and official format file. Every downloaded file is size-checked and SHA-256 hashed. The source is the two-arc-minute global compilation described by Meyer, Saltus and Chulliat (2017), [DOI 10.7289/V5H70CVX](https://doi.org/10.7289/V5H70CVX). KHANAN selects the anomaly product upward-continued to a consistent 4 km altitude to reduce elevation-basis inconsistency across the national screen.
+
+The GeoTIFF files contain geographic transforms but no embedded CRS tag. KHANAN assigns EPSG:4326 from the [official NCEI ISO metadata](https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ngdc.mgg.geophysical_models:EMAG2_V3), records that assignment in every feature row, and verifies that the anomaly, error and code raster transforms align within 0.0001 degrees. For each H3 resolution-6 centroid, the pipeline samples the nearest source pixel and computes the valid 3×3-pixel mean, population standard deviation and range. It also emits an India-grid percentile, median/MAD robust z-score, absolute signal-to-error ratio, source-pixel coordinates, centroid-to-pixel distance and record-level JSON quality flags. The largest match distance is 2.58 km.
+
+The standalone feature table contains 88,857 unique H3 cells. Of these, 84,688 (95.31%) have a valid anomaly and 82,439 (92.78%) have a non-negative published error estimate. All 4,169 missing anomaly cells have source code 999 (`No data`). The error layer has 6,418 cells with code 888 (`Ambiguous`) or 999; their negative sentinel values remain available only in the raw-error field while the clean error field is blank. No interpolation or zero filling is performed. Source codes, including the India and East India regional grids, are preserved from the [official format description](https://www.ngdc.noaa.gov/geomag/data/EMAG2/EMAG2_readme.txt).
+
+EMAG2v3 is a heterogeneous satellite, ship, airborne and precompiled-source product. A magnetic anomaly can reflect lithology, structure, depth, processing and survey coverage; it is not direct evidence of a particular mineral, deposit, grade or recoverability. Alpha.4 therefore appends these columns to the national and candidate tables as context but leaves all v0.6 prospectivity scores, classes and ranks unchanged. Material-specific feature ablation, spatial holdout comparison and leakage checks are required before any EMAG2 feature can enter scoring.
+
+## 11. Material ontology and model eligibility
 
 The v1.0-alpha.2 ontology contains 230 unique, typed entities derived from material terms actually observed in the India source tables, plus the retained v0.6 targets. It contains 69 elements, 85 mineral species, and 76 other entities spanning ores, rocks, groups, mixtures, varieties, industrial materials, and energy commodities. Stable typed IDs prevent an element, ore, mineral species, and informal group from being silently treated as the same thing.
 
@@ -106,7 +116,7 @@ Ontology inclusion never confers model eligibility. The geospatial prediction co
 
 Ontology arrays identify names, possible compounds, or representative forms; they do not assert assay, grade, recoverability, mineral processing route, or economic value at a site. Formulas are supplied only for elements, verified species, or defensible compounds. Otherwise the English names are preserved in arrays as requested.
 
-## 11. Reconnaissance score
+## 12. Reconnaissance score
 
 For a material with at least five mapped source records, cell score components are:
 
@@ -130,7 +140,7 @@ and clipped to 0–1. Materials with one to four evidence records receive a low-
 
 The score is a relative reconnaissance index. It is **not a calibrated discovery probability**.
 
-## 12. Spatial validation
+## 13. Spatial validation
 
 Materials with at least 10 mapped India evidence records are evaluated with up to five GroupKFold splits grouped by H3 resolution-3 cells. Each fold trains the same score recipe on geographically separated evidence and compares held-out occurrences with a deterministic sample of grid cells more than 25 km from any catalog evidence.
 
@@ -143,7 +153,7 @@ The comparison cells are not confirmed barren, so these metrics measure catalog-
 
 In v0.1, 15 material models have at least 10 records and spatial validation results. Vanadium's holdout AUC was below the promotion threshold and is therefore not labeled as a candidate even when its raw score is high.
 
-## 13. Candidate promotion rules
+## 14. Candidate promotion rules
 
 A cell is never promoted when it is within 5 km of any mapped source site. For all candidate classes, the top material must have at least 10 source records and the nearest same-material evidence must be more than 25 km and no more than 250 km away.
 
@@ -162,7 +172,7 @@ A cell is never promoted when it is within 5 km of any mapped source site. For a
 
 The national rank sorts passing candidates by validation AUC, then percentile, then score. Neighboring high-ranked H3 cells are usually one regional signal and should be dissolved/clustered before field planning.
 
-## 14. Validation and quality controls
+## 15. Validation and quality controls
 
 The release checks:
 
@@ -180,14 +190,16 @@ The release checks:
 - 36 IBM MCDR source pages, all 14 regional offices, unique event/latest-view IDs, date parsing and financial-year exceptions, blank coordinates, and explicit non-production/non-exhaustiveness flags;
 - explicit record-level flags and source provenance.
 - 1,114 named NGDR WMS layers, 751 WFS feature types, 11 selected-layer schemas and bounded probes, 2,459,737 reported selected-layer features, and mandatory exclusion of raw NGDR values from public outputs and model evidence.
+- 88,857 unique EMAG2 H3 records; exact source-file hashes and raster dimensions; anomaly/error coverage; source-code interpretation; transform alignment; source-pixel match distance; and an assertion that candidate scores were not recomputed.
 
 Build-time results are written to `outputs/validation_report.json`. A passing report means the pipeline's structural checks passed; it does not validate mineral occurrence in the field.
 
-## 15. What is required for a defensible discovery model
+## 16. What is required for a defensible discovery model
 
 Before using the output to allocate exploration capital, add:
 
-- authorized National Geoscience Data Repository geochemistry, geophysics, baseline geology, boreholes, and exploration reports;
+- authorized National Geoscience Data Repository geochemistry, higher-resolution geophysics, baseline geology, boreholes, and exploration reports;
+- material-wise spatial ablation demonstrating that EMAG2v3 adds generalizable information beyond geology and proximity baselines;
 - current Indian Bureau of Mines and state lease/working-mine registers, plus deposit-level NMI geometry where authorized;
 - exact geometry and controlling legal/grant status for auction/exploration blocks not yet covered by the tranche-VIII summaries;
 - multispectral/hyperspectral alteration indices and structural lineaments;

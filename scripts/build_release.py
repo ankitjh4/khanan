@@ -5,18 +5,21 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v1.0-alpha.3"
+VERSION = "v1.0-alpha.4"
 
 BUNDLE_MEMBERS = [
     "README.md",
     "assets/README.md",
     "assets/maps/khanan-india-prospectivity-overview-v0.6.png",
+    "assets/maps/khanan-emag2-magnetic-context-v0.7.png",
     "data/README.md",
     "docs/methodology.md",
     "docs/ngdr_access_and_integration.md",
     "outputs/README.md",
     "scripts/plot_khanan_overview.py",
+    "scripts/plot_emag2_context.py",
     "scripts/audit_ngdr_services.py",
+    "scripts/build_emag2_features.py",
     "scripts/build_ibm_abandoned_mines.py",
     "scripts/build_material_ontology.py",
     "config/materials.json",
@@ -31,6 +34,7 @@ BUNDLE_MEMBERS = [
     "outputs/india_official_critical_mineral_mbs_manifest.csv",
     "outputs/india_mining_prospectivity_grid_h3_r6.csv",
     "outputs/india_mining_candidate_areas_validation_gated.csv",
+    "outputs/india_emag2v3_magnetic_features_h3_r6.csv",
     "outputs/india_strategic_materials_top50.csv",
     "outputs/india_material_ontology_v1.csv",
     "outputs/material_source_term_crosswalk_v1.csv",
@@ -45,6 +49,7 @@ BUNDLE_MEMBERS = [
     "outputs/ibm_mcdr_inspection_validation.json",
     "outputs/ibm_abandoned_mines_validation.json",
     "outputs/ngdr_service_validation.json",
+    "outputs/emag2v3_magnetic_features_validation.json",
     "outputs/nasa_power_rolling_12m_validation.json",
     "outputs/official_critical_blocks_validation.json",
 ]
@@ -59,6 +64,7 @@ HASHED_ARTIFACTS = [
     "india_official_critical_mineral_mbs_manifest.csv",
     "india_mining_prospectivity_grid_h3_r6.csv",
     "india_mining_candidate_areas_validation_gated.csv",
+    "india_emag2v3_magnetic_features_h3_r6.csv",
     "india_strategic_materials_top50.csv",
     "india_material_ontology_v1.csv",
     "material_source_term_crosswalk_v1.csv",
@@ -73,6 +79,7 @@ HASHED_ARTIFACTS = [
     "ibm_mcdr_inspection_validation.json",
     "ibm_abandoned_mines_validation.json",
     "ngdr_service_validation.json",
+    "emag2v3_magnetic_features_validation.json",
     "nasa_power_rolling_12m_validation.json",
     "official_critical_blocks_validation.json",
     f"india_mining_dataset_csv_bundle_{VERSION}.zip",

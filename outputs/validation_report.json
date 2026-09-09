@@ -109,7 +109,7 @@
   "official_critical_mineral_rows_with_boundary_geometry": 143,
   "official_critical_mineral_maximum_geometry_area_difference_pct": 4.630038971317252,
   "official_critical_mineral_guardrail": "Auction offers and preferred-bidder results are event observations, not proof of production, final legal grant, reserves, resources, grade, economic viability, or permission to enter land. Geometry is provided for overlay and is excluded from prospectivity training/scoring.",
-  "dataset_release_version": "v0.6",
+  "dataset_release_version": "v0.7",
   "official_critical_mineral_offer_rows_by_tranche": {
     "1": 20,
     "2": 18,
@@ -123,7 +123,7 @@
   "official_critical_mineral_distinct_offer_lineage_keys": 100,
   "official_critical_mineral_pib_reported_cumulative_offer_count": 88,
   "official_critical_mineral_lineage_reconciliation_status": "not_reconciled",
-  "development_release_version": "v1.0-alpha.3",
+  "development_release_version": "v1.0-alpha.4",
   "material_ontology_v1": {
     "ontology_rows": 230,
     "ima_verified_species": 108,
@@ -154,6 +154,20 @@
     "selected_layers_with_invalid_or_missing_wgs84_bbox": 1,
     "raw_feature_values_published": false,
     "model_evidence_status": "not_integrated",
+    "checks_pass": true
+  },
+  "emag2v3_geophysics": {
+    "feature_rows": 88857,
+    "unique_h3_cells": 88857,
+    "valid_anomaly_rows": 84688,
+    "valid_error_rows": 82439,
+    "missing_anomaly_rows": 4169,
+    "native_india_source_rows": 81992,
+    "ambiguous_or_no_data_source_rows": 6418,
+    "maximum_source_grid_distance_km": 2.578502323249113,
+    "candidate_valid_anomaly_rate": 0.9863505747126436,
+    "candidate_valid_error_rate": 0.9691091954022989,
+    "candidate_scores_recomputed": false,
     "checks_pass": true
   }
 }

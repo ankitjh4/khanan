@@ -261,6 +261,17 @@ SOURCE_REGISTRY = [
         "used_for": "Controls KHANAN's access, attribution, caching, redistribution, and derivative-data decision for NGDR/GSI evidence.",
         "limitations": "KHANAN does not provide legal advice. Applicability can depend on access class, dataset, user category, agreement, and current portal terms.",
     },
+    {
+        "source_id": "SRC_NOAA_EMAG2V3",
+        "publisher": "NOAA National Centers for Environmental Information",
+        "title": "EMAG2v3: Earth Magnetic Anomaly Grid, 2-arc-minute resolution",
+        "release_or_reference_date": "Version 3 published 2017-05-30; accessed 2026-09-10",
+        "url": "https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ngdc.mgg.geophysical_models:EMAG2_V3",
+        "download_url": "https://www.ngdc.noaa.gov/geomag/data/EMAG2/",
+        "license_or_access_note": "NCEI metadata states the NOAA-produced dataset is not subject to copyright protection within the United States. Cite Meyer, Saltus and Chulliat (2017), DOI 10.7289/V5H70CVX, and retain NOAA/NCEI attribution and use limitations.",
+        "used_for": "Two-arc-minute magnetic anomaly at a consistent 4 km altitude, source error estimate, and source-grid code sampled at H3 resolution-6 centroids, with local 3x3 source-pixel summaries.",
+        "limitations": "A global compilation of heterogeneous satellite, ship, airborne and precompiled sources. Resolution and error vary; values are regional geophysical context, not deposit evidence, grade, depth or economic viability. The GeoTIFF lacks embedded CRS metadata, so EPSG:4326 is assigned from NCEI ISO metadata.",
+    },
 ]
 
 
