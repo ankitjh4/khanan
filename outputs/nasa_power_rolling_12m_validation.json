@@ -1,0 +1,517 @@
+{
+  "source_id": "SRC_NASA_POWER_ROLLING_12M",
+  "source_api": "https://power.larc.nasa.gov/api/temporal/daily/regional",
+  "source_documentation": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+  "reference_period_start": "2025-09-01",
+  "reference_period_end": "2026-08-31",
+  "expected_days": 365,
+  "time_standard": "UTC",
+  "temporal_resolution": "daily",
+  "selection_basis": "Twelve complete calendar months ending immediately before the 2026-09-09 release month.",
+  "source_file_count": 96,
+  "source_files_by_parameter": {
+    "T2M": 16,
+    "T2M_MAX": 16,
+    "T2M_MIN": 16,
+    "PRECTOTCORR": 16,
+    "RH2M": 16,
+    "WS2M": 16
+  },
+  "climate_grid_points": 3120,
+  "unique_climate_grid_points": 3120,
+  "valid_days_min": 365,
+  "valid_days_max": 365,
+  "complete_grid_point_rate": 1.0,
+  "temperature_mean_c_range": [
+    -12.232657534246576,
+    29.603698630136986
+  ],
+  "precipitation_total_mm_range": [
+    34.95,
+    6644.21
+  ],
+  "source_files": [
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat14_22_lon68_75.5.csv",
+      "bytes": 1831773,
+      "sha256": "40269cffd6d7d85bffdb537b28acd71133a51dc11130e0344ad0936b81cda5bc"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat14_22_lon75.5_83.csv",
+      "bytes": 1829698,
+      "sha256": "03a2e83f26b516295a64e0c4dfd57f26e291bd2674934ffc6204c0333d94c7f8"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat14_22_lon83_90.5.csv",
+      "bytes": 1843891,
+      "sha256": "380b8c56f9ec13888bc53e939d43e019b558fbba0f1c108e6026c063e4914c27"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat14_22_lon90.5_98.csv",
+      "bytes": 1851395,
+      "sha256": "4d1f490ff70eb2bf9c176834b097f703fb8bf38553122438319ddb1c9087408b"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat22_30_lon68_75.5.csv",
+      "bytes": 1809011,
+      "sha256": "7d0c19605aa089abdc36e5fe4ea2902757ad7fe39c1cfe3b42355b2db74571a5"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat22_30_lon75.5_83.csv",
+      "bytes": 1823740,
+      "sha256": "a13301f9c8306aa7847bad6a8539717f439463115778bda904142f1f707f2ac3"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat22_30_lon83_90.5.csv",
+      "bytes": 1833330,
+      "sha256": "ca9181ba701754a64a13e5cbaa9715ecd7b0f1e91415b4b51951d1eb77b5565f"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat22_30_lon90.5_98.csv",
+      "bytes": 1841286,
+      "sha256": "e901ed11233297b43665573d1369d2f181adb1676d343be2269ec73955f0e25b"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat30_38_lon68_75.5.csv",
+      "bytes": 1818639,
+      "sha256": "ed0b93c8ad276d3ebf6a9c7540f28aaf2524b76a14c675789c54d4a4a2871490"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat30_38_lon75.5_83.csv",
+      "bytes": 1814260,
+      "sha256": "9b0ad2b7acab8d147cd2ef8c5a27e1f5942e830061676f3faea2d5cda8a6da33"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat30_38_lon83_90.5.csv",
+      "bytes": 1815101,
+      "sha256": "5caad7178824853cb84c3ddd34938fb12644b5f096cde4dbf92c1921bb0d0e70"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat30_38_lon90.5_98.csv",
+      "bytes": 1819754,
+      "sha256": "2000844d115c40ba9d99d4a909fba9624f723b0fc674de85b8835564986238c0"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat6_14_lon68_75.5.csv",
+      "bytes": 1816774,
+      "sha256": "cf1d40df250198a4c85987f3e2abff97a42b2924d08c2d6fc03743ff5f948dfe"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat6_14_lon75.5_83.csv",
+      "bytes": 1814641,
+      "sha256": "8ea8a45fa6a93c2ca094917916abdc770f84272e2970a78dd750baa1b118b551"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat6_14_lon83_90.5.csv",
+      "bytes": 1821155,
+      "sha256": "33d9770cd7128f3d157ab8094a84291f880dc4d72e82defb8c1c9039cd04bdd5"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/PRECTOTCORR_lat6_14_lon90.5_98.csv",
+      "bytes": 1824252,
+      "sha256": "5389cdb1fc918088cdced6337c2ddf89dc6de373b34d02274cc403fc3c7aa874"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat14_22_lon68_75.5.csv",
+      "bytes": 1925633,
+      "sha256": "12771f22771141a226e44830a279280d744ce97edd7f29b276f6e6e68c91e273"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat14_22_lon75.5_83.csv",
+      "bytes": 1925554,
+      "sha256": "b7678d36446fe07eb515c75fa87e1a3b0b84ab77fa9386c04b7e1dd3b3e5fef0"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat14_22_lon83_90.5.csv",
+      "bytes": 1925562,
+      "sha256": "5978a6fa2be15d3ae0f64c98bdc7180a8d3786a940bccf18b061538d2328c713"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat14_22_lon90.5_98.csv",
+      "bytes": 1925540,
+      "sha256": "90a9738e1a0cb94ef20994b3af2d607fc5380ffea9ddd368c3a3d5fd3e1bdefd"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat22_30_lon68_75.5.csv",
+      "bytes": 1925269,
+      "sha256": "b0cda6d82563533146ce820ffd954a40d67edc1b50d69609f13347b3eab9a1a3"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat22_30_lon75.5_83.csv",
+      "bytes": 1925665,
+      "sha256": "283eb6a7b475d12b62a6e014cf00f3daa7bd9e58502b927af02ed9a2e943791c"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat22_30_lon83_90.5.csv",
+      "bytes": 1925514,
+      "sha256": "b4d43078bc563c3c84bf937bd0197e817e5cbcf6b67cdb7fd34a61b77b39e1a1"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat22_30_lon90.5_98.csv",
+      "bytes": 1925407,
+      "sha256": "17ec1b6b32a4a0d8a8276be36418b7c8c2bd0412c376e72b8a4f7b724a2c5153"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat30_38_lon68_75.5.csv",
+      "bytes": 1925336,
+      "sha256": "d2602aae05b87c697c4586982d9e93ff904928247121e9ffaf0690aab2e0bdfc"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat30_38_lon75.5_83.csv",
+      "bytes": 1925084,
+      "sha256": "fc2fd12decc227b275d1934a3cb901c24229b6c2d1ff11586daf397b54503f86"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat30_38_lon83_90.5.csv",
+      "bytes": 1925241,
+      "sha256": "c28bb40830c993d20d9f4dfdd3f64c8d3c77172b924df7813bb5c1e06ec8f3c0"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat30_38_lon90.5_98.csv",
+      "bytes": 1925326,
+      "sha256": "045e09b6e6b03c12aa21028a2874d3e0c6bb856dbf8b6395f0720cb1f15d67fa"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat6_14_lon68_75.5.csv",
+      "bytes": 1890553,
+      "sha256": "cb76befdb115bc8d9a23d6305ade4938cfb694c594618d2da702bdaf1de96dd6"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat6_14_lon75.5_83.csv",
+      "bytes": 1890553,
+      "sha256": "d43dd18cfd02eda88e792f59ab7884d2c193c489aa702bd9571f952edaead74d"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat6_14_lon83_90.5.csv",
+      "bytes": 1890658,
+      "sha256": "7b1475a9d03a6d98a1b9a49dd4d648e9cc3e67f57182f5e813ad33ba9b649264"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/RH2M_lat6_14_lon90.5_98.csv",
+      "bytes": 1890572,
+      "sha256": "2dee5b18c2280f8b001542b32cb2ae9a96c9b8431919278249c3a62d1d34764f"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat14_22_lon68_75.5.csv",
+      "bytes": 1925470,
+      "sha256": "188a93342d878069f4e04b11c2b211026b6cc19bd5bdc40022e7dc63242a835a"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat14_22_lon75.5_83.csv",
+      "bytes": 1925672,
+      "sha256": "36c212a32af34e7638799cd62cbc410d83ddf3e1b8133005c6e4ad90cde7121a"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat14_22_lon83_90.5.csv",
+      "bytes": 1925594,
+      "sha256": "28cb7b76a65b43aee3e9226206a602dbeef34f39ec9d395091ed14fb04010ceb"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat14_22_lon90.5_98.csv",
+      "bytes": 1925624,
+      "sha256": "3b5e903800c9bf8b97354fc777d2e0e9f43c17be0267894bb67671f585405154"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat22_30_lon68_75.5.csv",
+      "bytes": 1925451,
+      "sha256": "d5d19cfc46219a2b8e5b4eb2a4a2b86b517fe00a8b035b07910596be968f47f6"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat22_30_lon75.5_83.csv",
+      "bytes": 1924615,
+      "sha256": "e3f908c6ad2e294d43a67419ce15701fe702d751aef629ec2d0a933a605a1030"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat22_30_lon83_90.5.csv",
+      "bytes": 1916566,
+      "sha256": "994d4d27298893a0d0e732cb563ea66f834f1f0e51e51d09dc5faeeb0f4347af"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat22_30_lon90.5_98.csv",
+      "bytes": 1917367,
+      "sha256": "c2a9dbf757eccee5e3f00f70420a8a79f624ee0c3aae02ba1222466f7676032e"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat30_38_lon68_75.5.csv",
+      "bytes": 1917126,
+      "sha256": "810c147c0e500d7fdbc422cf2f66a370a7b9ba7b9a3a241b579a50d90bb81117"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat30_38_lon75.5_83.csv",
+      "bytes": 1910260,
+      "sha256": "beccaf9a464b6cd287c127cad1631bd89cb7941ad8c1060e16362e1324fcd165"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat30_38_lon83_90.5.csv",
+      "bytes": 1905839,
+      "sha256": "f734b290c3d8c148dc3c037994f158d0cce17b8fd9f89f62e7cabe04b4433790"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat30_38_lon90.5_98.csv",
+      "bytes": 1901046,
+      "sha256": "727b5f45bc598c3e24e67715a88fffbd40904e867e023737bfe29f07efac8a9e"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat6_14_lon68_75.5.csv",
+      "bytes": 1890436,
+      "sha256": "7c6684e6c73dc0a21c06416ff4b1ddfb080c9191addacc037d07eb1c901938c4"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat6_14_lon75.5_83.csv",
+      "bytes": 1890423,
+      "sha256": "ba9ba2a24a453948383e3a60fe015ed26a767bed0ea24bc1154c19ff451c57ad"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat6_14_lon83_90.5.csv",
+      "bytes": 1890523,
+      "sha256": "8efebcb4b287c38da9daef6b71fed34f56e5031f0987109f6f1513a6e3f73bc9"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MAX_lat6_14_lon90.5_98.csv",
+      "bytes": 1890443,
+      "sha256": "018b7f017b1bb02f89189589ee6cc54bb9ac520b140a72081d31ca88bb83928c"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat14_22_lon68_75.5.csv",
+      "bytes": 1925178,
+      "sha256": "39cb7721f4a7ff1f80dcddb13d97acb306764d166c3d298dc0d79502cabbfd3d"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat14_22_lon75.5_83.csv",
+      "bytes": 1922341,
+      "sha256": "d515d7474297b44474593506f424044f7907a6213fa2833783eb1cda8faa110d"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat14_22_lon83_90.5.csv",
+      "bytes": 1924170,
+      "sha256": "27c68d9ff6bff0349d83d115ba40d479a0fb49d64ef9be9fc752332f133e2d99"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat14_22_lon90.5_98.csv",
+      "bytes": 1925218,
+      "sha256": "581eb8f79035d9620ee09210e3e5796649d69a7a198a94c8b4d32196072bcb26"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat22_30_lon68_75.5.csv",
+      "bytes": 1918993,
+      "sha256": "b045a1208f5e197dd20488627ef592c2ede8274d4889fe71b171cc6ba6ceb21f"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat22_30_lon75.5_83.csv",
+      "bytes": 1911878,
+      "sha256": "2e8ca9cd59049576f4d5897c5b61315fa65139e3a6fa1d032d6ea541a147c2f1"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat22_30_lon83_90.5.csv",
+      "bytes": 1918956,
+      "sha256": "96cb3e9816c5a788a424ff8425593d94130596ddfa5ded70461d3f810bf0a3f0"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat22_30_lon90.5_98.csv",
+      "bytes": 1915211,
+      "sha256": "1b0523fc8fc79a2b298077183bb55ec7122099d41ca1c477e67a8d39461647be"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat30_38_lon68_75.5.csv",
+      "bytes": 1910664,
+      "sha256": "ffec45e2626a788517e87b0797ed6a015911d116b6e9d1104f2307c7ecdcff2e"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat30_38_lon75.5_83.csv",
+      "bytes": 1935277,
+      "sha256": "f75e2acb6d58925ee259ce102cbdb4877e585a22b5a28b32b9d775de550dce24"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat30_38_lon83_90.5.csv",
+      "bytes": 1946115,
+      "sha256": "c13b71e32264b61cee46fc10d02cce02eb03e046aff132a93fb797c08ded0e1b"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat30_38_lon90.5_98.csv",
+      "bytes": 1935368,
+      "sha256": "497d35604c98bf0f0e04edd1308165f01f87fd5f524f71db6a3e58dc12d4d209"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat6_14_lon68_75.5.csv",
+      "bytes": 1890447,
+      "sha256": "3998155881af49c2ebf5ab256c06ec1d6b82f197c1bf36097579f9aea7195b69"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat6_14_lon75.5_83.csv",
+      "bytes": 1890602,
+      "sha256": "99b429730e699eb427b961bbacc4919161426766bc38dca8b3b9474b31f5cd5a"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat6_14_lon83_90.5.csv",
+      "bytes": 1890489,
+      "sha256": "5401106a2854499d54c28e53ea598aafe0739ab8898487df37cc64d154c46918"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_MIN_lat6_14_lon90.5_98.csv",
+      "bytes": 1890461,
+      "sha256": "5dbe1008313eeb63c2da111376cffa69a8280d523c3391e080bef6dd9805abae"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat14_22_lon68_75.5.csv",
+      "bytes": 1925666,
+      "sha256": "9d53866734579cc0268a3a2529951c8eea2551cdad971610e0056cefaaa853eb"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat14_22_lon75.5_83.csv",
+      "bytes": 1925559,
+      "sha256": "0e5c2849b835b165a6ee839f0de7d1756040d10267bcc191612a08f5e2208dbb"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat14_22_lon83_90.5.csv",
+      "bytes": 1925615,
+      "sha256": "9402cd6929f85fe308955325fbc39334f8f978d2fa2ba3e22d366c063254ba86"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat14_22_lon90.5_98.csv",
+      "bytes": 1925601,
+      "sha256": "75a68fee4aca2fa3080a6557e89ef1dc87fde08d040d248ba0f5c9863861e462"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat22_30_lon68_75.5.csv",
+      "bytes": 1925175,
+      "sha256": "ee1249e4e281ecdeaecc013e2fb2e41604b5e7ec60332e8b76ec19cfec2749eb"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat22_30_lon75.5_83.csv",
+      "bytes": 1923688,
+      "sha256": "b1ecf3651f94477d107f7f2cf287a181a085d587a61bd647d8fcdb7b3505d2bb"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat22_30_lon83_90.5.csv",
+      "bytes": 1917864,
+      "sha256": "af96d8565d2ce3d426d2f38181f5aa0aec4a0f862d8386ff46137a107b82f902"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat22_30_lon90.5_98.csv",
+      "bytes": 1915161,
+      "sha256": "4bf53b3cda52ee45bd974597493980c3ae8a2dda22bdf97c0716c9f4f85e0760"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat30_38_lon68_75.5.csv",
+      "bytes": 1913191,
+      "sha256": "ed418448592e59ec04faa82162339d72e6becea3963f4e68d217a00ed25c3bbd"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat30_38_lon75.5_83.csv",
+      "bytes": 1919765,
+      "sha256": "7544e90253278f938c38361d0abc4e5f296c994225d7254dcbb3946267e60b10"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat30_38_lon83_90.5.csv",
+      "bytes": 1922181,
+      "sha256": "d3ef3a943ae07d5ce306a3ce91a86bde4462eba31aabfcfdeb56285c3ab35c43"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat30_38_lon90.5_98.csv",
+      "bytes": 1909641,
+      "sha256": "0e83d792b24e6ede323fdd01c81d5e9059260e1f539e51d9add6ba5dfa8c4c27"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat6_14_lon68_75.5.csv",
+      "bytes": 1890523,
+      "sha256": "a7ad78cd9ed328a31b873944b0321d29678e1db5675b46580343fe290295e1da"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat6_14_lon75.5_83.csv",
+      "bytes": 1890351,
+      "sha256": "21104769b0760068f9c24ec7f60f9b0e5f66000ea7f4c6c58dc2e323244196a6"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat6_14_lon83_90.5.csv",
+      "bytes": 1890492,
+      "sha256": "17fb0b90868394b2a06f7c2e80d37bf87bcd7128d59b0b9de7d9044545ecf46d"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/T2M_lat6_14_lon90.5_98.csv",
+      "bytes": 1890618,
+      "sha256": "7d3a7618accfb4333a72a8743c59e734745b78ccd6bbde39bb7650cf2063dff2"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat14_22_lon68_75.5.csv",
+      "bytes": 1851576,
+      "sha256": "b3f7a7786d472de0becce1d161ec45b02e410a26afde8733693a1625e2772bd1"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat14_22_lon75.5_83.csv",
+      "bytes": 1850972,
+      "sha256": "20927c85cf8473480a725ce442f487155924c6eb2f87dd77c204a6abc84713f7"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat14_22_lon83_90.5.csv",
+      "bytes": 1851575,
+      "sha256": "fbfb27e53a1fe0a0515b09b476194a5c7842702a4fde76a4c2b82747a8a3952d"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat14_22_lon90.5_98.csv",
+      "bytes": 1851166,
+      "sha256": "3c6026d64c4a5d8e3462da39d23b74ec874f84ffad65224e89b5f544f305530e"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat22_30_lon68_75.5.csv",
+      "bytes": 1851083,
+      "sha256": "385c307b85179525d1dc17329b6c949debe3e9670324c583c10824897279b686"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat22_30_lon75.5_83.csv",
+      "bytes": 1851122,
+      "sha256": "3a2ae8f65c8f5f4bd32138e5cf2fcbbc14dbfb0c33cf2e4e48e8ff899b256414"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat22_30_lon83_90.5.csv",
+      "bytes": 1850997,
+      "sha256": "59c39091e10eecf67905bea72c0dfd9ecc034e8be078484b55bd0830c3242db0"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat22_30_lon90.5_98.csv",
+      "bytes": 1851023,
+      "sha256": "64ea05bb4fed4ef4dfe3731bac1206bacea1808fdc2e9f4b45fc3dc2a19117df"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat30_38_lon68_75.5.csv",
+      "bytes": 1850863,
+      "sha256": "69b37b7034f7843c7093a19f5b1df7f4c259f2e14fc797706bf0785cc462f23e"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat30_38_lon75.5_83.csv",
+      "bytes": 1851153,
+      "sha256": "15960a874b90a6db2602b599deeccd8426eb5781719e682eacafb277300bed1b"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat30_38_lon83_90.5.csv",
+      "bytes": 1851118,
+      "sha256": "3a096da60aebf345c05c1de1ea842a08772a95e004c8206ca89b19ed0780fba1"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat30_38_lon90.5_98.csv",
+      "bytes": 1851237,
+      "sha256": "2f22b6c9d8140dcd4971356d8550ebb62873ceacd28580da144a2d85dd8c4f1e"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat6_14_lon68_75.5.csv",
+      "bytes": 1816076,
+      "sha256": "a57a093b7df880ed970d7b4e3ee0624df368de8a5d390d6d6f7f820c19c937e1"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat6_14_lon75.5_83.csv",
+      "bytes": 1816004,
+      "sha256": "9f4bc98c5ecb4901c16d9eba3263514cfc2279977eca432712916a2afe9fdffe"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat6_14_lon83_90.5.csv",
+      "bytes": 1816243,
+      "sha256": "afa28c71207f75898c6a6a9c61b1cad1a55cb0c3befbad86b58b1422d76b2283"
+    },
+    {
+      "path": "sources/raw/nasa_power_daily_rolling_12m_2025-09-01_2026-08-31/WS2M_lat6_14_lon90.5_98.csv",
+      "bytes": 1816001,
+      "sha256": "8a8b9b719a88615ea15fec1e4d13d6ca329a13a69fd92d66e422544778ca0941"
+    }
+  ],
+  "provisionality_note": "NASA notes that recent near-real-time meteorology may later be superseded by long-term MERRA-2 products. Cached files and SHA256 values freeze this release input.",
+  "checks_pass": true
+}

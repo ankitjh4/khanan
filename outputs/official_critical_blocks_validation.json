@@ -1,0 +1,64 @@
+{
+  "release_version": "v0.6",
+  "all_checks_passed": true,
+  "checks": {
+    "record_count_is_199": true,
+    "record_ids_unique": true,
+    "offer_count_is_143": true,
+    "offer_counts_match_official_tranche_tender_totals": true,
+    "successful_result_count_is_56": true,
+    "successful_counts_match_official_tranche_totals": true,
+    "concession_counts_match_official_nit_tables": true,
+    "all_offer_geometries_complete": true,
+    "all_offer_geometries_valid": true,
+    "computed_area_within_5_pct_of_source": true,
+    "all_offer_pdf_provenance_complete": true,
+    "all_offer_nit_provenance_complete": true,
+    "source_location_mismatch_is_explicitly_flagged": true,
+    "all_successful_results_link_to_an_offer_lineage": true,
+    "geometry_deduplicated_offer_lineage_count_is_100": true,
+    "no_geometry_used_as_model_evidence": true
+  },
+  "counts": {
+    "auction_event_rows": 199,
+    "offer_rows": 143,
+    "offer_rows_by_tranche": {
+      "1": 20,
+      "2": 18,
+      "3": 7,
+      "4": 21,
+      "5": 15,
+      "6": 23,
+      "7": 19,
+      "8": 20
+    },
+    "successful_result_rows": 56,
+    "successful_results_by_tranche": {
+      "1": 6,
+      "2": 4,
+      "3": 4,
+      "4": 10,
+      "5": 10,
+      "6": 12,
+      "7": 10
+    },
+    "rows_with_boundary_geometry": 143,
+    "distinct_block_lineage_keys": 100,
+    "distinct_offer_lineage_keys": 100,
+    "source_location_mismatch_rows": 1
+  },
+  "geometry": {
+    "source": "143 non-superseded MSTC mineral block summary PDFs for tranches I-VIII, with official NIT fallback where documented",
+    "coordinates": "WGS84 source-published boundary coordinates; UTM coordinates were transformed to WGS84 where explicitly published",
+    "maximum_area_difference_pct": 4.630038971317252,
+    "source_accessed_date": "2026-09-10"
+  },
+  "lineage_reconciliation": {
+    "source_reported_cumulative_blocks_offered_by_tranche_8": 88,
+    "event_rows_extracted_from_eight_tranche_portal_indexes": 143,
+    "distinct_source_footprint_lineages_reconstructed": 100,
+    "status": "not_reconciled",
+    "note": "The 143 portal offer observations resolve to 100 distinct published footprints. This does not reconcile to the PIB release's cumulative 88 figure, so the release preserves event-level evidence and flags the aggregate discrepancy rather than forcing 12 unrelated footprints into shared lineages."
+  },
+  "guardrail": "Auction offers and preferred-bidder results are event observations, not proof of production, final legal grant, reserves, resources, grade, economic viability, or permission to enter land. Geometry is provided for overlay and is excluded from prospectivity training/scoring."
+}

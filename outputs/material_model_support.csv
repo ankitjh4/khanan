@@ -1,0 +1,51 @@
+material_name,known_evidence_records,modelled,model_support_level,score_note,spatial_cv_positive_records,spatial_cv_folds,spatial_cv_background_cells,spatial_holdout_pseudoabsence_roc_auc,spatial_holdout_recall_at_background_top5pct,validation_note
+Antimony,1,True,low,0.80 distance + 0.20 density; insufficient evidence for candidate percentiles,1,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Beryllium,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Bismuth,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Cobalt,4,True,low,0.80 distance + 0.20 density; insufficient evidence for candidate percentiles,4,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Copper,174,True,high,0.50 geology + 0.35 distance + 0.15 density,174,5,3480,0.6435955872638394,0.1781609195402299,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Gallium,1,True,low,0.80 distance + 0.20 density; insufficient evidence for candidate percentiles,1,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Germanium,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Graphite,15,True,medium,0.50 geology + 0.35 distance + 0.15 density,15,5,500,0.8705333333333333,0.5333333333333333,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Hafnium,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Indium,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Lithium,1,True,low,0.80 distance + 0.20 density; insufficient evidence for candidate percentiles,1,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Molybdenum,4,True,low,0.80 distance + 0.20 density; insufficient evidence for candidate percentiles,4,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Niobium,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Nickel,7,True,medium,0.50 geology + 0.35 distance + 0.15 density,7,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Platinum-group elements,8,True,medium,0.50 geology + 0.35 distance + 0.15 density,8,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Phosphorus,85,True,high,0.50 geology + 0.35 distance + 0.15 density,85,5,1700,0.7064636678200692,0.08235294117647059,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Potash,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Rare-earth elements,9,True,medium,0.50 geology + 0.35 distance + 0.15 density,9,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Rhenium,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Silicon,110,True,high,0.50 geology + 0.35 distance + 0.15 density,110,5,2200,0.7252644628099174,0.07272727272727272,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Strontium,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Tantalum,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Tellurium,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Tin,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Titanium,39,True,high,0.50 geology + 0.35 distance + 0.15 density,39,5,780,0.6623602892833661,0.2564102564102564,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Tungsten,3,True,low,0.80 distance + 0.20 density; insufficient evidence for candidate percentiles,3,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Vanadium,10,True,medium,0.50 geology + 0.35 distance + 0.15 density,10,5,500,0.37920000000000004,0.0,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Zirconium,12,True,medium,0.50 geology + 0.35 distance + 0.15 density,12,5,500,0.715,0.0,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Selenium,2,True,low,0.80 distance + 0.20 density; insufficient evidence for candidate percentiles,2,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Cadmium,4,True,low,0.80 distance + 0.20 density; insufficient evidence for candidate percentiles,4,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Aluminium,110,True,high,0.50 geology + 0.35 distance + 0.15 density,110,5,2200,0.6910123966942148,0.07272727272727272,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Iron,238,True,high,0.50 geology + 0.35 distance + 0.15 density,238,5,4760,0.8562945766541911,0.44537815126050423,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Manganese,130,True,high,0.50 geology + 0.35 distance + 0.15 density,130,5,2600,0.8534112426035504,0.2076923076923077,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Chromium,72,True,high,0.50 geology + 0.35 distance + 0.15 density,72,5,1440,0.9646797839506173,0.9583333333333334,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Lead,34,True,high,0.50 geology + 0.35 distance + 0.15 density,34,5,680,0.7179930795847751,0.2647058823529412,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Zinc,24,True,high,0.50 geology + 0.35 distance + 0.15 density,24,5,500,0.6775000000000001,0.2916666666666667,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Gold,16,True,medium,0.50 geology + 0.35 distance + 0.15 density,16,5,500,0.643,0.0625,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Silver,21,True,high,0.50 geology + 0.35 distance + 0.15 density,21,5,500,0.6973333333333335,0.2857142857142857,Spatial GroupKFold by H3 resolution-3; held-out evidence compared with sampled cells more than 25 km from catalog evidence. Background is not confirmed barren.
+Uranium,1,True,low,0.80 distance + 0.20 density; insufficient evidence for candidate percentiles,1,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Thorium,5,True,medium,0.50 geology + 0.35 distance + 0.15 density,5,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Coal,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Lignite,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Petroleum,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Natural gas,0,False,none,No mapped MRDS evidence in India; no grid score produced.,0,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Boron,1,True,low,0.80 distance + 0.20 density; insufficient evidence for candidate percentiles,1,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Fluorine,3,True,low,0.80 distance + 0.20 density; insufficient evidence for candidate percentiles,3,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Magnesium,4,True,low,0.80 distance + 0.20 density; insufficient evidence for candidate percentiles,4,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Barium,3,True,low,0.80 distance + 0.20 density; insufficient evidence for candidate percentiles,3,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Calcium and limestone,6,True,medium,0.50 geology + 0.35 distance + 0.15 density,6,0,0,,,Not validated: fewer than 10 mapped India evidence records.
+Kaolin,3,True,low,0.80 distance + 0.20 density; insufficient evidence for candidate percentiles,3,0,0,,,Not validated: fewer than 10 mapped India evidence records.

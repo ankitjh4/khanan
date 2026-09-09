@@ -1,0 +1,27 @@
+{
+  "source_pdf": "/Users/ankitjh4/Documents/ChatGPT/mining_dataset/sources/raw/ibm_nmi_2025_chapter5_mineral_wise.pdf",
+  "source_file_sha256": "491b70eccee4f1a63f9ae0fe25b1c2d7c40e8b7c714abab7e12a10e594020d67",
+  "pdf_pages": 55,
+  "blank_or_graphic_only_pages_skipped": [
+    13
+  ],
+  "distinct_mineral_tables": 45,
+  "distinct_source_table_numbers": 45,
+  "rows_total": 722,
+  "rows_by_scope": {
+    "state": 462,
+    "grade": 206,
+    "national_total": 54
+  },
+  "state_or_ut_rows": 462,
+  "distinct_normalized_states_or_uts": 29,
+  "rows_linked_to_top50_taxonomy": 573,
+  "distinct_nmi_minerals_linked_to_top50_taxonomy": 29,
+  "rows_with_blank_cells_interpreted_as_zero": 7,
+  "blank_cells_interpreted_as_zero_total": 7,
+  "rows_passing_unfc_subtotal_arithmetic": 722,
+  "state_sums_reconciled_to_matching_national_rows": 54,
+  "state_to_national_reconciliation_failures": [],
+  "checks_pass": true,
+  "interpretation_guardrail": "These are national/state/grade aggregate inventory quantities, not deposit coordinates, site-level grades, economic valuations, or evidence that every part of a state is prospective."
+}

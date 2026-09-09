@@ -1,0 +1,1135 @@
+{
+  "source_accessed_date": "2026-09-09",
+  "source_page_count": 36,
+  "event_rows": 1504,
+  "unique_event_record_ids": 1504,
+  "latest_mine_rows": 1353,
+  "unique_latest_mine_record_ids": 1353,
+  "regional_offices_covered": [
+    "Ajmer",
+    "Bangalore",
+    "Bhubaneswar",
+    "Chennai",
+    "Dehradun",
+    "Gandhinagar",
+    "Goa",
+    "Guwahati",
+    "Hyderabad",
+    "Jabalpur",
+    "Nagpur",
+    "Raipur",
+    "Ranchi",
+    "Vijayawada"
+  ],
+  "fiscal_years_covered": [
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "event_rows_by_fiscal_year": {
+    "2023-24": 71,
+    "2024-25": 1061,
+    "2025-26": 372
+  },
+  "event_rows_by_regional_office": {
+    "Ajmer": 145,
+    "Bangalore": 85,
+    "Bhubaneswar": 175,
+    "Chennai": 106,
+    "Dehradun": 52,
+    "Gandhinagar": 205,
+    "Goa": 60,
+    "Guwahati": 15,
+    "Hyderabad": 167,
+    "Jabalpur": 175,
+    "Nagpur": 71,
+    "Raipur": 128,
+    "Ranchi": 50,
+    "Vijayawada": 70
+  },
+  "rows_with_parsed_inspection_date": 1499,
+  "rows_with_unparsed_nonblank_inspection_date": 5,
+  "unparsed_inspection_date_examples": [
+    {
+      "record_id": "IBM-MCDR-EVT-0C893151C8650D8D",
+      "inspection_date_source": "26th & 27th September, 2024"
+    },
+    {
+      "record_id": "IBM-MCDR-EVT-B2DE97C32BAF915E",
+      "inspection_date_source": "10th and 11th September, 2024"
+    },
+    {
+      "record_id": "IBM-MCDR-EVT-EC407AA42BC9E593",
+      "inspection_date_source": "09.09.2024 & 10.09.2024"
+    },
+    {
+      "record_id": "IBM-MCDR-EVT-16C65ED30C542F72",
+      "inspection_date_source": "2nd & 3rd July 2024"
+    },
+    {
+      "record_id": "IBM-MCDR-EVT-8C5C50F0B1079C43",
+      "inspection_date_source": "13 & 14/11/2024"
+    }
+  ],
+  "rows_with_parsed_date_outside_labeled_fiscal_year": 3,
+  "outside_fiscal_year_date_examples": [
+    {
+      "record_id": "IBM-MCDR-EVT-FCD1E634AEF9C1D9",
+      "fiscal_year": "2025-26",
+      "inspection_date_source": "07.01.2025",
+      "inspection_date": "2025-01-07",
+      "source_url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports--violation-letters-etc--2025-26---goa-region"
+    },
+    {
+      "record_id": "IBM-MCDR-EVT-7C436F9CD5B3D543",
+      "fiscal_year": "2025-26",
+      "inspection_date_source": "08.01.2025",
+      "inspection_date": "2025-01-08",
+      "source_url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports--violation-letters-etc--2025-26---goa-region"
+    },
+    {
+      "record_id": "IBM-MCDR-EVT-5196962A68562CE2",
+      "fiscal_year": "2024-25",
+      "inspection_date_source": "06/07/2027",
+      "inspection_date": "2027-07-06",
+      "source_url": "https://ibm.gov.in/IBMPortal/pages/mcdr-reports-and-violation-letters---2024-25--jabalpur-region---page-03"
+    }
+  ],
+  "rows_with_mine_code": 302,
+  "rows_with_lease_area": 433,
+  "rows_with_state": 1248,
+  "rows_with_district": 1239,
+  "rows_linked_to_top50_taxonomy": 1477,
+  "rows_with_linked_documents": 1252,
+  "page_extraction": [
+    {
+      "region": "Ajmer",
+      "fiscal_year": "2025-26",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-reports--amp--violation-letters-for-the-year-2025-26--ajmer-region--page-1",
+      "source_page_title": "\u0935\u0930\u094d\u0937 2025-26 \u0915\u0947 \u0932\u093f\u090f \u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u090f\u0935\u0902 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 (\u0905\u091c\u092e\u0947\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930) \u092a\u0943\u0937\u094d\u0920-1",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2025_26_ajmer_p1.html",
+      "source_html_sha256": "b626950bc46e924ee912b7bb2bd2614925e2186757db10c9b6edacafc14acd0f",
+      "event_rows": 30,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "S.No.",
+            "State",
+            "District",
+            "Mineral",
+            "Date Of Inspection",
+            "Name of Mine",
+            "Name of Owner",
+            "Name of Inspecting Officer",
+            "Date of Issue of Violation Letter"
+          ],
+          "parsed_rows": 30
+        }
+      ]
+    },
+    {
+      "region": "Bhubaneswar",
+      "fiscal_year": "2025-26",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters---2025-26--page-1--bhubaneswar-region-",
+      "source_page_title": "\u0916. \u0938\u0902. \u090f\u0935\u0902 \u0935\u093f. \u0928\u093f\u092f\u092e\u093e\u0935\u0932\u0940 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 - 2025-26 : \u092a\u0943\u0937\u094d\u0920 -1 \u092d\u0941\u0935\u0928\u0947\u0936\u094d\u0935\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2025_26_bhubaneswar_p1.html",
+      "source_html_sha256": "2bcec618e8d0cf9b64c134f2ebedf54e370f9184314a68e2b6c566feb2cf9494",
+      "event_rows": 50,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "SL NO",
+            "State",
+            "DISTRICT",
+            "MINERAL",
+            "DATE OF INSPECTION",
+            "NAME OF THE MINE",
+            "OWNER",
+            "NAME OF THE OFFICER",
+            "DATE OF VIO/SC NOTICE"
+          ],
+          "parsed_rows": 50
+        }
+      ]
+    },
+    {
+      "region": "Bhubaneswar",
+      "fiscal_year": "2025-26",
+      "page_number": 2,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters---2025-26--page-2--bhubaneswar-region-",
+      "source_page_title": "\u0916. \u0938\u0902. \u090f\u0935\u0902 \u0935\u093f. \u0928\u093f\u092f\u092e\u093e\u0935\u0932\u0940 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 - 2025-26 : \u092a\u0943\u0937\u094d\u0920 -2 \u092d\u0941\u0935\u0928\u0947\u0936\u094d\u0935\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2025_26_bhubaneswar_p2.html",
+      "source_html_sha256": "a85b1fc20a6ea0113e45c5460b1193a2efcd5b89e9dd5657f3f52a6017207f4a",
+      "event_rows": 18,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "SL NO",
+            "State",
+            "DISTRICT",
+            "MINERAL",
+            "DATE OF INSPECTION",
+            "NAME OF THE MINE",
+            "OWNER",
+            "NAME OF THE OFFICER",
+            "DATE OF VIO/SC NOTICE"
+          ],
+          "parsed_rows": 18
+        }
+      ]
+    },
+    {
+      "region": "Dehradun",
+      "fiscal_year": "2025-26",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-report-violation-letter-for-the-year-2025-26--dehradun-region-",
+      "source_page_title": "\u0935\u0930\u094d\u0937 2025-26 \u0915\u0947 \u0932\u093f\u090f \u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0930\u093f\u092a\u094b\u0930\u094d\u091f, \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 (\u0926\u0947\u0939\u0930\u093e\u0926\u0942\u0928 \u0915\u094d\u0937\u0947\u0924\u094d\u0930)",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2025_26_dehradun_p1.html",
+      "source_html_sha256": "a24e4eaa60228a33effbb4fd84afb21ff7b60e13d884f214940c0e74e1848b78",
+      "event_rows": 52,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "SL. No.",
+            "Name of Mine",
+            "State",
+            "District",
+            "Mineral",
+            "Mine Code",
+            "Name of Lessee",
+            "Name of Inspecting officer",
+            "Type of Inspection",
+            "Date of Inspection",
+            "Date of issue of Violation",
+            "Date of issue of Show Cause Notice"
+          ],
+          "parsed_rows": 52
+        }
+      ]
+    },
+    {
+      "region": "Goa",
+      "fiscal_year": "2025-26",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports--violation-letters-etc--2025-26---goa-region",
+      "source_page_title": "\u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f, \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 \u0906\u0926\u093f 2025-26 : \u0917\u094b\u0935\u093e \u0915\u094d\u0937\u0947\u0924\u094d\u0930",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2025_26_goa_p1.html",
+      "source_html_sha256": "a20d82fb0be0e73c7671dbcad3d253a392fd9e702e5b86b67f821031a8bb1d6f",
+      "event_rows": 51,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "Sl. No.",
+            "Mineral",
+            "Date of Inspection",
+            "Name of the Mine",
+            "Owner",
+            "Name of the Inspecting Officer",
+            "Date of issue of violation letter",
+            "Date of issue of show cause notice"
+          ],
+          "parsed_rows": 51
+        }
+      ]
+    },
+    {
+      "region": "Hyderabad",
+      "fiscal_year": "2025-26",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters---2025-26----hyderabad-region---page-1-",
+      "source_page_title": "MCDR Inspection Reports and Violation Letters : 2025-26 : (Hyderabad Region : Page 1)",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2025_26_hyderabad_p1.html",
+      "source_html_sha256": "b0e55034f4a8da79cc149f35964c4820d822f3b22104334f5fbc88845b6800fc",
+      "event_rows": 38,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "S.No.",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name of the Mine",
+            "Name of the lessee",
+            "Name of the officer & designation",
+            "Date of issue of violation letter"
+          ],
+          "parsed_rows": 38
+        }
+      ]
+    },
+    {
+      "region": "Hyderabad",
+      "fiscal_year": "2025-26",
+      "page_number": 2,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters---2025-26----hyderabad-region---page-2-",
+      "source_page_title": "MCDR \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930: 2025-26: (\u0939\u0948\u0926\u0930\u093e\u092c\u093e\u0926 \u0915\u094d\u0937\u0947\u0924\u094d\u0930: \u092a\u0947\u091c 2)",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2025_26_hyderabad_p2.html",
+      "source_html_sha256": "ba2236a7b96a51216da31b9ed9557aee95e69c00b359c8f3dc5e394a600d0862",
+      "event_rows": 49,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "S.No.",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name of the Mine",
+            "Name of the lessee",
+            "Name of the officer & designation",
+            "Date of issue of violation letter"
+          ],
+          "parsed_rows": 49
+        }
+      ]
+    },
+    {
+      "region": "Raipur",
+      "fiscal_year": "2025-26",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters-2025-26--raipur-region-page-1",
+      "source_page_title": "\u0930\u093e\u092f\u092a\u0941\u0930 \u090f\u092e \u0938\u0940 \u0921\u0940 \u0906\u0930 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 2025-256 \u092a\u0943\u0937\u094d\u0920-1",
+      "source_page_title_fiscal_year_typo": true,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2025_26_raipur_p1.html",
+      "source_html_sha256": "ec1b97fb22ee932b3b61e185b7a09b067876ee43ff0fd5cb624acf7ef498f16b",
+      "event_rows": 74,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "Sl. No.",
+            "State",
+            "District",
+            "Mineral",
+            "Lease Area (Ha.)",
+            "Mine Name",
+            "Lessee",
+            "Date Of Inspection",
+            "Inspecting officer",
+            "Date of Violation"
+          ],
+          "parsed_rows": 74
+        }
+      ]
+    },
+    {
+      "region": "Ranchi",
+      "fiscal_year": "2025-26",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports--amp--violation-letters---2025-26---ranchi-region-",
+      "source_page_title": "MCDR Inspection Reports & Violation Letters : 2025-26 : Ranchi Region",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2025_26_ranchi_p1.html",
+      "source_html_sha256": "131233d29c67882dc25a0fb9589891559d1ec0a50dc6217a8a5a910eca2958ec",
+      "event_rows": 10,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "SL.NO",
+            "STATE",
+            "DISTRICT",
+            "MINERAL",
+            "DATE OF INSPECTION",
+            "NAME OF MINE",
+            "OWNER",
+            "NAME OF INSPECTING OFFICIAL",
+            "DATE OF VIOLATION /SHOW CAUSE"
+          ],
+          "parsed_rows": 10
+        }
+      ]
+    },
+    {
+      "region": "Ajmer",
+      "fiscal_year": "2024-25",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-reports--amp--violation-letters-for-the-year-2024-25--ajmer-region--page-1",
+      "source_page_title": "\u0935\u0930\u094d\u0937 2024-25 \u0915\u0947 \u0932\u093f\u090f \u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 (\u0905\u091c\u092e\u0947\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930) \u092a\u0943\u0937\u094d\u0920-1",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_ajmer_p1.html",
+      "source_html_sha256": "5568001ea16f42382f842b09370925b6f2bb2380bccf8b4212d5aff52d73d7f6",
+      "event_rows": 44,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "S.No.",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name of mine",
+            "Name of Owner",
+            "Name of Inspecting Officer",
+            "Date of issue of violation letter"
+          ],
+          "parsed_rows": 44
+        }
+      ]
+    },
+    {
+      "region": "Ajmer",
+      "fiscal_year": "2024-25",
+      "page_number": 2,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-reports--amp--violation-letters-for-the-year-2024-25--ajmer-region--page-2",
+      "source_page_title": "\u0935\u0930\u094d\u0937 2024-25 \u0915\u0947 \u0932\u093f\u090f \u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u090f\u0935\u0902 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 (\u0905\u091c\u092e\u0947\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930) \u092a\u0943\u0937\u094d\u0920-2",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_ajmer_p2.html",
+      "source_html_sha256": "ca4dfbaa279194c0a2b445cb4f93747a924dd2e7bf9936270d04e3875a81e091",
+      "event_rows": 40,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "S.No.",
+            "State",
+            "District",
+            "Mineral",
+            "Date Of Inspection",
+            "Name of Mine",
+            "Name of Owner",
+            "Name of Inspecting Officer",
+            "Date of Issue of Violation Letter"
+          ],
+          "parsed_rows": 40
+        }
+      ]
+    },
+    {
+      "region": "Ajmer",
+      "fiscal_year": "2024-25",
+      "page_number": 3,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-reports--amp--violation-letters-for-the-year-2024-25--ajmer-region--page-3",
+      "source_page_title": "\u0935\u0930\u094d\u0937 2024-25 \u0915\u0947 \u0932\u093f\u090f \u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 (\u0905\u091c\u092e\u0947\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930) \u092a\u0943\u0937\u094d\u0920-3",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_ajmer_p3.html",
+      "source_html_sha256": "bdbfc6860e8ef31a5eb98d4b9f2efc86c3426e07e11c313445e465421958f6db",
+      "event_rows": 31,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "S.No.",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name of mine",
+            "Name of Owner",
+            "Name of Inspecting Officer",
+            "Date of issue of violation letter"
+          ],
+          "parsed_rows": 31
+        }
+      ]
+    },
+    {
+      "region": "Bangalore",
+      "fiscal_year": "2024-25",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports--amp--violation-letters---2024-25----bengalore-region----page--1",
+      "source_page_title": "\u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 - 2024-25 : (\u092c\u0948\u0902\u0917\u0932\u094b\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930) : \u092a\u0943\u0937\u094d\u0920 \u2013 1",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_bangalore_p1.html",
+      "source_html_sha256": "26de85cdcbc84b5274b0f39421bec5b63e706144777f20a340a18b7fb02baa25",
+      "event_rows": 50,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "SL.NO",
+            "STATE",
+            "DISTRICT",
+            "MINERAL",
+            "DATE OF INSPECTION",
+            "TYPE OF INSPECTION",
+            "Name of Inspecting Officer",
+            "NAME OF THE MINE",
+            "OWNER",
+            "DATE OF ISSUE OF VIOLATION",
+            "DATE OF ISSUE OF SHOW CAUSE",
+            "REMARKS"
+          ],
+          "parsed_rows": 50
+        }
+      ]
+    },
+    {
+      "region": "Bangalore",
+      "fiscal_year": "2024-25",
+      "page_number": 2,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports--amp--violation-letters---2024-25----bengalore-region----page--2",
+      "source_page_title": "\u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 - 2024-25 : (\u092c\u0948\u0902\u0917\u0932\u094b\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930) : \u092a\u0943\u0937\u094d\u0920 \u2013 2",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_bangalore_p2.html",
+      "source_html_sha256": "efefb646a5bd7d6832e5e14e020e514f42476e67028c63ec14c0f80d13295412",
+      "event_rows": 35,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "SL.NO",
+            "STATE",
+            "DISTRICT",
+            "MINERAL",
+            "DATE OF INSPECTION",
+            "TYPE OF INSPECTION",
+            "Name of Inspecting Officer",
+            "NAME OF THE MINE",
+            "OWNER",
+            "DATE OF ISSUE OF VIOLATION",
+            "DATE OF ISSUE OF SHOW CAUSE",
+            "REMARKS"
+          ],
+          "parsed_rows": 35
+        }
+      ]
+    },
+    {
+      "region": "Bhubaneswar",
+      "fiscal_year": "2024-25",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters---2024-25---page-1--bhubaneswar-region-",
+      "source_page_title": "\u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 - 2024-25 : \u092a\u0943\u0937\u094d\u0920-1 (\u092d\u0941\u0935\u0928\u0947\u0936\u094d\u0935\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930)",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_bhubaneswar_p1.html",
+      "source_html_sha256": "1a3a84d612dcc23c1c7ba83b3741f9fee11e4177059ca0749c2c95e2694fc8ba",
+      "event_rows": 107,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "SL NO",
+            "State",
+            "DISTRICT",
+            "MINERAL",
+            "DATE OF INSPECTION",
+            "NAME OF THE MINE",
+            "OWNER",
+            "NAME OF THE OFFICER",
+            "DATE OF VIO/SC NOTICE"
+          ],
+          "parsed_rows": 107
+        }
+      ]
+    },
+    {
+      "region": "Chennai",
+      "fiscal_year": "2024-25",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-reports-and-violation-letters--2024-25---chennai-region---page-1",
+      "source_page_title": "MCDR Reports and Violation letters, 2024-25 : Chennai Region : Page 1",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_chennai_p1.html",
+      "source_html_sha256": "81370dbe095f05d63ddc41503b1cb3840c6d9fb24c4e1fc97f18969142b73161",
+      "event_rows": 50,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "Sl. No",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name Of Mine",
+            "Owner",
+            "Name & Designation Of Inspecting Officer",
+            "Date of Violation letter",
+            "Date of Show cause Notice"
+          ],
+          "parsed_rows": 50
+        }
+      ]
+    },
+    {
+      "region": "Chennai",
+      "fiscal_year": "2024-25",
+      "page_number": 2,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-reports-and-violation-letters--2024-25---chennai-region---page-2",
+      "source_page_title": "MCDR Reports and Violation letters, 2024-25 : Chennai Region : Page 2",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_chennai_p2.html",
+      "source_html_sha256": "e6cab33d2129e64f5150c30a842d3983c9e797133770860f869727c78cfb7899",
+      "event_rows": 49,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "Sl. No",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name Of Mine",
+            "Owner",
+            "Name & Designation Of Inspecting Officer",
+            "Date of Violation letter",
+            "Date of Show cause Notice"
+          ],
+          "parsed_rows": 49
+        }
+      ]
+    },
+    {
+      "region": "Chennai",
+      "fiscal_year": "2024-25",
+      "page_number": 3,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-reports-and-violation-letters--2024-25---chennai-region---page-3",
+      "source_page_title": "\u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930, 2024-25: \u091a\u0947\u0928\u094d\u0928\u0908 \u0915\u094d\u0937\u0947\u0924\u094d\u0930: \u092a\u0943\u0937\u094d\u0920 3",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_chennai_p3.html",
+      "source_html_sha256": "b96523cfba6a06a5c33a80d27f32ee15dbd78c01d15a37afb3c47b9d5da449b6",
+      "event_rows": 7,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "Sl. No",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name Of Mine",
+            "Owner",
+            "Name & Designation Of Inspecting Officer",
+            "Date of Violation letter",
+            "Date of Show cause Notice"
+          ],
+          "parsed_rows": 7
+        }
+      ]
+    },
+    {
+      "region": "Gandhinagar",
+      "fiscal_year": "2024-25",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters--2024-25--gandhinagar-region----page-1",
+      "source_page_title": "\u090f\u092e.\u0938\u0940.\u0921\u0940.\u0906\u0930.\u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u090f\u0935\u0902 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 (\u0935\u0930\u094d\u0937 \u0968\u0966\u0968\u096a-\u0968\u0966\u0968\u096b) \u0917\u093e\u0902\u0927\u0940\u0928\u0917\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930\u0940\u092f \u0915\u093e\u0930\u094d\u092f\u093e\u0932\u092f\u0964 \u092a\u0943\u0937\u094d\u0920-\u0967",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_gandhinagar_p1.html",
+      "source_html_sha256": "7f1c0975751d68a94d504dcb8ba1af932789167029a162da4c0c6c387dac0870",
+      "event_rows": 39,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "No.",
+            "Mine Code",
+            "Name of Mine",
+            "Owner",
+            "Name and Designation of the Inspecting officer",
+            "Date of Inspection",
+            "Type of Inspection",
+            "MCDR Report",
+            "Violation Letter issued",
+            "Showcause Letter issued"
+          ],
+          "parsed_rows": 39
+        }
+      ]
+    },
+    {
+      "region": "Gandhinagar",
+      "fiscal_year": "2024-25",
+      "page_number": 2,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters--2024-25--gandhinagar-region----page-2",
+      "source_page_title": "\u090f\u092e.\u0938\u0940.\u0921\u0940.\u0906\u0930.\u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u090f\u0935\u0902 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 (\u0935\u0930\u094d\u0937 \u0968\u0966\u0968\u096a-\u0968\u0966\u0968\u096b) \u0917\u093e\u0902\u0927\u0940\u0928\u0917\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930\u0940\u092f \u0915\u093e\u0930\u094d\u092f\u093e\u0932\u092f\u0964 \u092a\u0943\u0937\u094d\u0920-2",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_gandhinagar_p2.html",
+      "source_html_sha256": "050ec1d498138db278d9d19261eea115b7f929292806ca05702bc0217b3c1edc",
+      "event_rows": 51,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "Sl.No.",
+            "Mine Code",
+            "Name of Mine",
+            "Owner",
+            "Name and Designation of the Inspecting officer",
+            "Date of Inspection",
+            "Type of Inspection",
+            "MCDR Report",
+            "Violation Letter issued",
+            "Showcause Letter issued"
+          ],
+          "parsed_rows": 51
+        }
+      ]
+    },
+    {
+      "region": "Gandhinagar",
+      "fiscal_year": "2024-25",
+      "page_number": 3,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters--2024-25--gandhinagar-region----page-3",
+      "source_page_title": "\u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930: 2024-25 (\u0917\u093e\u0902\u0927\u0940\u0928\u0917\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930) : \u092a\u0947\u091c 3",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_gandhinagar_p3.html",
+      "source_html_sha256": "b7dc45e02bef3a85f020191a2b8ec30daa031309ca46f1febb1d12ad21f93a9d",
+      "event_rows": 60,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "Sl.No.",
+            "Mine Code",
+            "Name of Mine",
+            "Owner",
+            "Name and Designation of the Inspecting officer",
+            "Date of Inspection",
+            "Type of Inspection",
+            "MCDR Report",
+            "Violation Letter issued",
+            "Showcause Letter issued"
+          ],
+          "parsed_rows": 60
+        }
+      ]
+    },
+    {
+      "region": "Gandhinagar",
+      "fiscal_year": "2024-25",
+      "page_number": 4,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters--2024-25--gandhinagar-region----page-4",
+      "source_page_title": "\u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930: 2024-25 (\u0917\u093e\u0902\u0927\u0940\u0928\u0917\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930) : \u092a\u0947\u091c 4",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_gandhinagar_p4.html",
+      "source_html_sha256": "248d7d3c4f933f26356432c8ea5a4321566c6c75dc310580630a76fa17b76dcc",
+      "event_rows": 55,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "\u0915\u094d\u0930\u092e\u093e\u0902\u0915",
+            "\u0916\u0926\u093e\u0928 \u0915\u094b\u0921",
+            "\u0916\u0926\u093e\u0928 \u0915\u093e \u0928\u093e\u092e",
+            "\u092e\u093e\u0932\u093f\u0915 \u0915\u093e \u0928\u093e\u092e",
+            "\u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0905\u0927\u093f\u0915\u093e\u0930\u0940 \u0915\u093e \u0928\u093e\u092e \u0914\u0930 \u092a\u0926\u0928\u093e\u092e",
+            "\u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0915\u0940 \u0924\u093e\u0930\u0940\u0916",
+            "\u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0915\u093e \u092a\u094d\u0930\u0915\u093e\u0930",
+            "\u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0930\u093f\u092a\u094b\u0930\u094d\u091f",
+            "\u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 \u091c\u093e\u0930\u0940",
+            "\u0915\u093e\u0930\u0923 \u092c\u0924\u093e\u0913 \u092a\u0924\u094d\u0930 \u091c\u093e\u0930\u0940"
+          ],
+          "parsed_rows": 55
+        }
+      ]
+    },
+    {
+      "region": "Goa",
+      "fiscal_year": "2024-25",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/check-up-inspection-reports-of-com--sz----2024-25",
+      "source_page_title": "COM (SZ) \u0915\u0940 \u091a\u0947\u0915-\u0905\u092a \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f - 2024-25",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_goa_p1.html",
+      "source_html_sha256": "712babdbd254a81e74feb6d9289ee4be9f18bc3c5b96f27eaea1e44fb561820b",
+      "event_rows": 9,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "Sl.No",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name Of Mine",
+            "Owner",
+            "Name & Designation Of Inspecting Officer",
+            "Reorts for uploading",
+            "Date of issue of violation letter",
+            "Date of issue of Show Cause"
+          ],
+          "parsed_rows": 9
+        }
+      ]
+    },
+    {
+      "region": "Guwahati",
+      "fiscal_year": "2024-25",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters---2024-25---guwahati-region",
+      "source_page_title": "MCDR Inspection Reports and Violation Letters : 2024-25 : Guwahati Region",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_guwahati_p1.html",
+      "source_html_sha256": "47003ed47f5124925b4c8d25bae6d38f0e202d849bd5b2be5ee87ee5df850831",
+      "event_rows": 15,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "Sl. no",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name of Mine",
+            "Owner",
+            "Name and designation of the Inspecting officer",
+            "Date of issue of violation letter"
+          ],
+          "parsed_rows": 15
+        }
+      ]
+    },
+    {
+      "region": "Hyderabad",
+      "fiscal_year": "2024-25",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters---2024-25---hyderabad-region---page-1",
+      "source_page_title": "\u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 : 2024-25 : \u0939\u0948\u0926\u0930\u093e\u092c\u093e\u0926 \u0915\u094d\u0937\u0947\u0924\u094d\u0930 : \u092a\u0943\u0937\u094d\u0920 1",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_hyderabad_p1.html",
+      "source_html_sha256": "ce8ce4b8bf292e5a50e9f61fef72f985a28f61f6dd5d0795378c8c734cd97b9b",
+      "event_rows": 24,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "S.No.",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name of the Mine",
+            "Name of the lessee",
+            "Name of the officer & designation",
+            "Date of issue of violation letter"
+          ],
+          "parsed_rows": 24
+        }
+      ]
+    },
+    {
+      "region": "Hyderabad",
+      "fiscal_year": "2024-25",
+      "page_number": 2,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters---2024-25---hyderabad-region---page-2",
+      "source_page_title": "\u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930: 2024-25: \u0939\u0948\u0926\u0930\u093e\u092c\u093e\u0926 \u0915\u094d\u0937\u0947\u0924\u094d\u0930: \u092a\u0943\u0937\u094d\u0920 2",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_hyderabad_p2.html",
+      "source_html_sha256": "6a70e925b7ff477f81fc8bff4572e55b91187c6a009370e64880de2e7698b5a5",
+      "event_rows": 21,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "S.No.",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name of the Mine",
+            "Name of the lessee",
+            "Name of the officer & designation",
+            "Date of issue of violation letter"
+          ],
+          "parsed_rows": 21
+        }
+      ]
+    },
+    {
+      "region": "Hyderabad",
+      "fiscal_year": "2024-25",
+      "page_number": 3,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters---2024-25---hyderabad-region---page-3",
+      "source_page_title": "MCDR Inspection Reports and Violation Letters : 2024-25 : Hyderabad Region : Page 3",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_hyderabad_p3.html",
+      "source_html_sha256": "dbf4bbef448f71938fefc9003a8cf72e78be83a43650e1a65e92cd3e2d265798",
+      "event_rows": 19,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "S.No.",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name of the Mine",
+            "Name of the lessee",
+            "Name of the officer & designation",
+            "Date of issue of violation letter"
+          ],
+          "parsed_rows": 19
+        }
+      ]
+    },
+    {
+      "region": "Hyderabad",
+      "fiscal_year": "2024-25",
+      "page_number": 4,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters---2024-25---hyderabad-region---page-4",
+      "source_page_title": "MCDR Inspection Reports and Violation Letters : 2024-25 : Hyderabad Region : Page 4",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_hyderabad_p4.html",
+      "source_html_sha256": "9f05b9e20e6191da3e66a6be048ab4f098f7640157057f54f900568a91f8fa76",
+      "event_rows": 16,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "S.No.",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name of the Mine",
+            "Name of the lessee",
+            "Name of the officer & designation",
+            "Date of issue of violation letter"
+          ],
+          "parsed_rows": 16
+        }
+      ]
+    },
+    {
+      "region": "Jabalpur",
+      "fiscal_year": "2024-25",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-reports-and-violation-letters---2024-25--jabalpur-region---page-01",
+      "source_page_title": "MCDR REPORTS AND VIOLATION LETTERS : 2024-25: JABALPUR REGION : PAGE 01",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_jabalpur_p1.html",
+      "source_html_sha256": "ae1463f5e40d2d2829951e6db885295d3ad6b60837d4499b61af81634bf544b1",
+      "event_rows": 50,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "SR. NO.",
+            "STATE",
+            "DISTRICT",
+            "MINERAL",
+            "DATE OF INSPECTION (MCDR REPORT)",
+            "NAME OF THE MINE",
+            "OWNER",
+            "NAME & DESIGNATION OF INSPECTING OFFICER",
+            "DATE OF ISSUE OF VIOLATION LETTER"
+          ],
+          "parsed_rows": 50
+        }
+      ]
+    },
+    {
+      "region": "Jabalpur",
+      "fiscal_year": "2024-25",
+      "page_number": 2,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-reports-and-violation-letters---2024-25--jabalpur-region---page-02",
+      "source_page_title": "\u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930: 2024-25: \u091c\u092c\u0932\u092a\u0941\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930: \u092a\u0943\u0937\u094d\u0920 02",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_jabalpur_p2.html",
+      "source_html_sha256": "01c7ed8ba0050f5bd4db7741a2d7db8cd3c3be147342d72e807ddd8cf3c59297",
+      "event_rows": 50,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "SR. NO.",
+            "STATE",
+            "DISTRICT",
+            "MINER AL",
+            "DATE OF INSPECTION (MCDR REPORT)",
+            "NAME OF THE MINE",
+            "OWNER",
+            "NAME & DESIGNATION OF INSPECTING OFFICER",
+            "DATE OF ISSUE OF VIOLATION LETTER"
+          ],
+          "parsed_rows": 50
+        }
+      ]
+    },
+    {
+      "region": "Jabalpur",
+      "fiscal_year": "2024-25",
+      "page_number": 3,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-reports-and-violation-letters---2024-25--jabalpur-region---page-03",
+      "source_page_title": "\u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930: 2024-25: \u091c\u092c\u0932\u092a\u0941\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930: \u092a\u0943\u0937\u094d\u0920 03",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_jabalpur_p3.html",
+      "source_html_sha256": "388c8fefe7a6a6dff918f53c447d17aee2fdc90cd1f908de6fec946e7a327eee",
+      "event_rows": 75,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "SR. NO.",
+            "STATE",
+            "DISTRICT",
+            "MINER AL",
+            "DATE OF INSPECTION (MCDR REPORT)",
+            "NAME OF THE MINE",
+            "OWNER",
+            "NAME & DESIGNATION OF INSPECTING OFFICER",
+            "DATE OF ISSUE OF VIOLATION LETTER"
+          ],
+          "parsed_rows": 75
+        }
+      ]
+    },
+    {
+      "region": "Raipur",
+      "fiscal_year": "2024-25",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports-and-violation-letters-2024-25--raipur-region-page-1",
+      "source_page_title": "\u0930\u093e\u092f\u092a\u0941\u0930 \u090f\u092e \u0938\u0940 \u0921\u0940 \u0906\u0930 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 2024-25 \u092a\u0943\u0937\u094d\u0920-1",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_raipur_p1.html",
+      "source_html_sha256": "1ea3f868d89b54ebccb5211e774403923c65375d8b22c03acf29456940cfd07a",
+      "event_rows": 54,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "Sl. No.",
+            "State",
+            "District",
+            "Mineral",
+            "Lease Area (Ha.)",
+            "Mine Name",
+            "Lessee",
+            "Date Of Inspection",
+            "Inspecting officer",
+            "Date of Violation"
+          ],
+          "parsed_rows": 54
+        }
+      ]
+    },
+    {
+      "region": "Ranchi",
+      "fiscal_year": "2024-25",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports--amp--violation-letters---2024-25---ranchi-region-page-1",
+      "source_page_title": "MCDR Inspection Reports & Violation Letters : 2024-25 : Ranchi Region Page-1",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_ranchi_p1.html",
+      "source_html_sha256": "282f30e9254ff3e3b5256c2c578f5f0a436eed211bf3877ed6329524ab1fd998",
+      "event_rows": 40,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "SL.NO",
+            "STATE",
+            "DISTRICT",
+            "MINERAL",
+            "DATE OF INSPECTION",
+            "NAME OF MINE",
+            "OWNER",
+            "NAME OF INSPECTING OFFICIAL",
+            "DATE OF VIOLATION /SHOW CAUSE"
+          ],
+          "parsed_rows": 40
+        }
+      ]
+    },
+    {
+      "region": "Vijayawada",
+      "fiscal_year": "2024-25",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports--amp--violation-letters-for-the-year-2024-25-vijayawada-regional-office--page-1-",
+      "source_page_title": "\u0935\u0930\u094d\u0937 2024-25 \u0915\u0947 \u0932\u093f\u090f \u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 _\u0935\u093f\u091c\u092f\u0935\u093e\u0921\u093c\u093e \u0915\u094d\u0937\u0947\u0924\u094d\u0930\u0940\u092f \u0915\u093e\u0930\u094d\u092f\u093e\u0932\u092f (\u092a\u0947\u091c-1)",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_vijayawada_p1.html",
+      "source_html_sha256": "5a3439db25fd39ba7c66aa1cd343fe5412cc396f0faee8d290d7d74bd791691f",
+      "event_rows": 30,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "No.",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name of the Mine",
+            "Name of the lessee",
+            "Name of the officer & designation",
+            "Date of Issue of Violation"
+          ],
+          "parsed_rows": 30
+        }
+      ]
+    },
+    {
+      "region": "Vijayawada",
+      "fiscal_year": "2024-25",
+      "page_number": 2,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-inspection-reports--amp--violation-letters-for-the-year-2024-25-vijayawada-regional-office--page-2-",
+      "source_page_title": "\u0935\u0930\u094d\u0937 2024-25 \u0915\u0947 \u0932\u093f\u090f \u090f\u092e\u0938\u0940\u0921\u0940\u0906\u0930 \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u0930\u093f\u092a\u094b\u0930\u094d\u091f \u0914\u0930 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930-\u0935\u093f\u091c\u092f\u0935\u093e\u0921\u093c\u093e \u0915\u094d\u0937\u0947\u0924\u094d\u0930\u0940\u092f \u0915\u093e\u0930\u094d\u092f\u093e\u0932\u092f (\u092a\u0947\u091c-2)",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2024_25_vijayawada_p2.html",
+      "source_html_sha256": "5bf70dd99c7ffb9ab6fbaf2ec7421eedf9baf0e3934e4808c6ecd781e2b925ef",
+      "event_rows": 40,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "No.",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name of the Mine",
+            "Name of the lessee",
+            "Name of the officer & designation",
+            "Date of Issue of Violation"
+          ],
+          "parsed_rows": 40
+        }
+      ]
+    },
+    {
+      "region": "Nagpur",
+      "fiscal_year": "2023-24",
+      "page_number": 1,
+      "url": "https://ibm.gov.in/IBMPortal/pages/mcdr-reports--amp--violation-letters-2023-24--nagpur-region-",
+      "source_page_title": "\u090f\u092e \u0938\u0940 \u0921\u0940 \u0906\u0930 \u0930\u0947\u092a\u094b\u0930\u094d\u091f\u094d\u0938 \u090f\u0902\u0935 \u0909\u0932\u094d\u0932\u0902\u0918\u0928 \u092a\u0924\u094d\u0930 - 2023-24 (\u0928\u093e\u0917\u092a\u0942\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930)",
+      "source_page_title_fiscal_year_typo": false,
+      "source_html_file": "sources/raw/ibm_mcdr_inspection_pages/2023_24_nagpur_p1.html",
+      "source_html_sha256": "23b7b84a1a262bbbb55e7fe996440b8aa53ea15fd4cd7953e16cf2b98b5675df",
+      "event_rows": 71,
+      "tables": [
+        {
+          "table_index": 1,
+          "source_headers": [
+            "Sl. No.",
+            "State",
+            "District",
+            "Mineral",
+            "Date of Inspection",
+            "Name of the Mine",
+            "Owner",
+            "Name and Designation of the Inspecting officer",
+            "Date of issue of violation"
+          ],
+          "parsed_rows": 71
+        }
+      ]
+    }
+  ],
+  "checks_pass": true,
+  "interpretation_guardrail": "This is an inventory of public IBM regional inspection-table records, not an exhaustive lease/working-mine register. Presence shows a published inspection event, not current production, compliance, reserve/resource quantity, exact location, or legal/access status. No coordinates were inferred, and these rows were excluded from spatial prospectivity modelling."
+}

@@ -1,0 +1,37 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+.venv/
+node_modules
+tmp/
+**/__pycache__/
+*.py[cod]
+
+# Raw downloads are reproducible and too large/noisy for source control.
+sources/raw/
+
+# The full grid is distributed inside the compressed v0.6 release bundle.
+outputs/india_mining_prospectivity_grid_h3_r6.csv
+
+# Local workbook diagnostics and previews.
+outputs/india_mining_dataset_companion.xlsx.inspect.ndjson
+outputs/workbook_previews/
+outputs/workbook_error.log
+outputs/workbook_inspection.txt
+outputs/workbook_official_blocks_inspection.txt
+outputs/workbook_weather_inspection.txt
+outputs/diagnostics/
+outputs/archive/
+
+# Superseded local release bundles; retain only the current release in Git.
+outputs/india_mining_dataset_csv_bundle_v0.1.zip
+outputs/india_mining_dataset_csv_bundle_v0.2.zip
+outputs/india_mining_dataset_csv_bundle_v0.3.zip
+outputs/india_mining_dataset_csv_bundle_v0.4.zip
+outputs/india_mining_dataset_csv_bundle_v0.5.zip

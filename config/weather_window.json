@@ -1,0 +1,15 @@
+{
+  "reference_period_start": "2025-09-01",
+  "reference_period_end": "2026-08-31",
+  "time_standard": "UTC",
+  "temporal_resolution": "daily",
+  "parameters": [
+    "T2M",
+    "T2M_MAX",
+    "T2M_MIN",
+    "PRECTOTCORR",
+    "RH2M",
+    "WS2M"
+  ],
+  "selection_basis": "Twelve complete calendar months ending immediately before the 2026-09-09 release month."
+}
