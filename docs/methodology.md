@@ -102,7 +102,15 @@ The standalone feature table contains 88,857 unique H3 cells. Of these, 84,688 (
 
 EMAG2v3 is a heterogeneous satellite, ship, airborne and precompiled-source product. A magnetic anomaly can reflect lithology, structure, depth, processing and survey coverage; it is not direct evidence of a particular mineral, deposit, grade or recoverability. Alpha.4 therefore appends these columns to the national and candidate tables as context but leaves all v0.6 prospectivity scores, classes and ranks unchanged. Material-specific feature ablation, spatial holdout comparison and leakage checks are required before any EMAG2 feature can enter scoring.
 
-## 11. Material ontology and model eligibility
+## 11. EMAG2 feature-admission ablation
+
+Alpha.5 evaluates the incremental magnetic feature family with paired class-balanced logistic models. Positives are deduplicated to unique material/H3 resolution-6 cells. Deterministic pseudo-absence cells must be more than 25 km from every mapped material-positive cell. Whole H3 resolution-3 groups are assigned to spatial folds, and training observations within 50 km of a held-out positive are purged. Distance, density and geological-affinity features are reconstructed inside each fold; training positives use leave-one-out values. Imputation and robust scaling use training-fold statistics only.
+
+The baseline combines geology affinity, terrain, rolling climate and fold-safe proximity. The paired extended model adds 10 EMAG2 signal, variability, error and missingness fields. Evaluation publishes ROC AUC, average precision, recall at the background top 5%, Brier score and a 500-replicate paired spatial-group bootstrap interval for the AUC change. All 70 completed folds have disjoint H3 resolution-3 train/test groups and at least a 50 km held-out-positive buffer.
+
+Fourteen of the 50 retained targets have at least 10 unique positive H3 cells and three positive spatial groups. Nine have a positive pooled AUC change and five decline, but no positive change has a bootstrap lower bound above zero. No material passes the fixed support, coverage, AUC, uncertainty and recall gates. The candidate table hash is unchanged and EMAG2 remains excluded from scoring. See [`emag2_spatial_ablation.md`](emag2_spatial_ablation.md) for the complete protocol and interpretation.
+
+## 12. Material ontology and model eligibility
 
 The v1.0-alpha.2 ontology contains 230 unique, typed entities derived from material terms actually observed in the India source tables, plus the retained v0.6 targets. It contains 69 elements, 85 mineral species, and 76 other entities spanning ores, rocks, groups, mixtures, varieties, industrial materials, and energy commodities. Stable typed IDs prevent an element, ore, mineral species, and informal group from being silently treated as the same thing.
 
@@ -116,7 +124,7 @@ Ontology inclusion never confers model eligibility. The geospatial prediction co
 
 Ontology arrays identify names, possible compounds, or representative forms; they do not assert assay, grade, recoverability, mineral processing route, or economic value at a site. Formulas are supplied only for elements, verified species, or defensible compounds. Otherwise the English names are preserved in arrays as requested.
 
-## 12. Reconnaissance score
+## 13. Reconnaissance score
 
 For a material with at least five mapped source records, cell score components are:
 
@@ -140,7 +148,7 @@ and clipped to 0–1. Materials with one to four evidence records receive a low-
 
 The score is a relative reconnaissance index. It is **not a calibrated discovery probability**.
 
-## 13. Spatial validation
+## 14. Spatial validation
 
 Materials with at least 10 mapped India evidence records are evaluated with up to five GroupKFold splits grouped by H3 resolution-3 cells. Each fold trains the same score recipe on geographically separated evidence and compares held-out occurrences with a deterministic sample of grid cells more than 25 km from any catalog evidence.
 
@@ -153,7 +161,7 @@ The comparison cells are not confirmed barren, so these metrics measure catalog-
 
 In v0.1, 15 material models have at least 10 records and spatial validation results. Vanadium's holdout AUC was below the promotion threshold and is therefore not labeled as a candidate even when its raw score is high.
 
-## 14. Candidate promotion rules
+## 15. Candidate promotion rules
 
 A cell is never promoted when it is within 5 km of any mapped source site. For all candidate classes, the top material must have at least 10 source records and the nearest same-material evidence must be more than 25 km and no more than 250 km away.
 
@@ -172,7 +180,7 @@ A cell is never promoted when it is within 5 km of any mapped source site. For a
 
 The national rank sorts passing candidates by validation AUC, then percentile, then score. Neighboring high-ranked H3 cells are usually one regional signal and should be dissolved/clustered before field planning.
 
-## 15. Validation and quality controls
+## 16. Validation and quality controls
 
 The release checks:
 
@@ -191,10 +199,11 @@ The release checks:
 - explicit record-level flags and source provenance.
 - 1,114 named NGDR WMS layers, 751 WFS feature types, 11 selected-layer schemas and bounded probes, 2,459,737 reported selected-layer features, and mandatory exclusion of raw NGDR values from public outputs and model evidence.
 - 88,857 unique EMAG2 H3 records; exact source-file hashes and raster dimensions; anomaly/error coverage; source-code interpretation; transform alignment; source-pixel match distance; and an assertion that candidate scores were not recomputed.
+- 50 material-level EMAG2 ablation rows, 70 purged spatial-fold rows, disjoint train/test groups, a minimum 50 km positive buffer, finite paired metrics, 500 group-bootstrap replicates for every evaluated material, fixed admission gates, and an unchanged candidate-table hash.
 
 Build-time results are written to `outputs/validation_report.json`. A passing report means the pipeline's structural checks passed; it does not validate mineral occurrence in the field.
 
-## 16. What is required for a defensible discovery model
+## 17. What is required for a defensible discovery model
 
 Before using the output to allocate exploration capital, add:
 

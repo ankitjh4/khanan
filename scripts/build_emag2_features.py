@@ -32,7 +32,7 @@ from rasterio.windows import Window
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
 RAW = ROOT / "sources" / "raw" / "emag2v3"
-RELEASE_VERSION = "v1.0-alpha.4"
+RELEASE_VERSION = "v1.0-alpha.5"
 GEOSPATIAL_FEATURE_VERSION = "v0.7"
 FEATURE_VERSION = "emag2v3-h3-r6-v0.1"
 
@@ -309,7 +309,7 @@ def build_features(grid: pd.DataFrame, paths: dict[str, Path], source_codes: dic
         if not native_india[index] and not ambiguous[index]:
             record_flags.append("emag2_primary_source_grid_not_labelled_india_or_east_india")
         record_flags.append("regional_geophysical_context_not_deposit_evidence")
-        record_flags.append("not_used_in_alpha4_candidate_scoring")
+        record_flags.append("not_used_in_production_candidate_scoring")
         flags.append(json.dumps(record_flags, separators=(",", ":")))
         profiles.append(
             json.dumps(
@@ -319,7 +319,7 @@ def build_features(grid: pd.DataFrame, paths: dict[str, Path], source_codes: dic
                     "error_estimate_nt": None if not np.isfinite(error[index]) else round(float(error[index]), 4),
                     "source_code": None if source_code[index] < 0 else int(source_code[index]),
                     "source_code_label": labels[index],
-                    "model_use_status": "integrated_context_feature_not_used_in_alpha4_candidate_scoring",
+                    "model_use_status": "integrated_context_feature_not_used_in_production_candidate_scoring",
                 },
                 separators=(",", ":"),
             )
@@ -351,7 +351,7 @@ def build_features(grid: pd.DataFrame, paths: dict[str, Path], source_codes: dic
     result["emag2_source_crs_assignment_basis"] = "NCEI ISO metadata; source GeoTIFF has no embedded CRS tag"
     result["emag2_uncertainty_interpretation"] = "Source error estimate in nT; not a prediction interval or deposit-confidence measure"
     result["emag2_feature_version"] = FEATURE_VERSION
-    result["emag2_model_use_status"] = "integrated_context_feature_not_used_in_alpha4_candidate_scoring"
+    result["emag2_model_use_status"] = "integrated_context_feature_not_used_in_production_candidate_scoring"
     result["emag2_data_quality_flags_json"] = flags
     result["geophysical_profile_json"] = profiles
     result["geophysics_source_dataset_ids_json"] = source_ids

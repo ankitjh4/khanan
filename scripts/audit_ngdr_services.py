@@ -32,7 +32,7 @@ POLICY_URL = (
     "https://geodataindia.gov.in/assets/Document_Pdf/"
     "4.%20Data%20Dissemination%20policy%202019.pdf"
 )
-RELEASE_VERSION = "v1.0-alpha.4"
+RELEASE_VERSION = "v1.0-alpha.5"
 
 LAYERS = [
     {

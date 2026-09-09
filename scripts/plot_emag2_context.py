@@ -172,7 +172,7 @@ def main() -> None:
         0.5,
         0.022,
         (
-            "Context only: EMAG2v3 features do not change the published v0.6 prospectivity rankings pending spatial ablation. "
+            "Context only: the alpha.5 spatial ablation admitted EMAG2v3 to no production material model, so v0.6 rankings remain unchanged. "
             "Magnetic response is not direct evidence of a deposit, grade, depth, recoverability or economic viability.\n"
             "Source: NOAA/NCEI EMAG2v3 (Meyer, Saltus & Chulliat, 2017; DOI 10.7289/V5H70CVX). "
             "Boundary display follows source data and implies no position on legal status."

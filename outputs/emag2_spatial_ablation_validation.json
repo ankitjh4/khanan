@@ -1,0 +1,71 @@
+{
+  "release_version": "v1.0-alpha.5",
+  "experiment_version": "emag2-spatial-ablation-v0.1",
+  "input_sha256": {
+    "national_grid": "04c962c53b9175568fab9aec4e4e6956b353499d00f21f7af5b3dcbf950fc6b7",
+    "known_sites": "3fd4ed34e4d717058d0320e882396afe7b0e39cb4c52d0d6e0b49a7045c379ab",
+    "strategic_materials": "22a3c2c5e9eb9670614be0894060cb7a935e448ca28c2d26d413926d52fb4751",
+    "candidate_table_before_and_after": "73e406d2dee249b46e1c9e41dfbe3197d2556f9c6bfd36583da6292ac92972e5"
+  },
+  "method": {
+    "classifier": "L2-regularized logistic regression with class-balanced fitting",
+    "feature_scaling": "training-fold 5th-to-95th-percentile robust scaling, then clipping to [-10, 10] to bound spatial-fold extrapolation",
+    "spatial_split": "StratifiedGroupKFold grouped by H3 resolution-3",
+    "purge_distance_km_around_test_positives": 50.0,
+    "background_exclusion_from_any_positive_km": 25.0,
+    "positive_unit": "unique H3 resolution-6 cell",
+    "background_status": "deterministic pseudo-absence; not confirmed barren",
+    "baseline_features": [
+      "elevation_m",
+      "slope_degrees_approx",
+      "local_relief_m_approx",
+      "temperature_mean_c_rolling_12m",
+      "precipitation_total_mm_rolling_12m",
+      "relative_humidity_mean_pct_rolling_12m",
+      "wind_speed_2m_mean_m_s_rolling_12m",
+      "fold_safe_log1p_distance_to_training_positive_km",
+      "fold_safe_log1p_training_positive_count_100km",
+      "fold_safe_training_positive_geology_affinity"
+    ],
+    "added_emag2_features": [
+      "emag2_upcont_anomaly_nt",
+      "emag2_upcont_abs_anomaly_nt",
+      "emag2_upcont_local_mean_nt_3x3",
+      "emag2_upcont_local_std_nt_3x3",
+      "emag2_upcont_local_range_nt_3x3",
+      "emag2_anomaly_robust_z_india_h3",
+      "emag2_abs_robust_z_india_h3",
+      "emag2_error_estimate_nt",
+      "emag2_abs_signal_to_error_ratio",
+      "emag2_source_ambiguous_or_no_data"
+    ],
+    "missing_values": "training-fold median imputation plus missingness indicators",
+    "uncertainty": "500-replicate stratified spatial-group bootstrap of paired out-of-fold ROC-AUC delta"
+  },
+  "admission_gate": {
+    "minimum_unique_positive_cells": 20,
+    "minimum_positive_h3_r3_groups": 4,
+    "all_planned_folds_complete": true,
+    "minimum_positive_emag_coverage": 0.8,
+    "minimum_emag_roc_auc": 0.6,
+    "minimum_delta_roc_auc": 0.02,
+    "delta_auc_ci95_lower_bound_strictly_positive": true,
+    "emag_recall_at_background_top5pct_not_lower_than_baseline": true,
+    "production_admission_effect": "None. Passing only permits a separate shadow-ranking test."
+  },
+  "summary_rows": 50,
+  "fold_rows": 70,
+  "evaluated_materials": 14,
+  "materials_passing_shadow_gate": 0,
+  "passing_materials": [],
+  "materials_with_positive_pooled_auc_delta": 9,
+  "materials_with_negative_pooled_auc_delta": 5,
+  "candidate_scores_recomputed": false,
+  "production_scoring_changed": false,
+  "candidate_table_sha256_unchanged": true,
+  "output_sha256": {
+    "summary_csv": "3ea69ff6d4e23c0cd7981a1a653561fa047c20a7badf658b9e7e5f08ab3c7f3f",
+    "fold_csv": "ccb1816ad1fe8fda8c7571402091a1d4ac17a19c40016fff4fa119a9e53034a4"
+  },
+  "checks_pass": true
+}
