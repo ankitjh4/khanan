@@ -1,0 +1,425 @@
+source_id,source_table,source_field,source_term,source_term_occurrences,normalized_material_ids_json,normalized_material_names_json,mapping_method,mapping_status
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Aluminous Laterite,2,"[""element:aluminium"",""ore:aluminous-laterite""]","[""Aluminium"",""Aluminous laterite""]",source_pipeline_mapping+curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,BAUXITE,20,"[""element:aluminium"",""ore:bauxite""]","[""Aluminium"",""Bauxite""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Bauxite,57,"[""element:aluminium"",""ore:bauxite""]","[""Aluminium"",""Bauxite""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,CHROMITE,1,"[""element:chromium"",""mineral:chromite""]","[""Chromium"",""Chromite""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,COPPER,1,"[""element:copper""]","[""Copper""]",source_pipeline_mapping+legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Chromite,18,"[""element:chromium"",""mineral:chromite""]","[""Chromium"",""Chromite""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Copper,5,"[""element:copper""]","[""Copper""]",source_pipeline_mapping+legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Copper Ore,2,"[""element:copper""]","[""Copper""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,DIAMOND,2,"[""mineral:diamond""]","[""Diamond""]",ima_component_match+ima_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Epidote,1,"[""mineral:epidote""]","[""Epidote""]",ima_component_match+ima_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,"FELSPAR,QUARTZ",1,"[""element:silicon"",""group:feldspar-group"",""mineral:quartz""]","[""Silicon"",""Feldspar group"",""Quartz""]",source_pipeline_mapping+legacy_anchored_pattern+curated_component_alias+ima_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,"Felspar, Quartz",1,"[""element:silicon"",""group:feldspar-group"",""mineral:quartz""]","[""Silicon"",""Feldspar group"",""Quartz""]",source_pipeline_mapping+legacy_anchored_pattern+curated_component_alias+ima_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Fluorite,1,"[""element:fluorine"",""mineral:fluorite""]","[""Fluorine"",""Fluorite""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,GRAPHITE,2,"[""mineral:graphite""]","[""Graphite""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Garnet,14,"[""group:garnet-group""]","[""Garnet group""]",curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Gold,11,"[""element:gold""]","[""Gold""]",source_pipeline_mapping+legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Graphite,15,"[""mineral:graphite""]","[""Graphite""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,IRON,18,"[""element:iron""]","[""Iron""]",source_pipeline_mapping+legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,IRON ORE,52,"[""element:iron"",""ore:iron-ore""]","[""Iron"",""Iron ore""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Iron,37,"[""element:iron""]","[""Iron""]",source_pipeline_mapping+legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Iron & Dolomite,2,"[""group:calcium-and-limestone"",""element:iron"",""element:magnesium"",""mineral:dolomite""]","[""Calcium and limestone"",""Iron"",""Magnesium"",""Dolomite""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Iron & Mn,2,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Iron & Mn Ore,1,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Iron & Mn.,1,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Iron & Mn. Ore,3,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Iron Ore,91,"[""element:iron"",""ore:iron-ore""]","[""Iron"",""Iron ore""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Iron Ore & Mn-Ore,1,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Iron and Manganese,6,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Iron and Mn,1,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Iron and Mn-ore,1,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Iron ore,7,"[""element:iron"",""ore:iron-ore""]","[""Iron"",""Iron ore""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Iron& Mn Ore,1,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Ironn Ore & Manganese,1,"[""element:manganese""]","[""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Kiayanite and quartz,1,"[""element:silicon"",""mineral:quartz""]","[""Silicon"",""Quartz""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Kyanite/Sillimanite,3,"[""element:aluminium"",""element:silicon"",""mineral:kyanite"",""mineral:sillimanite""]","[""Aluminium"",""Silicon"",""Kyanite"",""Sillimanite""]",source_pipeline_mapping+ima_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,LIMESTONE,251,"[""group:calcium-and-limestone"",""rock:limestone""]","[""Calcium and limestone"",""Limestone""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,LS & Dolo,2,"[""group:calcium-and-limestone"",""element:magnesium""]","[""Calcium and limestone"",""Magnesium""]",source_pipeline_mapping,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Lead Zinc Ore,22,"[""element:lead"",""element:zinc""]","[""Lead"",""Zinc""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,LimeStone,3,"[""group:calcium-and-limestone"",""rock:limestone""]","[""Calcium and limestone"",""Limestone""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Limeshell,2,"[""group:calcium-and-limestone"",""material:calcareous-shell-material""]","[""Calcium and limestone"",""Calcareous shell material""]",source_pipeline_mapping+curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Limestone,418,"[""group:calcium-and-limestone"",""rock:limestone""]","[""Calcium and limestone"",""Limestone""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Limestone & Dolomite,11,"[""group:calcium-and-limestone"",""element:magnesium"",""rock:limestone"",""mineral:dolomite""]","[""Calcium and limestone"",""Magnesium"",""Limestone"",""Dolomite""]",source_pipeline_mapping+legacy_anchored_pattern+curated_component_alias+ima_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Limestone & Shale,2,"[""group:calcium-and-limestone"",""rock:limestone""]","[""Calcium and limestone"",""Limestone""]",source_pipeline_mapping+legacy_anchored_pattern+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Limestone and Dolomite,1,"[""group:calcium-and-limestone"",""element:magnesium"",""rock:limestone"",""mineral:dolomite""]","[""Calcium and limestone"",""Magnesium"",""Limestone"",""Dolomite""]",source_pipeline_mapping+legacy_anchored_pattern+curated_component_alias+ima_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Limestone and Sandstone,2,"[""group:calcium-and-limestone"",""rock:limestone""]","[""Calcium and limestone"",""Limestone""]",source_pipeline_mapping+legacy_anchored_pattern+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Limstone,3,"[""group:calcium-and-limestone""]","[""Calcium and limestone""]",source_pipeline_mapping,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Lst & Dol,1,"[""group:calcium-and-limestone""]","[""Calcium and limestone""]",source_pipeline_mapping,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,MAGNESITE,3,"[""element:magnesium"",""mineral:magnesite""]","[""Magnesium"",""Magnesite""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,MANGANESE,30,"[""element:manganese""]","[""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,MANGANESE & IRON ORE,1,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,MANGANESE ORE,7,"[""element:manganese""]","[""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,MANGANESE ORE and Iron Ore,1,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Magnesite,10,"[""element:magnesium"",""mineral:magnesite""]","[""Magnesium"",""Magnesite""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Manganese,55,"[""element:manganese""]","[""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Manganese Ore,4,"[""element:manganese""]","[""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Manganese and Iron,4,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,"Mica,Feldspar,Quartz & Vermiculite",1,"[""element:magnesium"",""element:silicon"",""group:mica-group"",""group:feldspar-group"",""mineral:quartz"",""mineral:vermiculite""]","[""Magnesium"",""Silicon"",""Mica group"",""Feldspar group"",""Quartz"",""Vermiculite""]",source_pipeline_mapping+legacy_anchored_pattern+curated_component_alias+ima_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Mn & Fe,2,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Mn-ore & Iron ore,1,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Mn. & Iron Ore,1,"[""element:iron"",""element:manganese""]","[""Iron"",""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Moulding Sand,5,"[""element:silicon"",""material:moulding-sand""]","[""Silicon"",""Moulding sand""]",source_pipeline_mapping+curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,QUARTZ,6,"[""element:silicon"",""mineral:quartz""]","[""Silicon"",""Quartz""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,QUARTZ & FELDSPAR,4,"[""element:silicon"",""mineral:quartz"",""group:feldspar-group""]","[""Silicon"",""Quartz"",""Feldspar group""]",source_pipeline_mapping+legacy_anchored_pattern+curated_component_alias+ima_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,QUARTZ & FELSPAR,11,"[""element:silicon"",""mineral:quartz"",""group:feldspar-group""]","[""Silicon"",""Quartz"",""Feldspar group""]",source_pipeline_mapping+legacy_anchored_pattern+curated_component_alias+ima_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,"QUARTZ,GEM STONE CATS EYE",1,"[""element:silicon"",""mineral:quartz""]","[""Silicon"",""Quartz""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Qaurtz,1,"[""element:silicon""]","[""Silicon""]",source_pipeline_mapping,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,"Quartz, Kynite, Vermiculite, Mica",1,"[""element:magnesium"",""element:silicon"",""mineral:quartz"",""mineral:vermiculite"",""group:mica-group""]","[""Magnesium"",""Silicon"",""Quartz"",""Vermiculite"",""Mica group""]",source_pipeline_mapping+legacy_anchored_pattern+curated_component_alias+ima_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,ROCK PHOSPHATE,2,"[""element:phosphorus"",""ore:phosphorite""]","[""Phosphorus"",""Phosphorite""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Rock Phosphate,1,"[""element:phosphorus"",""ore:phosphorite""]","[""Phosphorus"",""Phosphorite""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Rock Salt,1,"[""mineral:halite""]","[""Halite""]",curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Selenite,5,"[""group:calcium-and-limestone"",""mineral:gypsum""]","[""Calcium and limestone"",""Gypsum""]",source_pipeline_mapping+curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Semi-Precious stone,1,"[""group:semi-precious-gemstones""]","[""Semi-precious gemstones""]",curated_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Siliceous Earth,19,"[""element:silicon"",""material:siliceous-earth""]","[""Silicon"",""Siliceous earth""]",source_pipeline_mapping+curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Tin,3,"[""element:tin""]","[""Tin""]",source_pipeline_mapping+legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Tin Ore,4,"[""element:tin""]","[""Tin""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,VERMICULITE,2,"[""element:magnesium"",""mineral:vermiculite""]","[""Magnesium"",""Vermiculite""]",source_pipeline_mapping+curated_alias+curated_component_alias+ima_name_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,"Vermiculite,Mica,Feldspar & Quartz",2,"[""element:magnesium"",""element:silicon"",""mineral:vermiculite"",""group:mica-group"",""group:feldspar-group"",""mineral:quartz""]","[""Magnesium"",""Silicon"",""Vermiculite"",""Mica group"",""Feldspar group"",""Quartz""]",source_pipeline_mapping+legacy_anchored_pattern+curated_component_alias+ima_component_match,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Vermuculite,1,"[""element:magnesium"",""mineral:vermiculite""]","[""Magnesium"",""Vermiculite""]",source_pipeline_mapping+curated_alias+curated_component_alias,mapped
+SRC_IBM_MCDR_INSPECTIONS_2023_2026,ibm_mcdr_events,mineral_source,Wollastonite,8,"[""group:calcium-and-limestone"",""element:silicon"",""mineral:wollastonite""]","[""Calcium and limestone"",""Silicon"",""Wollastonite""]",source_pipeline_mapping+ima_component_match+ima_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Andalusite,4,"[""mineral:andalusite""]","[""Andalusite""]",ima_component_match+ima_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Antimony,6,"[""element:antimony""]","[""Antimony""]",source_pipeline_mapping+legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Apatite,15,"[""element:phosphorus"",""group:apatite-group""]","[""Phosphorus"",""Apatite group""]",source_pipeline_mapping+curated_alias+curated_component_alias,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Asbestos,17,"[""group:asbestos""]","[""Asbestos""]",curated_alias+curated_component_alias,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Bauxite,31,"[""element:aluminium"",""ore:bauxite""]","[""Aluminium"",""Bauxite""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Borax,3,"[""element:boron"",""mineral:borax""]","[""Boron"",""Borax""]",source_pipeline_mapping+ima_component_match+ima_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Chromite,17,"[""element:chromium"",""mineral:chromite""]","[""Chromium"",""Chromite""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Cobalt Ore,6,"[""element:cobalt""]","[""Cobalt""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Copper,47,"[""element:copper""]","[""Copper""]",source_pipeline_mapping+legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Diamond,7,"[""mineral:diamond""]","[""Diamond""]",ima_component_match+ima_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Diatomite,4,"[""rock:diatomite""]","[""Diatomite""]",curated_alias+curated_component_alias,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Emerald,3,"[""variety:emerald""]","[""Emerald""]",curated_alias+curated_component_alias,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Fluorite,9,"[""element:fluorine"",""mineral:fluorite""]","[""Fluorine"",""Fluorite""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Garnet,15,"[""group:garnet-group""]","[""Garnet group""]",curated_alias+curated_component_alias,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Gold,32,"[""element:gold""]","[""Gold""]",source_pipeline_mapping+legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Graphite,22,"[""mineral:graphite""]","[""Graphite""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Iron ore (Hematite),34,"[""element:iron"",""ore:iron-ore"",""mineral:hematite""]","[""Iron"",""Iron ore"",""Hematite""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+iupac_element_component_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Iron ore (Magnetite),24,"[""element:iron"",""ore:iron-ore"",""mineral:magnetite""]","[""Iron"",""Iron ore"",""Magnetite""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+iupac_element_component_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Kyanite,23,"[""mineral:kyanite""]","[""Kyanite""]",ima_component_match+ima_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Lead & Zinc Ore,59,"[""element:lead"",""element:zinc""]","[""Lead"",""Zinc""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+iupac_element_component_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Limestone,45,"[""group:calcium-and-limestone"",""rock:limestone""]","[""Calcium and limestone"",""Limestone""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Magnesite,17,"[""element:magnesium"",""mineral:magnesite""]","[""Magnesium"",""Magnesite""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Manganese Ore,25,"[""element:manganese""]","[""Manganese""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+iupac_element_component_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Marl,4,"[""group:calcium-and-limestone"",""rock:marl""]","[""Calcium and limestone"",""Marl""]",source_pipeline_mapping+curated_alias+curated_component_alias,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Molybdenum,10,"[""element:molybdenum""]","[""Molybdenum""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Nickel Ore,10,"[""element:nickel""]","[""Nickel""]",source_pipeline_mapping+legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Perlite,6,"[""rock:perlite""]","[""Perlite""]",curated_alias+curated_component_alias,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Platinum Group of Metals,6,"[""group:platinum-group-elements""]","[""Platinum-group elements""]",source_pipeline_mapping+legacy_anchored_pattern,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Potash,12,"[""group:potash""]","[""Potash""]",source_pipeline_mapping+legacy_anchored_pattern,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Pyrite,12,"[""mineral:pyrite""]","[""Pyrite""]",ima_component_match+ima_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Rare Earth Elements,15,"[""group:rare-earth-elements""]","[""Rare-earth elements""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Rock Phosphate,18,"[""element:phosphorus"",""ore:phosphorite""]","[""Phosphorus"",""Phosphorite""]",source_pipeline_mapping+legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Rock Salt,5,"[""mineral:halite""]","[""Halite""]",curated_alias+curated_component_alias,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Ruby,3,"[""variety:ruby""]","[""Ruby""]",curated_alias+curated_component_alias,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Sapphire,3,"[""variety:sapphire""]","[""Sapphire""]",curated_alias+curated_component_alias,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Sillimanite,25,"[""mineral:sillimanite""]","[""Sillimanite""]",ima_component_match+ima_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Silver,26,"[""element:silver""]","[""Silver""]",source_pipeline_mapping+legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Sulphur (Native),3,"[""element:sulfur"",""mineral:sulphur""]","[""Sulfur"",""Sulphur""]",curated_alias+ima_component_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Tin,12,"[""element:tin""]","[""Tin""]",source_pipeline_mapping+legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Titanium,18,"[""element:titanium""]","[""Titanium""]",source_pipeline_mapping+legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Tungsten,18,"[""element:tungsten""]","[""Tungsten""]",source_pipeline_mapping+legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Vanadium,26,"[""element:vanadium""]","[""Vanadium""]",source_pipeline_mapping+legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Vermiculite,11,"[""mineral:vermiculite""]","[""Vermiculite""]",curated_alias+curated_component_alias+ima_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Wollastonite,8,"[""mineral:wollastonite""]","[""Wollastonite""]",ima_component_match+ima_name_match,mapped
+SRC_IBM_NMI_2025,ibm_nmi_2025,mineral_name_source,Zircon,6,"[""element:zirconium"",""mineral:zircon""]","[""Zirconium"",""Zircon""]",source_pipeline_mapping+legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Aluminous Laterite,14,"[""ore:aluminous-laterite""]","[""Aluminous laterite""]",curated_alias+curated_component_alias,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Associated minerals,19,[],[],unresolved_or_nonspecific,unresolved_or_nonspecific
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Base metals,2,"[""group:base-metals""]","[""Base metals""]",curated_alias+curated_component_alias,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Bauxite,8,"[""element:aluminium"",""ore:bauxite""]","[""Aluminium"",""Bauxite""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Cesium,2,"[""element:cesium""]","[""Cesium""]",iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Chromium,10,"[""element:chromium""]","[""Chromium""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Cobalt,10,"[""element:cobalt""]","[""Cobalt""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Copper,4,"[""element:copper""]","[""Copper""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Gallium,4,"[""element:gallium""]","[""Gallium""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Glauconite,26,"[""group:potash"",""group:glauconite-group""]","[""Potash"",""Glauconite group""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Gold,1,"[""element:gold""]","[""Gold""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Graphite,56,"[""mineral:graphite""]","[""Graphite""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Halite,11,"[""mineral:halite""]","[""Halite""]",ima_component_match+ima_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Ilmenite,2,"[""element:titanium"",""mineral:ilmenite""]","[""Titanium"",""Ilmenite""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Iron,6,"[""element:iron""]","[""Iron""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Lead,3,"[""element:lead""]","[""Lead""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Limestone,2,"[""group:calcium-and-limestone"",""rock:limestone""]","[""Calcium and limestone"",""Limestone""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Lithium,8,"[""element:lithium""]","[""Lithium""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Magnetite,3,"[""mineral:magnetite""]","[""Magnetite""]",ima_component_match+ima_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Manganese,16,"[""element:manganese""]","[""Manganese""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Molybdenum,9,"[""element:molybdenum""]","[""Molybdenum""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Nickel,13,"[""element:nickel""]","[""Nickel""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Niobium,2,"[""element:niobium""]","[""Niobium""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Phosphate,5,"[""element:phosphorus""]","[""Phosphorus""]",legacy_anchored_pattern,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Phosphorite,14,"[""element:phosphorus"",""ore:phosphorite""]","[""Phosphorus"",""Phosphorite""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Platinum-group elements,8,"[""group:platinum-group-elements""]","[""Platinum-group elements""]",legacy_anchored_pattern,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Potash,13,"[""group:potash""]","[""Potash""]",legacy_anchored_pattern,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Rare metals,6,"[""group:rare-metals""]","[""Rare metals""]",curated_alias+curated_component_alias,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Rare-earth elements,27,"[""group:rare-earth-elements""]","[""Rare-earth elements""]",curated_alias+curated_component_alias,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Rock phosphate,3,"[""element:phosphorus"",""ore:phosphorite""]","[""Phosphorus"",""Phosphorite""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Rubidium,4,"[""element:rubidium""]","[""Rubidium""]",iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Tin,4,"[""element:tin""]","[""Tin""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Titanium,15,"[""element:titanium""]","[""Titanium""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Tungsten,14,"[""element:tungsten""]","[""Tungsten""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Vanadium,37,"[""element:vanadium""]","[""Vanadium""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Yttrium,3,"[""element:yttrium""]","[""Yttrium""]",iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Zinc,3,"[""element:zinc""]","[""Zinc""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_MSTC_CRITICAL_MBS_T1_T8,critical_mineral_auction_events,source_materials_json,Zirconium,2,"[""element:zirconium""]","[""Zirconium""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Abrasives (Manufactured),4,"[""material:abrasives-manufactured""]","[""Abrasives (manufactured)""]",curated_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Alumina,2,"[""compound:alumina""]","[""Alumina""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Aluminum,4,"[""element:aluminium""]","[""Aluminium""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Antimony,2,"[""element:antimony""]","[""Antimony""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Barite,4,"[""element:barium"",""mineral:baryte""]","[""Barium"",""Baryte""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Bauxite,3,"[""element:aluminium"",""ore:bauxite""]","[""Aluminium"",""Bauxite""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Bromine,3,"[""element:bromine""]","[""Bromine""]",iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Cement,4,"[""material:cement""]","[""Cement""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Chromium,6,"[""element:chromium""]","[""Chromium""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Clays,6,"[""group:clay""]","[""Clay""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Copper,5,"[""element:copper""]","[""Copper""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Diamond (Industrial),1,"[""mineral:diamond""]","[""Diamond""]",curated_alias+ima_component_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Feldspar And Nepheline Syenite,3,"[""group:feldspar-group"",""mineral:nepheline"",""rock:nepheline-syenite""]","[""Feldspar group"",""Nepheline"",""Nepheline syenite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Garnet (Industrial),4,"[""group:garnet-group""]","[""Garnet group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Gemstones,1,"[""group:gemstones""]","[""Gemstones""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Granite Only,1,"[""rock:granite""]","[""Granite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Graphite (Natural),3,"[""mineral:graphite""]","[""Graphite""]",legacy_anchored_pattern+curated_alias+ima_component_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Gypsum,3,"[""mineral:gypsum""]","[""Gypsum""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Iron And Steel,4,"[""element:iron"",""material:iron-and-steel""]","[""Iron"",""Iron and steel""]",legacy_anchored_pattern+curated_alias+iupac_element_component_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Iron Ore,6,"[""element:iron"",""ore:iron-ore""]","[""Iron"",""Iron ore""]",legacy_anchored_pattern+curated_alias+iupac_element_component_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Iron Oxide Pigments,3,"[""element:iron"",""material:iron-oxide-pigments""]","[""Iron"",""Iron oxide pigments""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Kyanite And Related Minerals,3,"[""group:kyanite-and-related-minerals"",""mineral:kyanite""]","[""Kyanite and related minerals"",""Kyanite""]",curated_alias+ima_component_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Lead,3,"[""element:lead""]","[""Lead""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Lime,2,"[""mineral:lime""]","[""Lime""]",curated_alias+curated_component_alias+ima_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Magnesium Compounds,4,"[""element:magnesium"",""group:magnesium-compounds""]","[""Magnesium"",""Magnesium compounds""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Magnesium Metal,1,"[""element:magnesium""]","[""Magnesium""]",legacy_anchored_pattern+iupac_element_component_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Manganese,3,"[""element:manganese""]","[""Manganese""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Mica (Natural),8,"[""group:mica-group""]","[""Mica group""]",curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Nitrogen (Fixed)—Ammonia,2,"[""compound:nitrogen-fixed-ammonia""]","[""Nitrogen (fixed)—ammonia""]",curated_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Phosphate Rock,3,"[""element:phosphorus"",""ore:phosphorite""]","[""Phosphorus"",""Phosphorite""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Rare Earths,3,"[""group:rare-earth-elements""]","[""Rare-earth elements""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Salt,2,"[""mineral:halite""]","[""Halite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Sand And Gravel (Industrial),2,"[""material:sand-and-gravel-industrial""]","[""Sand and gravel (industrial)""]",curated_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Selenium,3,"[""element:selenium""]","[""Selenium""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Silicon,4,"[""element:silicon""]","[""Silicon""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Silver,3,"[""element:silver""]","[""Silver""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Stone (Dimension),1,"[""rock:granite""]","[""Granite""]",curated_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Sulfur,2,"[""element:sulfur""]","[""Sulfur""]",iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Talc And Pyrophyllite,3,"[""mineral:talc"",""mineral:pyrophyllite""]","[""Talc"",""Pyrophyllite""]",curated_alias+ima_component_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Thorium,1,"[""element:thorium""]","[""Thorium""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Tio2 Pigment,1,"[""compound:titanium-dioxide-pigment""]","[""Titanium dioxide pigment""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Titanium Mineral Concentrates,6,"[""element:titanium"",""ore:titanium-mineral-concentrates""]","[""Titanium"",""Titanium mineral concentrates""]",legacy_anchored_pattern+curated_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Titanium Sponge Metal,3,"[""element:titanium"",""material:titanium-sponge-metal""]","[""Titanium"",""Titanium sponge metal""]",legacy_anchored_pattern+curated_alias,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Vermiculite,3,"[""mineral:vermiculite""]","[""Vermiculite""]",curated_alias+curated_component_alias+ima_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Wollastonite,2,"[""mineral:wollastonite""]","[""Wollastonite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MCS_2026,usgs_mcs2026_india_rows,Commodity,Zinc,3,"[""element:zinc""]","[""Zinc""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Aluminum,110,"[""element:aluminium""]","[""Aluminium""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Antimony,1,"[""element:antimony""]","[""Antimony""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Arsenic,2,"[""element:arsenic""]","[""Arsenic""]",ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Asbestos,1,"[""group:asbestos""]","[""Asbestos""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Barium-Barite,3,"[""element:barium"",""mineral:baryte""]","[""Barium"",""Baryte""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Boron-Borates,1,"[""element:boron""]","[""Boron""]",legacy_anchored_pattern,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Cadmium,4,"[""element:cadmium""]","[""Cadmium""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Calcium,1,"[""group:calcium-and-limestone"",""element:calcium""]","[""Calcium and limestone"",""Calcium""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Chromium,72,"[""element:chromium""]","[""Chromium""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Cobalt,4,"[""element:cobalt""]","[""Cobalt""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Contained or Metal,7,[],[],unresolved_or_nonspecific,unresolved_or_nonspecific
+SRC_USGS_MRDS,mrds_india,commodity,Copper,175,"[""element:copper""]","[""Copper""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Ferrochrome,7,"[""element:chromium""]","[""Chromium""]",legacy_anchored_pattern,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Fluorine-Fluorite,3,"[""element:fluorine"",""mineral:fluorite""]","[""Fluorine"",""Fluorite""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Gallium,1,"[""element:gallium""]","[""Gallium""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Garnet,7,"[""group:garnet-group""]","[""Garnet group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Gold,16,"[""element:gold""]","[""Gold""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Graphite,14,"[""mineral:graphite""]","[""Graphite""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Gypsum-Anhydrite,1,"[""mineral:gypsum"",""mineral:anhydrite""]","[""Gypsum"",""Anhydrite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Halite,1,"[""mineral:halite""]","[""Halite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Iridium,2,"[""group:platinum-group-elements"",""element:iridium""]","[""Platinum-group elements"",""Iridium""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Iron,240,"[""element:iron""]","[""Iron""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Kyanite,5,"[""mineral:kyanite""]","[""Kyanite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Lead,35,"[""element:lead""]","[""Lead""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Lithium,1,"[""element:lithium""]","[""Lithium""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Magnesite,4,"[""element:magnesium"",""mineral:magnesite""]","[""Magnesium"",""Magnesite""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Manganese,129,"[""element:manganese""]","[""Manganese""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Metal,5,[],[],unresolved_or_nonspecific,unresolved_or_nonspecific
+SRC_USGS_MRDS,mrds_india,commodity,Molybdenum,4,"[""element:molybdenum""]","[""Molybdenum""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Nickel,7,"[""element:nickel""]","[""Nickel""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Osmium,2,"[""group:platinum-group-elements"",""element:osmium""]","[""Platinum-group elements"",""Osmium""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,PGE,1,"[""group:platinum-group-elements""]","[""Platinum-group elements""]",legacy_anchored_pattern,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Palladium,1,"[""group:platinum-group-elements"",""element:palladium""]","[""Platinum-group elements"",""Palladium""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Phosphorus-Phosphates,91,"[""element:phosphorus""]","[""Phosphorus""]",legacy_anchored_pattern,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Pigment,2,[],[],unresolved_or_nonspecific,unresolved_or_nonspecific
+SRC_USGS_MRDS,mrds_india,commodity,Platinum,7,"[""group:platinum-group-elements"",""element:platinum""]","[""Platinum-group elements"",""Platinum""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,REE,11,"[""group:rare-earth-elements""]","[""Rare-earth elements""]",legacy_anchored_pattern,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Refiner,2,[],[],unresolved_or_nonspecific,unresolved_or_nonspecific
+SRC_USGS_MRDS,mrds_india,commodity,Refinery,1,[],[],unresolved_or_nonspecific,unresolved_or_nonspecific
+SRC_USGS_MRDS,mrds_india,commodity,Rhodium,1,"[""group:platinum-group-elements"",""element:rhodium""]","[""Platinum-group elements"",""Rhodium""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Selenium,2,"[""element:selenium""]","[""Selenium""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Silica,77,"[""element:silicon""]","[""Silicon""]",legacy_anchored_pattern,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Silver,20,"[""element:silver""]","[""Silver""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Soda Ash,1,"[""compound:soda-ash""]","[""Soda ash""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Sodium Sulfate,1,"[""compound:sodium-sulfate""]","[""Sodium sulfate""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Stone,1,[],[],unresolved_or_nonspecific,unresolved_or_nonspecific
+SRC_USGS_MRDS,mrds_india,commodity,Sulfur,50,"[""element:sulfur""]","[""Sulfur""]",iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Sulfur-Pyrite,1,"[""element:sulfur"",""mineral:pyrite""]","[""Sulfur"",""Pyrite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Sulfuric Acid,3,"[""compound:sulfuric-acid""]","[""Sulfuric acid""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Thorium,6,"[""element:thorium""]","[""Thorium""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Titanium,43,"[""element:titanium""]","[""Titanium""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Titanium-Ilmenite,1,"[""element:titanium"",""mineral:ilmenite""]","[""Titanium"",""Ilmenite""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Titanium-Rutile,1,"[""element:titanium"",""mineral:rutile""]","[""Titanium"",""Rutile""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Tungsten,3,"[""element:tungsten""]","[""Tungsten""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Uranium,1,"[""element:uranium""]","[""Uranium""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Vanadium,10,"[""element:vanadium""]","[""Vanadium""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Wollastonite,1,"[""mineral:wollastonite""]","[""Wollastonite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Zinc,25,"[""element:zinc""]","[""Zinc""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,commodity,Zirconium,18,"[""element:zirconium""]","[""Zirconium""]",legacy_anchored_pattern+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Andalusite,1,"[""mineral:andalusite""]","[""Andalusite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Barite,2,"[""element:barium"",""mineral:baryte""]","[""Barium"",""Baryte""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Biotite,2,"[""group:biotite-group""]","[""Biotite group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Chert,1,"[""rock:chert""]","[""Chert""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Chlorite,9,"[""group:chlorite-group""]","[""Chlorite group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Clinozoisite,1,"[""mineral:clinozoisite""]","[""Clinozoisite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Dickite,1,"[""mineral:dickite""]","[""Dickite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Diopside,2,"[""mineral:diopside""]","[""Diopside""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Dolomite,3,"[""mineral:dolomite""]","[""Dolomite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Enargite,1,"[""mineral:enargite""]","[""Enargite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Epidote,1,"[""mineral:epidote""]","[""Epidote""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Fluorite,1,"[""element:fluorine"",""mineral:fluorite""]","[""Fluorine"",""Fluorite""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Garnet,6,"[""group:garnet-group""]","[""Garnet group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Goethite,11,"[""mineral:goethite""]","[""Goethite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Gypsum,1,"[""mineral:gypsum""]","[""Gypsum""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Hematite,1,"[""mineral:hematite""]","[""Hematite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Jasper,1,"[""variety:chalcedony""]","[""Chalcedony""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Magnetite,1,"[""mineral:magnetite""]","[""Magnetite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Muscovite,2,"[""mineral:muscovite""]","[""Muscovite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Phyllite,1,"[""rock:phyllite""]","[""Phyllite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Pyroxene,1,"[""group:pyroxene-group""]","[""Pyroxene group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Quartz,24,"[""element:silicon"",""mineral:quartz""]","[""Silicon"",""Quartz""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Sericite,11,"[""variety:sericite""]","[""Sericite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Sillimanite,1,"[""mineral:sillimanite""]","[""Sillimanite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,gangue_mineral,Tremolite,1,"[""mineral:tremolite""]","[""Tremolite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Anatase,1,"[""mineral:anatase""]","[""Anatase""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Apatite,1,"[""group:apatite-group""]","[""Apatite group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Argentite,1,"[""mineral:acanthite""]","[""Acanthite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Bauxite,19,"[""element:aluminium"",""ore:bauxite""]","[""Aluminium"",""Bauxite""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Birnessite,1,"[""mineral:birnessite""]","[""Birnessite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Bixbyite,2,"[""mineral:bixbyite-mn""]","[""Bixbyite-(Mn)""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Boehmite,2,"[""mineral:bohmite""]","[""Böhmite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Bornite,2,"[""mineral:bornite""]","[""Bornite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Braunite,16,"[""mineral:braunite""]","[""Braunite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Calcite,1,"[""group:calcium-and-limestone"",""mineral:calcite""]","[""Calcium and limestone"",""Calcite""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Chalcocite,1,"[""mineral:chalcocite""]","[""Chalcocite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Chalcopyrite,6,"[""mineral:chalcopyrite""]","[""Chalcopyrite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Copper,1,"[""element:copper""]","[""Copper""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Corundum,1,"[""mineral:corundum""]","[""Corundum""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Covellite,2,"[""mineral:covellite""]","[""Covellite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Cubanite,1,"[""mineral:cubanite""]","[""Cubanite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Fluorite,2,"[""element:fluorine"",""mineral:fluorite""]","[""Fluorine"",""Fluorite""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Galena,3,"[""mineral:galena""]","[""Galena""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Garnet,2,"[""group:garnet-group""]","[""Garnet group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Gibbsite,4,"[""mineral:gibbsite""]","[""Gibbsite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Hematite,12,"[""mineral:hematite""]","[""Hematite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Hollandite,2,"[""mineral:hollandite""]","[""Hollandite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Ilmenite,4,"[""element:titanium"",""mineral:ilmenite""]","[""Titanium"",""Ilmenite""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Iridosmine,1,"[""element:osmium"",""element:iridium""]","[""Osmium"",""Iridium""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Jacobsite,8,"[""mineral:jacobsite""]","[""Jacobsite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Kaolin,1,"[""group:kaolin""]","[""Kaolin""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Kyanite,1,"[""mineral:kyanite""]","[""Kyanite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Limonite,1,"[""ore:limonite""]","[""Limonite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Magnetite,3,"[""mineral:magnetite""]","[""Magnetite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Malachite,2,"[""mineral:malachite""]","[""Malachite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Manganite,10,"[""mineral:manganite""]","[""Manganite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Martite,1,"[""mineral:hematite""]","[""Hematite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Molybdenite,1,"[""mineral:molybdenite""]","[""Molybdenite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Monazite,3,"[""group:rare-earth-elements"",""group:monazite-group""]","[""Rare-earth elements"",""Monazite group""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Psilomelane,2,"[""historical:psilomelane""]","[""Psilomelane""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Pyrite,4,"[""mineral:pyrite""]","[""Pyrite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Pyrolusite,17,"[""mineral:pyrolusite""]","[""Pyrolusite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Pyrrhotite,2,"[""mineral:pyrrhotite""]","[""Pyrrhotite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Rhodochrosite,2,"[""mineral:rhodochrosite""]","[""Rhodochrosite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Rhodonite,2,"[""mineral:rhodonite""]","[""Rhodonite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Rutile,3,"[""element:titanium"",""mineral:rutile""]","[""Titanium"",""Rutile""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Sillimanite,2,"[""mineral:sillimanite""]","[""Sillimanite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Silver,2,"[""element:silver""]","[""Silver""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Specularite,1,"[""mineral:hematite""]","[""Hematite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Sphalerite,5,"[""mineral:sphalerite""]","[""Sphalerite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Todorokite,1,"[""mineral:todorokite""]","[""Todorokite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Wollastonite,1,"[""mineral:wollastonite""]","[""Wollastonite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Zincite,1,"[""mineral:zincite""]","[""Zincite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,ore_mineral,Zircon,3,"[""element:zirconium"",""mineral:zircon""]","[""Zirconium"",""Zircon""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Anatase,2,"[""mineral:anatase""]","[""Anatase""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Apatite,8,"[""group:apatite-group""]","[""Apatite group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Arsenopyrite,4,"[""mineral:arsenopyrite""]","[""Arsenopyrite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Autunite,1,"[""mineral:autunite""]","[""Autunite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Azurite,19,"[""mineral:azurite""]","[""Azurite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Barite,3,"[""element:barium"",""mineral:baryte""]","[""Barium"",""Baryte""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Bauxite,1,"[""element:aluminium"",""ore:bauxite""]","[""Aluminium"",""Bauxite""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Biotite,10,"[""group:biotite-group""]","[""Biotite group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Bismuthinite,1,"[""mineral:bismuthinite""]","[""Bismuthinite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Boehmite,3,"[""mineral:bohmite""]","[""Böhmite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Bornite,8,"[""mineral:bornite""]","[""Bornite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Braunite,5,"[""mineral:braunite""]","[""Braunite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Calcite,6,"[""group:calcium-and-limestone"",""mineral:calcite""]","[""Calcium and limestone"",""Calcite""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Cassiterite,1,"[""mineral:cassiterite""]","[""Cassiterite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Chalcanthite,1,"[""mineral:chalcanthite""]","[""Chalcanthite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Chalcedony,1,"[""variety:chalcedony""]","[""Chalcedony""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Chalcocite,6,"[""mineral:chalcocite""]","[""Chalcocite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Chalcopyrite,40,"[""mineral:chalcopyrite""]","[""Chalcopyrite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Chlorite,12,"[""group:chlorite-group""]","[""Chlorite group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Chromite,6,"[""element:chromium"",""mineral:chromite""]","[""Chromium"",""Chromite""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Chrysocolla,2,"[""mineral:chrysocolla""]","[""Chrysocolla""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Clay,2,"[""group:clay""]","[""Clay""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Copper,3,"[""element:copper""]","[""Copper""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Covellite,4,"[""mineral:covellite""]","[""Covellite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Cryptomalene,3,"[""mineral:cryptomelane""]","[""Cryptomelane""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Cuprite,9,"[""mineral:cuprite""]","[""Cuprite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Diopside,1,"[""mineral:diopside""]","[""Diopside""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Dolomite,3,"[""mineral:dolomite""]","[""Dolomite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Epidote,1,"[""mineral:epidote""]","[""Epidote""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Feldspar,4,"[""group:feldspar-group""]","[""Feldspar group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Galaxite,1,"[""mineral:galaxite""]","[""Galaxite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Galena,9,"[""mineral:galena""]","[""Galena""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Garnet,15,"[""group:garnet-group""]","[""Garnet group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Gibbsite,8,"[""mineral:gibbsite""]","[""Gibbsite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Goethite,13,"[""mineral:goethite""]","[""Goethite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Gold,4,"[""element:gold""]","[""Gold""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Graphite,2,"[""mineral:graphite""]","[""Graphite""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Hausmanite,1,"[""mineral:hausmannite""]","[""Hausmannite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Hematite,155,"[""mineral:hematite""]","[""Hematite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Hornblende,2,"[""group:hornblende-group""]","[""Hornblende group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Hypersthene,1,"[""group:pyroxene-group""]","[""Pyroxene group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Ilmenite,14,"[""element:titanium"",""mineral:ilmenite""]","[""Titanium"",""Ilmenite""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Jacobsite,4,"[""mineral:jacobsite""]","[""Jacobsite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Jasper,3,"[""variety:chalcedony""]","[""Chalcedony""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Kaolinite,2,"[""group:kaolin"",""mineral:kaolinite""]","[""Kaolin"",""Kaolinite""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Limonite,14,"[""ore:limonite""]","[""Limonite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Magnetite,49,"[""mineral:magnetite""]","[""Magnetite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Malachite,48,"[""mineral:malachite""]","[""Malachite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Manganese Ox-Hydrous,1,"[""element:manganese"",""ore:manganese-oxide-mixture""]","[""Manganese"",""Manganese oxide mixture""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Manganite,5,"[""mineral:manganite""]","[""Manganite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Mica,1,"[""group:mica-group""]","[""Mica group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Millerite,1,"[""mineral:millerite""]","[""Millerite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Molybdenite,1,"[""mineral:molybdenite""]","[""Molybdenite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Monazite,7,"[""group:rare-earth-elements"",""group:monazite-group""]","[""Rare-earth elements"",""Monazite group""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Montmorillonite,1,"[""mineral:montmorillonite""]","[""Montmorillonite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Muscovite,9,"[""mineral:muscovite""]","[""Muscovite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Olivine,2,"[""group:olivine-group""]","[""Olivine group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Pentlandite,2,"[""mineral:pentlandite""]","[""Pentlandite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Piedmontite,2,"[""mineral:piemontite""]","[""Piemontite""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Psilomelane,31,"[""historical:psilomelane""]","[""Psilomelane""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Pyrite,29,"[""mineral:pyrite""]","[""Pyrite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Pyrolusite,25,"[""mineral:pyrolusite""]","[""Pyrolusite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Pyrrhotite,9,"[""mineral:pyrrhotite""]","[""Pyrrhotite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Quartz,38,"[""element:silicon"",""mineral:quartz""]","[""Silicon"",""Quartz""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Rhodochrosite,1,"[""mineral:rhodochrosite""]","[""Rhodochrosite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Rhodonite,8,"[""mineral:rhodonite""]","[""Rhodonite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Rutile,9,"[""element:titanium"",""mineral:rutile""]","[""Titanium"",""Rutile""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Scheelite,1,"[""mineral:scheelite""]","[""Scheelite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Serpentine,2,"[""group:serpentine-group""]","[""Serpentine group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Siderite,2,"[""mineral:siderite""]","[""Siderite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Sillimanite,8,"[""mineral:sillimanite""]","[""Sillimanite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Silver,1,"[""element:silver""]","[""Silver""]",legacy_anchored_pattern+ima_name_match+iupac_element_component_match+iupac_element_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Spessartite,7,"[""mineral:spessartine""]","[""Spessartine""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Sphalerite,6,"[""mineral:sphalerite""]","[""Sphalerite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Talc,3,"[""mineral:talc""]","[""Talc""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Tenorite,1,"[""mineral:tenorite""]","[""Tenorite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Tetrahedrite,3,"[""group:tetrahedrite-group""]","[""Tetrahedrite group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Torbernite,1,"[""mineral:torbernite""]","[""Torbernite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Tourmaline,3,"[""group:tourmaline-group""]","[""Tourmaline group""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Uraninite,1,"[""mineral:uraninite""]","[""Uraninite""]",ima_component_match+ima_name_match,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Wad,9,"[""ore:wad""]","[""Wad""]",curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Wolframite,1,"[""element:tungsten"",""group:wolframite-group""]","[""Tungsten"",""Wolframite group""]",legacy_anchored_pattern+curated_alias+curated_component_alias,mapped
+SRC_USGS_MRDS,mrds_india,other_material,Zircon,9,"[""element:zirconium"",""mineral:zircon""]","[""Zirconium"",""Zircon""]",legacy_anchored_pattern+ima_component_match+ima_name_match,mapped

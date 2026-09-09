@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v0.6"
+VERSION = "v1.0-alpha.1"
 
 BUNDLE_MEMBERS = [
     "README.md",
@@ -15,6 +15,8 @@ BUNDLE_MEMBERS = [
     "docs/methodology.md",
     "outputs/README.md",
     "scripts/plot_khanan_overview.py",
+    "scripts/build_material_ontology.py",
+    "config/materials.json",
     "config/weather_window.json",
     "config/official_critical_blocks.json",
     "outputs/india_known_mining_sites.csv",
@@ -26,6 +28,9 @@ BUNDLE_MEMBERS = [
     "outputs/india_mining_prospectivity_grid_h3_r6.csv",
     "outputs/india_mining_candidate_areas_validation_gated.csv",
     "outputs/india_strategic_materials_top50.csv",
+    "outputs/india_material_ontology_v1.csv",
+    "outputs/material_source_term_crosswalk_v1.csv",
+    "outputs/material_ontology_validation_v1.json",
     "outputs/material_model_support.csv",
     "outputs/material_model_validation.csv",
     "outputs/source_registry.csv",
@@ -47,6 +52,9 @@ HASHED_ARTIFACTS = [
     "india_mining_prospectivity_grid_h3_r6.csv",
     "india_mining_candidate_areas_validation_gated.csv",
     "india_strategic_materials_top50.csv",
+    "india_material_ontology_v1.csv",
+    "material_source_term_crosswalk_v1.csv",
+    "material_ontology_validation_v1.json",
     "material_model_support.csv",
     "material_model_validation.csv",
     "source_registry.csv",
@@ -56,7 +64,6 @@ HASHED_ARTIFACTS = [
     "ibm_mcdr_inspection_validation.json",
     "nasa_power_rolling_12m_validation.json",
     "official_critical_blocks_validation.json",
-    "india_mining_dataset_companion.xlsx",
     f"india_mining_dataset_csv_bundle_{VERSION}.zip",
 ]
 

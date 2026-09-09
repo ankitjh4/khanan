@@ -16,7 +16,7 @@ tmp/
 # Raw downloads are reproducible and too large/noisy for source control.
 sources/raw/
 
-# The full grid is distributed inside the compressed v0.6 release bundle.
+# The full grid is distributed inside the current compressed release bundle.
 outputs/india_mining_prospectivity_grid_h3_r6.csv
 
 # Local workbook diagnostics and previews.

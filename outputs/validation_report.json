@@ -122,5 +122,15 @@
   },
   "official_critical_mineral_distinct_offer_lineage_keys": 100,
   "official_critical_mineral_pib_reported_cumulative_offer_count": 88,
-  "official_critical_mineral_lineage_reconciliation_status": "not_reconciled"
+  "official_critical_mineral_lineage_reconciliation_status": "not_reconciled",
+  "development_release_version": "v1.0-alpha.1",
+  "material_ontology_v1": {
+    "ontology_rows": 223,
+    "ima_verified_species": 108,
+    "iupac_element_entities": 69,
+    "crosswalk_rows": 424,
+    "crosswalk_mapping_rate": 0.9834905660377359,
+    "legacy_model_targets_unchanged": 50,
+    "checks_pass": true
+  }
 }

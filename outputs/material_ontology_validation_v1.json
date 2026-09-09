@@ -1,0 +1,92 @@
+{
+  "ontology_version": "v1.0-alpha.1",
+  "ontology_rows": 223,
+  "unique_material_ids": 223,
+  "unique_material_names_casefolded": 223,
+  "entity_type_counts": {
+    "alloy_or_industrial_material": 1,
+    "compound_group": 1,
+    "compound_or_industrial_material": 6,
+    "element": 69,
+    "energy_commodity": 4,
+    "industrial_material": 8,
+    "industrial_material_group": 1,
+    "industrial_mineral_group": 3,
+    "material_group": 7,
+    "mineral_group": 16,
+    "mineral_mixture_or_obsolete_name": 1,
+    "mineral_mixture_or_ore": 3,
+    "mineral_mixture_or_variety": 1,
+    "mineral_species": 85,
+    "mineral_variety": 4,
+    "ore_concentrate_group": 1,
+    "ore_group": 1,
+    "rock": 4,
+    "rock_or_industrial_material": 4,
+    "rock_or_ore": 3
+  },
+  "legacy_model_targets": 50,
+  "official_india_critical_aggregate_targets": 30,
+  "official_india_critical_entities_or_group_members": 53,
+  "ima_verified_species": 108,
+  "iupac_element_entities": 69,
+  "entities_with_direct_source_term_occurrences": 193,
+  "crosswalk_rows": 424,
+  "crosswalk_source_terms_mapped": 417,
+  "crosswalk_source_terms_unresolved_or_nonspecific": 7,
+  "crosswalk_mapping_rate": 0.9834905660377359,
+  "unresolved_terms": [
+    {
+      "source_id": "SRC_MSTC_CRITICAL_MBS_T1_T8",
+      "source_field": "source_materials_json",
+      "source_term": "Associated minerals",
+      "source_term_occurrences": 19
+    },
+    {
+      "source_id": "SRC_USGS_MRDS",
+      "source_field": "commodity",
+      "source_term": "Contained or Metal",
+      "source_term_occurrences": 7
+    },
+    {
+      "source_id": "SRC_USGS_MRDS",
+      "source_field": "commodity",
+      "source_term": "Metal",
+      "source_term_occurrences": 5
+    },
+    {
+      "source_id": "SRC_USGS_MRDS",
+      "source_field": "commodity",
+      "source_term": "Pigment",
+      "source_term_occurrences": 2
+    },
+    {
+      "source_id": "SRC_USGS_MRDS",
+      "source_field": "commodity",
+      "source_term": "Refiner",
+      "source_term_occurrences": 2
+    },
+    {
+      "source_id": "SRC_USGS_MRDS",
+      "source_field": "commodity",
+      "source_term": "Refinery",
+      "source_term_occurrences": 1
+    },
+    {
+      "source_id": "SRC_USGS_MRDS",
+      "source_field": "commodity",
+      "source_term": "Stone",
+      "source_term_occurrences": 1
+    }
+  ],
+  "ima_parser_species_rows": 6048,
+  "ima_source_pdf_pages": 244,
+  "ima_source_pdf_sha256": "2257c653491b346669ee5d38c98226a2bddbec0562a3675043730a01ca146973",
+  "ima_document_stated_valid_species": 6239,
+  "ima_parser_document_row_coverage": 0.969386119570444,
+  "usgs_mcs2026_source_rows": 8886,
+  "usgs_mcs2026_india_rows": 143,
+  "usgs_mcs2026_source_sha256": "582a0aa231aea53d8a97dc8d1cd3dfa5f885cf3760353e3d029d7f0ae4fbaaf5",
+  "model_eligibility_policy": "Ontology inclusion does not confer model eligibility. Only the 50 explicitly retained v0.6 model targets are scored until separately reviewed and validated.",
+  "checks_pass": true
+}

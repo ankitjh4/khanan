@@ -63,7 +63,7 @@ The global MRDS CSV was filtered to India, giving 781 source rows:
 
 All source records are retained in the factual CSV. Two records have coordinates outside expected India bounds and are explicitly flagged: `MRDS-10133908` and `MRDS-10231095`. They are excluded from model evidence.
 
-Commodity text is normalized to the 50-material taxonomy using anchored aliases and regular-expression rules. Original material strings remain in `source_materials_json`. Normalized chemical names and symbols/formulae are emitted as JSON arrays. Where no chemical name is defensible—such as bulk coal or petroleum—the English material/form name is retained rather than inventing a single compound.
+Commodity text used by the v0.6 model is normalized to its 50-target set using anchored aliases and regular-expression rules. The v1 ontology build separately crosswalks raw MRDS commodity, ore, gangue, and other-material fields to typed entities while preserving the original wording. Normalized chemical names and symbols/formulae are emitted as JSON arrays. Where no chemical name is defensible—such as bulk coal or petroleum—the English material/form name is retained rather than inventing a single compound.
 
 ## 7. Environmental and human context
 
@@ -73,19 +73,19 @@ Commodity text is normalized to the 50-material taxonomy using anchored aliases 
 - **Geology:** age, supergroup, group, stratigraphy, and map-unit ID are sampled at each centroid from the public Esri India feature service. The service metadata does not identify the polygon source, scale, or reuse license, so the release redistributes only sampled attributes and flags this limitation.
 - **Terrain:** WorldClim 2.1 elevation, derived from SRTM, supplies centroid elevation and reconnaissance-scale slope/relief estimates.
 
-## 8. Material taxonomy
+## 8. Material ontology and model eligibility
 
-Ranks 1–30 reproduce India's official 2023 critical-mineral list published by the Ministry of Mines. Ranks 31–50 extend the scope to major battery, energy, metals, construction, fertilizer, ceramics, plastic-feedstock, and plastic-filler materials. The extended ranking is a project taxonomy, not an official Government of India priority order.
+The v1.0-alpha.1 ontology contains 223 unique, typed entities derived from material terms actually observed in the India source tables, plus the retained v0.6 targets. It contains 69 elements, 85 mineral species, and 69 other entities spanning ores, rocks, groups, mixtures, varieties, industrial materials, and energy commodities. Stable typed IDs prevent an element, ore, mineral species, and informal group from being silently treated as the same thing.
 
-Each taxonomy row contains:
+Identity is checked against three reference layers where applicable: the IUPAC periodic table for elements, the September 2026 IMA-CNMNC list for approved mineral species and formulae, and USGS Mineral Commodity Summaries 2026 for additional India commodity evidence. The parser recovered 6,048 rows from the IMA document's stated 6,239 valid species (96.94% document-row coverage); this does not mean all IMA species are inserted into KHANAN. Only source-relevant identities are admitted.
 
-- `chemical_names`;
-- `symbols_or_formulae`;
-- `representative_ores_or_forms`;
-- `use_categories`;
-- an official-list flag and source.
+The source-term crosswalk audits 424 distinct terms from MRDS, IBM NMI, IBM MCDR, central critical-mineral auction records, and USGS MCS. It maps 417 (98.35%). Seven nonspecific terms—including `Metal`, `Stone`, and `Associated minerals`—remain explicitly unresolved. Co-occurrence alone is not used to assign a vague term to every other material in its source row.
 
-These arrays identify possible elements/compounds or representative mineral forms; they do not assert assay, grade, recoverability, mineral processing route, or economic value at a site.
+Ranks 1–30 in the legacy target set reproduce India's official 2023 critical-mineral list. Ranks 31–50 are a project extension covering major battery, energy, metal, construction, fertilizer, ceramic, plastic-feedstock, and plastic-filler materials; they are not an official Government of India priority order. Individual rare-earth and platinum-group elements can have their own ontology identities while remaining members of an official aggregate group.
+
+Ontology inclusion never confers model eligibility. The geospatial prediction columns remain limited to the 50 explicitly retained v0.6 targets until each additional entity has enough mapped evidence, a defensible deposit-process hypothesis, and spatial validation. Four legacy energy targets have no direct occurrences in the current nonfuel-focused source set and are retained only for compatibility.
+
+Ontology arrays identify names, possible compounds, or representative forms; they do not assert assay, grade, recoverability, mineral processing route, or economic value at a site. Formulas are supplied only for elements, verified species, or defensible compounds. Otherwise the English names are preserved in arrays as requested.
 
 ## 9. Reconnaissance score
 
@@ -154,7 +154,8 @@ The release checks:
 - exact rolling-weather period, 96 regional source files, 365 daily observations per parameter/native grid point, cached-file checksums, and plausible meteorological ranges;
 - 199 official auction-event rows, all 143 non-superseded tranche-I–VIII offers, all 56 published successful results through tranche VII, exact event and concession counts by tranche, 143 valid offer footprints, document hashes, state-boundary quality flags, and polygon/source-area reconciliation;
 - score range;
-- 30 official critical materials and 50 taxonomy rows;
+- 30 official critical aggregate targets and 50 retained v0.6 modeling targets;
+- 223 unique typed ontology entities, 424 audited source terms, a 98.35% mapped-term rate, seven explicitly unresolved nonspecific terms, and 96.94% row recovery from the referenced IMA list;
 - 45 IBM NMI 2025 mineral tables, unique extract IDs, and UNFC subtotal arithmetic for every inventory row;
 - 36 IBM MCDR source pages, all 14 regional offices, unique event/latest-view IDs, date parsing and financial-year exceptions, blank coordinates, and explicit non-production/non-exhaustiveness flags;
 - explicit record-level flags and source provenance.

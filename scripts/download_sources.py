@@ -74,6 +74,14 @@ STATIC_SOURCES = {
         "https://ibm.gov.in/writereaddata/files/17848872906a6337fae632bChapter__5_Mineral_wise.pdf",
         1_000_000,
     ),
+    "ima_master_list_2026-09.pdf": (
+        "https://cnmnc.units.it/files/editor/IMA_Master_List_(2026-09).pdf",
+        3_000_000,
+    ),
+    "usgs_mcs2026_commodities_data.csv": (
+        "https://www.sciencebase.gov/catalog/file/get/69837e43b66b01367d7ec7c7?f=__disk__d3%2Fac%2F84%2Fd3ac8466552946c5e8caa2c2c6338d9e1aff655d",
+        3_000_000,
+    ),
 }
 
 GEOLOGY_SERVICE = (
