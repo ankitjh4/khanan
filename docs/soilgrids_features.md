@@ -2,13 +2,15 @@
 
 **Feature transformation:** `soilgrids-v2-h3-r6-v0.1`
 
-**Development release:** `v1.0-alpha.6`
+**Introduced:** `v1.0-alpha.6`
+
+**Feature-admission evaluation:** `v1.0-alpha.7`
 
 ## Decision
 
 KHANAN publishes nine SoilGrids 2.0 soil-property predictions for every national H3 resolution-6 cell where the source has coverage. The layer is lawful to redistribute with attribution under CC BY 4.0 and carries explicit prediction-uncertainty bounds. It is context only: no SoilGrids field changes the v0.6 prospectivity scores, classes or ranks.
 
-The layer fills a national soil-context gap without treating a modeled pedological surface as a geochemical assay. A separate leakage-aware spatial ablation is required before any field may enter a material model.
+The layer fills a national soil-context gap without treating a modeled pedological surface as a geochemical assay. Alpha.7 completed the required leakage-aware spatial ablation. No material passed the admission gate, so every SoilGrids field remains excluded from production scoring. See [`soilgrids_spatial_ablation.md`](soilgrids_spatial_ablation.md).
 
 ## Authoritative source and licence
 

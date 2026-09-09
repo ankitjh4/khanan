@@ -17,7 +17,7 @@ KHANAN is intended to generate independent, early-stage hypotheses from lawful p
 
 ## Current status
 
-**Development release: v1.0-alpha.6 · Geospatial feature baseline: v0.8 · Prospectivity model baseline: v0.6 · Active work in progress**
+**Development release: v1.0-alpha.7 · Geospatial feature baseline: v0.8 · Prospectivity model baseline: v0.6 · Active work in progress**
 
 The current release covers India with 88,857 H3 resolution-6 cells, approximately 36 km² each. It includes 781 public-source site records, 1,504 IBM MCDR inspection events, 82 IBM abandoned-mine inventory records, 722 IBM NMI resource-inventory rows, 199 central critical-mineral auction events, 50 strategic modeling targets, and 2,784 validation-gated candidate cells.
 
@@ -30,6 +30,8 @@ Alpha.4 adds an independently redistributable magnetic-context layer from NOAA/N
 Alpha.5 completes that first spatial ablation. It compares paired baseline and baseline-plus-EMAG models under H3 resolution-3 group holdout, a 50 km training purge around held-out positives, fold-only preprocessing, unique-cell positive labels and 500-replicate spatial-group bootstrap intervals. Fourteen materials have enough unique-cell support for evaluation, producing 70 completed folds. None passes the predefined admission gate: nine point estimates improve, five decline, and no positive AUC change has a strictly positive uncertainty interval. Candidate scores, classes and ranks therefore remain byte-for-byte unchanged.
 
 Alpha.6 adds a CC BY 4.0 national soil-context layer from ISRIC SoilGrids 2.0. It samples nine properties at 0–5 cm and 30–60 cm for all 88,857 cells, retaining mean, p05 and p95 predictions from 54 hashed WCS rasters. Minimum national coverage is 99.28%; all prediction intervals are ordered and the maximum centroid-to-source-pixel distance is 1.938 km. Soil values and derived USDA texture classes are present in the national and candidate tables but remain context only. Protected production-ranking columns are unchanged.
+
+Alpha.7 completes the paired spatial ablation of SoilGrids. It reuses the exact deterministic samples, purged H3 resolution-3 folds and baseline predictions from the EMAG2 experiment, then adds 18 property means and 18 p05–p95 uncertainty widths. Fourteen materials produce 70 completed folds. Four point estimates improve and ten decline, but no positive AUC change has a strictly positive uncertainty interval. No material passes the fixed admission gate, so candidate scores, classes and ranks remain unchanged.
 
 Candidate scores are reconnaissance indices. They are not probabilities of discovery, resource estimates, reserves, grades, economic valuations, legal concessions, or drill targets.
 
@@ -54,6 +56,10 @@ The third figure maps surface pH, clay and soil organic carbon. The release also
 ![KHANAN EMAG2 spatial ablation](assets/figures/khanan-emag2-spatial-ablation-v0.1.png)
 
 Every positive point estimate remains statistically inconclusive under the spatial-group bootstrap. Silicon shows the largest supported point improvement (`+0.0352` ROC-AUC), but its interval crosses zero. Zinc degrades by `-0.0561`, with a wholly negative interval. The exact protocol, gates and limitations are documented in [`docs/emag2_spatial_ablation.md`](docs/emag2_spatial_ablation.md).
+
+![KHANAN SoilGrids spatial ablation](assets/figures/khanan-soilgrids-spatial-ablation-v0.1.png)
+
+Four of 14 SoilGrids point estimates improve and ten decline. Aluminium is the strongest adequately supported positive result (`+0.0307` ROC-AUC), but its spatial-group interval crosses zero. Phosphorus and manganese have wholly negative intervals. No material passes the admission gate, and SoilGrids remains excluded from production scoring. The exact protocol is documented in [`docs/soilgrids_spatial_ablation.md`](docs/soilgrids_spatial_ablation.md).
 
 ## Autonomy statement
 
@@ -87,7 +93,7 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 | Terrain | Implemented | Elevation, approximate slope, relief and terrain class. |
 | Weather and climate | Implemented | Daily-derived twelve-month temperature, precipitation, humidity and wind summaries. |
 | Population and demographics | Implemented | Responsible-planning context; not a geological cause of mineralization. |
-| Soil texture and properties | SoilGrids 2.0 context implemented; not admitted to scoring | Nine properties at two depths include mean and 90% prediction-interval endpoints. Global modeled values are not field assays; model admission requires leakage-aware spatial ablation. NGDR soil/geochemical values remain catalog-only. |
+| Soil texture and properties | SoilGrids 2.0 context implemented and ablated; not admitted to scoring | Nine properties at two depths include mean and 90% prediction-interval endpoints. Fourteen materials were tested across 70 purged spatial folds; none passed the uncertainty-aware admission gate. Global modeled values are not field assays. NGDR soil/geochemical values remain catalog-only. |
 | Satellite mineral and alteration signatures | Planned | Multispectral/hyperspectral indices with cloud, season and sensor uncertainty. |
 | Vegetation, crop ecology and phenology | Planned | Possible indirect soil, moisture or geochemical stress signals; must survive independent validation. |
 | Agriculture and aggregate dietary patterns | Research-only/planned | Area-level context only. Never individual-level data and never treated as causal mineral evidence without a defensible scientific mechanism. |
@@ -98,7 +104,7 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 
 ## Release files
 
-The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.6.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.6.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); its availability follows the owner's Drive sharing settings, and it is not the current alpha artifact. The uncompressed nationwide grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
+The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.7.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.7.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); its availability follows the owner's Drive sharing settings, and it is not the current alpha artifact. The uncompressed nationwide grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
 
 | File | Rows | Role |
 |---|---:|---|
@@ -121,7 +127,7 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/material_model_validation.csv` | 50 | Spatial holdout results and reasons a material could not be validated. |
 | `outputs/ngdr_service_inventory.csv` | 11 | Metadata-only inventory of selected NGDR mineral, geochemistry, geophysics, soil, lithology and geology services; no feature values. |
 | `outputs/source_registry.csv` | 30 | Provenance, access/licensing notes, uses and limitations. |
-| `outputs/data_dictionary.csv` | 896 | Field definitions, units and missing-value policies. |
+| `outputs/data_dictionary.csv` | 954 | Field definitions, units and missing-value policies. |
 | `outputs/validation_report.json` | 1 | Cross-dataset counts, join coverage, coordinate checks and guardrails. |
 | `outputs/official_critical_blocks_validation.json` | 1 | Auction count, lineage, provenance and geometry validation. |
 | `outputs/ibm_nmi_2025_extraction_validation.json` | 1 | NMI PDF extraction and UNFC subtotal validation. |
@@ -133,9 +139,12 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/material_emag2_spatial_ablation_folds.csv` | 70 | Fold-level sample counts, separation checks and paired baseline/EMAG metrics. |
 | `outputs/emag2_spatial_ablation_validation.json` | 1 | Ablation protocol, fixed gates, input/output hashes, aggregate results and proof that rankings were unchanged. |
 | `outputs/soilgrids_v2_soil_features_validation.json` | 1 | WCS request URLs, 54 raster hashes and metadata, coverage, ranges, uncertainty checks, join distance and ranking invariants. |
+| `outputs/material_soilgrids_spatial_ablation.csv` | 50 | Material-level paired SoilGrids ablation metrics, uncertainty intervals and feature-admission decisions. |
+| `outputs/material_soilgrids_spatial_ablation_folds.csv` | 70 | Fold-level sample counts, separation checks and paired baseline/SoilGrids metrics. |
+| `outputs/soilgrids_spatial_ablation_validation.json` | 1 | SoilGrids ablation protocol, fixed gates, input/output hashes, aggregate results and proof that rankings were unchanged. |
 | `outputs/nasa_power_rolling_12m_validation.json` | 1 | Weather-source checksums, completeness and range checks. |
 | `outputs/india_mining_dataset_companion.xlsx` | — | Legacy v0.6 thirteen-sheet review workbook. It does not yet include the v1 ontology; the CSVs remain authoritative. |
-| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.6.zip` | — | Portable 57-member development bundle, including the full grid, magnetic and soil features, ablation evidence, ontology, contextual mine layers, service audit, validations, maps and reproducibility scripts. |
+| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.7.zip` | — | Portable 64-member development bundle, including the full grid, magnetic and soil features, paired ablation evidence, ontology, contextual mine layers, service audit, validations, maps and reproducibility scripts. |
 | `outputs/SHA256SUMS.txt` | — | Integrity hashes for published artifacts. |
 
 ## Repository structure
@@ -153,7 +162,8 @@ KHANAN/
 │   ├── emag2_spatial_ablation.md     # paired spatial feature-admission experiment
 │   ├── methodology.md                # scientific method, validation and limitations
 │   ├── ngdr_access_and_integration.md # GSI service audit, policy decision and admission gates
-│   └── soilgrids_features.md          # soil extraction, units, uncertainty and safeguards
+│   ├── soilgrids_features.md          # soil extraction, units, uncertainty and safeguards
+│   └── soilgrids_spatial_ablation.md  # paired soil feature-admission experiment
 ├── outputs/                          # versioned derived data and release artifacts
 ├── scripts/                          # acquisition, extraction, modeling, validation and plotting
 ├── sources/
@@ -196,6 +206,7 @@ KHANAN/
 ### Phase 3 — Soil, surface and ecological intelligence
 
 - **Completed in alpha.6:** acquire CC BY 4.0 SoilGrids 2.0 pH, texture, organic carbon, CEC, nitrogen, bulk-density and coarse-fragment predictions at surface and subsoil depth, preserve 90% prediction intervals, and publish them as non-scoring context.
+- **Completed in alpha.7:** run material-wise paired SoilGrids ablation across the same purged H3 spatial folds as EMAG2, quantify uncertainty with a group bootstrap, and reject production admission because no material clears every gate.
 - Add India-specific measured soil and regolith observations that can independently test the global SoilGrids context.
 - Add land cover, vegetation indices, crop calendars, phenology, moisture stress and thermal anomalies.
 - Add drainage, watersheds, erosion, groundwater and surface-water context.
@@ -274,10 +285,12 @@ python3 -m venv .venv
 .venv/bin/python scripts/build_emag2_features.py
 .venv/bin/python scripts/evaluate_emag2_spatial_ablation.py
 .venv/bin/python scripts/build_soilgrids_features.py
+.venv/bin/python scripts/evaluate_soilgrids_spatial_ablation.py
 .venv/bin/python scripts/plot_khanan_overview.py
 .venv/bin/python scripts/plot_emag2_context.py
 .venv/bin/python scripts/plot_emag2_ablation.py
 .venv/bin/python scripts/plot_soilgrids_context.py
+.venv/bin/python scripts/plot_soilgrids_ablation.py
 .venv/bin/python scripts/build_release.py
 ```
 
@@ -296,7 +309,7 @@ The XLSX companion is generated by `scripts/build_workbook.mjs` using the Codex 
 
 ## Important current limitations
 
-The release is not an exhaustive current mine/lease register. It still lacks deposit-level NMI coordinates, comprehensive state mine registers, controlling grant status, model-admitted soil/geochemistry/geophysics, drill logs, site-level grade/tonnage/depth, alteration mapping, protected-area and forest-clearance layers, water stress, infrastructure, land tenure and social-license constraints. SoilGrids supplies national modeled pedological context but not field geochemical assays, and it has not been tested for production admission. EMAG2v3 supplies moderate-resolution magnetic context, but the alpha.5 spatial ablation admits it to no production material model. NGDR service metadata is audited, but its raw values remain outside the release and scoring pipeline for the reasons documented in [`docs/ngdr_access_and_integration.md`](docs/ngdr_access_and_integration.md).
+The release is not an exhaustive current mine/lease register. It still lacks deposit-level NMI coordinates, comprehensive state mine registers, controlling grant status, model-admitted soil/geochemistry/geophysics, drill logs, site-level grade/tonnage/depth, alteration mapping, protected-area and forest-clearance layers, water stress, infrastructure, land tenure and social-license constraints. SoilGrids supplies national modeled pedological context but not field geochemical assays; the alpha.7 spatial ablation admits it to no production material model. EMAG2v3 supplies moderate-resolution magnetic context, but the alpha.5 spatial ablation also admits it to no production material model. NGDR service metadata is audited, but its raw values remain outside the release and scoring pipeline for the reasons documented in [`docs/ngdr_access_and_integration.md`](docs/ngdr_access_and_integration.md).
 
 One official Biarpalli source table places an Odisha block near 89°E; KHANAN retains and flags the published coordinates. The 143 auction-offer observations reconstruct to 100 distinct published footprints, while the tranche-VIII government release reports 88 cumulative offered blocks. That discrepancy remains explicitly unreconciled.
 

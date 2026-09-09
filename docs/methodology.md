@@ -118,7 +118,15 @@ The baseline combines geology affinity, terrain, rolling climate and fold-safe p
 
 Fourteen of the 50 retained targets have at least 10 unique positive H3 cells and three positive spatial groups. Nine have a positive pooled AUC change and five decline, but no positive change has a bootstrap lower bound above zero. No material passes the fixed support, coverage, AUC, uncertainty and recall gates. The candidate table hash is unchanged and EMAG2 remains excluded from scoring. See [`emag2_spatial_ablation.md`](emag2_spatial_ablation.md) for the complete protocol and interpretation.
 
-## 13. Material ontology and model eligibility
+## 13. SoilGrids feature-admission ablation
+
+Alpha.7 evaluates the incremental SoilGrids feature family with the same paired class-balanced logistic design, deterministic pseudo-absence samples, H3 resolution-3 folds and 50 km training purge used for EMAG2. This exact reuse makes the baseline sample membership and out-of-fold predictions identical across the two feature-family experiments.
+
+The paired extended model adds 18 property means—nine properties at 0–5 cm and 30–60 cm—and 18 p95-minus-p05 interval widths. The interval widths expose source-model uncertainty without treating it as deposit confidence. Complete-soil coverage means all 18 mean properties are present. Missing values, scaling and clipping are learned inside each training fold only.
+
+Fourteen targets produce 70 complete folds. Four have a positive pooled AUC change and ten decline. Aluminium has the strongest adequately supported improvement (`+0.0307`), but its bootstrap interval crosses zero. Phosphorus and manganese have wholly negative intervals. No material passes every fixed support, coverage, AUC, uncertainty and recall gate. Candidate rankings remain unchanged and SoilGrids remains context only. See [`soilgrids_spatial_ablation.md`](soilgrids_spatial_ablation.md) for the full protocol.
+
+## 14. Material ontology and model eligibility
 
 The v1.0-alpha.2 ontology contains 230 unique, typed entities derived from material terms actually observed in the India source tables, plus the retained v0.6 targets. It contains 69 elements, 85 mineral species, and 76 other entities spanning ores, rocks, groups, mixtures, varieties, industrial materials, and energy commodities. Stable typed IDs prevent an element, ore, mineral species, and informal group from being silently treated as the same thing.
 
@@ -132,7 +140,7 @@ Ontology inclusion never confers model eligibility. The geospatial prediction co
 
 Ontology arrays identify names, possible compounds, or representative forms; they do not assert assay, grade, recoverability, mineral processing route, or economic value at a site. Formulas are supplied only for elements, verified species, or defensible compounds. Otherwise the English names are preserved in arrays as requested.
 
-## 14. Reconnaissance score
+## 15. Reconnaissance score
 
 For a material with at least five mapped source records, cell score components are:
 
@@ -156,7 +164,7 @@ and clipped to 0–1. Materials with one to four evidence records receive a low-
 
 The score is a relative reconnaissance index. It is **not a calibrated discovery probability**.
 
-## 15. Spatial validation
+## 16. Spatial validation
 
 Materials with at least 10 mapped India evidence records are evaluated with up to five GroupKFold splits grouped by H3 resolution-3 cells. Each fold trains the same score recipe on geographically separated evidence and compares held-out occurrences with a deterministic sample of grid cells more than 25 km from any catalog evidence.
 
@@ -169,7 +177,7 @@ The comparison cells are not confirmed barren, so these metrics measure catalog-
 
 In v0.1, 15 material models have at least 10 records and spatial validation results. Vanadium's holdout AUC was below the promotion threshold and is therefore not labeled as a candidate even when its raw score is high.
 
-## 16. Candidate promotion rules
+## 17. Candidate promotion rules
 
 A cell is never promoted when it is within 5 km of any mapped source site. For all candidate classes, the top material must have at least 10 source records and the nearest same-material evidence must be more than 25 km and no more than 250 km away.
 
@@ -188,7 +196,7 @@ A cell is never promoted when it is within 5 km of any mapped source site. For a
 
 The national rank sorts passing candidates by validation AUC, then percentile, then score. Neighboring high-ranked H3 cells are usually one regional signal and should be dissolved/clustered before field planning.
 
-## 17. Validation and quality controls
+## 18. Validation and quality controls
 
 The release checks:
 
@@ -211,7 +219,7 @@ The release checks:
 
 Build-time results are written to `outputs/validation_report.json`. A passing report means the pipeline's structural checks passed; it does not validate mineral occurrence in the field.
 
-## 18. What is required for a defensible discovery model
+## 19. What is required for a defensible discovery model
 
 Before using the output to allocate exploration capital, add:
 

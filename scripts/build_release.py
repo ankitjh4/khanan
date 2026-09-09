@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v1.0-alpha.6"
+VERSION = "v1.0-alpha.7"
 
 BUNDLE_MEMBERS = [
     "README.md",
@@ -14,11 +14,13 @@ BUNDLE_MEMBERS = [
     "assets/maps/khanan-emag2-magnetic-context-v0.7.png",
     "assets/maps/khanan-soilgrids-context-v0.8.png",
     "assets/figures/khanan-emag2-spatial-ablation-v0.1.png",
+    "assets/figures/khanan-soilgrids-spatial-ablation-v0.1.png",
     "data/README.md",
     "docs/methodology.md",
     "docs/emag2_spatial_ablation.md",
     "docs/ngdr_access_and_integration.md",
     "docs/soilgrids_features.md",
+    "docs/soilgrids_spatial_ablation.md",
     "outputs/README.md",
     "scripts/plot_khanan_overview.py",
     "scripts/plot_emag2_context.py",
@@ -28,6 +30,8 @@ BUNDLE_MEMBERS = [
     "scripts/evaluate_emag2_spatial_ablation.py",
     "scripts/build_soilgrids_features.py",
     "scripts/plot_soilgrids_context.py",
+    "scripts/evaluate_soilgrids_spatial_ablation.py",
+    "scripts/plot_soilgrids_ablation.py",
     "scripts/build_ibm_abandoned_mines.py",
     "scripts/build_material_ontology.py",
     "config/materials.json",
@@ -63,6 +67,9 @@ BUNDLE_MEMBERS = [
     "outputs/material_emag2_spatial_ablation_folds.csv",
     "outputs/emag2_spatial_ablation_validation.json",
     "outputs/soilgrids_v2_soil_features_validation.json",
+    "outputs/material_soilgrids_spatial_ablation.csv",
+    "outputs/material_soilgrids_spatial_ablation_folds.csv",
+    "outputs/soilgrids_spatial_ablation_validation.json",
     "outputs/nasa_power_rolling_12m_validation.json",
     "outputs/official_critical_blocks_validation.json",
 ]
@@ -98,6 +105,9 @@ HASHED_ARTIFACTS = [
     "material_emag2_spatial_ablation_folds.csv",
     "emag2_spatial_ablation_validation.json",
     "soilgrids_v2_soil_features_validation.json",
+    "material_soilgrids_spatial_ablation.csv",
+    "material_soilgrids_spatial_ablation_folds.csv",
+    "soilgrids_spatial_ablation_validation.json",
     "nasa_power_rolling_12m_validation.json",
     "official_critical_blocks_validation.json",
     f"india_mining_dataset_csv_bundle_{VERSION}.zip",
