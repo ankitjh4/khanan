@@ -416,6 +416,507 @@
         "coordinates": [
           [
             [
+              69.29513055555556,
+              22.240555555555556
+            ],
+            [
+              69.29656666666666,
+              22.24067777777778
+            ],
+            [
+              69.29671944444445,
+              22.240036111111113
+            ],
+            [
+              69.297,
+              22.23946666666667
+            ],
+            [
+              69.29711666666667,
+              22.239050000000002
+            ],
+            [
+              69.29661944444445,
+              22.238111111111113
+            ],
+            [
+              69.295675,
+              22.23736388888889
+            ],
+            [
+              69.29516111111111,
+              22.237255555555556
+            ],
+            [
+              69.2949111111111,
+              22.237619444444444
+            ],
+            [
+              69.29523333333333,
+              22.2389
+            ],
+            [
+              69.29503055555556,
+              22.239344444444445
+            ],
+            [
+              69.29513055555556,
+              22.240555555555556
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-012",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Gujarat",
+        "block_name": "Mevasa Block-1",
+        "block_name_mbs": "Mevasa Block-1 Summary",
+        "mineral_source_ibm": "Bauxite (Aluminous Laterite) and Laterite (minor mineral)",
+        "normalized_material_ids_json": "[\"element:aluminium\",\"ore:bauxite\",\"ore:aluminous-laterite\",\"rock:laterite\"]",
+        "normalized_material_names_json": "[\"Aluminium\",\"Bauxite\",\"Aluminous laterite\",\"Laterite\"]",
+        "chemical_or_english_names_json": "[\"aluminium\",\"Bauxite\",\"Aluminous laterite\",\"Laterite\"]",
+        "formulae_or_symbols_json": "[\"Al\"]",
+        "auction_date_ibm": "2023-07-18",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "5.99",
+        "mbs_area_ha": 5.9933,
+        "exploration_level": "G2",
+        "borehole_count": 2,
+        "drilled_meterage_m": 89.0,
+        "exploration_agency_source": "M. K. Soil Testing Laboratory, Ahmedabad.",
+        "borehole_summary_source": "2 boreholes with cumulative meterage of 89.00 m (40 m and 49 m).",
+        "mineral_source_mbs": "Laterite and aluminous laterite (bauxite), described as cement grade.",
+        "geological_resources_source": "Indicated resource (332): 2,357,197 tonnes aluminous laterite (bauxite) and 2,776,165 tonnes laterite.",
+        "grade_source": "Aluminous laterite (bauxite): 25.75% Al2O3, 37.73% SiO2 and 16.29% Fe2O3; laterite: 16.66% Al2O3, 50.32% SiO2 and 15.22% Fe2O3.",
+        "mineral_zones_source": "Aluminous laterite (bauxite) and laterite.",
+        "dip_strike_source": "Horizontal bedded.",
+        "thickness_source": "Average thickness 18.18 m for aluminous laterite (bauxite) and 19.44 m for laterite.",
+        "accessibility_source": "Bhatiya Railway Station 16.73 km; State Highway 6 at 8.37 km; Porbandar Airport 75.36 km.",
+        "hydrography_source": "Dendritic drainage; seasonal tributaries.",
+        "climate_source": "Mean annual rainfall 2,594 mm; December temperature 10.6-25.2 C; June temperature 29.6-41.7 C.",
+        "topography_source": "Flat terrain; Survey of India toposheet 41 F/08.",
+        "coordinate_method": "source_table_visual_transcription_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[2]",
+        "boundary_point_ids_json": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]",
+        "boundary_vertex_count": 11,
+        "centroid_latitude": 22.23907401,
+        "centroid_longitude": 69.29591995,
+        "computed_geodesic_area_ha": 6.006522,
+        "computed_to_mbs_area_difference_pct": 0.220618,
+        "ibm_to_mbs_area_difference_pct": 0.055061,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated; source publishes UTM and geographic coordinate columns",
+        "selected_mbs_file_id": "8880",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=8880_Mevasa Block-1.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "785c8ebab24f24cdecb29a845d9f1f37bc8dea7157bbeae69b8a9c1dd5a28831",
+        "selected_mbs_pdf_bytes": 627221,
+        "selected_mbs_pdf_page_count": 4,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              69.30156111111111,
+              22.252927777777778
+            ],
+            [
+              69.30220277777778,
+              22.253605555555556
+            ],
+            [
+              69.30409722222223,
+              22.254125
+            ],
+            [
+              69.30505833333333,
+              22.254141666666666
+            ],
+            [
+              69.30518333333333,
+              22.254025
+            ],
+            [
+              69.30515,
+              22.25191111111111
+            ],
+            [
+              69.30464444444443,
+              22.251722222222224
+            ],
+            [
+              69.30461666666666,
+              22.25265277777778
+            ],
+            [
+              69.30380277777778,
+              22.252444444444443
+            ],
+            [
+              69.30362222222222,
+              22.252480555555554
+            ],
+            [
+              69.30347222222223,
+              22.252680555555557
+            ],
+            [
+              69.30293333333333,
+              22.252577777777777
+            ],
+            [
+              69.302875,
+              22.252619444444445
+            ],
+            [
+              69.30261944444445,
+              22.252605555555554
+            ],
+            [
+              69.30205555555555,
+              22.252594444444444
+            ],
+            [
+              69.30156111111111,
+              22.252927777777778
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-013",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Gujarat",
+        "block_name": "Mevasa Block",
+        "block_name_mbs": "Mevasa Block Summary",
+        "mineral_source_ibm": "Bauxite, and Marl",
+        "normalized_material_ids_json": "[\"element:aluminium\",\"ore:bauxite\",\"rock:marl\"]",
+        "normalized_material_names_json": "[\"Aluminium\",\"Bauxite\",\"Marl\"]",
+        "chemical_or_english_names_json": "[\"aluminium\",\"Bauxite\",\"Marl\"]",
+        "formulae_or_symbols_json": "[\"Al\"]",
+        "auction_date_ibm": "2023-07-18",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "5.53",
+        "mbs_area_ha": 5.532,
+        "exploration_level": "G2",
+        "borehole_count": 5,
+        "drilled_meterage_m": 134.0,
+        "exploration_agency_source": "Vinayak Engimech Pvt. Ltd.",
+        "borehole_summary_source": "5 boreholes with cumulative meterage of 134.00 m.",
+        "mineral_source_mbs": "Bauxite and marl.",
+        "geological_resources_source": "Indicated resource (332): 217,740.12 tonnes bauxite; 1,692,208.95 tonnes aluminous laterite (major mineral); 88,575.98 tonnes marl.",
+        "grade_source": "Bauxite: 44.64% Al2O3 and 6.15% SiO2; aluminous laterite: 39.10% Al2O3 and 16.57% SiO2; marl: 30.50% CaO and 2.10% MgO.",
+        "mineral_zones_source": "Bauxite and marl.",
+        "dip_strike_source": "Not stated in the MBS.",
+        "thickness_source": "Average thickness 1.20 m bauxite, 12.07 m aluminous laterite and 0.49 m marl.",
+        "accessibility_source": "Bhatiya Railway Station approximately 22 km; Gujarat State Highways 29 and 6; Jamnagar Airport approximately 92 km.",
+        "hydrography_source": "Dendritic drainage; seasonal tributaries.",
+        "climate_source": "Mean annual rainfall 580.60 mm; temperature 15-42 C.",
+        "topography_source": "Undulatory terrain with small hillocks; Survey of India toposheets 41F/6 and 41F/7.",
+        "coordinate_method": "source_table_visual_transcription_dms_wgs84",
+        "coordinate_source_pdf_pages_json": "[4]",
+        "boundary_point_ids_json": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+        "boundary_vertex_count": 15,
+        "centroid_latitude": 22.25317289,
+        "centroid_longitude": 69.30375751,
+        "computed_geodesic_area_ha": 5.536095,
+        "computed_to_mbs_area_difference_pct": 0.074027,
+        "ibm_to_mbs_area_difference_pct": 0.036153,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "WGS 84",
+        "selected_mbs_file_id": "8879",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=8879_Mevasa Block.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "5bf26dff88d005fb55f0eccfc97059ff3dbb73a99a07475cd339b403c7762fc4",
+        "selected_mbs_pdf_bytes": 510136,
+        "selected_mbs_pdf_page_count": 4,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              70.52486666666667,
+              20.94687777777778
+            ],
+            [
+              70.52515833333334,
+              20.945355555555555
+            ],
+            [
+              70.52550833333333,
+              20.944097222222222
+            ],
+            [
+              70.52603055555555,
+              20.944419444444446
+            ],
+            [
+              70.52615,
+              20.944491666666668
+            ],
+            [
+              70.52661944444445,
+              20.94452777777778
+            ],
+            [
+              70.52755833333333,
+              20.944872222222223
+            ],
+            [
+              70.52750833333333,
+              20.94526388888889
+            ],
+            [
+              70.52857777777778,
+              20.945805555555555
+            ],
+            [
+              70.52854722222222,
+              20.945933333333333
+            ],
+            [
+              70.5291111111111,
+              20.94609722222222
+            ],
+            [
+              70.529725,
+              20.945883333333335
+            ],
+            [
+              70.53043333333333,
+              20.945819444444446
+            ],
+            [
+              70.53074166666667,
+              20.94576388888889
+            ],
+            [
+              70.53129722222222,
+              20.945758333333334
+            ],
+            [
+              70.53202222222222,
+              20.945758333333334
+            ],
+            [
+              70.53248333333333,
+              20.947352777777777
+            ],
+            [
+              70.53294722222222,
+              20.94935277777778
+            ],
+            [
+              70.53315555555555,
+              20.950238888888887
+            ],
+            [
+              70.53132222222222,
+              20.950222222222223
+            ],
+            [
+              70.5312611111111,
+              20.948983333333334
+            ],
+            [
+              70.53125833333333,
+              20.948333333333334
+            ],
+            [
+              70.53165277777778,
+              20.947033333333334
+            ],
+            [
+              70.5295,
+              20.946838888888887
+            ],
+            [
+              70.5293638888889,
+              20.94812222222222
+            ],
+            [
+              70.52928888888889,
+              20.948383333333332
+            ],
+            [
+              70.52927777777778,
+              20.94878611111111
+            ],
+            [
+              70.52921666666667,
+              20.948847222222224
+            ],
+            [
+              70.52881944444444,
+              20.94922777777778
+            ],
+            [
+              70.52844722222223,
+              20.949791666666666
+            ],
+            [
+              70.52840277777777,
+              20.94986111111111
+            ],
+            [
+              70.52830277777778,
+              20.950430555555556
+            ],
+            [
+              70.52714444444445,
+              20.950444444444443
+            ],
+            [
+              70.52694444444444,
+              20.950680555555554
+            ],
+            [
+              70.52601666666666,
+              20.950594444444445
+            ],
+            [
+              70.52580833333333,
+              20.95053611111111
+            ],
+            [
+              70.5258,
+              20.949461111111113
+            ],
+            [
+              70.52609166666666,
+              20.949458333333332
+            ],
+            [
+              70.52612222222223,
+              20.949213888888888
+            ],
+            [
+              70.52633055555556,
+              20.948663888888888
+            ],
+            [
+              70.52625,
+              20.94863888888889
+            ],
+            [
+              70.52725,
+              20.947544444444446
+            ],
+            [
+              70.52689444444444,
+              20.947169444444445
+            ],
+            [
+              70.5256888888889,
+              20.946952777777778
+            ],
+            [
+              70.52524166666666,
+              20.946919444444443
+            ],
+            [
+              70.52498055555556,
+              20.9469
+            ],
+            [
+              70.52486666666667,
+              20.94687777777778
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-014",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Gujarat",
+        "block_name": "Kukaras block (Private)",
+        "block_name_mbs": "Kukaras Block Summary",
+        "mineral_source_ibm": "Limestone and Marl",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\",\"rock:marl\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\",\"Marl\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\",\"Marl\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2023-07-18",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "29.17",
+        "mbs_area_ha": 29.1681,
+        "exploration_level": "G2",
+        "borehole_count": 7,
+        "drilled_meterage_m": 488.0,
+        "exploration_agency_source": "Vinayak Engimech Pvt. Ltd.",
+        "borehole_summary_source": "7 boreholes with cumulative meterage of 488.00 m.",
+        "mineral_source_mbs": "Limestone and marl.",
+        "geological_resources_source": "Indicated resource (332): 7,138,102.29 tonnes cement-grade limestone, 1,868,408.99 tonnes limestone and 1,164,058.58 tonnes marl.",
+        "grade_source": "Cement-grade limestone: 44.74% CaO and 0.53% MgO; limestone: 37.86% CaO and 1.13% MgO; marl: 30.34% CaO and 1.00% MgO.",
+        "mineral_zones_source": "Limestone and marl.",
+        "dip_strike_source": "Not stated in the MBS.",
+        "thickness_source": "Average thickness 9.15 m cement-grade limestone, 2.72 m limestone and 1.49 m marl.",
+        "accessibility_source": "Veraval Junction Railway Station; NH-8D; Diu Airport; Veraval (Mangrol) seaport.",
+        "hydrography_source": "Sub-dendritic drainage; seasonal tributaries.",
+        "climate_source": "Mean annual rainfall 1,135.75 mm; December temperature 11-28 C; June temperature 28-42 C.",
+        "topography_source": "Flat terrain with small undulations; Survey of India toposheets 41L/9 and 41L/10.",
+        "coordinate_method": "source_table_visual_transcription_dms_wgs84",
+        "coordinate_source_pdf_pages_json": "[3]",
+        "boundary_point_ids_json": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]",
+        "boundary_vertex_count": 46,
+        "centroid_latitude": 20.9475575,
+        "centroid_longitude": 70.52859673,
+        "computed_geodesic_area_ha": 29.329768,
+        "computed_to_mbs_area_difference_pct": 0.554262,
+        "ibm_to_mbs_area_difference_pct": 0.006514,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "WGS 84",
+        "selected_mbs_file_id": "8883",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=8883_Kukaras Block.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "39c652b74aa41a3803e15396028ae7582f2a69b0bc55053fe43d840d7aad30cb",
+        "selected_mbs_pdf_bytes": 540793,
+        "selected_mbs_pdf_page_count": 4,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
               76.64058916388889,
               15.026973897222224
             ],
@@ -480,7 +981,7 @@
         "hydrography_source": "Dendritic drainage; Tungabhadra River and Narihalla stream.",
         "climate_source": "Mean annual rainfall 40-80 cm; December temperature 21-26 C; June temperature 24-29 C.",
         "topography_source": "Undulating, hilly terrain.",
-        "coordinate_method": "source_table_visual_transcription_dms_wgs84",
+        "coordinate_method": "source_table_visual_transcription_geographic_dms_encoded_epsg4326",
         "coordinate_source_pdf_pages_json": "[1]",
         "boundary_point_ids_json": "[1, 2, 3, 4, 5, 6, 7]",
         "boundary_vertex_count": 7,
@@ -492,7 +993,7 @@
         "polygon_valid": true,
         "centroid_in_source_state": true,
         "footprint_in_source_state_2011_boundary": true,
-        "geometry_quality_flags_json": "[]",
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
         "geometry_admission_status": "admitted_authoritative_source_footprint",
         "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
         "geometry_crs": "EPSG:4326",
@@ -595,7 +1096,7 @@
         "hydrography_source": "Dendritic drainage; Tungabhadra River and Narihalla stream.",
         "climate_source": "Mean annual rainfall 40-80 cm; December temperature 21-26 C; June temperature 24-29 C.",
         "topography_source": "Undulating, hilly terrain.",
-        "coordinate_method": "source_table_visual_transcription_dms_wgs84",
+        "coordinate_method": "source_table_visual_transcription_geographic_dms_encoded_epsg4326",
         "coordinate_source_pdf_pages_json": "[1]",
         "boundary_point_ids_json": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]",
         "boundary_vertex_count": 11,
@@ -607,7 +1108,7 @@
         "polygon_valid": true,
         "centroid_in_source_state": true,
         "footprint_in_source_state_2011_boundary": true,
-        "geometry_quality_flags_json": "[]",
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
         "geometry_admission_status": "admitted_authoritative_source_footprint",
         "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
         "geometry_crs": "EPSG:4326",
@@ -686,7 +1187,7 @@
         "hydrography_source": "Dendritic drainage; Chikka Tore stream flows northwest through the block toward the Suvarna Mukhi River.",
         "climate_source": "Mean annual rainfall 55-65 cm; December temperature 26-28 C; June temperature 35-38 C.",
         "topography_source": "Undulating, hilly terrain.",
-        "coordinate_method": "source_table_visual_transcription_dms_wgs84",
+        "coordinate_method": "source_table_visual_transcription_geographic_dms_encoded_epsg4326",
         "coordinate_source_pdf_pages_json": "[1]",
         "boundary_point_ids_json": "[\"A\", \"B\", \"C\", \"D\", \"E\"]",
         "boundary_vertex_count": 5,
@@ -698,7 +1199,7 @@
         "polygon_valid": true,
         "centroid_in_source_state": true,
         "footprint_in_source_state_2011_boundary": true,
-        "geometry_quality_flags_json": "[]",
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
         "geometry_admission_status": "admitted_authoritative_source_footprint",
         "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
         "geometry_crs": "EPSG:4326",
@@ -773,7 +1274,7 @@
         "hydrography_source": "Plateau with sparse first-order drainage; no river or stream is listed.",
         "climate_source": "Mean annual rainfall 3,635 mm; December temperature 21 C; June temperature 42 C.",
         "topography_source": "Undulating plateau.",
-        "coordinate_method": "source_table_visual_transcription_dms_wgs84",
+        "coordinate_method": "source_table_visual_transcription_geographic_dms_encoded_epsg4326",
         "coordinate_source_pdf_pages_json": "[1]",
         "boundary_point_ids_json": "[\"A\", \"B\", \"C\", \"D\"]",
         "boundary_vertex_count": 4,
@@ -785,7 +1286,7 @@
         "polygon_valid": true,
         "centroid_in_source_state": true,
         "footprint_in_source_state_2011_boundary": true,
-        "geometry_quality_flags_json": "[]",
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
         "geometry_admission_status": "admitted_authoritative_source_footprint",
         "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
         "geometry_crs": "EPSG:4326",

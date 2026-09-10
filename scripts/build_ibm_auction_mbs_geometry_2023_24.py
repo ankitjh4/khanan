@@ -67,6 +67,12 @@ CURATED_MATCHES = {
     "IBM-IMYB2024-AUCTION-009": r"kareli\s+chandi",
     "IBM-IMYB2024-AUCTION-010": r"giroud\s+uprani",
     "IBM-IMYB2024-AUCTION-011": r"tumrisur[\s-]+garda\s*(?:ii|2)",
+    "IBM-IMYB2024-AUCTION-012": r"^mevasa block 1 summary$",
+    "IBM-IMYB2024-AUCTION-013": r"^mevasa block summary$",
+    "IBM-IMYB2024-AUCTION-014": r"^kukaras block summary$",
+    "IBM-IMYB2024-AUCTION-015": r"^nandana block summary$",
+    "IBM-IMYB2024-AUCTION-016": r"^kodidara block summary$",
+    "IBM-IMYB2024-AUCTION-017": r"^virpur lusari block summary$",
     "IBM-IMYB2024-AUCTION-018": r"\bchiropat\b.*\bbauxite\b",
     "IBM-IMYB2024-AUCTION-019": r"\bbaraiburu\b.*\btatiba\b.*\biron\b.*\bmanganese\b",
     "IBM-IMYB2024-AUCTION-020": r"\bmeralgara\b.*\bbarabaljori\b.*\biron\b",
@@ -142,6 +148,84 @@ DMS_GEOMETRIES = {
         (dms(80, 53, 40.29), dms(20, 11, 19.00)),
         (dms(80, 53, 40.29), dms(20, 13, 0.326)),
         (dms(80, 53, 13.74), dms(20, 13, 0.326)),
+    ],
+    "IBM-IMYB2024-AUCTION-012": [
+        (dms(69, 17, 42.47), dms(22, 14, 26.00)),
+        (dms(69, 17, 47.64), dms(22, 14, 26.44)),
+        (dms(69, 17, 48.19), dms(22, 14, 24.13)),
+        (dms(69, 17, 49.20), dms(22, 14, 22.08)),
+        (dms(69, 17, 49.62), dms(22, 14, 20.58)),
+        (dms(69, 17, 47.83), dms(22, 14, 17.20)),
+        (dms(69, 17, 44.43), dms(22, 14, 14.51)),
+        (dms(69, 17, 42.58), dms(22, 14, 14.12)),
+        (dms(69, 17, 41.68), dms(22, 14, 15.43)),
+        (dms(69, 17, 42.84), dms(22, 14, 20.04)),
+        (dms(69, 17, 42.11), dms(22, 14, 21.64)),
+    ],
+    "IBM-IMYB2024-AUCTION-013": [
+        (dms(69, 18, 5.62), dms(22, 15, 10.54)),
+        (dms(69, 18, 7.93), dms(22, 15, 12.98)),
+        (dms(69, 18, 14.75), dms(22, 15, 14.85)),
+        (dms(69, 18, 18.21), dms(22, 15, 14.91)),
+        (dms(69, 18, 18.66), dms(22, 15, 14.49)),
+        (dms(69, 18, 18.54), dms(22, 15, 6.88)),
+        (dms(69, 18, 16.72), dms(22, 15, 6.20)),
+        (dms(69, 18, 16.62), dms(22, 15, 9.55)),
+        (dms(69, 18, 13.69), dms(22, 15, 8.80)),
+        (dms(69, 18, 13.04), dms(22, 15, 8.93)),
+        (dms(69, 18, 12.50), dms(22, 15, 9.65)),
+        (dms(69, 18, 10.56), dms(22, 15, 9.28)),
+        (dms(69, 18, 10.35), dms(22, 15, 9.43)),
+        (dms(69, 18, 9.43), dms(22, 15, 9.38)),
+        (dms(69, 18, 7.40), dms(22, 15, 9.34)),
+    ],
+    "IBM-IMYB2024-AUCTION-014": [
+        (dms(70, 31, 29.52), dms(20, 56, 48.76)),
+        (dms(70, 31, 30.57), dms(20, 56, 43.28)),
+        (dms(70, 31, 31.83), dms(20, 56, 38.75)),
+        (dms(70, 31, 33.71), dms(20, 56, 39.91)),
+        (dms(70, 31, 34.14), dms(20, 56, 40.17)),
+        (dms(70, 31, 35.83), dms(20, 56, 40.30)),
+        (dms(70, 31, 39.21), dms(20, 56, 41.54)),
+        (dms(70, 31, 39.03), dms(20, 56, 42.95)),
+        (dms(70, 31, 42.88), dms(20, 56, 44.90)),
+        (dms(70, 31, 42.77), dms(20, 56, 45.36)),
+        (dms(70, 31, 44.80), dms(20, 56, 45.95)),
+        (dms(70, 31, 47.01), dms(20, 56, 45.18)),
+        (dms(70, 31, 49.56), dms(20, 56, 44.95)),
+        (dms(70, 31, 50.67), dms(20, 56, 44.75)),
+        (dms(70, 31, 52.67), dms(20, 56, 44.73)),
+        (dms(70, 31, 55.28), dms(20, 56, 44.73)),
+        (dms(70, 31, 56.94), dms(20, 56, 50.47)),
+        (dms(70, 31, 58.61), dms(20, 56, 57.67)),
+        (dms(70, 31, 59.36), dms(20, 57, 0.86)),
+        (dms(70, 31, 52.76), dms(20, 57, 0.80)),
+        (dms(70, 31, 52.54), dms(20, 56, 56.34)),
+        (dms(70, 31, 52.53), dms(20, 56, 54.00)),
+        (dms(70, 31, 53.95), dms(20, 56, 49.32)),
+        (dms(70, 31, 46.20), dms(20, 56, 48.62)),
+        (dms(70, 31, 45.71), dms(20, 56, 53.24)),
+        (dms(70, 31, 45.44), dms(20, 56, 54.18)),
+        (dms(70, 31, 45.40), dms(20, 56, 55.63)),
+        (dms(70, 31, 45.18), dms(20, 56, 55.85)),
+        (dms(70, 31, 43.75), dms(20, 56, 57.22)),
+        (dms(70, 31, 42.41), dms(20, 56, 59.25)),
+        (dms(70, 31, 42.25), dms(20, 56, 59.50)),
+        (dms(70, 31, 41.89), dms(20, 57, 1.55)),
+        (dms(70, 31, 37.72), dms(20, 57, 1.60)),
+        (dms(70, 31, 37.00), dms(20, 57, 2.45)),
+        (dms(70, 31, 33.66), dms(20, 57, 2.14)),
+        (dms(70, 31, 32.91), dms(20, 57, 1.93)),
+        (dms(70, 31, 32.88), dms(20, 56, 58.06)),
+        (dms(70, 31, 33.93), dms(20, 56, 58.05)),
+        (dms(70, 31, 34.04), dms(20, 56, 57.17)),
+        (dms(70, 31, 34.79), dms(20, 56, 55.19)),
+        (dms(70, 31, 34.50), dms(20, 56, 55.10)),
+        (dms(70, 31, 38.10), dms(20, 56, 51.16)),
+        (dms(70, 31, 36.82), dms(20, 56, 49.81)),
+        (dms(70, 31, 32.48), dms(20, 56, 49.03)),
+        (dms(70, 31, 30.87), dms(20, 56, 48.91)),
+        (dms(70, 31, 29.93), dms(20, 56, 48.84)),
     ],
     "IBM-IMYB2024-AUCTION-021": [
         (dms(76, 38, 26.12099), dms(15, 1, 37.10603)),
@@ -243,6 +327,12 @@ MBS_AREA_HA = {
     "IBM-IMYB2024-AUCTION-009": 500.0,
     "IBM-IMYB2024-AUCTION-010": 2400.0,
     "IBM-IMYB2024-AUCTION-011": 240.0,
+    "IBM-IMYB2024-AUCTION-012": 5.9933,
+    "IBM-IMYB2024-AUCTION-013": 5.5320,
+    "IBM-IMYB2024-AUCTION-014": 29.1681,
+    "IBM-IMYB2024-AUCTION-015": 5.3152,
+    "IBM-IMYB2024-AUCTION-016": 41.3186,
+    "IBM-IMYB2024-AUCTION-017": 6.2265,
     "IBM-IMYB2024-AUCTION-018": 63.0,
     "IBM-IMYB2024-AUCTION-019": 258.98968,
     "IBM-IMYB2024-AUCTION-020": 115.220,
@@ -269,6 +359,12 @@ PROFILE_NUMBERS = {
     "IBM-IMYB2024-AUCTION-009": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
     "IBM-IMYB2024-AUCTION-010": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
     "IBM-IMYB2024-AUCTION-011": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
+    "IBM-IMYB2024-AUCTION-012": {"exploration_level": "G2", "borehole_count": 2, "drilled_meterage_m": 89.0},
+    "IBM-IMYB2024-AUCTION-013": {"exploration_level": "G2", "borehole_count": 5, "drilled_meterage_m": 134.0},
+    "IBM-IMYB2024-AUCTION-014": {"exploration_level": "G2", "borehole_count": 7, "drilled_meterage_m": 488.0},
+    "IBM-IMYB2024-AUCTION-015": {"exploration_level": "G2", "borehole_count": 3, "drilled_meterage_m": 71.0},
+    "IBM-IMYB2024-AUCTION-016": {"exploration_level": "G2", "borehole_count": 11, "drilled_meterage_m": 352.5},
+    "IBM-IMYB2024-AUCTION-017": {"exploration_level": "G2", "borehole_count": 4, "drilled_meterage_m": 131.0},
     "IBM-IMYB2024-AUCTION-018": {"exploration_level": "G2", "borehole_count": 20, "drilled_meterage_m": 15.25},
     "IBM-IMYB2024-AUCTION-019": {"exploration_level": "G2; G4", "borehole_count": 22, "drilled_meterage_m": 2488.7},
     "IBM-IMYB2024-AUCTION-020": {"exploration_level": "G1; G4", "borehole_count": 378, "drilled_meterage_m": 21102.75},
@@ -316,6 +412,90 @@ PROFILE_TEXT = {
         "geological_resources_source": "Nil.",
         "grade_source": "0.55-0.73 ppm Au in trench samples, with isolated high values of 1.2 ppm Au.",
         "climate_source": "Mean annual rainfall around 140 cm; December-January temperature down to 10 C; May-June temperature up to 45 C.",
+    },
+    "IBM-IMYB2024-AUCTION-012": {
+        "exploration_agency_source": "M. K. Soil Testing Laboratory, Ahmedabad.",
+        "borehole_summary_source": "2 boreholes with cumulative meterage of 89.00 m (40 m and 49 m).",
+        "mineral_source_mbs": "Laterite and aluminous laterite (bauxite), described as cement grade.",
+        "geological_resources_source": "Indicated resource (332): 2,357,197 tonnes aluminous laterite (bauxite) and 2,776,165 tonnes laterite.",
+        "grade_source": "Aluminous laterite (bauxite): 25.75% Al2O3, 37.73% SiO2 and 16.29% Fe2O3; laterite: 16.66% Al2O3, 50.32% SiO2 and 15.22% Fe2O3.",
+        "mineral_zones_source": "Aluminous laterite (bauxite) and laterite.",
+        "dip_strike_source": "Horizontal bedded.",
+        "thickness_source": "Average thickness 18.18 m for aluminous laterite (bauxite) and 19.44 m for laterite.",
+        "accessibility_source": "Bhatiya Railway Station 16.73 km; State Highway 6 at 8.37 km; Porbandar Airport 75.36 km.",
+        "hydrography_source": "Dendritic drainage; seasonal tributaries.",
+        "climate_source": "Mean annual rainfall 2,594 mm; December temperature 10.6-25.2 C; June temperature 29.6-41.7 C.",
+        "topography_source": "Flat terrain; Survey of India toposheet 41 F/08.",
+    },
+    "IBM-IMYB2024-AUCTION-013": {
+        "exploration_agency_source": "Vinayak Engimech Pvt. Ltd.",
+        "borehole_summary_source": "5 boreholes with cumulative meterage of 134.00 m.",
+        "mineral_source_mbs": "Bauxite and marl.",
+        "geological_resources_source": "Indicated resource (332): 217,740.12 tonnes bauxite; 1,692,208.95 tonnes aluminous laterite (major mineral); 88,575.98 tonnes marl.",
+        "grade_source": "Bauxite: 44.64% Al2O3 and 6.15% SiO2; aluminous laterite: 39.10% Al2O3 and 16.57% SiO2; marl: 30.50% CaO and 2.10% MgO.",
+        "mineral_zones_source": "Bauxite and marl.",
+        "dip_strike_source": "Not stated in the MBS.",
+        "thickness_source": "Average thickness 1.20 m bauxite, 12.07 m aluminous laterite and 0.49 m marl.",
+        "accessibility_source": "Bhatiya Railway Station approximately 22 km; Gujarat State Highways 29 and 6; Jamnagar Airport approximately 92 km.",
+        "hydrography_source": "Dendritic drainage; seasonal tributaries.",
+        "climate_source": "Mean annual rainfall 580.60 mm; temperature 15-42 C.",
+        "topography_source": "Undulatory terrain with small hillocks; Survey of India toposheets 41F/6 and 41F/7.",
+    },
+    "IBM-IMYB2024-AUCTION-014": {
+        "exploration_agency_source": "Vinayak Engimech Pvt. Ltd.",
+        "borehole_summary_source": "7 boreholes with cumulative meterage of 488.00 m.",
+        "mineral_source_mbs": "Limestone and marl.",
+        "geological_resources_source": "Indicated resource (332): 7,138,102.29 tonnes cement-grade limestone, 1,868,408.99 tonnes limestone and 1,164,058.58 tonnes marl.",
+        "grade_source": "Cement-grade limestone: 44.74% CaO and 0.53% MgO; limestone: 37.86% CaO and 1.13% MgO; marl: 30.34% CaO and 1.00% MgO.",
+        "mineral_zones_source": "Limestone and marl.",
+        "dip_strike_source": "Not stated in the MBS.",
+        "thickness_source": "Average thickness 9.15 m cement-grade limestone, 2.72 m limestone and 1.49 m marl.",
+        "accessibility_source": "Veraval Junction Railway Station; NH-8D; Diu Airport; Veraval (Mangrol) seaport.",
+        "hydrography_source": "Sub-dendritic drainage; seasonal tributaries.",
+        "climate_source": "Mean annual rainfall 1,135.75 mm; December temperature 11-28 C; June temperature 28-42 C.",
+        "topography_source": "Flat terrain with small undulations; Survey of India toposheets 41L/9 and 41L/10.",
+    },
+    "IBM-IMYB2024-AUCTION-015": {
+        "exploration_agency_source": "Vinayak Engimech Pvt. Ltd.",
+        "borehole_summary_source": "3 boreholes with cumulative meterage of 71.00 m.",
+        "mineral_source_mbs": "Bauxite, limestone and marl.",
+        "geological_resources_source": "Indicated resource (332): 145,744.93 tonnes bauxite; 1,346,321.34 tonnes aluminous laterite; 100,403.06 tonnes cement-grade limestone; 16,196.50 tonnes limestone; 69,015.48 tonnes marl.",
+        "grade_source": "Bauxite: 45.29% Al2O3 and 6.71% SiO2; aluminous laterite: 38.02% Al2O3 and 18.41% SiO2; cement-grade limestone: 46.43% CaO and 0.30% MgO; limestone: 35.00% CaO and 0.32% MgO; marl: 32.38% CaO and 0.33% MgO.",
+        "mineral_zones_source": "Bauxite, limestone and marl.",
+        "dip_strike_source": "Not stated in the MBS.",
+        "thickness_source": "Average thickness 1.32 m bauxite, 9.42 with no unit printed for aluminous laterite, 1.60 m cement-grade limestone, 0.58 m limestone and 0.93 m marl.",
+        "accessibility_source": "Bhatiya Railway Station approximately 8 km; Gujarat State Highway 29; Porbandar Airport approximately 86 km.",
+        "hydrography_source": "Dendritic drainage; seasonal tributaries.",
+        "climate_source": "Mean annual rainfall 580.60 mm; temperature 15-42 C.",
+        "topography_source": "Undulatory terrain with small hillocks; Survey of India toposheet 41F/8.",
+    },
+    "IBM-IMYB2024-AUCTION-016": {
+        "exploration_agency_source": "Vinayak Engimech Pvt. Ltd.",
+        "borehole_summary_source": "11 boreholes with cumulative meterage of 352.50 m.",
+        "mineral_source_mbs": "Limestone and marl.",
+        "geological_resources_source": "Indicated resource (332): 3,364,189.08 tonnes cement-grade limestone, 1,498,679.45 tonnes limestone and 883,236.77 tonnes marl.",
+        "grade_source": "Cement-grade limestone: 45.47% CaO and 0.26% MgO; limestone: 37.50% CaO and 0.39% MgO; marl: 29.63% CaO and 0.46% MgO.",
+        "mineral_zones_source": "Limestone and marl.",
+        "dip_strike_source": "Not stated in the MBS.",
+        "thickness_source": "Average thickness 3.04 m cement-grade limestone, 1.42 m limestone and 0.82 m marl.",
+        "accessibility_source": "Veraval Junction Railway Station; NH-8D; Diu Airport; Veraval (Mangrol) seaport.",
+        "hydrography_source": "Sub-dendritic drainage; seasonal tributaries.",
+        "climate_source": "Mean annual rainfall 1,135.75 mm; December temperature 11-28 C; June temperature 28-42 C.",
+        "topography_source": "Flat terrain with small undulations; Survey of India toposheets 41L/9 and 41L/10.",
+    },
+    "IBM-IMYB2024-AUCTION-017": {
+        "exploration_agency_source": "Vinayak Engimech Pvt. Ltd.",
+        "borehole_summary_source": "4 boreholes with cumulative meterage of 131.00 m.",
+        "mineral_source_mbs": "Bauxite (aluminous laterite), limestone and marl.",
+        "geological_resources_source": "Indicated resource (332): 750,960.61 tonnes aluminous laterite, 108,236.81 tonnes cement-grade limestone, 35,340.09 tonnes limestone and 17,549.12 tonnes marl.",
+        "grade_source": "Aluminous laterite: 38.03% Al2O3 and 27.15% SiO2; cement-grade limestone: 42.96% CaO and 1.13% MgO; limestone: 37.78% CaO and 0.74% MgO; marl: 28.34% CaO and 1.91% MgO.",
+        "mineral_zones_source": "Bauxite (aluminous laterite), limestone and marl.",
+        "dip_strike_source": "Not stated in the MBS.",
+        "thickness_source": "Average thickness 4.63 m aluminous laterite, 0.65 m cement-grade limestone, 0.27 m limestone and 0.22 m marl.",
+        "accessibility_source": "Bhatiya Railway Station approximately 22 km; Gujarat State Highway 29; Jamnagar Airport approximately 92 km.",
+        "hydrography_source": "Dendritic drainage; seasonal tributaries.",
+        "climate_source": "Mean annual rainfall 580.60 mm; temperature 15-42 C.",
+        "topography_source": "Undulatory terrain with small hillocks; Survey of India toposheets 42J/7 and 42J/8.",
     },
     "IBM-IMYB2024-AUCTION-018": {
         "exploration_agency_source": "Directorate of Geology, Department of Mines and Geology, Jharkhand.",
@@ -488,6 +668,16 @@ COORDINATE_REVIEW = {
     "IBM-IMYB2024-AUCTION-009": ("ordered_boundary_vertices_with_source_error", [1], ["malformed_latitude_seconds_points_F_G"]),
     "IBM-IMYB2024-AUCTION-010": ("ordered_boundary_vertices", [1], []),
     "IBM-IMYB2024-AUCTION-011": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-012": ("ordered_boundary_vertices", [2], []),
+    "IBM-IMYB2024-AUCTION-013": ("ordered_boundary_vertices", [4], []),
+    "IBM-IMYB2024-AUCTION-014": ("ordered_boundary_vertices", [3], []),
+    "IBM-IMYB2024-AUCTION-015": (
+        "ordered_boundary_vertices_with_source_error",
+        [4, 5],
+        ["longitude_outlier_bp5", "ibm_mbs_area_conflict"],
+    ),
+    "IBM-IMYB2024-AUCTION-016": ("ordered_boundary_vertices", [3], ["ibm_mbs_area_conflict"]),
+    "IBM-IMYB2024-AUCTION-017": ("ordered_boundary_vertices", [4, 5], ["ibm_mbs_area_conflict"]),
     "IBM-IMYB2024-AUCTION-018": ("ordered_boundary_vertices_with_source_error", [1, 2, 3, 4], ["latitude_hemisphere_printed_E_points_J3_K"]),
     "IBM-IMYB2024-AUCTION-019": ("bounding_extents_only", [1], ["no_ordered_boundary_vertices"]),
     "IBM-IMYB2024-AUCTION-020": ("bounding_extents_only", [1], ["no_ordered_boundary_vertices"]),
@@ -511,6 +701,18 @@ GEOMETRY_WITHHOLD_DECISIONS = {
     "IBM-IMYB2024-AUCTION-007": (
         "withheld_source_conflict",
         "IBM publishes 600 ha while the matched MBS publishes 670 ha; geometry withheld pending source reconciliation.",
+    ),
+    "IBM-IMYB2024-AUCTION-015": (
+        "withheld_source_conflict",
+        "The MBS boundary table prints BP-5 at 69 degrees 18 minutes 51.72 seconds E among vertices near 69 degrees 15-16 minutes E, creating an invalid polygon; IBM also publishes 29.17 ha while the MBS publishes 5.3152 ha. Geometry withheld rather than correcting either source by inference.",
+    ),
+    "IBM-IMYB2024-AUCTION-016": (
+        "withheld_source_conflict",
+        "IBM publishes 29.17 ha while the matched MBS publishes 41.3186 ha; geometry withheld pending source reconciliation.",
+    ),
+    "IBM-IMYB2024-AUCTION-017": (
+        "withheld_source_conflict",
+        "IBM publishes 29.17 ha while the matched MBS publishes 6.2265 ha; geometry withheld pending source reconciliation.",
     ),
     "IBM-IMYB2024-AUCTION-009": (
         "withheld_source_conflict",
@@ -539,6 +741,7 @@ GEOMETRY_WITHHOLD_DECISIONS = {
 }
 
 COORDINATE_DATUM_SOURCE = {
+    "IBM-IMYB2024-AUCTION-012": "Not stated; source publishes UTM and geographic coordinate columns",
     "IBM-IMYB2024-AUCTION-021": "Not stated; source labels DGPS latitude/longitude",
     "IBM-IMYB2024-AUCTION-023": "Not stated; source labels DGPS latitude/longitude",
     "IBM-IMYB2024-AUCTION-024": "Not stated; source labels DGPS latitude/longitude",
@@ -847,7 +1050,7 @@ def load_state_shapes() -> dict[str, object]:
     districts = gpd.read_file(DISTRICT_BOUNDARIES).to_crs("EPSG:4326")
     return {
         state: districts.loc[districts["ST_NM"] == state, "geometry"].union_all()
-        for state in {"Chhattisgarh", "Goa", "Jharkhand", "Karnataka", "Uttar Pradesh"}
+        for state in {"Chhattisgarh", "Goa", "Gujarat", "Jharkhand", "Karnataka", "Uttar Pradesh"}
     }
 
 
@@ -864,10 +1067,14 @@ def build_geometry(
 
     if record_id in DMS_GEOMETRIES:
         coordinates = DMS_GEOMETRIES[record_id]
-        source_pages = [1]
-        coordinate_method = "source_table_visual_transcription_dms_wgs84"
+        source_pages = COORDINATE_REVIEW[record_id][1]
         point_ids = DMS_POINT_IDS.get(record_id, list(range(1, len(coordinates) + 1)))
         quality_flags = []
+        if COORDINATE_DATUM_SOURCE.get(record_id, "WGS 84").startswith("Not stated"):
+            coordinate_method = "source_table_visual_transcription_geographic_dms_encoded_epsg4326"
+            quality_flags.append("source_coordinate_datum_not_stated")
+        else:
+            coordinate_method = "source_table_visual_transcription_dms_wgs84"
         if record_id == "IBM-IMYB2024-AUCTION-096":
             quality_flags.append("source_point_id_6_absent")
     elif record_id in {
@@ -976,7 +1183,7 @@ def upsert_source_registry(access_date: str) -> None:
         "download_url": "Exact PDF URL, file identifier, SHA-256, byte size and page count are retained per matched row.",
         "license_or_access_note": "Public government-owned auction portal; retain document-level attribution and verify current portal and State Government reuse terms.",
         "used_for": "Reviewed document links, source-published concession boundary coordinates, exploration summaries, geological resources, grades, climate, terrain, hydrology and access context.",
-        "limitations": "Only twenty-three of 97 IBM rows are reviewed in alpha.11. Mine Block Summaries describe auction-stage technical context and do not independently prove current operation, present legal status, access permission or reserve classification. Source conflicts are withheld, not repaired by inference.",
+        "limitations": "Only twenty-nine of 97 IBM rows are reviewed in alpha.12. Mine Block Summaries describe auction-stage technical context and do not independently prove current operation, present legal status, access permission or reserve classification. Source conflicts are withheld, not repaired by inference.",
     })
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
@@ -997,7 +1204,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         rows = [row for row in reader if row["table"] not in table_columns]
 
     definitions = {
-        "review_scope": "Whether this IBM row received curated document review in alpha.11.",
+        "review_scope": "Whether this IBM row received curated document review in alpha.12.",
         "curated_candidate_count": "Number of MSTC documents matching the reviewed record-specific expression; zero does not mean the portal lacks a relevant document for unreviewed rows.",
         "document_selection_rule": "Rule used to select one official document when a reviewed expression matched multiple versions.",
         "document_match_status": "Outcome of curated IBM-to-MSTC document matching.",
@@ -1015,7 +1222,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         "normalized_material_names_json": "JSON array of normalized material English names linked from the IBM source wording.",
         "chemical_or_english_names_json": "JSON array using chemical names where defensible and English names otherwise.",
         "formulae_or_symbols_json": "JSON array of defensible element symbols or material formulae; empty when no single formula applies.",
-        "geometry_admission_status": "Whether the source footprint passed the alpha.11 spatial publication gates.",
+        "geometry_admission_status": "Whether the source footprint passed the alpha.12 spatial publication gates.",
         "geometry_admission_reason": "Specific evidence or failure responsible for geometry admission or withholding.",
         "coordinate_method": "Reviewed coordinate extraction and CRS-conversion method.",
         "coordinate_source_pdf_pages_json": "JSON array of one-based physical PDF pages containing the boundary coordinate table.",
@@ -1048,7 +1255,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         "climate_source": "Concise source-normalized rainfall and temperature statement; explicit source-unit anomalies are retained and labelled.",
         "topography_source": "Mine Block Summary terrain or morphology text.",
         "current_legal_or_operational_status_verified": "Always false in this layer; the source combination does not independently verify present legal or operating status.",
-        "model_evidence_role": "Context only in alpha.11; rows do not enter training, labels, scoring or candidate promotion.",
+        "model_evidence_role": "Context only in alpha.12; rows do not enter training, labels, scoring or candidate promotion.",
         "model_exclusion_reason": "Reason the record is excluded from model evidence.",
     }
     boolean_columns = {
@@ -1091,7 +1298,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
 def update_release_validation(validation: dict) -> None:
     path = ROOT / "outputs" / "validation_report.json"
     report = json.loads(path.read_text(encoding="utf-8"))
-    report["development_release_version"] = "v1.0-alpha.11"
+    report["development_release_version"] = "v1.0-alpha.12"
     report["ibm_auction_mbs_geometry_2023_24"] = {
         "ibm_input_rows": validation["ibm_input_rows"],
         "state_portal_documents_total": validation["state_portal_documents_total"],
@@ -1137,7 +1344,7 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
             "auction_date": row["auction_date"],
             "concession_type_code": row["concession_type_code"],
             "ibm_area_ha": row["area_ha"],
-            "review_scope": "curated_alpha_11" if record_id in CURATED_MATCHES else "not_reviewed_alpha_11",
+            "review_scope": "curated_alpha_12" if record_id in CURATED_MATCHES else "not_reviewed_alpha_12",
             "curated_candidate_count": len(candidates),
             "document_selection_rule": "highest_numeric_mstc_file_id" if len(candidates) > 1 else "unique_curated_name_match" if selected else "",
             "document_match_status": "selected_curated_name_match" if selected else "not_reviewed_in_this_release",
@@ -1291,7 +1498,7 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
         all(row[field] != "" for field in required_profile_fields) for row in reviewed_rows
     )
     validation = {
-        "release": "v1.0-alpha.11",
+        "release": "v1.0-alpha.12",
         "source_portal_url": PORTAL_INDEX,
         "source_access_date": inventory["access_date"],
         "ibm_input_rows": len(rows),
@@ -1317,7 +1524,7 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
         "model_evidence_role": "context_only",
         "outputs": {},
         "limitations": [
-            "This release reviews twenty-three of the 97 IBM Table 5 records; unreviewed rows are explicit in the match audit.",
+            "This release reviews twenty-nine of the 97 IBM Table 5 records; unreviewed rows are explicit in the match audit.",
             "Kareli-Chandi geometry is withheld because the MBS prints malformed latitude seconds for two vertices.",
             "Saloni geometry is withheld because IBM and MBS publish materially different areas.",
             "Chiropat geometry is withheld because the MBS prints an E hemisphere in the latitude column for two vertices.",
@@ -1326,6 +1533,8 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
             "Goa Block VI geometry is withheld because the source coordinates compute to an area 25.31% below the MBS published area.",
             "Timmanahalli geometry is withheld because one source latitude prints 60.00 seconds.",
             "Kudarka geometry is withheld because the source coordinate table omits hemisphere markers.",
+            "Nandana geometry is withheld because the source boundary table contains a longitude outlier and its IBM and MBS areas also conflict materially.",
+            "Kodidra and Virpur-Lusari geometries are withheld because IBM and the exact-title MBS documents publish materially different areas.",
             "Niddodi is retained with an explicit source anomaly because its bauxite title and Al2O3 grade text conflict with an 'Iron ore' label in the quantity row.",
             "The 2011 district boundary layer is used only as a state-containment diagnostic and is not a current administrative register.",
             "MBS technical context and IBM auction reporting do not independently establish current operation or present legal status.",
@@ -1333,20 +1542,20 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
     }
     validation["checks_pass"] = bool(
         validation["ibm_input_rows"] == 97
-        and validation["curated_records"] == 23
-        and validation["selected_document_matches"] == 23
-        and validation["reviewed_profile_complete_rows"] == 23
+        and validation["curated_records"] == 29
+        and validation["selected_document_matches"] == 29
+        and validation["reviewed_profile_complete_rows"] == 29
         and validation["coordinate_evidence_type_counts"] == {
-            "ordered_boundary_vertices": 17,
-            "ordered_boundary_vertices_with_source_error": 3,
+            "ordered_boundary_vertices": 22,
+            "ordered_boundary_vertices_with_source_error": 4,
             "bounding_extents_only": 2,
             "ordered_boundary_vertices_with_source_omission": 1,
         }
-        and validation["published_geometries"] == 14
+        and validation["published_geometries"] == 17
         and validation["geometry_admission_status_counts"] == {
-            "withheld_not_reviewed": 74,
-            "admitted_authoritative_source_footprint": 14,
-            "withheld_source_conflict": 5,
+            "withheld_not_reviewed": 68,
+            "admitted_authoritative_source_footprint": 17,
+            "withheld_source_conflict": 8,
             "withheld_insufficient_coordinate_detail": 2,
             "withheld_validation_failure": 2,
         }
