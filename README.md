@@ -17,11 +17,11 @@ KHANAN is intended to generate independent, early-stage hypotheses from lawful p
 
 ## Current status
 
-**Development release: v1.0-alpha.22 · Geospatial feature baseline: v0.12 · Prospectivity model baseline: v0.6 · Active work in progress**
+**Development release: v1.0-alpha.23 · Geospatial feature baseline: v0.12 · Prospectivity model baseline: v0.6 · Active work in progress**
 
 The current release covers India with 88,857 H3 resolution-6 cells, approximately 36 km² each. It includes 781 public-source site records, 1,504 IBM MCDR inspection events, 82 IBM abandoned-mine inventory records, 722 IBM NMI resource-inventory rows, 123 IBM 2024 lease-distribution rows, 97 IBM auction-granted concession records, five dated Andhra auction-status evidence rows, 586 IBM State Review occurrence-geography rows expanded into 1,742 district-crosswalk records and 59,872 H3 context rows, 199 central critical-mineral auction events, 78 public-preview rows from eight historical GSI/OGD deposit catalogues, 13 independently published EarthChem geochemical samples represented by 1,323 long-form measurements, 950 selected Sentinel-2 scenes summarized over 8,707,986 requested seasonal sample points, 50 strategic modeling targets, and 2,784 validation-gated candidate cells.
 
-The v1.0 alpha adds a source-derived material ontology with **233 unique entities**: 69 elements, 88 mineral species, and 76 ores, rocks, mineral groups, varieties, industrial materials, energy commodities, mixtures, and related material classes. It audits 510 distinct source terms: 501 are mapped and nine deliberately remain unresolved because the wording is nonspecific. Ontology coverage and prediction eligibility are separate: the validated geospatial model still scores only the 50 explicitly retained v0.6 targets.
+The v1.0 alpha includes a source-derived material ontology with **254 unique entities**: 69 elements, 89 mineral species, and 96 ores, rocks, mineral groups, varieties, industrial materials, energy commodities, mixtures, and related material classes. It audits 611 distinct source/table/field terms: 602 are mapped and nine deliberately remain unresolved because the wording is nonspecific. Ontology coverage and prediction eligibility are separate: the validated geospatial model still scores only the 50 explicitly retained v0.6 targets.
 
 Alpha.3 also adds a reproducible metadata audit of the National Geoscience Data Repository guest OGC services. The audit found 1,114 named WMS layers and 751 WFS feature types, then validated 11 nationally relevant mineral, geochemistry, geophysics, soil, lithology and geology layers reporting 2,459,737 features in total. These counts and schemas are catalog evidence only: no NGDR feature values are redistributed or used in the current model because dataset-specific reuse authority and essential units/method metadata remain unresolved.
 
@@ -63,6 +63,8 @@ Alpha.21 adds a reproducible historical GSI Open Government Data deposit-catalog
 
 Alpha.22 adds the latest IBM State Review mineral-occurrence geography as a separate non-scoring layer. The page-referenced extraction contains 586 rows across 31 source regions and 101 source material terms, linked to 91 existing ontology entities with six English-name fallbacks. It expands to 1,742 district-crosswalk rows: 1,734 unambiguous one-to-one matches enter a sparse 59,872-cell H3 context table, while eight candidates from the historical parent names `24-Parganas` and `Midnapur` are retained but withheld from cell propagation. All configured material and place terms pass source-page text checks. District coordinates are representative indexing points, not mineral locations, and the layer does not alter any v0.6 score or rank. The release packager now normalizes ZIP timestamps and permissions; two complete rebuilds produced identical artifact and bundle hashes. See [`docs/ibm_imyb_state_review_occurrences_2024.md`](docs/ibm_imyb_state_review_occurrences_2024.md).
 
+Alpha.23 reconciles those 101 IBM State Review terms with the central ontology. It adds 21 source-observed entities—including diaspore as an exact IMA-listed species and separately typed clay commodities, rocks, ore classes and mineral mixtures—bringing the catalogue to 254 entities. All 101 IBM terms now map to 109 relevant ontology IDs, and mixed-material rows retain a chemical name where one exists plus an English fallback for every entity without one. The ontology validator confirms all additions carry IBM source attribution and that the national grid and candidate-table hashes remain unchanged. Model eligibility stays at 50 targets. See [`docs/material_ontology_v1.md`](docs/material_ontology_v1.md).
+
 Candidate scores are reconnaissance indices. They are not probabilities of discovery, resource estimates, reserves, grades, economic valuations, legal concessions, or drill targets.
 
 ## Current geospatial overview
@@ -97,7 +99,7 @@ The sixth figure shows two-season clear-land coverage, not-vegetated support and
 
 The seventh figure maps the 78 rows exposed by the eight public GSI/OGD preview endpoints and compares each preview count with its catalogue's reported total. It visualizes a partial historical catalogue sample—not an exhaustive register, reserve estimate, field confirmation or set of model-generated discoveries. It is generated by `scripts/plot_gsi_ogd_deposit_preview.py`.
 
-![KHANAN IBM State Review mineral-occurrence geography](assets/maps/khanan-ibm-state-review-occurrence-context-alpha22.png)
+![KHANAN IBM State Review mineral-occurrence geography](assets/maps/khanan-ibm-state-review-occurrence-context-alpha23.png)
 
 The eighth figure maps counts of published IBM source material terms inherited by unambiguously matched 2011 districts. It is a broad administrative context view, not an exact deposit map, prediction, grade, reserve or discovery claim. It is generated by `scripts/plot_ibm_imyb_state_review_occurrences.py`.
 
@@ -132,7 +134,7 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 1. **Create a stable national grid.** The India boundary is polyfilled with H3 resolution-6 cells. Each cell retains a WGS84 centroid, polygon and area.
 2. **Acquire source evidence.** Agents collect open or publicly accessible mineral occurrences, mine/prospect records, IBM inventories and inspections, official auction documents, geology, elevation, population, Census and meteorological data.
 3. **Preserve provenance.** Every dataset receives source identifiers, URLs, reference dates, access notes, licensing qualifications and known limitations. Official PDFs are recorded with hashes, sizes and page counts.
-4. **Normalize materials.** Source wording is crosswalked to a typed 233-entity ontology containing English names, defensible chemical names, symbols or formulae, representative ores/forms, strategic uses, authority links, and parent relationships. Vague or unmapped terms remain explicit rather than being guessed. A separate 50-material legacy set defines current model eligibility.
+4. **Normalize materials.** Source wording is crosswalked to a typed 254-entity ontology containing English names, defensible chemical names, symbols or formulae, representative ores/forms, strategic uses, authority links, and parent relationships. Vague or unmapped terms remain explicit rather than being guessed. A separate 50-material legacy set defines current model eligibility.
 5. **Build cell features.** Geology, elevation, slope, relief, rolling twelve-month climate, gridded population, district demographics, uncertainty-aware magnetic and soil context, and quality-controlled seasonal Sentinel-2 surface context are spatially associated with every cell.
 6. **Construct neighbourhood evidence.** The pipeline measures nearby known-site density and distance while using spatially separated folds to reduce leakage from adjacent cells.
 7. **Train material-specific screens.** Models are fitted only where enough mapped evidence exists. Unsupported materials remain visibly unscored rather than receiving invented predictions.
@@ -149,7 +151,7 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 | Known mines, prospects and occurrences | Implemented | Positive evidence with source-specific quality controls. |
 | IBM abandoned-mine inventory | Implemented as context | Named historical-status records; excluded from scoring because the source publishes no coordinates or controlling current status. |
 | IBM 2024 mining-lease and auction-granted concession context | Implemented as context; IBM-row spatial review complete | National/state/mineral/sector/area-band distributions and 97 named blocks. Alpha.16 reviews every row: 92 exact State MBS selections plus five Andhra exact-name searches without a current public MBS match. Sixty-seven validated source footprints are admitted, 25 selected-MBS records are withheld, and five Andhra rows retain status evidence without inferred geometry. |
-| IBM 2024 State Review occurrence geography | Implemented as district/named-area/statewide context; not model evidence | Alpha.22 publishes 586 source-geography rows, 1,742 explicit 2011-district crosswalk rows and 59,872 sparse H3 context rows. One-to-many historical district names are withheld from cell propagation; district context is never treated as a point occurrence or uniform mineralization. |
+| IBM 2024 State Review occurrence geography | Implemented as district/named-area/statewide context; not model evidence | Alpha.23 publishes 586 source-geography rows, 1,742 explicit 2011-district crosswalk rows and 59,872 sparse H3 context rows. All 101 source material terms map to the central ontology. One-to-many historical district names are withheld from cell propagation; district context is never treated as a point occurrence or uniform mineralization. |
 | Official auction footprints and results | Implemented and used for held-out transfer diagnostics | Excluded from model training and scoring. Alpha.20 screens 166 accepted footprints; 151 target-mapped footprints generate 221 material observations. No material passes every statistical gate, and auction targeting is not a confirmed deposit label. |
 | Geological map units | Implemented | Regional age, group, supergroup and stratigraphic context. |
 | Terrain | Implemented | Elevation, approximate slope, relief and terrain class. |
@@ -167,7 +169,7 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 
 ## Release files
 
-The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.22.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.22.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); it is not the current alpha artifact. The uncompressed nationwide prospectivity grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
+The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.23.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.23.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); it is not the current alpha artifact. The uncompressed nationwide prospectivity grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
 
 | File | Rows | Role |
 |---|---:|---|
@@ -200,14 +202,14 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/india_official_critical_mineral_blocks.csv` | 199 | 143 auction offers across tranches I–VIII plus 56 successful results through tranche VII. |
 | `outputs/india_official_critical_mineral_mbs_manifest.csv` | 143 | MBS/NIT provenance, document hashes, extraction methods and geometry checks. |
 | `outputs/india_strategic_materials_top50.csv` | 50 | Legacy v0.6 modeling-target set, chemical names, formulae, ores/forms, uses and source linkage. |
-| `outputs/india_material_ontology_v1.csv` | 233 | Typed material identities, authority metadata, source evidence, formulas/names, relationships and model-eligibility fields. |
-| `outputs/material_source_term_crosswalk_v1.csv` | 510 | Auditable mapping of raw terms from MRDS, IBM NMI, IBM MCDR, IBM abandoned mines, IBM concession tables, auctions and USGS MCS to ontology entities. |
-| `outputs/material_ontology_validation_v1.json` | 1 | Ontology uniqueness, type counts, parser coverage, source hashes, mapping rate and unresolved-term report. |
+| `outputs/india_material_ontology_v1.csv` | 254 | Typed material identities, authority metadata, source evidence, formulas/names, relationships and model-eligibility fields. |
+| `outputs/material_source_term_crosswalk_v1.csv` | 611 | Auditable mapping of raw terms from MRDS, IBM NMI, IBM MCDR, IBM abandoned mines, IBM concession and State Review tables, auctions and USGS MCS to ontology entities. |
+| `outputs/material_ontology_validation_v1.json` | 1 | Ontology uniqueness, type counts, parser coverage, source hashes, State Review reconciliation, unchanged model hashes, mapping rate and unresolved-term report. |
 | `outputs/material_model_support.csv` | 50 | Evidence counts and support tier by material. |
 | `outputs/material_model_validation.csv` | 50 | Spatial holdout results and reasons a material could not be validated. |
 | `outputs/ngdr_service_inventory.csv` | 11 | Metadata-only inventory of selected NGDR mineral, geochemistry, geophysics, soil, lithology and geology services; no feature values. |
 | `outputs/source_registry.csv` | 38 | Provenance, access/licensing notes, uses and limitations. |
-| `outputs/data_dictionary.csv` | 1,758 | Field definitions, units and missing-value policies. |
+| `outputs/data_dictionary.csv` | 1,759 | Field definitions, units and missing-value policies. |
 | `outputs/validation_report.json` | 1 | Cross-dataset counts, join coverage, coordinate checks and guardrails. |
 | `outputs/official_critical_blocks_validation.json` | 1 | Auction count, lineage, provenance and geometry validation. |
 | `outputs/ibm_nmi_2025_extraction_validation.json` | 1 | NMI PDF extraction and UNFC subtotal validation. |
@@ -235,7 +237,7 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/sentinel2_surface_context_validation.json` | 1 | Sentinel catalog scope, scene selection, native-SCL and radiometric checks, national coverage, index ranges, token screening and unchanged-ranking hashes. |
 | `outputs/nasa_power_rolling_12m_validation.json` | 1 | Weather-source checksums, completeness and range checks. |
 | `outputs/india_mining_dataset_companion.xlsx` | — | Legacy v0.6 thirteen-sheet review workbook. It does not yet include the v1 ontology; the CSVs remain authoritative. |
-| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.22.zip` | — | Portable development bundle, including the full grid, reviewed State MBS geometry, IBM State Review occurrence context, magnetic, soil, EarthChem and Sentinel-2 context, paired feature-ablation and official-block transfer evidence, the partial GSI/OGD deposit preview, ontology, audits, validations, maps and reproducibility scripts. |
+| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.23.zip` | — | Portable development bundle, including the full grid, reviewed State MBS geometry, reconciled IBM State Review occurrence context, magnetic, soil, EarthChem and Sentinel-2 context, paired feature-ablation and official-block transfer evidence, the partial GSI/OGD deposit preview, the 254-entity ontology, audits, validations, maps and reproducibility scripts. |
 | `outputs/SHA256SUMS.txt` | — | Integrity hashes for published artifacts. |
 
 ## Repository structure
@@ -254,6 +256,7 @@ KHANAN/
 │   ├── earthchem_lithium_geochemistry.md # independent analytical geochemistry layer
 │   ├── gsi_ogd_mineral_deposit_preview.md # partial historical GSI deposit-catalog preview
 │   ├── ibm_imyb_state_review_occurrences_2024.md # IBM State Review occurrence geography and crosswalk
+│   ├── material_ontology_v1.md       # controlled material identities and source-term mappings
 │   ├── ibm_auction_mbs_geometry_2023_24.md # State MBS document matching and spatial gates
 │   ├── ibm_auction_status_evidence_2023_24.md # dated Andhra status reconciliation and limits
 │   ├── methodology.md                # scientific method, validation and limitations
@@ -284,7 +287,7 @@ KHANAN/
 
 - Maintain KHANAN as a structured, versioned repository.
 - Publish reproducible overview maps and machine-readable release bundles.
-- Publish the 233-entity, source-derived ontology and raw-term mapping audit without expanding model eligibility by fiat.
+- Publish the 254-entity, source-derived ontology and raw-term mapping audit without expanding model eligibility by fiat.
 - Audit the public NGDR/GSI OGC catalog and publish a metadata-only readiness inventory without republishing feature values.
 - Add automated schema, provenance, checksum and regression tests.
 - Introduce changelogs and source freshness reports.
@@ -297,6 +300,7 @@ KHANAN/
 - **Completed for the current portal snapshot in alpha.16:** review all 97 IBM 2023-24 auction rows, link 92 to exact historical State Mine Block Summaries, admit 67 validated source footprints, quarantine 25 selected-MBS records with explicit failures, and publish dated status evidence for all five Andhra rows without inferring missing polygons.
 - **Completed in alpha.21:** audit eight 2013 GSI/OGD mineral-deposit catalogues and publish all 78 rows exposed by their public preview endpoints, while making the 78-of-381 scope, interactive-download boundary, coordinate assumptions, source anomalies and model exclusion machine-readable.
 - **Completed in alpha.22:** extract the IBM 2024 State Review occurrence geography into page-cited state, district and sparse H3 context tables; audit all administrative crosswalks; and withhold one-to-many historical districts from cell propagation.
+- **Completed in alpha.23:** reconcile all 101 IBM State Review material terms with the central ontology, add 21 explicitly typed source-observed entities, correct the diaspore/dunite/marble classifications, and verify unchanged model artifacts.
 - Resolve mine/block identity across spelling, mine codes, lease numbers and changing district boundaries.
 - Track tender, preferred-bidder, grant, clearance, operation, suspension and closure as separate dated events.
 - Add lease and legal-boundary polygons without inferring unpublished coordinates.
@@ -408,6 +412,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/build_earthchem_geochemistry.py --refresh
 .venv/bin/python scripts/build_gsi_ogd_deposit_preview.py
 .venv/bin/python scripts/build_ibm_imyb_state_review_occurrences.py
+node --expose-gc scripts/validate_material_ontology_csv_artifacts.mjs
 .venv/bin/python scripts/build_sentinel2_surface_context.py
 .venv/bin/python scripts/evaluate_sentinel2_spatial_ablation.py
 .venv/bin/python scripts/evaluate_official_block_transfer.py
@@ -441,7 +446,7 @@ The XLSX companion is generated by `scripts/build_workbook.mjs` using the Codex 
 
 ## Important current limitations
 
-The release is not an exhaustive current mine/lease register. It still lacks deposit-level NMI coordinates, comprehensive state mine registers, controlling grant status, model-admitted soil/geochemistry/geophysics/remote-sensing features, drill logs, site-level grade/tonnage/depth, mineral-specific alteration mapping, protected-area and forest-clearance layers, water stress, infrastructure, land tenure and social-license constraints. Alpha.22's IBM State Review layer is an official compilation of broad district, named-area and statewide occurrence statements; it does not locate deposits within districts, and its 59,872 H3 rows merely inherit district context. Alpha.21's GSI/OGD table contains only the 78 rows exposed by public previews out of 381 catalogue-reported records; that 20.47% subset is non-random, the source datum is unstated, and it must not be read as complete deposit coverage. EarthChem ECL 4498 supplies measured analytical context, but only for 13 targeted samples at two sites; it is not a systematic survey and remains outside scoring. Sentinel-2 alpha.18 supplies national surface reflectance and exposure context; the alpha.19 ablation admits none of its broad predictors to production scoring. Vanadium and Silver show follow-up signals but fail the support and recall gates respectively, so neither result is a discovery or candidate claim. The 2025 imagery may also encode post-discovery mine disturbance at known positive sites; that leakage risk independently blocks production admission. Alpha.20 adds a source-held-out official-block transfer test, but no material passes every statistical gate and the block labels are not proven independent of all historical geological knowledge. Manganese's strong seven-block result is follow-up evidence, not a discovery or production validation. SoilGrids supplies national modeled pedological context but not field geochemical assays; the alpha.7 spatial ablation admits it to no production material model. EMAG2v3 supplies moderate-resolution magnetic context, but the alpha.5 spatial ablation also admits it to no production material model. NGDR service metadata is audited, but its raw values remain outside the release and scoring pipeline for the reasons documented in [`docs/ngdr_access_and_integration.md`](docs/ngdr_access_and_integration.md).
+The release is not an exhaustive current mine/lease register. It still lacks deposit-level NMI coordinates, comprehensive state mine registers, controlling grant status, model-admitted soil/geochemistry/geophysics/remote-sensing features, drill logs, site-level grade/tonnage/depth, mineral-specific alteration mapping, protected-area and forest-clearance layers, water stress, infrastructure, land tenure and social-license constraints. Alpha.23's reconciled IBM State Review layer is an official compilation of broad district, named-area and statewide occurrence statements; it does not locate deposits within districts, and its 59,872 H3 rows merely inherit district context. The 254-entity ontology is a vocabulary and evidence-normalization catalogue, not proof that every entity has a recoverable Indian deposit. Alpha.21's GSI/OGD table contains only the 78 rows exposed by public previews out of 381 catalogue-reported records; that 20.47% subset is non-random, the source datum is unstated, and it must not be read as complete deposit coverage. EarthChem ECL 4498 supplies measured analytical context, but only for 13 targeted samples at two sites; it is not a systematic survey and remains outside scoring. Sentinel-2 alpha.18 supplies national surface reflectance and exposure context; the alpha.19 ablation admits none of its broad predictors to production scoring. Vanadium and Silver show follow-up signals but fail the support and recall gates respectively, so neither result is a discovery or candidate claim. The 2025 imagery may also encode post-discovery mine disturbance at known positive sites; that leakage risk independently blocks production admission. Alpha.20 adds a source-held-out official-block transfer test, but no material passes every statistical gate and the block labels are not proven independent of all historical geological knowledge. Manganese's strong seven-block result is follow-up evidence, not a discovery or production validation. SoilGrids supplies national modeled pedological context but not field geochemical assays; the alpha.7 spatial ablation admits it to no production material model. EMAG2v3 supplies moderate-resolution magnetic context, but the alpha.5 spatial ablation also admits it to no production material model. NGDR service metadata is audited, but its raw values remain outside the release and scoring pipeline for the reasons documented in [`docs/ngdr_access_and_integration.md`](docs/ngdr_access_and_integration.md).
 
 One official Biarpalli source table places an Odisha block near 89°E; KHANAN retains and flags the published coordinates. The 143 auction-offer observations reconstruct to 100 distinct published footprints, while the tranche-VIII government release reports 88 cumulative offered blocks. That discrepancy remains explicitly unreconciled.
 

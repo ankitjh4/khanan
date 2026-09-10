@@ -2,7 +2,7 @@
 
 ## Scope
 
-KHANAN alpha.22 converts the mineral-occurrence prose in the Indian Bureau of Mines' *Indian Minerals Yearbook 2024* State Reviews into three machine-readable context layers. The reviewed section spans physical PDF pages 157–249 (printed pages 142–234), including continuation text on later pages. The pinned source file has SHA-256 `7e4cf991426ac8299ec0a365af68a05a8276f3b81ae2433fb6debd4358550354`.
+KHANAN alpha.22 introduced three machine-readable context layers from the mineral-occurrence prose in the Indian Bureau of Mines' *Indian Minerals Yearbook 2024* State Reviews. Alpha.23 reconciles every source material term with the central ontology. The reviewed section spans physical PDF pages 157–249 (printed pages 142–234), including continuation text on later pages. The pinned source file has SHA-256 `7e4cf991426ac8299ec0a365af68a05a8276f3b81ae2433fb6debd4358550354`.
 
 The source is an official national compilation, not a uniform field survey. IBM states that the Yearbook is compiled internally from several divisions and other sources, advises readers to use discretion, and disclaims warranties. KHANAN therefore preserves this evidence as contextual geography and excludes it from model training, validation, scoring and candidate promotion.
 
@@ -14,7 +14,7 @@ The source is an official national compilation, not a uniform field survey. IBM 
 - 44 rows with named fields, belts, basins, coalfields, talukas or other broad areas;
 - 32 statewide rows where the chapter provides no finer occurrence geography.
 
-The rows contain 101 distinct source material terms linked to 91 existing v1 ontology entities. Six valid but currently unmodeled source terms—`calcareous shale`, `leucoxene`, `sandstone`, `shale`, `slate` and `ultramafic rocks`—remain unresolved instead of being forced into a false identity. Their English source names remain available through `chemical_or_english_names_json`.
+The rows contain 101 distinct source material terms linked to 109 v1 ontology entities. Alpha.23 adds explicitly typed entries for six previously unresolved terms—`calcareous shale`, `leucoxene`, `sandstone`, `shale`, `slate` and `ultramafic rocks`—and corrects several over-broad mappings, including `diaspore`, `dunite` and `marble`. All 101 terms now resolve. Rocks, ores, mixtures and industrial-material classes retain controlled English names where no single chemical name exists.
 
 `india_ibm_district_mineral_occurrences_2024.csv` explodes the district lists into 1,742 boundary-candidate rows. It preserves 352 distinct source-region/district terms and resolves 338 distinct 2011 boundary districts across 24 boundary states or territories. Every row includes the source term, matched 2011 name, crosswalk status, Census codes, a representative district point and selected district demographics.
 
@@ -35,13 +35,13 @@ The curated configuration records source regions, physical PDF pages, material t
 1. verifies the complete source PDF against the pinned SHA-256;
 2. checks every curated material and place term against text extracted from the referenced pages;
 3. expands shared-place material phrases without overwriting the source wording;
-4. maps recognized terms to the existing 233-entity ontology and preserves English fallbacks;
+4. maps all 101 source terms to the 254-entity ontology and preserves English fallbacks per entity;
 5. performs the explicit 2011 administrative crosswalk;
 6. admits only one-to-one district matches to the H3 context layer;
 7. joins existing H3 and district population fields without altering the national grid; and
 8. verifies unique identifiers, parent linkage, H3 uniqueness and mandatory model exclusion.
 
-The final audit reports zero unmatched source district terms and zero unreviewed material/place text-presence exceptions. It intentionally reports the six unresolved material terms and the eight one-to-many boundary candidates.
+The final audit reports zero unresolved source material terms, zero unmatched source district terms and zero unreviewed material/place text-presence exceptions. It retains the eight one-to-many boundary candidates as explicit withholds.
 
 ## Interpretation contract
 

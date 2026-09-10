@@ -36,7 +36,7 @@ DISTRICT_OUTPUT = ROOT / "outputs" / "india_ibm_district_mineral_occurrences_202
 H3_OUTPUT = ROOT / "outputs" / "india_ibm_district_mineral_context_h3_r6.csv"
 VALIDATION_OUTPUT = ROOT / "outputs" / "ibm_imyb_state_review_occurrences_validation.json"
 
-RELEASE_VERSION = "v1.0-alpha.22"
+RELEASE_VERSION = "v1.0-alpha.23"
 SOURCE_ID = "SRC_IBM_INDIAN_MINERALS_YEARBOOK_2024_STATE_REVIEWS"
 
 
@@ -205,7 +205,7 @@ MATERIAL_ALIASES: dict[str, list[str]] = {
     "apatite": ["group:apatite-group"],
     "asbestos": ["group:asbestos"],
     "asbestos amphibole": ["group:asbestos"],
-    "ball clay": ["group:clay"],
+    "ball clay": ["group:ball-clay", "group:clay"],
     "barytes": ["mineral:baryte"],
     "calcite": ["group:calcium-and-limestone", "mineral:calcite"],
     "chalk": ["group:calcium-and-limestone", "rock:chalk"],
@@ -218,7 +218,7 @@ MATERIAL_ALIASES: dict[str, list[str]] = {
     "feldspar": ["group:feldspar-group"],
     "fireclay": ["material:fire-clay", "group:clay"],
     "fire clay": ["material:fire-clay", "group:clay"],
-    "fuller s earth": ["group:clay"],
+    "fuller s earth": ["group:fuller-s-earth", "group:clay"],
     "garnet": ["group:garnet-group"],
     "gemstones": ["group:gemstones"],
     "granite": ["rock:granite"],
@@ -226,27 +226,27 @@ MATERIAL_ALIASES: dict[str, list[str]] = {
     "iron ore haematite": ["element:iron", "ore:iron-ore", "mineral:hematite"],
     "iron ore magnetite": ["element:iron", "ore:iron-ore", "mineral:magnetite"],
     "lead": ["element:lead"],
-    "lead zinc": ["element:lead", "element:zinc"],
+    "lead zinc": ["ore:lead-zinc-ore", "element:lead", "element:zinc"],
     "limestone": ["group:calcium-and-limestone", "rock:limestone"],
-    "manganese ore": ["element:manganese"],
+    "manganese ore": ["ore:manganese-ore", "element:manganese"],
     "mica": ["group:mica-group"],
     "ochre": ["material:ochre", "material:iron-oxide-pigments"],
     "pyrophyllite": ["mineral:pyrophyllite"],
     "quartz": ["element:silicon", "mineral:quartz"],
-    "silica sand": ["element:silicon", "mineral:quartz", "material:sand-and-gravel-industrial"],
+    "silica sand": ["material:silica-sand", "element:silicon", "mineral:quartz", "material:sand-and-gravel-industrial"],
     "silica material": ["element:silicon", "mineral:quartz"],
-    "quartz silica sand": ["element:silicon", "mineral:quartz", "material:sand-and-gravel-industrial"],
+    "quartz silica sand": ["material:silica-sand", "element:silicon", "mineral:quartz", "material:sand-and-gravel-industrial"],
     "quartzite": ["element:silicon", "rock:quartzite"],
-    "talc soapstone steatite": ["mineral:talc"],
-    "talc steatite soapstone": ["mineral:talc"],
+    "talc soapstone steatite": ["mineral:talc", "rock:soapstone"],
+    "talc steatite soapstone": ["mineral:talc", "rock:soapstone"],
     "talc steatite": ["mineral:talc"],
     "steatite": ["mineral:talc"],
     "vermiculite": ["mineral:vermiculite"],
     "bauxite": ["element:aluminium", "ore:bauxite"],
     "chromite": ["element:chromium", "mineral:chromite"],
-    "nickeliferous chromite": ["element:nickel", "element:chromium", "mineral:chromite"],
+    "nickeliferous chromite": ["ore:nickeliferous-chromite", "element:nickel", "element:chromium", "mineral:chromite"],
     "copper": ["element:copper"],
-    "copper ore": ["element:copper"],
+    "copper ore": ["ore:copper-ore", "element:copper"],
     "diamond": ["mineral:diamond"],
     "gold": ["element:gold"],
     "graphite": ["mineral:graphite"],
@@ -262,15 +262,15 @@ MATERIAL_ALIASES: dict[str, list[str]] = {
     "tungsten": ["element:tungsten"],
     "petroleum": ["commodity:petroleum"],
     "natural gas": ["commodity:natural-gas"],
-    "dunite": ["group:olivine-group"],
-    "dunite pyroxenite": ["group:olivine-group", "group:pyroxene-group"],
+    "dunite": ["rock:dunite"],
+    "dunite pyroxenite": ["rock:dunite", "rock:pyroxenite"],
     "fluorite": ["element:fluorine", "mineral:fluorite"],
     "fluorspar": ["element:fluorine", "mineral:fluorite"],
     "ruby": ["variety:ruby"],
     "emerald": ["variety:emerald"],
     "platinum group of metals": ["group:platinum-group-elements"],
     "tin": ["element:tin"],
-    "vanadiferous magnetite": ["element:vanadium", "element:iron", "mineral:magnetite"],
+    "vanadiferous magnetite": ["ore:vanadiferous-magnetite", "element:vanadium", "element:iron", "mineral:magnetite"],
     "vanadium": ["element:vanadium"],
     "molybdenum": ["element:molybdenum"],
     "potash": ["group:potash"],
@@ -284,19 +284,25 @@ MATERIAL_ALIASES: dict[str, list[str]] = {
     "lignite": ["commodity:lignite"],
     "bentonite": ["mineral:montmorillonite", "group:clay"],
     "sulphur": ["element:sulfur", "mineral:sulphur"],
-    "diaspore": ["group:kyanite-and-related-minerals"],
+    "diaspore": ["mineral:diaspore"],
     "andalusite": ["mineral:andalusite"],
     "cobalt": ["element:cobalt"],
     "nickel": ["element:nickel"],
-    "marble": ["group:calcium-and-limestone"],
+    "marble": ["rock:marble", "group:calcium-and-limestone"],
     "laterite": ["rock:laterite"],
     "ilmenite": ["element:titanium", "mineral:ilmenite"],
     "rutile": ["element:titanium", "mineral:rutile"],
     "zircon": ["element:zirconium", "mineral:zircon"],
     "monazite": ["group:monazite-group"],
-    "glass sand": ["element:silicon", "mineral:quartz", "material:sand-and-gravel-industrial"],
-    "plastic clay": ["group:clay"],
+    "glass sand": ["material:glass-sand", "material:silica-sand", "element:silicon", "mineral:quartz"],
+    "plastic clay": ["group:plastic-clay", "group:clay"],
     "rock salt": ["mineral:halite"],
+    "calcareous shale": ["rock:calcareous-shale"],
+    "leucoxene": ["ore:leucoxene"],
+    "sandstone": ["rock:sandstone"],
+    "shale": ["rock:shale"],
+    "slate": ["rock:slate"],
+    "ultramafic rocks": ["rock:ultramafic-rocks"],
 }
 
 
@@ -346,12 +352,15 @@ def material_profile(term: str, ontology: dict[str, dict[str, str]]) -> dict[str
     names = [ontology[material_id]["material_name"] for material_id in ids]
     chemical_names: list[str] = []
     formulae: list[str] = []
+    display: list[str] = []
     for material_id in ids:
-        chemical_names.extend(json.loads(ontology[material_id]["chemical_names_json"] or "[]"))
+        entity_chemical_names = json.loads(ontology[material_id]["chemical_names_json"] or "[]")
+        chemical_names.extend(entity_chemical_names)
         formulae.extend(json.loads(ontology[material_id]["symbols_or_formulae_json"] or "[]"))
+        display.extend(entity_chemical_names or [ontology[material_id]["material_name"]])
     chemical_names = list(dict.fromkeys(value for value in chemical_names if value))
     formulae = list(dict.fromkeys(value for value in formulae if value))
-    display = chemical_names or names or [term]
+    display = list(dict.fromkeys(value for value in display if value)) or names or [term]
     return {
         "normalized_material_ids_json": json_array(ids),
         "normalized_material_names_json": json_array(names),
@@ -858,6 +867,9 @@ def validate(
             "district_parent_ids_resolve": all(row["parent_occurrence_record_id"] in set(state_ids) for row in district_rows),
             "admitted_crosswalks_are_one_to_one": all(row["district_crosswalk_match_count"] == 1 for row in admitted),
             "h3_context_nonempty": len(h3_rows) > 0,
+            "all_material_rows_have_chemical_or_english_names": all(
+                bool(json.loads(row["chemical_or_english_names_json"])) for row in state_rows
+            ),
             "all_model_roles_excluded": all(row["model_evidence_role"] == "excluded_context_only" for row in state_rows + district_rows + h3_rows),
         },
         "interpretation_contract": {
@@ -871,7 +883,8 @@ def validate(
             "h3_centroid_is_occurrence_location": False,
         },
     }
-    if not all(report["checks"].values()):
+    report["checks_pass"] = all(report["checks"].values())
+    if not report["checks_pass"]:
         raise RuntimeError(f"Validation failed: {report['checks']}")
     return report
 

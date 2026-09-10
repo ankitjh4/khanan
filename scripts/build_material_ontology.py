@@ -34,10 +34,21 @@ IUPAC_SOURCE_ID = "SRC_IUPAC_PERIODIC_TABLE_2022"
 MCS_SOURCE_ID = "SRC_USGS_MCS_2026"
 IBM_ABANDONED_SOURCE_ID = "SRC_IBM_ABANDONED_MINE_SITES"
 IBM_CONCESSIONS_SOURCE_ID = "SRC_IBM_INDIAN_MINERALS_YEARBOOK_2024_CONCESSIONS"
+IBM_STATE_REVIEW_SOURCE_ID = "SRC_IBM_INDIAN_MINERALS_YEARBOOK_2024_STATE_REVIEWS"
 
 ONTOLOGY_PATH = OUT / "india_material_ontology_v1.csv"
 CROSSWALK_PATH = OUT / "material_source_term_crosswalk_v1.csv"
 VALIDATION_PATH = OUT / "material_ontology_validation_v1.json"
+
+BASELINE_GRID_SHA256 = "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9"
+BASELINE_CANDIDATE_SHA256 = "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04"
+IBM_STATE_REVIEW_CANONICAL_ADDITIONS = [
+    "Ball clay", "Calcareous shale", "Copper ore", "Diaspore", "Dunite",
+    "Fuller's earth", "Glass sand", "Lead-zinc ore", "Leucoxene",
+    "Manganese ore", "Marble", "Nickeliferous chromite", "Plastic clay",
+    "Pyroxenite", "Sandstone", "Shale", "Silica sand", "Slate",
+    "Soapstone", "Ultramafic rocks", "Vanadiferous magnetite",
+]
 
 
 def jdump(value) -> str:
@@ -207,6 +218,7 @@ ALIASES = {
     "aluminum": ["Aluminium"],
     "bariumbarite": ["Baryte"],
     "barite": ["Baryte"],
+    "bentonite": ["Montmorillonite", "Clay"],
     "boehmite": ["Böhmite"],
     "bixbyite": ["Bixbyite-(Mn)"],
     "cryptomalene": ["Cryptomelane"],
@@ -258,12 +270,12 @@ ALIASES = {
     "ironoremagnetite": ["Iron ore", "Magnetite"],
     "iolite": ["Cordierite"],
     "kyaniteandrelatedminerals": ["Kyanite and related minerals"],
-    "leadzinore": ["Lead", "Zinc", "Iron ore"],
-    "leadzincore": ["Lead", "Zinc"],
+    "leadzinore": ["Lead-zinc ore", "Lead", "Zinc", "Iron ore"],
+    "leadzincore": ["Lead-zinc ore", "Lead", "Zinc"],
     "limeshell": ["Calcareous shell material"],
     "limestone": ["Limestone"],
     "magnesiumcompounds": ["Magnesium compounds"],
-    "manganeseore": ["Manganese"],
+    "manganeseore": ["Manganese ore", "Manganese"],
     "marl": ["Marl"],
     "mouldingsand": ["Moulding sand"],
     "perlite": ["Perlite"],
@@ -292,10 +304,12 @@ ALIASES = {
     "alumina": ["Alumina"],
     "cement": ["Cement"],
     "chalk": ["Chalk"],
+    "chinaclay": ["Kaolin", "Kaolinite"],
     "clays": ["Clay"],
     "fireclay": ["Fire clay", "Clay"],
     "diamondindustrial": ["Diamond"],
     "feldsparandnephelinesyenite": ["Feldspar group", "Nepheline", "Nepheline syenite"],
+    "fluorspar": ["Fluorite"],
     "garnetindustrial": ["Garnet group"],
     "gemstones": ["Gemstones"],
     "graniteonly": ["Granite"],
@@ -314,6 +328,27 @@ ALIASES = {
     "whiteeatrh": ["White earth"],
     "whiteearth": ["White earth"],
     "quartzite": ["Quartzite"],
+    "ballclay": ["Ball clay", "Clay"],
+    "calcareousshale": ["Calcareous shale"],
+    "copperore": ["Copper ore", "Copper"],
+    "dunite": ["Dunite"],
+    "fullersearth": ["Fuller's earth", "Clay"],
+    "glasssand": ["Glass sand", "Silica sand", "Quartz"],
+    "leadzinc": ["Lead-zinc ore", "Lead", "Zinc"],
+    "leucoxene": ["Leucoxene"],
+    "marble": ["Marble"],
+    "nickeliferouschromite": ["Nickeliferous chromite", "Chromite", "Nickel", "Chromium"],
+    "plasticclay": ["Plastic clay", "Clay"],
+    "pyrites": ["Pyrite"],
+    "pyroxenite": ["Pyroxenite"],
+    "sandstone": ["Sandstone"],
+    "shale": ["Shale"],
+    "silicasand": ["Silica sand", "Quartz"],
+    "slate": ["Slate"],
+    "soapstone": ["Soapstone", "Talc"],
+    "steatite": ["Talc"],
+    "ultramaficrocks": ["Ultramafic rocks"],
+    "vanadiferousmagnetite": ["Vanadiferous magnetite", "Magnetite", "Vanadium", "Iron"],
     "qtrzfelds": ["Quartz", "Feldspar group"],
     "pbzncu": ["Lead", "Zinc", "Copper"],
     "barytes": ["Baryte"],
@@ -329,11 +364,31 @@ ALIASES = {
 # The few group-level names below are not in the main dictionary only because
 # they are most naturally introduced through source aliases.
 CURATED_ENTITIES.update({
+    "Ball clay": ("industrial_mineral_group", "", "Fine-grained plastic kaolinitic clay commodity; mineral proportions vary."),
+    "Calcareous shale": ("rock", "", "Calcium-carbonate-bearing shale; mineral composition varies."),
+    "Copper ore": ("ore_group", "", "Copper-bearing ore-class term; mineralogy and grade vary."),
+    "Dunite": ("rock", "", "Olivine-rich ultramafic igneous rock; mineral proportions vary."),
+    "Fuller's earth": ("industrial_mineral_group", "", "Absorbent clay commodity; mineral composition varies."),
+    "Glass sand": ("industrial_material", "", "Silica-rich sand selected for glass manufacture; mineralogy and specifications vary."),
     "Glauconite group": ("mineral_group", "", "Group-level/ill-defined source term under modern nomenclature."),
     "Hornblende group": ("mineral_group", "", "Field/group term covering several amphibole species."),
+    "Lead-zinc ore": ("ore_group", "", "Combined lead-zinc ore-class term; mineralogy and grade vary."),
+    "Leucoxene": ("mineral_mixture_or_ore", "", "Fine-grained titanium-oxide alteration mixture; not one IMA mineral species."),
+    "Manganese ore": ("ore_group", "", "Manganese-bearing ore-class term; mineralogy and grade vary."),
+    "Marble": ("rock_or_industrial_material", "", "Recrystallized carbonate rock and dimension-stone commodity; composition varies."),
     "Nepheline syenite": ("rock_or_industrial_material", "", "Feldspathoid-rich igneous rock and industrial commodity."),
+    "Nickeliferous chromite": ("mineral_mixture_or_ore", "", "Nickel-bearing chromite ore term; mineralogy and grade vary."),
     "Phyllite": ("rock", "", "Fine-grained foliated metamorphic rock; composition varies."),
+    "Plastic clay": ("industrial_mineral_group", "", "Plastic-forming clay commodity; mineral composition and specifications vary."),
+    "Pyroxenite": ("rock", "", "Pyroxene-rich ultramafic igneous rock; mineral proportions vary."),
+    "Sandstone": ("rock_or_industrial_material", "", "Sand-sized clastic sedimentary rock; mineral composition and industrial suitability vary."),
+    "Shale": ("rock", "", "Fine-grained fissile sedimentary rock; mineral composition varies."),
+    "Silica sand": ("industrial_material", "", "Quartz-rich sand commodity; mineralogy, purity and specifications vary."),
+    "Slate": ("rock_or_industrial_material", "", "Fine-grained foliated metamorphic rock and dimension-stone commodity; composition varies."),
+    "Soapstone": ("rock_or_industrial_material", "", "Talc-rich metamorphic rock and industrial material; composition varies."),
     "Tetrahedrite group": ("mineral_group", "", "Group-level source term; species depends on dominant constituents."),
+    "Ultramafic rocks": ("rock", "", "Broad rock class rich in mafic minerals; individual rock types and compositions vary."),
+    "Vanadiferous magnetite": ("mineral_mixture_or_ore", "", "Vanadium-bearing magnetite ore term; mineralogy and grade vary."),
 })
 
 
@@ -719,6 +774,27 @@ def main() -> None:
         "ibm_auctioned_concessions_2023_24",
     )
 
+    state_review_config = json.loads(
+        (CONFIG / "ibm_imyb_2024_state_review_occurrences.json").read_text(encoding="utf-8")
+    )
+    state_review_terms = Counter()
+    for chapter in state_review_config["chapters"]:
+        for combined_term in chapter.get("district_occurrences", {}):
+            state_review_terms.update(clean(term) for term in combined_term.split("|") if clean(term))
+        for occurrence in chapter.get("named_area_occurrences", []):
+            state_review_terms.update(
+                clean(term) for term in occurrence["materials"].split("|") if clean(term)
+            )
+        state_review_terms.update(clean(term) for term in chapter.get("statewide_occurrences", []) if clean(term))
+    for term, count in sorted(state_review_terms.items(), key=lambda item: item[0].casefold()):
+        add_crosswalk(
+            IBM_STATE_REVIEW_SOURCE_ID,
+            "ibm_imyb_state_review_occurrences",
+            "source_material_term",
+            term,
+            int(count),
+        )
+
     auction = pd.read_csv(OUT / "india_official_critical_mineral_blocks.csv", keep_default_na=False)
     auction_terms = Counter()
     for row in auction.itertuples(index=False):
@@ -739,7 +815,8 @@ def main() -> None:
     source_count_columns = [
         "mrds_india", "ibm_nmi_2025", "ibm_mcdr_events",
         "ibm_abandoned_mine_sites", "ibm_mineral_concession_2024_by_mineral",
-        "ibm_auctioned_concessions_2023_24", "critical_mineral_auction_events",
+        "ibm_auctioned_concessions_2023_24", "ibm_imyb_state_review_occurrences",
+        "critical_mineral_auction_events",
         "usgs_mcs2026_india_rows",
     ]
     ontology_rows = []
@@ -781,8 +858,13 @@ def main() -> None:
         ["source_id", "source_table", "source_field", "source_term"],
     )
 
+    ibm_state_review_addition_ids = [
+        names_to_id.get(fold(name), "") for name in IBM_STATE_REVIEW_CANONICAL_ADDITIONS
+    ]
+    grid_sha256 = sha256_file(OUT / "india_mining_prospectivity_grid_h3_r6.csv")
+    candidate_sha256 = sha256_file(OUT / "india_mining_candidate_areas_validation_gated.csv")
     validation = {
-        "ontology_version": "v1.0-alpha.3",
+        "ontology_version": "v1.0-alpha.23",
         "ontology_rows": int(len(ontology)),
         "unique_material_ids": int(ontology["material_id"].nunique()),
         "unique_material_names_casefolded": int(ontology["material_name"].str.casefold().nunique()),
@@ -832,15 +914,50 @@ def main() -> None:
                 "source_term",
             ].nunique()
         ),
+        "ibm_state_review_source_terms": int(
+            crosswalk.loc[
+                crosswalk["source_id"].eq(IBM_STATE_REVIEW_SOURCE_ID),
+                "source_term",
+            ].nunique()
+        ),
+        "ibm_state_review_source_term_occurrences": int(sum(state_review_terms.values())),
+        "ibm_state_review_source_terms_mapped": int(
+            crosswalk.loc[
+                crosswalk["source_id"].eq(IBM_STATE_REVIEW_SOURCE_ID)
+                & crosswalk["mapping_status"].eq("mapped")
+            ].shape[0]
+        ),
+        "ibm_state_review_canonical_entity_additions": IBM_STATE_REVIEW_CANONICAL_ADDITIONS,
+        "ibm_state_review_canonical_entity_addition_count": len(IBM_STATE_REVIEW_CANONICAL_ADDITIONS),
+        "ibm_state_review_canonical_entity_additions_all_present": all(ibm_state_review_addition_ids),
+        "ibm_state_review_canonical_entity_additions_all_source_attributed": all(
+            entity_id and IBM_STATE_REVIEW_SOURCE_ID in entity_sources[entity_id]
+            for entity_id in ibm_state_review_addition_ids
+        ),
+        "baseline_grid_sha256_expected": BASELINE_GRID_SHA256,
+        "baseline_grid_sha256_observed": grid_sha256,
+        "baseline_grid_unchanged": grid_sha256 == BASELINE_GRID_SHA256,
+        "baseline_candidate_sha256_expected": BASELINE_CANDIDATE_SHA256,
+        "baseline_candidate_sha256_observed": candidate_sha256,
+        "baseline_candidate_unchanged": candidate_sha256 == BASELINE_CANDIDATE_SHA256,
         "model_eligibility_policy": "Ontology inclusion does not confer model eligibility. Only the 50 explicitly retained v0.6 model targets are scored until separately reviewed and validated.",
     }
     validation["checks_pass"] = bool(
         validation["ontology_rows"] == validation["unique_material_ids"] == validation["unique_material_names_casefolded"]
+        and validation["ontology_rows"] >= 250
         and validation["legacy_model_targets"] == 50
         and validation["official_india_critical_aggregate_targets"] == 30
         and validation["ima_verified_species"] >= 60
         and validation["ibm_abandoned_mine_source_terms"] == 26
         and validation["ibm_abandoned_mine_source_terms_mapped"] == 26
+        and validation["ibm_state_review_source_terms"] == 101
+        and validation["ibm_state_review_source_term_occurrences"] == 586
+        and validation["ibm_state_review_source_terms_mapped"] == 101
+        and validation["ibm_state_review_canonical_entity_addition_count"] == 21
+        and validation["ibm_state_review_canonical_entity_additions_all_present"]
+        and validation["ibm_state_review_canonical_entity_additions_all_source_attributed"]
+        and validation["baseline_grid_unchanged"]
+        and validation["baseline_candidate_unchanged"]
         and validation["crosswalk_mapping_rate"] >= 0.90
         and validation["ima_parser_species_rows"] >= 6_000
     )
@@ -851,7 +968,7 @@ def main() -> None:
 
     release_validation_path = OUT / "validation_report.json"
     release_validation = json.loads(release_validation_path.read_text(encoding="utf-8"))
-    release_validation["development_release_version"] = "v1.0-alpha.8"
+    release_validation["development_release_version"] = "v1.0-alpha.23"
     release_validation["material_ontology_v1"] = {
         "ontology_rows": validation["ontology_rows"],
         "ima_verified_species": validation["ima_verified_species"],
@@ -863,6 +980,12 @@ def main() -> None:
         "ibm_abandoned_mine_source_terms_mapped": validation["ibm_abandoned_mine_source_terms_mapped"],
         "ibm_mineral_concession_2024_source_terms": validation["ibm_mineral_concession_2024_source_terms"],
         "ibm_auctioned_concession_2023_24_source_terms": validation["ibm_auctioned_concession_2023_24_source_terms"],
+        "ibm_state_review_source_terms": validation["ibm_state_review_source_terms"],
+        "ibm_state_review_source_term_occurrences": validation["ibm_state_review_source_term_occurrences"],
+        "ibm_state_review_source_terms_mapped": validation["ibm_state_review_source_terms_mapped"],
+        "ibm_state_review_canonical_entity_addition_count": validation["ibm_state_review_canonical_entity_addition_count"],
+        "baseline_grid_unchanged": validation["baseline_grid_unchanged"],
+        "baseline_candidate_unchanged": validation["baseline_candidate_unchanged"],
         "legacy_model_targets_unchanged": validation["legacy_model_targets"],
         "checks_pass": validation["checks_pass"],
     }
@@ -889,6 +1012,7 @@ def main() -> None:
                     "mapping_status": "Whether a source term maps to one or more controlled ontology entities.",
                     "authority_status": "Authority/classification basis for the entity identity.",
                     "source_term_occurrences": "Number of rows or records in the named source carrying the source term.",
+                    "ibm_imyb_state_review_occurrences_source_term_occurrences": "Number of IBM 2024 State Review occurrence-geography rows whose published material term maps to the entity.",
                 }.get(column, column.replace("_", " ").capitalize() + "."),
                 "data_type": str(frame[column].dtype),
                 "unit": "JSON array" if column.endswith("_json") else None,

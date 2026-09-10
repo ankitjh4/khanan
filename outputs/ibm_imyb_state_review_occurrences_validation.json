@@ -1,5 +1,5 @@
 {
-  "release_version": "v1.0-alpha.22",
+  "release_version": "v1.0-alpha.23",
   "source_id": "SRC_IBM_INDIAN_MINERALS_YEARBOOK_2024_STATE_REVIEWS",
   "source_pdf_url": "https://www.ibm.gov.in/writereaddata/files/177426215469c1178a48453IMYB_2024_EBookFinal.pdf",
   "source_pdf_sha256_expected": "7e4cf991426ac8299ec0a365af68a05a8276f3b81ae2433fb6debd4358550354",
@@ -14,15 +14,8 @@
   "h3_context_rows": 59872,
   "unique_h3_context_cells": 59872,
   "unique_source_material_terms": 101,
-  "unique_normalized_material_ids": 91,
-  "unresolved_source_material_terms": [
-    "calcareous shale",
-    "leucoxene",
-    "sandstone",
-    "shale",
-    "slate",
-    "ultramafic rocks"
-  ],
+  "unique_normalized_material_ids": 109,
+  "unresolved_source_material_terms": [],
   "unmatched_source_district_terms": [],
   "material_term_text_mismatch_record_ids": [],
   "place_term_text_mismatch_record_ids": [],
@@ -34,6 +27,7 @@
     "district_parent_ids_resolve": true,
     "admitted_crosswalks_are_one_to_one": true,
     "h3_context_nonempty": true,
+    "all_material_rows_have_chemical_or_english_names": true,
     "all_model_roles_excluded": true
   },
   "interpretation_contract": {
@@ -45,5 +39,6 @@
     "used_in_model_training_scoring_or_validation": false,
     "district_context_is_uniform_within_district": false,
     "h3_centroid_is_occurrence_location": false
-  }
+  },
+  "checks_pass": true
 }

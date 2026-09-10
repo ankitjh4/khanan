@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v1.0-alpha.22"
+VERSION = "v1.0-alpha.23"
 
 BUNDLE_MEMBERS = [
     "README.md",
@@ -17,13 +17,14 @@ BUNDLE_MEMBERS = [
     "assets/maps/khanan-earthchem-lithium-geochemistry-alpha17.png",
     "assets/maps/khanan-sentinel2-surface-context-alpha18.png",
     "assets/maps/khanan-gsi-ogd-deposit-preview-alpha21.png",
-    "assets/maps/khanan-ibm-state-review-occurrence-context-alpha22.png",
+    "assets/maps/khanan-ibm-state-review-occurrence-context-alpha23.png",
     "assets/figures/khanan-sentinel2-spatial-ablation-v0.1.png",
     "assets/figures/khanan-emag2-spatial-ablation-v0.1.png",
     "assets/figures/khanan-soilgrids-spatial-ablation-v0.1.png",
     "assets/figures/khanan-official-block-transfer-v0.1.png",
     "data/README.md",
     "docs/methodology.md",
+    "docs/material_ontology_v1.md",
     "docs/ibm_mineral_concessions_2024.md",
     "docs/ibm_auction_mbs_geometry_2023_24.md",
     "docs/ibm_auction_status_evidence_2023_24.md",
@@ -60,6 +61,7 @@ BUNDLE_MEMBERS = [
     "scripts/build_ibm_imyb_state_review_occurrences.py",
     "scripts/plot_ibm_imyb_state_review_occurrences.py",
     "scripts/validate_ibm_imyb_state_review_csv_artifacts.mjs",
+    "scripts/validate_material_ontology_csv_artifacts.mjs",
     "scripts/build_sentinel2_surface_context.py",
     "scripts/plot_sentinel2_surface_context.py",
     "scripts/validate_sentinel2_csv_artifacts.mjs",

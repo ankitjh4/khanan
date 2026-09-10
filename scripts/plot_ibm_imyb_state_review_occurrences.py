@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Plot district-level IBM IMYB 2024 occurrence context for alpha.22."""
+"""Plot district-level IBM IMYB 2024 occurrence context for alpha.23."""
 
 from __future__ import annotations
 
@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DISTRICTS = ROOT / "sources" / "raw" / "2011_Dist.shp"
 OCCURRENCES = ROOT / "outputs" / "india_ibm_district_mineral_occurrences_2024.csv"
 VALIDATION = ROOT / "outputs" / "ibm_imyb_state_review_occurrences_validation.json"
-OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-state-review-occurrence-context-alpha22.png"
+OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-state-review-occurrence-context-alpha23.png"
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:
@@ -98,7 +98,7 @@ def main() -> None:
     bar_ax.set_xlim(0, max(values) * 1.16)
 
     fig.suptitle(
-        "KHANAN alpha.22 · IBM Indian Minerals Yearbook 2024 occurrence geography",
+        "KHANAN alpha.23 · IBM Indian Minerals Yearbook 2024 occurrence geography",
         x=0.055,
         ha="left",
         fontsize=19,

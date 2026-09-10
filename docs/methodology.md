@@ -2,7 +2,7 @@
 
 ## 1. Design principle
 
-The dataset has seven distinct observation types:
+The dataset has eight distinct observation types:
 
 1. **Factual georeferenced site records** — preserved from USGS MRDS with source IDs and source wording.
 2. **Official inspection-table events** — IBM MCDR regional inspection records, with source wording and dates but without inferred production status or coordinates.
@@ -27,7 +27,7 @@ NMI state totals are contextual aggregates. They do not identify a deposit, impl
 
 ### 2.1 Indian Minerals Yearbook 2024 State Review occurrences
 
-Alpha.22 separately extracts the occurrence prose from 31 source-region chapters on physical PDF pages 157–249. It produces 586 page-referenced state/named-area/district-list rows covering 101 source material terms, then explodes the district lists into 1,742 administrative-crosswalk rows. All curated material and place terms are present in text extracted from their cited pages. Ninety-one existing v1 ontology entities are linked; six valid rock/material terms remain explicit English fallbacks because the current ontology has no defensible entity.
+Alpha.22 introduced an extraction of the occurrence prose from 31 source-region chapters on physical PDF pages 157–249. It produces 586 page-referenced state/named-area/district-list rows covering 101 source material terms, then explodes the district lists into 1,742 administrative-crosswalk rows. All curated material and place terms are present in text extracted from their cited pages. Alpha.23 reconciles all 101 source terms with 109 relevant IDs in the 254-entity ontology, including an exact IMA identity for diaspore and separately typed rocks, ore classes, mixtures and industrial materials.
 
 The district crosswalk resolves 1,734 rows one-to-one against the 2011 Census boundary framework. Eight candidate rows derived from the historical parent names `24-Parganas` and `Midnapur` are retained but withheld from cell propagation because each maps to two 2011 districts. Telangana is matched to undivided 2011 Andhra Pradesh, and Leh/Jammu & Kashmir rows carry an administrative-vintage warning. No source district term remains unmatched.
 
@@ -188,17 +188,17 @@ The preview provides locality, State, toposheet, commodity, host rock, morphogen
 
 ## 20. Material ontology and model eligibility
 
-The v1.0-alpha.3 ontology contains 233 unique, typed entities derived from material terms actually observed in the India source tables, plus the retained v0.6 targets. It contains 69 elements, 88 mineral species, and 76 other entities spanning ores, rocks, groups, mixtures, varieties, industrial materials, and energy commodities. Stable typed IDs prevent an element, ore, mineral species, and informal group from being silently treated as the same thing.
+The v1.0-alpha.23 ontology contains 254 unique, typed entities derived from material terms observed in the India source tables, official Indian critical-mineral group members, and the retained v0.6 targets. It contains 69 elements, 89 mineral species, and 96 other entities spanning ores, rocks, groups, mixtures, varieties, industrial materials, and energy commodities. Stable typed IDs prevent an element, ore, mineral species, and informal group from being silently treated as the same thing.
 
 Identity is checked against three reference layers where applicable: the IUPAC periodic table for elements, the September 2026 IMA-CNMNC list for approved mineral species and formulae, and USGS Mineral Commodity Summaries 2026 for additional India commodity evidence. The parser recovered 6,048 rows from the IMA document's stated 6,239 valid species (96.94% document-row coverage); this does not mean all IMA species are inserted into KHANAN. Only source-relevant identities are admitted.
 
-The source-term crosswalk audits 510 distinct terms from MRDS, IBM NMI, IBM MCDR, IBM abandoned-mine records, IBM 2024 concession tables, central critical-mineral auction records, and USGS MCS. It maps 501 (98.24%). Nine nonspecific terms—including `Basemetal`, `Metal`, `Stone`, and `Associated minerals`—remain explicitly unresolved. Co-occurrence alone is not used to assign a vague term to every other material in its source row.
+The source-term crosswalk audits 611 distinct source/table/field terms from MRDS, IBM NMI, IBM MCDR, IBM abandoned-mine records, IBM 2024 concession and State Review tables, central critical-mineral auction records, and USGS MCS. It maps 602 (98.53%). All 101 State Review terms map; nine nonspecific terms elsewhere—including `Basemetal`, `Metal`, `Stone`, and `Associated minerals`—remain explicitly unresolved. Co-occurrence alone is not used to assign a vague term to every other material in its source row.
 
 Ranks 1–30 in the legacy target set reproduce India's official 2023 critical-mineral list. Ranks 31–50 are a project extension covering major battery, energy, metal, construction, fertilizer, ceramic, plastic-feedstock, and plastic-filler materials; they are not an official Government of India priority order. Individual rare-earth and platinum-group elements can have their own ontology identities while remaining members of an official aggregate group.
 
 Ontology inclusion never confers model eligibility. The geospatial prediction columns remain limited to the 50 explicitly retained v0.6 targets until each additional entity has enough mapped evidence, a defensible deposit-process hypothesis, and spatial validation. Four legacy energy targets have no direct occurrences in the current nonfuel-focused source set and are retained only for compatibility.
 
-Ontology arrays identify names, possible compounds, or representative forms; they do not assert assay, grade, recoverability, mineral processing route, or economic value at a site. Formulas are supplied only for elements, verified species, or defensible compounds. Otherwise the English names are preserved in arrays as requested.
+Ontology arrays identify names, possible compounds, or representative forms; they do not assert assay, grade, recoverability, mineral processing route, or economic value at a site. Formulas are supplied only for elements, verified species, or defensible compounds. Otherwise the English names are preserved in arrays as requested. For multi-entity IBM occurrence rows, the combined display array selects chemical names per entity where available and retains the controlled English name for every entity without one.
 
 ## 21. Reconnaissance score
 
@@ -270,7 +270,7 @@ The release checks:
 - 30 official critical aggregate targets and 50 retained v0.6 modeling targets;
 - 82 unique IBM abandoned-mine inventory rows, contiguous source serials, all 26 material terms mapped, blank coordinates, source-page hash, and mandatory exclusion from model evidence;
 - 123 IBM 2024 mining-lease aggregate rows and 97 contiguous auction-granted concession rows, with source totals reconciled, five explicit missing areas, the Himachal Pradesh `n` anomaly preserved, zero coordinates and mandatory model exclusion;
-- 233 unique typed ontology entities, 510 audited source terms, a 98.24% mapped-term rate, nine explicitly unresolved nonspecific terms, and 96.94% row recovery from the referenced IMA list;
+- 254 unique typed ontology entities, 611 audited source/table/field terms, a 98.53% mapped-term rate, all 101 IBM State Review terms mapped, nine explicitly unresolved nonspecific terms elsewhere, all 21 State Review additions source-attributed, unchanged grid/candidate hashes, and 96.94% row recovery from the referenced IMA list;
 - 45 IBM NMI 2025 mineral tables, unique extract IDs, and UNFC subtotal arithmetic for every inventory row;
 - 36 IBM MCDR source pages, all 14 regional offices, unique event/latest-view IDs, date parsing and financial-year exceptions, blank coordinates, and explicit non-production/non-exhaustiveness flags;
 - explicit record-level flags and source provenance.
@@ -282,6 +282,7 @@ The release checks:
 - 50 material-level Sentinel-2 ablation rows, 70 purged spatial-fold rows, exact baseline parity with the published SoilGrids experiment, disjoint train/test groups, a minimum 50 km positive buffer, 500 group-bootstrap replicates, exclusion of observation-quality predictors, fold-only Sentinel imputation without missingness indicators, a mandatory unresolved post-label surface-disturbance guardrail, fixed admission gates and unchanged national-grid/candidate hashes.
 - 50 official-block material-summary rows and 221 block-material observations from 151 target-mapped footprints within a screened pool of 99 unique accepted central and 67 admitted State footprints; central-reoffer invariance and deduplication; exact reconstruction of 444,285 published top-five score, percentile and distance values; greater-than-25 km primary and comparison exclusions; 500 H3 resolution-3 group-bootstrap replicates; fixed statistical and knowledge-independence gates; and unchanged national-grid/candidate hashes.
 - eight pinned GSI/OGD catalogue and resource identities; 381 catalogue-reported records; 78 preview-exposed rows and 303 explicitly unexposed rows; 60 point and 18 coordinate-range interpretations; India-bound checks for every representative coordinate; source-State comparisons against 2011 boundaries; preserved coordinate/source anomalies; descriptive cross-source joins; mandatory model exclusion; and unchanged national-grid/candidate hashes.
+- 586 IBM State Review occurrence-geography rows, 1,742 district-crosswalk rows, 1,734 one-to-one admissions, eight historical one-to-many withholds, 59,872 unique H3 context rows, zero unresolved material or district terms, complete source-page term checks, per-entity chemical/English display fallbacks, and mandatory exclusion from model evidence.
 
 Build-time results are written to `outputs/validation_report.json`. A passing report means the pipeline's structural checks passed; it does not validate mineral occurrence in the field.
 

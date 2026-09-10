@@ -34,9 +34,9 @@ const targets = [
   },
   {
     file: "data_dictionary.csv",
-    expectedRows: 1758,
+    expectedRows: 1759,
     expectedColumns: 6,
-    ranges: ["A1664:F1759"],
+    ranges: ["A1665:F1760"],
   },
 ];
 
@@ -75,6 +75,7 @@ for (const target of targets) {
     throw new Error(`${target.file} shape ${JSON.stringify(shape)} did not match ${target.expectedRows}x${target.expectedColumns}`);
   }
   const workbook = await Workbook.fromCSV(csvText, { sheetName: "Data" });
+  workbook.recalculate();
   const inspections = [];
   const previews = [];
   for (const [rangeIndex, range] of target.ranges.entries()) {
