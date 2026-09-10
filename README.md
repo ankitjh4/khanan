@@ -17,7 +17,7 @@ KHANAN is intended to generate independent, early-stage hypotheses from lawful p
 
 ## Current status
 
-**Development release: v1.0-alpha.18 · Geospatial feature baseline: v0.12 · Prospectivity model baseline: v0.6 · Active work in progress**
+**Development release: v1.0-alpha.19 · Geospatial feature baseline: v0.12 · Prospectivity model baseline: v0.6 · Active work in progress**
 
 The current release covers India with 88,857 H3 resolution-6 cells, approximately 36 km² each. It includes 781 public-source site records, 1,504 IBM MCDR inspection events, 82 IBM abandoned-mine inventory records, 722 IBM NMI resource-inventory rows, 123 IBM 2024 lease-distribution rows, 97 IBM auction-granted concession records, five dated Andhra auction-status evidence rows, 199 central critical-mineral auction events, 13 independently published EarthChem geochemical samples represented by 1,323 long-form measurements, 950 selected Sentinel-2 scenes summarized over 8,707,986 requested seasonal sample points, 50 strategic modeling targets, and 2,784 validation-gated candidate cells.
 
@@ -53,7 +53,9 @@ Alpha.16 completes review of all 97 IBM rows by adding the 31 Rajasthan records 
 
 Alpha.17 adds the first redistributable, coordinate-bearing analytical geochemistry layer. EarthChem ECL 4498 contributes 13 published samples at two western-Assam coordinate sites: 663 whole-rock observations across 51 major-oxide, trace-element and Sr–Nd parameters, plus 660 electron-microprobe mineral-spot observations across 12 parameters. The source archive and both workbooks match publisher SHA-1 checksums and carry CC-BY-4.0 attribution. Source blanks, `b.d.l.`, unresolved `NA` tokens and dashes remain distinct; method-code and beam-diameter anomalies are retained and flagged. These targeted petrological samples are independent context, not a regional survey, mine, reserve or discovery, and remain excluded from v0.6 training and validation. See [`docs/earthchem_lithium_geochemistry.md`](docs/earthchem_lithium_geochemistry.md).
 
-Alpha.18 adds nationwide, two-season Copernicus Sentinel-2 Level-2A surface context. The pipeline selects 475 India-relevant MGRS scenes in each fixed 2025 window, samples every one of the 49 H3 resolution-8 child centroids in all 88,857 parent cells, applies product-specific bottom-of-atmosphere radiometry and native 20 m scene classification, and publishes six-band reflectance, five broad indices, two exploratory ratios, coverage and support flags. Complete 49-of-49 coverage is 97.16% in each season, 98.96% of cells have at least one clear-land observation and 84.25% have bare-surface support in both windows. These are non-specific surface and confounder-control features—not mineral detections—and remain excluded from v0.6 scoring pending spatial ablation. See [`docs/sentinel2_surface_context.md`](docs/sentinel2_surface_context.md).
+Alpha.18 adds nationwide, two-season Copernicus Sentinel-2 Level-2A surface context. The pipeline selects 475 India-relevant MGRS scenes in each fixed 2025 window, samples every one of the 49 H3 resolution-8 child centroids in all 88,857 parent cells, applies product-specific bottom-of-atmosphere radiometry and native 20 m scene classification, and publishes six-band reflectance, five broad indices, two exploratory ratios, coverage and support flags. Complete 49-of-49 coverage is 97.16% in each season, 98.96% of cells have at least one clear-land observation and 84.25% have bare-surface support in both windows. These are non-specific surface and confounder-control features—not mineral detections—and remain excluded from v0.6 scoring. See [`docs/sentinel2_surface_context.md`](docs/sentinel2_surface_context.md).
+
+Alpha.19 completes the first paired spatial ablation of that surface family. A compact 18-feature Sentinel extension is compared with the exact published baseline across 70 purged H3 resolution-3 folds for fourteen supported materials. Four point estimates improve and ten decline. Vanadium's large improvement has only ten positive cells; Silver's supported and uncertainty-positive improvement reduces high-score recall; Lead's interval crosses zero. Titanium, manganese and phosphorus have wholly negative intervals. A separate hard guardrail records that 2025 imagery at known mines can encode post-discovery surface disturbance. No material passes every fixed support, coverage, AUC, uncertainty, recall and leakage gate, so candidate scores and ranks remain unchanged. See [`docs/sentinel2_spatial_ablation.md`](docs/sentinel2_spatial_ablation.md).
 
 Candidate scores are reconnaissance indices. They are not probabilities of discovery, resource estimates, reserves, grades, economic valuations, legal concessions, or drill targets.
 
@@ -95,6 +97,10 @@ Every positive point estimate remains statistically inconclusive under the spati
 
 Four of 14 SoilGrids point estimates improve and ten decline. Aluminium is the strongest adequately supported positive result (`+0.0307` ROC-AUC), but its spatial-group interval crosses zero. Phosphorus and manganese have wholly negative intervals. No material passes the admission gate, and SoilGrids remains excluded from production scoring. The exact protocol is documented in [`docs/soilgrids_spatial_ablation.md`](docs/soilgrids_spatial_ablation.md).
 
+![KHANAN Sentinel-2 spatial ablation](assets/figures/khanan-sentinel2-spatial-ablation-v0.1.png)
+
+Four of 14 Sentinel-2 point estimates improve and ten decline. Vanadium is under-supported, Silver loses high-score recall, and Lead's interval crosses zero. No material passes the complete gate. The exact baseline is reproduced, imagery-quality fields are excluded from predictors, and candidate rankings remain unchanged. The protocol is documented in [`docs/sentinel2_spatial_ablation.md`](docs/sentinel2_spatial_ablation.md).
+
 ## Autonomy statement
 
 Within its digital research scope, baseline v0.6 was acquired, parsed, normalized, spatially joined, modeled, validated, visualized, documented, and packaged autonomously by AI agents under a human-defined objective. The agents preserved source wording, hashes, quality flags, and exceptions rather than silently manufacturing missing values.
@@ -129,7 +135,7 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 | Weather and climate | Implemented | Daily-derived twelve-month temperature, precipitation, humidity and wind summaries. |
 | Population and demographics | Implemented | Responsible-planning context; not a geological cause of mineralization. |
 | Soil texture and properties | SoilGrids 2.0 context implemented and ablated; not admitted to scoring | Nine properties at two depths include mean and 90% prediction-interval endpoints. Fourteen materials were tested across 70 purged spatial folds; none passed the uncertainty-aware admission gate. Global modeled values are not field assays. NGDR soil/geochemical values remain catalog-only. |
-| Satellite mineral and alteration signatures | Sentinel-2 broad surface context implemented; mineral-specific signatures not yet implemented | Alpha.18 publishes six-band BOA reflectance, five broad indices, two exploratory ratios, native-SCL masking and two-season support for all 88,857 cells. These non-specific proxies are excluded from scoring pending spatial ablation; hyperspectral and mineral-specific validation remain planned. |
+| Satellite mineral and alteration signatures | Sentinel-2 broad surface context implemented and ablated; not admitted to scoring | Alpha.18 publishes six-band BOA reflectance, broad indices, ratios, native-SCL masking and two-season support for all 88,857 cells. Alpha.19 tests 18 predictors across 70 purged folds: no material passes every admission gate. Hyperspectral and deposit-type validation remain planned. |
 | Vegetation, crop ecology and phenology | Planned | Possible indirect soil, moisture or geochemical stress signals; must survive independent validation. |
 | Agriculture and aggregate dietary patterns | Research-only/planned | Area-level context only. Never individual-level data and never treated as causal mineral evidence without a defensible scientific mechanism. |
 | Hydrology and groundwater chemistry | Planned | Catchment-aware transport and geochemical anomaly context. |
@@ -139,7 +145,7 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 
 ## Release files
 
-The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.18.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.18.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); it is not the current alpha artifact. The uncompressed nationwide prospectivity grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
+The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.19.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.19.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); it is not the current alpha artifact. The uncompressed nationwide prospectivity grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
 
 | File | Rows | Role |
 |---|---:|---|
@@ -172,7 +178,7 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/material_model_validation.csv` | 50 | Spatial holdout results and reasons a material could not be validated. |
 | `outputs/ngdr_service_inventory.csv` | 11 | Metadata-only inventory of selected NGDR mineral, geochemistry, geophysics, soil, lithology and geology services; no feature values. |
 | `outputs/source_registry.csv` | 36 | Provenance, access/licensing notes, uses and limitations. |
-| `outputs/data_dictionary.csv` | 1,424 | Field definitions, units and missing-value policies. |
+| `outputs/data_dictionary.csv` | 1,482 | Field definitions, units and missing-value policies. |
 | `outputs/validation_report.json` | 1 | Cross-dataset counts, join coverage, coordinate checks and guardrails. |
 | `outputs/official_critical_blocks_validation.json` | 1 | Auction count, lineage, provenance and geometry validation. |
 | `outputs/ibm_nmi_2025_extraction_validation.json` | 1 | NMI PDF extraction and UNFC subtotal validation. |
@@ -190,11 +196,14 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/material_soilgrids_spatial_ablation.csv` | 50 | Material-level paired SoilGrids ablation metrics, uncertainty intervals and feature-admission decisions. |
 | `outputs/material_soilgrids_spatial_ablation_folds.csv` | 70 | Fold-level sample counts, separation checks and paired baseline/SoilGrids metrics. |
 | `outputs/soilgrids_spatial_ablation_validation.json` | 1 | SoilGrids ablation protocol, fixed gates, input/output hashes, aggregate results and proof that rankings were unchanged. |
+| `outputs/material_sentinel2_spatial_ablation.csv` | 50 | Material-level paired Sentinel-2 ablation metrics, spatial-group uncertainty intervals and fixed feature-admission decisions. |
+| `outputs/material_sentinel2_spatial_ablation_folds.csv` | 70 | Fold-level sample counts, separation checks, surface-feature coverage and paired baseline/Sentinel-2 metrics. |
+| `outputs/sentinel2_spatial_ablation_validation.json` | 1 | Sentinel-2 ablation protocol, baseline parity, fixed gates, input/output hashes and proof that national-grid and candidate files were unchanged. |
 | `outputs/earthchem_geochemical_validation.json` | 1 | EarthChem source checksums, dimensions, qualifier counts, coordinate/H3/admin checks, method-conflict flags and mandatory model exclusions. |
 | `outputs/sentinel2_surface_context_validation.json` | 1 | Sentinel catalog scope, scene selection, native-SCL and radiometric checks, national coverage, index ranges, token screening and unchanged-ranking hashes. |
 | `outputs/nasa_power_rolling_12m_validation.json` | 1 | Weather-source checksums, completeness and range checks. |
 | `outputs/india_mining_dataset_companion.xlsx` | — | Legacy v0.6 thirteen-sheet review workbook. It does not yet include the v1 ontology; the CSVs remain authoritative. |
-| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.18.zip` | — | Portable 96-member development bundle, including the full grid, reviewed State MBS geometry and Andhra status-evidence layers, magnetic, soil, EarthChem geochemistry and Sentinel-2 surface context, paired ablation evidence, ontology, contextual mine and concession layers, service audit, validations, maps and reproducibility scripts. |
+| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.19.zip` | — | Portable 104-member development bundle, including the full grid, reviewed State MBS geometry and Andhra status-evidence layers, magnetic, soil, EarthChem geochemistry and Sentinel-2 surface context, three paired feature-ablation experiments, ontology, contextual mine and concession layers, service audit, validations, maps and reproducibility scripts. |
 | `outputs/SHA256SUMS.txt` | — | Integrity hashes for published artifacts. |
 
 ## Repository structure
@@ -275,6 +284,7 @@ KHANAN/
 - **Completed in alpha.5:** run material-wise paired EMAG2 ablation across purged H3 spatial folds, quantify uncertainty with a group bootstrap, and reject production admission because no material clears every gate.
 - **Completed in alpha.17:** integrate EarthChem ECL 4498 under CC-BY-4.0 as 13 coordinate-bearing samples and 1,323 method-rich long-form observations; preserve every missing-value class and source anomaly; keep all rows outside model training and validation.
 - **Completed in alpha.18:** select and audit 950 Copernicus Sentinel-2 Level-2A scenes across two fixed 2025 windows; sample 8,707,986 H3 child-centroid observations; apply per-product radiometry and native 20 m scene classification; publish nationwide non-scoring surface-context features, lineage, validation and a reproducible map.
+- **Completed in alpha.19:** test a compact 18-feature Sentinel-2 family on the same 70 purged spatial folds and exact baseline as the prior feature experiments; exclude imagery-quality variables from predictors; quantify paired uncertainty; reject production admission because no material passes all fixed gates.
 - Repeat magnetic admission testing only after materially stronger independent labels or higher-resolution geophysics become available.
 - Acquire lawful NGDR/GSI/state geochemical, magnetic, gravity, radiometric and structural datasets.
 - Add multispectral and hyperspectral mineral/alteration indices with sensor provenance.
@@ -346,6 +356,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/evaluate_soilgrids_spatial_ablation.py
 .venv/bin/python scripts/build_earthchem_geochemistry.py --refresh
 .venv/bin/python scripts/build_sentinel2_surface_context.py
+.venv/bin/python scripts/evaluate_sentinel2_spatial_ablation.py
 .venv/bin/python scripts/plot_khanan_overview.py
 .venv/bin/python scripts/plot_emag2_context.py
 .venv/bin/python scripts/plot_emag2_ablation.py
@@ -354,6 +365,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/plot_ibm_auction_mbs_geometries.py
 .venv/bin/python scripts/plot_earthchem_geochemistry.py
 .venv/bin/python scripts/plot_sentinel2_surface_context.py
+.venv/bin/python scripts/plot_sentinel2_ablation.py
 .venv/bin/python scripts/build_release.py
 ```
 
@@ -372,7 +384,7 @@ The XLSX companion is generated by `scripts/build_workbook.mjs` using the Codex 
 
 ## Important current limitations
 
-The release is not an exhaustive current mine/lease register. It still lacks deposit-level NMI coordinates, comprehensive state mine registers, controlling grant status, model-admitted soil/geochemistry/geophysics/remote-sensing features, drill logs, site-level grade/tonnage/depth, mineral-specific alteration mapping, protected-area and forest-clearance layers, water stress, infrastructure, land tenure and social-license constraints. EarthChem ECL 4498 supplies measured analytical context, but only for 13 targeted samples at two sites; it is not a systematic survey and remains outside scoring. Sentinel-2 alpha.18 supplies national surface reflectance and exposure context, but the broad indices and ratios are non-specific and remain outside scoring until leakage-safe spatial ablation. SoilGrids supplies national modeled pedological context but not field geochemical assays; the alpha.7 spatial ablation admits it to no production material model. EMAG2v3 supplies moderate-resolution magnetic context, but the alpha.5 spatial ablation also admits it to no production material model. NGDR service metadata is audited, but its raw values remain outside the release and scoring pipeline for the reasons documented in [`docs/ngdr_access_and_integration.md`](docs/ngdr_access_and_integration.md).
+The release is not an exhaustive current mine/lease register. It still lacks deposit-level NMI coordinates, comprehensive state mine registers, controlling grant status, model-admitted soil/geochemistry/geophysics/remote-sensing features, drill logs, site-level grade/tonnage/depth, mineral-specific alteration mapping, protected-area and forest-clearance layers, water stress, infrastructure, land tenure and social-license constraints. EarthChem ECL 4498 supplies measured analytical context, but only for 13 targeted samples at two sites; it is not a systematic survey and remains outside scoring. Sentinel-2 alpha.18 supplies national surface reflectance and exposure context; the alpha.19 ablation admits none of its broad predictors to production scoring. Vanadium and Silver show follow-up signals but fail the support and recall gates respectively, so neither result is a discovery or candidate claim. The 2025 imagery may also encode post-discovery mine disturbance at known positive sites; that leakage risk independently blocks production admission. SoilGrids supplies national modeled pedological context but not field geochemical assays; the alpha.7 spatial ablation admits it to no production material model. EMAG2v3 supplies moderate-resolution magnetic context, but the alpha.5 spatial ablation also admits it to no production material model. NGDR service metadata is audited, but its raw values remain outside the release and scoring pipeline for the reasons documented in [`docs/ngdr_access_and_integration.md`](docs/ngdr_access_and_integration.md).
 
 One official Biarpalli source table places an Odisha block near 89°E; KHANAN retains and flags the published coordinates. The 143 auction-offer observations reconstruct to 100 distinct published footprints, while the tranche-VIII government release reports 88 cumulative offered blocks. That discrepancy remains explicitly unreconciled.
 

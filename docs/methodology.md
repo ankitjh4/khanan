@@ -151,7 +151,15 @@ Every national H3 resolution-6 cell is represented by the centroids of all 49 H3
 
 The published table retains seasonal coverage and SCL counts, six reflectance medians, NDVI, NDMI, MNDWI, BSI and NDTI, plus two exploratory bare-surface band ratios. Complete 49-point coverage is 97.16% in each window, 98.96% of cells have clear-land support and 84.25% have bare support in both seasons. Missing or cloud-obscured observations remain missing; they are not interpolated or set to zero. These signals are broad surface-context and confounder-control features, not diagnostic mineral spectra or subsurface observations. Candidate scores and ranks remain unchanged. See [`sentinel2_surface_context.md`](sentinel2_surface_context.md) for the exact extraction contract, lineage and interpretation limits.
 
-## 17. Material ontology and model eligibility
+## 17. Sentinel-2 feature-admission ablation
+
+Alpha.19 evaluates a compact 18-variable subset of the alpha.18 surface-context layer with the same paired logistic design, deterministic pseudo-absence samples, H3 resolution-3 folds and 50 km training purge used for the EMAG2 and SoilGrids experiments. The paired baseline counts, fold membership and metrics reproduce the published SoilGrids baseline exactly.
+
+The Sentinel extension uses six two-season bare-surface reflectance bands, four broad bare-surface indices, two exploratory bare-surface ratios and dry/post clear-land NDVI, NDMI and BSI. Observation counts, coverage fractions, scene identifiers, support classes and quality flags are excluded from predictors. Missing Sentinel values receive training-fold medians before model preprocessing, and a design-width assertion ensures that missingness indicators are not created for the Sentinel family. A separate hard guardrail records that 2025 imagery at known sites can encode mine disturbance or infrastructure rather than pre-discovery geology; spatial folds alone do not resolve that post-label leakage risk.
+
+Fourteen materials produce 70 complete spatial folds. Four improve and ten decline in pooled ROC AUC. Vanadium improves by `+0.2524` with a wholly positive interval but has only 10 positive cells versus the 20-cell admission minimum. Silver improves by `+0.1252` with a wholly positive interval but loses high-score recall. Lead's positive interval crosses zero. Titanium, manganese and phosphorus have wholly negative intervals. No material passes every fixed support, coverage, AUC, uncertainty and recall gate. Candidate rankings remain unchanged and Sentinel-2 remains context only. See [`sentinel2_spatial_ablation.md`](sentinel2_spatial_ablation.md) for the full protocol.
+
+## 18. Material ontology and model eligibility
 
 The v1.0-alpha.3 ontology contains 233 unique, typed entities derived from material terms actually observed in the India source tables, plus the retained v0.6 targets. It contains 69 elements, 88 mineral species, and 76 other entities spanning ores, rocks, groups, mixtures, varieties, industrial materials, and energy commodities. Stable typed IDs prevent an element, ore, mineral species, and informal group from being silently treated as the same thing.
 
@@ -165,7 +173,7 @@ Ontology inclusion never confers model eligibility. The geospatial prediction co
 
 Ontology arrays identify names, possible compounds, or representative forms; they do not assert assay, grade, recoverability, mineral processing route, or economic value at a site. Formulas are supplied only for elements, verified species, or defensible compounds. Otherwise the English names are preserved in arrays as requested.
 
-## 18. Reconnaissance score
+## 19. Reconnaissance score
 
 For a material with at least five mapped source records, cell score components are:
 
@@ -189,7 +197,7 @@ and clipped to 0–1. Materials with one to four evidence records receive a low-
 
 The score is a relative reconnaissance index. It is **not a calibrated discovery probability**.
 
-## 19. Spatial validation
+## 20. Spatial validation
 
 Materials with at least 10 mapped India evidence records are evaluated with up to five GroupKFold splits grouped by H3 resolution-3 cells. Each fold trains the same score recipe on geographically separated evidence and compares held-out occurrences with a deterministic sample of grid cells more than 25 km from any catalog evidence.
 
@@ -202,7 +210,7 @@ The comparison cells are not confirmed barren, so these metrics measure catalog-
 
 In v0.1, 15 material models have at least 10 records and spatial validation results. Vanadium's holdout AUC was below the promotion threshold and is therefore not labeled as a candidate even when its raw score is high.
 
-## 20. Candidate promotion rules
+## 21. Candidate promotion rules
 
 A cell is never promoted when it is within 5 km of any mapped source site. For all candidate classes, the top material must have at least 10 source records and the nearest same-material evidence must be more than 25 km and no more than 250 km away.
 
@@ -221,7 +229,7 @@ A cell is never promoted when it is within 5 km of any mapped source site. For a
 
 The national rank sorts passing candidates by validation AUC, then percentile, then score. Neighboring high-ranked H3 cells are usually one regional signal and should be dissolved/clustered before field planning.
 
-## 21. Validation and quality controls
+## 22. Validation and quality controls
 
 The release checks:
 
@@ -244,18 +252,19 @@ The release checks:
 - 50 material-level EMAG2 ablation rows, 70 purged spatial-fold rows, disjoint train/test groups, a minimum 50 km positive buffer, finite paired metrics, 500 group-bootstrap replicates for every evaluated material, fixed admission gates, and an unchanged candidate-table hash.
 - 13 EarthChem sample rows, two published coordinate sites, 1,323 unique source-cell observations, publisher checksum matches, qualifier counts, analytical metadata, H3/admin joins, numeric-range checks, explicit source-conflict flags and mandatory exclusion from v0.6.
 - 88,857 unique Sentinel-2 surface-context rows; 950 unique scenes and matching 475-tile seasonal sets; fixed observation windows; catalog thresholds; product-specific BOA conversion; native 20 m SCL code validity; bounded sample counts and indices; reflectance screening; token-free public URLs; explicit model exclusion; and unchanged grid/candidate hashes.
+- 50 material-level Sentinel-2 ablation rows, 70 purged spatial-fold rows, exact baseline parity with the published SoilGrids experiment, disjoint train/test groups, a minimum 50 km positive buffer, 500 group-bootstrap replicates, exclusion of observation-quality predictors, fold-only Sentinel imputation without missingness indicators, a mandatory unresolved post-label surface-disturbance guardrail, fixed admission gates and unchanged national-grid/candidate hashes.
 
 Build-time results are written to `outputs/validation_report.json`. A passing report means the pipeline's structural checks passed; it does not validate mineral occurrence in the field.
 
-## 22. What is required for a defensible discovery model
+## 23. What is required for a defensible discovery model
 
 Before using the output to allocate exploration capital, add:
 
 - authorized National Geoscience Data Repository geochemistry, higher-resolution geophysics, baseline geology, boreholes, and exploration reports;
-- material-wise spatial ablation demonstrating that EMAG2v3 adds generalizable information beyond geology and proximity baselines;
+- materially stronger independent labels or higher-resolution geophysics, followed by renewed spatial ablation beyond the negative alpha.5 EMAG2v3 result;
 - current Indian Bureau of Mines and state lease/working-mine registers, plus deposit-level NMI geometry where authorized;
 - exact geometry and controlling legal/grant status for auction/exploration blocks not yet covered by the tranche-VIII summaries;
-- material- and deposit-type spatial ablation of the published Sentinel-2 surface context, followed by validated multispectral/hyperspectral alteration indices and structural lineaments;
+- material- and deposit-type follow-up to the broad Sentinel-2 ablation, especially independent support tests for Vanadium and recall-preserving Silver models, followed by validated multispectral/hyperspectral alteration indices and structural lineaments;
 - deposit-type labels, grade/tonnage/depth, ore mineralogy, and negative/sterile drilling outcomes;
 - accessibility, road/rail/port/power/water features;
 - forests, protected areas, land tenure, clearances, displacement risk, and community-impact constraints;

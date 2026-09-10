@@ -1,0 +1,221 @@
+{
+  "release_version": "v1.0-alpha.19",
+  "experiment_version": "sentinel2-spatial-ablation-v0.1",
+  "source_feature_version": "sentinel2-l2a-h3-r6-surface-context-v0.1",
+  "input_sha256": {
+    "national_grid": "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9",
+    "sentinel2_surface_context": "9e27de97dc5f3261e6b1e0d9a5a31b689bf2893a3d0a74e0cad8156e98553bfe",
+    "known_sites": "3fd4ed34e4d717058d0320e882396afe7b0e39cb4c52d0d6e0b49a7045c379ab",
+    "strategic_materials": "22a3c2c5e9eb9670614be0894060cb7a935e448ca28c2d26d413926d52fb4751",
+    "reference_soilgrids_summary": "7ab4204e6711900aec665b7c3d252c431a7ad46768968d56df4a907f4a238b1d",
+    "reference_soilgrids_folds": "464714bd95832f0fc9d4890fc4961a566ff4ce716a54c894c448c6d5dd621bd0",
+    "candidate_table_before_and_after": "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04"
+  },
+  "method": {
+    "classifier": "L2-regularized logistic regression with class-balanced fitting",
+    "feature_scaling": "training-fold 5th-to-95th-percentile robust scaling, then clipping to [-10, 10]",
+    "spatial_split": "StratifiedGroupKFold grouped by H3 resolution-3",
+    "purge_distance_km_around_test_positives": 50.0,
+    "background_exclusion_from_any_positive_km": 25.0,
+    "positive_unit": "unique H3 resolution-6 cell",
+    "background_status": "deterministic pseudo-absence; not confirmed barren",
+    "baseline_features": [
+      "elevation_m",
+      "slope_degrees_approx",
+      "local_relief_m_approx",
+      "temperature_mean_c_rolling_12m",
+      "precipitation_total_mm_rolling_12m",
+      "relative_humidity_mean_pct_rolling_12m",
+      "wind_speed_2m_mean_m_s_rolling_12m",
+      "fold_safe_log1p_distance_to_training_positive_km",
+      "fold_safe_log1p_training_positive_count_100km",
+      "fold_safe_training_positive_geology_affinity"
+    ],
+    "added_sentinel2_features": [
+      "annual_bare_b02_reflectance_median",
+      "annual_bare_b03_reflectance_median",
+      "annual_bare_b04_reflectance_median",
+      "annual_bare_b08_reflectance_median",
+      "annual_bare_b11_reflectance_median",
+      "annual_bare_b12_reflectance_median",
+      "annual_bare_ndvi_median",
+      "annual_bare_ndmi_median",
+      "annual_bare_bsi_median",
+      "annual_bare_ndti_median",
+      "annual_bare_red_blue_ratio_median",
+      "annual_bare_swir1_swir2_ratio_median",
+      "dry_clear_land_ndvi_median",
+      "dry_clear_land_ndmi_median",
+      "dry_clear_land_bsi_median",
+      "post_clear_land_ndvi_median",
+      "post_clear_land_ndmi_median",
+      "post_clear_land_bsi_median"
+    ],
+    "sentinel2_feature_count": 18,
+    "sentinel2_missing_values": "training-fold median imputation without Sentinel missingness indicators; observation counts, support classes and quality flags are excluded from predictors",
+    "uncertainty": "500-replicate stratified spatial-group bootstrap of paired out-of-fold ROC-AUC delta",
+    "baseline_parity_reference": "published SoilGrids ablation, which uses identical evidence, background sampling, folds, purge and baseline model",
+    "post_label_surface_disturbance_leakage": "unresolved: 2025 reflectance at known sites can encode mining disturbance or infrastructure rather than pre-discovery geology"
+  },
+  "admission_gate": {
+    "minimum_unique_positive_cells": 20,
+    "minimum_positive_h3_r3_groups": 4,
+    "all_planned_folds_complete": true,
+    "minimum_positive_complete_sentinel2_coverage": 0.8,
+    "minimum_sentinel2_roc_auc": 0.6,
+    "minimum_delta_roc_auc": 0.02,
+    "delta_auc_ci95_lower_bound_strictly_positive": true,
+    "sentinel2_recall_at_background_top5pct_not_lower_than_baseline": true,
+    "post_label_surface_disturbance_leakage_resolved": false,
+    "production_admission_effect": "None. Statistical criteria plus leakage resolution would permit domain review and a separate shadow-ranking test only."
+  },
+  "summary_rows": 50,
+  "fold_rows": 70,
+  "evaluated_materials": 14,
+  "materials_passing_shadow_gate": 0,
+  "passing_materials": [],
+  "materials_with_positive_pooled_auc_delta": 4,
+  "materials_with_negative_pooled_auc_delta": 10,
+  "candidate_scores_recomputed": false,
+  "production_scoring_changed": false,
+  "candidate_table_sha256_unchanged": true,
+  "national_grid_sha256_unchanged": true,
+  "baseline_parity_with_existing_ablation": true,
+  "baseline_parity_max_abs_differences": {
+    "summary_known_evidence_records_raw_max_abs_difference": 0.0,
+    "summary_unique_positive_h3_cells_max_abs_difference": 0.0,
+    "summary_positive_h3_r3_groups_max_abs_difference": 0.0,
+    "summary_background_cells_sampled_max_abs_difference": 0.0,
+    "summary_spatial_cv_folds_max_abs_difference": 0.0,
+    "summary_oof_positive_rows_max_abs_difference": 0.0,
+    "summary_oof_background_rows_max_abs_difference": 0.0,
+    "summary_baseline_roc_auc_max_abs_difference": 0.0,
+    "summary_baseline_average_precision_max_abs_difference": 0.0,
+    "summary_baseline_recall_at_background_top5pct_max_abs_difference": 0.0,
+    "summary_baseline_brier_score_max_abs_difference": 0.0,
+    "summary_minimum_test_positive_to_training_positive_km_max_abs_difference": 0.0,
+    "fold_train_positive_rows_max_abs_difference": 0.0,
+    "fold_train_background_rows_max_abs_difference": 0.0,
+    "fold_test_positive_rows_max_abs_difference": 0.0,
+    "fold_test_background_rows_max_abs_difference": 0.0,
+    "fold_train_spatial_groups_max_abs_difference": 0.0,
+    "fold_test_spatial_groups_max_abs_difference": 0.0,
+    "fold_minimum_test_positive_to_training_positive_km_max_abs_difference": 0.0,
+    "fold_baseline_roc_auc_max_abs_difference": 0.0,
+    "fold_baseline_average_precision_max_abs_difference": 0.0,
+    "fold_baseline_recall_at_background_top5pct_max_abs_difference": 0.0
+  },
+  "checks": [
+    {
+      "name": "summary_rows",
+      "passed": true,
+      "observed": 50,
+      "expected": 50
+    },
+    {
+      "name": "unique_materials",
+      "passed": true,
+      "observed": 50,
+      "expected": 50
+    },
+    {
+      "name": "unique_summary_ids",
+      "passed": true,
+      "observed": 50,
+      "expected": 50
+    },
+    {
+      "name": "evaluated_materials",
+      "passed": true,
+      "observed": 14,
+      "expected": ">=10"
+    },
+    {
+      "name": "fold_rows_present",
+      "passed": true,
+      "observed": 70,
+      "expected": ">0"
+    },
+    {
+      "name": "unique_fold_ids",
+      "passed": true,
+      "observed": 70,
+      "expected": 70
+    },
+    {
+      "name": "train_test_groups_disjoint",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "purge_distance_enforced",
+      "passed": true,
+      "observed": 50.37231942,
+      "expected": ">=50.0"
+    },
+    {
+      "name": "metric_ranges",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "bootstrap_replicates",
+      "passed": true,
+      "observed": 500,
+      "expected": ">=400 per evaluated material"
+    },
+    {
+      "name": "baseline_parity",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "no_observation_quality_predictors",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "post_label_surface_disturbance_leakage_guardrail",
+      "passed": true,
+      "observed": "unresolved_and_blocks_production_admission",
+      "expected": "unresolved_and_blocks_production_admission"
+    },
+    {
+      "name": "candidate_scores_not_recomputed",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "production_status_shadow_only",
+      "passed": true,
+      "observed": [
+        "not_admitted_shadow_evaluation_only"
+      ],
+      "expected": [
+        "not_admitted_shadow_evaluation_only"
+      ]
+    },
+    {
+      "name": "candidate_hash_unchanged",
+      "passed": true,
+      "observed": "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04",
+      "expected": "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04"
+    },
+    {
+      "name": "national_grid_hash_unchanged",
+      "passed": true,
+      "observed": "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9",
+      "expected": "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9"
+    }
+  ],
+  "checks_pass": true,
+  "output_sha256": {
+    "summary_csv": "d5b288b3f53ebed0a5b1114984b35f79141ac78066b8e918bba4cc8b8ebd2fc3",
+    "fold_csv": "55967da805311c1772cfaae39c3068543dcae663f5cfd53b8950adcd4e551999"
+  }
+}

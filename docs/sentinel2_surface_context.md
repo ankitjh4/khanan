@@ -4,7 +4,7 @@
 
 KHANAN v1.0-alpha.18 adds a reproducible, nationwide Sentinel-2 Level-2A surface-context table. The layer describes visible, near-infrared and short-wave-infrared surface conditions in two fixed 2025 windows. It is designed to control for vegetation, water, moisture, clouds, seasonal exposure and broad spectral variation before later mineral-model experiments.
 
-The layer does **not** identify a mineral, metal, orebody or subsurface deposit. The published indices and ratios are non-specific and can respond to vegetation, soil moisture, land use, crop cycles, fire, atmosphere, mixed pixels and many rock or soil types. They are excluded from v0.6 training, validation, candidate classes and rankings pending material-wise spatial ablation.
+The layer does **not** identify a mineral, metal, orebody or subsurface deposit. The published indices and ratios are non-specific and can respond to vegetation, soil moisture, land use, crop cycles, fire, atmosphere, mixed pixels and many rock or soil types. Alpha.19 completes the first material-wise spatial ablation, but no material passes every admission gate. The features remain excluded from v0.6 training, candidate classes and rankings.
 
 ## Source, access and licensing
 
@@ -120,4 +120,4 @@ The build caches catalog selections, product metadata and per-scene samples belo
 
 ## Admission work still required
 
-Before any Sentinel feature affects a prospectivity score, KHANAN must define material- and deposit-type mechanisms, establish leakage-safe spatial folds, compare against the unchanged v0.6 baseline, estimate uncertainty across spatial groups, test independent regions and reject features that do not improve out-of-region performance. Hyperspectral or field-spectrometer measurements, geological mapping and laboratory confirmation remain necessary for material-specific interpretation.
+Alpha.19 establishes leakage-safe spatial folds, exact baseline parity and spatial-group uncertainty for a compact broad feature family; [`sentinel2_spatial_ablation.md`](sentinel2_spatial_ablation.md) publishes the result. Before any Sentinel feature affects a prospectivity score, KHANAN must add material- and deposit-type mechanisms, independently test the under-supported Vanadium result, preserve or improve Silver high-score recall, validate new regions and reject features that do not improve out-of-region performance. Hyperspectral or field-spectrometer measurements, geological mapping and laboratory confirmation remain necessary for material-specific interpretation.
