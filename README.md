@@ -17,11 +17,11 @@ KHANAN is intended to generate independent, early-stage hypotheses from lawful p
 
 ## Current status
 
-**Development release: v1.0-alpha.7 · Geospatial feature baseline: v0.8 · Prospectivity model baseline: v0.6 · Active work in progress**
+**Development release: v1.0-alpha.8 · Geospatial feature baseline: v0.8 · Prospectivity model baseline: v0.6 · Active work in progress**
 
-The current release covers India with 88,857 H3 resolution-6 cells, approximately 36 km² each. It includes 781 public-source site records, 1,504 IBM MCDR inspection events, 82 IBM abandoned-mine inventory records, 722 IBM NMI resource-inventory rows, 199 central critical-mineral auction events, 50 strategic modeling targets, and 2,784 validation-gated candidate cells.
+The current release covers India with 88,857 H3 resolution-6 cells, approximately 36 km² each. It includes 781 public-source site records, 1,504 IBM MCDR inspection events, 82 IBM abandoned-mine inventory records, 722 IBM NMI resource-inventory rows, 123 IBM 2024 lease-distribution rows, 97 IBM auction-granted concession records, 199 central critical-mineral auction events, 50 strategic modeling targets, and 2,784 validation-gated candidate cells.
 
-The v1.0 alpha adds a source-derived material ontology with **230 unique entities**: 69 elements, 85 mineral species, and 76 ores, rocks, mineral groups, varieties, industrial materials, energy commodities, mixtures, and related material classes. It audits 450 distinct source terms: 443 are mapped and seven deliberately remain unresolved because the wording is nonspecific. Ontology coverage and prediction eligibility are separate: the validated geospatial model still scores only the 50 explicitly retained v0.6 targets.
+The v1.0 alpha adds a source-derived material ontology with **233 unique entities**: 69 elements, 88 mineral species, and 76 ores, rocks, mineral groups, varieties, industrial materials, energy commodities, mixtures, and related material classes. It audits 510 distinct source terms: 501 are mapped and nine deliberately remain unresolved because the wording is nonspecific. Ontology coverage and prediction eligibility are separate: the validated geospatial model still scores only the 50 explicitly retained v0.6 targets.
 
 Alpha.3 also adds a reproducible metadata audit of the National Geoscience Data Repository guest OGC services. The audit found 1,114 named WMS layers and 751 WFS feature types, then validated 11 nationally relevant mineral, geochemistry, geophysics, soil, lithology and geology layers reporting 2,459,737 features in total. These counts and schemas are catalog evidence only: no NGDR feature values are redistributed or used in the current model because dataset-specific reuse authority and essential units/method metadata remain unresolved.
 
@@ -32,6 +32,8 @@ Alpha.5 completes that first spatial ablation. It compares paired baseline and b
 Alpha.6 adds a CC BY 4.0 national soil-context layer from ISRIC SoilGrids 2.0. It samples nine properties at 0–5 cm and 30–60 cm for all 88,857 cells, retaining mean, p05 and p95 predictions from 54 hashed WCS rasters. Minimum national coverage is 99.28%; all prediction intervals are ordered and the maximum centroid-to-source-pixel distance is 1.938 km. Soil values and derived USDA texture classes are present in the national and candidate tables but remain context only. Protected production-ranking columns are unchanged.
 
 Alpha.7 completes the paired spatial ablation of SoilGrids. It reuses the exact deterministic samples, purged H3 resolution-3 folds and baseline predictions from the EMAG2 experiment, then adds 18 property means and 18 p05–p95 uncertainty widths. Fourteen materials produce 70 completed folds. Four point estimates improve and ten decline, but no positive AUC change has a strictly positive uncertainty interval. No material passes the fixed admission gate, so candidate scores, classes and ranks remain unchanged.
+
+Alpha.8 adds the authoritative IBM 2024 mineral-concession context. It transcribes 123 state/year, mineral, sector and area-band lease aggregates plus all 97 named mining leases or composite licences that IBM describes as granted through auction during 2023–24. The 2024 national total is 2,995 leases over 293,811.5373 hectares within the source's stated exclusions. The block table has no coordinates, geometries or controlling current-status records, so all rows remain context only and candidate rankings are unchanged. See [`docs/ibm_mineral_concessions_2024.md`](docs/ibm_mineral_concessions_2024.md).
 
 Candidate scores are reconnaissance indices. They are not probabilities of discovery, resource estimates, reserves, grades, economic valuations, legal concessions, or drill targets.
 
@@ -72,7 +74,7 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 1. **Create a stable national grid.** The India boundary is polyfilled with H3 resolution-6 cells. Each cell retains a WGS84 centroid, polygon and area.
 2. **Acquire source evidence.** Agents collect open or publicly accessible mineral occurrences, mine/prospect records, IBM inventories and inspections, official auction documents, geology, elevation, population, Census and meteorological data.
 3. **Preserve provenance.** Every dataset receives source identifiers, URLs, reference dates, access notes, licensing qualifications and known limitations. Official PDFs are recorded with hashes, sizes and page counts.
-4. **Normalize materials.** Source wording is crosswalked to a typed 230-entity ontology containing English names, defensible chemical names, symbols or formulae, representative ores/forms, strategic uses, authority links, and parent relationships. Vague or unmapped terms remain explicit rather than being guessed. A separate 50-material legacy set defines current model eligibility.
+4. **Normalize materials.** Source wording is crosswalked to a typed 233-entity ontology containing English names, defensible chemical names, symbols or formulae, representative ores/forms, strategic uses, authority links, and parent relationships. Vague or unmapped terms remain explicit rather than being guessed. A separate 50-material legacy set defines current model eligibility.
 5. **Build cell features.** Geology, elevation, slope, relief, rolling twelve-month climate, gridded population, district demographics, uncertainty-aware magnetic context and uncertainty-aware soil context are spatially associated with every cell.
 6. **Construct neighbourhood evidence.** The pipeline measures nearby known-site density and distance while using spatially separated folds to reduce leakage from adjacent cells.
 7. **Train material-specific screens.** Models are fitted only where enough mapped evidence exists. Unsupported materials remain visibly unscored rather than receiving invented predictions.
@@ -88,6 +90,7 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 |---|---|---|
 | Known mines, prospects and occurrences | Implemented | Positive evidence with source-specific quality controls. |
 | IBM abandoned-mine inventory | Implemented as context | Named historical-status records; excluded from scoring because the source publishes no coordinates or controlling current status. |
+| IBM 2024 mining-lease and auction-granted concession context | Implemented as context | National/state/mineral/sector/area-band distributions and 97 named blocks; non-spatial, provisional/status-qualified where applicable, and excluded from model evidence. |
 | Official auction footprints and results | Implemented | Inventory/overlay context only; excluded from model evidence. |
 | Geological map units | Implemented | Regional age, group, supergroup and stratigraphic context. |
 | Terrain | Implemented | Elevation, approximate slope, relief and terrain class. |
@@ -104,7 +107,7 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 
 ## Release files
 
-The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.7.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.7.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); its availability follows the owner's Drive sharing settings, and it is not the current alpha artifact. The uncompressed nationwide grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
+The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.8.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.8.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); its availability follows the owner's Drive sharing settings, and it is not the current alpha artifact. The uncompressed nationwide grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
 
 | File | Rows | Role |
 |---|---:|---|
@@ -116,23 +119,26 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/india_ibm_mcdr_inspection_events_2023_2026.csv` | 1,504 | IBM regional MCDR inspection-table events; not proof of production or compliance. |
 | `outputs/india_ibm_mcdr_latest_inspected_mines.csv` | 1,353 | Practical latest-event view of MCDR records. |
 | `outputs/india_ibm_abandoned_mine_sites.csv` | 82 | IBM's named abandoned/orphaned-mine inventory for reclamation context; no coordinates or current-status inference. |
+| `outputs/india_ibm_mining_lease_distribution_2024.csv` | 123 | IBM 2022–2024 state/UT and provisional 2024 mineral, sector and lease-area-band aggregates; non-spatial context only. |
+| `outputs/india_ibm_auctioned_mineral_concessions_2023_24.csv` | 97 | IBM Table 5 mining leases and composite licences described as granted through auction; no coordinates, geometries or current-operation inference. |
 | `outputs/india_ibm_nmi_2025_resource_inventory.csv` | 722 | IBM NMI national, grade/measure and state/UT reserves/resources as at 1 April 2025. |
 | `outputs/india_official_critical_mineral_blocks.csv` | 199 | 143 auction offers across tranches I–VIII plus 56 successful results through tranche VII. |
 | `outputs/india_official_critical_mineral_mbs_manifest.csv` | 143 | MBS/NIT provenance, document hashes, extraction methods and geometry checks. |
 | `outputs/india_strategic_materials_top50.csv` | 50 | Legacy v0.6 modeling-target set, chemical names, formulae, ores/forms, uses and source linkage. |
-| `outputs/india_material_ontology_v1.csv` | 230 | Typed material identities, authority metadata, source evidence, formulas/names, relationships and model-eligibility fields. |
-| `outputs/material_source_term_crosswalk_v1.csv` | 450 | Auditable mapping of raw terms from MRDS, IBM NMI, IBM MCDR, IBM abandoned mines, auctions and USGS MCS to ontology entities. |
+| `outputs/india_material_ontology_v1.csv` | 233 | Typed material identities, authority metadata, source evidence, formulas/names, relationships and model-eligibility fields. |
+| `outputs/material_source_term_crosswalk_v1.csv` | 510 | Auditable mapping of raw terms from MRDS, IBM NMI, IBM MCDR, IBM abandoned mines, IBM concession tables, auctions and USGS MCS to ontology entities. |
 | `outputs/material_ontology_validation_v1.json` | 1 | Ontology uniqueness, type counts, parser coverage, source hashes, mapping rate and unresolved-term report. |
 | `outputs/material_model_support.csv` | 50 | Evidence counts and support tier by material. |
 | `outputs/material_model_validation.csv` | 50 | Spatial holdout results and reasons a material could not be validated. |
 | `outputs/ngdr_service_inventory.csv` | 11 | Metadata-only inventory of selected NGDR mineral, geochemistry, geophysics, soil, lithology and geology services; no feature values. |
-| `outputs/source_registry.csv` | 30 | Provenance, access/licensing notes, uses and limitations. |
-| `outputs/data_dictionary.csv` | 954 | Field definitions, units and missing-value policies. |
+| `outputs/source_registry.csv` | 31 | Provenance, access/licensing notes, uses and limitations. |
+| `outputs/data_dictionary.csv` | 1,023 | Field definitions, units and missing-value policies. |
 | `outputs/validation_report.json` | 1 | Cross-dataset counts, join coverage, coordinate checks and guardrails. |
 | `outputs/official_critical_blocks_validation.json` | 1 | Auction count, lineage, provenance and geometry validation. |
 | `outputs/ibm_nmi_2025_extraction_validation.json` | 1 | NMI PDF extraction and UNFC subtotal validation. |
 | `outputs/ibm_mcdr_inspection_validation.json` | 1 | IBM page, fiscal-year, date and document-link validation. |
 | `outputs/ibm_abandoned_mines_validation.json` | 1 | IBM source-page hash, narrative funnel, row counts, material mappings and mandatory model exclusions. |
+| `outputs/ibm_mineral_concessions_2024_validation.json` | 1 | IBM yearbook hash, aggregate reconciliations, Table 5 serial/missing-area checks, ontology coverage and mandatory model exclusions. |
 | `outputs/ngdr_service_validation.json` | 1 | Live OGC capability hashes, selected-layer counts, bounded-probe checks and redistribution/model exclusions. |
 | `outputs/emag2v3_magnetic_features_validation.json` | 1 | EMAG2 source-file hashes, raster metadata, coverage, source-code distribution, join distances and model-exclusion checks. |
 | `outputs/material_emag2_spatial_ablation.csv` | 50 | Material-level paired spatial-ablation metrics, uncertainty intervals and feature-admission decisions. |
@@ -144,7 +150,7 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/soilgrids_spatial_ablation_validation.json` | 1 | SoilGrids ablation protocol, fixed gates, input/output hashes, aggregate results and proof that rankings were unchanged. |
 | `outputs/nasa_power_rolling_12m_validation.json` | 1 | Weather-source checksums, completeness and range checks. |
 | `outputs/india_mining_dataset_companion.xlsx` | — | Legacy v0.6 thirteen-sheet review workbook. It does not yet include the v1 ontology; the CSVs remain authoritative. |
-| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.7.zip` | — | Portable 64-member development bundle, including the full grid, magnetic and soil features, paired ablation evidence, ontology, contextual mine layers, service audit, validations, maps and reproducibility scripts. |
+| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.8.zip` | — | Portable 69-member development bundle, including the full grid, magnetic and soil features, paired ablation evidence, ontology, contextual mine and concession layers, service audit, validations, maps and reproducibility scripts. |
 | `outputs/SHA256SUMS.txt` | — | Integrity hashes for published artifacts. |
 
 ## Repository structure
@@ -280,6 +286,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/build_ibm_nmi2025.py
 .venv/bin/python scripts/build_ibm_mcdr_inspections.py --refresh
 .venv/bin/python scripts/build_ibm_abandoned_mines.py --refresh
+.venv/bin/python scripts/build_ibm_mineral_concessions_2024.py
 .venv/bin/python scripts/build_material_ontology.py
 .venv/bin/python scripts/audit_ngdr_services.py
 .venv/bin/python scripts/build_emag2_features.py

@@ -1,8 +1,8 @@
 {
-  "ontology_version": "v1.0-alpha.2",
-  "ontology_rows": 230,
-  "unique_material_ids": 230,
-  "unique_material_names_casefolded": 230,
+  "ontology_version": "v1.0-alpha.3",
+  "ontology_rows": 233,
+  "unique_material_ids": 233,
+  "unique_material_names_casefolded": 233,
   "entity_type_counts": {
     "alloy_or_industrial_material": 1,
     "compound_group": 1,
@@ -17,7 +17,7 @@
     "mineral_mixture_or_obsolete_name": 1,
     "mineral_mixture_or_ore": 3,
     "mineral_mixture_or_variety": 1,
-    "mineral_species": 85,
+    "mineral_species": 88,
     "mineral_variety": 4,
     "ore_concentrate_group": 1,
     "ore_group": 1,
@@ -28,14 +28,26 @@
   "legacy_model_targets": 50,
   "official_india_critical_aggregate_targets": 30,
   "official_india_critical_entities_or_group_members": 53,
-  "ima_verified_species": 108,
+  "ima_verified_species": 111,
   "iupac_element_entities": 69,
-  "entities_with_direct_source_term_occurrences": 200,
-  "crosswalk_rows": 450,
-  "crosswalk_source_terms_mapped": 443,
-  "crosswalk_source_terms_unresolved_or_nonspecific": 7,
-  "crosswalk_mapping_rate": 0.9844444444444445,
+  "entities_with_direct_source_term_occurrences": 204,
+  "crosswalk_rows": 510,
+  "crosswalk_source_terms_mapped": 501,
+  "crosswalk_source_terms_unresolved_or_nonspecific": 9,
+  "crosswalk_mapping_rate": 0.9823529411764705,
   "unresolved_terms": [
+    {
+      "source_id": "SRC_IBM_INDIAN_MINERALS_YEARBOOK_2024_CONCESSIONS",
+      "source_field": "mineral_source",
+      "source_term": "Basemetal",
+      "source_term_occurrences": 3
+    },
+    {
+      "source_id": "SRC_IBM_INDIAN_MINERALS_YEARBOOK_2024_CONCESSIONS",
+      "source_field": "mineral_source",
+      "source_term": "Basemetal& Associated Minerals",
+      "source_term_occurrences": 2
+    },
     {
       "source_id": "SRC_MSTC_CRITICAL_MBS_T1_T8",
       "source_field": "source_materials_json",
@@ -89,6 +101,8 @@
   "usgs_mcs2026_source_sha256": "582a0aa231aea53d8a97dc8d1cd3dfa5f885cf3760353e3d029d7f0ae4fbaaf5",
   "ibm_abandoned_mine_source_terms": 26,
   "ibm_abandoned_mine_source_terms_mapped": 26,
+  "ibm_mineral_concession_2024_source_terms": 37,
+  "ibm_auctioned_concession_2023_24_source_terms": 23,
   "model_eligibility_policy": "Ontology inclusion does not confer model eligibility. Only the 50 explicitly retained v0.6 model targets are scored until separately reviewed and validated.",
   "checks_pass": true
 }

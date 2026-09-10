@@ -33,6 +33,7 @@ IMA_SOURCE_ID = "SRC_IMA_CNMNC_MINERAL_LIST_2026_09"
 IUPAC_SOURCE_ID = "SRC_IUPAC_PERIODIC_TABLE_2022"
 MCS_SOURCE_ID = "SRC_USGS_MCS_2026"
 IBM_ABANDONED_SOURCE_ID = "SRC_IBM_ABANDONED_MINE_SITES"
+IBM_CONCESSIONS_SOURCE_ID = "SRC_IBM_INDIAN_MINERALS_YEARBOOK_2024_CONCESSIONS"
 
 ONTOLOGY_PATH = OUT / "india_material_ontology_v1.csv"
 CROSSWALK_PATH = OUT / "material_source_term_crosswalk_v1.csv"
@@ -202,6 +203,7 @@ CURATED_ENTITIES = {
 
 
 ALIASES = {
+    "amethyst": ["Quartz"],
     "aluminum": ["Aluminium"],
     "bariumbarite": ["Baryte"],
     "barite": ["Baryte"],
@@ -254,6 +256,7 @@ ALIASES = {
     "ironore": ["Iron ore"],
     "ironorehematite": ["Iron ore", "Hematite"],
     "ironoremagnetite": ["Iron ore", "Magnetite"],
+    "iolite": ["Cordierite"],
     "kyaniteandrelatedminerals": ["Kyanite and related minerals"],
     "leadzinore": ["Lead", "Zinc", "Iron ore"],
     "leadzincore": ["Lead", "Zinc"],
@@ -272,7 +275,9 @@ ALIASES = {
     "sapphire": ["Sapphire"],
     "selenite": ["Gypsum"],
     "semipreciousstone": ["Semi-precious gemstones"],
+    "gemstonecatseye": ["Semi-precious gemstones"],
     "siliceousearth": ["Siliceous earth"],
+    "sillamanite": ["Sillimanite"],
     "sodaash": ["Soda ash"],
     "sodiumsulfate": ["Sodium sulfate"],
     "sulphurnative": ["Sulfur"],
@@ -667,8 +672,17 @@ def main() -> None:
         for term, count in sorted(counter.items(), key=lambda item: (-item[1], item[0].casefold())):
             add_crosswalk("SRC_USGS_MRDS", "mrds_india", source_field, term, count)
 
-    def grouped_pipeline_terms(path: Path, term_column: str, mapping_column: str, source_id: str, source_table: str):
+    def grouped_pipeline_terms(
+        path: Path,
+        term_column: str,
+        mapping_column: str,
+        source_id: str,
+        source_table: str,
+        filters: dict[str, str] | None = None,
+    ):
         frame = pd.read_csv(path, keep_default_na=False)
+        for column, value in (filters or {}).items():
+            frame = frame.loc[frame[column].astype(str).eq(value)].copy()
         grouped = defaultdict(lambda: {"count": 0, "names": set()})
         for row in frame.itertuples(index=False):
             term = clean(getattr(row, term_column))
@@ -694,6 +708,16 @@ def main() -> None:
         OUT / "india_ibm_abandoned_mine_sites.csv", "mineral_source",
         "normalized_material_names_json", IBM_ABANDONED_SOURCE_ID, "ibm_abandoned_mine_sites",
     )
+    grouped_pipeline_terms(
+        OUT / "india_ibm_mining_lease_distribution_2024.csv", "category_source",
+        "normalized_material_names_json", IBM_CONCESSIONS_SOURCE_ID,
+        "ibm_mineral_concession_2024_by_mineral", {"dimension": "mineral", "is_total": "False"},
+    )
+    grouped_pipeline_terms(
+        OUT / "india_ibm_auctioned_mineral_concessions_2023_24.csv", "mineral_source",
+        "normalized_material_names_json", IBM_CONCESSIONS_SOURCE_ID,
+        "ibm_auctioned_concessions_2023_24",
+    )
 
     auction = pd.read_csv(OUT / "india_official_critical_mineral_blocks.csv", keep_default_na=False)
     auction_terms = Counter()
@@ -714,7 +738,9 @@ def main() -> None:
 
     source_count_columns = [
         "mrds_india", "ibm_nmi_2025", "ibm_mcdr_events",
-        "ibm_abandoned_mine_sites", "critical_mineral_auction_events", "usgs_mcs2026_india_rows",
+        "ibm_abandoned_mine_sites", "ibm_mineral_concession_2024_by_mineral",
+        "ibm_auctioned_concessions_2023_24", "critical_mineral_auction_events",
+        "usgs_mcs2026_india_rows",
     ]
     ontology_rows = []
     for entity_id, row in entities.items():
@@ -756,7 +782,7 @@ def main() -> None:
     )
 
     validation = {
-        "ontology_version": "v1.0-alpha.2",
+        "ontology_version": "v1.0-alpha.3",
         "ontology_rows": int(len(ontology)),
         "unique_material_ids": int(ontology["material_id"].nunique()),
         "unique_material_names_casefolded": int(ontology["material_name"].str.casefold().nunique()),
@@ -792,6 +818,20 @@ def main() -> None:
                 & crosswalk["mapping_status"].eq("mapped")
             ].shape[0]
         ),
+        "ibm_mineral_concession_2024_source_terms": int(
+            crosswalk.loc[
+                crosswalk["source_id"].eq(IBM_CONCESSIONS_SOURCE_ID)
+                & crosswalk["source_table"].eq("ibm_mineral_concession_2024_by_mineral"),
+                "source_term",
+            ].nunique()
+        ),
+        "ibm_auctioned_concession_2023_24_source_terms": int(
+            crosswalk.loc[
+                crosswalk["source_id"].eq(IBM_CONCESSIONS_SOURCE_ID)
+                & crosswalk["source_table"].eq("ibm_auctioned_concessions_2023_24"),
+                "source_term",
+            ].nunique()
+        ),
         "model_eligibility_policy": "Ontology inclusion does not confer model eligibility. Only the 50 explicitly retained v0.6 model targets are scored until separately reviewed and validated.",
     }
     validation["checks_pass"] = bool(
@@ -811,7 +851,7 @@ def main() -> None:
 
     release_validation_path = OUT / "validation_report.json"
     release_validation = json.loads(release_validation_path.read_text(encoding="utf-8"))
-    release_validation["development_release_version"] = "v1.0-alpha.6"
+    release_validation["development_release_version"] = "v1.0-alpha.8"
     release_validation["material_ontology_v1"] = {
         "ontology_rows": validation["ontology_rows"],
         "ima_verified_species": validation["ima_verified_species"],
@@ -821,6 +861,8 @@ def main() -> None:
         "crosswalk_source_terms_unresolved_or_nonspecific": validation["crosswalk_source_terms_unresolved_or_nonspecific"],
         "crosswalk_mapping_rate": validation["crosswalk_mapping_rate"],
         "ibm_abandoned_mine_source_terms_mapped": validation["ibm_abandoned_mine_source_terms_mapped"],
+        "ibm_mineral_concession_2024_source_terms": validation["ibm_mineral_concession_2024_source_terms"],
+        "ibm_auctioned_concession_2023_24_source_terms": validation["ibm_auctioned_concession_2023_24_source_terms"],
         "legacy_model_targets_unchanged": validation["legacy_model_targets"],
         "checks_pass": validation["checks_pass"],
     }

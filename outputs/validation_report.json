@@ -123,16 +123,18 @@
   "official_critical_mineral_distinct_offer_lineage_keys": 100,
   "official_critical_mineral_pib_reported_cumulative_offer_count": 88,
   "official_critical_mineral_lineage_reconciliation_status": "not_reconciled",
-  "development_release_version": "v1.0-alpha.7",
+  "development_release_version": "v1.0-alpha.8",
   "material_ontology_v1": {
-    "ontology_rows": 230,
-    "ima_verified_species": 108,
+    "ontology_rows": 233,
+    "ima_verified_species": 111,
     "iupac_element_entities": 69,
-    "crosswalk_rows": 450,
-    "crosswalk_source_terms_mapped": 443,
-    "crosswalk_source_terms_unresolved_or_nonspecific": 7,
-    "crosswalk_mapping_rate": 0.9844444444444445,
+    "crosswalk_rows": 510,
+    "crosswalk_source_terms_mapped": 501,
+    "crosswalk_source_terms_unresolved_or_nonspecific": 9,
+    "crosswalk_mapping_rate": 0.9823529411764705,
     "ibm_abandoned_mine_source_terms_mapped": 26,
+    "ibm_mineral_concession_2024_source_terms": 37,
+    "ibm_auctioned_concession_2023_24_source_terms": 23,
     "legacy_model_targets_unchanged": 50,
     "checks_pass": true
   },
@@ -205,6 +207,17 @@
     "candidate_scores_recomputed": false,
     "production_scoring_changed": false,
     "candidate_table_sha256_unchanged": true,
+    "checks_pass": true
+  },
+  "ibm_mineral_concessions_2024": {
+    "aggregate_rows": 123,
+    "mineral_categories_excluding_total": 37,
+    "state_or_ut_2024_lease_total": 2995,
+    "state_or_ut_2024_area_total_ha": 293811.5373,
+    "auction_rows": 97,
+    "auction_rows_without_area": 5,
+    "auction_rows_with_coordinates": 0,
+    "auction_rows_admitted_to_model_evidence": 0,
     "checks_pass": true
   }
 }
