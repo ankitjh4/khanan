@@ -12,9 +12,10 @@ ROOT = Path(__file__).resolve().parents[1]
 GEOMETRIES = ROOT / "outputs" / "india_ibm_auctioned_concession_geometries_2023_24.geojson"
 MATCHES = ROOT / "outputs" / "india_ibm_auctioned_concession_mbs_match_audit_2023_24.csv"
 DISTRICTS = ROOT / "sources" / "raw" / "2011_Dist.shp"
-OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-auction-mbs-geometries-alpha10.png"
+OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-auction-mbs-geometries-alpha11.png"
 
 COLORS = {
+    "Bauxite": "#A46636",
     "Gold": "#D6A51D",
     "Glauconite": "#6F4E9C",
     "Glauconite (Potash)": "#6F4E9C",
@@ -62,9 +63,9 @@ def main() -> None:
     unreviewed = int((matches.geometry_admission_status == "withheld_not_reviewed").sum())
     withheld = len(matches) - admitted - unreviewed
 
-    fig = plt.figure(figsize=(14, 11), facecolor="#FCFBF7")
-    grid = fig.add_gridspec(2, 2, left=0.055, right=0.985, top=0.84, bottom=0.12, wspace=0.12, hspace=0.18)
-    axes = [fig.add_subplot(grid[row, column]) for row in range(2) for column in range(2)]
+    fig = plt.figure(figsize=(16, 11), facecolor="#FCFBF7")
+    grid = fig.add_gridspec(2, 3, left=0.045, right=0.985, top=0.84, bottom=0.12, wspace=0.11, hspace=0.20)
+    axes = [fig.add_subplot(grid[row, column]) for row in range(2) for column in range(3)]
     for axis in axes:
         style_axis(axis)
 
@@ -74,11 +75,19 @@ def main() -> None:
         color=[material_color(value) for value in geometries.mineral_source_ibm],
         edgecolor="#FFFFFF",
         linewidth=0.5,
-        markersize=20,
+    )
+    locator_points = geometries.copy()
+    locator_points.geometry = locator_points.geometry.representative_point()
+    locator_points.plot(
+        ax=axes[0],
+        color=[material_color(value) for value in locator_points.mineral_source_ibm],
+        edgecolor="#FFFFFF",
+        linewidth=0.45,
+        markersize=24,
     )
     axes[0].set_title("India locator", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
 
-    for axis, state in zip(axes[1:], ["Chhattisgarh", "Goa", "Uttar Pradesh"]):
+    for axis, state in zip(axes[1:5], ["Chhattisgarh", "Goa", "Uttar Pradesh", "Karnataka"]):
         state_shape = states[states.ST_NM == state]
         subset = geometries[geometries.state_or_ut == state]
         state_shape.plot(ax=axis, facecolor="#E9E5DC", edgecolor="#756E64", linewidth=0.8)
@@ -99,11 +108,34 @@ def main() -> None:
             axis.set_ylim(miny - ypad, maxy + ypad)
         axis.set_title(f"{state}: {len(subset)} admitted footprints", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
 
-    fig.text(0.055, 0.945, "KHANAN | Reviewed state-auction Mine Block Summary geometry", fontsize=22, weight="bold", color="#18232B")
+    axes[5].axis("off")
+    axes[5].text(0.02, 0.94, "Review scope", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[5].transAxes)
+    axes[5].text(
+        0.02,
+        0.80,
+        f"23 official MBS PDFs reviewed\n{admitted} footprints admitted\n{withheld} reviewed records withheld\n{unreviewed} IBM rows not yet reviewed",
+        fontsize=13,
+        linespacing=1.65,
+        color="#48545C",
+        va="top",
+        transform=axes[5].transAxes,
+    )
+    axes[5].text(
+        0.02,
+        0.28,
+        "Withholding is deliberate: malformed coordinates,\nmissing hemispheres, incomplete boundary detail,\nor area-reconciliation failures are not repaired\nby inference.",
+        fontsize=10.5,
+        linespacing=1.5,
+        color="#65717A",
+        va="top",
+        transform=axes[5].transAxes,
+    )
+
+    fig.text(0.045, 0.945, "KHANAN | Reviewed state-auction Mine Block Summary geometry", fontsize=22, weight="bold", color="#18232B")
     fig.text(
-        0.055,
+        0.045,
         0.905,
-        f"IBM Table 5 contains 97 blocks. Alpha.10 admits {admitted} source footprints, withholds {withheld} reviewed records, and leaves {unreviewed} unreviewed.",
+        f"IBM Table 5 contains 97 blocks. Alpha.11 admits {admitted} source footprints, withholds {withheld} reviewed records, and leaves {unreviewed} unreviewed.",
         fontsize=12,
         color="#48545C",
     )
@@ -115,7 +147,7 @@ def main() -> None:
             continue
         seen.add(label)
         legend_items.append(plt.Line2D([0], [0], marker="s", color="none", markerfacecolor=material_color(label), markeredgecolor="none", markersize=10, label=label))
-    fig.legend(handles=legend_items, loc="lower left", bbox_to_anchor=(0.055, 0.038), ncol=5, frameon=False, fontsize=9)
+    fig.legend(handles=legend_items, loc="lower left", bbox_to_anchor=(0.045, 0.038), ncol=6, frameon=False, fontsize=9)
     fig.text(
         0.985,
         0.045,

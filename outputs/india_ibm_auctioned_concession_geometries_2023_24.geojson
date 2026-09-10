@@ -416,6 +416,398 @@
         "coordinates": [
           [
             [
+              76.64058916388889,
+              15.026973897222224
+            ],
+            [
+              76.6383105388889,
+              15.024878669444446
+            ],
+            [
+              76.63356660555556,
+              15.030694027777779
+            ],
+            [
+              76.63333970555556,
+              15.032261608333334
+            ],
+            [
+              76.63688982222223,
+              15.033433641666667
+            ],
+            [
+              76.6378220388889,
+              15.032338283333335
+            ],
+            [
+              76.6385849888889,
+              15.032561719444445
+            ],
+            [
+              76.64058916388889,
+              15.026973897222224
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-021",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Karnataka",
+        "block_name": "Block No. 04, HRG",
+        "block_name_mbs": "Summary of mine block - Block No.4, HRG",
+        "mineral_source_ibm": "Iron Ore",
+        "normalized_material_ids_json": "[\"element:iron\",\"ore:iron-ore\"]",
+        "normalized_material_names_json": "[\"Iron\",\"Iron ore\"]",
+        "chemical_or_english_names_json": "[\"iron\",\"Iron ore\"]",
+        "formulae_or_symbols_json": "[\"Fe\"]",
+        "auction_date_ibm": "2023-07-24",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "40.04",
+        "mbs_area_ha": 40.04,
+        "exploration_level": "G3",
+        "borehole_count": 16,
+        "drilled_meterage_m": 727.0,
+        "exploration_agency_source": "KIOCL, based on erstwhile-lessee exploration data for 32.00 ha.",
+        "borehole_summary_source": "16 core boreholes with cumulative meterage of 727.00 m, drilled by the erstwhile lessee in 32.00 ha.",
+        "mineral_source_mbs": "Iron ore and banded hematite quartzite (BHQ)",
+        "geological_resources_source": "5.32 million tonnes of iron ore.",
+        "grade_source": "Average 64.66% Fe.",
+        "mineral_zones_source": "One band, flanked by shale on either side.",
+        "dip_strike_source": "N35W-S35E strike with steep 75-80 degree dips toward ENE.",
+        "thickness_source": "Refer to the Geological Report.",
+        "accessibility_source": "Ranjithpura Railway Station; 15 km from Sandur and 60 km from Ballari; Vidyanagar Airport, Toranagallu.",
+        "hydrography_source": "Dendritic drainage; Tungabhadra River and Narihalla stream.",
+        "climate_source": "Mean annual rainfall 40-80 cm; December temperature 21-26 C; June temperature 24-29 C.",
+        "topography_source": "Undulating, hilly terrain.",
+        "coordinate_method": "source_table_visual_transcription_dms_wgs84",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[1, 2, 3, 4, 5, 6, 7]",
+        "boundary_vertex_count": 7,
+        "centroid_latitude": 15.02957138,
+        "centroid_longitude": 76.63714937,
+        "computed_geodesic_area_ha": 40.041658,
+        "computed_to_mbs_area_difference_pct": 0.004141,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated; source labels DGPS latitude/longitude",
+        "selected_mbs_file_id": "9324",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=9324_Summary_of_mine_block.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "841eead6506c2bbca039bf18d110e708d17ee76a5e08563ab753b0d655cb5c1b",
+        "selected_mbs_pdf_bytes": 567602,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.4575525,
+              15.191768333333334
+            ],
+            [
+              76.45118916666667,
+              15.195886666666667
+            ],
+            [
+              76.453075,
+              15.197924722222222
+            ],
+            [
+              76.45043166666667,
+              15.201210277777777
+            ],
+            [
+              76.44073694444445,
+              15.207410555555555
+            ],
+            [
+              76.43490277777778,
+              15.212113888888888
+            ],
+            [
+              76.43772055555556,
+              15.213328333333333
+            ],
+            [
+              76.43890861111112,
+              15.215216944444444
+            ],
+            [
+              76.44341833333334,
+              15.212581666666665
+            ],
+            [
+              76.45751,
+              15.207405555555555
+            ],
+            [
+              76.46508361111111,
+              15.2027325
+            ],
+            [
+              76.4575525,
+              15.191768333333334
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-023",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Karnataka",
+        "block_name": "Jaisinghpura North Block",
+        "block_name_mbs": "Summary of mine block - Jaisinghpura North Iron Ore",
+        "mineral_source_ibm": "Iron Ore",
+        "normalized_material_ids_json": "[\"element:iron\",\"ore:iron-ore\"]",
+        "normalized_material_names_json": "[\"Iron\",\"Iron ore\"]",
+        "chemical_or_english_names_json": "[\"iron\",\"Iron ore\"]",
+        "formulae_or_symbols_json": "[\"Fe\"]",
+        "auction_date_ibm": "2023-08-21",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "298.59",
+        "mbs_area_ha": 298.59,
+        "exploration_level": "G3",
+        "borehole_count": 61,
+        "drilled_meterage_m": 3956.3,
+        "exploration_agency_source": "Mineral Exploration and Consultancy Limited (MECL).",
+        "borehole_summary_source": "61 boreholes (37 core and 24 reverse-circulation) with cumulative meterage of 3,956.30 m; 40 by MECL and 21 by erstwhile lessees.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "17.66 million tonnes total: 9.89 million tonnes massive, 5.64 million tonnes laminated, and 2.13 million tonnes siliceous iron ore.",
+        "grade_source": "Massive iron ore averages 66.61% Fe; laminated 56.56% Fe; siliceous 40.57% Fe.",
+        "mineral_zones_source": "Three prominent, approximately parallel BIF reefs trending northwest-southeast.",
+        "dip_strike_source": "Northwest-southeast strike with 65-85 degree dips toward southwest.",
+        "thickness_source": "Refer to the Geological Report.",
+        "accessibility_source": "Ingaligi Railway Station; 20 km from Hosapete and Sandur and 75 km from Ballari; Vidyanagar Airport, Toranagallu.",
+        "hydrography_source": "Dendritic drainage; Tungabhadra River and Narihalla stream.",
+        "climate_source": "Mean annual rainfall 40-80 cm; December temperature 21-26 C; June temperature 24-29 C.",
+        "topography_source": "Undulating, hilly terrain.",
+        "coordinate_method": "source_table_visual_transcription_dms_wgs84",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]",
+        "boundary_vertex_count": 11,
+        "centroid_latitude": 15.20412704,
+        "centroid_longitude": 76.45177221,
+        "computed_geodesic_area_ha": 298.717231,
+        "computed_to_mbs_area_difference_pct": 0.042611,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated; source labels DGPS latitude/longitude",
+        "selected_mbs_file_id": "10084",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=10084_Summary_minebl_JaisingpuraNorth (1).pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "971fce43e6fbdc915aa03aca1e823c736c9f00f789c654685cc3b488580a49b8",
+        "selected_mbs_pdf_bytes": 561446,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.70197906666667,
+              13.73998416111111
+            ],
+            [
+              76.68804334166667,
+              13.659974344444445
+            ],
+            [
+              76.66591346111112,
+              13.661130383333333
+            ],
+            [
+              76.67497811111112,
+              13.744998472222221
+            ],
+            [
+              76.6969809888889,
+              13.739995358333333
+            ],
+            [
+              76.70197906666667,
+              13.73998416111111
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-024",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Karnataka",
+        "block_name": "Basavanagudda",
+        "block_name_mbs": "Summary of mine block Basavangudda Block_2nd attempt",
+        "mineral_source_ibm": "Gold",
+        "normalized_material_ids_json": "[\"element:gold\"]",
+        "normalized_material_names_json": "[\"Gold\"]",
+        "chemical_or_english_names_json": "[\"gold\"]",
+        "formulae_or_symbols_json": "[\"Au\"]",
+        "auction_date_ibm": "2023-08-21",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "2501.9",
+        "mbs_area_ha": 2501.9,
+        "exploration_level": "G4",
+        "borehole_count": 0,
+        "drilled_meterage_m": 0.0,
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Gold ore",
+        "geological_resources_source": "Mineral resources have not been estimated at G4 level.",
+        "grade_source": "A 240 m mineralized zone has a reported weighted average of 0.178 g/t Au over 3.5 m.",
+        "mineral_zones_source": "One 240 m mineralized zone was established in earlier work; the source notes scope for additional zones.",
+        "dip_strike_source": "North-south to NNE-SSW strike; east dipping.",
+        "thickness_source": "Not applicable.",
+        "accessibility_source": "Tumkur Railway Station; State Highway 69 passes 5 km south of the block; Bengaluru Airport.",
+        "hydrography_source": "Dendritic drainage; Chikka Tore stream flows northwest through the block toward the Suvarna Mukhi River.",
+        "climate_source": "Mean annual rainfall 55-65 cm; December temperature 26-28 C; June temperature 35-38 C.",
+        "topography_source": "Undulating, hilly terrain.",
+        "coordinate_method": "source_table_visual_transcription_dms_wgs84",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"A\", \"B\", \"C\", \"D\", \"E\"]",
+        "boundary_vertex_count": 5,
+        "centroid_latitude": 13.70277527,
+        "centroid_longitude": 76.68280487,
+        "computed_geodesic_area_ha": 2436.562934,
+        "computed_to_mbs_area_difference_pct": 2.611498,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated; source labels DGPS latitude/longitude",
+        "selected_mbs_file_id": "8522",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=8522_Summary of mine block - Basavangudda Block.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "82dd134d6418b02617224da6b79d22f47ded811556f13be69614542d1c1cefda",
+        "selected_mbs_pdf_bytes": 451350,
+        "selected_mbs_pdf_page_count": 4,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.92300791666668,
+              13.045916305555556
+            ],
+            [
+              74.92659950000001,
+              13.053045722222222
+            ],
+            [
+              74.93211058333334,
+              13.049385222222222
+            ],
+            [
+              74.92785,
+              13.04384
+            ],
+            [
+              74.92300791666668,
+              13.045916305555556
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-025",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Karnataka",
+        "block_name": "Nidodi Bauxite Block",
+        "block_name_mbs": "Summary of mine block Niddodi_2nd attempt",
+        "mineral_source_ibm": "Bauxite",
+        "normalized_material_ids_json": "[\"element:aluminium\",\"ore:bauxite\"]",
+        "normalized_material_names_json": "[\"Aluminium\",\"Bauxite\"]",
+        "chemical_or_english_names_json": "[\"aluminium\",\"Bauxite\"]",
+        "formulae_or_symbols_json": "[\"Al\"]",
+        "auction_date_ibm": "2023-09-21",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "52.82",
+        "mbs_area_ha": 52.82,
+        "exploration_level": "G4",
+        "borehole_count": 0,
+        "drilled_meterage_m": 0.0,
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Bauxite in the block title and grade text; the quantity row anomalously prints 'Iron ore'.",
+        "geological_resources_source": "145,000 tonnes (0.145 million tonnes); the source quantity row contains the mineral-label anomaly noted separately.",
+        "grade_source": "Bauxite grade bands by Al2O3: Grade I above 51%; Grade II 48-51%; Grade III 45-48%; Grade IV 38-45%.",
+        "mineral_zones_source": "Four bauxite grade classes calculated by area of influence around pits using a tonnage factor of two.",
+        "dip_strike_source": "Not applicable for the bulk commodity; mineralization is controlled by weathering.",
+        "thickness_source": "Not applicable.",
+        "accessibility_source": "Mangaluru Railway Station; Niddodi is 35 km from Mangalore and 32 km south-southwest of Karkala; Mangaluru Airport.",
+        "hydrography_source": "Plateau with sparse first-order drainage; no river or stream is listed.",
+        "climate_source": "Mean annual rainfall 3,635 mm; December temperature 21 C; June temperature 42 C.",
+        "topography_source": "Undulating plateau.",
+        "coordinate_method": "source_table_visual_transcription_dms_wgs84",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"A\", \"B\", \"C\", \"D\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 13.04820623,
+        "centroid_longitude": 74.92740816,
+        "computed_geodesic_area_ha": 52.878349,
+        "computed_to_mbs_area_difference_pct": 0.110468,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated; source labels DGPS latitude/longitude",
+        "selected_mbs_file_id": "9168",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=9168_Summary_Niddodi_17032023.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "7e6ca278e3634a81a64b249965619d027c4dd0b34d65e9704478093be4cbf020",
+        "selected_mbs_pdf_bytes": 451916,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
               82.86152277777778,
               24.563351944444445
             ],

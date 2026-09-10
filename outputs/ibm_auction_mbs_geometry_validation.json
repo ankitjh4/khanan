@@ -1,5 +1,5 @@
 {
-  "release": "v1.0-alpha.10",
+  "release": "v1.0-alpha.11",
   "source_portal_url": "https://www.mstcecommerce.com/auctionhome/mlcl/index.jsp",
   "source_access_date": "2026-09-10",
   "ibm_input_rows": 97,
@@ -16,19 +16,20 @@
     "Goa": 18
   },
   "state_portal_documents_total": 1124,
-  "curated_records": 17,
-  "selected_document_matches": 17,
-  "reviewed_profile_complete_rows": 17,
+  "curated_records": 23,
+  "selected_document_matches": 23,
+  "reviewed_profile_complete_rows": 23,
   "coordinate_evidence_type_counts": {
-    "ordered_boundary_vertices": 13,
-    "ordered_boundary_vertices_with_source_error": 2,
-    "bounding_extents_only": 2
+    "ordered_boundary_vertices": 17,
+    "ordered_boundary_vertices_with_source_error": 3,
+    "bounding_extents_only": 2,
+    "ordered_boundary_vertices_with_source_omission": 1
   },
-  "published_geometries": 10,
+  "published_geometries": 14,
   "geometry_admission_status_counts": {
-    "withheld_not_reviewed": 80,
-    "admitted_authoritative_source_footprint": 10,
-    "withheld_source_conflict": 3,
+    "withheld_not_reviewed": 74,
+    "admitted_authoritative_source_footprint": 14,
+    "withheld_source_conflict": 5,
     "withheld_insufficient_coordinate_detail": 2,
     "withheld_validation_failure": 2
   },
@@ -39,26 +40,29 @@
   "model_evidence_role": "context_only",
   "outputs": {
     "india_ibm_auctioned_concession_mbs_match_audit_2023_24.csv": {
-      "sha256": "d2da830cee3e6b7ba8d8b17306403a1b3839f8e6db5fe51abd0abcf749d7b505",
-      "bytes": 101390
+      "sha256": "c8fecf1af60b9fbf54671183f60eed816904b86b5de83e5432b91d1e627a6ad3",
+      "bytes": 108380
     },
     "india_ibm_auctioned_concession_geometries_2023_24.csv": {
-      "sha256": "5e4e5050f32d1238d9a4ca878c37ec6dc22c4f47f3aa78095e66d92c6afee66f",
-      "bytes": 39609
+      "sha256": "0410dfa0f6e18e3454d2854921d15a367516cba9fb94b9dbb100e98b07ef6ad3",
+      "bytes": 47961
     },
     "india_ibm_auctioned_concession_geometries_2023_24.geojson": {
-      "sha256": "5e8b56ac0b4c1cbbcb7326ee6430105bf1fb68021f363c6f5d8b7a225c4731e8",
-      "bytes": 67884
+      "sha256": "879d5fb5c4f64e764e41149daae04ff5500fe1e91a0eb4bb4f24b4a637e269b6",
+      "bytes": 86329
     }
   },
   "limitations": [
-    "This release reviews seventeen of the 97 IBM Table 5 records; unreviewed rows are explicit in the match audit.",
+    "This release reviews twenty-three of the 97 IBM Table 5 records; unreviewed rows are explicit in the match audit.",
     "Kareli-Chandi geometry is withheld because the MBS prints malformed latitude seconds for two vertices.",
     "Saloni geometry is withheld because IBM and MBS publish materially different areas.",
     "Chiropat geometry is withheld because the MBS prints an E hemisphere in the latitude column for two vertices.",
     "Baraiburu-Tatiba and Meralgara-Barabaljori publish bounding extents but no ordered boundary vertices.",
     "Girar geometry is withheld because IBM, MBS and coordinate-derived areas do not reconcile within 5%.",
     "Goa Block VI geometry is withheld because the source coordinates compute to an area 25.31% below the MBS published area.",
+    "Timmanahalli geometry is withheld because one source latitude prints 60.00 seconds.",
+    "Kudarka geometry is withheld because the source coordinate table omits hemisphere markers.",
+    "Niddodi is retained with an explicit source anomaly because its bauxite title and Al2O3 grade text conflict with an 'Iron ore' label in the quantity row.",
     "The 2011 district boundary layer is used only as a state-containment diagnostic and is not a current administrative register.",
     "MBS technical context and IBM auction reporting do not independently establish current operation or present legal status."
   ],

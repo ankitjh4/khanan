@@ -70,6 +70,12 @@ CURATED_MATCHES = {
     "IBM-IMYB2024-AUCTION-018": r"\bchiropat\b.*\bbauxite\b",
     "IBM-IMYB2024-AUCTION-019": r"\bbaraiburu\b.*\btatiba\b.*\biron\b.*\bmanganese\b",
     "IBM-IMYB2024-AUCTION-020": r"\bmeralgara\b.*\bbarabaljori\b.*\biron\b",
+    "IBM-IMYB2024-AUCTION-021": r"\bblock\s*no\s*4\b.*\bhrg\b",
+    "IBM-IMYB2024-AUCTION-022": r"\btimmanahalli\b",
+    "IBM-IMYB2024-AUCTION-023": r"\bjaisinghpura\s+north\b",
+    "IBM-IMYB2024-AUCTION-024": r"\bbasavana?gudda\b",
+    "IBM-IMYB2024-AUCTION-025": r"\bniddodi\b",
+    "IBM-IMYB2024-AUCTION-026": r"\bkudarka\b.*\bbauxite\b",
     "IBM-IMYB2024-AUCTION-090": r"\bphase\s*4\b.*\bgirar\b.*\biron\b.*\bgold\b",
     "IBM-IMYB2024-AUCTION-091": r"\bphase\s*4\b.*\bbharhari\b.*\biron\b",
     "IBM-IMYB2024-AUCTION-092": r"\bphase\s*4\b.*\bsona\s*pahari\b.*\bgold\b",
@@ -137,6 +143,41 @@ DMS_GEOMETRIES = {
         (dms(80, 53, 40.29), dms(20, 13, 0.326)),
         (dms(80, 53, 13.74), dms(20, 13, 0.326)),
     ],
+    "IBM-IMYB2024-AUCTION-021": [
+        (dms(76, 38, 26.12099), dms(15, 1, 37.10603)),
+        (dms(76, 38, 17.91794), dms(15, 1, 29.56321)),
+        (dms(76, 38, 0.83978), dms(15, 1, 50.49850)),
+        (dms(76, 38, 0.02294), dms(15, 1, 56.14179)),
+        (dms(76, 38, 12.80336), dms(15, 2, 0.36111)),
+        (dms(76, 38, 16.15934), dms(15, 1, 56.41782)),
+        (dms(76, 38, 18.90596), dms(15, 1, 57.22219)),
+    ],
+    "IBM-IMYB2024-AUCTION-023": [
+        (dms(76, 27, 27.189), dms(15, 11, 30.366)),
+        (dms(76, 27, 4.281), dms(15, 11, 45.192)),
+        (dms(76, 27, 11.070), dms(15, 11, 52.529)),
+        (dms(76, 27, 1.554), dms(15, 12, 4.357)),
+        (dms(76, 26, 26.653), dms(15, 12, 26.678)),
+        (dms(76, 26, 5.650), dms(15, 12, 43.610)),
+        (dms(76, 26, 15.794), dms(15, 12, 47.982)),
+        (dms(76, 26, 20.071), dms(15, 12, 54.781)),
+        (dms(76, 26, 36.306), dms(15, 12, 45.294)),
+        (dms(76, 27, 27.036), dms(15, 12, 26.660)),
+        (dms(76, 27, 54.301), dms(15, 12, 9.837)),
+    ],
+    "IBM-IMYB2024-AUCTION-024": [
+        (dms(76, 42, 7.12464), dms(13, 44, 23.94298)),
+        (dms(76, 41, 16.95603), dms(13, 39, 35.90764)),
+        (dms(76, 39, 57.28846), dms(13, 39, 40.06938)),
+        (dms(76, 40, 29.92120), dms(13, 44, 41.99450)),
+        (dms(76, 41, 49.13156), dms(13, 44, 23.98329)),
+    ],
+    "IBM-IMYB2024-AUCTION-025": [
+        (dms(74, 55, 22.8285), dms(13, 2, 45.2987)),
+        (dms(74, 55, 35.7582), dms(13, 3, 10.9646)),
+        (dms(74, 55, 55.5981), dms(13, 2, 57.7868)),
+        (dms(74, 55, 40.2600), dms(13, 2, 37.8240)),
+    ],
     "IBM-IMYB2024-AUCTION-090": [
         (dms(78, 54, 27.518), dms(24, 18, 35.641)),
         (dms(78, 55, 11.120), dms(24, 18, 50.653)),
@@ -185,6 +226,10 @@ DMS_GEOMETRIES = {
 }
 
 DMS_POINT_IDS = {
+    "IBM-IMYB2024-AUCTION-021": list(range(1, 8)),
+    "IBM-IMYB2024-AUCTION-023": list(range(1, 12)),
+    "IBM-IMYB2024-AUCTION-024": list("ABCDE"),
+    "IBM-IMYB2024-AUCTION-025": list("ABCD"),
     "IBM-IMYB2024-AUCTION-090": list("ABCDEFGHIJKL"),
     "IBM-IMYB2024-AUCTION-091": list("ABCDEF"),
     "IBM-IMYB2024-AUCTION-092": list("ABCDEFGHI"),
@@ -201,6 +246,12 @@ MBS_AREA_HA = {
     "IBM-IMYB2024-AUCTION-018": 63.0,
     "IBM-IMYB2024-AUCTION-019": 258.98968,
     "IBM-IMYB2024-AUCTION-020": 115.220,
+    "IBM-IMYB2024-AUCTION-021": 40.04,
+    "IBM-IMYB2024-AUCTION-022": 2000.0,
+    "IBM-IMYB2024-AUCTION-023": 298.59,
+    "IBM-IMYB2024-AUCTION-024": 2501.9,
+    "IBM-IMYB2024-AUCTION-025": 52.82,
+    "IBM-IMYB2024-AUCTION-026": 52.0,
     "IBM-IMYB2024-AUCTION-090": 231.175,
     "IBM-IMYB2024-AUCTION-091": 134.77,
     "IBM-IMYB2024-AUCTION-092": 79.0,
@@ -221,6 +272,12 @@ PROFILE_NUMBERS = {
     "IBM-IMYB2024-AUCTION-018": {"exploration_level": "G2", "borehole_count": 20, "drilled_meterage_m": 15.25},
     "IBM-IMYB2024-AUCTION-019": {"exploration_level": "G2; G4", "borehole_count": 22, "drilled_meterage_m": 2488.7},
     "IBM-IMYB2024-AUCTION-020": {"exploration_level": "G1; G4", "borehole_count": 378, "drilled_meterage_m": 21102.75},
+    "IBM-IMYB2024-AUCTION-021": {"exploration_level": "G3", "borehole_count": 16, "drilled_meterage_m": 727.0},
+    "IBM-IMYB2024-AUCTION-022": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
+    "IBM-IMYB2024-AUCTION-023": {"exploration_level": "G3", "borehole_count": 61, "drilled_meterage_m": 3956.3},
+    "IBM-IMYB2024-AUCTION-024": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
+    "IBM-IMYB2024-AUCTION-025": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
+    "IBM-IMYB2024-AUCTION-026": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
     "IBM-IMYB2024-AUCTION-090": {"exploration_level": "G3", "borehole_count": 44, "drilled_meterage_m": 8265.12},
     "IBM-IMYB2024-AUCTION-091": {"exploration_level": "G3", "borehole_count": 8, "drilled_meterage_m": 822.7},
     "IBM-IMYB2024-AUCTION-092": {"exploration_level": "G3", "borehole_count": 19, "drilled_meterage_m": 2359.9},
@@ -287,6 +344,90 @@ PROFILE_TEXT = {
         "climate_source": "Annual rainfall printed as a 65-225 cm range; minimum temperature 4.8 C; maximum temperature 47 C.",
         "topography_source": "Undulatory terrain.",
     },
+    "IBM-IMYB2024-AUCTION-021": {
+        "exploration_agency_source": "KIOCL, based on erstwhile-lessee exploration data for 32.00 ha.",
+        "borehole_summary_source": "16 core boreholes with cumulative meterage of 727.00 m, drilled by the erstwhile lessee in 32.00 ha.",
+        "mineral_source_mbs": "Iron ore and banded hematite quartzite (BHQ)",
+        "geological_resources_source": "5.32 million tonnes of iron ore.",
+        "grade_source": "Average 64.66% Fe.",
+        "mineral_zones_source": "One band, flanked by shale on either side.",
+        "dip_strike_source": "N35W-S35E strike with steep 75-80 degree dips toward ENE.",
+        "thickness_source": "Refer to the Geological Report.",
+        "accessibility_source": "Ranjithpura Railway Station; 15 km from Sandur and 60 km from Ballari; Vidyanagar Airport, Toranagallu.",
+        "hydrography_source": "Dendritic drainage; Tungabhadra River and Narihalla stream.",
+        "climate_source": "Mean annual rainfall 40-80 cm; December temperature 21-26 C; June temperature 24-29 C.",
+        "topography_source": "Undulating, hilly terrain.",
+    },
+    "IBM-IMYB2024-AUCTION-022": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Gold",
+        "geological_resources_source": "Resources have not been estimated at G4 level.",
+        "grade_source": "Two sampled zones: 0.076 g/t Au over 4 m and 0.95 g/t over 1 m; 0.3 g/t over 1 m and 0.59 g/t over 5 m.",
+        "mineral_zones_source": "Two 100 m mineralized zones in the westernmost and easternmost BIF units.",
+        "dip_strike_source": "N10W-S10E to N50W-S50E; moderate to steep dips east or west.",
+        "thickness_source": "Not applicable.",
+        "accessibility_source": "Tumkur Railway Station; Bangalore-Hosadurga National Highway via Chiknayakanahalli and NH-69; Bengaluru Airport.",
+        "hydrography_source": "Dendritic drainage; Borankanave reservoir is near the block and a canal crosses its northeastern corner.",
+        "climate_source": "Mean annual rainfall 458 mm; April temperature 30.2 C; December temperature 22.7 C.",
+        "topography_source": "Undulating, rugged terrain.",
+    },
+    "IBM-IMYB2024-AUCTION-023": {
+        "exploration_agency_source": "Mineral Exploration and Consultancy Limited (MECL).",
+        "borehole_summary_source": "61 boreholes (37 core and 24 reverse-circulation) with cumulative meterage of 3,956.30 m; 40 by MECL and 21 by erstwhile lessees.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "17.66 million tonnes total: 9.89 million tonnes massive, 5.64 million tonnes laminated, and 2.13 million tonnes siliceous iron ore.",
+        "grade_source": "Massive iron ore averages 66.61% Fe; laminated 56.56% Fe; siliceous 40.57% Fe.",
+        "mineral_zones_source": "Three prominent, approximately parallel BIF reefs trending northwest-southeast.",
+        "dip_strike_source": "Northwest-southeast strike with 65-85 degree dips toward southwest.",
+        "thickness_source": "Refer to the Geological Report.",
+        "accessibility_source": "Ingaligi Railway Station; 20 km from Hosapete and Sandur and 75 km from Ballari; Vidyanagar Airport, Toranagallu.",
+        "hydrography_source": "Dendritic drainage; Tungabhadra River and Narihalla stream.",
+        "climate_source": "Mean annual rainfall 40-80 cm; December temperature 21-26 C; June temperature 24-29 C.",
+        "topography_source": "Undulating, hilly terrain.",
+    },
+    "IBM-IMYB2024-AUCTION-024": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Gold ore",
+        "geological_resources_source": "Mineral resources have not been estimated at G4 level.",
+        "grade_source": "A 240 m mineralized zone has a reported weighted average of 0.178 g/t Au over 3.5 m.",
+        "mineral_zones_source": "One 240 m mineralized zone was established in earlier work; the source notes scope for additional zones.",
+        "dip_strike_source": "North-south to NNE-SSW strike; east dipping.",
+        "thickness_source": "Not applicable.",
+        "accessibility_source": "Tumkur Railway Station; State Highway 69 passes 5 km south of the block; Bengaluru Airport.",
+        "hydrography_source": "Dendritic drainage; Chikka Tore stream flows northwest through the block toward the Suvarna Mukhi River.",
+        "climate_source": "Mean annual rainfall 55-65 cm; December temperature 26-28 C; June temperature 35-38 C.",
+        "topography_source": "Undulating, hilly terrain.",
+    },
+    "IBM-IMYB2024-AUCTION-025": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Bauxite in the block title and grade text; the quantity row anomalously prints 'Iron ore'.",
+        "geological_resources_source": "145,000 tonnes (0.145 million tonnes); the source quantity row contains the mineral-label anomaly noted separately.",
+        "grade_source": "Bauxite grade bands by Al2O3: Grade I above 51%; Grade II 48-51%; Grade III 45-48%; Grade IV 38-45%.",
+        "mineral_zones_source": "Four bauxite grade classes calculated by area of influence around pits using a tonnage factor of two.",
+        "dip_strike_source": "Not applicable for the bulk commodity; mineralization is controlled by weathering.",
+        "thickness_source": "Not applicable.",
+        "accessibility_source": "Mangaluru Railway Station; Niddodi is 35 km from Mangalore and 32 km south-southwest of Karkala; Mangaluru Airport.",
+        "hydrography_source": "Plateau with sparse first-order drainage; no river or stream is listed.",
+        "climate_source": "Mean annual rainfall 3,635 mm; December temperature 21 C; June temperature 42 C.",
+        "topography_source": "Undulating plateau.",
+    },
+    "IBM-IMYB2024-AUCTION-026": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Bauxite",
+        "geological_resources_source": "254,300 tonnes total: 116,800 tonnes Type I and 137,500 tonnes Type II.",
+        "grade_source": "Type I averages 42.21% Al2O3; Type II averages 34.12% Al2O3; total average 38.17% Al2O3.",
+        "mineral_zones_source": "Irregular lenses and fillings in vertical joints and fissures within massive laterite.",
+        "dip_strike_source": "Not applicable for the bulk commodity; mineralization is controlled by weathering.",
+        "thickness_source": "Not determined.",
+        "accessibility_source": "Mulki Railway Station around 17 km away; 40 km from Mangalore and 8 km from Moodbidri; Mangalore Airport.",
+        "hydrography_source": "Dendritic to sub-dendritic drainage; Mulki River in the central part and Pavanje River in the southern part.",
+        "climate_source": "Mean annual rainfall 350 cm; April temperature 32 C; December temperature 22.4 C.",
+        "topography_source": "Undulating, hilly terrain.",
+    },
     "IBM-IMYB2024-AUCTION-090": {
         "exploration_agency_source": "Directorate of Geology and Mining, Uttar Pradesh, Lucknow.",
         "mineral_source_mbs": "Gold and iron ore",
@@ -350,6 +491,12 @@ COORDINATE_REVIEW = {
     "IBM-IMYB2024-AUCTION-018": ("ordered_boundary_vertices_with_source_error", [1, 2, 3, 4], ["latitude_hemisphere_printed_E_points_J3_K"]),
     "IBM-IMYB2024-AUCTION-019": ("bounding_extents_only", [1], ["no_ordered_boundary_vertices"]),
     "IBM-IMYB2024-AUCTION-020": ("bounding_extents_only", [1], ["no_ordered_boundary_vertices"]),
+    "IBM-IMYB2024-AUCTION-021": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-022": ("ordered_boundary_vertices_with_source_error", [1], ["latitude_seconds_point_C_printed_as_60"]),
+    "IBM-IMYB2024-AUCTION-023": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-024": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-025": ("ordered_boundary_vertices", [1], ["quantity_row_mineral_label_conflicts_with_bauxite_title_and_grade_text"]),
+    "IBM-IMYB2024-AUCTION-026": ("ordered_boundary_vertices_with_source_omission", [1], ["hemisphere_markers_not_printed"]),
     "IBM-IMYB2024-AUCTION-090": ("ordered_boundary_vertices", [1], ["published_and_computed_area_conflicts"]),
     "IBM-IMYB2024-AUCTION-091": ("ordered_boundary_vertices", [1], []),
     "IBM-IMYB2024-AUCTION-092": ("ordered_boundary_vertices", [1], []),
@@ -381,6 +528,22 @@ GEOMETRY_WITHHOLD_DECISIONS = {
         "withheld_insufficient_coordinate_detail",
         "The MBS publishes latitude/longitude extents but no ordered boundary vertices; no concession polygon is inferred from the bounding rectangle.",
     ),
+    "IBM-IMYB2024-AUCTION-022": (
+        "withheld_source_conflict",
+        "The MBS prints 60.00 seconds in the latitude of point C; geometry withheld rather than normalizing the malformed coordinate by inference.",
+    ),
+    "IBM-IMYB2024-AUCTION-026": (
+        "withheld_source_conflict",
+        "The MBS coordinate table omits hemisphere markers; geometry withheld rather than inferring N/E signs from the block's location.",
+    ),
+}
+
+COORDINATE_DATUM_SOURCE = {
+    "IBM-IMYB2024-AUCTION-021": "Not stated; source labels DGPS latitude/longitude",
+    "IBM-IMYB2024-AUCTION-023": "Not stated; source labels DGPS latitude/longitude",
+    "IBM-IMYB2024-AUCTION-024": "Not stated; source labels DGPS latitude/longitude",
+    "IBM-IMYB2024-AUCTION-025": "Not stated; source labels DGPS latitude/longitude",
+    "IBM-IMYB2024-AUCTION-026": "WGS 84",
 }
 
 
@@ -684,7 +847,7 @@ def load_state_shapes() -> dict[str, object]:
     districts = gpd.read_file(DISTRICT_BOUNDARIES).to_crs("EPSG:4326")
     return {
         state: districts.loc[districts["ST_NM"] == state, "geometry"].union_all()
-        for state in {"Chhattisgarh", "Goa", "Jharkhand", "Uttar Pradesh"}
+        for state in {"Chhattisgarh", "Goa", "Jharkhand", "Karnataka", "Uttar Pradesh"}
     }
 
 
@@ -813,7 +976,7 @@ def upsert_source_registry(access_date: str) -> None:
         "download_url": "Exact PDF URL, file identifier, SHA-256, byte size and page count are retained per matched row.",
         "license_or_access_note": "Public government-owned auction portal; retain document-level attribution and verify current portal and State Government reuse terms.",
         "used_for": "Reviewed document links, source-published concession boundary coordinates, exploration summaries, geological resources, grades, climate, terrain, hydrology and access context.",
-        "limitations": "Only seventeen of 97 IBM rows are reviewed in alpha.10. Mine Block Summaries describe auction-stage technical context and do not independently prove current operation, present legal status, access permission or reserve classification. Source conflicts are withheld, not repaired by inference.",
+        "limitations": "Only twenty-three of 97 IBM rows are reviewed in alpha.11. Mine Block Summaries describe auction-stage technical context and do not independently prove current operation, present legal status, access permission or reserve classification. Source conflicts are withheld, not repaired by inference.",
     })
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
@@ -834,7 +997,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         rows = [row for row in reader if row["table"] not in table_columns]
 
     definitions = {
-        "review_scope": "Whether this IBM row received curated document review in alpha.10.",
+        "review_scope": "Whether this IBM row received curated document review in alpha.11.",
         "curated_candidate_count": "Number of MSTC documents matching the reviewed record-specific expression; zero does not mean the portal lacks a relevant document for unreviewed rows.",
         "document_selection_rule": "Rule used to select one official document when a reviewed expression matched multiple versions.",
         "document_match_status": "Outcome of curated IBM-to-MSTC document matching.",
@@ -852,7 +1015,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         "normalized_material_names_json": "JSON array of normalized material English names linked from the IBM source wording.",
         "chemical_or_english_names_json": "JSON array using chemical names where defensible and English names otherwise.",
         "formulae_or_symbols_json": "JSON array of defensible element symbols or material formulae; empty when no single formula applies.",
-        "geometry_admission_status": "Whether the source footprint passed the alpha.10 spatial publication gates.",
+        "geometry_admission_status": "Whether the source footprint passed the alpha.11 spatial publication gates.",
         "geometry_admission_reason": "Specific evidence or failure responsible for geometry admission or withholding.",
         "coordinate_method": "Reviewed coordinate extraction and CRS-conversion method.",
         "coordinate_source_pdf_pages_json": "JSON array of one-based physical PDF pages containing the boundary coordinate table.",
@@ -885,7 +1048,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         "climate_source": "Concise source-normalized rainfall and temperature statement; explicit source-unit anomalies are retained and labelled.",
         "topography_source": "Mine Block Summary terrain or morphology text.",
         "current_legal_or_operational_status_verified": "Always false in this layer; the source combination does not independently verify present legal or operating status.",
-        "model_evidence_role": "Context only in alpha.10; rows do not enter training, labels, scoring or candidate promotion.",
+        "model_evidence_role": "Context only in alpha.11; rows do not enter training, labels, scoring or candidate promotion.",
         "model_exclusion_reason": "Reason the record is excluded from model evidence.",
     }
     boolean_columns = {
@@ -928,7 +1091,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
 def update_release_validation(validation: dict) -> None:
     path = ROOT / "outputs" / "validation_report.json"
     report = json.loads(path.read_text(encoding="utf-8"))
-    report["development_release_version"] = "v1.0-alpha.10"
+    report["development_release_version"] = "v1.0-alpha.11"
     report["ibm_auction_mbs_geometry_2023_24"] = {
         "ibm_input_rows": validation["ibm_input_rows"],
         "state_portal_documents_total": validation["state_portal_documents_total"],
@@ -974,7 +1137,7 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
             "auction_date": row["auction_date"],
             "concession_type_code": row["concession_type_code"],
             "ibm_area_ha": row["area_ha"],
-            "review_scope": "curated_alpha_10" if record_id in CURATED_MATCHES else "not_reviewed_alpha_10",
+            "review_scope": "curated_alpha_11" if record_id in CURATED_MATCHES else "not_reviewed_alpha_11",
             "curated_candidate_count": len(candidates),
             "document_selection_rule": "highest_numeric_mstc_file_id" if len(candidates) > 1 else "unique_curated_name_match" if selected else "",
             "document_match_status": "selected_curated_name_match" if selected else "not_reviewed_in_this_release",
@@ -1056,7 +1219,7 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
             **profile,
             **{key: value for key, value in geometry.items() if key != "_polygon"},
             "geometry_crs": "EPSG:4326",
-            "coordinate_datum_source": "WGS 84",
+            "coordinate_datum_source": COORDINATE_DATUM_SOURCE.get(record_id, "WGS 84"),
             "selected_mbs_file_id": selected["file_id"],
             "selected_mbs_url": selected["url"],
             "source_access_date": inventory["access_date"],
@@ -1128,7 +1291,7 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
         all(row[field] != "" for field in required_profile_fields) for row in reviewed_rows
     )
     validation = {
-        "release": "v1.0-alpha.10",
+        "release": "v1.0-alpha.11",
         "source_portal_url": PORTAL_INDEX,
         "source_access_date": inventory["access_date"],
         "ibm_input_rows": len(rows),
@@ -1154,32 +1317,36 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
         "model_evidence_role": "context_only",
         "outputs": {},
         "limitations": [
-            "This release reviews seventeen of the 97 IBM Table 5 records; unreviewed rows are explicit in the match audit.",
+            "This release reviews twenty-three of the 97 IBM Table 5 records; unreviewed rows are explicit in the match audit.",
             "Kareli-Chandi geometry is withheld because the MBS prints malformed latitude seconds for two vertices.",
             "Saloni geometry is withheld because IBM and MBS publish materially different areas.",
             "Chiropat geometry is withheld because the MBS prints an E hemisphere in the latitude column for two vertices.",
             "Baraiburu-Tatiba and Meralgara-Barabaljori publish bounding extents but no ordered boundary vertices.",
             "Girar geometry is withheld because IBM, MBS and coordinate-derived areas do not reconcile within 5%.",
             "Goa Block VI geometry is withheld because the source coordinates compute to an area 25.31% below the MBS published area.",
+            "Timmanahalli geometry is withheld because one source latitude prints 60.00 seconds.",
+            "Kudarka geometry is withheld because the source coordinate table omits hemisphere markers.",
+            "Niddodi is retained with an explicit source anomaly because its bauxite title and Al2O3 grade text conflict with an 'Iron ore' label in the quantity row.",
             "The 2011 district boundary layer is used only as a state-containment diagnostic and is not a current administrative register.",
             "MBS technical context and IBM auction reporting do not independently establish current operation or present legal status.",
         ],
     }
     validation["checks_pass"] = bool(
         validation["ibm_input_rows"] == 97
-        and validation["curated_records"] == 17
-        and validation["selected_document_matches"] == 17
-        and validation["reviewed_profile_complete_rows"] == 17
+        and validation["curated_records"] == 23
+        and validation["selected_document_matches"] == 23
+        and validation["reviewed_profile_complete_rows"] == 23
         and validation["coordinate_evidence_type_counts"] == {
-            "ordered_boundary_vertices": 13,
-            "ordered_boundary_vertices_with_source_error": 2,
+            "ordered_boundary_vertices": 17,
+            "ordered_boundary_vertices_with_source_error": 3,
             "bounding_extents_only": 2,
+            "ordered_boundary_vertices_with_source_omission": 1,
         }
-        and validation["published_geometries"] == 10
+        and validation["published_geometries"] == 14
         and validation["geometry_admission_status_counts"] == {
-            "withheld_not_reviewed": 80,
-            "admitted_authoritative_source_footprint": 10,
-            "withheld_source_conflict": 3,
+            "withheld_not_reviewed": 74,
+            "admitted_authoritative_source_footprint": 14,
+            "withheld_source_conflict": 5,
             "withheld_insufficient_coordinate_detail": 2,
             "withheld_validation_failure": 2,
         }
