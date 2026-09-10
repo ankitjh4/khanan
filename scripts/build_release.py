@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v1.0-alpha.12"
+VERSION = "v1.0-alpha.13"
 
 BUNDLE_MEMBERS = [
     "README.md",
@@ -13,13 +13,14 @@ BUNDLE_MEMBERS = [
     "assets/maps/khanan-india-prospectivity-overview-v0.6.png",
     "assets/maps/khanan-emag2-magnetic-context-v0.7.png",
     "assets/maps/khanan-soilgrids-context-v0.8.png",
-    "assets/maps/khanan-ibm-auction-mbs-geometries-alpha12.png",
+    "assets/maps/khanan-ibm-auction-mbs-geometries-alpha13.png",
     "assets/figures/khanan-emag2-spatial-ablation-v0.1.png",
     "assets/figures/khanan-soilgrids-spatial-ablation-v0.1.png",
     "data/README.md",
     "docs/methodology.md",
     "docs/ibm_mineral_concessions_2024.md",
     "docs/ibm_auction_mbs_geometry_2023_24.md",
+    "docs/ibm_auction_status_evidence_2023_24.md",
     "docs/emag2_spatial_ablation.md",
     "docs/ngdr_access_and_integration.md",
     "docs/soilgrids_features.md",
@@ -38,6 +39,7 @@ BUNDLE_MEMBERS = [
     "scripts/build_ibm_abandoned_mines.py",
     "scripts/build_ibm_mineral_concessions_2024.py",
     "scripts/build_ibm_auction_mbs_geometry_2023_24.py",
+    "scripts/build_ibm_auction_status_evidence_2023_24.py",
     "scripts/plot_ibm_auction_mbs_geometries.py",
     "scripts/build_material_ontology.py",
     "config/materials.json",
@@ -52,6 +54,7 @@ BUNDLE_MEMBERS = [
     "outputs/india_ibm_auctioned_concession_mbs_match_audit_2023_24.csv",
     "outputs/india_ibm_auctioned_concession_geometries_2023_24.csv",
     "outputs/india_ibm_auctioned_concession_geometries_2023_24.geojson",
+    "outputs/india_ibm_auctioned_concession_status_evidence_2023_24.csv",
     "outputs/india_ibm_nmi_2025_resource_inventory.csv",
     "outputs/india_official_critical_mineral_blocks.csv",
     "outputs/india_official_critical_mineral_mbs_manifest.csv",
@@ -74,6 +77,7 @@ BUNDLE_MEMBERS = [
     "outputs/ibm_abandoned_mines_validation.json",
     "outputs/ibm_mineral_concessions_2024_validation.json",
     "outputs/ibm_auction_mbs_geometry_validation.json",
+    "outputs/ibm_auction_status_evidence_2023_24_validation.json",
     "outputs/ngdr_service_validation.json",
     "outputs/emag2v3_magnetic_features_validation.json",
     "outputs/material_emag2_spatial_ablation.csv",
@@ -97,6 +101,7 @@ HASHED_ARTIFACTS = [
     "india_ibm_auctioned_concession_mbs_match_audit_2023_24.csv",
     "india_ibm_auctioned_concession_geometries_2023_24.csv",
     "india_ibm_auctioned_concession_geometries_2023_24.geojson",
+    "india_ibm_auctioned_concession_status_evidence_2023_24.csv",
     "india_ibm_nmi_2025_resource_inventory.csv",
     "india_official_critical_mineral_blocks.csv",
     "india_official_critical_mineral_mbs_manifest.csv",
@@ -119,6 +124,7 @@ HASHED_ARTIFACTS = [
     "ibm_abandoned_mines_validation.json",
     "ibm_mineral_concessions_2024_validation.json",
     "ibm_auction_mbs_geometry_validation.json",
+    "ibm_auction_status_evidence_2023_24_validation.json",
     "ngdr_service_validation.json",
     "emag2v3_magnetic_features_validation.json",
     "material_emag2_spatial_ablation.csv",

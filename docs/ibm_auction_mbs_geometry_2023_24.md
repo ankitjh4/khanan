@@ -1,6 +1,6 @@
 # IBM 2023-24 auction rows: State Mine Block Summary geometry
 
-**Development release:** `v1.0-alpha.12`
+**Development release:** `v1.0-alpha.13`
 
 **Sources:** Indian Bureau of Mines, *Indian Minerals Yearbook 2024*, Table 5; MSTC State mineral-auction Mine Block Summary portal
 
@@ -8,7 +8,7 @@
 
 ## Purpose
 
-IBM Table 5 names 97 mining leases or composite licences described as granted through auction during 2023-24, but it publishes no coordinates. Alpha.12 continues the separate task of locating exact State Mine Block Summaries and admitting a footprint only when the source itself publishes a boundary that survives spatial checks.
+IBM Table 5 names 97 mining leases or composite licences described as granted through auction during 2023-24, but it publishes no coordinates. Alpha.13 continues the separate task of locating exact State Mine Block Summaries and admitting a footprint only when the source itself publishes a boundary that survives spatial checks.
 
 The new outputs are:
 
@@ -34,7 +34,9 @@ The builder establishes a session with the MSTC State-auction portal, opens the 
 | Uttar Pradesh | 37 |
 | Goa | 18 |
 
-These are link-inventory observations, not 1,124 parsed documents or 1,124 mines. Alpha.12 downloads and parses twenty-nine selected PDFs: six Chhattisgarh, six Gujarat, three Jharkhand, six Karnataka, three Uttar Pradesh and five Goa blocks. Record-specific expressions are curated from exact names; the Uttar Pradesh expressions also require the Phase 4 label that corresponds to the IBM reporting period. When a reviewed expression contains several versions, the highest numeric MSTC file identifier is selected and the rule is retained in the match audit. This selects the official second-attempt summaries for Timmanahalli, Basavangudda and Niddodi. Gujarat uses exact normalized title anchors for the Phase IX files because later portal phases contain similarly named but distinct blocks. The remaining 68 IBM rows are labelled `not_reviewed_in_this_release`; a zero curated-candidate count for those rows must not be interpreted as a failed exhaustive search.
+These are link-inventory observations, not 1,124 parsed documents or 1,124 mines. Alpha.13 retains twenty-nine selected PDFs: six Chhattisgarh, six Gujarat, three Jharkhand, six Karnataka, three Uttar Pradesh and five Goa blocks. Record-specific expressions are curated from exact names; the Uttar Pradesh expressions also require the Phase 4 label that corresponds to the IBM reporting period. When a reviewed expression contains several versions, the highest numeric MSTC file identifier is selected and the rule is retained in the match audit. This selects the official second-attempt summaries for Timmanahalli, Basavangudda and Niddodi. Gujarat uses exact normalized title anchors for the Phase IX files because later portal phases contain similarly named but distinct blocks.
+
+Alpha.13 also reviews the five Andhra Pradesh rows. The live MSTC portal announces that events with bid starts before 5 February 2024 remain on the old portal, while later events use the new portal. The current public Andhra MBS index exposes newer 2025-26 tranches but no exact-name MBS for Adakula, Addankivaripalem, Lakshmakapalle North, Lakshmakapalle South or Mincheri RF. Those rows are marked `reviewed_no_current_public_mbs_match` and `withheld_no_public_boundary_document`; absence from the current index is not treated as evidence that a boundary never existed. Dated official-secondary status evidence is published separately in `outputs/india_ibm_auctioned_concession_status_evidence_2023_24.csv`. The remaining 63 IBM rows are labelled `not_reviewed_in_this_release`.
 
 ## Coordinate extraction and visual review
 
@@ -86,7 +88,7 @@ Seventeen footprints pass:
 | IBM-IMYB2024-AUCTION-096 | Block VIII Thivim-Pirna | Iron ore | 10 | 0.216% |
 | IBM-IMYB2024-AUCTION-097 | Block IX Surla-Sonshi | Iron ore | 65 | 2.549% |
 
-Twelve reviewed records are withheld rather than repaired:
+Twelve selected-MBS records are withheld rather than repaired:
 
 - **Saloni:** IBM publishes 600 ha; the exact-name MBS publishes 670 ha.
 - **Kareli-Chandi:** the MBS prints malformed latitude seconds (`34.4.00`) for two vertices.
@@ -111,11 +113,12 @@ Explicit anomalies remain visible. For example, the Block VII Cudnem MBS prints 
 
 An MBS is an auction-stage technical source, not a present-tense mine-status register. The joined IBM and MBS evidence does not independently establish the controlling grant, current lessee, production, clearances, legal boundary, permission to access land, current resource classification or operating status. Every row therefore sets `current_legal_or_operational_status_verified=false` and remains context only.
 
-The review is incomplete by design and does not imply that the 68 unreviewed IBM rows lack coordinates. The next Phase 2 increment is to extend the same document-level review and gates across the remaining States, then reconcile successful-auction reporting against controlling State grant records.
+The review is incomplete by design and does not imply that the 63 unreviewed IBM rows or the five Andhra status-linked rows lack coordinates. The next Phase 2 increment is to recover archival Andhra boundary documents if lawfully public, extend the same document-level review and gates across the remaining States, and reconcile successful-auction reporting against controlling State grant records.
 
 Rebuild with:
 
 ```bash
 .venv/bin/python scripts/build_ibm_auction_mbs_geometry_2023_24.py --refresh
+.venv/bin/python scripts/build_ibm_auction_status_evidence_2023_24.py --refresh
 .venv/bin/python scripts/plot_ibm_auction_mbs_geometries.py
 ```

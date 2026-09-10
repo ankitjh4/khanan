@@ -123,7 +123,7 @@
   "official_critical_mineral_distinct_offer_lineage_keys": 100,
   "official_critical_mineral_pib_reported_cumulative_offer_count": 88,
   "official_critical_mineral_lineage_reconciliation_status": "not_reconciled",
-  "development_release_version": "v1.0-alpha.12",
+  "development_release_version": "v1.0-alpha.13",
   "material_ontology_v1": {
     "ontology_rows": 233,
     "ima_verified_species": 111,
@@ -223,7 +223,7 @@
   "ibm_auction_mbs_geometry_2023_24": {
     "ibm_input_rows": 97,
     "state_portal_documents_total": 1124,
-    "curated_records": 29,
+    "curated_records": 34,
     "selected_document_matches": 29,
     "reviewed_profile_complete_rows": 29,
     "coordinate_evidence_type_counts": {
@@ -234,15 +234,34 @@
     },
     "published_geometries": 17,
     "geometry_admission_status_counts": {
-      "withheld_not_reviewed": 68,
+      "withheld_no_public_boundary_document": 5,
       "admitted_authoritative_source_footprint": 17,
       "withheld_source_conflict": 8,
       "withheld_insufficient_coordinate_detail": 2,
+      "withheld_not_reviewed": 63,
       "withheld_validation_failure": 2
     },
     "all_geometry_polygons_valid": true,
     "all_geometry_centroids_in_source_state": true,
     "all_geometry_computed_area_differences_lte_5pct": true,
+    "model_evidence_role": "context_only"
+  },
+  "ibm_auction_status_evidence_2023_24": {
+    "records": 5,
+    "official_source_count": 2,
+    "source_record_counts": {
+      "SRC_MINES_NMMC_AUCTION_OPERATIONALIZATION_JAN2025": 2,
+      "SRC_AP_PRAKASAM_JSW_IRON_BLOCK_STATUS_2026": 3
+    },
+    "auction_date_agreement_counts": {
+      "True": 4,
+      "False": 1
+    },
+    "records_with_source_area": 5,
+    "records_with_preferred_bidder": 2,
+    "records_with_dated_events": 5,
+    "current_legal_or_operational_status_verified_rows": 0,
+    "geometry_published_rows": 0,
     "model_evidence_role": "context_only"
   }
 }

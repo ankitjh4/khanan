@@ -45,7 +45,7 @@ SOURCE_ID = "SRC_MSTC_STATE_MBS_IBM_AUCTIONS_2023_24"
 
 PORTAL_INDEX = "https://www.mstcecommerce.com/auctionhome/mlcl/index.jsp"
 STATE_LINK_CODES = {
-    "Andhra Pradesh": "63",
+    "Andhra Pradesh": "474",
     "Chhattisgarh": "64",
     "Gujarat": "65",
     "Jharkhand": "66",
@@ -61,6 +61,11 @@ STATE_LINK_CODES = {
 # state MBS inventory and must resolve to one selected document after the latest
 # version rule below. Unlisted IBM records remain unresolved in this release.
 CURATED_MATCHES = {
+    "IBM-IMYB2024-AUCTION-001": r"^adakula(?:\s+mine)?(?:\s+block)?(?:\s+summary)?$",
+    "IBM-IMYB2024-AUCTION-002": r"^addankivaripalem(?:\s+iron\s+ore)?(?:\s+block)?(?:\s+summary)?$",
+    "IBM-IMYB2024-AUCTION-003": r"^lakshmakapalle\s+north(?:\s+iron\s+ore)?(?:\s+block)?(?:\s+summary)?$",
+    "IBM-IMYB2024-AUCTION-004": r"^lakshmakapalle\s+south(?:\s+iron\s+ore)?(?:\s+block)?(?:\s+summary)?$",
+    "IBM-IMYB2024-AUCTION-005": r"^mincheri\s+rf(?:\s+iron\s+ore)?(?:\s+block)?(?:\s+summary)?$",
     "IBM-IMYB2024-AUCTION-006": r"north\s+of\s+arjunda",
     "IBM-IMYB2024-AUCTION-007": r"\bsaloni\b",
     "IBM-IMYB2024-AUCTION-008": r"\bdevri\b.*\blimestone\b|\blimestone\b.*\bdevri\b",
@@ -90,6 +95,18 @@ CURATED_MATCHES = {
     "IBM-IMYB2024-AUCTION-095": r"(?:block\s*)?(?:vii|7).*cudnem\b|\bcudnem\b.*(?:block\s*)?(?:vii|7)",
     "IBM-IMYB2024-AUCTION-096": r"(?:block\s*)?(?:viii|8).*thivim.*pirna|thivim.*pirna",
     "IBM-IMYB2024-AUCTION-097": r"(?:block\s*)?(?:ix|9).*surla.*sonshi|surla.*sonshi",
+}
+
+# The current public Andhra Pradesh MBS index exposes newer 2025-26 tranches,
+# not these five IBM 2023-24 rows.  Their exact-name searches are still part of
+# the reviewed scope, but absence from the current index cannot be converted to
+# a polygon.  A separate status-evidence layer records dated official sources.
+REVIEWED_NO_CURRENT_MBS = {
+    f"IBM-IMYB2024-AUCTION-{value:03d}": (
+        "Exact block-name review found no matching document in the current public Andhra Pradesh "
+        "MSTC Mine Block Summary index; geometry is withheld without inferring coordinates."
+    )
+    for value in range(1, 6)
 }
 
 
@@ -1183,7 +1200,7 @@ def upsert_source_registry(access_date: str) -> None:
         "download_url": "Exact PDF URL, file identifier, SHA-256, byte size and page count are retained per matched row.",
         "license_or_access_note": "Public government-owned auction portal; retain document-level attribution and verify current portal and State Government reuse terms.",
         "used_for": "Reviewed document links, source-published concession boundary coordinates, exploration summaries, geological resources, grades, climate, terrain, hydrology and access context.",
-        "limitations": "Only twenty-nine of 97 IBM rows are reviewed in alpha.12. Mine Block Summaries describe auction-stage technical context and do not independently prove current operation, present legal status, access permission or reserve classification. Source conflicts are withheld, not repaired by inference.",
+        "limitations": "Alpha.13 reviews 34 of 97 IBM rows: 29 selected State MBS PDFs and five Andhra Pradesh exact-name searches with no match in the current public index. Mine Block Summaries describe auction-stage technical context and do not independently prove current operation, present legal status, access permission or reserve classification. Source conflicts and missing public boundary documents are withheld, not repaired by inference.",
     })
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
@@ -1204,7 +1221,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         rows = [row for row in reader if row["table"] not in table_columns]
 
     definitions = {
-        "review_scope": "Whether this IBM row received curated document review in alpha.12.",
+        "review_scope": "Whether this IBM row received curated document review in alpha.13.",
         "curated_candidate_count": "Number of MSTC documents matching the reviewed record-specific expression; zero does not mean the portal lacks a relevant document for unreviewed rows.",
         "document_selection_rule": "Rule used to select one official document when a reviewed expression matched multiple versions.",
         "document_match_status": "Outcome of curated IBM-to-MSTC document matching.",
@@ -1222,7 +1239,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         "normalized_material_names_json": "JSON array of normalized material English names linked from the IBM source wording.",
         "chemical_or_english_names_json": "JSON array using chemical names where defensible and English names otherwise.",
         "formulae_or_symbols_json": "JSON array of defensible element symbols or material formulae; empty when no single formula applies.",
-        "geometry_admission_status": "Whether the source footprint passed the alpha.12 spatial publication gates.",
+        "geometry_admission_status": "Whether the source footprint passed the alpha.13 spatial publication gates.",
         "geometry_admission_reason": "Specific evidence or failure responsible for geometry admission or withholding.",
         "coordinate_method": "Reviewed coordinate extraction and CRS-conversion method.",
         "coordinate_source_pdf_pages_json": "JSON array of one-based physical PDF pages containing the boundary coordinate table.",
@@ -1255,7 +1272,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         "climate_source": "Concise source-normalized rainfall and temperature statement; explicit source-unit anomalies are retained and labelled.",
         "topography_source": "Mine Block Summary terrain or morphology text.",
         "current_legal_or_operational_status_verified": "Always false in this layer; the source combination does not independently verify present legal or operating status.",
-        "model_evidence_role": "Context only in alpha.12; rows do not enter training, labels, scoring or candidate promotion.",
+        "model_evidence_role": "Context only in alpha.13; rows do not enter training, labels, scoring or candidate promotion.",
         "model_exclusion_reason": "Reason the record is excluded from model evidence.",
     }
     boolean_columns = {
@@ -1298,7 +1315,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
 def update_release_validation(validation: dict) -> None:
     path = ROOT / "outputs" / "validation_report.json"
     report = json.loads(path.read_text(encoding="utf-8"))
-    report["development_release_version"] = "v1.0-alpha.12"
+    report["development_release_version"] = "v1.0-alpha.13"
     report["ibm_auction_mbs_geometry_2023_24"] = {
         "ibm_input_rows": validation["ibm_input_rows"],
         "state_portal_documents_total": validation["state_portal_documents_total"],
@@ -1332,6 +1349,7 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
         record_id = row["record_id"]
         candidates = candidate_documents(row, inventory)
         selected = select_latest(candidates)
+        no_current_mbs_reason = REVIEWED_NO_CURRENT_MBS.get(record_id)
         match = {
             "record_id": record_id,
             "state_or_ut": row["state_or_ut"],
@@ -1344,10 +1362,10 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
             "auction_date": row["auction_date"],
             "concession_type_code": row["concession_type_code"],
             "ibm_area_ha": row["area_ha"],
-            "review_scope": "curated_alpha_12" if record_id in CURATED_MATCHES else "not_reviewed_alpha_12",
+            "review_scope": "curated_alpha_13" if record_id in CURATED_MATCHES else "not_reviewed_alpha_13",
             "curated_candidate_count": len(candidates),
-            "document_selection_rule": "highest_numeric_mstc_file_id" if len(candidates) > 1 else "unique_curated_name_match" if selected else "",
-            "document_match_status": "selected_curated_name_match" if selected else "not_reviewed_in_this_release",
+            "document_selection_rule": "highest_numeric_mstc_file_id" if len(candidates) > 1 else "unique_curated_name_match" if selected else "record_specific_exact_name_search_current_public_state_mbs_index" if no_current_mbs_reason else "",
+            "document_match_status": "selected_curated_name_match" if selected else "reviewed_no_current_public_mbs_match" if no_current_mbs_reason else "not_reviewed_in_this_release",
             "selected_mbs_file_id": "",
             "selected_mbs_title": "",
             "selected_mbs_url": "",
@@ -1360,8 +1378,8 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
             "coordinate_source_pdf_pages_json": "",
             "coordinate_review_flags_json": "",
             **{key: "" for key in profile_fields},
-            "geometry_admission_status": "withheld_not_reviewed",
-            "geometry_admission_reason": "No curated document match was reviewed in this release.",
+            "geometry_admission_status": "withheld_no_public_boundary_document" if no_current_mbs_reason else "withheld_not_reviewed",
+            "geometry_admission_reason": no_current_mbs_reason or "No curated document match was reviewed in this release.",
             "source_portal_url": PORTAL_INDEX,
             "source_access_date": inventory["access_date"],
             "current_legal_or_operational_status_verified": False,
@@ -1498,7 +1516,7 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
         all(row[field] != "" for field in required_profile_fields) for row in reviewed_rows
     )
     validation = {
-        "release": "v1.0-alpha.12",
+        "release": "v1.0-alpha.13",
         "source_portal_url": PORTAL_INDEX,
         "source_access_date": inventory["access_date"],
         "ibm_input_rows": len(rows),
@@ -1524,7 +1542,8 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
         "model_evidence_role": "context_only",
         "outputs": {},
         "limitations": [
-            "This release reviews twenty-nine of the 97 IBM Table 5 records; unreviewed rows are explicit in the match audit.",
+            "This release reviews 34 of the 97 IBM Table 5 records: 29 selected State MBS PDFs and five Andhra Pradesh exact-name searches with no match in the current public index.",
+            "The five Andhra Pradesh rows are withheld from geometry because no public boundary document was found in the current State MBS index; their dated official-secondary status evidence is published separately.",
             "Kareli-Chandi geometry is withheld because the MBS prints malformed latitude seconds for two vertices.",
             "Saloni geometry is withheld because IBM and MBS publish materially different areas.",
             "Chiropat geometry is withheld because the MBS prints an E hemisphere in the latitude column for two vertices.",
@@ -1542,7 +1561,7 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
     }
     validation["checks_pass"] = bool(
         validation["ibm_input_rows"] == 97
-        and validation["curated_records"] == 29
+        and validation["curated_records"] == 34
         and validation["selected_document_matches"] == 29
         and validation["reviewed_profile_complete_rows"] == 29
         and validation["coordinate_evidence_type_counts"] == {
@@ -1553,7 +1572,8 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
         }
         and validation["published_geometries"] == 17
         and validation["geometry_admission_status_counts"] == {
-            "withheld_not_reviewed": 68,
+            "withheld_not_reviewed": 63,
+            "withheld_no_public_boundary_document": 5,
             "admitted_authoritative_source_footprint": 17,
             "withheld_source_conflict": 8,
             "withheld_insufficient_coordinate_detail": 2,

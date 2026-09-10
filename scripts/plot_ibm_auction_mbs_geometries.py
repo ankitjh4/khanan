@@ -11,8 +11,9 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 GEOMETRIES = ROOT / "outputs" / "india_ibm_auctioned_concession_geometries_2023_24.geojson"
 MATCHES = ROOT / "outputs" / "india_ibm_auctioned_concession_mbs_match_audit_2023_24.csv"
+STATUS_EVIDENCE = ROOT / "outputs" / "india_ibm_auctioned_concession_status_evidence_2023_24.csv"
 DISTRICTS = ROOT / "sources" / "raw" / "2011_Dist.shp"
-OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-auction-mbs-geometries-alpha12.png"
+OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-auction-mbs-geometries-alpha13.png"
 
 COLORS = {
     "Bauxite": "#A46636",
@@ -58,15 +59,18 @@ def label_polygons(axis, frame: gpd.GeoDataFrame) -> None:
 def main() -> None:
     geometries = gpd.read_file(GEOMETRIES).to_crs("EPSG:4326")
     matches = pd.read_csv(MATCHES, keep_default_na=False)
+    status_evidence = pd.read_csv(STATUS_EVIDENCE, keep_default_na=False)
     districts = gpd.read_file(DISTRICTS).to_crs("EPSG:4326")
     states = districts.dissolve(by="ST_NM").reset_index()
     admitted = int((matches.geometry_admission_status == "admitted_authoritative_source_footprint").sum())
     unreviewed = int((matches.geometry_admission_status == "withheld_not_reviewed").sum())
     withheld = len(matches) - admitted - unreviewed
+    no_public_boundary = int((matches.geometry_admission_status == "withheld_no_public_boundary_document").sum())
+    reviewed_mbs_withheld = withheld - no_public_boundary
 
-    fig = plt.figure(figsize=(19, 11), facecolor="#FCFBF7")
-    grid = fig.add_gridspec(2, 4, left=0.04, right=0.985, top=0.84, bottom=0.12, wspace=0.11, hspace=0.20)
-    axes = [fig.add_subplot(grid[row, column]) for row in range(2) for column in range(4)]
+    fig = plt.figure(figsize=(18, 14), facecolor="#FCFBF7")
+    grid = fig.add_gridspec(3, 3, left=0.045, right=0.985, top=0.86, bottom=0.13, wspace=0.12, hspace=0.20)
+    axes = [fig.add_subplot(grid[row, column]) for row in range(3) for column in range(3)]
     for axis in axes:
         style_axis(axis)
 
@@ -88,7 +92,7 @@ def main() -> None:
     )
     axes[0].set_title("India locator", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
 
-    for axis, state in zip(axes[1:6], ["Chhattisgarh", "Goa", "Gujarat", "Uttar Pradesh", "Karnataka"]):
+    for axis, state in zip(axes[1:7], ["Chhattisgarh", "Goa", "Gujarat", "Andhra Pradesh", "Uttar Pradesh", "Karnataka"]):
         state_shape = states[states.ST_NM == state]
         subset = geometries[geometries.state_or_ut == state]
         state_shape.plot(ax=axis, facecolor="#E9E5DC", edgecolor="#756E64", linewidth=0.8)
@@ -107,59 +111,74 @@ def main() -> None:
             ypad = max((maxy - miny) * 0.32, 0.04)
             axis.set_xlim(minx - xpad, maxx + xpad)
             axis.set_ylim(miny - ypad, maxy + ypad)
-        axis.set_title(f"{state}: {len(subset)} admitted footprints", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
+        if state == "Andhra Pradesh":
+            axis.text(
+                0.5,
+                0.5,
+                f"{len(status_evidence)} status-linked IBM rows\nNo public boundary document found",
+                ha="center",
+                va="center",
+                fontsize=11,
+                linespacing=1.45,
+                color="#65717A",
+                transform=axis.transAxes,
+                bbox={"facecolor": "#FCFBF7", "edgecolor": "none", "alpha": 0.82, "pad": 5},
+            )
+            axis.set_title("Andhra Pradesh: status evidence only", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
+        else:
+            axis.set_title(f"{state}: {len(subset)} admitted footprints", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
 
-    axes[6].axis("off")
-    axes[6].text(0.02, 0.94, "Review scope", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[6].transAxes)
-    axes[6].text(
+    axes[7].axis("off")
+    axes[7].text(0.02, 0.94, "Review scope", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[7].transAxes)
+    axes[7].text(
         0.02,
         0.80,
-        f"29 official MBS PDFs reviewed\n{admitted} footprints admitted\n{withheld} reviewed records withheld\n{unreviewed} IBM rows not yet reviewed",
+        f"34 IBM rows reviewed\n29 official MBS PDFs selected\n{admitted} footprints admitted\n{reviewed_mbs_withheld} MBS records withheld\n{no_public_boundary} Andhra rows status-linked only\n{unreviewed} IBM rows not yet reviewed",
         fontsize=13,
-        linespacing=1.65,
+        linespacing=1.45,
         color="#48545C",
         va="top",
-        transform=axes[6].transAxes,
+        transform=axes[7].transAxes,
     )
-    axes[6].text(
+    axes[7].text(
         0.02,
-        0.28,
+        0.22,
         "Withholding is deliberate: malformed coordinates,\nmissing hemispheres, incomplete boundary detail,\nor area-reconciliation failures are not repaired\nby inference.",
         fontsize=10.5,
         linespacing=1.5,
         color="#65717A",
         va="top",
-        transform=axes[6].transAxes,
-    )
-
-    axes[7].axis("off")
-    axes[7].text(0.02, 0.94, "Admission gate", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[7].transAxes)
-    axes[7].text(
-        0.02,
-        0.80,
-        "Valid source-order polygon\nCentroid covered by source State\nComputed vs MBS area within 5%\nIBM vs MBS area within 5%",
-        fontsize=12,
-        linespacing=1.65,
-        color="#48545C",
-        va="top",
         transform=axes[7].transAxes,
     )
-    axes[7].text(
+
+    axes[8].axis("off")
+    axes[8].text(0.02, 0.94, "Evidence and geometry gates", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[8].transAxes)
+    axes[8].text(
         0.02,
-        0.33,
-        "Gujarat adds three admitted footprints.\nThree further exact-title summaries are retained\nas reviewed evidence but withheld for source conflicts.",
+        0.80,
+        "Exact block identity and dated source\nNo current-status claim without controlling record\nValid source-order polygon\nCentroid and footprint covered by source State\nComputed vs MBS area within 5%\nIBM vs MBS area within 5%",
+        fontsize=12,
+        linespacing=1.5,
+        color="#48545C",
+        va="top",
+        transform=axes[8].transAxes,
+    )
+    axes[8].text(
+        0.02,
+        0.25,
+        "Andhra Pradesh adds five dated status-evidence\nrows, but no polygons. Candidate scores and the\nseventeen admitted footprints remain unchanged.",
         fontsize=10.5,
         linespacing=1.5,
         color="#65717A",
         va="top",
-        transform=axes[7].transAxes,
+        transform=axes[8].transAxes,
     )
 
     fig.text(0.045, 0.945, "KHANAN | Reviewed state-auction Mine Block Summary geometry", fontsize=22, weight="bold", color="#18232B")
     fig.text(
         0.045,
         0.905,
-        f"IBM Table 5 contains 97 blocks. Alpha.12 admits {admitted} source footprints, withholds {withheld} reviewed records, and leaves {unreviewed} unreviewed.",
+        f"IBM Table 5 contains 97 blocks. Alpha.13 reviews 34 rows, admits {admitted} source footprints, and leaves {unreviewed} unreviewed.",
         fontsize=12,
         color="#48545C",
     )
@@ -171,11 +190,11 @@ def main() -> None:
             continue
         seen.add(label)
         legend_items.append(plt.Line2D([0], [0], marker="s", color="none", markerfacecolor=material_color(label), markeredgecolor="none", markersize=10, label=label))
-    fig.legend(handles=legend_items, loc="lower left", bbox_to_anchor=(0.045, 0.038), ncol=6, frameon=False, fontsize=9)
+    fig.legend(handles=legend_items, loc="lower left", bbox_to_anchor=(0.045, 0.047), ncol=6, frameon=False, fontsize=9)
     fig.text(
         0.985,
-        0.045,
-        "Context only: MBS footprints do not independently prove present legal status or operation.\nSource: MSTC state mineral-auction portal; state diagnostic boundary: Census 2011 district layer.",
+        0.018,
+        "Context only: MBS footprints and official-secondary status evidence do not independently prove present operation.\nSources: MSTC State portal, Prakasam District Administration, Ministry of Mines; State diagnostic boundary: Census 2011 district layer.",
         ha="right",
         va="bottom",
         fontsize=8.5,

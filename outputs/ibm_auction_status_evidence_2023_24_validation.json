@@ -1,0 +1,41 @@
+{
+  "release": "v1.0-alpha.13",
+  "source_access_date": "2026-09-10",
+  "records": 5,
+  "official_source_count": 2,
+  "source_record_counts": {
+    "SRC_MINES_NMMC_AUCTION_OPERATIONALIZATION_JAN2025": 2,
+    "SRC_AP_PRAKASAM_JSW_IRON_BLOCK_STATUS_2026": 3
+  },
+  "auction_date_agreement_counts": {
+    "True": 4,
+    "False": 1
+  },
+  "records_with_source_area": 5,
+  "records_with_preferred_bidder": 2,
+  "records_with_dated_events": 5,
+  "current_legal_or_operational_status_verified_rows": 0,
+  "geometry_published_rows": 0,
+  "model_evidence_role": "context_only",
+  "diagnostics": {
+    "prakasam_source_sha256": "4ffab0c8bee758a97f8a6887780619686e30f3f376eee27abecc50d777b47fbf",
+    "ministry_source_sha256": "966e090d90aaadbc90e1a6e4c0dd0a5add2b169b50f7776292d2d99f5e248211",
+    "ministry_pdf_pages": 75,
+    "ministry_evidence_pdf_page": 50,
+    "required_html_strings_found": 20,
+    "required_pdf_strings_found": 19
+  },
+  "output": {
+    "file": "india_ibm_auctioned_concession_status_evidence_2023_24.csv",
+    "sha256": "5855ba7ffc5743e47739508757dc582e1351bd89343b4518836f056d2128fe33",
+    "bytes": 8015
+  },
+  "checks_pass": true,
+  "limitations": [
+    "The five rows are official-secondary status evidence, not controlling grant or licence instruments.",
+    "The Prakasam page publishes no boundary coordinates and the current MSTC Andhra MBS index does not expose these 2023 blocks.",
+    "The Ministry slide is a January 2025 historical snapshot and cannot establish present status.",
+    "The Ministry slide's Mincheri auction date conflicts with the IBM yearbook date and both values are preserved.",
+    "No row is used as a model label, training observation, candidate score input or geometry."
+  ]
+}
