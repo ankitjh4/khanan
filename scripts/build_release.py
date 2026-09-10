@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v1.0-alpha.16"
+VERSION = "v1.0-alpha.17"
 
 BUNDLE_MEMBERS = [
     "README.md",
@@ -14,6 +14,7 @@ BUNDLE_MEMBERS = [
     "assets/maps/khanan-emag2-magnetic-context-v0.7.png",
     "assets/maps/khanan-soilgrids-context-v0.8.png",
     "assets/maps/khanan-ibm-auction-mbs-geometries-alpha16.png",
+    "assets/maps/khanan-earthchem-lithium-geochemistry-alpha17.png",
     "assets/figures/khanan-emag2-spatial-ablation-v0.1.png",
     "assets/figures/khanan-soilgrids-spatial-ablation-v0.1.png",
     "data/README.md",
@@ -22,6 +23,7 @@ BUNDLE_MEMBERS = [
     "docs/ibm_auction_mbs_geometry_2023_24.md",
     "docs/ibm_auction_status_evidence_2023_24.md",
     "docs/emag2_spatial_ablation.md",
+    "docs/earthchem_lithium_geochemistry.md",
     "docs/ngdr_access_and_integration.md",
     "docs/soilgrids_features.md",
     "docs/soilgrids_spatial_ablation.md",
@@ -41,6 +43,8 @@ BUNDLE_MEMBERS = [
     "scripts/build_ibm_auction_mbs_geometry_2023_24.py",
     "scripts/build_ibm_auction_status_evidence_2023_24.py",
     "scripts/plot_ibm_auction_mbs_geometries.py",
+    "scripts/build_earthchem_geochemistry.py",
+    "scripts/plot_earthchem_geochemistry.py",
     "scripts/build_material_ontology.py",
     "config/materials.json",
     "config/weather_window.json",
@@ -62,6 +66,8 @@ BUNDLE_MEMBERS = [
     "outputs/india_mining_candidate_areas_validation_gated.csv",
     "outputs/india_emag2v3_magnetic_features_h3_r6.csv",
     "outputs/india_soilgrids_v2_soil_features_h3_r6.csv",
+    "outputs/india_earthchem_geochemical_samples.csv",
+    "outputs/india_earthchem_geochemical_observations.csv",
     "outputs/india_strategic_materials_top50.csv",
     "outputs/india_material_ontology_v1.csv",
     "outputs/material_source_term_crosswalk_v1.csv",
@@ -87,6 +93,7 @@ BUNDLE_MEMBERS = [
     "outputs/material_soilgrids_spatial_ablation.csv",
     "outputs/material_soilgrids_spatial_ablation_folds.csv",
     "outputs/soilgrids_spatial_ablation_validation.json",
+    "outputs/earthchem_geochemical_validation.json",
     "outputs/nasa_power_rolling_12m_validation.json",
     "outputs/official_critical_blocks_validation.json",
 ]
@@ -109,6 +116,8 @@ HASHED_ARTIFACTS = [
     "india_mining_candidate_areas_validation_gated.csv",
     "india_emag2v3_magnetic_features_h3_r6.csv",
     "india_soilgrids_v2_soil_features_h3_r6.csv",
+    "india_earthchem_geochemical_samples.csv",
+    "india_earthchem_geochemical_observations.csv",
     "india_strategic_materials_top50.csv",
     "india_material_ontology_v1.csv",
     "material_source_term_crosswalk_v1.csv",
@@ -134,6 +143,7 @@ HASHED_ARTIFACTS = [
     "material_soilgrids_spatial_ablation.csv",
     "material_soilgrids_spatial_ablation_folds.csv",
     "soilgrids_spatial_ablation_validation.json",
+    "earthchem_geochemical_validation.json",
     "nasa_power_rolling_12m_validation.json",
     "official_critical_blocks_validation.json",
     f"india_mining_dataset_csv_bundle_{VERSION}.zip",

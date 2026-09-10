@@ -123,7 +123,7 @@
   "official_critical_mineral_distinct_offer_lineage_keys": 100,
   "official_critical_mineral_pib_reported_cumulative_offer_count": 88,
   "official_critical_mineral_lineage_reconciliation_status": "not_reconciled",
-  "development_release_version": "v1.0-alpha.16",
+  "development_release_version": "v1.0-alpha.17",
   "material_ontology_v1": {
     "ontology_rows": 233,
     "ima_verified_species": 111,
@@ -263,5 +263,28 @@
     "current_legal_or_operational_status_verified_rows": 0,
     "geometry_published_rows": 0,
     "model_evidence_role": "context_only"
+  },
+  "earthchem_geochemistry": {
+    "dataset_version": "earthchem_ecl_4498_alpha17_v1",
+    "source_dataset_id": "SRC_EARTHCHEM_ECL_4498_DUTT_2026",
+    "source_doi": "10.60520/IEDA/114498",
+    "source_license": "CC-BY-4.0",
+    "sample_rows": 13,
+    "unique_coordinate_sites": 2,
+    "bulk_analysis_rows": 13,
+    "in_situ_analysis_rows": 55,
+    "observation_rows": 1323,
+    "numeric_observations": 1254,
+    "below_detection_observations": 21,
+    "source_na_token_unresolved_observations": 2,
+    "source_dash_observations": 42,
+    "source_blank_observations": 4,
+    "source_method_code_conflict_observations": 13,
+    "deposit_or_mine_status_verified_rows": 0,
+    "candidate_scores_recomputed": false,
+    "production_scoring_changed": false,
+    "model_evidence_role": "independent_geochemical_context",
+    "model_use_status": "excluded_from_v0.6_model_pending_spatial_validation",
+    "checks_pass": true
   }
 }

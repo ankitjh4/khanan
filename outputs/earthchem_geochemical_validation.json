@@ -1,0 +1,86 @@
+{
+  "dataset_version": "earthchem_ecl_4498_alpha17_v1",
+  "generated_utc": "2026-09-10T00:00:00Z",
+  "source_dataset_id": "SRC_EARTHCHEM_ECL_4498_DUTT_2026",
+  "source_doi": "10.60520/IEDA/114498",
+  "source_license": "CC-BY-4.0",
+  "source_checksums": {
+    "all_dataset_4498.zip": {
+      "sha1": "35918ae2fc602798980bb6b3df914966fc1f0eb4",
+      "sha256": "6e92b5a601cb097623b25a204d37cb653077d9803eb78cfe16deddaf8e0938bd"
+    },
+    "4498-1_Duttetal_2026_BulkAnalysis.xls": {
+      "sha1": "118bc636e3cd7a3b42a109ca4c6985b7a4926f2f",
+      "sha256": "dc29e57f88ed3846140751d12319bb5f2d446f7baf9b853918e94e3ff0decb30"
+    },
+    "4498-2_Duttetal_2026_InsituAnalysis.xls": {
+      "sha1": "30abe32ae1a77e661342e5083abc98446b3918ef",
+      "sha256": "8d49808ac091772966e7f7cac7280a1d0cd1fde0556bdb9f02fa05c72f7e3604"
+    }
+  },
+  "counts": {
+    "samples": 13,
+    "unique_coordinate_sites": 2,
+    "source_bulk_analysis_rows": 13,
+    "source_in_situ_analysis_rows": 55,
+    "observations_total": 1323,
+    "observations_by_scope": {
+      "bulk": 663,
+      "in_situ": 660
+    },
+    "parameters_by_scope": {
+      "bulk": 51,
+      "in_situ": 12
+    },
+    "measurement_status_counts": {
+      "below_detection": 21,
+      "measured_numeric": 1254,
+      "missing": 4,
+      "source_dash": 42,
+      "source_na_token_unresolved": 2
+    },
+    "data_quality_flag_counts": {
+      "detection_limit_not_reported": 21,
+      "source_beam_diameter_1mm_retained_verbatim": 660,
+      "source_method_code_conflict": 13,
+      "source_na_token_unresolved": 2
+    }
+  },
+  "interpretation_contract": {
+    "evidence_role": "Independent, CC-BY published geochemical context at two targeted coordinate sites.",
+    "not_a_discovery_claim": true,
+    "not_a_mine_or_deposit_register": true,
+    "not_model_training_or_validation": true,
+    "missing_value_policy": "Source blanks, b.d.l., NA and dash tokens remain distinct; none are converted to zero.",
+    "source_na_policy": "The source note says 'NA stands for analyzed', which does not define a numeric value; numeric_value is blank and the token is flagged unresolved.",
+    "detection_limit_policy": "b.d.l. is retained as below_detection, but no numeric detection limits are reported for the affected measurements.",
+    "method_conflict_policy": "The Data sheet assigns method 4 to 143Nd/144Nd while Primary Metadata assigns TIMS method 3; both codes are retained and flagged.",
+    "beam_diameter_policy": "The in-situ method sheet's '1mm' beam diameter is retained verbatim and flagged rather than silently corrected."
+  },
+  "tests": {
+    "source_archive_sha1_matches_publisher": true,
+    "source_file_sha1_matches_publisher": true,
+    "sample_count_13": true,
+    "unique_coordinate_site_count_2": true,
+    "bulk_analysis_rows_13": true,
+    "in_situ_analysis_rows_55": true,
+    "bulk_parameters_51": true,
+    "in_situ_parameters_12": true,
+    "observation_rows_1323": true,
+    "observation_ids_unique": true,
+    "observation_sample_foreign_keys_resolve": true,
+    "source_dataset_id_resolves_in_registry": true,
+    "observation_ontology_ids_resolve": true,
+    "all_coordinates_in_india_bounds": true,
+    "all_admin_joins_present": true,
+    "all_h3_cells_valid": true,
+    "numeric_values_nonnegative_except_end": true,
+    "wt_percent_values_between_0_and_100": true,
+    "measurement_status_counts_match_source": true,
+    "isotope_ratio_method_conflict_count_13": true,
+    "source_na_semantics_flag_count_2": true,
+    "raw_measurements_excluded_from_v0_6": true,
+    "no_rows_claim_verified_deposit_or_mine": true
+  },
+  "status": "pass"
+}
