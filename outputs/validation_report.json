@@ -123,7 +123,7 @@
   "official_critical_mineral_distinct_offer_lineage_keys": 100,
   "official_critical_mineral_pib_reported_cumulative_offer_count": 88,
   "official_critical_mineral_lineage_reconciliation_status": "not_reconciled",
-  "development_release_version": "v1.0-alpha.17",
+  "development_release_version": "v1.0-alpha.18",
   "material_ontology_v1": {
     "ontology_rows": 233,
     "ima_verified_species": 111,
@@ -285,6 +285,36 @@
     "production_scoring_changed": false,
     "model_evidence_role": "independent_geochemical_context",
     "model_use_status": "excluded_from_v0.6_model_pending_spatial_validation",
+    "checks_pass": true
+  },
+  "sentinel2_surface_context": {
+    "feature_version": "sentinel2-l2a-h3-r6-surface-context-v0.1",
+    "feature_rows": 88857,
+    "scene_manifest_rows": 950,
+    "scene_rows_by_season": {
+      "dry_pre_monsoon_2025": 475,
+      "post_monsoon_2025": 475
+    },
+    "unique_mgrs_tiles_per_season": {
+      "dry_pre_monsoon_2025": 475,
+      "post_monsoon_2025": 475
+    },
+    "selected_scene_cloud_cover_pct": {
+      "minimum": 0.0,
+      "median": 0.0101675,
+      "maximum": 57.379878
+    },
+    "cell_coverage": {
+      "dry_complete_49_of_49_rate": 0.9716285717501153,
+      "post_complete_49_of_49_rate": 0.9716285717501153,
+      "any_clear_land_rate": 0.9895562533058735,
+      "two_season_bare_support_rate": 0.842488492746773,
+      "one_season_dominant_bare_support_rate": 0.07343259394307708,
+      "insufficient_bare_support_rate": 0.08407891331015002
+    },
+    "candidate_scores_recomputed": false,
+    "production_scoring_changed": false,
+    "model_use_status": "excluded_from_v0.6_scoring_pending_spatial_ablation",
     "checks_pass": true
   }
 }

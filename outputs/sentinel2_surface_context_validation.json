@@ -1,0 +1,253 @@
+{
+  "release_version": "v1.0-alpha.18",
+  "geospatial_feature_version": "v0.12",
+  "feature_version": "sentinel2-l2a-h3-r6-surface-context-v0.1",
+  "source_dataset_id": "SRC_COPERNICUS_SENTINEL2_L2A_PC",
+  "source_accessed_date": "2026-09-10",
+  "stac_collection": "sentinel-2-l2a",
+  "stac_collection_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-2-l2a",
+  "catalog_bbox": [
+    67.0,
+    5.0,
+    99.0,
+    39.5
+  ],
+  "season_windows": {
+    "dry_pre_monsoon_2025": {
+      "start": "2025-01-01",
+      "end": "2025-05-31"
+    },
+    "post_monsoon_2025": {
+      "start": "2025-10-01",
+      "end": "2025-12-31"
+    }
+  },
+  "selection_rule": "maximum India H3 r6 centroid coverage inside the item footprint, then minimum(cloud_pct + snow_pct + 0.25*cloud_shadow_pct + 0.5*nodata_pct + 10*degraded_pct - 0.02*not_vegetated_pct), then acquisition datetime, then item ID; among catalog items with cloud<60% and nodata<100%",
+  "sampling_design": {
+    "parent_h3_resolution": 6,
+    "sample_h3_resolution": 8,
+    "sample_points_per_cell_per_season": 49,
+    "target_reflectance_overview_gsd_m": 160.0,
+    "scl_sampling_gsd_m": 20.0
+  },
+  "feature_rows": 88857,
+  "scene_manifest_rows": 950,
+  "scene_rows_by_season": {
+    "dry_pre_monsoon_2025": 475,
+    "post_monsoon_2025": 475
+  },
+  "unique_mgrs_tiles_per_season": {
+    "dry_pre_monsoon_2025": 475,
+    "post_monsoon_2025": 475
+  },
+  "selected_scene_cloud_cover_pct": {
+    "minimum": 0.0,
+    "median": 0.0101675,
+    "maximum": 57.379878
+  },
+  "cell_coverage": {
+    "dry_complete_49_of_49_rate": 0.9716285717501153,
+    "post_complete_49_of_49_rate": 0.9716285717501153,
+    "any_clear_land_rate": 0.9895562533058735,
+    "two_season_bare_support_rate": 0.842488492746773,
+    "one_season_dominant_bare_support_rate": 0.07343259394307708,
+    "insufficient_bare_support_rate": 0.08407891331015002
+  },
+  "reflectance_range": [
+    -0.06809999793767929,
+    0.954300045967102
+  ],
+  "normalized_index_range": [
+    -0.9483209848403931,
+    0.9836467504501343
+  ],
+  "candidate_scores_recomputed": false,
+  "production_scoring_changed": false,
+  "model_use_status": "excluded_from_v0.6_scoring_pending_spatial_ablation",
+  "interpretation": "Sentinel-2 summaries are surface-context and confounder-control features. They do not identify a specific mineral, subsurface deposit, grade, resource, reserve or discovery.",
+  "checks": [
+    {
+      "name": "feature_rows",
+      "passed": true,
+      "observed": 88857,
+      "expected": 88857
+    },
+    {
+      "name": "unique_h3_cells",
+      "passed": true,
+      "observed": 88857,
+      "expected": 88857
+    },
+    {
+      "name": "unique_record_ids",
+      "passed": true,
+      "observed": 88857,
+      "expected": 88857
+    },
+    {
+      "name": "two_seasons",
+      "passed": true,
+      "observed": {
+        "dry_pre_monsoon_2025": 475,
+        "post_monsoon_2025": 475
+      },
+      "expected": [
+        "dry_pre_monsoon_2025",
+        "post_monsoon_2025"
+      ]
+    },
+    {
+      "name": "matching_season_tile_sets",
+      "passed": true,
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "unique_tile_per_season",
+      "passed": true,
+      "observed": {
+        "rows": {
+          "dry_pre_monsoon_2025": 475,
+          "post_monsoon_2025": 475
+        },
+        "tiles": {
+          "dry_pre_monsoon_2025": 475,
+          "post_monsoon_2025": 475
+        }
+      },
+      "expected": "equal within each season"
+    },
+    {
+      "name": "substantial_india_tile_coverage",
+      "passed": true,
+      "observed": {
+        "dry_pre_monsoon_2025": 475,
+        "post_monsoon_2025": 475
+      },
+      "expected": ">=430 per season"
+    },
+    {
+      "name": "scene_ids_unique",
+      "passed": true,
+      "observed": 950,
+      "expected": 950
+    },
+    {
+      "name": "scene_dates_inside_windows",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "catalog_filter_cloud",
+      "passed": true,
+      "observed": 57.379878,
+      "expected": "<60.0"
+    },
+    {
+      "name": "catalog_filter_nodata",
+      "passed": true,
+      "observed": 72.96471,
+      "expected": "<100.0"
+    },
+    {
+      "name": "quantification_values_positive",
+      "passed": true,
+      "observed": [
+        10000.0
+      ],
+      "expected": ">0"
+    },
+    {
+      "name": "native_scl_codes_valid",
+      "passed": true,
+      "observed": [
+        0,
+        11
+      ],
+      "expected": "0..11"
+    },
+    {
+      "name": "no_transient_sas_tokens",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "sample_counts_bounded",
+      "passed": true,
+      "observed": [
+        0,
+        49
+      ],
+      "expected": "0..49"
+    },
+    {
+      "name": "dry_scl_partition",
+      "passed": true,
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "post_scl_partition",
+      "passed": true,
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "annual_counts_reconcile",
+      "passed": true,
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "normalized_index_range",
+      "passed": true,
+      "observed": [
+        -0.9483209848403931,
+        0.9836467504501343
+      ],
+      "expected": "[-1,1]"
+    },
+    {
+      "name": "reflectance_physical_screen",
+      "passed": true,
+      "observed": [
+        -0.06809999793767929,
+        0.954300045967102
+      ],
+      "expected": "[-0.1,2.0]"
+    },
+    {
+      "name": "mandatory_model_exclusion",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "mandatory_interpretation",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "grid_table_sha256_unchanged",
+      "passed": true,
+      "observed": "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9",
+      "expected": "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9"
+    },
+    {
+      "name": "candidate_table_sha256_unchanged",
+      "passed": true,
+      "observed": "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04",
+      "expected": "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04"
+    },
+    {
+      "name": "dictionary_complete",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    }
+  ],
+  "checks_pass": true
+}
