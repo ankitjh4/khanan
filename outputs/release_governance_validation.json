@@ -1,0 +1,31 @@
+{
+  "release_version": "v1.0-alpha.24",
+  "manifest_rows": 44,
+  "csv_artifacts_registered": 43,
+  "geojson_artifacts_registered": 1,
+  "schemas_matching_frozen_contract": 44,
+  "all_primary_keys_unique": true,
+  "primary_key_blank_rows": 0,
+  "manifest_self_hash_exception_valid": true,
+  "data_dictionary_rows": 1928,
+  "data_dictionary_expected_rows": 1928,
+  "data_dictionary_complete": true,
+  "source_registry_rows": 38,
+  "source_specific_gap_rows": 38,
+  "project_wide_gap_rows": 20,
+  "gap_rows": 58,
+  "all_registered_sources_have_gap_rows": true,
+  "role_counts": {
+    "contextual_feature": 4,
+    "metadata_governance": 9,
+    "model_hypothesis": 2,
+    "observed_source_evidence": 18,
+    "validation_evidence": 11
+  },
+  "role_separation_complete": true,
+  "baseline_grid_sha256": "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9",
+  "baseline_candidate_sha256": "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04",
+  "baseline_grid_unchanged": true,
+  "baseline_candidate_unchanged": true,
+  "checks_pass": true
+}

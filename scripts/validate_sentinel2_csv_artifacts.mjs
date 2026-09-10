@@ -23,13 +23,13 @@ const targets = [
   {
     file: "source_registry.csv",
     range: "A33:I37",
-    expectedRows: 36,
+    expectedRows: 38,
     expectedColumns: 9,
   },
   {
     file: "data_dictionary.csv",
     range: "A1290:F1307",
-    expectedRows: 1561,
+    expectedRows: 1928,
     expectedColumns: 6,
   },
 ];

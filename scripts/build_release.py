@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v1.0-alpha.23"
+VERSION = "v1.0-alpha.24"
 
 BUNDLE_MEMBERS = [
     "README.md",
@@ -25,6 +25,7 @@ BUNDLE_MEMBERS = [
     "data/README.md",
     "docs/methodology.md",
     "docs/material_ontology_v1.md",
+    "docs/release_governance_alpha24.md",
     "docs/ibm_mineral_concessions_2024.md",
     "docs/ibm_auction_mbs_geometry_2023_24.md",
     "docs/ibm_auction_status_evidence_2023_24.md",
@@ -62,6 +63,8 @@ BUNDLE_MEMBERS = [
     "scripts/plot_ibm_imyb_state_review_occurrences.py",
     "scripts/validate_ibm_imyb_state_review_csv_artifacts.mjs",
     "scripts/validate_material_ontology_csv_artifacts.mjs",
+    "scripts/build_release_governance.py",
+    "scripts/validate_release_governance_csv_artifacts.mjs",
     "scripts/build_sentinel2_surface_context.py",
     "scripts/plot_sentinel2_surface_context.py",
     "scripts/validate_sentinel2_csv_artifacts.mjs",
@@ -110,6 +113,9 @@ BUNDLE_MEMBERS = [
     "outputs/india_material_ontology_v1.csv",
     "outputs/material_source_term_crosswalk_v1.csv",
     "outputs/material_ontology_validation_v1.json",
+    "outputs/release_artifact_manifest.csv",
+    "outputs/coverage_gap_register.csv",
+    "outputs/release_governance_validation.json",
     "outputs/material_model_support.csv",
     "outputs/material_model_validation.csv",
     "outputs/ngdr_service_inventory.csv",
@@ -176,6 +182,9 @@ HASHED_ARTIFACTS = [
     "india_material_ontology_v1.csv",
     "material_source_term_crosswalk_v1.csv",
     "material_ontology_validation_v1.json",
+    "release_artifact_manifest.csv",
+    "coverage_gap_register.csv",
+    "release_governance_validation.json",
     "material_model_support.csv",
     "material_model_validation.csv",
     "ngdr_service_inventory.csv",

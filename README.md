@@ -17,7 +17,7 @@ KHANAN is intended to generate independent, early-stage hypotheses from lawful p
 
 ## Current status
 
-**Development release: v1.0-alpha.23 · Geospatial feature baseline: v0.12 · Prospectivity model baseline: v0.6 · Active work in progress**
+**Development release: v1.0-alpha.24 · Geospatial feature baseline: v0.12 · Prospectivity model baseline: v0.6 · Active work in progress**
 
 The current release covers India with 88,857 H3 resolution-6 cells, approximately 36 km² each. It includes 781 public-source site records, 1,504 IBM MCDR inspection events, 82 IBM abandoned-mine inventory records, 722 IBM NMI resource-inventory rows, 123 IBM 2024 lease-distribution rows, 97 IBM auction-granted concession records, five dated Andhra auction-status evidence rows, 586 IBM State Review occurrence-geography rows expanded into 1,742 district-crosswalk records and 59,872 H3 context rows, 199 central critical-mineral auction events, 78 public-preview rows from eight historical GSI/OGD deposit catalogues, 13 independently published EarthChem geochemical samples represented by 1,323 long-form measurements, 950 selected Sentinel-2 scenes summarized over 8,707,986 requested seasonal sample points, 50 strategic modeling targets, and 2,784 validation-gated candidate cells.
 
@@ -64,6 +64,8 @@ Alpha.21 adds a reproducible historical GSI Open Government Data deposit-catalog
 Alpha.22 adds the latest IBM State Review mineral-occurrence geography as a separate non-scoring layer. The page-referenced extraction contains 586 rows across 31 source regions and 101 source material terms, linked to 91 existing ontology entities with six English-name fallbacks. It expands to 1,742 district-crosswalk rows: 1,734 unambiguous one-to-one matches enter a sparse 59,872-cell H3 context table, while eight candidates from the historical parent names `24-Parganas` and `Midnapur` are retained but withheld from cell propagation. All configured material and place terms pass source-page text checks. District coordinates are representative indexing points, not mineral locations, and the layer does not alter any v0.6 score or rank. The release packager now normalizes ZIP timestamps and permissions; two complete rebuilds produced identical artifact and bundle hashes. See [`docs/ibm_imyb_state_review_occurrences_2024.md`](docs/ibm_imyb_state_review_occurrences_2024.md).
 
 Alpha.23 reconciles those 101 IBM State Review terms with the central ontology. It adds 21 source-observed entities—including diaspore as an exact IMA-listed species and separately typed clay commodities, rocks, ore classes and mineral mixtures—bringing the catalogue to 254 entities. All 101 IBM terms now map to 109 relevant ontology IDs, and mixed-material rows retain a chemical name where one exists plus an English fallback for every entity without one. The ontology validator confirms all additions carry IBM source attribution and that the national grid and candidate-table hashes remain unchanged. Model eligibility stays at 50 targets. See [`docs/material_ontology_v1.md`](docs/material_ontology_v1.md).
+
+Alpha.24 freezes the current release schemas and consolidates coverage limitations. A 44-row artifact manifest registers all 43 public CSVs plus the auction-footprint GeoJSON with primary keys, schema and content hashes, source lineage, geographic and temporal scope, evidence roles, model-use restrictions, uncertainty fields and exclusion controls. The rebuilt data dictionary has one definition for each of the 1,928 published CSV columns. A separate 58-row coverage register preserves all 38 source-specific limitations and 20 project-wide geographic, temporal, licensing, access, method, validation and operational gaps. All keys and schemas pass, while the national-grid and candidate hashes remain unchanged. See [`docs/release_governance_alpha24.md`](docs/release_governance_alpha24.md).
 
 Candidate scores are reconnaissance indices. They are not probabilities of discovery, resource estimates, reserves, grades, economic valuations, legal concessions, or drill targets.
 
@@ -169,7 +171,7 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 
 ## Release files
 
-The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.23.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.23.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); it is not the current alpha artifact. The uncompressed nationwide prospectivity grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
+The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.24.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.24.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); it is not the current alpha artifact. The uncompressed nationwide prospectivity grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
 
 | File | Rows | Role |
 |---|---:|---|
@@ -209,8 +211,11 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/material_model_validation.csv` | 50 | Spatial holdout results and reasons a material could not be validated. |
 | `outputs/ngdr_service_inventory.csv` | 11 | Metadata-only inventory of selected NGDR mineral, geochemistry, geophysics, soil, lithology and geology services; no feature values. |
 | `outputs/source_registry.csv` | 38 | Provenance, access/licensing notes, uses and limitations. |
-| `outputs/data_dictionary.csv` | 1,759 | Field definitions, units and missing-value policies. |
+| `outputs/release_artifact_manifest.csv` | 44 | Frozen schema, primary key, evidence role, model-use status, hashes, source lineage, scope, uncertainty and exclusion controls for 43 CSVs and one GeoJSON. |
+| `outputs/coverage_gap_register.csv` | 58 | All 38 source-specific limitations plus 20 cross-cutting geographic, temporal, licensing, access, method, validation and operational gaps. |
+| `outputs/data_dictionary.csv` | 1,928 | Exactly one field definition, unit and missing-value policy for every column in all 43 published CSVs. |
 | `outputs/validation_report.json` | 1 | Cross-dataset counts, join coverage, coordinate checks and guardrails. |
+| `outputs/release_governance_validation.json` | 1 | Manifest inventory, schema freeze, primary-key, dictionary-completeness, gap-coverage, evidence-role and unchanged-model checks. |
 | `outputs/official_critical_blocks_validation.json` | 1 | Auction count, lineage, provenance and geometry validation. |
 | `outputs/ibm_nmi_2025_extraction_validation.json` | 1 | NMI PDF extraction and UNFC subtotal validation. |
 | `outputs/ibm_mcdr_inspection_validation.json` | 1 | IBM page, fiscal-year, date and document-link validation. |
@@ -237,7 +242,7 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/sentinel2_surface_context_validation.json` | 1 | Sentinel catalog scope, scene selection, native-SCL and radiometric checks, national coverage, index ranges, token screening and unchanged-ranking hashes. |
 | `outputs/nasa_power_rolling_12m_validation.json` | 1 | Weather-source checksums, completeness and range checks. |
 | `outputs/india_mining_dataset_companion.xlsx` | — | Legacy v0.6 thirteen-sheet review workbook. It does not yet include the v1 ontology; the CSVs remain authoritative. |
-| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.23.zip` | — | Portable development bundle, including the full grid, reviewed State MBS geometry, reconciled IBM State Review occurrence context, magnetic, soil, EarthChem and Sentinel-2 context, paired feature-ablation and official-block transfer evidence, the partial GSI/OGD deposit preview, the 254-entity ontology, audits, validations, maps and reproducibility scripts. |
+| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.24.zip` | — | Portable development bundle, including the full grid, reviewed State MBS geometry, reconciled IBM State Review occurrence context, magnetic, soil, EarthChem and Sentinel-2 context, paired feature-ablation and official-block transfer evidence, the partial GSI/OGD deposit preview, the 254-entity ontology, release governance, audits, validations, maps and reproducibility scripts. |
 | `outputs/SHA256SUMS.txt` | — | Integrity hashes for published artifacts. |
 
 ## Repository structure
@@ -290,6 +295,7 @@ KHANAN/
 - Publish the 254-entity, source-derived ontology and raw-term mapping audit without expanding model eligibility by fiat.
 - Audit the public NGDR/GSI OGC catalog and publish a metadata-only readiness inventory without republishing feature values.
 - Add automated schema, provenance, checksum and regression tests.
+- **Completed in alpha.24:** freeze and validate every published CSV/GeoJSON schema and primary key, complete the 1,928-field data dictionary, separate five evidence roles and publish a 58-row consolidated coverage-gap register.
 - Introduce changelogs and source freshness reports.
 - Define source-specific redistribution and citation policy before any public release.
 
@@ -412,7 +418,6 @@ python3 -m venv .venv
 .venv/bin/python scripts/build_earthchem_geochemistry.py --refresh
 .venv/bin/python scripts/build_gsi_ogd_deposit_preview.py
 .venv/bin/python scripts/build_ibm_imyb_state_review_occurrences.py
-node --expose-gc scripts/validate_material_ontology_csv_artifacts.mjs
 .venv/bin/python scripts/build_sentinel2_surface_context.py
 .venv/bin/python scripts/evaluate_sentinel2_spatial_ablation.py
 .venv/bin/python scripts/evaluate_official_block_transfer.py
@@ -428,6 +433,9 @@ node --expose-gc scripts/validate_material_ontology_csv_artifacts.mjs
 .venv/bin/python scripts/plot_sentinel2_surface_context.py
 .venv/bin/python scripts/plot_sentinel2_ablation.py
 .venv/bin/python scripts/plot_official_block_transfer.py
+.venv/bin/python scripts/build_release_governance.py
+node --expose-gc scripts/validate_material_ontology_csv_artifacts.mjs
+node --expose-gc scripts/validate_release_governance_csv_artifacts.mjs
 .venv/bin/python scripts/build_release.py
 ```
 
@@ -446,8 +454,8 @@ The XLSX companion is generated by `scripts/build_workbook.mjs` using the Codex 
 
 ## Important current limitations
 
-The release is not an exhaustive current mine/lease register. It still lacks deposit-level NMI coordinates, comprehensive state mine registers, controlling grant status, model-admitted soil/geochemistry/geophysics/remote-sensing features, drill logs, site-level grade/tonnage/depth, mineral-specific alteration mapping, protected-area and forest-clearance layers, water stress, infrastructure, land tenure and social-license constraints. Alpha.23's reconciled IBM State Review layer is an official compilation of broad district, named-area and statewide occurrence statements; it does not locate deposits within districts, and its 59,872 H3 rows merely inherit district context. The 254-entity ontology is a vocabulary and evidence-normalization catalogue, not proof that every entity has a recoverable Indian deposit. Alpha.21's GSI/OGD table contains only the 78 rows exposed by public previews out of 381 catalogue-reported records; that 20.47% subset is non-random, the source datum is unstated, and it must not be read as complete deposit coverage. EarthChem ECL 4498 supplies measured analytical context, but only for 13 targeted samples at two sites; it is not a systematic survey and remains outside scoring. Sentinel-2 alpha.18 supplies national surface reflectance and exposure context; the alpha.19 ablation admits none of its broad predictors to production scoring. Vanadium and Silver show follow-up signals but fail the support and recall gates respectively, so neither result is a discovery or candidate claim. The 2025 imagery may also encode post-discovery mine disturbance at known positive sites; that leakage risk independently blocks production admission. Alpha.20 adds a source-held-out official-block transfer test, but no material passes every statistical gate and the block labels are not proven independent of all historical geological knowledge. Manganese's strong seven-block result is follow-up evidence, not a discovery or production validation. SoilGrids supplies national modeled pedological context but not field geochemical assays; the alpha.7 spatial ablation admits it to no production material model. EMAG2v3 supplies moderate-resolution magnetic context, but the alpha.5 spatial ablation also admits it to no production material model. NGDR service metadata is audited, but its raw values remain outside the release and scoring pipeline for the reasons documented in [`docs/ngdr_access_and_integration.md`](docs/ngdr_access_and_integration.md).
+The release is not an exhaustive current mine/lease register. It still lacks deposit-level NMI coordinates, comprehensive state mine registers, controlling grant status, model-admitted soil/geochemistry/geophysics/remote-sensing features, drill logs, site-level grade/tonnage/depth, mineral-specific alteration mapping, protected-area and forest-clearance layers, water stress, infrastructure, land tenure and social-license constraints. Alpha.23's reconciled IBM State Review layer is an official compilation of broad district, named-area and statewide occurrence statements; it does not locate deposits within districts, and its 59,872 H3 rows merely inherit district context. The 254-entity ontology is a vocabulary and evidence-normalization catalogue, not proof that every entity has a recoverable Indian deposit. Alpha.21's GSI/OGD table contains only the 78 rows exposed by public previews out of 381 catalogue-reported records; that 20.47% subset is non-random, the source datum is unstated, and it must not be read as complete deposit coverage. EarthChem ECL 4498 supplies measured analytical context, but only for 13 targeted samples at two sites; it is not a systematic survey and remains outside scoring. Sentinel-2 alpha.18 supplies national surface reflectance and exposure context; the alpha.19 ablation admits none of its broad predictors to production scoring. Vanadium and Silver show follow-up signals but fail the support and recall gates respectively, so neither result is a discovery or candidate claim. The 2025 imagery may also encode post-discovery mine disturbance at known positive sites; that leakage risk independently blocks production admission. Alpha.20 adds a source-held-out official-block transfer test, but no material passes every statistical gate and the block labels are not proven independent of all historical geological knowledge. Manganese's strong seven-block result is follow-up evidence, not a discovery or production validation. SoilGrids supplies national modeled pedological context but not field geochemical assays; the alpha.7 spatial ablation admits it to no production material model. EMAG2v3 supplies moderate-resolution magnetic context, but the alpha.5 spatial ablation also admits it to no production material model. NGDR service metadata is audited, but its raw values remain outside the release and scoring pipeline for the reasons documented in [`docs/ngdr_access_and_integration.md`](docs/ngdr_access_and_integration.md). Alpha.24 consolidates these and other known limitations in [`outputs/coverage_gap_register.csv`](outputs/coverage_gap_register.csv); disclosure does not imply every unknown gap has been discovered or resolved.
 
 One official Biarpalli source table places an Odisha block near 89°E; KHANAN retains and flags the published coordinates. The 143 auction-offer observations reconstruct to 100 distinct published footprints, while the tranche-VIII government release reports 88 cumulative offered blocks. That discrepancy remains explicitly unreconciled.
 
-For the complete provenance and interpretation contract, read [`docs/methodology.md`](docs/methodology.md), [`outputs/source_registry.csv`](outputs/source_registry.csv), and [`outputs/data_dictionary.csv`](outputs/data_dictionary.csv).
+For the complete provenance and interpretation contract, read [`docs/methodology.md`](docs/methodology.md), [`docs/release_governance_alpha24.md`](docs/release_governance_alpha24.md), [`outputs/source_registry.csv`](outputs/source_registry.csv), [`outputs/release_artifact_manifest.csv`](outputs/release_artifact_manifest.csv), [`outputs/coverage_gap_register.csv`](outputs/coverage_gap_register.csv), and [`outputs/data_dictionary.csv`](outputs/data_dictionary.csv).
