@@ -17,7 +17,7 @@ KHANAN is intended to generate independent, early-stage hypotheses from lawful p
 
 ## Current status
 
-**Development release: v1.0-alpha.24 · Geospatial feature baseline: v0.12 · Prospectivity model baseline: v0.6 · Active work in progress**
+**Development release: v1.0-alpha.25 · Geospatial feature baseline: v0.12 · Prospectivity model baseline: v0.6 · Active work in progress**
 
 The current release covers India with 88,857 H3 resolution-6 cells, approximately 36 km² each. It includes 781 public-source site records, 1,504 IBM MCDR inspection events, 82 IBM abandoned-mine inventory records, 722 IBM NMI resource-inventory rows, 123 IBM 2024 lease-distribution rows, 97 IBM auction-granted concession records, five dated Andhra auction-status evidence rows, 586 IBM State Review occurrence-geography rows expanded into 1,742 district-crosswalk records and 59,872 H3 context rows, 199 central critical-mineral auction events, 78 public-preview rows from eight historical GSI/OGD deposit catalogues, 13 independently published EarthChem geochemical samples represented by 1,323 long-form measurements, 950 selected Sentinel-2 scenes summarized over 8,707,986 requested seasonal sample points, 50 strategic modeling targets, and 2,784 validation-gated candidate cells.
 
@@ -66,6 +66,8 @@ Alpha.22 adds the latest IBM State Review mineral-occurrence geography as a sepa
 Alpha.23 reconciles those 101 IBM State Review terms with the central ontology. It adds 21 source-observed entities—including diaspore as an exact IMA-listed species and separately typed clay commodities, rocks, ore classes and mineral mixtures—bringing the catalogue to 254 entities. All 101 IBM terms now map to 109 relevant ontology IDs, and mixed-material rows retain a chemical name where one exists plus an English fallback for every entity without one. The ontology validator confirms all additions carry IBM source attribution and that the national grid and candidate-table hashes remain unchanged. Model eligibility stays at 50 targets. See [`docs/material_ontology_v1.md`](docs/material_ontology_v1.md).
 
 Alpha.24 freezes the current release schemas and consolidates coverage limitations. A 44-row artifact manifest registers all 43 public CSVs plus the auction-footprint GeoJSON with primary keys, schema and content hashes, source lineage, geographic and temporal scope, evidence roles, model-use restrictions, uncertainty fields and exclusion controls. The rebuilt data dictionary has one definition for each of the 1,928 published CSV columns. A separate 58-row coverage register preserves all 38 source-specific limitations and 20 project-wide geographic, temporal, licensing, access, method, validation and operational gaps. All keys and schemas pass, while the national-grid and candidate hashes remain unchanged. See [`docs/release_governance_alpha24.md`](docs/release_governance_alpha24.md).
+
+Alpha.25 independently verifies the portable release without importing any KHANAN builder or packager. It closes a reproducibility gap by adding every manifest-referenced builder, the source downloader, workbook builder, release packager, PDF helper and geospatial requirements file to the ZIP. The verifier recomputes schemas, keys, hashes, dictionary coverage, source-to-gap lineage, validation gates, status guardrails and exact candidate-to-grid parity. No evidence, model score, class or rank changes. See [`docs/independent_release_verification_alpha25.md`](docs/independent_release_verification_alpha25.md).
 
 Candidate scores are reconnaissance indices. They are not probabilities of discovery, resource estimates, reserves, grades, economic valuations, legal concessions, or drill targets.
 
@@ -171,7 +173,7 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 
 ## Release files
 
-The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.24.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.24.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); it is not the current alpha artifact. The uncompressed nationwide prospectivity grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
+The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.25.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.25.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); it is not the current alpha artifact. The uncompressed nationwide prospectivity grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
 
 | File | Rows | Role |
 |---|---:|---|
@@ -242,7 +244,8 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/sentinel2_surface_context_validation.json` | 1 | Sentinel catalog scope, scene selection, native-SCL and radiometric checks, national coverage, index ranges, token screening and unchanged-ranking hashes. |
 | `outputs/nasa_power_rolling_12m_validation.json` | 1 | Weather-source checksums, completeness and range checks. |
 | `outputs/india_mining_dataset_companion.xlsx` | — | Legacy v0.6 thirteen-sheet review workbook. It does not yet include the v1 ontology; the CSVs remain authoritative. |
-| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.24.zip` | — | Portable development bundle, including the full grid, reviewed State MBS geometry, reconciled IBM State Review occurrence context, magnetic, soil, EarthChem and Sentinel-2 context, paired feature-ablation and official-block transfer evidence, the partial GSI/OGD deposit preview, the 254-entity ontology, release governance, audits, validations, maps and reproducibility scripts. |
+| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.25.zip` | — | Portable development bundle, including the full grid, reviewed State MBS geometry, reconciled IBM State Review occurrence context, magnetic, soil, EarthChem and Sentinel-2 context, paired feature-ablation and official-block transfer evidence, the partial GSI/OGD deposit preview, the 254-entity ontology, release governance, independent verifier, audits, validations, maps and complete declared reproducibility entry points. |
+| `outputs/independent_release_verification.json` | 1 | Independent ZIP, manifest, schema, key, checksum, provenance, validation and model-guardrail verification report. |
 | `outputs/SHA256SUMS.txt` | — | Integrity hashes for published artifacts. |
 
 ## Repository structure
@@ -296,6 +299,7 @@ KHANAN/
 - Audit the public NGDR/GSI OGC catalog and publish a metadata-only readiness inventory without republishing feature values.
 - Add automated schema, provenance, checksum and regression tests.
 - **Completed in alpha.24:** freeze and validate every published CSV/GeoJSON schema and primary key, complete the 1,928-field data dictionary, separate five evidence roles and publish a 58-row consolidated coverage-gap register.
+- **Completed in alpha.25:** independently verify the release bundle and include every declared build entry point and dependency required by the portable reproduction instructions.
 - Introduce changelogs and source freshness reports.
 - Define source-specific redistribution and citation policy before any public release.
 
@@ -437,6 +441,8 @@ python3 -m venv .venv
 node --expose-gc scripts/validate_material_ontology_csv_artifacts.mjs
 node --expose-gc scripts/validate_release_governance_csv_artifacts.mjs
 .venv/bin/python scripts/build_release.py
+shasum -a 256 -c outputs/SHA256SUMS.txt
+.venv/bin/python scripts/verify_release_independent.py --bundle outputs/india_mining_dataset_csv_bundle_v1.0-alpha.25.zip --checksums outputs/SHA256SUMS.txt --workspace . --output outputs/independent_release_verification.json
 ```
 
 The XLSX companion is generated by `scripts/build_workbook.mjs` using the Codex desktop bundled spreadsheet runtime. See `docs/methodology.md` for model construction, validation thresholds and detailed limitations.
@@ -458,4 +464,4 @@ The release is not an exhaustive current mine/lease register. It still lacks dep
 
 One official Biarpalli source table places an Odisha block near 89°E; KHANAN retains and flags the published coordinates. The 143 auction-offer observations reconstruct to 100 distinct published footprints, while the tranche-VIII government release reports 88 cumulative offered blocks. That discrepancy remains explicitly unreconciled.
 
-For the complete provenance and interpretation contract, read [`docs/methodology.md`](docs/methodology.md), [`docs/release_governance_alpha24.md`](docs/release_governance_alpha24.md), [`outputs/source_registry.csv`](outputs/source_registry.csv), [`outputs/release_artifact_manifest.csv`](outputs/release_artifact_manifest.csv), [`outputs/coverage_gap_register.csv`](outputs/coverage_gap_register.csv), and [`outputs/data_dictionary.csv`](outputs/data_dictionary.csv).
+For the complete provenance and interpretation contract, read [`docs/methodology.md`](docs/methodology.md), [`docs/release_governance_alpha24.md`](docs/release_governance_alpha24.md), [`docs/independent_release_verification_alpha25.md`](docs/independent_release_verification_alpha25.md), [`outputs/source_registry.csv`](outputs/source_registry.csv), [`outputs/release_artifact_manifest.csv`](outputs/release_artifact_manifest.csv), [`outputs/coverage_gap_register.csv`](outputs/coverage_gap_register.csv), [`outputs/data_dictionary.csv`](outputs/data_dictionary.csv), and [`outputs/independent_release_verification.json`](outputs/independent_release_verification.json).

@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v1.0-alpha.24"
+VERSION = "v1.0-alpha.25"
 
 BUNDLE_MEMBERS = [
     "README.md",
@@ -26,6 +26,7 @@ BUNDLE_MEMBERS = [
     "docs/methodology.md",
     "docs/material_ontology_v1.md",
     "docs/release_governance_alpha24.md",
+    "docs/independent_release_verification_alpha25.md",
     "docs/ibm_mineral_concessions_2024.md",
     "docs/ibm_auction_mbs_geometry_2023_24.md",
     "docs/ibm_auction_status_evidence_2023_24.md",
@@ -40,6 +41,15 @@ BUNDLE_MEMBERS = [
     "docs/soilgrids_features.md",
     "docs/soilgrids_spatial_ablation.md",
     "outputs/README.md",
+    "requirements-geospatial.txt",
+    "scripts/download_sources.py",
+    "scripts/build_dataset.py",
+    "scripts/build_official_mbs_inventory.py",
+    "scripts/build_official_blocks.py",
+    "scripts/build_ibm_nmi2025.py",
+    "scripts/build_ibm_mcdr_inspections.py",
+    "scripts/render_pdf_pages.py",
+    "scripts/build_workbook.mjs",
     "scripts/plot_khanan_overview.py",
     "scripts/plot_emag2_context.py",
     "scripts/plot_emag2_ablation.py",
@@ -65,6 +75,8 @@ BUNDLE_MEMBERS = [
     "scripts/validate_material_ontology_csv_artifacts.mjs",
     "scripts/build_release_governance.py",
     "scripts/validate_release_governance_csv_artifacts.mjs",
+    "scripts/verify_release_independent.py",
+    "scripts/build_release.py",
     "scripts/build_sentinel2_surface_context.py",
     "scripts/plot_sentinel2_surface_context.py",
     "scripts/validate_sentinel2_csv_artifacts.mjs",

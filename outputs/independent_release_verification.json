@@ -1,0 +1,243 @@
+{
+  "release_version": "v1.0-alpha.25",
+  "verification_method": "Python standard library; no KHANAN builder or packager imports",
+  "bundle": {
+    "name": "india_mining_dataset_csv_bundle_v1.0-alpha.25.zip",
+    "sha256": "2c8a37626654da34d63114a24487d46d9de9914fb2bcb01e2e52c5e38e17cacf",
+    "members": 149
+  },
+  "workspace_comparison": {
+    "requested": true,
+    "members_compared": 149,
+    "missing": [],
+    "mismatched": []
+  },
+  "checksum_verification": {
+    "requested": true,
+    "file_sha256": "367c594e213f99b60062cc3deb08706732f151bab11fed298e7cd8dc3b088a4c",
+    "declared": 67,
+    "verified": 67,
+    "missing_targets": [],
+    "mismatches": [],
+    "manifest_artifacts_without_checksum": []
+  },
+  "summary": {
+    "checks_total": 25,
+    "checks_passed": 25,
+    "checks_failed": 0,
+    "manifest_artifacts_verified": 44,
+    "candidate_rows_verified": 2784
+  },
+  "checks_pass": true,
+  "checks": [
+    {
+      "check": "bundle_exists",
+      "passed": true,
+      "detail": "india_mining_dataset_csv_bundle_v1.0-alpha.25.zip"
+    },
+    {
+      "check": "zip_member_names_unique",
+      "passed": true,
+      "detail": {
+        "members": 149
+      }
+    },
+    {
+      "check": "zip_paths_safe",
+      "passed": true,
+      "detail": {
+        "unsafe": []
+      }
+    },
+    {
+      "check": "zip_crc_integrity",
+      "passed": true,
+      "detail": "all members passed CRC"
+    },
+    {
+      "check": "zip_metadata_deterministic",
+      "passed": true,
+      "detail": {
+        "fixed_timestamp": [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "unix_mode": "100644",
+        "compression": "deflate"
+      }
+    },
+    {
+      "check": "no_source_pdfs_redistributed",
+      "passed": true,
+      "detail": {
+        "pdf_members": []
+      }
+    },
+    {
+      "check": "reproduction_inputs_present",
+      "passed": true,
+      "detail": {
+        "required": 15,
+        "missing": []
+      }
+    },
+    {
+      "check": "manifest_present",
+      "passed": true,
+      "detail": "outputs/release_artifact_manifest.csv"
+    },
+    {
+      "check": "manifest_inventory",
+      "passed": true,
+      "detail": {
+        "rows": 44,
+        "unique_artifact_ids": 44
+      }
+    },
+    {
+      "check": "manifest_release_version",
+      "passed": true,
+      "detail": [
+        "v1.0-alpha.25"
+      ]
+    },
+    {
+      "check": "evidence_roles_separated",
+      "passed": true,
+      "detail": [
+        "contextual_feature",
+        "metadata_governance",
+        "model_hypothesis",
+        "observed_source_evidence",
+        "validation_evidence"
+      ]
+    },
+    {
+      "check": "manifest_artifacts_present_in_bundle",
+      "passed": true,
+      "detail": {
+        "registered": 44,
+        "missing": []
+      }
+    },
+    {
+      "check": "manifest_builders_present_in_bundle",
+      "passed": true,
+      "detail": {
+        "referenced": 22,
+        "missing": []
+      }
+    },
+    {
+      "check": "manifest_contracts_recomputed",
+      "passed": true,
+      "detail": {
+        "verified": 44,
+        "failed": []
+      }
+    },
+    {
+      "check": "unverified_current_status_preserved",
+      "passed": true,
+      "detail": {
+        "invalid_status_values": {}
+      }
+    },
+    {
+      "check": "data_dictionary_exact_column_coverage",
+      "passed": true,
+      "detail": {
+        "rows": 1928,
+        "expected": 1928,
+        "duplicate_pairs": 0
+      }
+    },
+    {
+      "check": "source_limitations_map_to_gap_register",
+      "passed": true,
+      "detail": {
+        "sources": 38,
+        "source_specific_gaps": 38,
+        "project_wide_gaps": 20
+      }
+    },
+    {
+      "check": "project_wide_gap_inventory",
+      "passed": true,
+      "detail": 20
+    },
+    {
+      "check": "validation_artifacts_parse_and_pass_declared_gates",
+      "passed": true,
+      "detail": {
+        "validation_artifacts": 21,
+        "failed": [],
+        "without_global_gate": 0
+      }
+    },
+    {
+      "check": "model_output_hashes_unchanged",
+      "passed": true,
+      "detail": {
+        "grid_sha256": "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9",
+        "candidate_sha256": "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04"
+      }
+    },
+    {
+      "check": "candidate_hypothesis_guardrails",
+      "passed": true,
+      "detail": {
+        "candidate_rows": 2784,
+        "unique_ids": 2784,
+        "missing_fields": [],
+        "errors": {}
+      }
+    },
+    {
+      "check": "candidate_is_exact_grid_subset",
+      "passed": true,
+      "detail": {
+        "candidate_ids": 2784,
+        "grid_candidate_ids": 2784,
+        "row_mismatches": 0
+      }
+    },
+    {
+      "check": "model_hypotheses_disclaim_unsupported_claims",
+      "passed": true,
+      "detail": {
+        "model_hypothesis_artifacts": [
+          "outputs/india_mining_candidate_areas_validation_gated.csv",
+          "outputs/india_mining_prospectivity_grid_h3_r6.csv"
+        ]
+      }
+    },
+    {
+      "check": "bundle_members_byte_identical_to_workspace",
+      "passed": true,
+      "detail": {
+        "requested": true,
+        "members_compared": 149,
+        "missing": [],
+        "mismatched": []
+      }
+    },
+    {
+      "check": "external_checksums_verified",
+      "passed": true,
+      "detail": {
+        "requested": true,
+        "file_sha256": "367c594e213f99b60062cc3deb08706732f151bab11fed298e7cd8dc3b088a4c",
+        "declared": 67,
+        "verified": 67,
+        "missing_targets": [],
+        "mismatches": [],
+        "manifest_artifacts_without_checksum": []
+      }
+    }
+  ]
+}

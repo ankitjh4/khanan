@@ -123,7 +123,7 @@
   "official_critical_mineral_distinct_offer_lineage_keys": 100,
   "official_critical_mineral_pib_reported_cumulative_offer_count": 88,
   "official_critical_mineral_lineage_reconciliation_status": "not_reconciled",
-  "development_release_version": "v1.0-alpha.24",
+  "development_release_version": "v1.0-alpha.25",
   "material_ontology_v1": {
     "ontology_rows": 254,
     "ima_verified_species": 112,
@@ -358,7 +358,7 @@
     "national_grid_sha256_unchanged": true,
     "checks_pass": true
   },
-  "release_governance_alpha24": {
+  "release_governance_alpha25": {
     "release_artifacts_registered": 44,
     "tabular_csv_artifacts_registered": 43,
     "vector_geojson_artifacts_registered": 1,
