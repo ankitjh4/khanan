@@ -74,6 +74,10 @@ STATIC_SOURCES = {
         "https://ibm.gov.in/writereaddata/files/17848872906a6337fae632bChapter__5_Mineral_wise.pdf",
         1_000_000,
     ),
+    "ibm_imyb_2024/IMYB_2024_EBookFinal.pdf": (
+        "https://www.ibm.gov.in/writereaddata/files/177426215469c1178a48453IMYB_2024_EBookFinal.pdf",
+        4_000_000,
+    ),
     "ima_master_list_2026-09.pdf": (
         "https://cnmnc.units.it/files/editor/IMA_Master_List_(2026-09).pdf",
         3_000_000,

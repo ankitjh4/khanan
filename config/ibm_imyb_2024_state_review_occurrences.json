@@ -1,0 +1,710 @@
+{
+  "source_title": "Indian Minerals Yearbook 2024 — State Reviews",
+  "source_pdf_url": "https://www.ibm.gov.in/writereaddata/files/177426215469c1178a48453IMYB_2024_EBookFinal.pdf",
+  "source_pdf_sha256": "7e4cf991426ac8299ec0a365af68a05a8276f3b81ae2433fb6debd4358550354",
+  "source_publication_date": "2026-03-11",
+  "extraction_review_date": "2026-09-10",
+  "notes": "Curated transcription of occurrence geography in the State Reviews section. Pipe-delimited material keys mean that the same published place list applies to each listed material. This is occurrence context, not a mine, reserve, discovery, grade, legal right or drill target.",
+  "chapters": [
+    {
+      "source_region": "Andhra Pradesh",
+      "pages": [157, 158],
+      "district_occurrences": {
+        "apatite": ["Visakhapatnam"],
+        "asbestos": ["Cuddapah"],
+        "ball clay": ["West Godavari"],
+        "barytes": ["Anantapur", "Cuddapah", "Krishna", "Kurnool", "Nellore", "Prakasam"],
+        "calcite": ["Anantapur", "Cuddapah", "Kurnool", "Visakhapatnam"],
+        "china clay": ["Anantapur", "Chittoor", "Cuddapah", "East Godavari", "West Godavari", "Guntur", "Kurnool", "Nellore", "Visakhapatnam"],
+        "corundum": ["Anantapur"],
+        "dolomite": ["Anantapur", "Kurnool"],
+        "felspar": ["Anantapur", "Cuddapah", "West Godavari", "Nellore", "Vizianagaram"],
+        "fireclay": ["Chittoor", "Cuddapah", "East Godavari", "West Godavari", "Kurnool", "Srikakulam"],
+        "garnet": ["East Godavari", "Nellore", "Srikakulam"],
+        "granite": ["Anantapur", "Chittoor", "Cuddapah", "Guntur", "Krishna", "Nellore", "Prakasam", "Srikakulam", "Vizianagaram"],
+        "iron ore (haematite)": ["Anantapur", "Cuddapah", "Guntur", "Krishna", "Kurnool", "Nellore"],
+        "iron ore (magnetite)": ["Prakasam"],
+        "lead-zinc": ["Cuddapah", "Guntur", "Prakasam"],
+        "limestone": ["Anantapur", "Cuddapah", "East Godavari", "West Godavari", "Guntur", "Krishna", "Kurnool", "Nellore", "Srikakulam", "Visakhapatnam", "Vizianagaram"],
+        "manganese ore": ["Srikakulam", "Vizianagaram"],
+        "mica": ["Nellore", "Visakhapatnam"],
+        "ochre": ["Anantapur", "Cuddapah", "West Godavari", "Guntur", "Kurnool", "Visakhapatnam"],
+        "pyrophyllite": ["Anantapur", "Chittoor", "Cuddapah"],
+        "quartz/silica sand": ["Anantapur", "Chittoor", "Cuddapah", "West Godavari", "Guntur", "Krishna", "Kurnool", "Nellore", "Prakasam", "Srikakulam", "Visakhapatnam", "Vizianagaram"],
+        "quartzite": ["Kurnool", "Srikakulam", "Visakhapatnam", "Vizianagaram"],
+        "talc/soapstone/steatite": ["Anantapur", "Chittoor", "Cuddapah", "Kurnool"],
+        "vermiculite": ["Nellore", "Visakhapatnam"],
+        "bauxite": ["East Godavari", "Visakhapatnam"],
+        "chromite": ["Krishna"],
+        "copper": ["Guntur", "Kurnool", "Prakasam"],
+        "diamond": ["Anantapur", "Krishna", "Kurnool"],
+        "gold": ["Anantapur", "Chittoor", "Kurnool"],
+        "graphite": ["East Godavari", "West Godavari", "Srikakulam", "Visakhapatnam", "Vizianagaram"],
+        "gypsum": ["Guntur", "Nellore", "Prakasam"],
+        "kyanite": ["Nellore", "Prakasam"],
+        "magnesite": ["Cuddapah"],
+        "pyrite": ["Kurnool"],
+        "sillimanite": ["West Godavari", "Srikakulam"],
+        "silver": ["Guntur"],
+        "titanium minerals": ["East Godavari", "Krishna", "Nellore", "Srikakulam", "Visakhapatnam"],
+        "tungsten": ["East Godavari"]
+      },
+      "named_area_occurrences": [
+        {"materials": "coal", "places": ["Godavari Valley Coalfield"]},
+        {"materials": "petroleum|natural gas", "places": ["onshore and offshore areas of Krishna-Godavari basin"]}
+      ]
+    },
+    {
+      "source_region": "Arunachal Pradesh",
+      "pages": [162],
+      "district_occurrences": {
+        "copper": ["East Kameng"],
+        "dolomite|quartzite": ["West Kameng"],
+        "fuller's earth": ["Tirap"],
+        "graphite": ["Lohit", "East Siang", "Upper Subansiri"],
+        "limestone": ["Dibang Valley", "Lohit", "East Siang", "Upper Subansiri"]
+      },
+      "named_area_occurrences": [
+        {"materials": "petroleum|natural gas", "places": ["Ningru", "Dam Duma", "Assam Arakan Fold Belt", "Upper Assam basin"]},
+        {"materials": "coal", "places": ["Namchick Namphuk Coalfield", "Miaobum Coalfield"]}
+      ]
+    },
+    {
+      "source_region": "Assam",
+      "pages": [164],
+      "district_occurrences": {
+        "petroleum|natural gas": ["Lakhimpur", "Sivasagar"],
+        "limestone": ["Karbi Anglong", "North Cachar Hills", "Nowgaon"],
+        "china clay": ["Karbi Anglong", "North Lakhimpur"],
+        "fireclay": ["Dibrugarh", "Karbi Anglong", "North Cachar Hills", "North Lakhimpur"],
+        "fuller's earth": ["Nalbari"],
+        "granite": ["Goalpara", "Kamrup", "Karbi Anglong"],
+        "iron ore (haematite)": ["Kokrajhar"],
+        "iron ore (magnetite)": ["Dhubri", "Goalpara", "Kokrajhar"],
+        "quartz/silica sand": ["Nowgaon"],
+        "sillimanite": ["Karbi Anglong", "Nowgaon"]
+      },
+      "named_area_occurrences": [
+        {"materials": "coal", "places": ["Mikirs Hills", "Dilli-Jeypore Coalfield", "Makum Coalfield", "Singrimari Coalfield"]},
+        {"materials": "petroleum|natural gas", "places": ["Digboi oilfields", "Moran Rudrasagar oilfields", "Assam Arakan Fold Belt", "Upper Assam basin", "Assam basin"]}
+      ]
+    },
+    {
+      "source_region": "Bihar",
+      "pages": [167],
+      "district_occurrences": {
+        "limestone": ["Kaimur (Bhabhua)", "Monghyr", "Rohtas"],
+        "mica": ["Nawada"],
+        "quartz/silica sand": ["Bhagalpur", "Jamui", "Monghyr", "Nalanda"],
+        "quartzite": ["Lakhisarai", "Monghyr", "Nalanda"],
+        "talc/soapstone/steatite": ["Monghyr"],
+        "bauxite": ["Monghyr", "Rohtas"],
+        "china clay": ["Bhagalpur", "Monghyr"],
+        "felspar": ["Gaya", "Jamui", "Monghyr"],
+        "fireclay": ["Bhagalpur", "Purnea"],
+        "gold": ["Jamui"],
+        "granite": ["Bhagalpur", "Gaya", "Jahanabad", "Jamui"],
+        "iron ore (haematite)": ["Bhagalpur"],
+        "iron ore (magnetite)": ["Gaya", "Jamui"],
+        "lead-zinc": ["Banka", "Rohtas"],
+        "pyrites": ["Rohtas"]
+      },
+      "named_area_occurrences": [
+        {"materials": "coal", "places": ["Rajmahal coalfield"]}
+      ]
+    },
+    {
+      "source_region": "Chhattisgarh",
+      "pages": [169],
+      "district_occurrences": {
+        "bauxite": ["Bastar", "Bilaspur", "Dantewada", "Jashpur", "Kanker", "Kawardha (Kabirdham)", "Korba", "Raigarh", "Sarguja"],
+        "china clay": ["Durg", "Rajnandgaon"],
+        "coal": ["Korba", "Raigarh", "Sarguja"],
+        "dolomite": ["Bastar", "Bilaspur", "Durg", "Janjgir-Champa", "Raigarh", "Raipur"],
+        "iron ore (haematite)": ["Bastar", "Dantewada", "Kanker", "Rajnandgaon", "Durg"],
+        "limestone": ["Bastar", "Bilaspur", "Durg", "Janjgir-Champa", "Kawardha (Kabirdham)", "Raigarh", "Raipur", "Rajnandgaon"],
+        "quartzite": ["Durg", "Raipur", "Rajnandgaon", "Raigarh"],
+        "talc/soapstone/steatite": ["Durg", "Kanker"],
+        "corundum": ["Dantewada"],
+        "diamond|gemstones": ["Raipur", "Mahasamund", "Dhamtari"],
+        "fire clay": ["Bilaspur", "Raigarh", "Rajnandgaon"],
+        "fluorite": ["Rajnandgaon"],
+        "garnet|marble": ["Bastar"],
+        "emerald|gold": ["Raipur"],
+        "granite": ["Bastar", "Kanker", "Raipur"],
+        "quartz/silica sand": ["Durg", "Jashpur", "Raigarh", "Raipur", "Rajnandgaon"],
+        "tin": ["Bastar", "Dantewada"]
+      },
+      "named_area_occurrences": [
+        {"materials": "iron ore (haematite)", "places": ["Bailadila deposit", "Chhote Dongar deposit", "Rowghat deposit", "Chargaon deposit", "Metabodeli deposit", "Hahaladdi deposit", "Boria Tibbu deposits", "Dalli-Rajhara area"]}
+      ]
+    },
+    {
+      "source_region": "Delhi",
+      "pages": [174],
+      "district_occurrences": {},
+      "named_area_occurrences": [
+        {"materials": "kaolin", "places": ["areas west of Qutub Minar", "Mehrauli", "Masoodpur", "Kusumpur", "Mahipalpur"]},
+        {"materials": "silica material|quartzite", "places": ["Badarpur"]}
+      ],
+      "statewide_occurrences": ["fireclay"]
+    },
+    {
+      "source_region": "Goa",
+      "pages": [175],
+      "district_occurrences": {
+        "bauxite": ["North Goa", "South Goa"],
+        "kaolin": ["South Goa"],
+        "quartz/silica sand": ["North Goa", "South Goa"]
+      },
+      "named_area_occurrences": [
+        {"materials": "iron ore|manganese ore", "places": ["Bicholim taluka", "Sanguem taluka", "Satari taluka"]}
+      ]
+    },
+    {
+      "source_region": "Gujarat",
+      "pages": [177],
+      "district_occurrences": {
+        "bauxite": ["Amreli", "Bhavnagar", "Jamnagar", "Junagadh", "Kheda", "Kachchh", "Porbandar", "Sabarkantha", "Valsad"],
+        "ball clay": ["Banaskantha", "Bharuch", "Kachchh", "Patan"],
+        "bentonite": ["Amreli", "Bhavnagar", "Jamnagar", "Kachchh", "Sabarkantha"],
+        "china clay": ["Amreli", "Banaskantha", "Bhavnagar", "Jamnagar", "Junagadh", "Kachchh", "Mahesana", "Sabarkantha"],
+        "chalk": ["Porbandar"],
+        "diatomite": ["Bhavnagar"],
+        "dolomite": ["Bhavnagar", "Vadodara"],
+        "fireclay": ["Bharuch", "Kachchh", "Mahesana", "Rajkot", "Sabarkantha", "Surat", "Surendranagar"],
+        "fluorite": ["Vadodara", "Bharuch"],
+        "gypsum": ["Bhavnagar", "Jamnagar", "Junagadh", "Kachchh", "Surendranagar"],
+        "lignite": ["Bharuch", "Bhavnagar", "Kachchh", "Surat"],
+        "limestone": ["Amreli", "Banaskantha", "Bharuch", "Bhavnagar", "Jamnagar", "Junagadh", "Kheda", "Kachchh", "Panchmahals", "Porbandar", "Rajkot", "Sabarkantha", "Surat", "Vadodara", "Valsad"],
+        "marl": ["Amreli", "Junagadh", "Porbandar"],
+        "ochre": ["Banaskantha", "Bhavnagar", "Kachchh"],
+        "perlite": ["Rajkot"],
+        "quartz/silica sand": ["Bharuch", "Bhavnagar", "Dahod", "Kheda", "Kachchh", "Panchmahals", "Rajkot", "Sabarkantha", "Surat", "Surendranagar", "Vadodara", "Valsad"],
+        "talc/soapstone/steatite": ["Sabarkantha"],
+        "apatite|rock phosphate": ["Panchmahals"],
+        "calcite": ["Amreli", "Bharuch"],
+        "copper ore": ["Banaskantha"],
+        "granite": ["Banaskantha", "Mahesana", "Sabarkantha"],
+        "graphite": ["Panchmahals"],
+        "lead-zinc|marble": ["Banaskantha", "Vadodara"],
+        "manganese ore": ["Panchmahals", "Vadodara"],
+        "vermiculite": ["Vadodara"],
+        "wollastonite": ["Banaskantha"]
+      },
+      "named_area_occurrences": [
+        {"materials": "petroleum|natural gas", "places": ["Ankaleshwar oil field", "Kalol oil field", "Navgam oil field", "Balol oil field", "Cambay oil field", "Cambay onshore basin", "Cambay offshore basin"]}
+      ]
+    },
+    {
+      "source_region": "Haryana",
+      "pages": [183],
+      "district_occurrences": {
+        "china clay": ["Faridabad", "Gurgaon", "Rewari"],
+        "limestone": ["Ambala", "Bhiwani", "Mahendragarh", "Panchkula"],
+        "quartz/silica sand": ["Bhiwani", "Faridabad", "Gurgaon", "Mahendragarh"],
+        "quartzite": ["Faridabad", "Gurgaon"],
+        "slate": ["Mahendragarh", "Gurgaon"],
+        "barytes|calcite|felspar|marble": ["Mahendragarh"],
+        "copper": ["Bhiwani", "Mahendragarh"],
+        "dolomite": ["Ambala", "Mahendragarh"],
+        "granite": ["Bhiwani"],
+        "tin|tungsten": ["Bhiwani"]
+      },
+      "named_area_occurrences": [
+        {"materials": "tin|tungsten", "places": ["Tosham area"]}
+      ]
+    },
+    {
+      "source_region": "Himachal Pradesh",
+      "pages": [185],
+      "district_occurrences": {
+        "barytes": ["Sirmaur"],
+        "limestone": ["Bilaspur", "Chamba", "Kangra", "Kullu", "Mandi", "Shimla", "Sirmaur", "Solan"],
+        "rock salt": ["Mandi"],
+        "antimony": ["Lahaul & Spiti"],
+        "gypsum": ["Chamba", "Sirmaur", "Solan"],
+        "magnesite": ["Chamba"],
+        "pyrite": ["Shimla"],
+        "quartz|quartzite|silica sand": ["Una"]
+      }
+    },
+    {
+      "source_region": "Union Territory of Jammu & Kashmir",
+      "pages": [188],
+      "district_occurrences": {
+        "coal": ["Kupwara"],
+        "gypsum": ["Baramulla", "Doda"],
+        "limestone": ["Anantnag", "Baramulla", "Kathua", "Leh", "Poonch", "Pulwama", "Rajauri", "Srinagar", "Udhampur"],
+        "magnesite": ["Leh", "Udhampur"],
+        "bauxite|china clay": ["Udhampur"],
+        "bentonite": ["Jammu"],
+        "borax|sulphur": ["Leh"],
+        "diaspore": ["Rajouri", "Udhampur"],
+        "graphite": ["Baramulla"],
+        "lignite|marble": ["Kupwara"],
+        "quartz|silica sand": ["Anantnag", "Doda", "Udhampur"],
+        "quartzite": ["Anantnag"],
+        "sapphire": ["Doda"]
+      }
+    },
+    {
+      "source_region": "Jharkhand",
+      "pages": [190, 191],
+      "district_occurrences": {
+        "bauxite": ["Dumka", "Gumla", "Latehar", "Lohardaga", "Palamu"],
+        "china clay": ["Dumka", "Hazaribagh", "Lohardaga", "East Singhbhum", "West Singhbhum", "Sahebganj", "Ranchi"],
+        "coal": ["Bokaro", "Deoghar", "Dhanbad", "Giridih", "Godda", "Hazaribagh", "Palamau", "Pakur", "Ranchi"],
+        "copper": ["Hazaribagh", "East Singhbhum"],
+        "dolomite": ["Garhwa", "Palamu"],
+        "felspar": ["Deoghar", "Dhanbad", "Dumka", "Giridih", "Hazaribagh", "Jamtara", "Koderma", "Latehar", "Palamu", "Ranchi"],
+        "fireclay": ["Dhanbad", "Dumka", "Giridih", "Godda", "Hazaribagh", "Latehar", "Palamu", "Ranchi", "West Singhbhum"],
+        "gold": ["East Singhbhum"],
+        "graphite": ["Palamu"],
+        "iron ore (haematite)": ["West Singhbhum"],
+        "iron ore (magnetite)": ["Gumla", "Hazaribagh", "Latehar", "Palamu", "East Singhbhum"],
+        "kyanite": ["Saraikela-Kharsawan", "West Singhbhum"],
+        "limestone": ["Bokaro", "Dhanbad", "Garhwa", "Giridih", "Hazaribagh", "Palamu", "Ranchi", "East Singhbhum", "West Singhbhum"],
+        "manganese ore": ["East Singhbhum", "West Singhbhum"],
+        "mica": ["Giridih", "Koderma"],
+        "ochre": ["West Singhbhum"],
+        "dunite/pyroxenite": ["East Singhbhum"],
+        "quartz/silica sand": ["Deoghar", "Dhanbad", "Dumka", "Giridih", "Godda", "Hazaribagh", "Jamtara", "Koderma", "Latehar", "Palamu", "Ranchi", "Sahebganj", "Saraikela-Kharsawan", "West Singhbhum"],
+        "quartzite": ["East Singhbhum", "West Singhbhum"],
+        "andalusite|rock phosphate": ["Palamu"],
+        "apatite|chromite|cobalt|nickel|gold|silver": ["East Singhbhum"],
+        "asbestos": ["East Singhbhum", "West Singhbhum"],
+        "barytes": ["Palamu", "East Singhbhum"],
+        "bentonite": ["Pakur", "Sahebganj"],
+        "garnet": ["Hazaribagh"],
+        "granite": ["Deogarh", "Dhanbad", "Dumka", "Giridih", "Godda", "Gumla", "Hazaribagh", "Koderma", "Lohardaga", "Palamu", "Ranchi", "East Singhbhum"],
+        "sillimanite": ["Hazaribagh"],
+        "talc/steatite/soapstone": ["Giridih", "Koderma", "Palamu", "East Singhbhum", "West Singhbhum"],
+        "pyrophyllite": ["Saraikela-Kharaswan"],
+        "titanium minerals": ["Ranchi", "East Singhbhum"],
+        "vermiculite": ["Giridih", "Hazaribagh"]
+      }
+    },
+    {
+      "source_region": "Karnataka",
+      "pages": [193],
+      "district_occurrences": {
+        "bauxite": ["Belagavi", "Chikkamagaluru", "Uttara Kannada", "Dakshina Kannada", "Udupi"],
+        "chromite": ["Chikkamagaluru", "Hassan", "Mysuru"],
+        "feldspar": ["Bengaluru", "Belagavi", "Chitradurga", "Hassan"],
+        "gold": ["Chitradurga", "Dharwad", "Gadag", "Kalaburagi", "Hassan", "Haveri", "Kolar", "Raichur", "Tumakuru"],
+        "iron ore (haematite)": ["Bagalkot", "Ballari", "Vijayapura", "Chikkamagaluru", "Chitradurga", "Dharwad", "Gadag", "Uttara Kannada", "Shivamogga", "Tumakuru"],
+        "iron ore (magnetite)": ["Chikkamagaluru", "Hassan", "Uttara Kannada", "Dakshina Kannada", "Shivamogga"],
+        "kyanite": ["Chikkamagaluru", "Chitradurga", "Coorg", "Mandya", "Mysuru", "Shivamogga", "Dakshina Kannada"],
+        "limestone": ["Bagalkot", "Belagavi", "Ballari", "Vijayapura", "Chikkamagaluru", "Chitradurga", "Davangere", "Gadag", "Kalaburagi", "Hassan", "Mysuru", "Uttara Kannada", "Dakshina Kannada", "Shivamogga", "Tumakuru", "Udupi"],
+        "magnesite": ["Coorg", "Mandya", "Mysuru"],
+        "manganese ore": ["Belagavi", "Ballari", "Chikkamagaluru", "Chitradurga", "Davangere", "Uttara Kannada", "Shivamogga", "Tumakuru"],
+        "quartz/silica sand": ["Bagalkot", "Bengaluru", "Belagavi", "Ballari", "Chikkamagaluru", "Chitradurga", "Davangere", "Dharwad", "Gadag", "Kalaburagi", "Hassan", "Haveri", "Kolar", "Koppal", "Mandya", "Mysuru", "Uttara Kannada", "Dakshina Kannada", "Raichur", "Shivamogga", "Tumakuru", "Udupi"],
+        "asbestos": ["Chikkamagaluru", "Hassan", "Mandya", "Mysuru", "Shivamogga"],
+        "barytes|pyrite": ["Chitradurga"],
+        "copper": ["Chikkamagaluru", "Chitradurga", "Kalaburagi", "Hassan", "Uttara Kannada", "Raichur", "Shivamogga"],
+        "graphite": ["Kolar", "Mysuru"],
+        "molybdenum": ["Kolar", "Raichur"],
+        "nickel": ["Uttara Kannada"],
+        "platinum group of metals": ["Davangere"],
+        "sillimanite": ["Hassan", "Mysuru", "Dakshina Kannada"],
+        "silver": ["Chitradurga", "Raichur"],
+        "titanium minerals": ["Hassan", "Uttara Kannada", "Shivamogga"],
+        "tungsten": ["Gadag", "Kolar", "Raichur"],
+        "vanadium": ["Hassan", "Uttara Kannada", "Shivamogga"],
+        "vermiculite": ["Hassan", "Mandya", "Mysuru"]
+      }
+    },
+    {
+      "source_region": "Kerala",
+      "pages": [198],
+      "district_occurrences": {},
+      "named_area_occurrences": [
+        {"materials": "ilmenite|rutile|zircon", "places": ["Chavara belt"]}
+      ],
+      "statewide_occurrences": ["china clay", "ilmenite", "rutile", "zircon", "sillimanite", "garnet", "leucoxene", "monazite", "bauxite", "limestone", "silica sand", "graphite", "iron ore (magnetite)", "gold", "fire clay", "kyanite", "lignite", "magnesite", "steatite", "granite"]
+    },
+    {
+      "source_region": "Madhya Pradesh",
+      "pages": [201],
+      "district_occurrences": {
+        "bauxite": ["Balaghat", "Guna", "Jabalpur", "Katni", "Mandla", "Rewa", "Satna", "Shahdol", "Shivpuri", "Sidhi", "Vidisha"],
+        "calcite": ["Barwani", "Jhabua", "Khandwa", "Khargone"],
+        "china clay": ["Betul", "Chhatarpur", "Chhindwara", "Gwalior", "Hoshangabad", "Jabalpur", "Khargone", "Narsinghpur", "Raisen", "Satna", "Shahdol", "Sidhi"],
+        "copper": ["Balaghat", "Betul", "Jabalpur"],
+        "coal": ["Betul", "Shahdol", "Sidhi"],
+        "diamond": ["Panna"],
+        "diaspore|pyrophyllite": ["Chhatarpur", "Shivpuri", "Tikamgarh"],
+        "dolomite": ["Balaghat", "Chhindwara", "Damoh", "Dewas", "Harda", "Hoshangabad", "Jabalpur", "Jhabua", "Katni", "Mandla", "Narsinghpur", "Sagar", "Seoni"],
+        "fireclay": ["Betul", "Chhindwara", "Jabalpur", "Katni", "Narsinghpur", "Panna", "Sagar", "Shahdol", "Sidhi"],
+        "iron ore (haematite)": ["Betul", "Gwalior", "Jabalpur", "Katni"],
+        "limestone": ["Balaghat", "Chhindwara", "Damoh", "Dhar", "Hoshangabad", "Jabalpur", "Jhabua", "Khargone", "Katni", "Mandsaur", "Morena", "Narsinghpur", "Neemach", "Rewa", "Sagar", "Satna", "Sehore", "Shahdol", "Sidhi"],
+        "manganese ore": ["Balaghat", "Jhabua"],
+        "ochre": ["Dhar", "Gwalior", "Jabalpur", "Katni", "Mandla", "Rewa", "Satna", "Shahdol", "Umaria"],
+        "pyrophyllite": ["Chhatarpur", "Sagar", "Shivpuri", "Tikamgarh"],
+        "quartz/silica sand": ["Balaghat", "Dewas", "Dhar", "Jabalpur", "Khandwa", "Khargone", "Morena", "Rewa", "Shahdol"],
+        "talc/steatite/soapstone": ["Dhar", "Jabalpur", "Jhabua", "Katni", "Narsinghpur", "Sagar"],
+        "vermiculite": ["Jhabua"],
+        "barytes": ["Dewas", "Dhar", "Shivpuri", "Sidhi", "Tikamgarh"],
+        "calcareous shale": ["Mandsaur"],
+        "felspar": ["Jabalpur", "Shahdol"],
+        "fuller's earth": ["Mandla"],
+        "gold": ["Jabalpur", "Sidhi"],
+        "granite": ["Betul", "Chhatarpur", "Chhindwara", "Datia", "Jhabua", "Panna", "Seoni", "Shivpuri"],
+        "graphite": ["Betul", "Sidhi"],
+        "gypsum": ["Shahdol"],
+        "lead-zinc": ["Betul"],
+        "molybdenum": ["Balaghat"],
+        "potash": ["Panna"],
+        "quartzite": ["Sehore"],
+        "rock phosphate": ["Chhatarpur", "Jhabua", "Sagar"],
+        "sillimanite": ["Sidhi"]
+      }
+    },
+    {
+      "source_region": "Maharashtra",
+      "pages": [205],
+      "district_occurrences": {
+        "bauxite": ["Kolhapur", "Raigad", "Ratnagiri", "Satara", "Sindhudurg", "Thane"],
+        "china clay": ["Amravati", "Bhandara", "Chandrapur", "Nagpur", "Sindhudurg", "Thane"],
+        "chromite": ["Bhandara", "Chandrapur", "Nagpur", "Sindhudurg"],
+        "coal": ["Nagpur", "Chandrapur", "Yavatmal"],
+        "dolomite": ["Chandrapur", "Nagpur", "Yavatmal"],
+        "fireclay": ["Amravati", "Chandrapur", "Nagpur", "Ratnagiri"],
+        "fluorite|shale": ["Chandrapur"],
+        "iron ore (haematite)": ["Chandrapur", "Gadchiroli", "Sindhudurg"],
+        "iron ore (magnetite)": ["Gondia"],
+        "kyanite": ["Bhandara", "Nagpur"],
+        "laterite": ["Kolhapur"],
+        "limestone": ["Ahmednagar", "Chandrapur", "Dhule", "Gadchiroli", "Nagpur", "Nanded", "Pune", "Sangli", "Yavatmal"],
+        "manganese ore": ["Bhandara", "Nagpur", "Ratnagiri"],
+        "corundum|pyrophyllite": ["Bhandara"],
+        "quartz|silica sand": ["Bhandara", "Chandrapur", "Gadchiroli", "Gondia", "Kolhapur", "Nagpur", "Ratnagiri", "Sindhudurg"],
+        "quartzite": ["Gondia", "Nagpur"],
+        "sillimanite": ["Chandrapur"],
+        "barytes": ["Chandrapur", "Gadchiroli"],
+        "copper": ["Bhandara", "Chandrapur", "Gadchiroli", "Nagpur"],
+        "feldspar": ["Sindhudurg"],
+        "gold": ["Bhandara", "Nagpur"],
+        "granite": ["Bhandara", "Chandrapur", "Dhule", "Gadchiroli", "Nagpur", "Nanded", "Nashik", "Sindhudurg", "Thane"],
+        "graphite|mica": ["Sindhudurg"],
+        "lead-zinc|tungsten": ["Nagpur"],
+        "marble": ["Bhandara", "Nagpur"],
+        "ochre": ["Chandrapur", "Nagpur"],
+        "silver|vanadium": ["Bhandara"],
+        "steatite": ["Bhandara", "Ratnagiri", "Sindhudurg"],
+        "titanium minerals": ["Gondia", "Ratnagiri"]
+      }
+    },
+    {
+      "source_region": "Manipur",
+      "pages": [211],
+      "district_occurrences": {},
+      "statewide_occurrences": ["chromite", "limestone"]
+    },
+    {
+      "source_region": "Meghalaya",
+      "pages": [212],
+      "district_occurrences": {
+        "limestone": ["West Garo Hills", "East Khasi Hills", "West Khasi Hills", "Jaintia Hills"],
+        "apatite": ["Jaintia Hills"],
+        "china clay": ["East Garo Hills", "West Garo Hills", "Jaintia Hills", "East Khasi Hills"],
+        "copper|lead-zinc|silver|titanium": ["East Khasi Hills"],
+        "feldspar|rock phosphate": ["East Garo Hills", "Jaintia Hills"],
+        "fireclay": ["East Khasi Hills", "West Garo Hills"],
+        "granite": ["West Khasi Hills"],
+        "iron ore (magnetite)": ["East Garo Hills"],
+        "quartz|silica sand": ["East Garo Hills", "West Garo Hills", "East Khasi Hills"],
+        "sillimanite": ["West Khasi Hills"]
+      },
+      "named_area_occurrences": [
+        {"materials": "coal", "places": ["Mikir Hills", "Khasi Hills", "Jaintia Hills", "Garo Hills"]}
+      ]
+    },
+    {
+      "source_region": "Mizoram",
+      "pages": [215],
+      "district_occurrences": {},
+      "statewide_occurrences": ["lignite", "sandstone", "pyrites"]
+    },
+    {
+      "source_region": "Nagaland",
+      "pages": [215],
+      "district_occurrences": {
+        "iron ore (magnetite)|cobalt|dunite|nickeliferous chromite": ["Tuensang"],
+        "limestone": ["Phek", "Tuensang"]
+      },
+      "named_area_occurrences": [
+        {"materials": "coal", "places": ["Borjan Coalfield", "Jhanzi-Disai Coalfield", "Tiesang Coalfield", "Tiru Valley Coalfield", "Changki Coalfield", "DGM Coalfield"]}
+      ]
+    },
+    {
+      "source_region": "Odisha",
+      "pages": [217, 218],
+      "district_occurrences": {
+        "bauxite": ["Balangir", "Kalahandi", "Kandhamal", "Kendujhar", "Koraput", "Malkangiri", "Rayagada", "Sundargarh"],
+        "china clay": ["Bargarh", "Boudh", "Balangir", "Kendujhar", "Koraput", "Mayurbhanj", "Sambalpur", "Sundargarh"],
+        "chromite": ["Balasore", "Cuttack", "Dhenkanal", "Jajpur", "Kendujhar"],
+        "coal": ["Dhenkanal"],
+        "dolomite": ["Bargarh", "Kendujhar", "Koraput", "Sambalpur", "Sundargarh"],
+        "dunite/pyroxenite": ["Kendujhar", "Sundargarh"],
+        "fireclay": ["Angul", "Cuttack", "Dhenkanal", "Jharsuguda", "Khurda", "Puri", "Sambalpur", "Sundargarh"],
+        "garnet": ["Ganjam", "Kalahandi", "Sambalpur"],
+        "graphite": ["Bargarh", "Boudh", "Balangir", "Kalahandi", "Koraput", "Nuapada", "Rayagada"],
+        "iron ore (haematite)": ["Dhenkanal", "Jajpur", "Kendujhar", "Koraput", "Mayurbhanj", "Sambalpur", "Sundargarh"],
+        "iron ore (magnetite)": ["Mayurbhanj"],
+        "limestone": ["Bargarh", "Koraput", "Malkangiri", "Nuapada", "Sambalpur", "Sundargarh"],
+        "manganese ore": ["Balangir", "Kendujhar", "Koraput", "Rayagada", "Sambalpur", "Sundargarh"],
+        "pyrophyllite": ["Kendujhar"],
+        "quartz/silica sand": ["Boudh", "Balangir", "Kalahandi", "Sambalpur", "Sundargarh"],
+        "quartzite": ["Balangir", "Dhenkanal", "Jajpur", "Jharsuguda", "Kendujhar", "Mayurbhanj", "Sambalpur", "Sundargarh"],
+        "sillimanite": ["Ganjam", "Sambalpur"],
+        "talc/steatite/soapstone": ["Mayurbhanj", "Sundargarh", "Sambalpur"],
+        "titanium minerals": ["Dhenkanal", "Ganjam", "Jajpur", "Mayurbhanj"],
+        "zircon": ["Ganjam"],
+        "asbestos": ["Kendujhar"],
+        "cobalt": ["Cuttack", "Jajpur"],
+        "copper": ["Mayurbhanj", "Sambalpur"],
+        "granite": ["Angul", "Boudh", "Balangir", "Cuttack", "Deogarh", "Dhenkanal", "Ganjam", "Kendujhar", "Khurda", "Koraput", "Mayurbhanj", "Nuapada", "Rayagada", "Sambalpur"],
+        "lead": ["Sundargarh"],
+        "mica": ["Sonepur"],
+        "nickel": ["Cuttack", "Kendujhar", "Mayurbhanj"],
+        "ruby": ["Balangir"],
+        "emerald": ["Kalahandi"],
+        "platinum group of metals": ["Kendujhar"],
+        "silver": ["Sundargarh"],
+        "tin": ["Koraput", "Malkangiri"],
+        "vanadiferous magnetite": ["Balasore", "Mayurbhanj"]
+      },
+      "named_area_occurrences": [
+        {"materials": "chromite", "places": ["Sukinda ultramafic belt", "Nuasahi ultramafic belt"]},
+        {"materials": "coal", "places": ["Ib River Valley", "Talcher coalfield"]},
+        {"materials": "lead", "places": ["Sargipalli area"]}
+      ]
+    },
+    {
+      "source_region": "Punjab",
+      "pages": [220],
+      "district_occurrences": {
+        "quartz|silica sand": ["Hoshiarpur"],
+        "quartzite": ["Hoshiarpur", "Ropar (Rupnagar)"]
+      }
+    },
+    {
+      "source_region": "Rajasthan",
+      "pages": [222, 223],
+      "district_occurrences": {
+        "asbestos (amphibole)": ["Ajmer", "Bhilwara", "Dungarpur", "Pali", "Rajsamand", "Udaipur"],
+        "ball clay": ["Bikaner", "Nagaur", "Pali"],
+        "barytes": ["Alwar", "Bharatpur", "Bhilwara", "Bundi", "Chittorgarh", "Jalore", "Pali", "Rajsamand", "Sikar", "Udaipur"],
+        "calcite": ["Ajmer", "Alwar", "Bhilwara", "Jaipur", "Jhunjhunu", "Pali", "Sikar", "Sirohi", "Udaipur"],
+        "china clay": ["Ajmer", "Barmer", "Bharatpur", "Bhilwara", "Bikaner", "Bundi", "Chittorgarh", "Dausa", "Jaipur", "Jaisalmer", "Jhunjhunu", "Kota", "Nagaur", "Pali", "Sawai Madhopur", "Udaipur"],
+        "copper": ["Ajmer", "Alwar", "Bharatpur", "Bhilwara", "Bundi", "Chittorgarh", "Dausa", "Dungarpur", "Jaipur", "Jhunjhunu", "Pali", "Rajsamand", "Sikar", "Sirohi", "Udaipur"],
+        "dolomite": ["Ajmer", "Alwar", "Bhilwara", "Chittorgarh", "Dausa", "Jaipur", "Jaisalmer", "Jhunjhunu", "Jodhpur", "Sikar", "Udaipur"],
+        "felspar": ["Ajmer", "Alwar", "Bhilwara", "Jaipur", "Pali", "Rajsamand", "Sikar", "Tonk", "Udaipur"],
+        "fireclay": ["Alwar", "Barmer", "Bharatpur", "Bhilwara", "Bikaner", "Dausa", "Jaisalmer", "Jhunjhunu", "Sawai Madhopur"],
+        "fluorspar": ["Ajmer", "Dungarpur", "Jalore", "Jhunjhunu", "Sikar", "Sirohi", "Udaipur"],
+        "garnet": ["Ajmer", "Bhilwara", "Jhunjhunu", "Sikar", "Tonk"],
+        "gypsum": ["Barmer", "Bikaner", "Churu", "Sri Ganganagar", "Hanumangarh", "Jaisalmer", "Jalore", "Nagaur", "Pali"],
+        "iron ore (haematite)": ["Alwar", "Dausa", "Jaipur", "Jhunjhunu", "Sikar", "Udaipur"],
+        "iron ore (magnetite)": ["Bhilwara", "Jhunjhunu", "Sikar"],
+        "lead-zinc": ["Ajmer", "Bhilwara", "Chittorgarh", "Pali", "Rajsamand", "Sirohi", "Udaipur"],
+        "lignite": ["Barmer", "Bikaner", "Jaisalmer", "Jalore", "Nagaur", "Pali"],
+        "limestone": ["Ajmer", "Alwar", "Banswara", "Bhilwara", "Bikaner", "Bundi", "Chittorgarh", "Churu", "Dungarpur", "Jaipur", "Jaisalmer", "Jodhpur", "Jhunjhunu", "Kota", "Nagaur", "Pali", "Sawai Madhopur", "Sikar", "Sirohi", "Udaipur"],
+        "magnesite": ["Ajmer", "Dungarpur", "Pali", "Udaipur"],
+        "marble": ["Ajmer", "Alwar", "Banswara", "Bhilwara", "Bundi", "Chittorgarh", "Dungarpur", "Jaipur", "Nagaur", "Sikar", "Sirohi", "Udaipur"],
+        "mica": ["Ajmer", "Bhilwara"],
+        "ochre": ["Baran", "Bharatpur", "Bhilwara", "Bikaner", "Chittorgarh", "Jaipur", "Sawai Madhopur", "Udaipur"],
+        "pyrite": ["Sikar"],
+        "pyrophyllite": ["Alwar", "Bhilwara", "Jhunjhunu", "Rajsamand", "Udaipur"],
+        "quartz/silica sand": ["Ajmer", "Alwar", "Bharatpur", "Bhilwara", "Bikaner", "Bundi", "Chittorgarh", "Dausa", "Jaipur", "Jaisalmer", "Jhunjhunu", "Jodhpur", "Kota", "Pali", "Rajsamand", "Sawai Madhopur", "Sikar", "Sirohi", "Tonk", "Udaipur"],
+        "quartzite": ["Ajmer", "Alwar", "Jhunjhunu", "Sawai Madhopur"],
+        "rock phosphate": ["Alwar", "Banswara", "Jaipur", "Jaisalmer", "Udaipur"],
+        "talc/steatite/soapstone": ["Ajmer", "Alwar", "Banswara", "Bharatpur", "Bhilwara", "Chittorgarh", "Dausa", "Dungarpur", "Jaipur", "Jhunjhunu", "Karauli", "Pali", "Rajsamand", "Sawai Madhopur", "Sirohi", "Tonk", "Udaipur"],
+        "vermiculite": ["Ajmer", "Barmer"],
+        "wollastonite": ["Ajmer", "Dungarpur", "Pali", "Sirohi", "Udaipur"],
+        "apatite": ["Udaipur", "Sikar"],
+        "bauxite": ["Kota"],
+        "bentonite": ["Barmer", "Jaisalmer", "Jhalawar"],
+        "corundum": ["Tonk"],
+        "diatomite": ["Barmer", "Jaisalmer"],
+        "emerald": ["Ajmer", "Rajsamand"],
+        "fuller's earth": ["Barmer", "Bikaner", "Jodhpur"],
+        "gold": ["Banswara", "Bhilwara", "Dausa", "Sirohi", "Udaipur"],
+        "granite": ["Ajmer", "Alwar", "Banswara", "Barmer", "Bhilwara", "Chittorgarh", "Jaipur", "Jaisalmer", "Jalore", "Jhunjhunu", "Jodhpur", "Pali", "Rajsamand", "Sawai Madhopur", "Sikar", "Sirohi", "Tonk", "Udaipur"],
+        "graphite": ["Ajmer", "Alwar", "Banswara"],
+        "kyanite|sillimanite": ["Udaipur"],
+        "manganese ore": ["Banswara", "Jaipur", "Pali"],
+        "potash": ["Jaisalmer", "Nagaur"],
+        "silver": ["Ajmer", "Bhilwara", "Jhunjhunu", "Rajsamand", "Sikar", "Udaipur"],
+        "tungsten": ["Nagaur", "Sirohi"]
+      },
+      "named_area_occurrences": [
+        {"materials": "copper", "places": ["Khetri belt", "Dariba"]},
+        {"materials": "lead-zinc", "places": ["Zawar", "Bamnia Kalan", "Rajpura-Dariba", "Rampura-Agucha"]},
+        {"materials": "limestone", "places": ["flux-grade districts", "chemical-grade districts", "cement-grade districts"]},
+        {"materials": "petroleum", "places": ["Bikaner-Nagaur basin", "Barmer-Sanchore basin"]},
+        {"materials": "natural gas", "places": ["Jodhpur basin", "Jaisalmer basin"]}
+      ]
+    },
+    {
+      "source_region": "Sikkim",
+      "pages": [228],
+      "district_occurrences": {
+        "copper|lead-zinc|silver": ["East Sikkim"],
+        "dolomite|quartzite|talc/steatite/soapstone": ["West Sikkim"],
+        "limestone": ["North Sikkim"],
+        "marble": ["East Sikkim", "North Sikkim"]
+      },
+      "named_area_occurrences": [
+        {"materials": "copper|lead-zinc|silver", "places": ["Bhotang", "Rangpo", "Dikchu"]}
+      ]
+    },
+    {
+      "source_region": "Tamil Nadu",
+      "pages": [230, 231],
+      "district_occurrences": {
+        "bauxite": ["Dindigul", "Namakkal", "Nilgiris", "Salem"],
+        "dunite/pyroxenite": ["Salem"],
+        "feldspar": ["Coimbatore", "Dindigul", "Erode", "Kanchipuram", "Karur", "Namakkal", "Salem", "Tiruchirapalli"],
+        "fireclay": ["Cuddalore", "Kanchipuram", "Perambalur", "Pudukottai", "Sivaganga", "Tiruvallur", "Tiruchirapalli", "Vellore", "Villupuram"],
+        "garnet": ["Ramanathapuram", "Tiruchirapalli", "Tiruvarur", "Kanyakumari", "Thanjavur", "Tirunelveli"],
+        "granite": ["Dharmapuri", "Erode", "Kanchipuram", "Madurai", "Salem", "Tiruvannamalai", "Tiruchirapalli", "Tirunelveli", "Vellore", "Villupuram"],
+        "graphite": ["Madurai", "Ramanathapuram", "Sivaganga", "Vellore"],
+        "gypsum": ["Coimbatore", "Perambalur", "Ramanathapuram", "Tiruchirapalli", "Tirunelveli", "Thoothukudi", "Virudhunagar"],
+        "lignite": ["Cuddalore", "Ariyalur", "Thanjavur", "Thiruvarur", "Nagapattinam", "Ramnad", "Sivaganga", "Ramanathapuram"],
+        "limestone": ["Coimbatore", "Cuddalore", "Dindigul", "Kanchipuram", "Karur", "Madurai", "Nagapattinam", "Namakkal", "Perambalur", "Ramanathapuram", "Salem", "Tiruvallur", "Tiruchirapalli", "Tirunelveli", "Vellore", "Villupuram", "Virudhunagar"],
+        "magnesite": ["Coimbatore", "Dharmapuri", "Karur", "Namakkal", "Nilgiri", "Salem", "Tiruchirapalli", "Tirunelveli", "Vellore"],
+        "quartz/silica sand": ["Chennai", "Coimbatore", "Cuddalore", "Dharmapuri", "Dindigul", "Erode", "Kanchipuram", "Karur", "Madurai", "Namakkal", "Periyar", "Perambalur", "Salem", "Tiruvallur", "Tiruvarur", "Nagapattinam", "Tiruchirapalli", "Villupuram", "Virudhunagar", "Vellore"],
+        "talc/steatite/soapstone": ["Coimbatore", "Salem", "Tiruchirapalli", "Vellore"],
+        "titanium minerals": ["Kanyakumari", "Nagapattinam", "Ramanathapuram", "Tiruvallur", "Tirunelveli", "Thoothukudi"],
+        "vermiculite": ["Dharmapuri", "Tiruchirapalli", "Vellore"],
+        "zircon": ["Kanyakumari"],
+        "apatite": ["Dharmapuri", "Vellore"],
+        "barytes": ["Erode", "Madurai", "Perambalur", "Tirunelveli", "Vellore"],
+        "bentonite": ["Chengai-Anna"],
+        "calcite": ["Salem"],
+        "china clay": ["Cuddalore", "Dharmapuri", "Kanchipuram", "Nilgiris", "Sivaganga", "Tiruvallur", "Tiruvannamalai", "Tiruchirapalli", "Villupuram"],
+        "chromite": ["Coimbatore", "Salem"],
+        "copper|lead-zinc|silver": ["Villupuram"],
+        "corundum|gold": ["Dharmapuri"],
+        "dolomite": ["Salem", "Tirunelveli"],
+        "emerald": ["Coimbatore"],
+        "iron ore (magnetite)": ["Dharmapuri", "Erode", "Nilgiris", "Salem", "Tiruvannamalai", "Tiruchirapalli", "Villupuram"],
+        "kyanite": ["Kanyakumari", "Tirunelveli"],
+        "molybdenum": ["Dharmapuri", "Dindigul", "Vellore"],
+        "pyrite": ["Vellore"],
+        "sillimanite": ["Kanyakumari", "Karur", "Tirunelveli"],
+        "tungsten": ["Madurai", "Dindigul"],
+        "wollastonite": ["Dharmapuri", "Tirunelveli"]
+      },
+      "named_area_occurrences": [
+        {"materials": "petroleum|natural gas", "places": ["Cauvery basin"]}
+      ]
+    },
+    {
+      "source_region": "Telangana",
+      "pages": [235],
+      "district_occurrences": {
+        "barytes": ["Khammam"],
+        "china clay": ["Adilabad", "Mahabubnagar", "Nalgonda", "Rangareddi", "Warangal"],
+        "coal": ["Adilabad", "Karimnagar", "Khammam", "Warangal"],
+        "corundum": ["Khammam"],
+        "dolomite": ["Khammam", "Warangal"],
+        "feldspar": ["Hyderabad", "Khammam", "Mahabubnagar", "Medak", "Rangareddy"],
+        "fireclay": ["Adilabad", "Nalgonda"],
+        "garnet": ["Khammam"],
+        "granite": ["Karimnagar", "Khammam", "Mahabubnagar", "Medak", "Nalgonda", "Rangareddy", "Warangal"],
+        "iron ore (haematite)": ["Khammam"],
+        "iron ore (magnetite)": ["Adilabad", "Warangal"],
+        "limestone": ["Adilabad", "Hyderabad", "Karimnagar", "Mahabubnagar", "Nalgonda", "Rangareddy"],
+        "manganese ore": ["Adilabad"],
+        "mica": ["Khammam"],
+        "quartz/silica sand": ["Hyderabad", "Khammam", "Mahabubnagar", "Medak", "Nalgonda", "Rangareddy", "Warangal"],
+        "talc/soapstone/steatite": ["Khammam"],
+        "chromite|copper|graphite|kyanite": ["Khammam"],
+        "fuller's earth": ["Medak", "Rangareddy"],
+        "marble": ["Khammam"]
+      },
+      "named_area_occurrences": [
+        {"materials": "coal", "places": ["Godavari Valley"]}
+      ]
+    },
+    {
+      "source_region": "Tripura",
+      "pages": [238],
+      "district_occurrences": {},
+      "named_area_occurrences": [
+        {"materials": "natural gas", "places": ["Assam-Arakan Fold Belt"]}
+      ],
+      "statewide_occurrences": ["glass sand", "limestone", "fireclay", "plastic clay", "shale", "quartz/silica sand"]
+    },
+    {
+      "source_region": "Uttar Pradesh",
+      "pages": [239],
+      "district_occurrences": {
+        "coal": ["Sonbhadra"],
+        "diaspore|pyrophyllite": ["Hamirpur", "Jhansi", "Lalitpur", "Mahoba"],
+        "silica sand": ["Prayagraj", "Banda", "Aligarh", "Chitrakoot"],
+        "andalusite|calcite": ["Mirzapur"],
+        "bauxite": ["Banda", "Varanasi", "Lalitpur"],
+        "china clay|dolomite": ["Banda", "Sonbhadra"],
+        "felspar": ["Jhansi"],
+        "fireclay|limestone|potash|sillimanite": ["Sonbhadra"],
+        "ochre": ["Banda"],
+        "granite": ["Banda", "Hamirpur", "Lalitpur", "Mahoba"],
+        "iron ore (haematite)|rock phosphate": ["Lalitpur"]
+      },
+      "named_area_occurrences": [
+        {"materials": "coal", "places": ["Singrauli coalfield"]},
+        {"materials": "silica sand", "places": ["Naini", "Shankargarh", "Lohargarh", "Bargarh"]}
+      ]
+    },
+    {
+      "source_region": "Uttarakhand",
+      "pages": [242],
+      "district_occurrences": {
+        "limestone": ["Almora", "Bageshwar", "Dehradun", "Nainital", "Pauri-Garhwal", "Pithoragarh", "Tehri-Garhwal"],
+        "magnesite|steatite": ["Almora", "Bageshwar", "Chamoli", "Pithoragarh"],
+        "tungsten": ["Almora"],
+        "asbestos": ["Chamoli"],
+        "barytes|marble": ["Dehradun"],
+        "copper": ["Almora", "Dehradun", "Pithoragarh"],
+        "dolomite": ["Dehradun", "Nainital", "Tehri-Garhwal"],
+        "graphite": ["Almora"],
+        "gypsum": ["Dehradun", "Pauri-Garhwal", "Tehri-Garhwal"],
+        "lead-zinc|silver": ["Dehradun", "Pithoragarh"],
+        "rock phosphate": ["Dehradun", "Tehri-Garhwal"]
+      }
+    },
+    {
+      "source_region": "West Bengal",
+      "pages": [244],
+      "district_occurrences": {
+        "apatite": ["Purulia"],
+        "coal": ["Bardhaman", "Bankura", "Birbhum", "Darjeeling", "Jalpaiguri", "Purulia"],
+        "china clay": ["24-Parganas", "Bankura", "Birbhum", "Bardhaman", "Hooghly", "Midnapur", "Purulia"],
+        "fireclay": ["Bankura", "Birbhum", "Bardhaman", "Purulia"],
+        "barytes|copper|gold|kyanite|pyrite|titanium minerals": ["Purulia"],
+        "dolomite": ["Jalpaiguri"],
+        "felspar": ["Bankura", "Purulia"],
+        "granite": ["Bankura", "Birbhum", "Purulia"],
+        "lead-zinc": ["Darjeeling"],
+        "limestone": ["Bankura", "Purulia"],
+        "manganese ore|sillimanite": ["Midnapur"],
+        "quartz/silica sand": ["Bankura", "Hoogly", "Purulia"],
+        "tungsten|vermiculite": ["Bankura"]
+      }
+    },
+    {
+      "source_region": "Ladakh",
+      "pages": [249],
+      "district_occurrences": {},
+      "named_area_occurrences": [
+        {"materials": "chromite", "places": ["Thasgam", "Kargil"]},
+        {"materials": "ultramafic rocks", "places": ["Thasgam", "Kargil"]}
+      ],
+      "observation_type_override": "official_exploration_summary_named_area"
+    }
+  ]
+}

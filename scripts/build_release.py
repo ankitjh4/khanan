@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v1.0-alpha.21"
+VERSION = "v1.0-alpha.22"
 
 BUNDLE_MEMBERS = [
     "README.md",
@@ -17,6 +17,7 @@ BUNDLE_MEMBERS = [
     "assets/maps/khanan-earthchem-lithium-geochemistry-alpha17.png",
     "assets/maps/khanan-sentinel2-surface-context-alpha18.png",
     "assets/maps/khanan-gsi-ogd-deposit-preview-alpha21.png",
+    "assets/maps/khanan-ibm-state-review-occurrence-context-alpha22.png",
     "assets/figures/khanan-sentinel2-spatial-ablation-v0.1.png",
     "assets/figures/khanan-emag2-spatial-ablation-v0.1.png",
     "assets/figures/khanan-soilgrids-spatial-ablation-v0.1.png",
@@ -29,6 +30,7 @@ BUNDLE_MEMBERS = [
     "docs/emag2_spatial_ablation.md",
     "docs/earthchem_lithium_geochemistry.md",
     "docs/gsi_ogd_mineral_deposit_preview.md",
+    "docs/ibm_imyb_state_review_occurrences_2024.md",
     "docs/sentinel2_surface_context.md",
     "docs/sentinel2_spatial_ablation.md",
     "docs/official_block_transfer_validation.md",
@@ -55,6 +57,9 @@ BUNDLE_MEMBERS = [
     "scripts/plot_earthchem_geochemistry.py",
     "scripts/build_gsi_ogd_deposit_preview.py",
     "scripts/plot_gsi_ogd_deposit_preview.py",
+    "scripts/build_ibm_imyb_state_review_occurrences.py",
+    "scripts/plot_ibm_imyb_state_review_occurrences.py",
+    "scripts/validate_ibm_imyb_state_review_csv_artifacts.mjs",
     "scripts/build_sentinel2_surface_context.py",
     "scripts/plot_sentinel2_surface_context.py",
     "scripts/validate_sentinel2_csv_artifacts.mjs",
@@ -68,6 +73,7 @@ BUNDLE_MEMBERS = [
     "config/materials.json",
     "config/weather_window.json",
     "config/official_critical_blocks.json",
+    "config/ibm_imyb_2024_state_review_occurrences.json",
     "outputs/india_known_mining_sites.csv",
     "outputs/india_ibm_mcdr_inspection_events_2023_2026.csv",
     "outputs/india_ibm_mcdr_latest_inspected_mines.csv",
@@ -89,6 +95,9 @@ BUNDLE_MEMBERS = [
     "outputs/india_earthchem_geochemical_observations.csv",
     "outputs/india_gsi_ogd_mineral_deposit_preview.csv",
     "outputs/gsi_ogd_mineral_deposit_catalog_audit.csv",
+    "outputs/india_ibm_state_mineral_occurrences_2024.csv",
+    "outputs/india_ibm_district_mineral_occurrences_2024.csv",
+    "outputs/india_ibm_district_mineral_context_h3_r6.csv",
     "outputs/india_sentinel2_surface_context_h3_r6.csv",
     "outputs/india_sentinel2_scene_manifest_2025.csv",
     "outputs/material_sentinel2_spatial_ablation.csv",
@@ -122,6 +131,7 @@ BUNDLE_MEMBERS = [
     "outputs/soilgrids_spatial_ablation_validation.json",
     "outputs/earthchem_geochemical_validation.json",
     "outputs/gsi_ogd_mineral_deposit_preview_validation.json",
+    "outputs/ibm_imyb_state_review_occurrences_validation.json",
     "outputs/sentinel2_surface_context_validation.json",
     "outputs/sentinel2_spatial_ablation_validation.json",
     "outputs/official_block_transfer_validation.json",
@@ -151,6 +161,9 @@ HASHED_ARTIFACTS = [
     "india_earthchem_geochemical_observations.csv",
     "india_gsi_ogd_mineral_deposit_preview.csv",
     "gsi_ogd_mineral_deposit_catalog_audit.csv",
+    "india_ibm_state_mineral_occurrences_2024.csv",
+    "india_ibm_district_mineral_occurrences_2024.csv",
+    "india_ibm_district_mineral_context_h3_r6.csv",
     "india_sentinel2_surface_context_h3_r6.csv",
     "india_sentinel2_scene_manifest_2025.csv",
     "material_sentinel2_spatial_ablation.csv",
@@ -184,6 +197,7 @@ HASHED_ARTIFACTS = [
     "soilgrids_spatial_ablation_validation.json",
     "earthchem_geochemical_validation.json",
     "gsi_ogd_mineral_deposit_preview_validation.json",
+    "ibm_imyb_state_review_occurrences_validation.json",
     "sentinel2_surface_context_validation.json",
     "sentinel2_spatial_ablation_validation.json",
     "official_block_transfer_validation.json",
@@ -208,7 +222,18 @@ def main():
     bundle = OUT / f"india_mining_dataset_csv_bundle_{VERSION}.zip"
     with zipfile.ZipFile(bundle, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
         for name in BUNDLE_MEMBERS:
-            archive.write(ROOT / name, arcname=name)
+            # Fix ZIP metadata so an identical source tree produces identical
+            # bundle bytes regardless of local mtimes, UID/GID or host OS.
+            info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
+            info.create_system = 3
+            info.external_attr = (0o100644 & 0xFFFF) << 16
+            info.compress_type = zipfile.ZIP_DEFLATED
+            archive.writestr(
+                info,
+                (ROOT / name).read_bytes(),
+                compress_type=zipfile.ZIP_DEFLATED,
+                compresslevel=6,
+            )
     with zipfile.ZipFile(bundle) as archive:
         if archive.testzip() is not None or archive.namelist() != BUNDLE_MEMBERS:
             raise RuntimeError("Bundle integrity or member-order validation failed")

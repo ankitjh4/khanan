@@ -10,7 +10,8 @@ The dataset has seven distinct observation types:
 4. **Official aggregate resource inventory records** — IBM NMI 2025 national, grade/measure, and state/UT reserves/resources; coordinates remain blank and totals are not allocated to cells.
 5. **Official mining-lease and auction-granted concession context** — IBM 2024 state/mineral/sector/area-band distributions plus 97 named 2023-24 blocks; all remain non-spatial, status-qualified and excluded from scoring.
 6. **Official critical-mineral auction events** — dated offer/result observations with source status, block names, states, minerals, concession types, bidders, and final offers where published. All tranche-I–VIII offer rows include source-published block footprints and document provenance; result-only rows retain blank geometry unless an offer lineage supplies a separate event row.
-7. **Modeled area records** — approximately 36 km² H3 resolution-6 cells covering the India boundary. Cell centroids are indexing points, not proposed drill collars.
+7. **Official compiled occurrence geography** — IBM 2024 State Review material lists at district, named-area or statewide scope, with explicit 2011 boundary crosswalks and no inference of point locations.
+8. **Modeled area records** — approximately 36 km² H3 resolution-6 cells covering the India boundary. Cell centroids are indexing points, not proposed drill collars.
 
 This separation prevents a predictive score from being presented as an observed deposit.
 
@@ -23,6 +24,14 @@ The release contains 722 extracted rows across 45 mineral tables: 54 national-to
 Every extracted row is checked against all three identities: `A = 111 + 121 + 122`, `B = 211 + 221 + 222 + 331 + 332 + 333 + 334`, and `A+B = A + B`, using a scale-aware tolerance because IBM notes that figures are rounded. Seven visibly blank category cells are interpreted as zero only where the published subtotals validate that interpretation; the count is recorded per row. All 722 rows pass.
 
 NMI state totals are contextual aggregates. They do not identify a deposit, imply prospectivity throughout a state, or provide a legal/economic mine status. They are excluded from model training and candidate scoring, and their latitude/longitude fields remain blank.
+
+### 2.1 Indian Minerals Yearbook 2024 State Review occurrences
+
+Alpha.22 separately extracts the occurrence prose from 31 source-region chapters on physical PDF pages 157–249. It produces 586 page-referenced state/named-area/district-list rows covering 101 source material terms, then explodes the district lists into 1,742 administrative-crosswalk rows. All curated material and place terms are present in text extracted from their cited pages. Ninety-one existing v1 ontology entities are linked; six valid rock/material terms remain explicit English fallbacks because the current ontology has no defensible entity.
+
+The district crosswalk resolves 1,734 rows one-to-one against the 2011 Census boundary framework. Eight candidate rows derived from the historical parent names `24-Parganas` and `Midnapur` are retained but withheld from cell propagation because each maps to two 2011 districts. Telangana is matched to undivided 2011 Andhra Pradesh, and Leh/Jammu & Kashmir rows carry an administrative-vintage warning. No source district term remains unmatched.
+
+The sparse H3 join table contains 59,872 cells. Each row carries a compact district-profile key and counts; detailed materials remain normalized in the district occurrence table. The cell centroid is not an occurrence coordinate, and an absent row is not evidence of mineral absence. IBM describes the Yearbook as an internally collated multi-source compilation and advises reader discretion. The entire layer is therefore `excluded_context_only`: it does not train, validate, score or promote candidates, and it is not a mine register, reserve estimate or discovery layer. The detailed contract is in [`ibm_imyb_state_review_occurrences_2024.md`](ibm_imyb_state_review_occurrences_2024.md).
 
 ## 3. IBM regional MCDR inspection tables
 
