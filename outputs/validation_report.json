@@ -123,7 +123,7 @@
   "official_critical_mineral_distinct_offer_lineage_keys": 100,
   "official_critical_mineral_pib_reported_cumulative_offer_count": 88,
   "official_critical_mineral_lineage_reconciliation_status": "not_reconciled",
-  "development_release_version": "v1.0-alpha.14",
+  "development_release_version": "v1.0-alpha.15",
   "material_ontology_v1": {
     "ontology_rows": 233,
     "ima_verified_species": 111,
@@ -223,23 +223,23 @@
   "ibm_auction_mbs_geometry_2023_24": {
     "ibm_input_rows": 97,
     "state_portal_documents_total": 1124,
-    "curated_records": 44,
-    "selected_document_matches": 39,
-    "reviewed_profile_complete_rows": 39,
+    "curated_records": 66,
+    "selected_document_matches": 61,
+    "reviewed_profile_complete_rows": 61,
     "coordinate_evidence_type_counts": {
-      "ordered_boundary_vertices": 30,
+      "ordered_boundary_vertices": 52,
       "ordered_boundary_vertices_with_source_error": 4,
       "bounding_extents_only": 4,
       "ordered_boundary_vertices_with_source_omission": 1
     },
-    "published_geometries": 24,
+    "published_geometries": 39,
     "geometry_admission_status_counts": {
       "withheld_no_public_boundary_document": 5,
-      "admitted_authoritative_source_footprint": 24,
-      "withheld_source_conflict": 8,
+      "admitted_authoritative_source_footprint": 39,
+      "withheld_source_conflict": 9,
       "withheld_insufficient_coordinate_detail": 4,
-      "withheld_not_reviewed": 53,
-      "withheld_validation_failure": 3
+      "withheld_validation_failure": 9,
+      "withheld_not_reviewed": 31
     },
     "all_geometry_polygons_valid": true,
     "all_geometry_centroids_in_source_state": true,

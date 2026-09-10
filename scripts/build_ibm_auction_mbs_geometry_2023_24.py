@@ -27,6 +27,7 @@ from urllib.parse import parse_qs, unquote, urljoin, urlparse
 import requests
 import geopandas as gpd
 from pypdf import PdfReader
+import pypdf.filters as pypdf_filters
 from pyproj import Geod, Transformer
 from shapely.geometry import Polygon, mapping
 
@@ -87,6 +88,28 @@ CURATED_MATCHES = {
     "IBM-IMYB2024-AUCTION-024": r"\bbasavana?gudda\b",
     "IBM-IMYB2024-AUCTION-025": r"\bniddodi\b",
     "IBM-IMYB2024-AUCTION-026": r"\bkudarka\b.*\bbauxite\b",
+    "IBM-IMYB2024-AUCTION-027": r"^summary of katni limestone block$",
+    "IBM-IMYB2024-AUCTION-028": r"^summary of pahari limestone block$",
+    "IBM-IMYB2024-AUCTION-029": r"^summary of pipartola manganese ore block$",
+    "IBM-IMYB2024-AUCTION-030": r"^summary of chorgadi puraina limestone block$",
+    "IBM-IMYB2024-AUCTION-031": r"^summary of bhilapar manganese ore (?:and )?dolomite block$",
+    "IBM-IMYB2024-AUCTION-032": r"^summary of dhamani nana manganese ore block$",
+    "IBM-IMYB2024-AUCTION-033": r"^summary of guvali manganese ore block$",
+    "IBM-IMYB2024-AUCTION-034": r"^summary of katangjhari manganese ore block$",
+    "IBM-IMYB2024-AUCTION-035": r"^summary of lingaponar manganese ore block$",
+    "IBM-IMYB2024-AUCTION-036": r"^summary of naganwat chhoti manganese ore block$",
+    "IBM-IMYB2024-AUCTION-037": r"^summary of uberao manganese ore block$",
+    "IBM-IMYB2024-AUCTION-038": r"^summary of bamanbardi limestone block$",
+    "IBM-IMYB2024-AUCTION-039": r"^summary of doter guvali manganese ore block$",
+    "IBM-IMYB2024-AUCTION-040": r"^summary of east of dabri limestone block$",
+    "IBM-IMYB2024-AUCTION-041": r"^summary of garhi upcha limestone block$",
+    "IBM-IMYB2024-AUCTION-042": r"^summary of nawapara rampura manganese ore block$",
+    "IBM-IMYB2024-AUCTION-043": r"^summary of piploda phosphorite block$",
+    "IBM-IMYB2024-AUCTION-044": r"^summary of shitalpani copper block$",
+    "IBM-IMYB2024-AUCTION-045": r"^summary of siluwa and jhansi iron ore block$",
+    "IBM-IMYB2024-AUCTION-046": r"^summary of modri phosphorite block$",
+    "IBM-IMYB2024-AUCTION-047": r"^summary of pindrai iron ore block$",
+    "IBM-IMYB2024-AUCTION-048": r"^summary of makra graphite vanadium block$",
     "IBM-IMYB2024-AUCTION-049": r"^summary of devalmari katepalli block$",
     "IBM-IMYB2024-AUCTION-050": r"^summary of surjagad 1 2 1 23$",
     "IBM-IMYB2024-AUCTION-051": r"^summary of surjagad 2 2 1 23$",
@@ -105,6 +128,35 @@ CURATED_MATCHES = {
     "IBM-IMYB2024-AUCTION-095": r"(?:block\s*)?(?:vii|7).*cudnem\b|\bcudnem\b.*(?:block\s*)?(?:vii|7)",
     "IBM-IMYB2024-AUCTION-096": r"(?:block\s*)?(?:viii|8).*thivim.*pirna|thivim.*pirna",
     "IBM-IMYB2024-AUCTION-097": r"(?:block\s*)?(?:ix|9).*surla.*sonshi|surla.*sonshi",
+}
+
+# Madhya Pradesh reuses several block names in later auction phases. These
+# file IDs are the visually verified Phase-XI tranche that corresponds to IBM
+# Table 5 (2023-24); selecting the numerically latest same-name upload would
+# silently attach a later auction document to the historical IBM row.
+CURATED_FILE_ID_OVERRIDES = {
+    "IBM-IMYB2024-AUCTION-027": "10915",
+    "IBM-IMYB2024-AUCTION-028": "10950",
+    "IBM-IMYB2024-AUCTION-029": "10914",
+    "IBM-IMYB2024-AUCTION-030": "10937",
+    "IBM-IMYB2024-AUCTION-031": "10925",
+    "IBM-IMYB2024-AUCTION-032": "10912",
+    "IBM-IMYB2024-AUCTION-033": "10911",
+    "IBM-IMYB2024-AUCTION-034": "10910",
+    "IBM-IMYB2024-AUCTION-035": "10921",
+    "IBM-IMYB2024-AUCTION-036": "10931",
+    "IBM-IMYB2024-AUCTION-037": "10955",
+    "IBM-IMYB2024-AUCTION-038": "10922",
+    "IBM-IMYB2024-AUCTION-039": "10948",
+    "IBM-IMYB2024-AUCTION-040": "10941",
+    "IBM-IMYB2024-AUCTION-041": "10945",
+    "IBM-IMYB2024-AUCTION-042": "10936",
+    "IBM-IMYB2024-AUCTION-043": "10939",
+    "IBM-IMYB2024-AUCTION-044": "10913",
+    "IBM-IMYB2024-AUCTION-045": "10949",
+    "IBM-IMYB2024-AUCTION-046": "10938",
+    "IBM-IMYB2024-AUCTION-047": "10930",
+    "IBM-IMYB2024-AUCTION-048": "10919",
 }
 
 # The current public Andhra Pradesh MBS index exposes newer 2025-26 tranches,
@@ -387,6 +439,125 @@ DMS_GEOMETRIES = {
     ],
 }
 
+# Madhya Pradesh Phase-XI tables with short, visually reviewed coordinate
+# lists. Longer numeric tables are parsed below with strict contiguous-ID
+# checks so the release builder does not carry thousands of copied literals.
+DMS_GEOMETRIES.update({
+    "IBM-IMYB2024-AUCTION-037": [
+        (dms(74, 28, 58.71), dms(22, 41, 51.24)),
+        (dms(74, 29, 1.78), dms(22, 41, 51.32)),
+        (dms(74, 29, 3.15), dms(22, 41, 51.18)),
+        (dms(74, 29, 3.24), dms(22, 41, 50.57)),
+        (dms(74, 29, 3.64), dms(22, 41, 50.07)),
+        (dms(74, 29, 4.28), dms(22, 41, 48.61)),
+        (dms(74, 29, 4.62), dms(22, 41, 47.58)),
+        (dms(74, 29, 4.87), dms(22, 41, 45.39)),
+        (dms(74, 29, 5.54), dms(22, 41, 44.29)),
+        (dms(74, 29, 5.58), dms(22, 41, 43.13)),
+        (dms(74, 29, 5.77), dms(22, 41, 42.80)),
+        (dms(74, 29, 6.09), dms(22, 41, 42.82)),
+        (dms(74, 29, 7.29), dms(22, 41, 38.89)),
+        (dms(74, 29, 7.56), dms(22, 41, 38.50)),
+        (dms(74, 29, 8.40), dms(22, 41, 35.15)),
+        (dms(74, 29, 6.68), dms(22, 41, 33.87)),
+        (dms(74, 29, 5.06), dms(22, 41, 31.49)),
+        (dms(74, 29, 3.86), dms(22, 41, 31.32)),
+        (dms(74, 29, 3.71), dms(22, 41, 35.07)),
+        (dms(74, 29, 6.62), dms(22, 41, 36.14)),
+        (dms(74, 29, 6.44), dms(22, 41, 37.51)),
+        (dms(74, 29, 5.05), dms(22, 41, 41.26)),
+        (dms(74, 29, 3.88), dms(22, 41, 43.11)),
+        (dms(74, 29, 3.07), dms(22, 41, 45.20)),
+        (dms(74, 29, 2.96), dms(22, 41, 45.06)),
+        (dms(74, 29, 2.10), dms(22, 41, 45.16)),
+        (dms(74, 29, 0.52), dms(22, 41, 49.31)),
+        (dms(74, 29, 0.12), dms(22, 41, 49.34)),
+        (dms(74, 28, 57.40), dms(22, 41, 47.97)),
+        (dms(74, 28, 57.05), dms(22, 41, 48.02)),
+        (dms(74, 28, 56.53), dms(22, 41, 47.82)),
+        (dms(74, 28, 56.50), dms(22, 41, 48.19)),
+        (dms(74, 28, 57.21), dms(22, 41, 49.36)),
+        (dms(74, 28, 58.76), dms(22, 41, 50.30)),
+    ],
+    "IBM-IMYB2024-AUCTION-038": [
+        (dms(74, 39, 18.485), dms(22, 19, 56.104)),
+        (dms(74, 40, 36.706), dms(22, 19, 56.104)),
+        (dms(74, 40, 35.629), dms(22, 17, 23.610)),
+        (dms(74, 39, 44.678), dms(22, 17, 24.328)),
+        (dms(74, 39, 29.249), dms(22, 18, 19.943)),
+        (dms(74, 39, 15.614), dms(22, 18, 19.943)),
+    ],
+    "IBM-IMYB2024-AUCTION-039": [
+        (dms(74, 22, 39.955), dms(22, 58, 7.035)),
+        (dms(74, 23, 30.966), dms(22, 58, 7.189)),
+        (dms(74, 24, 6.836), dms(22, 55, 57.960)),
+        (dms(74, 22, 39.843), dms(22, 55, 57.853)),
+        (dms(74, 22, 39.877), dms(22, 56, 36.847)),
+        (dms(74, 23, 12.232), dms(22, 56, 36.847)),
+        (dms(74, 23, 10.697), dms(22, 56, 53.310)),
+        (dms(74, 22, 39.891), dms(22, 56, 53.342)),
+    ],
+    "IBM-IMYB2024-AUCTION-040": [
+        (dms(74, 37, 23.905), dms(22, 20, 17.433)),
+        (dms(74, 38, 19.812), dms(22, 20, 17.079)),
+        (dms(74, 38, 19.812), dms(22, 19, 54.463)),
+        (dms(74, 39, 16.579), dms(22, 19, 53.727)),
+        (dms(74, 39, 14.768), dms(22, 18, 15.820)),
+        (dms(74, 38, 21.116), dms(22, 18, 13.016)),
+        (dms(74, 38, 18.952), dms(22, 18, 33.343)),
+        (dms(74, 38, 3.272), dms(22, 18, 38.133)),
+        (dms(74, 38, 2.391), dms(22, 19, 6.924)),
+        (dms(74, 37, 24.493), dms(22, 19, 45.410)),
+    ],
+    "IBM-IMYB2024-AUCTION-041": [
+        (77.29571, 26.07884),
+        (77.30639, 26.07868),
+        (77.30606, 26.12983),
+        (77.28866, 26.12967),
+        (77.28331, 26.11537),
+    ],
+    "IBM-IMYB2024-AUCTION-042": [
+        (dms(74, 23, 57.230), dms(22, 58, 7.370)),
+        (dms(74, 24, 59.880), dms(22, 58, 7.410)),
+        (dms(74, 24, 59.770), dms(22, 55, 58.080)),
+        (dms(74, 24, 7.210), dms(22, 55, 58.080)),
+        (dms(74, 23, 39.710), dms(22, 57, 37.450)),
+        (dms(74, 24, 0.600), dms(22, 57, 41.700)),
+        (dms(74, 24, 3.400), dms(22, 57, 50.670)),
+    ],
+    "IBM-IMYB2024-AUCTION-043": [
+        (dms(74, 27, 17.200), dms(22, 55, 12.750)),
+        (dms(74, 28, 26.070), dms(22, 55, 28.800)),
+        (dms(74, 28, 49.080), dms(22, 54, 54.880)),
+        (dms(74, 28, 49.080), dms(22, 54, 0.000)),
+        (dms(74, 27, 59.040), dms(22, 54, 0.000)),
+        (dms(74, 27, 59.040), dms(22, 54, 2.880)),
+        (dms(74, 27, 48.600), dms(22, 54, 28.800)),
+        (dms(74, 27, 46.080), dms(22, 54, 48.600)),
+        (dms(74, 27, 18.000), dms(22, 55, 6.240)),
+    ],
+    "IBM-IMYB2024-AUCTION-044": [
+        (dms(80, 39, 35.514), dms(22, 4, 29.561)),
+        (dms(80, 40, 8.786), dms(22, 4, 14.484)),
+        (dms(80, 39, 36.432), dms(22, 3, 14.525)),
+        (dms(80, 39, 2.423), dms(22, 3, 30.287)),
+    ],
+    "IBM-IMYB2024-AUCTION-046": [
+        (dms(76, 6, 30.330), dms(22, 17, 39.061)),
+        (dms(76, 7, 55.141), dms(22, 17, 39.598)),
+        (dms(76, 7, 55.365), dms(22, 16, 6.218)),
+        (dms(76, 6, 30.330), dms(22, 16, 5.314)),
+    ],
+    "IBM-IMYB2024-AUCTION-048": [
+        (dms(77, 39, 1.50297), dms(21, 53, 14.97172)),
+        (dms(77, 39, 27.99477), dms(21, 53, 20.99025)),
+        (dms(77, 39, 28.55088), dms(21, 53, 16.27665)),
+        (dms(77, 39, 34.06401), dms(21, 53, 17.60946)),
+        (dms(77, 39, 34.18544), dms(21, 53, 7.20862)),
+        (dms(77, 39, 3.81036), dms(21, 53, 1.81932)),
+    ],
+})
+
 DMS_POINT_IDS = {
     "IBM-IMYB2024-AUCTION-021": list(range(1, 8)),
     "IBM-IMYB2024-AUCTION-023": list(range(1, 12)),
@@ -397,6 +568,18 @@ DMS_POINT_IDS = {
     "IBM-IMYB2024-AUCTION-092": list("ABCDEFGHI"),
     "IBM-IMYB2024-AUCTION-096": [1, 2, 3, 4, 5, 7, 8, 9, 10, 11],
 }
+
+DMS_POINT_IDS.update({
+    "IBM-IMYB2024-AUCTION-038": list("ABCDEF"),
+    "IBM-IMYB2024-AUCTION-039": list("ABCDEFGH"),
+    "IBM-IMYB2024-AUCTION-040": list("ABCDEFGHIJ"),
+    "IBM-IMYB2024-AUCTION-041": list("ABCDE"),
+    "IBM-IMYB2024-AUCTION-042": list("ABCDEFG"),
+    "IBM-IMYB2024-AUCTION-043": list("ABCDEFGHI"),
+    "IBM-IMYB2024-AUCTION-044": list("ABCD"),
+    "IBM-IMYB2024-AUCTION-046": list("ABCD"),
+    "IBM-IMYB2024-AUCTION-048": ["A", "B", "C", "I", "J", "H"],
+})
 
 MBS_AREA_HA = {
     "IBM-IMYB2024-AUCTION-006": 600.0,
@@ -420,6 +603,28 @@ MBS_AREA_HA = {
     "IBM-IMYB2024-AUCTION-024": 2501.9,
     "IBM-IMYB2024-AUCTION-025": 52.82,
     "IBM-IMYB2024-AUCTION-026": 52.0,
+    "IBM-IMYB2024-AUCTION-027": 120.949,
+    "IBM-IMYB2024-AUCTION-028": 102.861,
+    "IBM-IMYB2024-AUCTION-029": 4.653,
+    "IBM-IMYB2024-AUCTION-030": 332.654,
+    "IBM-IMYB2024-AUCTION-031": 9.037,
+    "IBM-IMYB2024-AUCTION-032": 4.70,
+    "IBM-IMYB2024-AUCTION-033": 4.61,
+    "IBM-IMYB2024-AUCTION-034": 5.101,
+    "IBM-IMYB2024-AUCTION-035": 9.712,
+    "IBM-IMYB2024-AUCTION-036": 11.86,
+    "IBM-IMYB2024-AUCTION-037": 4.68,
+    "IBM-IMYB2024-AUCTION-038": 913.3954,
+    "IBM-IMYB2024-AUCTION-039": 736.4,
+    "IBM-IMYB2024-AUCTION-040": 815.0,
+    "IBM-IMYB2024-AUCTION-041": 1001.95,
+    "IBM-IMYB2024-AUCTION-042": 725.7,
+    "IBM-IMYB2024-AUCTION-043": 464.0,
+    "IBM-IMYB2024-AUCTION-044": 220.971,
+    "IBM-IMYB2024-AUCTION-045": 4.59,
+    "IBM-IMYB2024-AUCTION-046": 699.55,
+    "IBM-IMYB2024-AUCTION-047": 6.0,
+    "IBM-IMYB2024-AUCTION-048": 37.5,
     "IBM-IMYB2024-AUCTION-049": 537.54,
     "IBM-IMYB2024-AUCTION-050": 1526.0,
     "IBM-IMYB2024-AUCTION-051": 886.0,
@@ -462,6 +667,28 @@ PROFILE_NUMBERS = {
     "IBM-IMYB2024-AUCTION-024": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
     "IBM-IMYB2024-AUCTION-025": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
     "IBM-IMYB2024-AUCTION-026": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
+    "IBM-IMYB2024-AUCTION-027": {"exploration_level": "G3", "borehole_count": 21, "drilled_meterage_m": 655.0},
+    "IBM-IMYB2024-AUCTION-028": {"exploration_level": "G3", "borehole_count": 11, "drilled_meterage_m": 220.0},
+    "IBM-IMYB2024-AUCTION-029": {"exploration_level": "G2", "borehole_count": 4, "drilled_meterage_m": 84.0},
+    "IBM-IMYB2024-AUCTION-030": {"exploration_level": "G2", "borehole_count": 37, "drilled_meterage_m": 1082.4},
+    "IBM-IMYB2024-AUCTION-031": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
+    "IBM-IMYB2024-AUCTION-032": {"exploration_level": "G3", "borehole_count": 2, "drilled_meterage_m": 27.0},
+    "IBM-IMYB2024-AUCTION-033": {"exploration_level": "G3", "borehole_count": 5, "drilled_meterage_m": 155.0},
+    "IBM-IMYB2024-AUCTION-034": {"exploration_level": "G3", "borehole_count": 2, "drilled_meterage_m": 76.4},
+    "IBM-IMYB2024-AUCTION-035": {"exploration_level": "G4; considered G3 under MEMC Rules 2021", "borehole_count": 7, "drilled_meterage_m": ""},
+    "IBM-IMYB2024-AUCTION-036": {"exploration_level": "G3", "borehole_count": 24, "drilled_meterage_m": ""},
+    "IBM-IMYB2024-AUCTION-037": {"exploration_level": "G3", "borehole_count": 2, "drilled_meterage_m": 46.0},
+    "IBM-IMYB2024-AUCTION-038": {"exploration_level": "G4", "borehole_count": "", "drilled_meterage_m": ""},
+    "IBM-IMYB2024-AUCTION-039": {"exploration_level": "G4", "borehole_count": 1, "drilled_meterage_m": 80.0},
+    "IBM-IMYB2024-AUCTION-040": {"exploration_level": "G4", "borehole_count": "", "drilled_meterage_m": ""},
+    "IBM-IMYB2024-AUCTION-041": {"exploration_level": "G4", "borehole_count": "", "drilled_meterage_m": ""},
+    "IBM-IMYB2024-AUCTION-042": {"exploration_level": "G4", "borehole_count": 2, "drilled_meterage_m": 190.4},
+    "IBM-IMYB2024-AUCTION-043": {"exploration_level": "G4", "borehole_count": "", "drilled_meterage_m": ""},
+    "IBM-IMYB2024-AUCTION-044": {"exploration_level": "G4", "borehole_count": 9, "drilled_meterage_m": 1544.85},
+    "IBM-IMYB2024-AUCTION-045": {"exploration_level": "G3", "borehole_count": 10, "drilled_meterage_m": 300.0},
+    "IBM-IMYB2024-AUCTION-046": {"exploration_level": "G4", "borehole_count": "", "drilled_meterage_m": ""},
+    "IBM-IMYB2024-AUCTION-047": {"exploration_level": "G3", "borehole_count": 6, "drilled_meterage_m": 110.0},
+    "IBM-IMYB2024-AUCTION-048": {"exploration_level": "G3", "borehole_count": 4, "drilled_meterage_m": 337.6},
     "IBM-IMYB2024-AUCTION-049": {"exploration_level": "G2", "borehole_count": 128, "drilled_meterage_m": 6234.45},
     "IBM-IMYB2024-AUCTION-050": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
     "IBM-IMYB2024-AUCTION-051": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
@@ -706,6 +933,182 @@ PROFILE_TEXT = {
         "climate_source": "Mean annual rainfall 350 cm; April temperature 32 C; December temperature 22.4 C.",
         "topography_source": "Undulating, hilly terrain.",
     },
+    "IBM-IMYB2024-AUCTION-027": {
+        "exploration_agency_source": "UltraTech Cement Limited, Vikram Cement Unit.",
+        "borehole_summary_source": "21 boreholes with cumulative meterage of 655.00 m.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "7.621 million tonnes of inferred limestone resources in the 87.756 ha mineralized area.",
+        "grade_source": "Average 45.2% CaO, 2.2% MgO and 12.14% SiO2; described as cement-grade limestone.",
+        "climate_source": "Mean annual rainfall about 1,100 mm; temperatures range from 4 C in winter to 47 C in summer.",
+    },
+    "IBM-IMYB2024-AUCTION-028": {
+        "exploration_agency_source": "GIEM (India) Consortium; qualified person Balram Singh Associates Pvt. Ltd.",
+        "borehole_summary_source": "11 boreholes with cumulative drill depth of 220 m.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "23.915 million tonnes inferred in the revised 102.861 ha DGPS block; 20.048 million tonnes in the 86.226 ha available area.",
+        "grade_source": "Cement-grade limestone; 35-49.40% CaO, 3-10% SiO2 and 3-5% MgO.",
+        "climate_source": "Rainfall and seasonal temperatures are not reported in the selected MBS.",
+    },
+    "IBM-IMYB2024-AUCTION-029": {
+        "exploration_agency_source": "S. V. Gokhale (RQP) and Nikhil Pashine for M. S. Minerals.",
+        "borehole_summary_source": "4 inclined boreholes with cumulative meterage of 84.00 m.",
+        "mineral_source_mbs": "Manganese",
+        "geological_resources_source": "35,658 tonnes, treated as indicated resource (332) under MEMC 2021 in the MBS.",
+        "grade_source": "17.20-39.20% Mn in pit samples and 18.50-32.90% Mn in borehole-core samples; source guidance is +25% Mn.",
+        "climate_source": "Rainfall and seasonal temperatures are reported as NA.",
+    },
+    "IBM-IMYB2024-AUCTION-030": {
+        "exploration_agency_source": "Directorate of Geology and Mining, Madhya Pradesh.",
+        "borehole_summary_source": "37 boreholes with cumulative drill depth of 1,082.40 m.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "100.98 million tonnes indicated over 284.430 ha: 61.896608 million tonnes cement grade and 39.085487 million tonnes blendable grade.",
+        "grade_source": "Average 44.10% CaO; cement-grade resource averages 46.89% CaO and blendable resource 39.39% CaO.",
+        "climate_source": "Mean annual rainfall 1,074.7 mm; December temperature 9 C; June temperature 47 C.",
+    },
+    "IBM-IMYB2024-AUCTION-031": {
+        "exploration_agency_source": "S. P. Mahakud, consultant geologist.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Manganese ore and dolomite",
+        "geological_resources_source": "Reconnaissance resources: 63,000 tonnes manganese ore and 161,280 tonnes dolomite.",
+        "grade_source": "12.50-29.40% Mn; refractory-grade dolomite reported at 34.23% CaO and 18.91% MgO.",
+        "climate_source": "Rainfall and seasonal temperatures are not reported in the selected MBS.",
+    },
+    "IBM-IMYB2024-AUCTION-032": {
+        "exploration_agency_source": "Indraneel Dawande (RQP) for Jhabua Ferro Alloys.",
+        "borehole_summary_source": "2 vertical boreholes with cumulative meterage of 27.00 m.",
+        "mineral_source_mbs": "Manganese",
+        "geological_resources_source": "44,887 tonnes of inferred manganese resource over 4.70 ha.",
+        "grade_source": "21.52-22.81% Mn, 18.97-21.87% SiO2, 12.20-18.35% Fe and 0.038-0.043% P.",
+        "climate_source": "Mean annual rainfall 800 mm; December temperature 6 C; June temperature 46 C.",
+    },
+    "IBM-IMYB2024-AUCTION-033": {
+        "exploration_agency_source": "Manoj Kumar (RQP), Geo Solutions Pvt. Ltd., for V. S. Alloys & Steel Pvt. Ltd.",
+        "borehole_summary_source": "5 vertical boreholes with cumulative meterage of 155.00 m.",
+        "mineral_source_mbs": "Manganese",
+        "geological_resources_source": "36,000 tonnes of in-situ inferred manganese resource.",
+        "grade_source": "Average 11.50% Mn, 46.81% SiO2, 6.95% Fe2O3, 4.32% Al2O3 and 0.028% P.",
+        "climate_source": "Mean annual rainfall 1,200-1,400 mm; December temperature 8 C; June temperature 46 C.",
+    },
+    "IBM-IMYB2024-AUCTION-034": {
+        "exploration_agency_source": "M. S. Waghmare (RQP) for Soham Ferro Manganese Pvt. Ltd. and lessee Aditya Pandit.",
+        "borehole_summary_source": "2 vertical boreholes with cumulative meterage of 76.40 m; neither intersected manganese.",
+        "mineral_source_mbs": "Manganese",
+        "geological_resources_source": "218,357 tonnes of inferred float-ore resource over about 3.97 ha; no resource was estimated from boreholes.",
+        "grade_source": "28.06-30.11% Mn, 13.15-16.50% SiO2, 8.80-9.20% Fe2O3 and 0.103-0.125% P.",
+        "climate_source": "Rainfall and seasonal temperatures are reported as not available.",
+    },
+    "IBM-IMYB2024-AUCTION-035": {
+        "exploration_agency_source": "Dhiraj Ore Pvt. Ltd.; prospecting report by S. M. Jathar.",
+        "borehole_summary_source": "7 boreholes (5 DTH and 2 core); cumulative meterage is not stated.",
+        "mineral_source_mbs": "Manganese ore",
+        "geological_resources_source": "16,160 tonnes reconnaissance resource: 14,400 tonnes in situ and 1,760 tonnes float ore.",
+        "grade_source": "22.39-38.71% Mn, 5.35-8.05% Fe, 4.81-21.53% SiO2, 11.08% Al2O3 and 0.11-0.49% P2O5.",
+        "climate_source": "Mean annual rainfall 1,150 mm; summer reaches 44 C and winter minimum is about 10 C.",
+    },
+    "IBM-IMYB2024-AUCTION-036": {
+        "exploration_agency_source": "Manoj Kumar (RQP) for A V Mines Private Limited.",
+        "borehole_summary_source": "24 vertical boreholes; cumulative meterage is not stated.",
+        "mineral_source_mbs": "Manganese",
+        "geological_resources_source": "54,900 tonnes across two bands, categorized in the source as measured/inferred (331/333).",
+        "grade_source": "Average 30.96% Mn.",
+        "climate_source": "Annual rainfall 1,100-1,200 mm; December minimum 8 C; June maximum 46 C.",
+    },
+    "IBM-IMYB2024-AUCTION-037": {
+        "exploration_agency_source": "A. K. Srivastava (RQP) for Jhabua Metals.",
+        "borehole_summary_source": "2 boreholes with cumulative meterage of 46.00 m: one vertical core hole and one inclined DTH hole.",
+        "mineral_source_mbs": "Manganese",
+        "geological_resources_source": "20,546.24 tonnes inferred manganese resource; the source says about 40% of the PL area was not explored.",
+        "grade_source": "27-32% Mn, 9-12.20% SiO2, 19.88-22.41% Fe and 4.78-5.00% Al2O3.",
+        "climate_source": "Mean annual rainfall 1,200 mm; December temperature 4 C; June temperature 46 C.",
+    },
+    "IBM-IMYB2024-AUCTION-038": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "NA.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "158 million tonnes over 524 ha, derived in the MBS by arithmetic extrapolation from adjacent Kherli-Mogra limestone rather than block drilling.",
+        "grade_source": "BRS samples report 36.344-52.36% CaO, 8.284-45.33% SiO2 and 0.081-0.712% MgO.",
+        "climate_source": "The MBS prints 871 mm average annual rainfall and separately 280 cm for southwest-monsoon rainfall; December minimum 19.5 C and June maximum 46 C. The internal rainfall-unit conflict is retained.",
+    },
+    "IBM-IMYB2024-AUCTION-039": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "1 scout borehole (SBH-3) with 80.0 m meterage.",
+        "mineral_source_mbs": "Manganese",
+        "geological_resources_source": "NA; the selected MBS does not estimate a block resource.",
+        "grade_source": "Trench and grab samples reach 34.9% Mn; four drilled intervals are reported at 3.66%, 1.254%, 0.716% and 1.09% Mn.",
+        "climate_source": "Annual rainfall 750-1,000 mm; December temperature 4-5 C; June temperature 44 C.",
+    },
+    "IBM-IMYB2024-AUCTION-040": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "NA.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "105 million tonnes over 348 ha, derived in the MBS by arithmetic extrapolation from adjacent Kherli-Mogra limestone rather than block drilling.",
+        "grade_source": "BRS samples report 38.45-51.458% CaO, 9.206-39.204% SiO2 and 0.425-2.954% MgO.",
+        "climate_source": "The MBS prints 871 mm average annual rainfall and separately 280 cm for southwest-monsoon rainfall; December minimum 19.5 C and June maximum 46 C. The internal rainfall-unit conflict is retained.",
+    },
+    "IBM-IMYB2024-AUCTION-041": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "NA.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "76.44 million tonnes over 245 ha of exposed limestone.",
+        "grade_source": "Average 41.84% CaO, 1.77% MgO, 1.354% Fe2O3, 2.348% Al2O3 and 10.49% SiO2; described as cement grade.",
+        "climate_source": "Mean annual rainfall is NA; December minimum 5 C and June maximum 45 C.",
+    },
+    "IBM-IMYB2024-AUCTION-042": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "2 scout boreholes with cumulative meterage of 190.4 m.",
+        "mineral_source_mbs": "Manganese",
+        "geological_resources_source": "NA; the selected MBS does not estimate a block resource.",
+        "grade_source": "Trench samples range from 1.8% to 29% Mn; BRS samples range from 5.26% to 42.52% Mn.",
+        "climate_source": "Annual rainfall 750-1,000 mm; December temperature 4-5 C; June temperature 44 C.",
+    },
+    "IBM-IMYB2024-AUCTION-043": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "NA.",
+        "mineral_source_mbs": "Phosphorite",
+        "geological_resources_source": "Not estimated for the Piploda block; reserve figures printed for adjacent blocks are not attributed to Piploda.",
+        "grade_source": "Block-context sampling includes 0.04-0.42% P2O5 in stream sediment/slope wash and seven BRS samples above 2% P2O5.",
+        "climate_source": "Mean annual rainfall 902.85 mm; December minimum 4 C; annual minimum/maximum/average printed as 4 C, 45-48 C and 32 C.",
+    },
+    "IBM-IMYB2024-AUCTION-044": {
+        "exploration_agency_source": "Mineral Exploration Corporation Limited, with cited GSI geochemical work.",
+        "borehole_summary_source": "9 inclined scout boreholes with cumulative meterage of 1,544.85 m.",
+        "mineral_source_mbs": "Copper",
+        "geological_resources_source": "0.36 million tonnes net in-situ reconnaissance resource.",
+        "grade_source": "Average 0.37% Cu at a 0.2% Cu cut-off; borehole intersections range from 0.23% to 0.65% Cu.",
+        "climate_source": "Average rainfall 127 cm for 1979-2002; summer maximum 44.1 C and peak-winter minimum 2.1 C.",
+    },
+    "IBM-IMYB2024-AUCTION-045": {
+        "exploration_agency_source": "Khatri Minerals and Mining Company; prospecting report by M. M. Gosavi.",
+        "borehole_summary_source": "10 vertical DTH boreholes with cumulative meterage of 300 m.",
+        "mineral_source_mbs": "Iron ore (hematite and blue dust); ochre is also present but has no estimated resource.",
+        "geological_resources_source": "0.855 million tonnes in Block-A; 374,400 tonnes inferred in the available 0.832 ha mineralized area.",
+        "grade_source": "40.18-49.83% Fe; the source classifies the available resource as low grade (+35% to below 45% Fe).",
+        "climate_source": "Mean annual rainfall 1,200 mm; source describes temperatures of 46 C in summer and 4 C in winter.",
+    },
+    "IBM-IMYB2024-AUCTION-046": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "NA.",
+        "mineral_source_mbs": "Phosphorite",
+        "geological_resources_source": "50,625 tonnes in situ at 8.46% P2O5, or alternatively 22,500 tonnes at an average 16.66% P2O5.",
+        "grade_source": "Channel samples range from 0.1% to 24.57% P2O5; trench samples range from 0.13% to 15.45% P2O5.",
+        "climate_source": "Mean annual rainfall about 100 cm; January 8-20 C (average 14 C) and June 40-45 C (average 42 C).",
+    },
+    "IBM-IMYB2024-AUCTION-047": {
+        "exploration_agency_source": "Shivam Borewells and Apex Survey Consultant; prospecting report by Balram Singh Associates for Hazi Steel Traders.",
+        "borehole_summary_source": "6 vertical non-core DTH boreholes with cumulative meterage of 110.00 m.",
+        "mineral_source_mbs": "Iron ore (hematite)",
+        "geological_resources_source": "1,414,888 tonnes above 45% Fe estimated for 4 ha in Blocks 1 and 2; the MBS extrapolates 2,120,582.52 tonnes for the 6 ha auction block.",
+        "grade_source": "Fe values 52% and 58.1%; SiO2 7.6% and 9.2%; Al2O3 3.20% and 6.8%; TiO2 0.40% and 1.6%.",
+        "climate_source": "Rainfall and seasonal temperatures are reported as NA.",
+    },
+    "IBM-IMYB2024-AUCTION-048": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "4 boreholes with cumulative meterage of 337.60 m over a 300 m strike length.",
+        "mineral_source_mbs": "Graphite and vanadium",
+        "geological_resources_source": "0.619 million tonnes graphite resource and 0.49 million tonnes vanadium-bearing material.",
+        "grade_source": "Graphite averages 9.05% fixed carbon; vanadium averages 840 ppm V (1,499.6 ppm V2O5) at a 560 ppm V cut-off.",
+        "climate_source": "Mean annual rainfall 1,085.2 mm; December minimum 10.5 C and June maximum 45 C.",
+    },
     "IBM-IMYB2024-AUCTION-049": {
         "exploration_agency_source": "Directorate of Geology and Mining (DGM), Maharashtra.",
         "borehole_summary_source": "128 boreholes with cumulative meterage of 6,234.45 m at 100 m by 200 m spacing.",
@@ -925,6 +1328,28 @@ COORDINATE_REVIEW = {
     "IBM-IMYB2024-AUCTION-024": ("ordered_boundary_vertices", [1], []),
     "IBM-IMYB2024-AUCTION-025": ("ordered_boundary_vertices", [1], ["quantity_row_mineral_label_conflicts_with_bauxite_title_and_grade_text"]),
     "IBM-IMYB2024-AUCTION-026": ("ordered_boundary_vertices_with_source_omission", [1], ["hemisphere_markers_not_printed"]),
+    "IBM-IMYB2024-AUCTION-027": ("ordered_boundary_vertices", [3, 4, 5, 6, 7], ["source_order_polygon_invalid", "computed_area_differs_from_mbs_area_gt_5pct"]),
+    "IBM-IMYB2024-AUCTION-028": ("ordered_boundary_vertices", [4, 5, 6, 7, 8, 9, 10], ["ibm_mbs_area_difference_within_5pct", "source_alternate_dgps_area_102_894_ha"]),
+    "IBM-IMYB2024-AUCTION-029": ("ordered_boundary_vertices", [4], []),
+    "IBM-IMYB2024-AUCTION-030": ("ordered_boundary_vertices", [4, 5, 6], ["ibm_mbs_area_conflict"]),
+    "IBM-IMYB2024-AUCTION-031": ("ordered_boundary_vertices", [4, 5], ["footprint_not_fully_covered_by_2011_state_boundary"]),
+    "IBM-IMYB2024-AUCTION-032": ("ordered_boundary_vertices", [4, 5, 6], ["source_order_polygon_invalid", "computed_area_differs_from_mbs_area_gt_5pct"]),
+    "IBM-IMYB2024-AUCTION-033": ("ordered_boundary_vertices", [3], []),
+    "IBM-IMYB2024-AUCTION-034": ("ordered_boundary_vertices", [4], ["source_order_polygon_invalid"]),
+    "IBM-IMYB2024-AUCTION-035": ("ordered_boundary_vertices", [4], []),
+    "IBM-IMYB2024-AUCTION-036": ("ordered_boundary_vertices", [4, 5, 6, 7], []),
+    "IBM-IMYB2024-AUCTION-037": ("ordered_boundary_vertices", [4], ["coordinate_table_image_only_manual_visual_transcription"]),
+    "IBM-IMYB2024-AUCTION-038": ("ordered_boundary_vertices", [1], ["mbs_internal_area_values_913_3954_and_948_ha", "computed_area_differs_from_mbs_area_gt_5pct"]),
+    "IBM-IMYB2024-AUCTION-039": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-040": ("ordered_boundary_vertices", [1], ["source_alternate_georeferenced_area_798_72_ha"]),
+    "IBM-IMYB2024-AUCTION-041": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-042": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-043": ("ordered_boundary_vertices", [1], ["source_alternate_georeferenced_area_462_5319_ha"]),
+    "IBM-IMYB2024-AUCTION-044": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-045": ("ordered_boundary_vertices", [5], ["source_pdf_filename_labels_limestone_while_document_content_is_iron_ore", "computed_area_differs_from_mbs_area_gt_5pct"]),
+    "IBM-IMYB2024-AUCTION-046": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-047": ("ordered_boundary_vertices", [4, 5], ["source_order_polygon_invalid", "source_alternate_dgps_area_5_6664_ha", "computed_area_differs_from_mbs_area_gt_5pct"]),
+    "IBM-IMYB2024-AUCTION-048": ("ordered_boundary_vertices", [1], ["source_revenue_area_37_5_ha_and_geological_report_area_35_ha"]),
     "IBM-IMYB2024-AUCTION-049": ("bounding_extents_only", [1], ["ordered_vertices_only_in_unincluded_cadastral_plate_A"]),
     "IBM-IMYB2024-AUCTION-050": ("ordered_boundary_vertices", [1], ["temperature_season_values_appear_reversed"]),
     "IBM-IMYB2024-AUCTION-051": ("ordered_boundary_vertices", [1], ["temperature_season_values_appear_reversed"]),
@@ -986,6 +1411,10 @@ GEOMETRY_WITHHOLD_DECISIONS = {
         "withheld_source_conflict",
         "The MBS coordinate table omits hemisphere markers; geometry withheld rather than inferring N/E signs from the block's location.",
     ),
+    "IBM-IMYB2024-AUCTION-030": (
+        "withheld_source_conflict",
+        "IBM publishes 378.404 ha while the visually matched Phase-XI MBS publishes 332.654 ha; geometry withheld pending source reconciliation.",
+    ),
     "IBM-IMYB2024-AUCTION-049": (
         "withheld_insufficient_coordinate_detail",
         "The MBS publishes latitude/longitude extents and says detailed coordinates are in an unincluded cadastral plate; no concession polygon is inferred from the bounding rectangle.",
@@ -1012,6 +1441,12 @@ COORDINATE_DATUM_SOURCE = {
     "IBM-IMYB2024-AUCTION-057": "Not stated; source publishes geographic DMS boundary points",
     "IBM-IMYB2024-AUCTION-058": "Not stated; source publishes geographic DMS boundary points",
 }
+
+COORDINATE_DATUM_SOURCE.update({
+    f"IBM-IMYB2024-AUCTION-{number:03d}":
+        "Not stated in the selected MBS; published N/E geographic coordinates encoded as EPSG:4326 for distribution"
+    for number in range(27, 49)
+})
 
 
 @dataclass(frozen=True)
@@ -1147,9 +1582,18 @@ def candidate_documents(row: dict[str, str], inventory: dict) -> list[dict]:
     return [doc for doc in docs if re.search(expression, match_text(doc["title"]), flags=re.I)]
 
 
-def select_latest(candidates: list[dict]) -> dict | None:
+def select_document(record_id: str, candidates: list[dict]) -> dict | None:
     if not candidates:
         return None
+    expected_file_id = CURATED_FILE_ID_OVERRIDES.get(record_id)
+    if expected_file_id:
+        selected = [doc for doc in candidates if doc["file_id"] == expected_file_id]
+        if len(selected) != 1:
+            raise ValueError(
+                f"{record_id} expected reviewed MSTC file {expected_file_id}, "
+                f"found {[doc['file_id'] for doc in candidates]}"
+            )
+        return selected[0]
     # MSTC file identifiers increase over time and are stable source identifiers.
     return max(candidates, key=lambda doc: int(doc["file_id"]) if doc["file_id"].isdigit() else -1)
 
@@ -1170,6 +1614,12 @@ def download_document(doc: dict, refresh: bool) -> tuple[Path, bytes]:
 
 
 def extract_pdf_pages(path: Path) -> list[str]:
+    # One reviewed Phase-XI MP PDF contains a large compressed page stream.
+    # Raising the decompression ceiling permits text extraction without
+    # changing the PDF bytes or substituting OCR for text-bearing pages.
+    pypdf_filters.ZLIB_MAX_OUTPUT_LENGTH = max(
+        pypdf_filters.ZLIB_MAX_OUTPUT_LENGTH, 250_000_000
+    )
     reader = PdfReader(path)
     return [(page.extract_text() or "") for page in reader.pages]
 
@@ -1246,6 +1696,89 @@ def extract_utm43_points(pages: list[str]) -> tuple[list[tuple[float, float]], l
     return coordinates, ids, sorted(set(source_pages.values()))
 
 
+MP_PHASE_XI_TEXT_GEOMETRIES = {
+    "IBM-IMYB2024-AUCTION-027": 376,
+    "IBM-IMYB2024-AUCTION-028": 617,
+    "IBM-IMYB2024-AUCTION-029": 20,
+    "IBM-IMYB2024-AUCTION-030": 130,
+    "IBM-IMYB2024-AUCTION-031": 53,
+    "IBM-IMYB2024-AUCTION-032": 234,
+    "IBM-IMYB2024-AUCTION-033": 49,
+    "IBM-IMYB2024-AUCTION-034": 73,
+    "IBM-IMYB2024-AUCTION-035": 40,
+    "IBM-IMYB2024-AUCTION-036": 228,
+    "IBM-IMYB2024-AUCTION-045": 44,
+    "IBM-IMYB2024-AUCTION-047": 117,
+}
+
+MP_STANDARD_DMS_ROW = re.compile(
+    r"(?<![\d.])(\d{1,3})\s+(2[1-6])\s+(\d{1,2})\s+(\d{1,2}(?:\.\d+)?)"
+    r"\s+(7[4-9]|8[0-2])\s+(\d{1,2})\s+(\d{1,2}(?:\.\d+)?)(?![\d.])"
+)
+MP_PIPARTOLA_ROW = re.compile(
+    r"(?<![\d.])(\d{1,2})\s+[\d.]+m\s+[\d.]+m\s+"
+    r"(7[4-9]|8[0-2])°\s*(\d{1,2})'\s*([\d.]+)\"\s+"
+    r"(2[1-6])°\s*(\d{1,2})'\s*([\d.]+)\""
+)
+MP_LINGAPONAR_ROW = re.compile(
+    r"TP-(\d{1,2})\s+[\d.]+\s+[\d.]+\s+"
+    r"(2[1-6])\s+(\d{1,2})\s+([\d.]+)\s+"
+    r"(7[4-9]|8[0-2])\s+(\d{1,2})\s+([\d.]+)"
+)
+MP_PAHARI_ROW = re.compile(
+    r"(?<![\d.])(\d{1,3})\s+N0?(2[1-6])°\s*(\d{1,2})'\s*([\d.]+)\"\s+"
+    r"E0?(7[4-9]|8[0-2])°\s*(\d{1,2})'\s*([\d.]+)\""
+)
+
+
+def extract_mp_phase_xi_points(
+    record_id: str, pages: list[str]
+) -> tuple[list[tuple[float, float]], list[int], list[int]]:
+    """Parse a reviewed Phase-XI geographic table with exact ID checks."""
+    configured_pages = COORDINATE_REVIEW[record_id][1]
+    points: dict[int, tuple[float, float]] = {}
+
+    def add_point(point_id: str, lat: tuple[str, str, str], lon: tuple[str, str, str]) -> None:
+        identifier = int(point_id)
+        if identifier in points:
+            raise ValueError(f"{record_id} duplicate boundary point {identifier}")
+        points[identifier] = (
+            dms(float(lon[0]), float(lon[1]), float(lon[2])),
+            dms(float(lat[0]), float(lat[1]), float(lat[2])),
+        )
+
+    for page_number in configured_pages:
+        for line in pages[page_number - 1].splitlines():
+            if record_id == "IBM-IMYB2024-AUCTION-029":
+                for match in MP_PIPARTOLA_ROW.finditer(line):
+                    point, lon_d, lon_m, lon_s, lat_d, lat_m, lat_s = match.groups()
+                    add_point(point, (lat_d, lat_m, lat_s), (lon_d, lon_m, lon_s))
+            elif record_id == "IBM-IMYB2024-AUCTION-035":
+                for match in MP_LINGAPONAR_ROW.finditer(line):
+                    point, lat_d, lat_m, lat_s, lon_d, lon_m, lon_s = match.groups()
+                    add_point(point, (lat_d, lat_m, lat_s), (lon_d, lon_m, lon_s))
+            elif record_id == "IBM-IMYB2024-AUCTION-028":
+                for match in MP_PAHARI_ROW.finditer(line):
+                    point, lat_d, lat_m, lat_s, lon_d, lon_m, lon_s = match.groups()
+                    add_point(point, (lat_d, lat_m, lat_s), (lon_d, lon_m, lon_s))
+            else:
+                for match in MP_STANDARD_DMS_ROW.finditer(line):
+                    point, lat_d, lat_m, lat_s, lon_d, lon_m, lon_s = match.groups()
+                    add_point(point, (lat_d, lat_m, lat_s), (lon_d, lon_m, lon_s))
+
+    expected_count = MP_PHASE_XI_TEXT_GEOMETRIES[record_id]
+    ids = sorted(points)
+    expected_ids = list(range(1, expected_count + 1))
+    if ids != expected_ids:
+        missing = sorted(set(expected_ids) - set(ids))
+        extra = sorted(set(ids) - set(expected_ids))
+        raise ValueError(
+            f"{record_id} boundary IDs do not match 1..{expected_count}; "
+            f"missing={missing}, extra={extra}"
+        )
+    return [points[point_id] for point_id in ids], ids, configured_pages
+
+
 def source_profile(pages: list[str]) -> dict[str, str]:
     text = normalize_text("\n".join(pages))
 
@@ -1314,7 +1847,7 @@ def load_state_shapes() -> dict[str, object]:
     districts = gpd.read_file(DISTRICT_BOUNDARIES).to_crs("EPSG:4326")
     return {
         state: districts.loc[districts["ST_NM"] == state, "geometry"].union_all()
-        for state in {"Chhattisgarh", "Goa", "Gujarat", "Jharkhand", "Karnataka", "Maharashtra", "Uttar Pradesh"}
+        for state in {"Chhattisgarh", "Goa", "Gujarat", "Jharkhand", "Karnataka", "Madhya Pradesh", "Maharashtra", "Uttar Pradesh"}
     }
 
 
@@ -1341,6 +1874,12 @@ def build_geometry(
             coordinate_method = "source_table_visual_transcription_dms_wgs84"
         if record_id == "IBM-IMYB2024-AUCTION-096":
             quality_flags.append("source_point_id_6_absent")
+        if record_id == "IBM-IMYB2024-AUCTION-041":
+            coordinate_method = "source_table_visual_transcription_decimal_degrees_encoded_epsg4326"
+    elif record_id in MP_PHASE_XI_TEXT_GEOMETRIES:
+        coordinates, point_ids, source_pages = extract_mp_phase_xi_points(record_id, pages)
+        coordinate_method = "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326"
+        quality_flags = []
     elif record_id in {
         "IBM-IMYB2024-AUCTION-093",
         "IBM-IMYB2024-AUCTION-094",
@@ -1355,6 +1894,10 @@ def build_geometry(
             "geometry_admission_status": "withheld_not_reviewed",
             "geometry_admission_reason": "No reviewed source-coordinate transcription is configured for this record.",
         }
+
+    for flag in COORDINATE_REVIEW[record_id][2]:
+        if flag not in quality_flags:
+            quality_flags.append(flag)
 
     polygon = Polygon(coordinates)
     mbs_area_ha = MBS_AREA_HA[record_id]
@@ -1447,7 +1990,7 @@ def upsert_source_registry(access_date: str) -> None:
         "download_url": "Exact PDF URL, file identifier, SHA-256, byte size and page count are retained per matched row.",
         "license_or_access_note": "Public government-owned auction portal; retain document-level attribution and verify current portal and State Government reuse terms.",
         "used_for": "Reviewed document links, source-published concession boundary coordinates, exploration summaries, geological resources, grades, climate, terrain, hydrology and access context.",
-        "limitations": "Alpha.14 reviews 44 of 97 IBM rows: 39 selected State MBS PDFs and five Andhra Pradesh exact-name searches with no match in the current public index. Mine Block Summaries describe auction-stage technical context and do not independently prove current operation, present legal status, access permission or reserve classification. Source conflicts and missing or inadequate public boundary documents are withheld, not repaired by inference.",
+        "limitations": "Alpha.15 reviews 66 of 97 IBM rows: 61 selected State MBS PDFs and five Andhra Pradesh exact-name searches with no match in the current public index. The 22 Madhya Pradesh matches are pinned to the browser-verified Phase-XI file identifiers so later same-name auction uploads cannot silently replace the historical tranche. Mine Block Summaries describe auction-stage technical context and do not independently prove current operation, present legal status, access permission or reserve classification. Source conflicts and failed geometry checks are withheld, not repaired by inference.",
     })
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
@@ -1468,7 +2011,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         rows = [row for row in reader if row["table"] not in table_columns]
 
     definitions = {
-        "review_scope": "Whether this IBM row received curated document review in alpha.14.",
+        "review_scope": "Whether this IBM row received curated document review in alpha.15.",
         "curated_candidate_count": "Number of MSTC documents matching the reviewed record-specific expression; zero does not mean the portal lacks a relevant document for unreviewed rows.",
         "document_selection_rule": "Rule used to select one official document when a reviewed expression matched multiple versions.",
         "document_match_status": "Outcome of curated IBM-to-MSTC document matching.",
@@ -1486,7 +2029,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         "normalized_material_names_json": "JSON array of normalized material English names linked from the IBM source wording.",
         "chemical_or_english_names_json": "JSON array using chemical names where defensible and English names otherwise.",
         "formulae_or_symbols_json": "JSON array of defensible element symbols or material formulae; empty when no single formula applies.",
-        "geometry_admission_status": "Whether the source footprint passed the alpha.14 spatial publication gates.",
+        "geometry_admission_status": "Whether the source footprint passed the alpha.15 spatial publication gates.",
         "geometry_admission_reason": "Specific evidence or failure responsible for geometry admission or withholding.",
         "coordinate_method": "Reviewed coordinate extraction and CRS-conversion method.",
         "coordinate_source_pdf_pages_json": "JSON array of one-based physical PDF pages containing the boundary coordinate table.",
@@ -1519,7 +2062,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         "climate_source": "Concise source-normalized rainfall and temperature statement; explicit source-unit anomalies are retained and labelled.",
         "topography_source": "Mine Block Summary terrain or morphology text.",
         "current_legal_or_operational_status_verified": "Always false in this layer; the source combination does not independently verify present legal or operating status.",
-        "model_evidence_role": "Context only in alpha.14; rows do not enter training, labels, scoring or candidate promotion.",
+        "model_evidence_role": "Context only in alpha.15; rows do not enter training, labels, scoring or candidate promotion.",
         "model_exclusion_reason": "Reason the record is excluded from model evidence.",
     }
     boolean_columns = {
@@ -1562,7 +2105,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
 def update_release_validation(validation: dict) -> None:
     path = ROOT / "outputs" / "validation_report.json"
     report = json.loads(path.read_text(encoding="utf-8"))
-    report["development_release_version"] = "v1.0-alpha.14"
+    report["development_release_version"] = "v1.0-alpha.15"
     report["ibm_auction_mbs_geometry_2023_24"] = {
         "ibm_input_rows": validation["ibm_input_rows"],
         "state_portal_documents_total": validation["state_portal_documents_total"],
@@ -1595,7 +2138,7 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
     for row in rows:
         record_id = row["record_id"]
         candidates = candidate_documents(row, inventory)
-        selected = select_latest(candidates)
+        selected = select_document(record_id, candidates)
         no_current_mbs_reason = REVIEWED_NO_CURRENT_MBS.get(record_id)
         match = {
             "record_id": record_id,
@@ -1609,9 +2152,9 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
             "auction_date": row["auction_date"],
             "concession_type_code": row["concession_type_code"],
             "ibm_area_ha": row["area_ha"],
-            "review_scope": "curated_alpha_14" if record_id in CURATED_MATCHES else "not_reviewed_alpha_14",
+            "review_scope": "curated_alpha_15" if record_id in CURATED_MATCHES else "not_reviewed_alpha_15",
             "curated_candidate_count": len(candidates),
-            "document_selection_rule": "highest_numeric_mstc_file_id" if len(candidates) > 1 else "unique_curated_name_match" if selected else "record_specific_exact_name_search_current_public_state_mbs_index" if no_current_mbs_reason else "",
+            "document_selection_rule": "pinned_reviewed_mstc_phase_xi_file_id" if record_id in CURATED_FILE_ID_OVERRIDES and selected else "highest_numeric_mstc_file_id" if len(candidates) > 1 else "unique_curated_name_match" if selected else "record_specific_exact_name_search_current_public_state_mbs_index" if no_current_mbs_reason else "",
             "document_match_status": "selected_curated_name_match" if selected else "reviewed_no_current_public_mbs_match" if no_current_mbs_reason else "not_reviewed_in_this_release",
             "selected_mbs_file_id": "",
             "selected_mbs_title": "",
@@ -1763,7 +2306,7 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
         all(row[field] != "" for field in required_profile_fields) for row in reviewed_rows
     )
     validation = {
-        "release": "v1.0-alpha.14",
+        "release": "v1.0-alpha.15",
         "source_portal_url": PORTAL_INDEX,
         "source_access_date": inventory["access_date"],
         "ibm_input_rows": len(rows),
@@ -1789,8 +2332,15 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
         "model_evidence_role": "context_only",
         "outputs": {},
         "limitations": [
-            "This release reviews 44 of the 97 IBM Table 5 records: 39 selected State MBS PDFs and five Andhra Pradesh exact-name searches with no match in the current public index.",
+            "This release reviews 66 of the 97 IBM Table 5 records: 61 selected State MBS PDFs and five Andhra Pradesh exact-name searches with no match in the current public index.",
+            "The 22 Madhya Pradesh rows are matched to the browser-verified Phase-XI tranche with pinned MSTC file identifiers; later same-name uploads are not substituted.",
             "The five Andhra Pradesh rows are withheld from geometry because no public boundary document was found in the current State MBS index; their dated official-secondary status evidence is published separately.",
+            "Katni, Dhamani Nana and Katangjhari source-order boundaries form invalid polygons; Pindrai is also invalid and has a material coordinate-derived area mismatch. These geometries are withheld rather than reordered or repaired.",
+            "Chorgadi-Puraina is withheld because IBM publishes 378.404 ha while the Phase-XI MBS publishes 332.654 ha.",
+            "Bamanbardi and Siluwa-Jhansi are withheld because coordinate-derived areas exceed the MBS areas by 5.24% and 5.12%, respectively.",
+            "Bhilapar is admitted with a flag because its footprint is not fully covered by the dissolved 2011 district-derived Madhya Pradesh boundary, while its centroid and area checks pass.",
+            "Bamanbardi and East of Dabri each print internally inconsistent annual-rainfall values (871 mm and 280 cm); both values and the conflict are retained.",
+            "The Siluwa-Jhansi source filename labels the document as limestone even though the PDF title and technical content identify iron ore; the anomaly is retained.",
             "Devalmari-Katepalli and South Padve publish bounding extents but no ordered boundary vertices in the selected MBS PDFs; no rectangles are inferred.",
             "Kondhala geometry is withheld because its source-order coordinates compute to about 162.74 ha versus the MBS-published 105 ha.",
             "The Surjagad MBS documents print December temperature up to 42 C and June temperature up to 7 C; the apparent seasonal-label anomaly is retained and flagged.",
@@ -1812,23 +2362,23 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
     }
     validation["checks_pass"] = bool(
         validation["ibm_input_rows"] == 97
-        and validation["curated_records"] == 44
-        and validation["selected_document_matches"] == 39
-        and validation["reviewed_profile_complete_rows"] == 39
+        and validation["curated_records"] == 66
+        and validation["selected_document_matches"] == 61
+        and validation["reviewed_profile_complete_rows"] == 61
         and validation["coordinate_evidence_type_counts"] == {
-            "ordered_boundary_vertices": 30,
+            "ordered_boundary_vertices": 52,
             "ordered_boundary_vertices_with_source_error": 4,
             "bounding_extents_only": 4,
             "ordered_boundary_vertices_with_source_omission": 1,
         }
-        and validation["published_geometries"] == 24
+        and validation["published_geometries"] == 39
         and validation["geometry_admission_status_counts"] == {
-            "withheld_not_reviewed": 53,
+            "withheld_not_reviewed": 31,
             "withheld_no_public_boundary_document": 5,
-            "admitted_authoritative_source_footprint": 24,
-            "withheld_source_conflict": 8,
+            "admitted_authoritative_source_footprint": 39,
+            "withheld_source_conflict": 9,
             "withheld_insufficient_coordinate_detail": 4,
-            "withheld_validation_failure": 3,
+            "withheld_validation_failure": 9,
         }
         and validation["all_geometry_polygons_valid"]
         and validation["all_geometry_centroids_in_source_state"]
@@ -1853,7 +2403,7 @@ def write_inventory_probe(inventory: dict, rows: list[dict[str, str]], refresh: 
     audits = []
     for row in rows:
         candidates = candidate_documents(row, inventory)
-        selected = select_latest(candidates)
+        selected = select_document(row["record_id"], candidates)
         item = {
             "record_id": row["record_id"],
             "state": row["state_or_ut"],

@@ -13,7 +13,7 @@ GEOMETRIES = ROOT / "outputs" / "india_ibm_auctioned_concession_geometries_2023_
 MATCHES = ROOT / "outputs" / "india_ibm_auctioned_concession_mbs_match_audit_2023_24.csv"
 STATUS_EVIDENCE = ROOT / "outputs" / "india_ibm_auctioned_concession_status_evidence_2023_24.csv"
 DISTRICTS = ROOT / "sources" / "raw" / "2011_Dist.shp"
-OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-auction-mbs-geometries-alpha14.png"
+OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-auction-mbs-geometries-alpha15.png"
 
 COLORS = {
     "Bauxite": "#A46636",
@@ -24,6 +24,9 @@ COLORS = {
     "Limestone": "#4D83B3",
     "Copper": "#2F8C88",
     "Manganese": "#745A44",
+    "Graphite": "#343B43",
+    "Phosphorite": "#8F6AAE",
+    "Dolomite": "#8B9A76",
 }
 
 
@@ -43,6 +46,17 @@ def style_axis(axis) -> None:
 
 
 def label_polygons(axis, frame: gpd.GeoDataFrame) -> None:
+    if not frame.empty and frame.state_or_ut.iloc[0] == "Madhya Pradesh":
+        # The admitted Jhabua-Dhar footprints are tightly clustered at the
+        # State scale. Keep the geometry visible and label only spatial anchors;
+        # all block identities remain available in the CSV and GeoJSON.
+        frame = frame[
+            frame.block_name.str.contains(
+                "Garhi-Upcha|Pahari|Shitalpani|Makra|Modri",
+                case=False,
+                regex=True,
+            )
+        ]
     for _, row in frame.iterrows():
         point = row.geometry.representative_point()
         label = row["block_name"].replace(" Mineral Block", "").replace(" Block", "")
@@ -74,6 +88,8 @@ def main() -> None:
     states = districts.dissolve(by="ST_NM").reset_index()
     admitted = int((matches.geometry_admission_status == "admitted_authoritative_source_footprint").sum())
     unreviewed = int((matches.geometry_admission_status == "withheld_not_reviewed").sum())
+    reviewed = len(matches) - unreviewed
+    selected_documents = int(matches.selected_mbs_file_id.astype(str).str.len().gt(0).sum())
     withheld = len(matches) - admitted - unreviewed
     no_public_boundary = int((matches.geometry_admission_status == "withheld_no_public_boundary_document").sum())
     reviewed_mbs_withheld = withheld - no_public_boundary
@@ -102,7 +118,7 @@ def main() -> None:
     )
     axes[0].set_title("India locator", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
 
-    for axis, state in zip(axes[1:8], ["Chhattisgarh", "Goa", "Gujarat", "Andhra Pradesh", "Uttar Pradesh", "Karnataka", "Maharashtra"]):
+    for axis, state in zip(axes[1:9], ["Chhattisgarh", "Goa", "Gujarat", "Andhra Pradesh", "Uttar Pradesh", "Karnataka", "Maharashtra", "Madhya Pradesh"]):
         state_shape = states[states.ST_NM == state]
         subset = geometries[geometries.state_or_ut == state]
         state_shape.plot(ax=axis, facecolor="#E9E5DC", edgecolor="#756E64", linewidth=0.8)
@@ -138,19 +154,19 @@ def main() -> None:
         else:
             axis.set_title(f"{state}: {len(subset)} admitted footprints", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
 
-    axes[8].axis("off")
-    axes[8].text(0.02, 0.94, "Review scope", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[8].transAxes)
-    axes[8].text(
+    axes[9].axis("off")
+    axes[9].text(0.02, 0.94, "Review scope", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[9].transAxes)
+    axes[9].text(
         0.02,
         0.80,
-        f"44 IBM rows reviewed\n39 official MBS PDFs selected\n{admitted} footprints admitted\n{reviewed_mbs_withheld} MBS records withheld\n{no_public_boundary} Andhra rows status-linked only\n{unreviewed} IBM rows not yet reviewed",
+        f"{reviewed} IBM rows reviewed\n{selected_documents} official MBS PDFs selected\n{admitted} footprints admitted\n{reviewed_mbs_withheld} selected-MBS records withheld\n{no_public_boundary} Andhra rows status-linked only\n{unreviewed} IBM rows not yet reviewed",
         fontsize=13,
         linespacing=1.45,
         color="#48545C",
         va="top",
-        transform=axes[8].transAxes,
+        transform=axes[9].transAxes,
     )
-    axes[8].text(
+    axes[9].text(
         0.02,
         0.22,
         "Withholding is deliberate: malformed coordinates,\nmissing hemispheres, incomplete boundary detail,\nor area-reconciliation failures are not repaired\nby inference.",
@@ -158,41 +174,28 @@ def main() -> None:
         linespacing=1.5,
         color="#65717A",
         va="top",
-        transform=axes[8].transAxes,
-    )
-
-    axes[9].axis("off")
-    axes[9].text(0.02, 0.94, "Maharashtra decisions", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[9].transAxes)
-    axes[9].text(
-        0.02,
-        0.80,
-        "7 source footprints admitted\n5 Surjagad iron-ore blocks\n1 Minzhari copper block\n1 Savali manganese block\n\nKondhala withheld: 54.99% area mismatch\nDevalmari-Katepalli and South Padve withheld:\nbounding extents are not polygon vertices",
-        fontsize=12,
-        linespacing=1.45,
-        color="#48545C",
-        va="top",
         transform=axes[9].transAxes,
     )
 
     axes[10].axis("off")
-    axes[10].text(0.02, 0.94, "Evidence and geometry gates", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[10].transAxes)
+    axes[10].text(0.02, 0.94, "Madhya Pradesh decisions", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[10].transAxes)
     axes[10].text(
         0.02,
         0.80,
-        "Exact block identity and dated source\nNo current-status claim without controlling record\nValid source-order polygon\nCentroid and footprint covered by source State\nComputed vs MBS area within 5%\nIBM vs MBS area within 5%",
+        "15 Phase-XI footprints admitted\n22 exact historical PDFs pinned by file ID\n\n7 reviewed geometries withheld:\n1 invalid source-order polygon\n3 invalid polygons plus area mismatch\n1 IBM/MBS area conflict\n2 coordinate-derived area failures\n\nNo source coordinate is repaired by inference.",
         fontsize=12,
-        linespacing=1.5,
+        linespacing=1.45,
         color="#48545C",
         va="top",
         transform=axes[10].transAxes,
     )
 
     axes[11].axis("off")
-    axes[11].text(0.02, 0.94, "Interpretation", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[11].transAxes)
+    axes[11].text(0.02, 0.94, "Gates and interpretation", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[11].transAxes)
     axes[11].text(
         0.02,
         0.80,
-        "MBS geometry is authoritative auction-stage\ncontext, not proof of current mining or title.\n\nPrinted climate anomalies remain visible in the\naudit layer. Candidate scores are unchanged;\nthis tranche improves source coverage and spatial\nvalidation only.",
+        "Exact block identity and dated source\nValid source-order polygon\nState-centroid containment\nComputed vs MBS area within 5%\nIBM vs MBS area within 5%\n\nMBS geometry is auction-stage context, not\nproof of present operation or title. Candidate\nscores are unchanged.",
         fontsize=12,
         linespacing=1.5,
         color="#48545C",
@@ -204,7 +207,7 @@ def main() -> None:
     fig.text(
         0.045,
         0.905,
-        f"IBM Table 5 contains 97 blocks. Alpha.14 reviews 44 rows, admits {admitted} source footprints, and leaves {unreviewed} unreviewed.",
+        f"IBM Table 5 contains 97 blocks. Alpha.15 reviews {reviewed} rows, admits {admitted} source footprints, and leaves {unreviewed} unreviewed.",
         fontsize=12,
         color="#48545C",
     )

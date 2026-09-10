@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v1.0-alpha.14"
+VERSION = "v1.0-alpha.15"
 
 BUNDLE_MEMBERS = [
     "README.md",
@@ -13,7 +13,7 @@ BUNDLE_MEMBERS = [
     "assets/maps/khanan-india-prospectivity-overview-v0.6.png",
     "assets/maps/khanan-emag2-magnetic-context-v0.7.png",
     "assets/maps/khanan-soilgrids-context-v0.8.png",
-    "assets/maps/khanan-ibm-auction-mbs-geometries-alpha14.png",
+    "assets/maps/khanan-ibm-auction-mbs-geometries-alpha15.png",
     "assets/figures/khanan-emag2-spatial-ablation-v0.1.png",
     "assets/figures/khanan-soilgrids-spatial-ablation-v0.1.png",
     "data/README.md",
