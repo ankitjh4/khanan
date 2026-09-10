@@ -67,6 +67,12 @@ CURATED_MATCHES = {
     "IBM-IMYB2024-AUCTION-009": r"kareli\s+chandi",
     "IBM-IMYB2024-AUCTION-010": r"giroud\s+uprani",
     "IBM-IMYB2024-AUCTION-011": r"tumrisur[\s-]+garda\s*(?:ii|2)",
+    "IBM-IMYB2024-AUCTION-018": r"\bchiropat\b.*\bbauxite\b",
+    "IBM-IMYB2024-AUCTION-019": r"\bbaraiburu\b.*\btatiba\b.*\biron\b.*\bmanganese\b",
+    "IBM-IMYB2024-AUCTION-020": r"\bmeralgara\b.*\bbarabaljori\b.*\biron\b",
+    "IBM-IMYB2024-AUCTION-090": r"\bphase\s*4\b.*\bgirar\b.*\biron\b.*\bgold\b",
+    "IBM-IMYB2024-AUCTION-091": r"\bphase\s*4\b.*\bbharhari\b.*\biron\b",
+    "IBM-IMYB2024-AUCTION-092": r"\bphase\s*4\b.*\bsona\s*pahari\b.*\bgold\b",
     "IBM-IMYB2024-AUCTION-093": r"(?:block\s*)?(?:v|5).*advalpale.*thivim|advalpale.*thivim",
     "IBM-IMYB2024-AUCTION-094": r"(?:block\s*)?(?:vi|6).*cudnem.*cormolem|cudnem.*cormolem",
     "IBM-IMYB2024-AUCTION-095": r"(?:block\s*)?(?:vii|7).*cudnem\b|\bcudnem\b.*(?:block\s*)?(?:vii|7)",
@@ -80,7 +86,8 @@ def dms(degrees: float, minutes: float, seconds: float) -> float:
 
 
 # (longitude, latitude), in the exact source-published point order. These
-# tables were transcribed after visual review of page 1 at 150 dpi. Kareli-
+# tables were transcribed after visual review of the coordinate-bearing pages
+# at 150 dpi. Kareli-
 # Chandi is intentionally excluded because two latitude cells print malformed
 # seconds (34.4.00), and Saloni is retained for audit but withheld because the
 # IBM and MBS source areas conflict materially (600 ha versus 670 ha).
@@ -130,6 +137,39 @@ DMS_GEOMETRIES = {
         (dms(80, 53, 40.29), dms(20, 13, 0.326)),
         (dms(80, 53, 13.74), dms(20, 13, 0.326)),
     ],
+    "IBM-IMYB2024-AUCTION-090": [
+        (dms(78, 54, 27.518), dms(24, 18, 35.641)),
+        (dms(78, 55, 11.120), dms(24, 18, 50.653)),
+        (dms(78, 55, 31.457), dms(24, 18, 57.653)),
+        (dms(78, 56, 29.234), dms(24, 19, 17.536)),
+        (dms(78, 56, 33.818), dms(24, 19, 3.338)),
+        (dms(78, 55, 47.272), dms(24, 18, 41.476)),
+        (dms(78, 55, 33.709), dms(24, 18, 44.805)),
+        (dms(78, 55, 32.497), dms(24, 18, 48.401)),
+        (dms(78, 55, 29.688), dms(24, 18, 30.757)),
+        (dms(78, 55, 30.309), dms(24, 18, 43.774)),
+        (dms(78, 55, 23.698), dms(24, 18, 49.273)),
+        (dms(78, 54, 50.634), dms(24, 18, 8.137)),
+    ],
+    "IBM-IMYB2024-AUCTION-091": [
+        (dms(82, 51, 41.482), dms(24, 33, 48.067)),
+        (dms(82, 52, 23.013), dms(24, 33, 58.731)),
+        (dms(82, 53, 12.501), dms(24, 34, 7.358)),
+        (dms(82, 53, 15.992), dms(24, 33, 48.825)),
+        (dms(82, 52, 31.951), dms(24, 33, 43.248)),
+        (dms(82, 51, 45.154), dms(24, 33, 34.047)),
+    ],
+    "IBM-IMYB2024-AUCTION-092": [
+        (dms(83, 1, 41.257), dms(24, 21, 50.0)),
+        (dms(83, 1, 41.023), dms(24, 21, 58.0)),
+        (dms(83, 1, 26.782), dms(24, 21, 58.0)),
+        (dms(83, 1, 26.5), dms(24, 22, 8.7)),
+        (dms(83, 1, 32.4), dms(24, 22, 12.9)),
+        (dms(83, 1, 45.786), dms(24, 22, 10.785)),
+        (dms(83, 1, 51.513), dms(24, 22, 12.653)),
+        (dms(83, 2, 13.067), dms(24, 22, 12.63)),
+        (dms(83, 2, 13.716), dms(24, 21, 50.0)),
+    ],
     "IBM-IMYB2024-AUCTION-096": [
         (dms(73, 52, 43.324), dms(15, 39, 20.799)),
         (dms(73, 52, 26.200), dms(15, 39, 20.916)),
@@ -144,6 +184,13 @@ DMS_GEOMETRIES = {
     ],
 }
 
+DMS_POINT_IDS = {
+    "IBM-IMYB2024-AUCTION-090": list("ABCDEFGHIJKL"),
+    "IBM-IMYB2024-AUCTION-091": list("ABCDEF"),
+    "IBM-IMYB2024-AUCTION-092": list("ABCDEFGHI"),
+    "IBM-IMYB2024-AUCTION-096": [1, 2, 3, 4, 5, 7, 8, 9, 10, 11],
+}
+
 MBS_AREA_HA = {
     "IBM-IMYB2024-AUCTION-006": 600.0,
     "IBM-IMYB2024-AUCTION-007": 670.0,
@@ -151,6 +198,12 @@ MBS_AREA_HA = {
     "IBM-IMYB2024-AUCTION-009": 500.0,
     "IBM-IMYB2024-AUCTION-010": 2400.0,
     "IBM-IMYB2024-AUCTION-011": 240.0,
+    "IBM-IMYB2024-AUCTION-018": 63.0,
+    "IBM-IMYB2024-AUCTION-019": 258.98968,
+    "IBM-IMYB2024-AUCTION-020": 115.220,
+    "IBM-IMYB2024-AUCTION-090": 231.175,
+    "IBM-IMYB2024-AUCTION-091": 134.77,
+    "IBM-IMYB2024-AUCTION-092": 79.0,
     "IBM-IMYB2024-AUCTION-093": 36.2202,
     "IBM-IMYB2024-AUCTION-094": 38.5143,
     "IBM-IMYB2024-AUCTION-095": 75.3004,
@@ -165,6 +218,12 @@ PROFILE_NUMBERS = {
     "IBM-IMYB2024-AUCTION-009": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
     "IBM-IMYB2024-AUCTION-010": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
     "IBM-IMYB2024-AUCTION-011": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
+    "IBM-IMYB2024-AUCTION-018": {"exploration_level": "G2", "borehole_count": 20, "drilled_meterage_m": 15.25},
+    "IBM-IMYB2024-AUCTION-019": {"exploration_level": "G2; G4", "borehole_count": 22, "drilled_meterage_m": 2488.7},
+    "IBM-IMYB2024-AUCTION-020": {"exploration_level": "G1; G4", "borehole_count": 378, "drilled_meterage_m": 21102.75},
+    "IBM-IMYB2024-AUCTION-090": {"exploration_level": "G3", "borehole_count": 44, "drilled_meterage_m": 8265.12},
+    "IBM-IMYB2024-AUCTION-091": {"exploration_level": "G3", "borehole_count": 8, "drilled_meterage_m": 822.7},
+    "IBM-IMYB2024-AUCTION-092": {"exploration_level": "G3", "borehole_count": 19, "drilled_meterage_m": 2359.9},
     "IBM-IMYB2024-AUCTION-093": {"exploration_level": "G1; G2; G3", "borehole_count": 120, "drilled_meterage_m": 6504.9},
     "IBM-IMYB2024-AUCTION-094": {"exploration_level": "G1; G2; G3", "borehole_count": 147, "drilled_meterage_m": 7981.4},
     "IBM-IMYB2024-AUCTION-095": {"exploration_level": "G1; G2; G3", "borehole_count": 94, "drilled_meterage_m": 5886.9},
@@ -201,6 +260,58 @@ PROFILE_TEXT = {
         "grade_source": "0.55-0.73 ppm Au in trench samples, with isolated high values of 1.2 ppm Au.",
         "climate_source": "Mean annual rainfall around 140 cm; December-January temperature down to 10 C; May-June temperature up to 45 C.",
     },
+    "IBM-IMYB2024-AUCTION-018": {
+        "exploration_agency_source": "Directorate of Geology, Department of Mines and Geology, Jharkhand.",
+        "mineral_source_mbs": "Bauxite",
+        "geological_resources_source": "4.412454 million tonnes of bauxite.",
+        "grade_source": "Average 40.02% Al2O3 and 4.91% SiO2.",
+        "borehole_summary_source": "20 boreholes; total meterage printed as 15.25 m.",
+        "climate_source": "Mean annual rainfall 1800-2000 mm; minimum temperature 14 C; maximum temperature 38.2 C.",
+        "topography_source": "Undulatory terrain; altitude varies across the area.",
+    },
+    "IBM-IMYB2024-AUCTION-019": {
+        "exploration_agency_source": "Ex-lessee M/s Rameshwara Jute Mills Ltd.; reassessed by Directorate of Geology, Jharkhand.",
+        "mineral_source_mbs": "Iron and manganese ores",
+        "geological_resources_source": "Iron ore: 32.230 million tonnes at G2 plus 45.6238 million tonnes at G4; manganese ore: 1.524 million tonnes at G2 plus 2.089 million tonnes at G4, as at 2020-04-01 after production deduction.",
+        "grade_source": "Iron ore average 55.68% Fe; manganese average above 20% and below 25% Mn.",
+        "borehole_summary_source": "22 boreholes with cumulative meterage of 2,488.7 m.",
+        "climate_source": "Mean annual rainfall 200 cm; minimum temperature 3-4 C; maximum temperature 45 C.",
+        "topography_source": "Undulatory terrain; altitude ranges from 443 m to 681 m.",
+    },
+    "IBM-IMYB2024-AUCTION-020": {
+        "exploration_agency_source": "Ex-lessee M/s Rungta Mines Ltd.; reassessed by Directorate of Geology, Jharkhand.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "640,319.08 tonnes: 469,595.42 tonnes in UNFC 331 and 170,723.66 tonnes in UNFC 334.",
+        "grade_source": "Average 54.77% Fe at 45% Fe cut-off; 63.50% production/dispatch-derived average used for VER calculation.",
+        "borehole_summary_source": "378 boreholes with cumulative meterage of 21,102.75 m.",
+        "climate_source": "Annual rainfall printed as a 65-225 cm range; minimum temperature 4.8 C; maximum temperature 47 C.",
+        "topography_source": "Undulatory terrain.",
+    },
+    "IBM-IMYB2024-AUCTION-090": {
+        "exploration_agency_source": "Directorate of Geology and Mining, Uttar Pradesh, Lucknow.",
+        "mineral_source_mbs": "Gold and iron ore",
+        "geological_resources_source": "Iron ore: 100 million tonnes of fines over 2.70 sq km; gold ore: 12.29 million tonnes over 2.35 sq km at 0.2 ppm cut-off.",
+        "grade_source": "Gold 0.35 ppm at 0.2 ppm cut-off; hematite iron ore 30% Fe, approximately 90% lumps and 10% fines.",
+        "borehole_summary_source": "Gold: 26 boreholes and 4,815.12 m; iron: 18 boreholes and 3,450.0 m.",
+        "climate_source": "Mean annual rainfall 800-1300 mm; December temperature 6-14 C; May-June temperature 42.5-48 C.",
+        "topography_source": "Rugged terrain.",
+    },
+    "IBM-IMYB2024-AUCTION-091": {
+        "exploration_agency_source": "Geological Survey of India, Northern Region, Lucknow.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "14.89 million tonnes inferred iron ore resource over 7.9 ha.",
+        "grade_source": "Average 34.73% Fe at 30% Fe cut-off; approximately 90% lumps and 10% fines.",
+        "climate_source": "Mean annual rainfall 125 cm; temperature 30-46 C; source also prints average 25 C.",
+        "topography_source": "Rugged terrain.",
+    },
+    "IBM-IMYB2024-AUCTION-092": {
+        "exploration_agency_source": "Geological Survey of India, Northern Region, Lucknow.",
+        "mineral_source_mbs": "Gold",
+        "geological_resources_source": "52,806.25 tonnes inferred gold-ore resource over 16.8 ha in sub-block H.",
+        "grade_source": "Average 3.03 g/t Au at 0.5 g/t cut-off.",
+        "climate_source": "Mean annual rainfall 110-115 cm; December temperature 5-28 C; May-June temperature 24-41 C.",
+        "topography_source": "Rugged terrain.",
+    },
     "IBM-IMYB2024-AUCTION-093": {
         "mineral_source_mbs": "Iron ore (hematite)",
         "geological_resources_source": "In-situ geological resource 3.828 million tons; estimated resource in dumps 417,020 tons, as on 2022-06-01.",
@@ -227,9 +338,49 @@ PROFILE_TEXT = {
     },
 }
 
-GEOMETRY_WITHHOLD_REASONS = {
-    "IBM-IMYB2024-AUCTION-007": "IBM publishes 600 ha while the matched MBS publishes 670 ha; geometry withheld pending source reconciliation.",
-    "IBM-IMYB2024-AUCTION-009": "The matched MBS prints malformed latitude seconds for points F and G ('34.4.00'); geometry withheld rather than corrected by inference.",
+# Coordinate evidence is inventoried independently of geometry admission so a
+# reviewed MBS remains useful even when its boundary cannot be published.
+COORDINATE_REVIEW = {
+    "IBM-IMYB2024-AUCTION-006": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-007": ("ordered_boundary_vertices", [1], ["ibm_mbs_area_conflict"]),
+    "IBM-IMYB2024-AUCTION-008": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-009": ("ordered_boundary_vertices_with_source_error", [1], ["malformed_latitude_seconds_points_F_G"]),
+    "IBM-IMYB2024-AUCTION-010": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-011": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-018": ("ordered_boundary_vertices_with_source_error", [1, 2, 3, 4], ["latitude_hemisphere_printed_E_points_J3_K"]),
+    "IBM-IMYB2024-AUCTION-019": ("bounding_extents_only", [1], ["no_ordered_boundary_vertices"]),
+    "IBM-IMYB2024-AUCTION-020": ("bounding_extents_only", [1], ["no_ordered_boundary_vertices"]),
+    "IBM-IMYB2024-AUCTION-090": ("ordered_boundary_vertices", [1], ["published_and_computed_area_conflicts"]),
+    "IBM-IMYB2024-AUCTION-091": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-092": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-093": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-094": ("ordered_boundary_vertices", [1], ["computed_area_differs_from_mbs_area_gt_5pct"]),
+    "IBM-IMYB2024-AUCTION-095": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-096": ("ordered_boundary_vertices", [1], ["source_point_id_6_absent", "utm_final_northing_inconsistent"]),
+    "IBM-IMYB2024-AUCTION-097": ("ordered_boundary_vertices", [1, 2, 3], []),
+}
+
+GEOMETRY_WITHHOLD_DECISIONS = {
+    "IBM-IMYB2024-AUCTION-007": (
+        "withheld_source_conflict",
+        "IBM publishes 600 ha while the matched MBS publishes 670 ha; geometry withheld pending source reconciliation.",
+    ),
+    "IBM-IMYB2024-AUCTION-009": (
+        "withheld_source_conflict",
+        "The matched MBS prints malformed latitude seconds for points F and G ('34.4.00'); geometry withheld rather than corrected by inference.",
+    ),
+    "IBM-IMYB2024-AUCTION-018": (
+        "withheld_source_conflict",
+        "The MBS latitude column prints an E hemisphere at boundary points J3 and K; geometry withheld rather than corrected to N by inference.",
+    ),
+    "IBM-IMYB2024-AUCTION-019": (
+        "withheld_insufficient_coordinate_detail",
+        "The MBS publishes latitude/longitude extents but no ordered boundary vertices; no concession polygon is inferred from the bounding rectangle.",
+    ),
+    "IBM-IMYB2024-AUCTION-020": (
+        "withheld_insufficient_coordinate_detail",
+        "The MBS publishes latitude/longitude extents but no ordered boundary vertices; no concession polygon is inferred from the bounding rectangle.",
+    ),
 }
 
 
@@ -533,7 +684,7 @@ def load_state_shapes() -> dict[str, object]:
     districts = gpd.read_file(DISTRICT_BOUNDARIES).to_crs("EPSG:4326")
     return {
         state: districts.loc[districts["ST_NM"] == state, "geometry"].union_all()
-        for state in {"Chhattisgarh", "Goa"}
+        for state in {"Chhattisgarh", "Goa", "Jharkhand", "Uttar Pradesh"}
     }
 
 
@@ -541,20 +692,20 @@ def build_geometry(
     row: dict[str, str], pages: list[str], state_shapes: dict[str, object]
 ) -> tuple[dict | None, dict]:
     record_id = row["record_id"]
-    if record_id in GEOMETRY_WITHHOLD_REASONS:
+    if record_id in GEOMETRY_WITHHOLD_DECISIONS:
+        status, reason = GEOMETRY_WITHHOLD_DECISIONS[record_id]
         return None, {
-            "geometry_admission_status": "withheld_source_conflict",
-            "geometry_admission_reason": GEOMETRY_WITHHOLD_REASONS[record_id],
+            "geometry_admission_status": status,
+            "geometry_admission_reason": reason,
         }
 
     if record_id in DMS_GEOMETRIES:
         coordinates = DMS_GEOMETRIES[record_id]
         source_pages = [1]
         coordinate_method = "source_table_visual_transcription_dms_wgs84"
-        point_ids = list(range(1, len(coordinates) + 1))
+        point_ids = DMS_POINT_IDS.get(record_id, list(range(1, len(coordinates) + 1)))
         quality_flags = []
         if record_id == "IBM-IMYB2024-AUCTION-096":
-            point_ids = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11]
             quality_flags.append("source_point_id_6_absent")
     elif record_id in {
         "IBM-IMYB2024-AUCTION-093",
@@ -662,7 +813,7 @@ def upsert_source_registry(access_date: str) -> None:
         "download_url": "Exact PDF URL, file identifier, SHA-256, byte size and page count are retained per matched row.",
         "license_or_access_note": "Public government-owned auction portal; retain document-level attribution and verify current portal and State Government reuse terms.",
         "used_for": "Reviewed document links, source-published concession boundary coordinates, exploration summaries, geological resources, grades, climate, terrain, hydrology and access context.",
-        "limitations": "Only eleven of 97 IBM rows are reviewed in alpha.9. Mine Block Summaries describe auction-stage technical context and do not independently prove current operation, present legal status, access permission or reserve classification. Source conflicts are withheld, not repaired by inference.",
+        "limitations": "Only seventeen of 97 IBM rows are reviewed in alpha.10. Mine Block Summaries describe auction-stage technical context and do not independently prove current operation, present legal status, access permission or reserve classification. Source conflicts are withheld, not repaired by inference.",
     })
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
@@ -683,7 +834,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         rows = [row for row in reader if row["table"] not in table_columns]
 
     definitions = {
-        "review_scope": "Whether this IBM row received curated document review in alpha.9.",
+        "review_scope": "Whether this IBM row received curated document review in alpha.10.",
         "curated_candidate_count": "Number of MSTC documents matching the reviewed record-specific expression; zero does not mean the portal lacks a relevant document for unreviewed rows.",
         "document_selection_rule": "Rule used to select one official document when a reviewed expression matched multiple versions.",
         "document_match_status": "Outcome of curated IBM-to-MSTC document matching.",
@@ -696,7 +847,12 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         "ibm_area_ha": "Concession or block area published in IBM Table 5, in hectares.",
         "mbs_area_ha": "Area published in the selected Mine Block Summary, normalized to hectares.",
         "ibm_to_mbs_area_difference_pct": "Absolute percentage difference between IBM and MBS published areas, relative to the MBS area.",
-        "geometry_admission_status": "Whether the source footprint passed the alpha.9 spatial publication gates.",
+        "coordinate_evidence_type": "Reviewed coordinate evidence class: ordered boundary vertices, ordered vertices with a source defect, or bounding extents only.",
+        "coordinate_review_flags_json": "JSON array of coordinate-table defects, insufficiencies or area conflicts recorded during visual review.",
+        "normalized_material_names_json": "JSON array of normalized material English names linked from the IBM source wording.",
+        "chemical_or_english_names_json": "JSON array using chemical names where defensible and English names otherwise.",
+        "formulae_or_symbols_json": "JSON array of defensible element symbols or material formulae; empty when no single formula applies.",
+        "geometry_admission_status": "Whether the source footprint passed the alpha.10 spatial publication gates.",
         "geometry_admission_reason": "Specific evidence or failure responsible for geometry admission or withholding.",
         "coordinate_method": "Reviewed coordinate extraction and CRS-conversion method.",
         "coordinate_source_pdf_pages_json": "JSON array of one-based physical PDF pages containing the boundary coordinate table.",
@@ -729,7 +885,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         "climate_source": "Concise source-normalized rainfall and temperature statement; explicit source-unit anomalies are retained and labelled.",
         "topography_source": "Mine Block Summary terrain or morphology text.",
         "current_legal_or_operational_status_verified": "Always false in this layer; the source combination does not independently verify present legal or operating status.",
-        "model_evidence_role": "Context only in alpha.9; rows do not enter training, labels, scoring or candidate promotion.",
+        "model_evidence_role": "Context only in alpha.10; rows do not enter training, labels, scoring or candidate promotion.",
         "model_exclusion_reason": "Reason the record is excluded from model evidence.",
     }
     boolean_columns = {
@@ -772,12 +928,14 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
 def update_release_validation(validation: dict) -> None:
     path = ROOT / "outputs" / "validation_report.json"
     report = json.loads(path.read_text(encoding="utf-8"))
-    report["development_release_version"] = "v1.0-alpha.9"
+    report["development_release_version"] = "v1.0-alpha.10"
     report["ibm_auction_mbs_geometry_2023_24"] = {
         "ibm_input_rows": validation["ibm_input_rows"],
         "state_portal_documents_total": validation["state_portal_documents_total"],
         "curated_records": validation["curated_records"],
         "selected_document_matches": validation["selected_document_matches"],
+        "reviewed_profile_complete_rows": validation["reviewed_profile_complete_rows"],
+        "coordinate_evidence_type_counts": validation["coordinate_evidence_type_counts"],
         "published_geometries": validation["published_geometries"],
         "geometry_admission_status_counts": validation["geometry_admission_status_counts"],
         "all_geometry_polygons_valid": validation["all_geometry_polygons_valid"],
@@ -793,6 +951,12 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
     match_rows: list[dict] = []
     geometry_rows: list[dict] = []
     features: list[dict] = []
+    profile_fields = [
+        "exploration_level", "borehole_count", "drilled_meterage_m", "exploration_agency_source",
+        "borehole_summary_source", "mineral_source_mbs", "geological_resources_source", "grade_source",
+        "mineral_zones_source", "dip_strike_source", "thickness_source", "accessibility_source",
+        "hydrography_source", "climate_source", "topography_source",
+    ]
 
     for row in rows:
         record_id = row["record_id"]
@@ -804,10 +968,13 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
             "block_name": row["block_name"],
             "mineral_source": row["mineral_source"],
             "normalized_material_ids_json": row["normalized_material_ids_json"],
+            "normalized_material_names_json": row["normalized_material_names_json"],
+            "chemical_or_english_names_json": row["chemical_or_english_names_json"],
+            "formulae_or_symbols_json": row["formulae_or_symbols_json"],
             "auction_date": row["auction_date"],
             "concession_type_code": row["concession_type_code"],
             "ibm_area_ha": row["area_ha"],
-            "review_scope": "curated_alpha_9" if record_id in CURATED_MATCHES else "not_reviewed_alpha_9",
+            "review_scope": "curated_alpha_10" if record_id in CURATED_MATCHES else "not_reviewed_alpha_10",
             "curated_candidate_count": len(candidates),
             "document_selection_rule": "highest_numeric_mstc_file_id" if len(candidates) > 1 else "unique_curated_name_match" if selected else "",
             "document_match_status": "selected_curated_name_match" if selected else "not_reviewed_in_this_release",
@@ -819,10 +986,15 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
             "selected_mbs_pdf_page_count": "",
             "mbs_area_ha": MBS_AREA_HA.get(record_id, ""),
             "ibm_to_mbs_area_difference_pct": "",
+            "coordinate_evidence_type": "",
+            "coordinate_source_pdf_pages_json": "",
+            "coordinate_review_flags_json": "",
+            **{key: "" for key in profile_fields},
             "geometry_admission_status": "withheld_not_reviewed",
             "geometry_admission_reason": "No curated document match was reviewed in this release.",
             "source_portal_url": PORTAL_INDEX,
             "source_access_date": inventory["access_date"],
+            "current_legal_or_operational_status_verified": False,
             "model_evidence_role": "context_only",
             "model_exclusion_reason": "State MBS and IBM auction context do not independently verify current operation or present legal status.",
         }
@@ -844,6 +1016,18 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
             difference = source_area_difference_pct(row["area_ha"], MBS_AREA_HA[record_id])
             match["ibm_to_mbs_area_difference_pct"] = round(difference, 6) if difference is not None else ""
 
+        evidence_type, evidence_pages, evidence_flags = COORDINATE_REVIEW[record_id]
+        profile = source_profile(pages)
+        profile.update(PROFILE_TEXT.get(record_id, {}))
+        numeric_profile = PROFILE_NUMBERS[record_id]
+        match.update({
+            "coordinate_evidence_type": evidence_type,
+            "coordinate_source_pdf_pages_json": json.dumps(evidence_pages),
+            "coordinate_review_flags_json": json.dumps(evidence_flags),
+            **numeric_profile,
+            **profile,
+        })
+
         geometry, diagnostics = build_geometry(row, pages, state_shapes)
         if geometry is None:
             match.update({
@@ -853,9 +1037,6 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
             match_rows.append(match)
             continue
 
-        profile = source_profile(pages)
-        profile.update(PROFILE_TEXT[record_id])
-        numeric_profile = PROFILE_NUMBERS[record_id]
         geometry_row = {
             "record_id": record_id,
             "record_type": "official_state_mbs_boundary_context",
@@ -901,12 +1082,14 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
 
     match_fields = [
         "record_id", "state_or_ut", "block_name", "mineral_source", "normalized_material_ids_json",
+        "normalized_material_names_json", "chemical_or_english_names_json", "formulae_or_symbols_json",
         "auction_date", "concession_type_code", "ibm_area_ha", "review_scope", "curated_candidate_count",
         "document_selection_rule", "document_match_status", "selected_mbs_file_id", "selected_mbs_title",
         "selected_mbs_url", "selected_mbs_pdf_sha256", "selected_mbs_pdf_bytes", "selected_mbs_pdf_page_count",
-        "mbs_area_ha", "ibm_to_mbs_area_difference_pct", "geometry_admission_status",
-        "geometry_admission_reason", "source_portal_url", "source_access_date", "model_evidence_role",
-        "model_exclusion_reason",
+        "mbs_area_ha", "ibm_to_mbs_area_difference_pct", "coordinate_evidence_type",
+        "coordinate_source_pdf_pages_json", "coordinate_review_flags_json", *profile_fields,
+        "geometry_admission_status", "geometry_admission_reason", "source_portal_url", "source_access_date",
+        "current_legal_or_operational_status_verified", "model_evidence_role", "model_exclusion_reason",
     ]
     geometry_fields = [
         "record_id", "record_type", "state_or_ut", "block_name", "block_name_mbs", "mineral_source_ibm",
@@ -932,8 +1115,20 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
     status_counts: dict[str, int] = {}
     for row in match_rows:
         status_counts[row["geometry_admission_status"]] = status_counts.get(row["geometry_admission_status"], 0) + 1
+    reviewed_rows = [row for row in match_rows if row["selected_mbs_file_id"]]
+    coordinate_evidence_counts: dict[str, int] = {}
+    for row in reviewed_rows:
+        evidence_type = row["coordinate_evidence_type"]
+        coordinate_evidence_counts[evidence_type] = coordinate_evidence_counts.get(evidence_type, 0) + 1
+    required_profile_fields = [
+        "exploration_level", "mineral_source_mbs", "geological_resources_source", "grade_source",
+        "climate_source", "coordinate_evidence_type", "coordinate_source_pdf_pages_json",
+    ]
+    reviewed_profile_complete_rows = sum(
+        all(row[field] != "" for field in required_profile_fields) for row in reviewed_rows
+    )
     validation = {
-        "release": "v1.0-alpha.9",
+        "release": "v1.0-alpha.10",
         "source_portal_url": PORTAL_INDEX,
         "source_access_date": inventory["access_date"],
         "ibm_input_rows": len(rows),
@@ -943,6 +1138,8 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
         "state_portal_documents_total": sum(value["document_count"] for value in inventory["states"].values()),
         "curated_records": len(CURATED_MATCHES),
         "selected_document_matches": sum(bool(row["selected_mbs_file_id"]) for row in match_rows),
+        "reviewed_profile_complete_rows": reviewed_profile_complete_rows,
+        "coordinate_evidence_type_counts": coordinate_evidence_counts,
         "published_geometries": len(geometry_rows),
         "geometry_admission_status_counts": status_counts,
         "all_geometry_polygons_valid": all(row["polygon_valid"] for row in geometry_rows),
@@ -957,9 +1154,12 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
         "model_evidence_role": "context_only",
         "outputs": {},
         "limitations": [
-            "This release reviews eleven of the 97 IBM Table 5 records; unreviewed rows are explicit in the match audit.",
+            "This release reviews seventeen of the 97 IBM Table 5 records; unreviewed rows are explicit in the match audit.",
             "Kareli-Chandi geometry is withheld because the MBS prints malformed latitude seconds for two vertices.",
             "Saloni geometry is withheld because IBM and MBS publish materially different areas.",
+            "Chiropat geometry is withheld because the MBS prints an E hemisphere in the latitude column for two vertices.",
+            "Baraiburu-Tatiba and Meralgara-Barabaljori publish bounding extents but no ordered boundary vertices.",
+            "Girar geometry is withheld because IBM, MBS and coordinate-derived areas do not reconcile within 5%.",
             "Goa Block VI geometry is withheld because the source coordinates compute to an area 25.31% below the MBS published area.",
             "The 2011 district boundary layer is used only as a state-containment diagnostic and is not a current administrative register.",
             "MBS technical context and IBM auction reporting do not independently establish current operation or present legal status.",
@@ -967,14 +1167,21 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
     }
     validation["checks_pass"] = bool(
         validation["ibm_input_rows"] == 97
-        and validation["curated_records"] == 11
-        and validation["selected_document_matches"] == 11
-        and validation["published_geometries"] == 8
+        and validation["curated_records"] == 17
+        and validation["selected_document_matches"] == 17
+        and validation["reviewed_profile_complete_rows"] == 17
+        and validation["coordinate_evidence_type_counts"] == {
+            "ordered_boundary_vertices": 13,
+            "ordered_boundary_vertices_with_source_error": 2,
+            "bounding_extents_only": 2,
+        }
+        and validation["published_geometries"] == 10
         and validation["geometry_admission_status_counts"] == {
-            "withheld_not_reviewed": 86,
-            "admitted_authoritative_source_footprint": 8,
-            "withheld_source_conflict": 2,
-            "withheld_validation_failure": 1,
+            "withheld_not_reviewed": 80,
+            "admitted_authoritative_source_footprint": 10,
+            "withheld_source_conflict": 3,
+            "withheld_insufficient_coordinate_detail": 2,
+            "withheld_validation_failure": 2,
         }
         and validation["all_geometry_polygons_valid"]
         and validation["all_geometry_centroids_in_source_state"]

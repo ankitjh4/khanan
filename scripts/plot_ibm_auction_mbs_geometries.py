@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 GEOMETRIES = ROOT / "outputs" / "india_ibm_auctioned_concession_geometries_2023_24.geojson"
 MATCHES = ROOT / "outputs" / "india_ibm_auctioned_concession_mbs_match_audit_2023_24.csv"
 DISTRICTS = ROOT / "sources" / "raw" / "2011_Dist.shp"
-OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-auction-mbs-geometries-alpha9.png"
+OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-auction-mbs-geometries-alpha10.png"
 
 COLORS = {
     "Gold": "#D6A51D",
@@ -59,14 +59,12 @@ def main() -> None:
     districts = gpd.read_file(DISTRICTS).to_crs("EPSG:4326")
     states = districts.dissolve(by="ST_NM").reset_index()
     admitted = int((matches.geometry_admission_status == "admitted_authoritative_source_footprint").sum())
-    withheld = int(matches.geometry_admission_status.str.startswith("withheld_source").sum()) + int(
-        (matches.geometry_admission_status == "withheld_validation_failure").sum()
-    )
     unreviewed = int((matches.geometry_admission_status == "withheld_not_reviewed").sum())
+    withheld = len(matches) - admitted - unreviewed
 
-    fig = plt.figure(figsize=(16, 8.6), facecolor="#FCFBF7")
-    grid = fig.add_gridspec(1, 3, width_ratios=[1.15, 1, 1], left=0.045, right=0.985, top=0.82, bottom=0.11, wspace=0.1)
-    axes = [fig.add_subplot(grid[0, i]) for i in range(3)]
+    fig = plt.figure(figsize=(14, 11), facecolor="#FCFBF7")
+    grid = fig.add_gridspec(2, 2, left=0.055, right=0.985, top=0.84, bottom=0.12, wspace=0.12, hspace=0.18)
+    axes = [fig.add_subplot(grid[row, column]) for row in range(2) for column in range(2)]
     for axis in axes:
         style_axis(axis)
 
@@ -80,7 +78,7 @@ def main() -> None:
     )
     axes[0].set_title("India locator", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
 
-    for axis, state in zip(axes[1:], ["Chhattisgarh", "Goa"]):
+    for axis, state in zip(axes[1:], ["Chhattisgarh", "Goa", "Uttar Pradesh"]):
         state_shape = states[states.ST_NM == state]
         subset = geometries[geometries.state_or_ut == state]
         state_shape.plot(ax=axis, facecolor="#E9E5DC", edgecolor="#756E64", linewidth=0.8)
@@ -101,11 +99,11 @@ def main() -> None:
             axis.set_ylim(miny - ypad, maxy + ypad)
         axis.set_title(f"{state}: {len(subset)} admitted footprints", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
 
-    fig.text(0.045, 0.935, "KHANAN | Reviewed state-auction Mine Block Summary geometry", fontsize=22, weight="bold", color="#18232B")
+    fig.text(0.055, 0.945, "KHANAN | Reviewed state-auction Mine Block Summary geometry", fontsize=22, weight="bold", color="#18232B")
     fig.text(
-        0.045,
-        0.885,
-        f"IBM Table 5 contains 97 blocks. Alpha.9 admits {admitted} source footprints, withholds {withheld} reviewed conflicts, and leaves {unreviewed} unreviewed.",
+        0.055,
+        0.905,
+        f"IBM Table 5 contains 97 blocks. Alpha.10 admits {admitted} source footprints, withholds {withheld} reviewed records, and leaves {unreviewed} unreviewed.",
         fontsize=12,
         color="#48545C",
     )
@@ -117,7 +115,7 @@ def main() -> None:
             continue
         seen.add(label)
         legend_items.append(plt.Line2D([0], [0], marker="s", color="none", markerfacecolor=material_color(label), markeredgecolor="none", markersize=10, label=label))
-    fig.legend(handles=legend_items, loc="lower left", bbox_to_anchor=(0.045, 0.035), ncol=4, frameon=False, fontsize=9)
+    fig.legend(handles=legend_items, loc="lower left", bbox_to_anchor=(0.055, 0.038), ncol=5, frameon=False, fontsize=9)
     fig.text(
         0.985,
         0.045,

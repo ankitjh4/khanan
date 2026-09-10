@@ -416,6 +416,208 @@
         "coordinates": [
           [
             [
+              82.86152277777778,
+              24.563351944444445
+            ],
+            [
+              82.87305916666666,
+              24.56631416666667
+            ],
+            [
+              82.88680583333334,
+              24.568710555555555
+            ],
+            [
+              82.88777555555556,
+              24.5635625
+            ],
+            [
+              82.87554194444444,
+              24.562013333333333
+            ],
+            [
+              82.86254277777778,
+              24.5594575
+            ],
+            [
+              82.86152277777778,
+              24.563351944444445
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-091",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Uttar Pradesh",
+        "block_name": "Bharhari",
+        "block_name_mbs": "2_Phase_4_MBS_Bharhari_Iron_Ore_Block",
+        "mineral_source_ibm": "Iron Ore",
+        "normalized_material_ids_json": "[\"element:iron\",\"ore:iron-ore\"]",
+        "normalized_material_names_json": "[\"Iron\",\"Iron ore\"]",
+        "chemical_or_english_names_json": "[\"iron\",\"Iron ore\"]",
+        "formulae_or_symbols_json": "[\"Fe\"]",
+        "auction_date_ibm": "2023-11-24",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "134.77",
+        "mbs_area_ha": 134.77,
+        "exploration_level": "G3",
+        "borehole_count": 8,
+        "drilled_meterage_m": 822.7,
+        "exploration_agency_source": "Geological Survey of India, Northern Region, Lucknow.",
+        "borehole_summary_source": "8 boreholes (Meterage: 822.70M)",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "14.89 million tonnes inferred iron ore resource over 7.9 ha.",
+        "grade_source": "Average 34.73% Fe at 30% Fe cut-off; approximately 90% lumps and 10% fines.",
+        "mineral_zones_source": "1 to 4 zones",
+        "dip_strike_source": "General trend of the ore zone is ENE-WSW with diping towards south 50\u00b0-75\u00b0.",
+        "thickness_source": "1.48m to 30.40 m Strike length: 2.62 km, Strike width:30m 6 Grade 14.89 MT (14892538.98 Ton) with an average grade of 34.73 % Fe with 30% Fe cutoff (Approx. 90% Lumps, and 10% Fines) 2 7",
+        "accessibility_source": "Nearest Rail Head Chopan (about 18 km from block) Road SH 5 Airport Babatpur, Varanasi 8",
+        "hydrography_source": "Local Surface Drainage pattern (Channels) Sub Dendritic Rivers/ Streams Son River 9",
+        "climate_source": "Mean annual rainfall 125 cm; temperature 30-46 C; source also prints average 25 C.",
+        "topography_source": "Rugged terrain.",
+        "coordinate_method": "source_table_visual_transcription_dms_wgs84",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"A\", \"B\", \"C\", \"D\", \"E\", \"F\"]",
+        "boundary_vertex_count": 6,
+        "centroid_latitude": 24.5641042,
+        "centroid_longitude": 82.87513626,
+        "computed_geodesic_area_ha": 134.51511,
+        "computed_to_mbs_area_difference_pct": 0.18913,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "WGS 84",
+        "selected_mbs_file_id": "11742",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11742_2_Phase_4_MBS_Bharhari_Iron_Ore_Block.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "dc4d98263c4ef6f716413f4a198f0d38aabb3a42538d8ff6d576d275bbab902a",
+        "selected_mbs_pdf_bytes": 482923,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              83.02812694444444,
+              24.36388888888889
+            ],
+            [
+              83.02806194444445,
+              24.366111111111113
+            ],
+            [
+              83.02410611111111,
+              24.366111111111113
+            ],
+            [
+              83.02402777777777,
+              24.369083333333332
+            ],
+            [
+              83.02566666666667,
+              24.370250000000002
+            ],
+            [
+              83.029385,
+              24.3696625
+            ],
+            [
+              83.03097583333333,
+              24.370181388888888
+            ],
+            [
+              83.03696305555556,
+              24.370175
+            ],
+            [
+              83.03714333333333,
+              24.36388888888889
+            ],
+            [
+              83.02812694444444,
+              24.36388888888889
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-092",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Uttar Pradesh",
+        "block_name": "Sona Pahari",
+        "block_name_mbs": "5_Phase_4_MBS_Sonapahari_Gold_Block",
+        "mineral_source_ibm": "Gold",
+        "normalized_material_ids_json": "[\"element:gold\"]",
+        "normalized_material_names_json": "[\"Gold\"]",
+        "chemical_or_english_names_json": "[\"gold\"]",
+        "formulae_or_symbols_json": "[\"Au\"]",
+        "auction_date_ibm": "2023-11-23",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "79.0",
+        "mbs_area_ha": 79.0,
+        "exploration_level": "G3",
+        "borehole_count": 19,
+        "drilled_meterage_m": 2359.9,
+        "exploration_agency_source": "Geological Survey of India, Northern Region, Lucknow.",
+        "borehole_summary_source": "19 boreholes Inclined (Meterage: 2359.90M)",
+        "mineral_source_mbs": "Gold",
+        "geological_resources_source": "52,806.25 tonnes inferred gold-ore resource over 16.8 ha in sub-block H.",
+        "grade_source": "Average 3.03 g/t Au at 0.5 g/t cut-off.",
+        "mineral_zones_source": "1 zones",
+        "dip_strike_source": "Zone 1 located in sub block H is about 170 m long. Subsidiary shear developed in the sub block H trend N65W and S65E. It is quiet important from the point of view of mineralization and have shown good 2 concentration of sulfides and high value of Au in the area.",
+        "thickness_source": "1.26 m to 3.9 m 6 Grade 3.03g/t of Au 7",
+        "accessibility_source": "Nearest Rail Head Chopan Road SH5 and 5A Airport Babatpur, Varanasi 8",
+        "hydrography_source": "Local Surface Drainage pattern (Channels) Dendritic Rivers/ Streams Son river 9",
+        "climate_source": "Mean annual rainfall 110-115 cm; December temperature 5-28 C; May-June temperature 24-41 C.",
+        "topography_source": "Rugged terrain.",
+        "coordinate_method": "source_table_visual_transcription_dms_wgs84",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\"]",
+        "boundary_vertex_count": 9,
+        "centroid_latitude": 24.3672006,
+        "centroid_longitude": 83.03122403,
+        "computed_geodesic_area_ha": 79.448935,
+        "computed_to_mbs_area_difference_pct": 0.568272,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "WGS 84",
+        "selected_mbs_file_id": "11745",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11745_5_Phase_4_MBS_Sonapahari_Gold_Block.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "8341f0c83f22217c5838c845418e08e73ade01ed9bfe6db89c2a3bd9df08b2a3",
+        "selected_mbs_pdf_bytes": 173068,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
               73.88779058646064,
               15.645044152895293
             ],
