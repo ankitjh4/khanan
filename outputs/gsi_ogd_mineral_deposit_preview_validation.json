@@ -1,0 +1,94 @@
+{
+  "catalog_count": 8,
+  "combined_preview_coverage_pct": 20.472441,
+  "commodity_row_counts": {
+    "baryte": 8,
+    "bauxite": 10,
+    "copper": 10,
+    "diamond": 10,
+    "gold": 10,
+    "iron": 10,
+    "lead_zinc": 10,
+    "manganese": 10
+  },
+  "coordinate_point_rows": 60,
+  "coordinate_range_rows": 18,
+  "data_quality_flag_counts": {
+    "no_comparable_material_rows_in_known_site_layer": 10,
+    "source_latdd_does_not_match_parsed_extent_endpoint_or_midpoint": 1,
+    "source_londd_does_not_match_parsed_extent_endpoint_or_midpoint": 1,
+    "source_range_separator_missing_interpreted_as_two_degree_minute_endpoints": 1,
+    "source_state_differs_from_2011_boundary_at_representative_coordinate": 5
+  },
+  "exact_normalized_locality_matches_in_known_sites": 5,
+  "full_rows_not_exposed_in_preview": 303,
+  "limitations": [
+    "The public preview exposes 78 of 381 reported rows; the published rows are first rows, not a random sample.",
+    "Full workbook downloads require an interactive purpose form and CAPTCHA and were not automated.",
+    "Source DMS coordinate ranges are mapped by their arithmetic midpoint; no deposit footprint is inferred.",
+    "The source datum is unstated; coordinates are encoded as EPSG:4326 solely for interoperable mapping.",
+    "Historical GSI catalogs may overlap MRDS or prior geological knowledge and are not an independent discovery test.",
+    "No preview row is evidence of a current mine, reserve, grade, tonnage, economic viability, access right, or new discovery."
+  ],
+  "model_admission": {
+    "candidate_promotions": 0,
+    "reason": "Preview rows are incomplete, first-row selected, historical, and not proven independent of prior geological knowledge.",
+    "scoring_rows": 0,
+    "training_rows": 0,
+    "validation_rows": 0
+  },
+  "model_output_invariance": {
+    "candidate_output_sha256_after": "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04",
+    "candidate_output_sha256_before": "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04",
+    "prospectivity_grid_sha256_after": "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9",
+    "prospectivity_grid_sha256_before": "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9",
+    "unchanged": true
+  },
+  "nearest_comparable_material_within_25km": 26,
+  "outputs": {
+    "gsi_ogd_mineral_deposit_catalog_audit.csv": {
+      "rows": 8,
+      "sha256": "57a87c3fae38558f09f2f6c0aee87cdc0c0aa46a2d0ae4aa454a4690a5166aba"
+    },
+    "india_gsi_ogd_mineral_deposit_preview.csv": {
+      "rows": 78,
+      "sha256": "b1ce857e305317527459c71a8241d9f63489e9cfca63820a4f7da76a13e1a411"
+    }
+  },
+  "preview_rows_published": 78,
+  "raw_response_sha256": {
+    "catalog_88877.json": "9949ee06df2980c200e75ecf049a5c94354a5d4f86541cc88d79c3745cc292ba",
+    "catalog_88879.json": "107cff2911545c042b9f8085689ba47001a856f94e73e9b7856cc4f7d0aa1512",
+    "catalog_88881.json": "6063ea14f6b037d92df3d07dfe7ab93ea6bde7a6821f2ef98e12e1ed160f3425",
+    "catalog_88883.json": "c8fd8138f95f0522e76dda6c7912f36b39c7caf4831f80a57cced3bc8cfb187b",
+    "catalog_88885.json": "6617e6d705e0a5ac7529b746d4274561a2821a4f48139e6a06eea308a31efb10",
+    "catalog_88887.json": "2a5bfe1dc2bbffe08cb3717511abd11a9db5db9c00fd46df2ba265ed8668dcd0",
+    "catalog_88889.json": "d495e29ca3aef88ebb33159b7a8b79b55699d05cc5fafa994a707d79568f8584",
+    "catalog_88891.json": "a70127dfb52fe5774a0656944c733f1fd65a81ee05d221e471e798ac238e744d",
+    "preview_88876.json": "8cfe48bc5695d6b34230e1532da74b668e574cf94dd321d8cb9171781bcb6923",
+    "preview_88878.json": "be5a75dfe98fb971dcbff45ed899e0d16acef0b03fa3af497943311f8caba770",
+    "preview_88880.json": "7d5bf4054170df7831f15b96a1d9fdb7b93653537de45b7c86a121ee40d74f53",
+    "preview_88882.json": "a3fee4c92341e9ea03e3986bc7aa43b119e97a91bb4e5f569adcdbe174c6c16a",
+    "preview_88884.json": "9e350ddc0bfde9aeca5cf469cdf0f1b6aba8b0083a02d7f66efc2e83b29364b8",
+    "preview_88886.json": "c39b41393ce1d3a8873b6057919fd97b6b1ea32bddf6fb4fb8ede7aef206f7b4",
+    "preview_88888.json": "8eb5a6dd4d78803adfd4513ec2febf001e0c71714687bf22de924f76aed4df5e",
+    "preview_88890.json": "bb4ae8937e86ca3399986c100cedb62a3b09618778ed7529b9d31df1804300df",
+    "resource_88876.json": "ef9ac3a3755bb366d65ec55829e744518fe883792e26e32fcbbd3df5b1e55187",
+    "resource_88878.json": "1eae586c8b560903a560734c65d9300705e7546e6ebe444fd8bfb6f3e79278af",
+    "resource_88880.json": "e68f6f6695ff7b226469bfe861c8bbc840a71ec97f0552124174cafcb9e190a6",
+    "resource_88882.json": "1350561eaf3a66aa314280d940d80bd137bf495fe31b114e83f443e9b39dca08",
+    "resource_88884.json": "c46beb333438e1a1a659df89fbee4efba4df774b36b56a73330d478c19e1c685",
+    "resource_88886.json": "134742307825d7a75f65be0eb37972662155d3ce14e57e4afa8850701bef4f9a",
+    "resource_88888.json": "34d1e9d20121dccdef66f9ac7e6e47d86606be58e601323608dd2ff5a6e35bf4",
+    "resource_88890.json": "701d7f9243634d0b51cea28da65bf659b28f52ac2d7d9379b7fa3d312f29927b"
+  },
+  "release_version": "v1.0-alpha.21",
+  "representative_coordinates_in_expected_india_bounds": 78,
+  "representative_coordinates_matching_source_state_2011_boundary": 73,
+  "source_access_date": "2026-09-10",
+  "source_file_http_status_counts": {
+    "403": 8
+  },
+  "source_id": "SRC_GSI_OGD_MINERAL_DEPOSIT_CATALOGS_2013",
+  "source_reported_total_rows": 381
+}

@@ -17,9 +17,9 @@ KHANAN is intended to generate independent, early-stage hypotheses from lawful p
 
 ## Current status
 
-**Development release: v1.0-alpha.20 · Geospatial feature baseline: v0.12 · Prospectivity model baseline: v0.6 · Active work in progress**
+**Development release: v1.0-alpha.21 · Geospatial feature baseline: v0.12 · Prospectivity model baseline: v0.6 · Active work in progress**
 
-The current release covers India with 88,857 H3 resolution-6 cells, approximately 36 km² each. It includes 781 public-source site records, 1,504 IBM MCDR inspection events, 82 IBM abandoned-mine inventory records, 722 IBM NMI resource-inventory rows, 123 IBM 2024 lease-distribution rows, 97 IBM auction-granted concession records, five dated Andhra auction-status evidence rows, 199 central critical-mineral auction events, 13 independently published EarthChem geochemical samples represented by 1,323 long-form measurements, 950 selected Sentinel-2 scenes summarized over 8,707,986 requested seasonal sample points, 50 strategic modeling targets, and 2,784 validation-gated candidate cells.
+The current release covers India with 88,857 H3 resolution-6 cells, approximately 36 km² each. It includes 781 public-source site records, 1,504 IBM MCDR inspection events, 82 IBM abandoned-mine inventory records, 722 IBM NMI resource-inventory rows, 123 IBM 2024 lease-distribution rows, 97 IBM auction-granted concession records, five dated Andhra auction-status evidence rows, 199 central critical-mineral auction events, 78 public-preview rows from eight historical GSI/OGD deposit catalogues, 13 independently published EarthChem geochemical samples represented by 1,323 long-form measurements, 950 selected Sentinel-2 scenes summarized over 8,707,986 requested seasonal sample points, 50 strategic modeling targets, and 2,784 validation-gated candidate cells.
 
 The v1.0 alpha adds a source-derived material ontology with **233 unique entities**: 69 elements, 88 mineral species, and 76 ores, rocks, mineral groups, varieties, industrial materials, energy commodities, mixtures, and related material classes. It audits 510 distinct source terms: 501 are mapped and nine deliberately remain unresolved because the wording is nonspecific. Ontology coverage and prediction eligibility are separate: the validated geospatial model still scores only the 50 explicitly retained v0.6 targets.
 
@@ -59,6 +59,8 @@ Alpha.19 completes the first paired spatial ablation of that surface family. A c
 
 Alpha.20 tests v0.6 against official source footprints that never entered training or scoring. It deduplicates central auction reoffers to 99 accepted block lineages, combines them with 67 admitted State auction MBS footprints, and evaluates 221 normalized block-material observations. All 444,285 published top-five score, percentile and distance values are independently reproduced exactly before testing. Twelve materials have at least five block centroids beyond 25 km from same-material MRDS evidence. Manganese separates strongly from background (`0.9517` AUC, interval `0.8663–0.9890`) but has only seven blocks in three broad spatial groups. Iron and Phosphorus have positive point estimates with intervals crossing chance; Graphite is below the AUC gate; Vanadium, Titanium and Molybdenum transfer poorly. No material passes every predeclared statistical gate. Official targeting is also not proven independent of all historical geological knowledge, so no score, class or rank changes. See [`docs/official_block_transfer_validation.md`](docs/official_block_transfer_validation.md).
 
+Alpha.21 adds a reproducible historical GSI Open Government Data deposit-catalog preview layer for bauxite, baryte, copper, diamond, gold, iron, lead-zinc and manganese. The eight catalogue pages report 381 records, while the public preview endpoint exposes 78 (20.47%); the other 303 cannot be represented without completing the portal's interactive download process. KHANAN preserves raw coordinate text, distinguishes 60 point records from 18 coordinate ranges, maps ranges by an explicitly labeled midpoint, checks representative points against 2011 State boundaries, and records cross-source proximity without treating agreement as independence. The layer is non-random, incomplete, has no stated coordinate datum, and remains excluded from training, validation, candidate promotion and discovery claims. See [`docs/gsi_ogd_mineral_deposit_preview.md`](docs/gsi_ogd_mineral_deposit_preview.md).
+
 Candidate scores are reconnaissance indices. They are not probabilities of discovery, resource estimates, reserves, grades, economic valuations, legal concessions, or drill targets.
 
 ## Current geospatial overview
@@ -88,6 +90,10 @@ The fifth figure locates the two coordinate sites, summarizes the published bulk
 ![KHANAN Sentinel-2 surface context](assets/maps/khanan-sentinel2-surface-context-alpha18.png)
 
 The sixth figure shows two-season clear-land coverage, not-vegetated support and the broad bare-surface B11/B12 ratio. It is a surface-quality and confounder-control view, not a mineral-deposit or discovery map. The layer does not create or rerank candidates. It is generated by `scripts/plot_sentinel2_surface_context.py`.
+
+![KHANAN GSI OGD mineral-deposit catalogue preview](assets/maps/khanan-gsi-ogd-deposit-preview-alpha21.png)
+
+The seventh figure maps the 78 rows exposed by the eight public GSI/OGD preview endpoints and compares each preview count with its catalogue's reported total. It visualizes a partial historical catalogue sample—not an exhaustive register, reserve estimate, field confirmation or set of model-generated discoveries. It is generated by `scripts/plot_gsi_ogd_deposit_preview.py`.
 
 ## Feature-admission evidence
 
@@ -149,11 +155,12 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 | Hydrology and groundwater chemistry | Planned | Catchment-aware transport and geochemical anomaly context. |
 | Geophysics | EMAG2v3 context implemented and ablated; not admitted to scoring | Fourteen supported materials were evaluated across 70 purged spatial folds. No material passed the uncertainty-aware admission gate, so existing scores remain unchanged. NGDR magnetic/gravity values remain catalog-only. |
 | Geochemistry and drilling | EarthChem ECL 4498 context implemented; NGDR catalog audited | Alpha.17 adds 1,323 CC-BY analytical observations for 13 targeted samples at two sites with method, qualifier, hash and citation provenance. They remain excluded from scoring pending spatially independent evaluation. NGDR schemas and counts are inventoried, but NGDR feature values remain unpublished and unintegrated. |
+| Historical GSI mineral-deposit catalogues | Partial public-preview context implemented; not model evidence | Alpha.21 publishes 78 of 381 reported rows across eight 2013 GSI/OGD catalogues, including source coordinate text, host rock, formation and metallogenic context where exposed. The 20.47% preview is incomplete and non-random; all rows are excluded from training, validation and scoring. |
 | Infrastructure and environmental constraints | Planned | Roads, rail, power, water, forests, protected areas, archaeology, tenure and social safeguards. |
 
 ## Release files
 
-The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.20.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.20.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); it is not the current alpha artifact. The uncompressed nationwide prospectivity grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
+The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.21.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.21.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); it is not the current alpha artifact. The uncompressed nationwide prospectivity grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
 
 | File | Rows | Role |
 |---|---:|---|
@@ -165,6 +172,9 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/india_sentinel2_scene_manifest_2025.csv` | 950 | Selected 2025 Sentinel-2 scenes: 475 India-relevant MGRS tiles in each fixed window, with quality metadata, token-free asset lineage, product-metadata hashes and radiometric constants. |
 | `outputs/india_earthchem_geochemical_samples.csv` | 13 | Published EarthChem sample locations, bulk trace-element values, H3/admin/geology context, analytical coverage, source hashes, license and model exclusions. |
 | `outputs/india_earthchem_geochemical_observations.csv` | 1,323 | Long-form whole-rock and mineral-spot chemistry with source tokens, numeric values, methods, reference materials, qualifiers, cell coordinates and attribution. |
+| `outputs/india_gsi_ogd_mineral_deposit_preview.csv` | 78 | Coordinate-bearing rows exposed by eight historical GSI/OGD mineral-deposit preview endpoints, with raw and interpreted coordinates, catalogue geology, H3/admin checks, cross-source context and mandatory model exclusion. |
+| `outputs/gsi_ogd_mineral_deposit_catalog_audit.csv` | 8 | Per-catalogue identifiers, source/resource URLs, reported and preview counts, completeness, schemas, licensing, access limits and hashes. |
+| `outputs/gsi_ogd_mineral_deposit_preview_validation.json` | 1 | Exact source-identity, row-count, coordinate, State-boundary, cross-source, model-exclusion and unchanged-grid/candidate-hash checks for the partial preview layer. |
 | `outputs/india_known_mining_sites.csv` | 781 | Georeferenced mines, past producers, prospects, occurrences, plants and unknown-status MRDS records. |
 | `outputs/india_ibm_mcdr_inspection_events_2023_2026.csv` | 1,504 | IBM regional MCDR inspection-table events; not proof of production or compliance. |
 | `outputs/india_ibm_mcdr_latest_inspected_mines.csv` | 1,353 | Practical latest-event view of MCDR records. |
@@ -185,8 +195,8 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/material_model_support.csv` | 50 | Evidence counts and support tier by material. |
 | `outputs/material_model_validation.csv` | 50 | Spatial holdout results and reasons a material could not be validated. |
 | `outputs/ngdr_service_inventory.csv` | 11 | Metadata-only inventory of selected NGDR mineral, geochemistry, geophysics, soil, lithology and geology services; no feature values. |
-| `outputs/source_registry.csv` | 36 | Provenance, access/licensing notes, uses and limitations. |
-| `outputs/data_dictionary.csv` | 1,561 | Field definitions, units and missing-value policies. |
+| `outputs/source_registry.csv` | 37 | Provenance, access/licensing notes, uses and limitations. |
+| `outputs/data_dictionary.csv` | 1,663 | Field definitions, units and missing-value policies. |
 | `outputs/validation_report.json` | 1 | Cross-dataset counts, join coverage, coordinate checks and guardrails. |
 | `outputs/official_critical_blocks_validation.json` | 1 | Auction count, lineage, provenance and geometry validation. |
 | `outputs/ibm_nmi_2025_extraction_validation.json` | 1 | NMI PDF extraction and UNFC subtotal validation. |
@@ -214,7 +224,7 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/sentinel2_surface_context_validation.json` | 1 | Sentinel catalog scope, scene selection, native-SCL and radiometric checks, national coverage, index ranges, token screening and unchanged-ranking hashes. |
 | `outputs/nasa_power_rolling_12m_validation.json` | 1 | Weather-source checksums, completeness and range checks. |
 | `outputs/india_mining_dataset_companion.xlsx` | — | Legacy v0.6 thirteen-sheet review workbook. It does not yet include the v1 ontology; the CSVs remain authoritative. |
-| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.20.zip` | — | Portable 112-member development bundle, including the full grid, reviewed State MBS geometry and Andhra status-evidence layers, magnetic, soil, EarthChem geochemistry and Sentinel-2 surface context, three paired feature-ablation experiments, held-out official-block transfer evidence, ontology, contextual mine and concession layers, service audit, validations, maps and reproducibility scripts. |
+| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.21.zip` | — | Portable 119-member development bundle, including the full grid, reviewed State MBS geometry, magnetic, soil, EarthChem and Sentinel-2 context, paired feature-ablation and official-block transfer evidence, the partial GSI/OGD deposit preview, ontology, audits, validations, maps and reproducibility scripts. |
 | `outputs/SHA256SUMS.txt` | — | Integrity hashes for published artifacts. |
 
 ## Repository structure
@@ -231,6 +241,7 @@ KHANAN/
 ├── docs/
 │   ├── emag2_spatial_ablation.md     # paired spatial feature-admission experiment
 │   ├── earthchem_lithium_geochemistry.md # independent analytical geochemistry layer
+│   ├── gsi_ogd_mineral_deposit_preview.md # partial historical GSI deposit-catalog preview
 │   ├── ibm_auction_mbs_geometry_2023_24.md # State MBS document matching and spatial gates
 │   ├── ibm_auction_status_evidence_2023_24.md # dated Andhra status reconciliation and limits
 │   ├── methodology.md                # scientific method, validation and limitations
@@ -272,6 +283,7 @@ KHANAN/
 - Add current IBM and State Directorate of Mines and Geology registers where lawfully accessible.
 - Preserve IBM's 82-site abandoned-mine inventory as non-georeferenced, historical-status context until controlling current records can be joined.
 - **Completed for the current portal snapshot in alpha.16:** review all 97 IBM 2023-24 auction rows, link 92 to exact historical State Mine Block Summaries, admit 67 validated source footprints, quarantine 25 selected-MBS records with explicit failures, and publish dated status evidence for all five Andhra rows without inferring missing polygons.
+- **Completed in alpha.21:** audit eight 2013 GSI/OGD mineral-deposit catalogues and publish all 78 rows exposed by their public preview endpoints, while making the 78-of-381 scope, interactive-download boundary, coordinate assumptions, source anomalies and model exclusion machine-readable.
 - Resolve mine/block identity across spelling, mine codes, lease numbers and changing district boundaries.
 - Track tender, preferred-bidder, grant, clearance, operation, suspension and closure as separate dated events.
 - Add lease and legal-boundary polygons without inferring unpublished coordinates.
@@ -345,6 +357,19 @@ KHANAN/
 - Provide uncertainty-aware map exploration and region/material comparison.
 - Support user-supplied data without contaminating the public evidence layer.
 
+### Alpha 3.0 — Project completion boundary
+
+Alpha 3.0 is the user-defined finish line for the current KHANAN goal. Work stops once that release is built, independently verified, published to the public repository, and accompanied by a final limitations and provenance audit. “Complete” will mean that the declared Alpha 3.0 scope and reproducibility gates are met—not that India has been exhaustively explored, that every deposit is known, or that any model hypothesis is a mineral discovery.
+
+The Alpha 3.0 release gate requires:
+
+- a frozen, versioned schema and source registry for every published table;
+- deterministic rebuilds and verified checksums for the public bundle;
+- explicit separation of observed evidence, contextual features and model-generated hypotheses;
+- a final coverage report identifying every known geographic, temporal, licensing and source-access gap;
+- a public map and data-science-ready CSV/geospatial release with uncertainty and exclusion fields intact;
+- zero unsupported claims of reserves, grades, discoveries, operating status or legal rights.
+
 ## Reproduce the current baseline
 
 From the repository root:
@@ -368,6 +393,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/build_soilgrids_features.py
 .venv/bin/python scripts/evaluate_soilgrids_spatial_ablation.py
 .venv/bin/python scripts/build_earthchem_geochemistry.py --refresh
+.venv/bin/python scripts/build_gsi_ogd_deposit_preview.py
 .venv/bin/python scripts/build_sentinel2_surface_context.py
 .venv/bin/python scripts/evaluate_sentinel2_spatial_ablation.py
 .venv/bin/python scripts/evaluate_official_block_transfer.py
@@ -378,6 +404,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/plot_soilgrids_ablation.py
 .venv/bin/python scripts/plot_ibm_auction_mbs_geometries.py
 .venv/bin/python scripts/plot_earthchem_geochemistry.py
+.venv/bin/python scripts/plot_gsi_ogd_deposit_preview.py
 .venv/bin/python scripts/plot_sentinel2_surface_context.py
 .venv/bin/python scripts/plot_sentinel2_ablation.py
 .venv/bin/python scripts/plot_official_block_transfer.py
@@ -399,7 +426,7 @@ The XLSX companion is generated by `scripts/build_workbook.mjs` using the Codex 
 
 ## Important current limitations
 
-The release is not an exhaustive current mine/lease register. It still lacks deposit-level NMI coordinates, comprehensive state mine registers, controlling grant status, model-admitted soil/geochemistry/geophysics/remote-sensing features, drill logs, site-level grade/tonnage/depth, mineral-specific alteration mapping, protected-area and forest-clearance layers, water stress, infrastructure, land tenure and social-license constraints. EarthChem ECL 4498 supplies measured analytical context, but only for 13 targeted samples at two sites; it is not a systematic survey and remains outside scoring. Sentinel-2 alpha.18 supplies national surface reflectance and exposure context; the alpha.19 ablation admits none of its broad predictors to production scoring. Vanadium and Silver show follow-up signals but fail the support and recall gates respectively, so neither result is a discovery or candidate claim. The 2025 imagery may also encode post-discovery mine disturbance at known positive sites; that leakage risk independently blocks production admission. Alpha.20 adds a source-held-out official-block transfer test, but no material passes every statistical gate and the block labels are not proven independent of all historical geological knowledge. Manganese's strong seven-block result is follow-up evidence, not a discovery or production validation. SoilGrids supplies national modeled pedological context but not field geochemical assays; the alpha.7 spatial ablation admits it to no production material model. EMAG2v3 supplies moderate-resolution magnetic context, but the alpha.5 spatial ablation also admits it to no production material model. NGDR service metadata is audited, but its raw values remain outside the release and scoring pipeline for the reasons documented in [`docs/ngdr_access_and_integration.md`](docs/ngdr_access_and_integration.md).
+The release is not an exhaustive current mine/lease register. It still lacks deposit-level NMI coordinates, comprehensive state mine registers, controlling grant status, model-admitted soil/geochemistry/geophysics/remote-sensing features, drill logs, site-level grade/tonnage/depth, mineral-specific alteration mapping, protected-area and forest-clearance layers, water stress, infrastructure, land tenure and social-license constraints. Alpha.21's GSI/OGD table contains only the 78 rows exposed by public previews out of 381 catalogue-reported records; that 20.47% subset is non-random, the source datum is unstated, and it must not be read as complete deposit coverage. EarthChem ECL 4498 supplies measured analytical context, but only for 13 targeted samples at two sites; it is not a systematic survey and remains outside scoring. Sentinel-2 alpha.18 supplies national surface reflectance and exposure context; the alpha.19 ablation admits none of its broad predictors to production scoring. Vanadium and Silver show follow-up signals but fail the support and recall gates respectively, so neither result is a discovery or candidate claim. The 2025 imagery may also encode post-discovery mine disturbance at known positive sites; that leakage risk independently blocks production admission. Alpha.20 adds a source-held-out official-block transfer test, but no material passes every statistical gate and the block labels are not proven independent of all historical geological knowledge. Manganese's strong seven-block result is follow-up evidence, not a discovery or production validation. SoilGrids supplies national modeled pedological context but not field geochemical assays; the alpha.7 spatial ablation admits it to no production material model. EMAG2v3 supplies moderate-resolution magnetic context, but the alpha.5 spatial ablation also admits it to no production material model. NGDR service metadata is audited, but its raw values remain outside the release and scoring pipeline for the reasons documented in [`docs/ngdr_access_and_integration.md`](docs/ngdr_access_and_integration.md).
 
 One official Biarpalli source table places an Odisha block near 89°E; KHANAN retains and flags the published coordinates. The 143 auction-offer observations reconstruct to 100 distinct published footprints, while the tranche-VIII government release reports 88 cumulative offered blocks. That discrepancy remains explicitly unreconciled.
 
