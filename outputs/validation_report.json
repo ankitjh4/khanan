@@ -123,7 +123,7 @@
   "official_critical_mineral_distinct_offer_lineage_keys": 100,
   "official_critical_mineral_pib_reported_cumulative_offer_count": 88,
   "official_critical_mineral_lineage_reconciliation_status": "not_reconciled",
-  "development_release_version": "v1.0-alpha.8",
+  "development_release_version": "v1.0-alpha.9",
   "material_ontology_v1": {
     "ontology_rows": 233,
     "ima_verified_species": 111,
@@ -219,5 +219,22 @@
     "auction_rows_with_coordinates": 0,
     "auction_rows_admitted_to_model_evidence": 0,
     "checks_pass": true
+  },
+  "ibm_auction_mbs_geometry_2023_24": {
+    "ibm_input_rows": 97,
+    "state_portal_documents_total": 1124,
+    "curated_records": 11,
+    "selected_document_matches": 11,
+    "published_geometries": 8,
+    "geometry_admission_status_counts": {
+      "withheld_not_reviewed": 86,
+      "admitted_authoritative_source_footprint": 8,
+      "withheld_source_conflict": 2,
+      "withheld_validation_failure": 1
+    },
+    "all_geometry_polygons_valid": true,
+    "all_geometry_centroids_in_source_state": true,
+    "all_geometry_computed_area_differences_lte_5pct": true,
+    "model_evidence_role": "context_only"
   }
 }

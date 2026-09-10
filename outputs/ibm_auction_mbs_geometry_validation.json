@@ -1,0 +1,56 @@
+{
+  "release": "v1.0-alpha.9",
+  "source_portal_url": "https://www.mstcecommerce.com/auctionhome/mlcl/index.jsp",
+  "source_access_date": "2026-09-10",
+  "ibm_input_rows": 97,
+  "state_portal_document_counts": {
+    "Andhra Pradesh": 20,
+    "Chhattisgarh": 102,
+    "Gujarat": 92,
+    "Jharkhand": 17,
+    "Karnataka": 94,
+    "Madhya Pradesh": 316,
+    "Maharashtra": 117,
+    "Rajasthan": 311,
+    "Uttar Pradesh": 37,
+    "Goa": 18
+  },
+  "state_portal_documents_total": 1124,
+  "curated_records": 11,
+  "selected_document_matches": 11,
+  "published_geometries": 8,
+  "geometry_admission_status_counts": {
+    "withheld_not_reviewed": 86,
+    "admitted_authoritative_source_footprint": 8,
+    "withheld_source_conflict": 2,
+    "withheld_validation_failure": 1
+  },
+  "all_geometry_polygons_valid": true,
+  "all_geometry_centroids_in_source_state": true,
+  "all_geometry_computed_area_differences_lte_5pct": true,
+  "all_available_ibm_mbs_area_differences_lte_5pct": true,
+  "model_evidence_role": "context_only",
+  "outputs": {
+    "india_ibm_auctioned_concession_mbs_match_audit_2023_24.csv": {
+      "sha256": "2d1a5cf9912744418f1dd76a6916d1dfe18882774616f932b0c62b64ea47b08b",
+      "bytes": 50363
+    },
+    "india_ibm_auctioned_concession_geometries_2023_24.csv": {
+      "sha256": "300079d5baeac413598041145a3ce55bdd0689f1be797a79c3d3c132cf8f206a",
+      "bytes": 35432
+    },
+    "india_ibm_auctioned_concession_geometries_2023_24.geojson": {
+      "sha256": "851eba59b005c891c7be168576ea551aeeb0f8049b041cc7f35cdbc0fc763d77",
+      "bytes": 58564
+    }
+  },
+  "limitations": [
+    "This release reviews eleven of the 97 IBM Table 5 records; unreviewed rows are explicit in the match audit.",
+    "Kareli-Chandi geometry is withheld because the MBS prints malformed latitude seconds for two vertices.",
+    "Saloni geometry is withheld because IBM and MBS publish materially different areas.",
+    "Goa Block VI geometry is withheld because the source coordinates compute to an area 25.31% below the MBS published area.",
+    "The 2011 district boundary layer is used only as a state-containment diagnostic and is not a current administrative register.",
+    "MBS technical context and IBM auction reporting do not independently establish current operation or present legal status."
+  ],
+  "checks_pass": true
+}

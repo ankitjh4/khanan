@@ -1,0 +1,137 @@
+#!/usr/bin/env python3
+"""Plot the reviewed IBM 2023-24 auction/MBS geometry subset."""
+
+from pathlib import Path
+
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import pandas as pd
+
+
+ROOT = Path(__file__).resolve().parents[1]
+GEOMETRIES = ROOT / "outputs" / "india_ibm_auctioned_concession_geometries_2023_24.geojson"
+MATCHES = ROOT / "outputs" / "india_ibm_auctioned_concession_mbs_match_audit_2023_24.csv"
+DISTRICTS = ROOT / "sources" / "raw" / "2011_Dist.shp"
+OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-auction-mbs-geometries-alpha9.png"
+
+COLORS = {
+    "Gold": "#D6A51D",
+    "Glauconite": "#6F4E9C",
+    "Glauconite (Potash)": "#6F4E9C",
+    "Iron Ore": "#B8473D",
+    "Limestone": "#4D83B3",
+}
+
+
+def material_color(value: str) -> str:
+    for name, color in COLORS.items():
+        if name.lower() in value.lower():
+            return color
+    return "#5F6B73"
+
+
+def style_axis(axis) -> None:
+    axis.set_facecolor("#F5F2EB")
+    axis.set_xticks([])
+    axis.set_yticks([])
+    for spine in axis.spines.values():
+        spine.set_visible(False)
+
+
+def label_polygons(axis, frame: gpd.GeoDataFrame) -> None:
+    for _, row in frame.iterrows():
+        point = row.geometry.representative_point()
+        label = row["block_name"].replace(" Mineral Block", "").replace(" Block", "")
+        axis.annotate(
+            label,
+            (point.x, point.y),
+            xytext=(4, 4),
+            textcoords="offset points",
+            fontsize=8,
+            color="#18232B",
+            path_effects=[],
+        )
+
+
+def main() -> None:
+    geometries = gpd.read_file(GEOMETRIES).to_crs("EPSG:4326")
+    matches = pd.read_csv(MATCHES, keep_default_na=False)
+    districts = gpd.read_file(DISTRICTS).to_crs("EPSG:4326")
+    states = districts.dissolve(by="ST_NM").reset_index()
+    admitted = int((matches.geometry_admission_status == "admitted_authoritative_source_footprint").sum())
+    withheld = int(matches.geometry_admission_status.str.startswith("withheld_source").sum()) + int(
+        (matches.geometry_admission_status == "withheld_validation_failure").sum()
+    )
+    unreviewed = int((matches.geometry_admission_status == "withheld_not_reviewed").sum())
+
+    fig = plt.figure(figsize=(16, 8.6), facecolor="#FCFBF7")
+    grid = fig.add_gridspec(1, 3, width_ratios=[1.15, 1, 1], left=0.045, right=0.985, top=0.82, bottom=0.11, wspace=0.1)
+    axes = [fig.add_subplot(grid[0, i]) for i in range(3)]
+    for axis in axes:
+        style_axis(axis)
+
+    states.plot(ax=axes[0], facecolor="#E9E5DC", edgecolor="#B9B2A6", linewidth=0.35)
+    geometries.plot(
+        ax=axes[0],
+        color=[material_color(value) for value in geometries.mineral_source_ibm],
+        edgecolor="#FFFFFF",
+        linewidth=0.5,
+        markersize=20,
+    )
+    axes[0].set_title("India locator", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
+
+    for axis, state in zip(axes[1:], ["Chhattisgarh", "Goa"]):
+        state_shape = states[states.ST_NM == state]
+        subset = geometries[geometries.state_or_ut == state]
+        state_shape.plot(ax=axis, facecolor="#E9E5DC", edgecolor="#756E64", linewidth=0.8)
+        for _, row in subset.iterrows():
+            gpd.GeoSeries([row.geometry], crs="EPSG:4326").plot(
+                ax=axis,
+                facecolor=material_color(row["mineral_source_ibm"]),
+                edgecolor="#FFFFFF",
+                linewidth=1.1,
+                alpha=0.92,
+            )
+        label_polygons(axis, subset)
+        if not subset.empty:
+            minx, miny, maxx, maxy = subset.total_bounds
+            xpad = max((maxx - minx) * 0.32, 0.04)
+            ypad = max((maxy - miny) * 0.32, 0.04)
+            axis.set_xlim(minx - xpad, maxx + xpad)
+            axis.set_ylim(miny - ypad, maxy + ypad)
+        axis.set_title(f"{state}: {len(subset)} admitted footprints", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
+
+    fig.text(0.045, 0.935, "KHANAN | Reviewed state-auction Mine Block Summary geometry", fontsize=22, weight="bold", color="#18232B")
+    fig.text(
+        0.045,
+        0.885,
+        f"IBM Table 5 contains 97 blocks. Alpha.9 admits {admitted} source footprints, withholds {withheld} reviewed conflicts, and leaves {unreviewed} unreviewed.",
+        fontsize=12,
+        color="#48545C",
+    )
+    legend_items = []
+    seen = set()
+    for _, row in geometries.iterrows():
+        label = row["mineral_source_ibm"]
+        if label in seen:
+            continue
+        seen.add(label)
+        legend_items.append(plt.Line2D([0], [0], marker="s", color="none", markerfacecolor=material_color(label), markeredgecolor="none", markersize=10, label=label))
+    fig.legend(handles=legend_items, loc="lower left", bbox_to_anchor=(0.045, 0.035), ncol=4, frameon=False, fontsize=9)
+    fig.text(
+        0.985,
+        0.045,
+        "Context only: MBS footprints do not independently prove present legal status or operation.\nSource: MSTC state mineral-auction portal; state diagnostic boundary: Census 2011 district layer.",
+        ha="right",
+        va="bottom",
+        fontsize=8.5,
+        color="#65717A",
+    )
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(OUTPUT, dpi=260, facecolor=fig.get_facecolor())
+    plt.close(fig)
+    print(OUTPUT)
+
+
+if __name__ == "__main__":
+    main()
