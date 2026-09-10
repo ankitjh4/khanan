@@ -1,5 +1,5 @@
 {
-  "release": "v1.0-alpha.13",
+  "release": "v1.0-alpha.14",
   "source_portal_url": "https://www.mstcecommerce.com/auctionhome/mlcl/index.jsp",
   "source_access_date": "2026-09-10",
   "ibm_input_rows": 97,
@@ -16,23 +16,23 @@
     "Goa": 18
   },
   "state_portal_documents_total": 1124,
-  "curated_records": 34,
-  "selected_document_matches": 29,
-  "reviewed_profile_complete_rows": 29,
+  "curated_records": 44,
+  "selected_document_matches": 39,
+  "reviewed_profile_complete_rows": 39,
   "coordinate_evidence_type_counts": {
-    "ordered_boundary_vertices": 22,
+    "ordered_boundary_vertices": 30,
     "ordered_boundary_vertices_with_source_error": 4,
-    "bounding_extents_only": 2,
+    "bounding_extents_only": 4,
     "ordered_boundary_vertices_with_source_omission": 1
   },
-  "published_geometries": 17,
+  "published_geometries": 24,
   "geometry_admission_status_counts": {
     "withheld_no_public_boundary_document": 5,
-    "admitted_authoritative_source_footprint": 17,
+    "admitted_authoritative_source_footprint": 24,
     "withheld_source_conflict": 8,
-    "withheld_insufficient_coordinate_detail": 2,
-    "withheld_not_reviewed": 63,
-    "withheld_validation_failure": 2
+    "withheld_insufficient_coordinate_detail": 4,
+    "withheld_not_reviewed": 53,
+    "withheld_validation_failure": 3
   },
   "all_geometry_polygons_valid": true,
   "all_geometry_centroids_in_source_state": true,
@@ -41,21 +41,25 @@
   "model_evidence_role": "context_only",
   "outputs": {
     "india_ibm_auctioned_concession_mbs_match_audit_2023_24.csv": {
-      "sha256": "8cf43cb382302a8161ce4f4f6ef6444d6ae7b1cdda9026783367ff87bf7eedd3",
-      "bytes": 116857
+      "sha256": "ee3e2ff9e55504ca9fb62fb805693c2719428c42e1d0f2cf99678e2fe8400299",
+      "bytes": 128018
     },
     "india_ibm_auctioned_concession_geometries_2023_24.csv": {
-      "sha256": "0ed894602e3300c8f5b3caed6287fa81948867749bec4b700067c1e0c450ea8f",
-      "bytes": 56808
+      "sha256": "3908c9ed3f5796db7e561771229ec90ce54a7146db862215e380b19f7d7ad6cf",
+      "bytes": 70440
     },
     "india_ibm_auctioned_concession_geometries_2023_24.geojson": {
-      "sha256": "5143469c54e229ca75f418ee59573ce2007d6f17606351c82bab6a1a8a00be58",
-      "bytes": 105688
+      "sha256": "aff0e4f6fd05b0ef3499acfdac8e087e26f15e613f4646b98487ac7701c6b458",
+      "bytes": 136078
     }
   },
   "limitations": [
-    "This release reviews 34 of the 97 IBM Table 5 records: 29 selected State MBS PDFs and five Andhra Pradesh exact-name searches with no match in the current public index.",
+    "This release reviews 44 of the 97 IBM Table 5 records: 39 selected State MBS PDFs and five Andhra Pradesh exact-name searches with no match in the current public index.",
     "The five Andhra Pradesh rows are withheld from geometry because no public boundary document was found in the current State MBS index; their dated official-secondary status evidence is published separately.",
+    "Devalmari-Katepalli and South Padve publish bounding extents but no ordered boundary vertices in the selected MBS PDFs; no rectangles are inferred.",
+    "Kondhala geometry is withheld because its source-order coordinates compute to about 162.74 ha versus the MBS-published 105 ha.",
+    "The Surjagad MBS documents print December temperature up to 42 C and June temperature up to 7 C; the apparent seasonal-label anomaly is retained and flagged.",
+    "South Padve and Savali print annual rainfall as 600 cm and 800 cm respectively; these source units are retained and flagged rather than silently corrected.",
     "Kareli-Chandi geometry is withheld because the MBS prints malformed latitude seconds for two vertices.",
     "Saloni geometry is withheld because IBM and MBS publish materially different areas.",
     "Chiropat geometry is withheld because the MBS prints an E hemisphere in the latitude column for two vertices.",

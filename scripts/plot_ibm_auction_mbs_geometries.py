@@ -13,7 +13,7 @@ GEOMETRIES = ROOT / "outputs" / "india_ibm_auctioned_concession_geometries_2023_
 MATCHES = ROOT / "outputs" / "india_ibm_auctioned_concession_mbs_match_audit_2023_24.csv"
 STATUS_EVIDENCE = ROOT / "outputs" / "india_ibm_auctioned_concession_status_evidence_2023_24.csv"
 DISTRICTS = ROOT / "sources" / "raw" / "2011_Dist.shp"
-OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-auction-mbs-geometries-alpha13.png"
+OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-auction-mbs-geometries-alpha14.png"
 
 COLORS = {
     "Bauxite": "#A46636",
@@ -22,6 +22,8 @@ COLORS = {
     "Glauconite (Potash)": "#6F4E9C",
     "Iron Ore": "#B8473D",
     "Limestone": "#4D83B3",
+    "Copper": "#2F8C88",
+    "Manganese": "#745A44",
 }
 
 
@@ -44,7 +46,15 @@ def label_polygons(axis, frame: gpd.GeoDataFrame) -> None:
     for _, row in frame.iterrows():
         point = row.geometry.representative_point()
         label = row["block_name"].replace(" Mineral Block", "").replace(" Block", "")
-        offset = {"Mevasa-1": (4, 10), "Mevasa": (4, -12)}.get(label, (4, 4))
+        offset = {
+            "Mevasa-1": (4, 10),
+            "Mevasa": (4, -12),
+            "Surjagad – 1 Iron Ore": (4, -13),
+            "Surjagad – 2 Iron Ore": (4, -3),
+            "Surjagad – 3 Iron Ore": (4, 7),
+            "Surjagad – 4 Iron Ore": (4, 17),
+            "Surjagad – 6 Iron Ore": (4, 27),
+        }.get(label, (4, 4))
         axis.annotate(
             label,
             (point.x, point.y),
@@ -68,9 +78,9 @@ def main() -> None:
     no_public_boundary = int((matches.geometry_admission_status == "withheld_no_public_boundary_document").sum())
     reviewed_mbs_withheld = withheld - no_public_boundary
 
-    fig = plt.figure(figsize=(18, 14), facecolor="#FCFBF7")
-    grid = fig.add_gridspec(3, 3, left=0.045, right=0.985, top=0.86, bottom=0.13, wspace=0.12, hspace=0.20)
-    axes = [fig.add_subplot(grid[row, column]) for row in range(3) for column in range(3)]
+    fig = plt.figure(figsize=(24, 14), facecolor="#FCFBF7")
+    grid = fig.add_gridspec(3, 4, left=0.035, right=0.985, top=0.86, bottom=0.13, wspace=0.12, hspace=0.20)
+    axes = [fig.add_subplot(grid[row, column]) for row in range(3) for column in range(4)]
     for axis in axes:
         style_axis(axis)
 
@@ -92,7 +102,7 @@ def main() -> None:
     )
     axes[0].set_title("India locator", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
 
-    for axis, state in zip(axes[1:7], ["Chhattisgarh", "Goa", "Gujarat", "Andhra Pradesh", "Uttar Pradesh", "Karnataka"]):
+    for axis, state in zip(axes[1:8], ["Chhattisgarh", "Goa", "Gujarat", "Andhra Pradesh", "Uttar Pradesh", "Karnataka", "Maharashtra"]):
         state_shape = states[states.ST_NM == state]
         subset = geometries[geometries.state_or_ut == state]
         state_shape.plot(ax=axis, facecolor="#E9E5DC", edgecolor="#756E64", linewidth=0.8)
@@ -128,19 +138,19 @@ def main() -> None:
         else:
             axis.set_title(f"{state}: {len(subset)} admitted footprints", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
 
-    axes[7].axis("off")
-    axes[7].text(0.02, 0.94, "Review scope", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[7].transAxes)
-    axes[7].text(
+    axes[8].axis("off")
+    axes[8].text(0.02, 0.94, "Review scope", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[8].transAxes)
+    axes[8].text(
         0.02,
         0.80,
-        f"34 IBM rows reviewed\n29 official MBS PDFs selected\n{admitted} footprints admitted\n{reviewed_mbs_withheld} MBS records withheld\n{no_public_boundary} Andhra rows status-linked only\n{unreviewed} IBM rows not yet reviewed",
+        f"44 IBM rows reviewed\n39 official MBS PDFs selected\n{admitted} footprints admitted\n{reviewed_mbs_withheld} MBS records withheld\n{no_public_boundary} Andhra rows status-linked only\n{unreviewed} IBM rows not yet reviewed",
         fontsize=13,
         linespacing=1.45,
         color="#48545C",
         va="top",
-        transform=axes[7].transAxes,
+        transform=axes[8].transAxes,
     )
-    axes[7].text(
+    axes[8].text(
         0.02,
         0.22,
         "Withholding is deliberate: malformed coordinates,\nmissing hemispheres, incomplete boundary detail,\nor area-reconciliation failures are not repaired\nby inference.",
@@ -148,12 +158,25 @@ def main() -> None:
         linespacing=1.5,
         color="#65717A",
         va="top",
-        transform=axes[7].transAxes,
+        transform=axes[8].transAxes,
     )
 
-    axes[8].axis("off")
-    axes[8].text(0.02, 0.94, "Evidence and geometry gates", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[8].transAxes)
-    axes[8].text(
+    axes[9].axis("off")
+    axes[9].text(0.02, 0.94, "Maharashtra decisions", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[9].transAxes)
+    axes[9].text(
+        0.02,
+        0.80,
+        "7 source footprints admitted\n5 Surjagad iron-ore blocks\n1 Minzhari copper block\n1 Savali manganese block\n\nKondhala withheld: 54.99% area mismatch\nDevalmari-Katepalli and South Padve withheld:\nbounding extents are not polygon vertices",
+        fontsize=12,
+        linespacing=1.45,
+        color="#48545C",
+        va="top",
+        transform=axes[9].transAxes,
+    )
+
+    axes[10].axis("off")
+    axes[10].text(0.02, 0.94, "Evidence and geometry gates", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[10].transAxes)
+    axes[10].text(
         0.02,
         0.80,
         "Exact block identity and dated source\nNo current-status claim without controlling record\nValid source-order polygon\nCentroid and footprint covered by source State\nComputed vs MBS area within 5%\nIBM vs MBS area within 5%",
@@ -161,24 +184,27 @@ def main() -> None:
         linespacing=1.5,
         color="#48545C",
         va="top",
-        transform=axes[8].transAxes,
+        transform=axes[10].transAxes,
     )
-    axes[8].text(
+
+    axes[11].axis("off")
+    axes[11].text(0.02, 0.94, "Interpretation", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[11].transAxes)
+    axes[11].text(
         0.02,
-        0.25,
-        "Andhra Pradesh adds five dated status-evidence\nrows, but no polygons. Candidate scores and the\nseventeen admitted footprints remain unchanged.",
-        fontsize=10.5,
+        0.80,
+        "MBS geometry is authoritative auction-stage\ncontext, not proof of current mining or title.\n\nPrinted climate anomalies remain visible in the\naudit layer. Candidate scores are unchanged;\nthis tranche improves source coverage and spatial\nvalidation only.",
+        fontsize=12,
         linespacing=1.5,
-        color="#65717A",
+        color="#48545C",
         va="top",
-        transform=axes[8].transAxes,
+        transform=axes[11].transAxes,
     )
 
     fig.text(0.045, 0.945, "KHANAN | Reviewed state-auction Mine Block Summary geometry", fontsize=22, weight="bold", color="#18232B")
     fig.text(
         0.045,
         0.905,
-        f"IBM Table 5 contains 97 blocks. Alpha.13 reviews 34 rows, admits {admitted} source footprints, and leaves {unreviewed} unreviewed.",
+        f"IBM Table 5 contains 97 blocks. Alpha.14 reviews 44 rows, admits {admitted} source footprints, and leaves {unreviewed} unreviewed.",
         fontsize=12,
         color="#48545C",
     )
@@ -190,7 +216,7 @@ def main() -> None:
             continue
         seen.add(label)
         legend_items.append(plt.Line2D([0], [0], marker="s", color="none", markerfacecolor=material_color(label), markeredgecolor="none", markersize=10, label=label))
-    fig.legend(handles=legend_items, loc="lower left", bbox_to_anchor=(0.045, 0.047), ncol=6, frameon=False, fontsize=9)
+    fig.legend(handles=legend_items, loc="lower left", bbox_to_anchor=(0.035, 0.047), ncol=8, frameon=False, fontsize=9)
     fig.text(
         0.985,
         0.018,

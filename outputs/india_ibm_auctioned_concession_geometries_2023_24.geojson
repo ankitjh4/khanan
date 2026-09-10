@@ -1309,6 +1309,627 @@
         "coordinates": [
           [
             [
+              80.41426944444444,
+              19.676705555555557
+            ],
+            [
+              80.42978055555557,
+              19.694175
+            ],
+            [
+              80.46635277777779,
+              19.661430555555555
+            ],
+            [
+              80.44182222222223,
+              19.639872222222223
+            ],
+            [
+              80.41426944444444,
+              19.676705555555557
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-050",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Maharashtra",
+        "block_name": "Surjagad \u2013 1 Iron Ore Block",
+        "block_name_mbs": "Summary of Surjagad-1(2-1-23)",
+        "mineral_source_ibm": "Iron Ore",
+        "normalized_material_ids_json": "[\"element:iron\",\"ore:iron-ore\"]",
+        "normalized_material_names_json": "[\"Iron\",\"Iron ore\"]",
+        "chemical_or_english_names_json": "[\"iron\",\"Iron ore\"]",
+        "formulae_or_symbols_json": "[\"Fe\"]",
+        "auction_date_ibm": "2023-05-09",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "1526.0",
+        "mbs_area_ha": 1526.0,
+        "exploration_level": "G4",
+        "borehole_count": 0,
+        "drilled_meterage_m": 0.0,
+        "exploration_agency_source": "Directorate of Geology and Mining (DGM), Maharashtra.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "Not estimated (NA).",
+        "grade_source": "66-68% Fe lumps.",
+        "mineral_zones_source": "Nine massive iron-ore zones, 10-150 m long and 10-50 m wide.",
+        "dip_strike_source": "Northeast-southwest strike; dip 70-80 degrees southeast.",
+        "thickness_source": "Assumed thickness 15-60 m.",
+        "accessibility_source": "Wadsa Railway Station; NH-353D; block about 7 km northwest of Puske village; Nagpur Airport.",
+        "hydrography_source": "Dendritic drainage; Bandia River and Jambia Nala.",
+        "climate_source": "Mean annual rainfall 450 mm; source prints December temperature up to 42 C and June temperature up to 7 C (apparent seasonal-label anomaly retained).",
+        "topography_source": "Hilly terrain and valleys.",
+        "coordinate_method": "source_table_visual_transcription_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[1, 2, 3, 4]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 19.66718615,
+        "centroid_longitude": 80.43907406,
+        "computed_geodesic_area_ha": 1534.853865,
+        "computed_to_mbs_area_difference_pct": 0.580201,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated; source publishes geographic DMS boundary points",
+        "selected_mbs_file_id": "8550",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=8550_Summary_of_Surjagad-1(2-1-23).pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "c9925ae2a80071f88723b4a380b45db1e5ea6f4607d2521f68b89a0c2a612018",
+        "selected_mbs_pdf_bytes": 87639,
+        "selected_mbs_pdf_page_count": 2,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.43001944444445,
+              19.694588888888887
+            ],
+            [
+              80.43578333333333,
+              19.701994444444445
+            ],
+            [
+              80.455825,
+              19.68775
+            ],
+            [
+              80.4596138888889,
+              19.69278611111111
+            ],
+            [
+              80.48119166666667,
+              19.67474166666667
+            ],
+            [
+              80.46663333333333,
+              19.66169722222222
+            ],
+            [
+              80.43001944444445,
+              19.694588888888887
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-051",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Maharashtra",
+        "block_name": "Surjagad \u2013 2 Iron Ore Block",
+        "block_name_mbs": "Summary of Surjagad-2(2-1-23)",
+        "mineral_source_ibm": "Iron Ore",
+        "normalized_material_ids_json": "[\"element:iron\",\"ore:iron-ore\"]",
+        "normalized_material_names_json": "[\"Iron\",\"Iron ore\"]",
+        "chemical_or_english_names_json": "[\"iron\",\"Iron ore\"]",
+        "formulae_or_symbols_json": "[\"Fe\"]",
+        "auction_date_ibm": "2023-05-09",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "886.0",
+        "mbs_area_ha": 886.0,
+        "exploration_level": "G4",
+        "borehole_count": 0,
+        "drilled_meterage_m": 0.0,
+        "exploration_agency_source": "Directorate of Geology and Mining (DGM), Maharashtra.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "Not estimated (NA).",
+        "grade_source": "Above 65% Fe lumps; range 63-68% Fe.",
+        "mineral_zones_source": "Six massive iron-ore zones at Gandhmaka Meta and two at Edasgunj Meta; reported lengths 20-150 m and widths about 10-20 m.",
+        "dip_strike_source": "Gandhmaka Meta: northeast-southwest, dip 80 degrees southeast; Edasgunj Meta: east-northeast-west-southwest, dip 80 degrees southeast.",
+        "thickness_source": "Assumed thickness 15-60 m at Gandhmaka Meta and 20-30 m at Edasgunj Meta.",
+        "accessibility_source": "Wadsa Railway Station; NH-353D approaches via Modaske and Puske villages; Nagpur Airport.",
+        "hydrography_source": "Dendritic drainage; Bandia River and Jambia Nala.",
+        "climate_source": "Mean annual rainfall 450 mm; source prints December temperature up to 42 C and June temperature up to 7 C (apparent seasonal-label anomaly retained).",
+        "topography_source": "Hilly terrain and valleys.",
+        "coordinate_method": "source_table_visual_transcription_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[1, 2, 3, 4, 5, 6]",
+        "boundary_vertex_count": 6,
+        "centroid_latitude": 19.68155365,
+        "centroid_longitude": 80.4567946,
+        "computed_geodesic_area_ha": 885.732766,
+        "computed_to_mbs_area_difference_pct": 0.030162,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated; source publishes geographic DMS boundary points",
+        "selected_mbs_file_id": "8551",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=8551_Summary_of_Surjagad-2(2-1-23).pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "b4e1aa8947b98e8ead0b620431c630b841662e923da3ccd468cafdd6299d596d",
+        "selected_mbs_pdf_bytes": 89048,
+        "selected_mbs_pdf_page_count": 2,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.43598333333334,
+              19.702252777777776
+            ],
+            [
+              80.45119444444445,
+              19.72083888888889
+            ],
+            [
+              80.46908611111111,
+              19.70607777777778
+            ],
+            [
+              80.45576111111112,
+              19.68825
+            ],
+            [
+              80.43598333333334,
+              19.702252777777776
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-052",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Maharashtra",
+        "block_name": "Surjagad \u2013 3 Iron Ore Block",
+        "block_name_mbs": "Summary of Surjagad-3(2-1-23)",
+        "mineral_source_ibm": "Iron Ore",
+        "normalized_material_ids_json": "[\"element:iron\",\"ore:iron-ore\"]",
+        "normalized_material_names_json": "[\"Iron\",\"Iron ore\"]",
+        "chemical_or_english_names_json": "[\"iron\",\"Iron ore\"]",
+        "formulae_or_symbols_json": "[\"Fe\"]",
+        "auction_date_ibm": "2023-05-09",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "640.0",
+        "mbs_area_ha": 640.0,
+        "exploration_level": "G4",
+        "borehole_count": 0,
+        "drilled_meterage_m": 0.0,
+        "exploration_agency_source": "Directorate of Geology and Mining (DGM), Maharashtra.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "Not estimated (NA).",
+        "grade_source": "Above 65% Fe lumps; range 63-68% Fe.",
+        "mineral_zones_source": "Three massive iron-ore zones at Morgal Meta and one at Warshankoti; reported lengths 30-60 m and widths 3-20 m.",
+        "dip_strike_source": "Northeast-southwest strike; dip 70-80 degrees southeast.",
+        "thickness_source": "Assumed thickness 15-60 m at Morgal Meta and 15 m at Warshankoti.",
+        "accessibility_source": "Wadsa Railway Station; NH-353D; Morgal Meta and Warshankoti about 5 km northwest of Modaske village; Nagpur Airport.",
+        "hydrography_source": "Dendritic drainage; Bandia River and Jambia Nala.",
+        "climate_source": "Mean annual rainfall 450 mm; source prints December temperature up to 42 C and June temperature up to 7 C (apparent seasonal-label anomaly retained).",
+        "topography_source": "Hilly terrain and valleys.",
+        "coordinate_method": "source_table_visual_transcription_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[1, 2, 3, 4]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 19.7043803,
+        "centroid_longitude": 80.45283665,
+        "computed_geodesic_area_ha": 636.153169,
+        "computed_to_mbs_area_difference_pct": 0.601067,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated; source publishes geographic DMS boundary points",
+        "selected_mbs_file_id": "8552",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=8552_Summary_of_Surjagad-3(2-1-23).pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "ae03cf6cd65d5b89795b9e389c4644766cff5ef48b56dfcec20744f1cc76759f",
+        "selected_mbs_pdf_bytes": 88380,
+        "selected_mbs_pdf_page_count": 2,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.459925,
+              19.69319722222222
+            ],
+            [
+              80.46676944444445,
+              19.702294444444444
+            ],
+            [
+              80.49011666666667,
+              19.684108333333334
+            ],
+            [
+              80.48156111111112,
+              19.67513055555556
+            ],
+            [
+              80.459925,
+              19.69319722222222
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-053",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Maharashtra",
+        "block_name": "Surjagad \u2013 4 Iron Ore Block",
+        "block_name_mbs": "Summary of Surjagad-4(2-1-23)",
+        "mineral_source_ibm": "Iron Ore",
+        "normalized_material_ids_json": "[\"element:iron\",\"ore:iron-ore\"]",
+        "normalized_material_names_json": "[\"Iron\",\"Iron ore\"]",
+        "chemical_or_english_names_json": "[\"iron\",\"Iron ore\"]",
+        "formulae_or_symbols_json": "[\"Fe\"]",
+        "auction_date_ibm": "2023-05-12",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "397.0",
+        "mbs_area_ha": 397.0,
+        "exploration_level": "G4",
+        "borehole_count": 0,
+        "drilled_meterage_m": 0.0,
+        "exploration_agency_source": "Directorate of Geology and Mining (DGM), Maharashtra.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "Not estimated (NA).",
+        "grade_source": "Average 62.58% Fe lumps; range 58.53-66.63% Fe.",
+        "mineral_zones_source": "Eight lensoid iron-ore zones, 20-220 m long and 10-25 m wide.",
+        "dip_strike_source": "Northeast-southwest strike; dip 70-80 degrees southeast.",
+        "thickness_source": "Assumed thickness 30-60 m.",
+        "accessibility_source": "Wadsa Railway Station; NH-353D; Nagpur Airport.",
+        "hydrography_source": "Dendritic drainage; Bandia River and Jambia Nala.",
+        "climate_source": "Mean annual rainfall 450 mm; source prints December temperature up to 42 C and June temperature up to 7 C (apparent seasonal-label anomaly retained).",
+        "topography_source": "Hilly terrain and valleys.",
+        "coordinate_method": "source_table_visual_transcription_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[1, 2, 3, 4]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 19.68859381,
+        "centroid_longitude": 80.4747786,
+        "computed_geodesic_area_ha": 397.941168,
+        "computed_to_mbs_area_difference_pct": 0.23707,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated; source publishes geographic DMS boundary points",
+        "selected_mbs_file_id": "8553",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=8553_Summary_of_Surjagad-4(2-1-23).pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "d3747b7bafe393f330a54c5e1df0332fef865e52be3f6c2145329a7d2d8d1ae3",
+        "selected_mbs_pdf_bytes": 88182,
+        "selected_mbs_pdf_page_count": 2,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.45138333333334,
+              19.721055555555555
+            ],
+            [
+              80.46780555555556,
+              19.739952777777777
+            ],
+            [
+              80.48448888888889,
+              19.728316666666665
+            ],
+            [
+              80.46930277777778,
+              19.70636111111111
+            ],
+            [
+              80.45138333333334,
+              19.721055555555555
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-055",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Maharashtra",
+        "block_name": "Surjagad \u2013 6 Iron Ore Block",
+        "block_name_mbs": "Summary of Surjagad-6(2-1-23)",
+        "mineral_source_ibm": "Iron Ore",
+        "normalized_material_ids_json": "[\"element:iron\",\"ore:iron-ore\"]",
+        "normalized_material_names_json": "[\"Iron\",\"Iron ore\"]",
+        "chemical_or_english_names_json": "[\"iron\",\"Iron ore\"]",
+        "formulae_or_symbols_json": "[\"Fe\"]",
+        "auction_date_ibm": "2023-05-17",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "658.0",
+        "mbs_area_ha": 658.0,
+        "exploration_level": "G4",
+        "borehole_count": 0,
+        "drilled_meterage_m": 0.0,
+        "exploration_agency_source": "Directorate of Geology and Mining (DGM), Maharashtra.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "Not estimated (NA).",
+        "grade_source": "60-62% Fe lumps.",
+        "mineral_zones_source": "Not stated (not applicable in the MBS).",
+        "dip_strike_source": "Northeast-southwest strike; dip 55 degrees southeast.",
+        "thickness_source": "Not stated in the MBS.",
+        "accessibility_source": "Wadsa Railway Station; NH-353D, approaching through Nandwadi village; Nagpur Airport.",
+        "hydrography_source": "Dendritic drainage; Bandia River and Jambia Nala.",
+        "climate_source": "Mean annual rainfall 450 mm; source prints December temperature up to 42 C and June temperature up to 7 C (apparent seasonal-label anomaly retained).",
+        "topography_source": "Hilly terrain and valleys.",
+        "coordinate_method": "source_table_visual_transcription_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[1, 2, 3, 4]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 19.72362685,
+        "centroid_longitude": 80.46816662,
+        "computed_geodesic_area_ha": 651.561327,
+        "computed_to_mbs_area_difference_pct": 0.978522,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated; source publishes geographic DMS boundary points",
+        "selected_mbs_file_id": "8555",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=8555_Summary_of_Surjagad-6(2-1-23).pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "9e6002cd35026b2fdd89c449abf72007357494a3bed637df6a937a1e520c595f",
+        "selected_mbs_pdf_bytes": 87432,
+        "selected_mbs_pdf_page_count": 2,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              79.57520277777778,
+              20.3594
+            ],
+            [
+              79.60209722222221,
+              20.3611
+            ],
+            [
+              79.59459722222222,
+              20.3076
+            ],
+            [
+              79.56929722222222,
+              20.3076
+            ],
+            [
+              79.56739722222221,
+              20.339199999999998
+            ],
+            [
+              79.57520277777778,
+              20.3594
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-057",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Maharashtra",
+        "block_name": "Minzhari Copper Block",
+        "block_name_mbs": "Summary of Minzhari Copper Block",
+        "mineral_source_ibm": "Copper",
+        "normalized_material_ids_json": "[\"element:copper\"]",
+        "normalized_material_names_json": "[\"Copper\"]",
+        "chemical_or_english_names_json": "[\"copper\"]",
+        "formulae_or_symbols_json": "[\"Cu\"]",
+        "auction_date_ibm": "2023-11-21",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "1743.0",
+        "mbs_area_ha": 1743.24,
+        "exploration_level": "G3",
+        "borehole_count": 10,
+        "drilled_meterage_m": 1746.9,
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "10 boreholes with cumulative meterage of 1,746.90 m at 200 m strike spacing.",
+        "mineral_source_mbs": "Copper",
+        "geological_resources_source": "1.13 million tonnes copper ore at 0.2% cut-off over about 1,400 m strike length; resource category 333.",
+        "grade_source": "Average 0.39% Cu at 0.2% cut-off.",
+        "mineral_zones_source": "Echelon, dilatational curvilinear quartz veins over a 3.0 km strike length.",
+        "dip_strike_source": "Strike NNW-SSE to NNE-SSW.",
+        "thickness_source": "Thickness 2-30 m.",
+        "accessibility_source": "Sindewahi Railway Station about 15 km; block about 10 km from Navegaon via State Highway 09; Nagpur Airport about 210 km.",
+        "hydrography_source": "Dendritic drainage; Human River, Kalvari Nallah, Bokardoh Nadi and Saoli Nadi.",
+        "climate_source": "Mean annual rainfall 1,000-1,500 mm; December temperature 15 C; June temperature 48 C.",
+        "topography_source": "Undulating, hilly terrain at about 180-240 m above mean sea level.",
+        "coordinate_method": "source_table_visual_transcription_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[1, 2, 3, 4, 5]",
+        "boundary_vertex_count": 5,
+        "centroid_latitude": 20.33427685,
+        "centroid_longitude": 79.58400388,
+        "computed_geodesic_area_ha": 1746.607777,
+        "computed_to_mbs_area_difference_pct": 0.193191,
+        "ibm_to_mbs_area_difference_pct": 0.013767,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated; source publishes geographic DMS boundary points",
+        "selected_mbs_file_id": "11640",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11640_Summary_of_Minzari_Block.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "1ea78ae6d4cd0485845db4eb72f207a2c5318d7c7d38cdcde9a5c804089e1000",
+        "selected_mbs_pdf_bytes": 39640,
+        "selected_mbs_pdf_page_count": 2,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              79.048,
+              21.4239
+            ],
+            [
+              79.077,
+              21.4239
+            ],
+            [
+              79.077,
+              21.3879
+            ],
+            [
+              79.048,
+              21.387999999999998
+            ],
+            [
+              79.048,
+              21.4239
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-058",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Maharashtra",
+        "block_name": "Savali Manganese Block",
+        "block_name_mbs": "Summary of Savali Manganese Block",
+        "mineral_source_ibm": "Manganese",
+        "normalized_material_ids_json": "[\"element:manganese\"]",
+        "normalized_material_names_json": "[\"Manganese\"]",
+        "chemical_or_english_names_json": "[\"manganese\"]",
+        "formulae_or_symbols_json": "[\"Mn\"]",
+        "auction_date_ibm": "2023-11-22",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "1200.0",
+        "mbs_area_ha": 1200.0,
+        "exploration_level": "G4",
+        "borehole_count": 3,
+        "drilled_meterage_m": 281.5,
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "3 boreholes with cumulative meterage of 281.5 m.",
+        "mineral_source_mbs": "Manganese ore; braunite with subordinate psilomelane and source-spelled 'pysolusite'.",
+        "geological_resources_source": "0.065 million tonnes; resource category 334.",
+        "grade_source": "Bedrock sample 0.74-22.24% Mn; 12 of 39 pit/trench samples 10.50-41.67% Mn, remaining samples below 5.35% Mn with 0.02-0.37% P2O5; 8 of 14 core samples 9.31-17.20% Mn, remaining samples below 1.2%.",
+        "mineral_zones_source": "Three lensoid manganese-ore bodies controlled by the core of a tight isoclinal synclinal fold; two magnetic/gravity anomalies are described.",
+        "dip_strike_source": "Trend N40-60W to S40-60E; dip 35-65 degrees south or southwest.",
+        "thickness_source": "Thickness 7.4 m.",
+        "accessibility_source": "Nagpur Railway Station; 12 km from NH-7; Nagpur Airport.",
+        "hydrography_source": "Dendritic to sub-dendritic drainage; Pench River.",
+        "climate_source": "Mean annual rainfall printed as 800 cm; December temperature 8-12 C; June temperature up to 47 C (source unit retained).",
+        "topography_source": "Gentle undulating terrain.",
+        "coordinate_method": "source_table_visual_transcription_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[1, 2, 3, 4]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 21.40592499,
+        "centroid_longitude": 79.06250672,
+        "computed_geodesic_area_ha": 1196.892678,
+        "computed_to_mbs_area_difference_pct": 0.258944,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated; source publishes geographic DMS boundary points",
+        "selected_mbs_file_id": "11642",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11642_Summary_of_Savali_Block.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "11a881961bd40d7290154d4776adb5b75af7a5c014d249756147abda37baa2f4",
+        "selected_mbs_pdf_bytes": 44200,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
               82.86152277777778,
               24.563351944444445
             ],
