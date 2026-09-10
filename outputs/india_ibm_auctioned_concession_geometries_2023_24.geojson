@@ -7371,6 +7371,2606 @@
         "coordinates": [
           [
             [
+              75.9722068388889,
+              27.780540241666667
+            ],
+            [
+              75.97237874722222,
+              27.779853225
+            ],
+            [
+              75.97336258888889,
+              27.780216513888888
+            ],
+            [
+              75.97332931111112,
+              27.779856791666667
+            ],
+            [
+              75.97443578055555,
+              27.778344052777776
+            ],
+            [
+              75.97761497500001,
+              27.783427897222225
+            ],
+            [
+              75.97577005555556,
+              27.784856197222222
+            ],
+            [
+              75.9722068388889,
+              27.780540241666667
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-059",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "Nayorana-Dandela",
+        "block_name_mbs": "Mineral_Block_Summary_of_Nyorana_Dhandela_Block_District_Sikar",
+        "mineral_source_ibm": "Iron Ore",
+        "normalized_material_ids_json": "[\"element:iron\",\"ore:iron-ore\"]",
+        "normalized_material_names_json": "[\"Iron\",\"Iron ore\"]",
+        "chemical_or_english_names_json": "[\"iron\",\"Iron ore\"]",
+        "formulae_or_symbols_json": "[\"Fe\"]",
+        "auction_date_ibm": "2023-07-11",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "16.78",
+        "mbs_area_ha": 16.775,
+        "exploration_level": "G4",
+        "borehole_count": "",
+        "drilled_meterage_m": "",
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "The borehole and meterage cells contain dashes; no zero is inferred.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "Tentative mineral resource: 3.3 million tonnes.",
+        "grade_source": "Not stated in the selected MBS.",
+        "mineral_zones_source": "Two iron-ore bands.",
+        "dip_strike_source": "NNE-SSW trend, dipping northwest at about 55-80 degrees.",
+        "thickness_source": "Iron-ore width 27-130 m including intercalated waste.",
+        "accessibility_source": "Neem Ka Thana and Shri Madhopur rail stations; RJSH-37B road access; Jaipur airport about 150 km away.",
+        "hydrography_source": "Seasonal nala drainage; no perennial river in the area.",
+        "climate_source": "Mean annual rainfall 450-550 mm; December temperature down to 1 C; June temperature up to 48 C.",
+        "topography_source": "One small hill with low-lying mountain terrain; Survey of India toposheet 45M/13.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\"]",
+        "boundary_vertex_count": 7,
+        "centroid_latitude": 27.78172323,
+        "centroid_longitude": 75.97495944,
+        "computed_geodesic_area_ha": 16.784668,
+        "computed_to_mbs_area_difference_pct": 0.057632,
+        "ibm_to_mbs_area_difference_pct": 0.029806,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "10124",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=10124_Mineral_Block_Summary_of_Nyorana_Dhandela_Block_District_Sikar.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "505fbf7738b0f2a455d8374fe6016e7ce07e0d9ba3fc22d5135e60702f5654c4",
+        "selected_mbs_pdf_bytes": 138120,
+        "selected_mbs_pdf_page_count": 4,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.9226744,
+              24.5606639
+            ],
+            [
+              73.9239386,
+              24.5606639
+            ],
+            [
+              73.9239386,
+              24.561220900000002
+            ],
+            [
+              73.92912390000001,
+              24.5612208
+            ],
+            [
+              73.92912390000001,
+              24.55893007222222
+            ],
+            [
+              73.93201780000001,
+              24.55893007222222
+            ],
+            [
+              73.93201780000001,
+              24.5518962
+            ],
+            [
+              73.92912410000001,
+              24.5518962
+            ],
+            [
+              73.92912410000001,
+              24.549623500000003
+            ],
+            [
+              73.9273958,
+              24.5496234
+            ],
+            [
+              73.922675,
+              24.554069900000002
+            ],
+            [
+              73.9226744,
+              24.5606639
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-060",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "Hariyav Jashpura",
+        "block_name_mbs": "Mineral_Block_Summary_of_Hariyav_Jaspura_Block_District_Udaipur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2023-07-10",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "94.62",
+        "mbs_area_ha": 94.62,
+        "exploration_level": "G2",
+        "borehole_count": 7,
+        "drilled_meterage_m": 583.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "7 boreholes with cumulative meterage of 583 m; spacing varies from 70 m to 255 m.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "74.21 million tonnes of limestone.",
+        "grade_source": "Weighted average 44.14% CaO, 9.27% SiO2 and 1.57% MgO.",
+        "mineral_zones_source": "Limestone exposed for about 1.2 km, bifurcated into two parts by an amphibolite intrusive.",
+        "dip_strike_source": "NNW-SSE to north-south, locally NE-SW; 60-80 degree easterly dip with local reverse dip due to folding.",
+        "thickness_source": "Exposed limestone width 20-250 m.",
+        "accessibility_source": "Udaipur rail station; all-weather road via Debari on the Udaipur-Kurabar road; Maharana Pratap Airport at Dabok.",
+        "hydrography_source": "Low ridge with gradual southern slopes and small seasonal nalas flowing south.",
+        "climate_source": "Mean annual rainfall about 600 mm; December temperature 4-10 C; June temperature 35-44 C.",
+        "topography_source": "Low-lying undulating plain and rugged linear bands with soil and agricultural fields; average contour about 520 m; toposheet 45H/14.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\"]",
+        "boundary_vertex_count": 11,
+        "centroid_latitude": 24.55591339,
+        "centroid_longitude": 73.9272602,
+        "computed_geodesic_area_ha": 94.205351,
+        "computed_to_mbs_area_difference_pct": 0.438226,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\", \"source_repeats_point_A_as_closure\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; the table labels the survey DGPS and publishes geographic DMS values encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "10122",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=10122_Mineral_Block_Summary_of_Hariyav_Jaspura_Block_District_Udaipur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "c7739d8983d2a157e78e5ae472514756bc1d8d2a1a04f0765d49a769dd389a60",
+        "selected_mbs_pdf_bytes": 431393,
+        "selected_mbs_pdf_page_count": 4,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.96539151388889,
+              27.666666316666664
+            ],
+            [
+              75.96543140555556,
+              27.671205308333334
+            ],
+            [
+              75.97324049166667,
+              27.671150677777778
+            ],
+            [
+              75.973200275,
+              27.666611691666667
+            ],
+            [
+              75.96539151388889,
+              27.666666316666664
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-064",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "Ladi Ka Bas Block Tehsil Neem ka Thana & District Sikar",
+        "block_name_mbs": "Mineral_Block_Summary_of_ladi_Ka_bas_Block_District_Sikar",
+        "mineral_source_ibm": "Iron Ore",
+        "normalized_material_ids_json": "[\"element:iron\",\"ore:iron-ore\"]",
+        "normalized_material_names_json": "[\"Iron\",\"Iron ore\"]",
+        "chemical_or_english_names_json": "[\"iron\",\"Iron ore\"]",
+        "formulae_or_symbols_json": "[\"Fe\"]",
+        "auction_date_ibm": "2023-08-28",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "38.75",
+        "mbs_area_ha": 38.7545,
+        "exploration_level": "G4",
+        "borehole_count": "",
+        "drilled_meterage_m": "",
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "Not stated in the selected MBS.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "Tentative mineral resource: 8.7 million tonnes.",
+        "grade_source": "Not stated in the selected MBS.",
+        "mineral_zones_source": "Several intermittently exposed, bedded iron-ore bands.",
+        "dip_strike_source": "Northeast-southwest strike, dipping 72-78 degrees southeast.",
+        "thickness_source": "10-50 m.",
+        "accessibility_source": "Shri Madhopur and Neem Ka Thana rail stations; road connection to NH-37B; Jaipur airport about 138 km away.",
+        "hydrography_source": "Seasonal nala south of the area; no perennial river.",
+        "climate_source": "Mean annual rainfall 450-550 mm; December temperature down to 1 C; June temperature up to 48 C.",
+        "topography_source": "Small hillocks with low-lying mountain terrain; toposheet 45M/14.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"A\", \"B\", \"C\", \"D\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.66890851,
+        "centroid_longitude": 75.96931592,
+        "computed_geodesic_area_ha": 38.754058,
+        "computed_to_mbs_area_difference_pct": 0.00114,
+        "ibm_to_mbs_area_difference_pct": 0.011612,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "10849",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=10849_Mineral_Block_Summary_of_ladi_Ka_bas_Block_District_Sikar.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "744f1291330a1e0c9b41c1511fb81de968c6ff9ccd56b9f43957279469e2b4ca",
+        "selected_mbs_pdf_bytes": 175245,
+        "selected_mbs_pdf_page_count": 4,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.94416543333334,
+              27.630225522222222
+            ],
+            [
+              75.94218264722223,
+              27.632521747222224
+            ],
+            [
+              75.94981261666668,
+              27.637938816666665
+            ],
+            [
+              75.95228889722223,
+              27.635172133333334
+            ],
+            [
+              75.94416543333334,
+              27.630225522222222
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-065",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "Kalakota Block Tehsil Neem ka Thana & District Sikar",
+        "block_name_mbs": "Mineral_Block_Summary_Of_KalaKota_Block_District_Sikar",
+        "mineral_source_ibm": "Iron Ore",
+        "normalized_material_ids_json": "[\"element:iron\",\"ore:iron-ore\"]",
+        "normalized_material_names_json": "[\"Iron\",\"Iron ore\"]",
+        "chemical_or_english_names_json": "[\"iron\",\"Iron ore\"]",
+        "formulae_or_symbols_json": "[\"Fe\"]",
+        "auction_date_ibm": "2023-08-29",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "34.44",
+        "mbs_area_ha": 34.4418,
+        "exploration_level": "G4",
+        "borehole_count": "",
+        "drilled_meterage_m": "",
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "Not stated in the selected MBS.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "Tentative mineral resource: 3.9 million tonnes.",
+        "grade_source": "Not stated in the selected MBS.",
+        "mineral_zones_source": "Several intermittently exposed, bedded iron-ore bands.",
+        "dip_strike_source": "Northeast-southwest strike, dipping 72-78 degrees southeast.",
+        "thickness_source": "6-25 m.",
+        "accessibility_source": "Shri Madhopur and Neem Ka Thana rail stations; road connection to NH-37B; Jaipur airport about 138 km away.",
+        "hydrography_source": "Seasonal nala south of the area; no perennial river.",
+        "climate_source": "Mean annual rainfall 450-550 mm; December temperature down to 1 C; June temperature up to 48 C.",
+        "topography_source": "Small hillocks with low-lying mountain terrain; toposheet 45M/14.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"A\", \"B\", \"C\", \"D\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.63404909,
+        "centroid_longitude": 75.94724412,
+        "computed_geodesic_area_ha": 34.441701,
+        "computed_to_mbs_area_difference_pct": 0.000288,
+        "ibm_to_mbs_area_difference_pct": 0.005226,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "10847",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=10847_Mineral_Block_Summary_Of_KalaKota_Block_District_Sikar.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "1470b8667f64bbd79e108d74b8d6c89fe28886b6c2b6e7b63e1f34b18e015ec1",
+        "selected_mbs_pdf_bytes": 298455,
+        "selected_mbs_pdf_page_count": 4,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.03766666666667,
+              24.795055555555557
+            ],
+            [
+              74.05825,
+              24.79511111111111
+            ],
+            [
+              74.05827777777777,
+              24.782
+            ],
+            [
+              74.03769444444444,
+              24.781944444444445
+            ],
+            [
+              74.03766666666667,
+              24.795055555555557
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-066",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "Ladanan/v Ladana-Ladani, Tehsil Mavli, District - Udaipur(Raj)",
+        "block_name_mbs": "Mineral_Block_Summary_of_Ladana_Block_District_Udaipur",
+        "mineral_source_ibm": "Basemetal",
+        "normalized_material_ids_json": "[]",
+        "normalized_material_names_json": "[]",
+        "chemical_or_english_names_json": "[\"Basemetal\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2023-08-31",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "300.0",
+        "mbs_area_ha": 300.0,
+        "exploration_level": "G3",
+        "borehole_count": 4,
+        "drilled_meterage_m": 608.6,
+        "exploration_agency_source": "In-house drilling.",
+        "borehole_summary_source": "4 inclined boreholes with cumulative meterage of 608.60 m; 200 m strike spacing.",
+        "mineral_source_mbs": "Copper",
+        "geological_resources_source": "Resource not estimated because poor grade was intersected in the boreholes.",
+        "grade_source": "Poor grade intersected; numerical grade is not stated.",
+        "mineral_zones_source": "Two quartz veins, approximately 70 m by 10 m and 70 m by 15 m, with malachite, pyrite, bornite and chalcopyrite.",
+        "dip_strike_source": "Quartz veins trend NNW-SSE to north-south; dominant S1 foliation north-south to N20E, dipping 16-55 degrees east; S2 strikes N10W-N20W with steep easterly dip.",
+        "thickness_source": "Copper indications occur in quartz veins 10-15 m thick.",
+        "accessibility_source": "Metalled-road and railway access; Fatehnagar rail station; NH-48; Udaipur airport about 50 km away.",
+        "hydrography_source": "Water table 20-30 m; small streamlets drain to a village pond; dendritic drainage controlled by the Berach River.",
+        "climate_source": "Mean annual rainfall 689 mm; average temperature 31.6 C; December night temperature 11.6 C; June temperature up to 44 C.",
+        "topography_source": "Gently undulating peneplain with 1-5 m soil cover, sparse knolls, extensive agricultural land and a lake in the south; toposheet 45L/1.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"A\", \"B\", \"C\", \"D\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 24.78852778,
+        "centroid_longitude": 74.04797222,
+        "computed_geodesic_area_ha": 302.291076,
+        "computed_to_mbs_area_difference_pct": 0.763692,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "10848",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=10848_Mineral_Block_Summary_of_Ladana_Block_District_Udaipur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "184f0368b0f9dbbefb68940e12c6c555691242d753480800936045cd944d7247",
+        "selected_mbs_pdf_bytes": 571503,
+        "selected_mbs_pdf_page_count": 4,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.33831111111111,
+              24.940130555555555
+            ],
+            [
+              74.35656944444443,
+              24.93506111111111
+            ],
+            [
+              74.38289999999999,
+              24.9758
+            ],
+            [
+              74.36561944444443,
+              24.98131944444444
+            ],
+            [
+              74.33831111111111,
+              24.940130555555555
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-067",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "Bhabhriya ka Kheda Block n/v Lakha Ka Khera District Chittaurgarh",
+        "block_name_mbs": "Mineral_Block_Summary_of_Bhabhriya_ka_Kheda_Block_District_Chittorgarh",
+        "mineral_source_ibm": "Basemetal",
+        "normalized_material_ids_json": "[]",
+        "normalized_material_names_json": "[]",
+        "chemical_or_english_names_json": "[\"Basemetal\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2023-09-04",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "970.0",
+        "mbs_area_ha": 970.0,
+        "exploration_level": "G4",
+        "borehole_count": 0,
+        "drilled_meterage_m": 0.0,
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Base metal and associated mineralization",
+        "geological_resources_source": "No geological mineral resource was calculated at G4 stage.",
+        "grade_source": "NA in the selected MBS.",
+        "mineral_zones_source": "One mineralized zone.",
+        "dip_strike_source": "NNE-SSW, dipping west.",
+        "thickness_source": "Not stated in the selected MBS.",
+        "accessibility_source": "SH-12 and roads toward Jaipur, Chittorgarh and Bhilwara; Kapasan Junction rail head; Udaipur airport about 98 km away.",
+        "hydrography_source": "Banas River and tributaries.",
+        "climate_source": "Average annual temperature 25.4 C; mean annual rainfall 400 mm; December temperature down to 15 C; June temperature up to 45 C.",
+        "topography_source": "Mostly soil-covered plain with low rock-and-sand mounds and some low hills; toposheet 45L/5.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"A\", \"B\", \"C\", \"D\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 24.95797464,
+        "centroid_longitude": 74.36075568,
+        "computed_geodesic_area_ha": 973.09804,
+        "computed_to_mbs_area_difference_pct": 0.319386,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "10844",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=10844_Mineral_Block_Summary_of_Bhabhriya_ka_Kheda_Block_District_Chittorgarh.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "1aa96f83b507e0f402dd16ec68c485a1bd0046a11b479d52dcfa7c5965488988",
+        "selected_mbs_pdf_bytes": 571166,
+        "selected_mbs_pdf_page_count": 5,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.9078925,
+              27.646586666666668
+            ],
+            [
+              75.90858138888889,
+              27.648307499999998
+            ],
+            [
+              75.90721416666668,
+              27.65168138888889
+            ],
+            [
+              75.90581166666668,
+              27.651936666666664
+            ],
+            [
+              75.90363444444445,
+              27.646928055555556
+            ],
+            [
+              75.9078925,
+              27.646586666666668
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-068",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "Toda Block n/v Toda, Tehsil Neem ka Thana, District Sikar",
+        "block_name_mbs": "Mineral_Block_Summary_ofToda_Iron_ore_Block_District_Sikar",
+        "mineral_source_ibm": "Iron Ore",
+        "normalized_material_ids_json": "[\"element:iron\",\"ore:iron-ore\"]",
+        "normalized_material_names_json": "[\"Iron\",\"Iron ore\"]",
+        "chemical_or_english_names_json": "[\"iron\",\"Iron ore\"]",
+        "formulae_or_symbols_json": "[\"Fe\"]",
+        "auction_date_ibm": "2023-09-12",
+        "concession_type_code_ibm": "CL",
+        "ibm_area_ha": "18.43",
+        "mbs_area_ha": 18.425,
+        "exploration_level": "G4",
+        "borehole_count": "",
+        "drilled_meterage_m": "",
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "The borehole and meterage cells contain dashes; no zero is inferred.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "Tentative mineral resource: 1.8 million tonnes.",
+        "grade_source": "Not stated in the selected MBS.",
+        "mineral_zones_source": "One iron-ore band.",
+        "dip_strike_source": "Northeast-southwest strike, dipping 65-72 degrees northwest.",
+        "thickness_source": "2-6 m.",
+        "accessibility_source": "Neem Ka Thana and Shri Madhopur rail stations; road access to NH-37B; Jaipur airport about 152 km away.",
+        "hydrography_source": "No seasonal nala crosses the block and no perennial river is present; the source nevertheless describes seasonal-nala drainage.",
+        "climate_source": "Mean annual rainfall 450-550 mm; December temperature down to 1 C; June temperature up to 48 C.",
+        "topography_source": "One small hill with low-lying mountain terrain; toposheet 45M/14.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"A\", \"B\", \"C\", \"D\", \"E\"]",
+        "boundary_vertex_count": 5,
+        "centroid_latitude": 27.64886339,
+        "centroid_longitude": 75.90631983,
+        "computed_geodesic_area_ha": 18.436125,
+        "computed_to_mbs_area_difference_pct": 0.060381,
+        "ibm_to_mbs_area_difference_pct": 0.027137,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\", \"hydrography_text_internal_tension_no_nala_vs_seasonal_nala\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "10877",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=10877_Mineral_Block_Summary_ofToda_Iron_ore_Block_District_Sikar.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "655baf5fad11f24bbe200a5a3d52fd9e844db8943c09b6494b038dbfcb605c10",
+        "selected_mbs_pdf_bytes": 204414,
+        "selected_mbs_pdf_page_count": 4,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86895516666667,
+              27.250317916666667
+            ],
+            [
+              73.86893686111111,
+              27.252127805555556
+            ],
+            [
+              73.87136080555555,
+              27.25214736111111
+            ],
+            [
+              73.87137905555555,
+              27.25033747222222
+            ],
+            [
+              73.86895516666667,
+              27.250317916666667
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-069",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB02 n/V Harima Tehsil, District Nagaur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_02_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2023-09-12",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.9",
+        "mbs_area_ha": 4.8122,
+        "exploration_level": "G2",
+        "borehole_count": 2,
+        "drilled_meterage_m": 60.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "2 borehole(s) with cumulative meterage of 60 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "2.7 million tonnes of limestone.",
+        "grade_source": "Weighted average 51.34% CaO, 0.99% MgO and 2.21% SiO2.",
+        "mineral_zones_source": "1-3 zones, each 2.5-22.5 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 22.5 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"H\", \"B\", \"C\", \"I\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.25123264,
+        "centroid_longitude": 73.87015797,
+        "computed_geodesic_area_ha": 4.814549,
+        "computed_to_mbs_area_difference_pct": 0.048814,
+        "ibm_to_mbs_area_difference_pct": 1.824529,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11064",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11064_Mineral_Block_Summary_of_PSB_02_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "8d77d9884359fb23caea376f0b975c4d2ff5819e69c0be55b8d051a7ec3cef7f",
+        "selected_mbs_pdf_bytes": 688024,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86653127777777,
+              27.250298305555557
+            ],
+            [
+              73.86651291666666,
+              27.252108194444446
+            ],
+            [
+              73.86893686111111,
+              27.252127805555556
+            ],
+            [
+              73.86895516666667,
+              27.250317916666667
+            ],
+            [
+              73.86653127777777,
+              27.250298305555557
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-070",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB01 n/V Tehsil & District Nagaur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_01_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2023-09-11",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.9",
+        "mbs_area_ha": 4.8122,
+        "exploration_level": "G2",
+        "borehole_count": 1,
+        "drilled_meterage_m": 30.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "1 borehole(s) with cumulative meterage of 30 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "2.82 million tonnes of limestone.",
+        "grade_source": "Weighted average 51.97% CaO, 0.83% MgO and 2.16% SiO2.",
+        "mineral_zones_source": "1-3 zones, each 2.5-12 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 23.5 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"G\", \"A\", \"B\", \"H\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.25121306,
+        "centroid_longitude": 73.86773406,
+        "computed_geodesic_area_ha": 4.814552,
+        "computed_to_mbs_area_difference_pct": 0.048879,
+        "ibm_to_mbs_area_difference_pct": 1.824529,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11063",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11063_Mineral_Block_Summary_of_PSB_01_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "367033ffd0ce9262b6f28ad15b9550ae04329cd0e7e0d743a9e8f95337094dbf",
+        "selected_mbs_pdf_bytes": 687969,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86654955555555,
+              27.248493
+            ],
+            [
+              73.86653127777777,
+              27.250298305555557
+            ],
+            [
+              73.86895516666667,
+              27.250317916666667
+            ],
+            [
+              73.86897341666666,
+              27.248512611111114
+            ],
+            [
+              73.86654955555555,
+              27.248493
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-071",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB06 n/V Tehsil & District Nagaur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_06_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2023-09-18",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8,
+        "exploration_level": "G2",
+        "borehole_count": 1,
+        "drilled_meterage_m": 30.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "1 borehole(s) with cumulative meterage of 30 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "2.82 million tonnes of limestone.",
+        "grade_source": "Weighted average 51.97% CaO, 0.83% MgO and 2.16% SiO2.",
+        "mineral_zones_source": "1-3 zones, each 2.5-12 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 23.5 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"M\", \"G\", \"H\", \"N\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.24940546,
+        "centroid_longitude": 73.86775235,
+        "computed_geodesic_area_ha": 4.802353,
+        "computed_to_mbs_area_difference_pct": 0.049025,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11068",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11068_Mineral_Block_Summary_of_PSB_06_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "938da5805b35d5c804907473693c56b8450a80d1a62d08c49fe9c77a09b4a6d0",
+        "selected_mbs_pdf_bytes": 689164,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86897341666666,
+              27.248512611111114
+            ],
+            [
+              73.86895516666667,
+              27.250317916666667
+            ],
+            [
+              73.87137905555555,
+              27.25033747222222
+            ],
+            [
+              73.87139727777777,
+              27.248532166666667
+            ],
+            [
+              73.86897341666666,
+              27.248512611111114
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-072",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB07 n/V Tehsil & District Nagaur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_07_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2023-09-19",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8,
+        "exploration_level": "G2",
+        "borehole_count": 2,
+        "drilled_meterage_m": 60.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "2 borehole(s) with cumulative meterage of 60 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "2.7 million tonnes of limestone.",
+        "grade_source": "Weighted average 51.34% CaO, 0.99% MgO and 2.21% SiO2.",
+        "mineral_zones_source": "1-3 zones, each 2.5-22.5 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 22.5 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"N\", \"H\", \"I\", \"O\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.24942504,
+        "centroid_longitude": 73.87017623,
+        "computed_geodesic_area_ha": 4.802351,
+        "computed_to_mbs_area_difference_pct": 0.048972,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11069",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11069_Mineral_Block_Summary_of_PSB_07_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "4ce98a4149ace459e3b2401c1f3da98da1f26b3abd16d2ef128dec9be66e763e",
+        "selected_mbs_pdf_bytes": 689255,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85825277777778,
+              27.23442222222222
+            ],
+            [
+              73.85816252777778,
+              27.243230555555556
+            ],
+            [
+              73.91191802777779,
+              27.243604055555558
+            ],
+            [
+              73.90821500000001,
+              27.236624944444447
+            ],
+            [
+              73.90579136111111,
+              27.23660602777778
+            ],
+            [
+              73.90336775,
+              27.236587055555557
+            ],
+            [
+              73.90338544444445,
+              27.234781722222223
+            ],
+            [
+              73.86683644444443,
+              27.23449177777778
+            ],
+            [
+              73.86681816666666,
+              27.236297083333334
+            ],
+            [
+              73.86679988888888,
+              27.23810238888889
+            ],
+            [
+              73.86437624999999,
+              27.23808275
+            ],
+            [
+              73.86439458333332,
+              27.236277444444447
+            ],
+            [
+              73.86441288888888,
+              27.234472166666666
+            ],
+            [
+              73.85825277777778,
+              27.23442222222222
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-073",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "HPB 19 n/V Harima Khetolaw, Pithasia, Sarasani",
+        "block_name_mbs": "Mineral_Block_Summary_of_HPB_19_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2023-10-03",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "476.8",
+        "mbs_area_ha": 476.8022,
+        "exploration_level": "G2",
+        "borehole_count": 32,
+        "drilled_meterage_m": 1395.5,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "32 boreholes with cumulative meterage of 1,395.5 m; 30 holes are inside the block and 2 outside-hole influence areas were used; depths 6-53 m.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "161.95 million tonnes of limestone.",
+        "grade_source": "Weighted average 46.35% CaO, 2.9% MgO and 3.41% SiO2.",
+        "mineral_zones_source": "1-7 limestone zones.",
+        "dip_strike_source": "Bedded sedimentary limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative thickness 1.5-36.5 m.",
+        "accessibility_source": "Nagaur rail head; all-weather roads near Harima and Somna with access to Nagaur-Ladnun NH-65; Jodhpur airport about 160 km away.",
+        "hydrography_source": "No perennial river; small seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall 300 mm; December minimum 10 C; June maximum 45 C; average temperature 25.70 C.",
+        "topography_source": "Plain ground with scattered limestone outcrops partly concealed by windblown sand and agricultural soil; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"A2\", \"Y1\", \"X1\", \"I1\", \"H1\", \"G1\", \"J1\", \"F1\", \"D1\", \"B1\", \"A1\", \"C1\", \"E1\"]",
+        "boundary_vertex_count": 13,
+        "centroid_latitude": 27.23920246,
+        "centroid_longitude": 73.88386525,
+        "computed_geodesic_area_ha": 477.039617,
+        "computed_to_mbs_area_difference_pct": 0.049794,
+        "ibm_to_mbs_area_difference_pct": 0.000461,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11061",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11061_Mineral_Block_Summary_of_HPB_19_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "1aa816a510e0c18cbc9c074e2e94ced200a24e493befa902c131fa773dae95bc",
+        "selected_mbs_pdf_bytes": 509438,
+        "selected_mbs_pdf_page_count": 4,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85816252777778,
+              27.243230555555556
+            ],
+            [
+              73.85807425,
+              27.252039611111112
+            ],
+            [
+              73.86651291666666,
+              27.252108194444446
+            ],
+            [
+              73.86653127777777,
+              27.250298305555557
+            ],
+            [
+              73.86654955555555,
+              27.248493
+            ],
+            [
+              73.86897341666666,
+              27.248512611111114
+            ],
+            [
+              73.87139727777777,
+              27.248532166666667
+            ],
+            [
+              73.87382113888889,
+              27.248551694444444
+            ],
+            [
+              73.87624502777777,
+              27.248571166666668
+            ],
+            [
+              73.87866888888888,
+              27.248590583333336
+            ],
+            [
+              73.87865077777776,
+              27.250395916666665
+            ],
+            [
+              73.87863263888889,
+              27.252205805555555
+            ],
+            [
+              73.88266316666666,
+              27.25223638888889
+            ],
+            [
+              73.88268122222222,
+              27.250431083333332
+            ],
+            [
+              73.88269927777777,
+              27.24862577777778
+            ],
+            [
+              73.8851231388889,
+              27.248645083333333
+            ],
+            [
+              73.88754702777779,
+              27.24866436111111
+            ],
+            [
+              73.88752908333333,
+              27.250469694444444
+            ],
+            [
+              73.88751288888889,
+              27.252276666666667
+            ],
+            [
+              73.88749138888889,
+              27.254436277777778
+            ],
+            [
+              73.91779166666667,
+              27.25467383333333
+            ],
+            [
+              73.91191802777779,
+              27.243604055555558
+            ],
+            [
+              73.85816252777778,
+              27.243230555555556
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-074",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "HPB 20 n/V Harima Khetolaw, Pithasia, Sarasani",
+        "block_name_mbs": "Mineral_Block_Summary_of_HPB_20_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2023-10-04",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "547.55",
+        "mbs_area_ha": 547.5512,
+        "exploration_level": "G2",
+        "borehole_count": 32,
+        "drilled_meterage_m": 1125.5,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "32 boreholes with cumulative meterage of 1,125.5 m; 20 holes are inside the block and 12 outside-hole influence areas were used; depths 24-50 m.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "166.94 million tonnes of limestone.",
+        "grade_source": "The grade table prints 46.8% CaO while the narrative prints 46.89% CaO; both report 2.45% MgO and 4.77% SiO2.",
+        "mineral_zones_source": "1-7 limestone zones.",
+        "dip_strike_source": "Bedded sedimentary limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative thickness 1.5-24.15 m.",
+        "accessibility_source": "Nagaur rail head; all-weather roads near Harima and Somna with access to Nagaur-Ladnun NH-65; Jodhpur airport about 160 km away.",
+        "hydrography_source": "No perennial river; small seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall 300 mm; December minimum 10 C; June maximum 45 C; average temperature 25.70 C.",
+        "topography_source": "Plain ground with scattered limestone outcrops partly concealed by windblown sand and agricultural soil; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"Y1\", \"C'\", \"A\", \"G\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"L\", \"F\", \"S\", \"U\", \"X\", \"Y\", \"Z\", \"W\", \"D'\", \"P1\", \"O1\", \"X1\"]",
+        "boundary_vertex_count": 22,
+        "centroid_latitude": 27.24832167,
+        "centroid_longitude": 73.88955472,
+        "computed_geodesic_area_ha": 547.822609,
+        "computed_to_mbs_area_difference_pct": 0.049568,
+        "ibm_to_mbs_area_difference_pct": 0.000219,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\", \"mbs_grade_cao_internal_46_8_vs_46_89\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11062",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11062_Mineral_Block_Summary_of_HPB_20_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "85b1527d25a661a4ab85e70139f678b6f9290a4d417ed806a92bc8dffa8c62ee",
+        "selected_mbs_pdf_bytes": 509118,
+        "selected_mbs_pdf_page_count": 4,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.87137905555555,
+              27.25033747222222
+            ],
+            [
+              73.87136080555555,
+              27.25214736111111
+            ],
+            [
+              73.87378475,
+              27.25216688888889
+            ],
+            [
+              73.87380297222222,
+              27.250357
+            ],
+            [
+              73.87137905555555,
+              27.25033747222222
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-075",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB03 n/v Harima Tehsil & District Nagpur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_03_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-02-21",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8122,
+        "exploration_level": "G2",
+        "borehole_count": 1,
+        "drilled_meterage_m": 30.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "1 borehole(s) with cumulative meterage of 30 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "2.7 million tonnes of limestone.",
+        "grade_source": "Weighted average 51.34% CaO, 1.48% MgO and 2.34% SiO2.",
+        "mineral_zones_source": "One zone, 22.5 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 22.5 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"I\", \"C\", \"D\", \"J\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.25125218,
+        "centroid_longitude": 73.8725819,
+        "computed_geodesic_area_ha": 4.814574,
+        "computed_to_mbs_area_difference_pct": 0.04934,
+        "ibm_to_mbs_area_difference_pct": 0.253522,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11686",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11686_Mineral_Block_Summary_of_PSB_03_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "3d861cf3f6ab9df26aefdc6254b9d938750c059727fca85aa1e3ad07ca72bb63",
+        "selected_mbs_pdf_bytes": 687766,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.87380297222222,
+              27.250357
+            ],
+            [
+              73.87378475,
+              27.25216688888889
+            ],
+            [
+              73.87620869444444,
+              27.25218636111111
+            ],
+            [
+              73.87622688888888,
+              27.25037647222222
+            ],
+            [
+              73.87380297222222,
+              27.250357
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-076",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB04 n/v Harima Tehsil & District Nagpur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_04_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-02-22",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8122,
+        "exploration_level": "G2",
+        "borehole_count": 2,
+        "drilled_meterage_m": 60.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "2 borehole(s) with cumulative meterage of 60 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "2.16 million tonnes of limestone.",
+        "grade_source": "Weighted average 50.74% CaO, 2.07% MgO and 2.91% SiO2.",
+        "mineral_zones_source": "1-4 zones, each 1.5-22.5 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 28 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"J\", \"D\", \"E\", \"K\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.25127168,
+        "centroid_longitude": 73.87500583,
+        "computed_geodesic_area_ha": 4.814572,
+        "computed_to_mbs_area_difference_pct": 0.049287,
+        "ibm_to_mbs_area_difference_pct": 0.253522,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11687",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11687_Mineral_Block_Summary_of_PSB_04_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "1f491e24c69ab9cd88bb93316aadf37e7ec68a31f3b2250f1482c871b902234b",
+        "selected_mbs_pdf_bytes": 689116,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.87622688888888,
+              27.25037647222222
+            ],
+            [
+              73.87620869444444,
+              27.25218636111111
+            ],
+            [
+              73.87863263888889,
+              27.252205805555555
+            ],
+            [
+              73.87865077777776,
+              27.250395916666665
+            ],
+            [
+              73.87622688888888,
+              27.25037647222222
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-077",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB05 n/v Harima Tehsil & District Nagpur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_05_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-02-23",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8122,
+        "exploration_level": "G2",
+        "borehole_count": 1,
+        "drilled_meterage_m": 30.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "1 borehole(s) with cumulative meterage of 30 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "2.16 million tonnes of limestone.",
+        "grade_source": "Weighted average 50.15% CaO, 2.22% MgO and 3.06% SiO2.",
+        "mineral_zones_source": "1-4 zones, each 1.5-10.5 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 18 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"K\", \"E\", \"F\", \"L\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.25129114,
+        "centroid_longitude": 73.87742975,
+        "computed_geodesic_area_ha": 4.814542,
+        "computed_to_mbs_area_difference_pct": 0.048667,
+        "ibm_to_mbs_area_difference_pct": 0.253522,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11688",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11688_Mineral_Block_Summary_of_PSB_05_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "f826a350542c8d9097fe54f5b3575e93c11e5363abb62a9067e75731665d6c1d",
+        "selected_mbs_pdf_bytes": 707738,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.87139727777777,
+              27.248532166666667
+            ],
+            [
+              73.87137905555555,
+              27.25033747222222
+            ],
+            [
+              73.87380297222222,
+              27.250357
+            ],
+            [
+              73.87382113888889,
+              27.248551694444444
+            ],
+            [
+              73.87139727777777,
+              27.248532166666667
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-078",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB08 n/v Harima Tehsil & District Nagpur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_08_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-02-26",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8,
+        "exploration_level": "G2",
+        "borehole_count": 1,
+        "drilled_meterage_m": 30.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "1 borehole(s) with cumulative meterage of 30 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "2.7 million tonnes of limestone.",
+        "grade_source": "Weighted average 51.34% CaO, 2.09% MgO and 3.55% SiO2.",
+        "mineral_zones_source": "One zone, 22.5 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 22.5 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"O\", \"I\", \"J\", \"P\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.24944459,
+        "centroid_longitude": 73.87260011,
+        "computed_geodesic_area_ha": 4.802376,
+        "computed_to_mbs_area_difference_pct": 0.049498,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11689",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11689_Mineral_Block_Summary_of_PSB_08_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "f992078241bb42db3e1e1f3a07629de8b44b042c902a4e9f0c81da4b7bae812f",
+        "selected_mbs_pdf_bytes": 689361,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.87382113888889,
+              27.248551694444444
+            ],
+            [
+              73.87380297222222,
+              27.250357
+            ],
+            [
+              73.87622688888888,
+              27.25037647222222
+            ],
+            [
+              73.87624502777777,
+              27.248571166666668
+            ],
+            [
+              73.87382113888889,
+              27.248551694444444
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-079",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB09 n/v Harima Tehsil & District Nagpur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_09_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-02-27",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8,
+        "exploration_level": "G2",
+        "borehole_count": 2,
+        "drilled_meterage_m": 60.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "2 borehole(s) with cumulative meterage of 60 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "2.16 million tonnes of limestone.",
+        "grade_source": "Weighted average 50.74% CaO, 2.07% MgO and 2.91% SiO2.",
+        "mineral_zones_source": "1-4 zones, each 1.5-22.5 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 28 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"P\", \"J\", \"K\", \"Q\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.24946409,
+        "centroid_longitude": 73.87502401,
+        "computed_geodesic_area_ha": 4.802401,
+        "computed_to_mbs_area_difference_pct": 0.050012,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11690",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11690_Mineral_Block_Summary_of_PSB_09_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "f5c65a34cdd1785585e7785dc6bebc547d7f62730741f76d9f31a039e1f70453",
+        "selected_mbs_pdf_bytes": 508578,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.87624502777777,
+              27.248571166666668
+            ],
+            [
+              73.87622688888888,
+              27.25037647222222
+            ],
+            [
+              73.87865077777776,
+              27.250395916666665
+            ],
+            [
+              73.87866888888888,
+              27.248590583333336
+            ],
+            [
+              73.87624502777777,
+              27.248571166666668
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-080",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB010 n/v Harima Tehsil & District Nagpur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_10_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-02-28",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8,
+        "exploration_level": "G2",
+        "borehole_count": 1,
+        "drilled_meterage_m": 30.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "1 borehole(s) with cumulative meterage of 30 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "2.16 million tonnes of limestone.",
+        "grade_source": "Weighted average 50.15% CaO, 2.22% MgO and 3.06% SiO2.",
+        "mineral_zones_source": "1-4 zones, each 1.5-10.5 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 18 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"Q\", \"K\", \"L\", \"R\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.24948354,
+        "centroid_longitude": 73.8774479,
+        "computed_geodesic_area_ha": 4.80238,
+        "computed_to_mbs_area_difference_pct": 0.049589,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11691",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11691_Mineral_Block_Summary_of_PSB_10_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "25133dbf95e6d5314cc5573874dd8f7cf418772cb057abbf8d50eac99f2a628d",
+        "selected_mbs_pdf_bytes": 689151,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.88268122222222,
+              27.250431083333332
+            ],
+            [
+              73.88266316666666,
+              27.25223638888889
+            ],
+            [
+              73.88508713888889,
+              27.252257361111113
+            ],
+            [
+              73.88510513888889,
+              27.250450416666666
+            ],
+            [
+              73.88268122222222,
+              27.250431083333332
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-081",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB011 n/v Harima Tehsil & District Nagpur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_11_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-02-29",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8044,
+        "exploration_level": "G2",
+        "borehole_count": 1,
+        "drilled_meterage_m": 30.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "1 borehole(s) with cumulative meterage of 30 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "2.52 million tonnes of limestone.",
+        "grade_source": "Weighted average 49.85% CaO, 3.15% MgO and 1.49% SiO2.",
+        "mineral_zones_source": "Two zones, 7.5-13.5 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 21 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"U\", \"S\", \"T\", \"V\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.25134382,
+        "centroid_longitude": 73.88388435,
+        "computed_geodesic_area_ha": 4.804594,
+        "computed_to_mbs_area_difference_pct": 0.004042,
+        "ibm_to_mbs_area_difference_pct": 0.091583,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11692",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11692_Mineral_Block_Summary_of_PSB_11_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "9d80bbce000e9cef6556ffb5d693b2ac974226a78a0d93d616d3a08b94c7b4f0",
+        "selected_mbs_pdf_bytes": 689535,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.88510513888889,
+              27.250450416666666
+            ],
+            [
+              73.88508713888889,
+              27.252257361111113
+            ],
+            [
+              73.88751288888889,
+              27.252276666666667
+            ],
+            [
+              73.88752908333333,
+              27.250469694444444
+            ],
+            [
+              73.88510513888889,
+              27.250450416666666
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-082",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB012 n/v Harima Tehsil & District Nagpur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_12_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-03-01",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8062,
+        "exploration_level": "G2",
+        "borehole_count": 1,
+        "drilled_meterage_m": 30.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "1 borehole(s) with cumulative meterage of 30 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "2.52 million tonnes of limestone.",
+        "grade_source": "Weighted average 49.85% CaO, 3.15% MgO and 1.49% SiO2.",
+        "mineral_zones_source": "Two zones, 7.5-13.5 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 21 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"V\", \"T\", \"D'\", \"W\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.25136365,
+        "centroid_longitude": 73.88630856,
+        "computed_geodesic_area_ha": 4.808563,
+        "computed_to_mbs_area_difference_pct": 0.049173,
+        "ibm_to_mbs_area_difference_pct": 0.129,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11693",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11693_Mineral_Block_Summary_of_PSB_12_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "12c638e5003cb2f8c9e1c68c3e4d625f4e04d3516b0eb35fee2bf37820006999",
+        "selected_mbs_pdf_bytes": 689223,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.88269927777777,
+              27.24862577777778
+            ],
+            [
+              73.88268122222222,
+              27.250431083333332
+            ],
+            [
+              73.88510513888889,
+              27.250450416666666
+            ],
+            [
+              73.8851231388889,
+              27.248645083333333
+            ],
+            [
+              73.88269927777777,
+              27.24862577777778
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-083",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB013 n/v Harima Tehsil & District Nagpur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_13_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-03-04",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8,
+        "exploration_level": "G2",
+        "borehole_count": 1,
+        "drilled_meterage_m": 30.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "1 borehole(s) with cumulative meterage of 30 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "2.52 million tonnes of limestone.",
+        "grade_source": "Weighted average 49.85% CaO, 3.15% MgO and 1.49% SiO2.",
+        "mineral_zones_source": "Two zones, 7.5-13.5 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 21 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"X\", \"U\", \"V\", \"Y\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.24953809,
+        "centroid_longitude": 73.8839022,
+        "computed_geodesic_area_ha": 4.802401,
+        "computed_to_mbs_area_difference_pct": 0.050025,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11694",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11694_Mineral_Block_Summary_of_PSB_13_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "0d0d2044bc30c088f3d42ddfb8768a77234e6d510c09f562aff838dc5ba7652e",
+        "selected_mbs_pdf_bytes": 690637,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8851231388889,
+              27.248645083333333
+            ],
+            [
+              73.88510513888889,
+              27.250450416666666
+            ],
+            [
+              73.88752908333333,
+              27.250469694444444
+            ],
+            [
+              73.88754702777779,
+              27.24866436111111
+            ],
+            [
+              73.8851231388889,
+              27.248645083333333
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-084",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB 014 n/v Sarsani tehsil & district Nagaur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_14_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-03-05",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8,
+        "exploration_level": "G2",
+        "borehole_count": 1,
+        "drilled_meterage_m": 30.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "1 borehole(s) with cumulative meterage of 30 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "2.52 million tonnes of limestone.",
+        "grade_source": "Weighted average 49.85% CaO, 3.15% MgO and 1.49% SiO2.",
+        "mineral_zones_source": "Two zones, 7.5-13.5 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 21 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"Y\", \"V\", \"W\", \"Z\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.24955739,
+        "centroid_longitude": 73.8863261,
+        "computed_geodesic_area_ha": 4.80249,
+        "computed_to_mbs_area_difference_pct": 0.051883,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11695",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11695_Mineral_Block_Summary_of_PSB_14_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "190466eac44373339634e0c7b0e5b9f49737c7dd7d7f663a984a2eef30f13527",
+        "selected_mbs_pdf_bytes": 689876,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86439458333332,
+              27.236277444444447
+            ],
+            [
+              73.86437624999999,
+              27.23808275
+            ],
+            [
+              73.86679988888888,
+              27.23810238888889
+            ],
+            [
+              73.86681816666666,
+              27.236297083333334
+            ],
+            [
+              73.86439458333332,
+              27.236277444444447
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-085",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB 015 n/v Sarsani tehsil & district Nagaur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_15_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-03-06",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8,
+        "exploration_level": "G2",
+        "borehole_count": 2,
+        "drilled_meterage_m": 85.5,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "2 borehole(s) with cumulative meterage of 85.5 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "1.49 million tonnes of limestone.",
+        "grade_source": "Weighted average 48.4% CaO, 2.5% MgO and 4.51% SiO2.",
+        "mineral_zones_source": "2-7 zones, each 0.35-4.5 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 12.4 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"C1\", \"A1\", \"B1\", \"D1\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.23718992,
+        "centroid_longitude": 73.86559722,
+        "computed_geodesic_area_ha": 4.802348,
+        "computed_to_mbs_area_difference_pct": 0.048913,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11696",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11696_Mineral_Block_Summary_of_PSB_15_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "d7f483fd19f78be6dd04367fa1a5022149c1913935d1e6e634ee4d558117ddd0",
+        "selected_mbs_pdf_bytes": 508562,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86441288888888,
+              27.234472166666666
+            ],
+            [
+              73.86439458333332,
+              27.236277444444447
+            ],
+            [
+              73.86681816666666,
+              27.236297083333334
+            ],
+            [
+              73.86683644444443,
+              27.23449177777778
+            ],
+            [
+              73.86441288888888,
+              27.234472166666666
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-086",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB016 n/v Harima Tehsil & District Nagaur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_16_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-03-07",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8,
+        "exploration_level": "G2",
+        "borehole_count": 1,
+        "drilled_meterage_m": 35.5,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "1 borehole(s) with cumulative meterage of 35.5 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "0.9 million tonnes of limestone.",
+        "grade_source": "Weighted average 48.7% CaO, 1.81% MgO and 5.63% SiO2.",
+        "mineral_zones_source": "Two zones, each 0.9-4.5 m thick.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 7.5 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"E1\", \"C1\", \"D1\", \"F1\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.23538462,
+        "centroid_longitude": 73.86561552,
+        "computed_geodesic_area_ha": 4.802304,
+        "computed_to_mbs_area_difference_pct": 0.048,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11697",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11697_Mineral_Block_Summary_of_PSB_16_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "1ace24694bb48257c26a7f001cc5997798b005229902d319f6d8f965191f717b",
+        "selected_mbs_pdf_bytes": 508564,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.90338544444445,
+              27.234781722222223
+            ],
+            [
+              73.90336775,
+              27.236587055555557
+            ],
+            [
+              73.90579136111111,
+              27.23660602777778
+            ],
+            [
+              73.90580902777778,
+              27.234800694444445
+            ],
+            [
+              73.90338544444445,
+              27.234781722222223
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-087",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB017 n/v Harima Tehsil & District Nagaur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_17_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-03-11",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8,
+        "exploration_level": "G2",
+        "borehole_count": 1,
+        "drilled_meterage_m": 50.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "1 borehole(s) with cumulative meterage of 50 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "3.42 million tonnes of limestone.",
+        "grade_source": "Weighted average 47.4% CaO, 1.8% MgO and 1.77% SiO2.",
+        "mineral_zones_source": "1-7 zones.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 28.5 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"J1\", \"G1\", \"H1\", \"K1\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.23569388,
+        "centroid_longitude": 73.9045884,
+        "computed_geodesic_area_ha": 4.802431,
+        "computed_to_mbs_area_difference_pct": 0.050645,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11698",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11698_Mineral_Block_Summary_of_PSB_17_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "fa274a1a492779ce978815d746c8cfaff59473b63ceba2185de79b4ebd2bea3d",
+        "selected_mbs_pdf_bytes": 689339,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.90580902777778,
+              27.234800694444445
+            ],
+            [
+              73.90579136111111,
+              27.23660602777778
+            ],
+            [
+              73.90821500000001,
+              27.236624944444447
+            ],
+            [
+              73.90823261111112,
+              27.234819611111114
+            ],
+            [
+              73.90580902777778,
+              27.234800694444445
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-088",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "PSB 018 n/v Khetolow Tehsil & District Nagaur",
+        "block_name_mbs": "Mineral_Block_Summary_of_PSB_18_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-03-12",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "4.8",
+        "mbs_area_ha": 4.8,
+        "exploration_level": "G2",
+        "borehole_count": 1,
+        "drilled_meterage_m": 50.0,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "1 borehole(s) with cumulative meterage of 50 m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "3.42 million tonnes of limestone.",
+        "grade_source": "Weighted average 47.4% CaO, 1.81% MgO and 1.77% SiO2.",
+        "mineral_zones_source": "1-7 zones.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative mineralized thickness 28.5 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"K1\", \"H1\", \"I1\", \"L1\"]",
+        "boundary_vertex_count": 4,
+        "centroid_latitude": 27.23571282,
+        "centroid_longitude": 73.907012,
+        "computed_geodesic_area_ha": 4.802456,
+        "computed_to_mbs_area_difference_pct": 0.051162,
+        "ibm_to_mbs_area_difference_pct": 0.0,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11699",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11699_Mineral_Block_Summary_of_PSB_18_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "8469f1002d891e35329f9ac14eb2b5ab0bbf3a21a78276545dab12c500f078b7",
+        "selected_mbs_pdf_bytes": 689313,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.90823261111112,
+              27.234819611111114
+            ],
+            [
+              73.90821500000001,
+              27.236624944444447
+            ],
+            [
+              73.91191802777779,
+              27.243604055555558
+            ],
+            [
+              73.91779166666667,
+              27.25467383333333
+            ],
+            [
+              73.91781786111112,
+              27.251965833333333
+            ],
+            [
+              73.92791780555557,
+              27.252043555555556
+            ],
+            [
+              73.92835516666668,
+              27.234974611111113
+            ],
+            [
+              73.90823261111112,
+              27.234819611111114
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "record_id": "IBM-IMYB2024-AUCTION-089",
+        "record_type": "official_state_mbs_boundary_context",
+        "state_or_ut": "Rajasthan",
+        "block_name": "HPB21 n/v Khetolow Tehsil & District Nagaur",
+        "block_name_mbs": "Mineral_Block_Summary_of_HPB_21_District_Nagaur",
+        "mineral_source_ibm": "Limestone",
+        "normalized_material_ids_json": "[\"group:calcium-and-limestone\",\"rock:limestone\"]",
+        "normalized_material_names_json": "[\"Calcium and limestone\",\"Limestone\"]",
+        "chemical_or_english_names_json": "[\"calcium\",\"calcium carbonate\",\"Limestone\"]",
+        "formulae_or_symbols_json": "[]",
+        "auction_date_ibm": "2024-03-13",
+        "concession_type_code_ibm": "ML",
+        "ibm_area_ha": "307.0",
+        "mbs_area_ha": 307.1141,
+        "exploration_level": "G2",
+        "borehole_count": 13,
+        "drilled_meterage_m": 590.8,
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "13 boreholes inside the block with cumulative meterage of 590.8 m; depths 6-53 m.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "108.96 million tonnes of limestone.",
+        "grade_source": "Weighted average 47.08% CaO, 3.4% MgO and 4.1% SiO2.",
+        "mineral_zones_source": "1-7 limestone zones.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative thickness 1.5-24.96 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+        "coordinate_method": "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326",
+        "coordinate_source_pdf_pages_json": "[1]",
+        "boundary_point_ids_json": "[\"L1\", \"I1\", \"X1\", \"O1\", \"N1\", \"M1\", \"B'\"]",
+        "boundary_vertex_count": 7,
+        "centroid_latitude": 27.24270987,
+        "centroid_longitude": 73.91977829,
+        "computed_geodesic_area_ha": 307.273056,
+        "computed_to_mbs_area_difference_pct": 0.051758,
+        "ibm_to_mbs_area_difference_pct": 0.037152,
+        "polygon_valid": true,
+        "centroid_in_source_state": true,
+        "footprint_in_source_state_2011_boundary": true,
+        "geometry_quality_flags_json": "[\"source_coordinate_datum_not_stated\"]",
+        "geometry_admission_status": "admitted_authoritative_source_footprint",
+        "geometry_admission_reason": "Source-labelled boundary table passed polygon validity, state-centroid and 5% area reconciliation checks.",
+        "geometry_crs": "EPSG:4326",
+        "coordinate_datum_source": "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution",
+        "selected_mbs_file_id": "11685",
+        "selected_mbs_url": "https://www.mstcecommerce.com/auctionhome/download_docs.jsp?FILE_ID=11685_Mineral_Block_Summary_of_HPB_21_District_Nagaur.pdf&path=dynamiclinks&portal=mlcl&mdTyp=-",
+        "source_access_date": "2026-09-10",
+        "selected_mbs_pdf_sha256": "d720e6f6984dc78f5c8100299e2e6beec64e1d7c387e3c8637bef0f729875d3d",
+        "selected_mbs_pdf_bytes": 690237,
+        "selected_mbs_pdf_page_count": 3,
+        "current_legal_or_operational_status_verified": false,
+        "model_evidence_role": "context_only",
+        "model_exclusion_reason": "Geometry and technical context are authoritative to the MBS, but current operation and present legal status are not independently verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
               82.86152277777778,
               24.563351944444445
             ],

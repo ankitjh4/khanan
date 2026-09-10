@@ -13,7 +13,7 @@ GEOMETRIES = ROOT / "outputs" / "india_ibm_auctioned_concession_geometries_2023_
 MATCHES = ROOT / "outputs" / "india_ibm_auctioned_concession_mbs_match_audit_2023_24.csv"
 STATUS_EVIDENCE = ROOT / "outputs" / "india_ibm_auctioned_concession_status_evidence_2023_24.csv"
 DISTRICTS = ROOT / "sources" / "raw" / "2011_Dist.shp"
-OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-auction-mbs-geometries-alpha15.png"
+OUTPUT = ROOT / "assets" / "maps" / "khanan-ibm-auction-mbs-geometries-alpha16.png"
 
 COLORS = {
     "Bauxite": "#A46636",
@@ -46,6 +46,31 @@ def style_axis(axis) -> None:
 
 
 def label_polygons(axis, frame: gpd.GeoDataFrame) -> None:
+    if not frame.empty and frame.state_or_ut.iloc[0] == "Rajasthan":
+        groups = [
+            ("Nagaur limestone cluster\n(21 admitted blocks)", frame.record_id.str[-3:].astype(int).between(69, 89), (-8, 10)),
+            ("Sikar iron-ore cluster\n(4 admitted blocks)", frame.record_id.isin([
+                "IBM-IMYB2024-AUCTION-059", "IBM-IMYB2024-AUCTION-064",
+                "IBM-IMYB2024-AUCTION-065", "IBM-IMYB2024-AUCTION-068",
+            ]), (8, 8)),
+            ("Udaipur-Chittorgarh\n(3 admitted blocks)", frame.record_id.isin([
+                "IBM-IMYB2024-AUCTION-060", "IBM-IMYB2024-AUCTION-066",
+                "IBM-IMYB2024-AUCTION-067",
+            ]), (8, -18)),
+        ]
+        for label, mask, offset in groups:
+            subset = frame[mask]
+            point = subset.geometry.union_all().centroid
+            axis.annotate(
+                label,
+                (point.x, point.y),
+                xytext=offset,
+                textcoords="offset points",
+                fontsize=8,
+                color="#18232B",
+                linespacing=1.15,
+            )
+        return
     if not frame.empty and frame.state_or_ut.iloc[0] == "Madhya Pradesh":
         # The admitted Jhabua-Dhar footprints are tightly clustered at the
         # State scale. Keep the geometry visible and label only spatial anchors;
@@ -118,7 +143,13 @@ def main() -> None:
     )
     axes[0].set_title("India locator", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
 
-    for axis, state in zip(axes[1:9], ["Chhattisgarh", "Goa", "Gujarat", "Andhra Pradesh", "Uttar Pradesh", "Karnataka", "Maharashtra", "Madhya Pradesh"]):
+    for axis, state in zip(
+        axes[1:10],
+        [
+            "Chhattisgarh", "Gujarat", "Karnataka", "Maharashtra", "Madhya Pradesh",
+            "Rajasthan", "Goa", "Uttar Pradesh", "Andhra Pradesh",
+        ],
+    ):
         state_shape = states[states.ST_NM == state]
         subset = geometries[geometries.state_or_ut == state]
         state_shape.plot(ax=axis, facecolor="#E9E5DC", edgecolor="#756E64", linewidth=0.8)
@@ -154,9 +185,9 @@ def main() -> None:
         else:
             axis.set_title(f"{state}: {len(subset)} admitted footprints", loc="left", fontsize=13, weight="bold", color="#18232B", pad=10)
 
-    axes[9].axis("off")
-    axes[9].text(0.02, 0.94, "Review scope", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[9].transAxes)
-    axes[9].text(
+    axes[10].axis("off")
+    axes[10].text(0.02, 0.94, "Review scope", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[10].transAxes)
+    axes[10].text(
         0.02,
         0.80,
         f"{reviewed} IBM rows reviewed\n{selected_documents} official MBS PDFs selected\n{admitted} footprints admitted\n{reviewed_mbs_withheld} selected-MBS records withheld\n{no_public_boundary} Andhra rows status-linked only\n{unreviewed} IBM rows not yet reviewed",
@@ -164,28 +195,15 @@ def main() -> None:
         linespacing=1.45,
         color="#48545C",
         va="top",
-        transform=axes[9].transAxes,
+        transform=axes[10].transAxes,
     )
-    axes[9].text(
+    axes[10].text(
         0.02,
         0.22,
         "Withholding is deliberate: malformed coordinates,\nmissing hemispheres, incomplete boundary detail,\nor area-reconciliation failures are not repaired\nby inference.",
         fontsize=10.5,
         linespacing=1.5,
         color="#65717A",
-        va="top",
-        transform=axes[9].transAxes,
-    )
-
-    axes[10].axis("off")
-    axes[10].text(0.02, 0.94, "Madhya Pradesh decisions", fontsize=14, weight="bold", color="#18232B", va="top", transform=axes[10].transAxes)
-    axes[10].text(
-        0.02,
-        0.80,
-        "15 Phase-XI footprints admitted\n22 exact historical PDFs pinned by file ID\n\n7 reviewed geometries withheld:\n1 invalid source-order polygon\n3 invalid polygons plus area mismatch\n1 IBM/MBS area conflict\n2 coordinate-derived area failures\n\nNo source coordinate is repaired by inference.",
-        fontsize=12,
-        linespacing=1.45,
-        color="#48545C",
         va="top",
         transform=axes[10].transAxes,
     )
@@ -207,7 +225,7 @@ def main() -> None:
     fig.text(
         0.045,
         0.905,
-        f"IBM Table 5 contains 97 blocks. Alpha.15 reviews {reviewed} rows, admits {admitted} source footprints, and leaves {unreviewed} unreviewed.",
+        f"IBM Table 5 contains 97 blocks. Alpha.16 reviews all {reviewed} rows, selects {selected_documents} PDFs, and admits {admitted} source footprints.",
         fontsize=12,
         color="#48545C",
     )

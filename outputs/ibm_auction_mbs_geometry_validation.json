@@ -1,5 +1,5 @@
 {
-  "release": "v1.0-alpha.15",
+  "release": "v1.0-alpha.16",
   "source_portal_url": "https://www.mstcecommerce.com/auctionhome/mlcl/index.jsp",
   "source_access_date": "2026-09-10",
   "ibm_input_rows": 97,
@@ -16,23 +16,23 @@
     "Goa": 18
   },
   "state_portal_documents_total": 1124,
-  "curated_records": 66,
-  "selected_document_matches": 61,
-  "reviewed_profile_complete_rows": 61,
+  "curated_records": 97,
+  "selected_document_matches": 92,
+  "reviewed_profile_complete_rows": 92,
   "coordinate_evidence_type_counts": {
-    "ordered_boundary_vertices": 52,
+    "ordered_boundary_vertices": 82,
     "ordered_boundary_vertices_with_source_error": 4,
     "bounding_extents_only": 4,
-    "ordered_boundary_vertices_with_source_omission": 1
+    "ordered_boundary_vertices_with_source_omission": 1,
+    "ordered_boundary_vertices_with_excluded_lease_subareas": 1
   },
-  "published_geometries": 39,
+  "published_geometries": 67,
   "geometry_admission_status_counts": {
     "withheld_no_public_boundary_document": 5,
-    "admitted_authoritative_source_footprint": 39,
-    "withheld_source_conflict": 9,
+    "admitted_authoritative_source_footprint": 67,
+    "withheld_source_conflict": 12,
     "withheld_insufficient_coordinate_detail": 4,
-    "withheld_validation_failure": 9,
-    "withheld_not_reviewed": 31
+    "withheld_validation_failure": 9
   },
   "all_geometry_polygons_valid": true,
   "all_geometry_centroids_in_source_state": true,
@@ -41,22 +41,27 @@
   "model_evidence_role": "context_only",
   "outputs": {
     "india_ibm_auctioned_concession_mbs_match_audit_2023_24.csv": {
-      "sha256": "16981b954846e9d19a11176da37e58a82a134ecb334548148680d19766d14352",
-      "bytes": 200506
+      "sha256": "5eb1373ceae67c7093372bf51750fdccca201e72f6272f5ebc9e96efa7dd0a7c",
+      "bytes": 241676
     },
     "india_ibm_auctioned_concession_geometries_2023_24.csv": {
-      "sha256": "1b0629a059dc24b472074b21dab2283591e0f9a9f0c3810eacefe6acef03fb7b",
-      "bytes": 179003
+      "sha256": "320a8e365f3504c3b12e167808f80a10abf6202dd5f3f0a40fd3ade23bace79e",
+      "bytes": 245812
     },
     "india_ibm_auctioned_concession_geometries_2023_24.geojson": {
-      "sha256": "5e1b4c32fb82acb153a98cdc272d38f8041a46f04f36a2060642d8f582a68bd6",
-      "bytes": 339278
+      "sha256": "953c719c3b4b4c981fec04ff8010e24db3ba1b8b098d2137ba69343f8992f248",
+      "bytes": 474628
     }
   },
   "limitations": [
-    "This release reviews 66 of the 97 IBM Table 5 records: 61 selected State MBS PDFs and five Andhra Pradesh exact-name searches with no match in the current public index.",
+    "This release reviews all 97 IBM Table 5 records: 92 selected State MBS PDFs and five Andhra Pradesh exact-name searches with no match in the current public index.",
     "The 22 Madhya Pradesh rows are matched to the browser-verified Phase-XI tranche with pinned MSTC file identifiers; later same-name uploads are not substituted.",
+    "The 31 Rajasthan rows are matched to browser-verified historical file identifiers spanning MSTC IDs 10122-11699; later or earlier same-name uploads are not substituted.",
     "The five Andhra Pradesh rows are withheld from geometry because no public boundary document was found in the current State MBS index; their dated official-secondary status evidence is published separately.",
+    "Khakhliya Khera is withheld because its two published mining-lease exclusion rings do not reconcile with the outer boundary or the stated 642.45 ha free area; one exclusion ring also crosses the published outer boundary.",
+    "Pipaliya and Manpura are withheld because IBM assigns 518.65 ha and 1,150 ha respectively, while the named MBS documents publish the opposite areas and their coordinate-derived areas support the MBS names; no IBM row-area swap is silently corrected.",
+    "HPB-20 prints 46.8% CaO in its grade table and 46.89% CaO in its narrative; both source values are retained.",
+    "Toda states that no seasonal nala crosses the block but also describes drainage by a seasonal nala; the internal hydrography tension is retained.",
     "Katni, Dhamani Nana and Katangjhari source-order boundaries form invalid polygons; Pindrai is also invalid and has a material coordinate-derived area mismatch. These geometries are withheld rather than reordered or repaired.",
     "Chorgadi-Puraina is withheld because IBM publishes 378.404 ha while the Phase-XI MBS publishes 332.654 ha.",
     "Bamanbardi and Siluwa-Jhansi are withheld because coordinate-derived areas exceed the MBS areas by 5.24% and 5.12%, respectively.",

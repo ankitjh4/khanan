@@ -43,6 +43,8 @@ GEOJSON_OUTPUT = ROOT / "outputs" / "india_ibm_auctioned_concession_geometries_2
 VALIDATION_OUTPUT = ROOT / "outputs" / "ibm_auction_mbs_geometry_validation.json"
 DISTRICT_BOUNDARIES = ROOT / "sources" / "raw" / "2011_Dist.shp"
 SOURCE_ID = "SRC_MSTC_STATE_MBS_IBM_AUCTIONS_2023_24"
+RELEASE_VERSION = "v1.0-alpha.16"
+RELEASE_SCOPE = "alpha_16"
 
 PORTAL_INDEX = "https://www.mstcecommerce.com/auctionhome/mlcl/index.jsp"
 STATE_LINK_CODES = {
@@ -120,6 +122,37 @@ CURATED_MATCHES = {
     "IBM-IMYB2024-AUCTION-056": r"^summary of kondhala block$",
     "IBM-IMYB2024-AUCTION-057": r"^summary of minzhari copper block$",
     "IBM-IMYB2024-AUCTION-058": r"^summary of savali manganese block$",
+    "IBM-IMYB2024-AUCTION-059": r"^mineral block summary of nyorana dhandela block district sikar$",
+    "IBM-IMYB2024-AUCTION-060": r"^mineral block summary of hariyav jaspura block district udaipur$",
+    "IBM-IMYB2024-AUCTION-061": r"^mineral block summary of khakhliya khera block$",
+    "IBM-IMYB2024-AUCTION-062": r"^mineral block summary pipaliya block$",
+    "IBM-IMYB2024-AUCTION-063": r"^mineral block summary of manpura block$",
+    "IBM-IMYB2024-AUCTION-064": r"^mineral block summary of ladi ka bas block district sikar$",
+    "IBM-IMYB2024-AUCTION-065": r"^mineral block summary of kalakota block district sikar$",
+    "IBM-IMYB2024-AUCTION-066": r"^mineral block summary of ladana block district udaipur$",
+    "IBM-IMYB2024-AUCTION-067": r"^mineral block summary of bhabhriya ka kheda block district chittorgarh$",
+    "IBM-IMYB2024-AUCTION-068": r"^mineral block summary oftoda iron ore block district sikar$",
+    "IBM-IMYB2024-AUCTION-069": r"^mineral block summary of psb 02 district nagaur$",
+    "IBM-IMYB2024-AUCTION-070": r"^mineral block summary of psb 01 district nagaur$",
+    "IBM-IMYB2024-AUCTION-071": r"^mineral block summary of psb 06 district nagaur$",
+    "IBM-IMYB2024-AUCTION-072": r"^mineral block summary of psb 07 district nagaur$",
+    "IBM-IMYB2024-AUCTION-073": r"^mineral block summary of hpb 19 district nagaur$",
+    "IBM-IMYB2024-AUCTION-074": r"^mineral block summary of hpb 20 district nagaur$",
+    "IBM-IMYB2024-AUCTION-075": r"^mineral block summary of psb 03 district nagaur$",
+    "IBM-IMYB2024-AUCTION-076": r"^mineral block summary of psb 04 district nagaur$",
+    "IBM-IMYB2024-AUCTION-077": r"^mineral block summary of psb 05 district nagaur$",
+    "IBM-IMYB2024-AUCTION-078": r"^mineral block summary of psb 08 district nagaur$",
+    "IBM-IMYB2024-AUCTION-079": r"^mineral block summary of psb 09 district nagaur$",
+    "IBM-IMYB2024-AUCTION-080": r"^mineral block summary of psb 10 district nagaur$",
+    "IBM-IMYB2024-AUCTION-081": r"^mineral block summary of psb 11 district nagaur$",
+    "IBM-IMYB2024-AUCTION-082": r"^mineral block summary of psb 12 district nagaur$",
+    "IBM-IMYB2024-AUCTION-083": r"^mineral block summary of psb 13 district nagaur$",
+    "IBM-IMYB2024-AUCTION-084": r"^mineral block summary of psb 14 district nagaur$",
+    "IBM-IMYB2024-AUCTION-085": r"^mineral block summary of psb 15 district nagaur$",
+    "IBM-IMYB2024-AUCTION-086": r"^mineral block summary of psb 16 district nagaur$",
+    "IBM-IMYB2024-AUCTION-087": r"^mineral block summary of psb 17 district nagaur$",
+    "IBM-IMYB2024-AUCTION-088": r"^mineral block summary of psb 18 district nagaur$",
+    "IBM-IMYB2024-AUCTION-089": r"^mineral block summary of hpb 21 district nagaur$",
     "IBM-IMYB2024-AUCTION-090": r"\bphase\s*4\b.*\bgirar\b.*\biron\b.*\bgold\b",
     "IBM-IMYB2024-AUCTION-091": r"\bphase\s*4\b.*\bbharhari\b.*\biron\b",
     "IBM-IMYB2024-AUCTION-092": r"\bphase\s*4\b.*\bsona\s*pahari\b.*\bgold\b",
@@ -157,6 +190,44 @@ CURATED_FILE_ID_OVERRIDES = {
     "IBM-IMYB2024-AUCTION-046": "10938",
     "IBM-IMYB2024-AUCTION-047": "10930",
     "IBM-IMYB2024-AUCTION-048": "10919",
+    "IBM-IMYB2024-AUCTION-059": "10124",
+    "IBM-IMYB2024-AUCTION-060": "10122",
+    "IBM-IMYB2024-AUCTION-061": "10622",
+    "IBM-IMYB2024-AUCTION-062": "10624",
+    "IBM-IMYB2024-AUCTION-063": "10623",
+    "IBM-IMYB2024-AUCTION-064": "10849",
+    "IBM-IMYB2024-AUCTION-065": "10847",
+    "IBM-IMYB2024-AUCTION-066": "10848",
+    "IBM-IMYB2024-AUCTION-067": "10844",
+    "IBM-IMYB2024-AUCTION-068": "10877",
+    "IBM-IMYB2024-AUCTION-069": "11064",
+    "IBM-IMYB2024-AUCTION-070": "11063",
+    "IBM-IMYB2024-AUCTION-071": "11068",
+    "IBM-IMYB2024-AUCTION-072": "11069",
+    "IBM-IMYB2024-AUCTION-073": "11061",
+    "IBM-IMYB2024-AUCTION-074": "11062",
+    "IBM-IMYB2024-AUCTION-075": "11686",
+    "IBM-IMYB2024-AUCTION-076": "11687",
+    "IBM-IMYB2024-AUCTION-077": "11688",
+    "IBM-IMYB2024-AUCTION-078": "11689",
+    "IBM-IMYB2024-AUCTION-079": "11690",
+    "IBM-IMYB2024-AUCTION-080": "11691",
+    "IBM-IMYB2024-AUCTION-081": "11692",
+    "IBM-IMYB2024-AUCTION-082": "11693",
+    "IBM-IMYB2024-AUCTION-083": "11694",
+    "IBM-IMYB2024-AUCTION-084": "11695",
+    "IBM-IMYB2024-AUCTION-085": "11696",
+    "IBM-IMYB2024-AUCTION-086": "11697",
+    "IBM-IMYB2024-AUCTION-087": "11698",
+    "IBM-IMYB2024-AUCTION-088": "11699",
+    "IBM-IMYB2024-AUCTION-089": "11685",
+}
+
+MP_PHASE_XI_PINNED_RECORDS = {
+    f"IBM-IMYB2024-AUCTION-{number:03d}" for number in range(27, 49)
+}
+RAJASTHAN_HISTORICAL_PINNED_RECORDS = {
+    f"IBM-IMYB2024-AUCTION-{number:03d}" for number in range(59, 90)
 }
 
 # The current public Andhra Pradesh MBS index exposes newer 2025-26 tranches,
@@ -635,6 +706,37 @@ MBS_AREA_HA = {
     "IBM-IMYB2024-AUCTION-056": 105.0,
     "IBM-IMYB2024-AUCTION-057": 1743.24,
     "IBM-IMYB2024-AUCTION-058": 1200.0,
+    "IBM-IMYB2024-AUCTION-059": 16.7750,
+    "IBM-IMYB2024-AUCTION-060": 94.62,
+    "IBM-IMYB2024-AUCTION-061": 642.45,
+    "IBM-IMYB2024-AUCTION-062": 1150.0,
+    "IBM-IMYB2024-AUCTION-063": 518.6566,
+    "IBM-IMYB2024-AUCTION-064": 38.7545,
+    "IBM-IMYB2024-AUCTION-065": 34.4418,
+    "IBM-IMYB2024-AUCTION-066": 300.0,
+    "IBM-IMYB2024-AUCTION-067": 970.0,
+    "IBM-IMYB2024-AUCTION-068": 18.4250,
+    "IBM-IMYB2024-AUCTION-069": 4.8122,
+    "IBM-IMYB2024-AUCTION-070": 4.8122,
+    "IBM-IMYB2024-AUCTION-071": 4.8000,
+    "IBM-IMYB2024-AUCTION-072": 4.8000,
+    "IBM-IMYB2024-AUCTION-073": 476.8022,
+    "IBM-IMYB2024-AUCTION-074": 547.5512,
+    "IBM-IMYB2024-AUCTION-075": 4.8122,
+    "IBM-IMYB2024-AUCTION-076": 4.8122,
+    "IBM-IMYB2024-AUCTION-077": 4.8122,
+    "IBM-IMYB2024-AUCTION-078": 4.8000,
+    "IBM-IMYB2024-AUCTION-079": 4.8000,
+    "IBM-IMYB2024-AUCTION-080": 4.8000,
+    "IBM-IMYB2024-AUCTION-081": 4.8044,
+    "IBM-IMYB2024-AUCTION-082": 4.8062,
+    "IBM-IMYB2024-AUCTION-083": 4.8000,
+    "IBM-IMYB2024-AUCTION-084": 4.8000,
+    "IBM-IMYB2024-AUCTION-085": 4.8000,
+    "IBM-IMYB2024-AUCTION-086": 4.8000,
+    "IBM-IMYB2024-AUCTION-087": 4.8000,
+    "IBM-IMYB2024-AUCTION-088": 4.8000,
+    "IBM-IMYB2024-AUCTION-089": 307.1141,
     "IBM-IMYB2024-AUCTION-090": 231.175,
     "IBM-IMYB2024-AUCTION-091": 134.77,
     "IBM-IMYB2024-AUCTION-092": 79.0,
@@ -699,6 +801,37 @@ PROFILE_NUMBERS = {
     "IBM-IMYB2024-AUCTION-056": {"exploration_level": "G2", "borehole_count": 27, "drilled_meterage_m": 2373.65},
     "IBM-IMYB2024-AUCTION-057": {"exploration_level": "G3", "borehole_count": 10, "drilled_meterage_m": 1746.9},
     "IBM-IMYB2024-AUCTION-058": {"exploration_level": "G4", "borehole_count": 3, "drilled_meterage_m": 281.5},
+    "IBM-IMYB2024-AUCTION-059": {"exploration_level": "G4", "borehole_count": "", "drilled_meterage_m": ""},
+    "IBM-IMYB2024-AUCTION-060": {"exploration_level": "G2", "borehole_count": 7, "drilled_meterage_m": 583.0},
+    "IBM-IMYB2024-AUCTION-061": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
+    "IBM-IMYB2024-AUCTION-062": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
+    "IBM-IMYB2024-AUCTION-063": {"exploration_level": "G4", "borehole_count": "", "drilled_meterage_m": ""},
+    "IBM-IMYB2024-AUCTION-064": {"exploration_level": "G4", "borehole_count": "", "drilled_meterage_m": ""},
+    "IBM-IMYB2024-AUCTION-065": {"exploration_level": "G4", "borehole_count": "", "drilled_meterage_m": ""},
+    "IBM-IMYB2024-AUCTION-066": {"exploration_level": "G3", "borehole_count": 4, "drilled_meterage_m": 608.6},
+    "IBM-IMYB2024-AUCTION-067": {"exploration_level": "G4", "borehole_count": 0, "drilled_meterage_m": 0.0},
+    "IBM-IMYB2024-AUCTION-068": {"exploration_level": "G4", "borehole_count": "", "drilled_meterage_m": ""},
+    "IBM-IMYB2024-AUCTION-069": {"exploration_level": "G2", "borehole_count": 2, "drilled_meterage_m": 60.0},
+    "IBM-IMYB2024-AUCTION-070": {"exploration_level": "G2", "borehole_count": 1, "drilled_meterage_m": 30.0},
+    "IBM-IMYB2024-AUCTION-071": {"exploration_level": "G2", "borehole_count": 1, "drilled_meterage_m": 30.0},
+    "IBM-IMYB2024-AUCTION-072": {"exploration_level": "G2", "borehole_count": 2, "drilled_meterage_m": 60.0},
+    "IBM-IMYB2024-AUCTION-073": {"exploration_level": "G2", "borehole_count": 32, "drilled_meterage_m": 1395.5},
+    "IBM-IMYB2024-AUCTION-074": {"exploration_level": "G2", "borehole_count": 32, "drilled_meterage_m": 1125.5},
+    "IBM-IMYB2024-AUCTION-075": {"exploration_level": "G2", "borehole_count": 1, "drilled_meterage_m": 30.0},
+    "IBM-IMYB2024-AUCTION-076": {"exploration_level": "G2", "borehole_count": 2, "drilled_meterage_m": 60.0},
+    "IBM-IMYB2024-AUCTION-077": {"exploration_level": "G2", "borehole_count": 1, "drilled_meterage_m": 30.0},
+    "IBM-IMYB2024-AUCTION-078": {"exploration_level": "G2", "borehole_count": 1, "drilled_meterage_m": 30.0},
+    "IBM-IMYB2024-AUCTION-079": {"exploration_level": "G2", "borehole_count": 2, "drilled_meterage_m": 60.0},
+    "IBM-IMYB2024-AUCTION-080": {"exploration_level": "G2", "borehole_count": 1, "drilled_meterage_m": 30.0},
+    "IBM-IMYB2024-AUCTION-081": {"exploration_level": "G2", "borehole_count": 1, "drilled_meterage_m": 30.0},
+    "IBM-IMYB2024-AUCTION-082": {"exploration_level": "G2", "borehole_count": 1, "drilled_meterage_m": 30.0},
+    "IBM-IMYB2024-AUCTION-083": {"exploration_level": "G2", "borehole_count": 1, "drilled_meterage_m": 30.0},
+    "IBM-IMYB2024-AUCTION-084": {"exploration_level": "G2", "borehole_count": 1, "drilled_meterage_m": 30.0},
+    "IBM-IMYB2024-AUCTION-085": {"exploration_level": "G2", "borehole_count": 2, "drilled_meterage_m": 85.5},
+    "IBM-IMYB2024-AUCTION-086": {"exploration_level": "G2", "borehole_count": 1, "drilled_meterage_m": 35.5},
+    "IBM-IMYB2024-AUCTION-087": {"exploration_level": "G2", "borehole_count": 1, "drilled_meterage_m": 50.0},
+    "IBM-IMYB2024-AUCTION-088": {"exploration_level": "G2", "borehole_count": 1, "drilled_meterage_m": 50.0},
+    "IBM-IMYB2024-AUCTION-089": {"exploration_level": "G2", "borehole_count": 13, "drilled_meterage_m": 590.8},
     "IBM-IMYB2024-AUCTION-090": {"exploration_level": "G3", "borehole_count": 44, "drilled_meterage_m": 8265.12},
     "IBM-IMYB2024-AUCTION-091": {"exploration_level": "G3", "borehole_count": 8, "drilled_meterage_m": 822.7},
     "IBM-IMYB2024-AUCTION-092": {"exploration_level": "G3", "borehole_count": 19, "drilled_meterage_m": 2359.9},
@@ -1300,6 +1433,238 @@ PROFILE_TEXT = {
     },
 }
 
+# Rajasthan source-normalized profiles.  The short PSB/HPB Nagaur summaries
+# use a repeated form, so their common hydrography, climate, access and terrain
+# wording is represented once while block-specific drilling, resources and
+# grades remain explicit below.
+PROFILE_TEXT.update({
+    "IBM-IMYB2024-AUCTION-059": {
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "The borehole and meterage cells contain dashes; no zero is inferred.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "Tentative mineral resource: 3.3 million tonnes.",
+        "grade_source": "Not stated in the selected MBS.",
+        "mineral_zones_source": "Two iron-ore bands.",
+        "dip_strike_source": "NNE-SSW trend, dipping northwest at about 55-80 degrees.",
+        "thickness_source": "Iron-ore width 27-130 m including intercalated waste.",
+        "accessibility_source": "Neem Ka Thana and Shri Madhopur rail stations; RJSH-37B road access; Jaipur airport about 150 km away.",
+        "hydrography_source": "Seasonal nala drainage; no perennial river in the area.",
+        "climate_source": "Mean annual rainfall 450-550 mm; December temperature down to 1 C; June temperature up to 48 C.",
+        "topography_source": "One small hill with low-lying mountain terrain; Survey of India toposheet 45M/13.",
+    },
+    "IBM-IMYB2024-AUCTION-060": {
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "7 boreholes with cumulative meterage of 583 m; spacing varies from 70 m to 255 m.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "74.21 million tonnes of limestone.",
+        "grade_source": "Weighted average 44.14% CaO, 9.27% SiO2 and 1.57% MgO.",
+        "mineral_zones_source": "Limestone exposed for about 1.2 km, bifurcated into two parts by an amphibolite intrusive.",
+        "dip_strike_source": "NNW-SSE to north-south, locally NE-SW; 60-80 degree easterly dip with local reverse dip due to folding.",
+        "thickness_source": "Exposed limestone width 20-250 m.",
+        "accessibility_source": "Udaipur rail station; all-weather road via Debari on the Udaipur-Kurabar road; Maharana Pratap Airport at Dabok.",
+        "hydrography_source": "Low ridge with gradual southern slopes and small seasonal nalas flowing south.",
+        "climate_source": "Mean annual rainfall about 600 mm; December temperature 4-10 C; June temperature 35-44 C.",
+        "topography_source": "Low-lying undulating plain and rugged linear bands with soil and agricultural fields; average contour about 520 m; toposheet 45H/14.",
+    },
+    "IBM-IMYB2024-AUCTION-061": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Base metal and associated mineralization",
+        "geological_resources_source": "No geological mineral resource was calculated at G4 stage.",
+        "grade_source": "NA in the selected MBS.",
+        "mineral_zones_source": "One zone parallel to strike, extending up to 2 km.",
+        "dip_strike_source": "N35W to N55W, with moderate dip toward the northeast.",
+        "thickness_source": "5-150 m.",
+        "accessibility_source": "Jaipur-Ajmer-Udaipur and Jaipur-Bhilwara-Udaipur highways; Mavli Junction about 35 km from the block; Udaipur airport about 60 km away.",
+        "hydrography_source": "Water table deeper than 25 m; seasonal river drainage.",
+        "climate_source": "Average annual temperature 24.6 C; mean annual rainfall about 525 mm; December temperature down to 1 C; June temperature up to 45 C.",
+        "topography_source": "Mostly plain, soil-covered ground with low rock-and-sand mounds and some low hills; toposheet 45K/4.",
+    },
+    "IBM-IMYB2024-AUCTION-062": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "No boreholes.",
+        "mineral_source_mbs": "Copper",
+        "geological_resources_source": "Yet to explore; no resource was calculated.",
+        "grade_source": "NA in the selected MBS.",
+        "mineral_zones_source": "To be established after detailed sampling; mineralization is reported from two bedrock samples in a well section.",
+        "dip_strike_source": "North-south to N20E-S20W, locally swerving to N50E due to folding; vertical to subvertical dips.",
+        "thickness_source": "To be ascertained.",
+        "accessibility_source": "All-season metalled road via Chittorgarh-Bhupalsagar-Udaipur; Fatehnagar rail head; SH-9; Dabok airport.",
+        "hydrography_source": "Water table 25-30 m deep; no perennial stream; drainage controlled by the Berach and Wagin rivers.",
+        "climate_source": "Average annual rainfall 58.7 cm; December temperature 0 C; June temperature 45 C.",
+        "topography_source": "Mostly flat with a few ravines; elevation 485-520 m above sea level; toposheet 45L/1.",
+    },
+    "IBM-IMYB2024-AUCTION-063": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "NA in the selected MBS.",
+        "mineral_source_mbs": "Base metal and associated minerals",
+        "geological_resources_source": "NA; no resource was calculated.",
+        "grade_source": "NA in the selected MBS.",
+        "mineral_zones_source": "Not stated in the selected MBS.",
+        "dip_strike_source": "Strike varies from northeast to northwest, with low to moderate dips toward southeast and northeast respectively.",
+        "thickness_source": "NA in the selected MBS.",
+        "accessibility_source": "NH-78 road connections to Ajmer, Jaipur and Udaipur; Mandalgarh railway station about 18 km away; Jaipur airport about 235 km away.",
+        "hydrography_source": "Water table 10-20 m below ground; seasonal drainage and the Kothari River.",
+        "climate_source": "Mean annual rainfall 300-400 mm; December temperature down to 1-2 C; June temperature up to 45 C.",
+        "topography_source": "Mostly plain with isolated hillocks and scattered outcrops; elevation 440-460 m above sea level; toposheet 45K/11.",
+    },
+    "IBM-IMYB2024-AUCTION-064": {
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "Not stated in the selected MBS.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "Tentative mineral resource: 8.7 million tonnes.",
+        "grade_source": "Not stated in the selected MBS.",
+        "mineral_zones_source": "Several intermittently exposed, bedded iron-ore bands.",
+        "dip_strike_source": "Northeast-southwest strike, dipping 72-78 degrees southeast.",
+        "thickness_source": "10-50 m.",
+        "accessibility_source": "Shri Madhopur and Neem Ka Thana rail stations; road connection to NH-37B; Jaipur airport about 138 km away.",
+        "hydrography_source": "Seasonal nala south of the area; no perennial river.",
+        "climate_source": "Mean annual rainfall 450-550 mm; December temperature down to 1 C; June temperature up to 48 C.",
+        "topography_source": "Small hillocks with low-lying mountain terrain; toposheet 45M/14.",
+    },
+    "IBM-IMYB2024-AUCTION-065": {
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "Not stated in the selected MBS.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "Tentative mineral resource: 3.9 million tonnes.",
+        "grade_source": "Not stated in the selected MBS.",
+        "mineral_zones_source": "Several intermittently exposed, bedded iron-ore bands.",
+        "dip_strike_source": "Northeast-southwest strike, dipping 72-78 degrees southeast.",
+        "thickness_source": "6-25 m.",
+        "accessibility_source": "Shri Madhopur and Neem Ka Thana rail stations; road connection to NH-37B; Jaipur airport about 138 km away.",
+        "hydrography_source": "Seasonal nala south of the area; no perennial river.",
+        "climate_source": "Mean annual rainfall 450-550 mm; December temperature down to 1 C; June temperature up to 48 C.",
+        "topography_source": "Small hillocks with low-lying mountain terrain; toposheet 45M/14.",
+    },
+    "IBM-IMYB2024-AUCTION-066": {
+        "exploration_agency_source": "In-house drilling.",
+        "borehole_summary_source": "4 inclined boreholes with cumulative meterage of 608.60 m; 200 m strike spacing.",
+        "mineral_source_mbs": "Copper",
+        "geological_resources_source": "Resource not estimated because poor grade was intersected in the boreholes.",
+        "grade_source": "Poor grade intersected; numerical grade is not stated.",
+        "mineral_zones_source": "Two quartz veins, approximately 70 m by 10 m and 70 m by 15 m, with malachite, pyrite, bornite and chalcopyrite.",
+        "dip_strike_source": "Quartz veins trend NNW-SSE to north-south; dominant S1 foliation north-south to N20E, dipping 16-55 degrees east; S2 strikes N10W-N20W with steep easterly dip.",
+        "thickness_source": "Copper indications occur in quartz veins 10-15 m thick.",
+        "accessibility_source": "Metalled-road and railway access; Fatehnagar rail station; NH-48; Udaipur airport about 50 km away.",
+        "hydrography_source": "Water table 20-30 m; small streamlets drain to a village pond; dendritic drainage controlled by the Berach River.",
+        "climate_source": "Mean annual rainfall 689 mm; average temperature 31.6 C; December night temperature 11.6 C; June temperature up to 44 C.",
+        "topography_source": "Gently undulating peneplain with 1-5 m soil cover, sparse knolls, extensive agricultural land and a lake in the south; toposheet 45L/1.",
+    },
+    "IBM-IMYB2024-AUCTION-067": {
+        "exploration_agency_source": "Geological Survey of India.",
+        "borehole_summary_source": "Nil.",
+        "mineral_source_mbs": "Base metal and associated mineralization",
+        "geological_resources_source": "No geological mineral resource was calculated at G4 stage.",
+        "grade_source": "NA in the selected MBS.",
+        "mineral_zones_source": "One mineralized zone.",
+        "dip_strike_source": "NNE-SSW, dipping west.",
+        "thickness_source": "Not stated in the selected MBS.",
+        "accessibility_source": "SH-12 and roads toward Jaipur, Chittorgarh and Bhilwara; Kapasan Junction rail head; Udaipur airport about 98 km away.",
+        "hydrography_source": "Banas River and tributaries.",
+        "climate_source": "Average annual temperature 25.4 C; mean annual rainfall 400 mm; December temperature down to 15 C; June temperature up to 45 C.",
+        "topography_source": "Mostly soil-covered plain with low rock-and-sand mounds and some low hills; toposheet 45L/5.",
+    },
+    "IBM-IMYB2024-AUCTION-068": {
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "The borehole and meterage cells contain dashes; no zero is inferred.",
+        "mineral_source_mbs": "Iron ore",
+        "geological_resources_source": "Tentative mineral resource: 1.8 million tonnes.",
+        "grade_source": "Not stated in the selected MBS.",
+        "mineral_zones_source": "One iron-ore band.",
+        "dip_strike_source": "Northeast-southwest strike, dipping 65-72 degrees northwest.",
+        "thickness_source": "2-6 m.",
+        "accessibility_source": "Neem Ka Thana and Shri Madhopur rail stations; road access to NH-37B; Jaipur airport about 152 km away.",
+        "hydrography_source": "No seasonal nala crosses the block and no perennial river is present; the source nevertheless describes seasonal-nala drainage.",
+        "climate_source": "Mean annual rainfall 450-550 mm; December temperature down to 1 C; June temperature up to 48 C.",
+        "topography_source": "One small hill with low-lying mountain terrain; toposheet 45M/14.",
+    },
+})
+
+
+NAGAUR_PSB_PROFILES = {
+    69: ("PSB-2", 2.70, 51.34, 0.99, 2.21, "1-3 zones, each 2.5-22.5 m thick.", "22.5 m."),
+    70: ("PSB-1", 2.82, 51.97, 0.83, 2.16, "1-3 zones, each 2.5-12 m thick.", "23.5 m."),
+    71: ("PSB-6", 2.82, 51.97, 0.83, 2.16, "1-3 zones, each 2.5-12 m thick.", "23.5 m."),
+    72: ("PSB-7", 2.70, 51.34, 0.99, 2.21, "1-3 zones, each 2.5-22.5 m thick.", "22.5 m."),
+    75: ("PSB-3", 2.70, 51.34, 1.48, 2.34, "One zone, 22.5 m thick.", "22.5 m."),
+    76: ("PSB-4", 2.16, 50.74, 2.07, 2.91, "1-4 zones, each 1.5-22.5 m thick.", "28 m."),
+    77: ("PSB-5", 2.16, 50.15, 2.22, 3.06, "1-4 zones, each 1.5-10.5 m thick.", "18 m."),
+    78: ("PSB-8", 2.70, 51.34, 2.09, 3.55, "One zone, 22.5 m thick.", "22.5 m."),
+    79: ("PSB-9", 2.16, 50.74, 2.07, 2.91, "1-4 zones, each 1.5-22.5 m thick.", "28 m."),
+    80: ("PSB-10", 2.16, 50.15, 2.22, 3.06, "1-4 zones, each 1.5-10.5 m thick.", "18 m."),
+    81: ("PSB-11", 2.52, 49.85, 3.15, 1.49, "Two zones, 7.5-13.5 m thick.", "21 m."),
+    82: ("PSB-12", 2.52, 49.85, 3.15, 1.49, "Two zones, 7.5-13.5 m thick.", "21 m."),
+    83: ("PSB-13", 2.52, 49.85, 3.15, 1.49, "Two zones, 7.5-13.5 m thick.", "21 m."),
+    84: ("PSB-14", 2.52, 49.85, 3.15, 1.49, "Two zones, 7.5-13.5 m thick.", "21 m."),
+    85: ("PSB-15", 1.49, 48.40, 2.50, 4.51, "2-7 zones, each 0.35-4.5 m thick.", "12.4 m."),
+    86: ("PSB-16", 0.90, 48.70, 1.81, 5.63, "Two zones, each 0.9-4.5 m thick.", "7.5 m."),
+    87: ("PSB-17", 3.42, 47.40, 1.80, 1.77, "1-7 zones.", "28.5 m."),
+    88: ("PSB-18", 3.42, 47.40, 1.81, 1.77, "1-7 zones.", "28.5 m."),
+}
+
+for number, (block, resource_mt, cao, mgo, sio2, zones, thickness) in NAGAUR_PSB_PROFILES.items():
+    record_id = f"IBM-IMYB2024-AUCTION-{number:03d}"
+    numeric = PROFILE_NUMBERS[record_id]
+    PROFILE_TEXT[record_id] = {
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": f"{numeric['borehole_count']} borehole(s) with cumulative meterage of {numeric['drilled_meterage_m']:g} m; adjacent-hole influence is also described in the MBS.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": f"{resource_mt:g} million tonnes of limestone.",
+        "grade_source": f"Weighted average {cao:g}% CaO, {mgo:g}% MgO and {sio2:g}% SiO2.",
+        "mineral_zones_source": zones,
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": f"Cumulative mineralized thickness {thickness}",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+    }
+
+PROFILE_TEXT.update({
+    "IBM-IMYB2024-AUCTION-073": {
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "32 boreholes with cumulative meterage of 1,395.5 m; 30 holes are inside the block and 2 outside-hole influence areas were used; depths 6-53 m.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "161.95 million tonnes of limestone.",
+        "grade_source": "Weighted average 46.35% CaO, 2.9% MgO and 3.41% SiO2.",
+        "mineral_zones_source": "1-7 limestone zones.",
+        "dip_strike_source": "Bedded sedimentary limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative thickness 1.5-36.5 m.",
+        "accessibility_source": "Nagaur rail head; all-weather roads near Harima and Somna with access to Nagaur-Ladnun NH-65; Jodhpur airport about 160 km away.",
+        "hydrography_source": "No perennial river; small seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall 300 mm; December minimum 10 C; June maximum 45 C; average temperature 25.70 C.",
+        "topography_source": "Plain ground with scattered limestone outcrops partly concealed by windblown sand and agricultural soil; toposheets 45E/15 and 45E/16.",
+    },
+    "IBM-IMYB2024-AUCTION-074": {
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "32 boreholes with cumulative meterage of 1,125.5 m; 20 holes are inside the block and 12 outside-hole influence areas were used; depths 24-50 m.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "166.94 million tonnes of limestone.",
+        "grade_source": "The grade table prints 46.8% CaO while the narrative prints 46.89% CaO; both report 2.45% MgO and 4.77% SiO2.",
+        "mineral_zones_source": "1-7 limestone zones.",
+        "dip_strike_source": "Bedded sedimentary limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative thickness 1.5-24.15 m.",
+        "accessibility_source": "Nagaur rail head; all-weather roads near Harima and Somna with access to Nagaur-Ladnun NH-65; Jodhpur airport about 160 km away.",
+        "hydrography_source": "No perennial river; small seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall 300 mm; December minimum 10 C; June maximum 45 C; average temperature 25.70 C.",
+        "topography_source": "Plain ground with scattered limestone outcrops partly concealed by windblown sand and agricultural soil; toposheets 45E/15 and 45E/16.",
+    },
+    "IBM-IMYB2024-AUCTION-089": {
+        "exploration_agency_source": "Department of Mines & Geology, Rajasthan.",
+        "borehole_summary_source": "13 boreholes inside the block with cumulative meterage of 590.8 m; depths 6-53 m.",
+        "mineral_source_mbs": "Limestone",
+        "geological_resources_source": "108.96 million tonnes of limestone.",
+        "grade_source": "Weighted average 47.08% CaO, 3.4% MgO and 4.1% SiO2.",
+        "mineral_zones_source": "1-7 limestone zones.",
+        "dip_strike_source": "Sedimentary stratiform limestone trending approximately north-south with rolling dip.",
+        "thickness_source": "Cumulative thickness 1.5-24.96 m.",
+        "accessibility_source": "Nagaur rail head about 18 km away; all-weather/tar-road access near Harima and Nagaur-Ladnun NH-65; the source lists Nagaur as the airport at 18 km.",
+        "hydrography_source": "No perennial river; seasonal nalas and ponds, with tube wells and dug wells.",
+        "climate_source": "Mean annual rainfall: minimum 270 mm, maximum 410.0 mm, average 393 mm; December minimum 10 C; June maximum 50 C.",
+        "topography_source": "Almost-flat ground with small mounds and knolls; scattered limestone outcrops are partly concealed by windblown sand, agricultural soil and fields; toposheets 45E/15 and 45E/16.",
+    },
+})
+
 # Coordinate evidence is inventoried independently of geometry admission so a
 # reviewed MBS remains useful even when its boundary cannot be published.
 COORDINATE_REVIEW = {
@@ -1360,6 +1725,45 @@ COORDINATE_REVIEW = {
     "IBM-IMYB2024-AUCTION-056": ("ordered_boundary_vertices", [1], ["computed_area_differs_from_mbs_area_gt_5pct"]),
     "IBM-IMYB2024-AUCTION-057": ("ordered_boundary_vertices", [1], []),
     "IBM-IMYB2024-AUCTION-058": ("ordered_boundary_vertices", [1], ["mean_annual_rainfall_printed_800_cm"]),
+    "IBM-IMYB2024-AUCTION-059": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-060": ("ordered_boundary_vertices", [1], ["source_repeats_point_A_as_closure"]),
+    "IBM-IMYB2024-AUCTION-061": (
+        "ordered_boundary_vertices_with_excluded_lease_subareas",
+        [1],
+        [
+            "two_existing_mining_lease_subareas_excluded",
+            "source_exclusion_ring_crosses_outer_boundary",
+            "source_free_area_not_reconciled_with_coordinate_areas",
+        ],
+    ),
+    "IBM-IMYB2024-AUCTION-062": ("ordered_boundary_vertices", [1], ["ibm_mbs_area_swap_conflict_with_manpura"]),
+    "IBM-IMYB2024-AUCTION-063": ("ordered_boundary_vertices", [1], ["ibm_mbs_area_swap_conflict_with_pipaliya"]),
+    "IBM-IMYB2024-AUCTION-064": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-065": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-066": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-067": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-068": ("ordered_boundary_vertices", [1], ["hydrography_text_internal_tension_no_nala_vs_seasonal_nala"]),
+    "IBM-IMYB2024-AUCTION-069": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-070": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-071": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-072": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-073": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-074": ("ordered_boundary_vertices", [1], ["mbs_grade_cao_internal_46_8_vs_46_89"]),
+    "IBM-IMYB2024-AUCTION-075": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-076": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-077": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-078": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-079": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-080": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-081": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-082": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-083": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-084": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-085": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-086": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-087": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-088": ("ordered_boundary_vertices", [1], []),
+    "IBM-IMYB2024-AUCTION-089": ("ordered_boundary_vertices", [1], []),
     "IBM-IMYB2024-AUCTION-090": ("ordered_boundary_vertices", [1], ["published_and_computed_area_conflicts"]),
     "IBM-IMYB2024-AUCTION-091": ("ordered_boundary_vertices", [1], []),
     "IBM-IMYB2024-AUCTION-092": ("ordered_boundary_vertices", [1], []),
@@ -1423,6 +1827,18 @@ GEOMETRY_WITHHOLD_DECISIONS = {
         "withheld_insufficient_coordinate_detail",
         "The MBS publishes latitude/longitude extents but no ordered boundary vertices; no concession polygon is inferred from the bounding rectangle.",
     ),
+    "IBM-IMYB2024-AUCTION-061": (
+        "withheld_source_conflict",
+        "Khakhliya Khera requires two existing mining-lease subareas to be excluded. One published exclusion ring crosses the published outer boundary, coordinate-derived exclusion areas do not match the printed 41.1 ha and 5.1 ha, and neither subtraction reconciles the printed 642.45 ha free area. Geometry is withheld rather than repaired by inference.",
+    ),
+    "IBM-IMYB2024-AUCTION-062": (
+        "withheld_source_conflict",
+        "The Pipaliya MBS publishes 1,150 ha and its source coordinates compute to about 1,198.65 ha, but IBM assigns 518.65 ha; that value corresponds to the adjacent Manpura MBS. Geometry is withheld pending reconciliation of the apparent IBM row-area swap.",
+    ),
+    "IBM-IMYB2024-AUCTION-063": (
+        "withheld_source_conflict",
+        "The Manpura MBS publishes 518.6566 ha and its source coordinates compute to about 519.06 ha, but IBM assigns 1,150 ha; that value corresponds to the adjacent Pipaliya MBS. Geometry is withheld pending reconciliation of the apparent IBM row-area swap.",
+    ),
 }
 
 COORDINATE_DATUM_SOURCE = {
@@ -1447,6 +1863,15 @@ COORDINATE_DATUM_SOURCE.update({
         "Not stated in the selected MBS; published N/E geographic coordinates encoded as EPSG:4326 for distribution"
     for number in range(27, 49)
 })
+
+COORDINATE_DATUM_SOURCE.update({
+    f"IBM-IMYB2024-AUCTION-{number:03d}":
+        "Not stated in the selected MBS; published geographic DMS coordinates encoded as EPSG:4326 for distribution"
+    for number in range(59, 90)
+})
+COORDINATE_DATUM_SOURCE["IBM-IMYB2024-AUCTION-060"] = (
+    "Not stated in the selected MBS; the table labels the survey DGPS and publishes geographic DMS values encoded as EPSG:4326 for distribution"
+)
 
 
 @dataclass(frozen=True)
@@ -1779,6 +2204,57 @@ def extract_mp_phase_xi_points(
     return [points[point_id] for point_id in ids], ids, configured_pages
 
 
+RAJASTHAN_TEXT_GEOMETRIES = {
+    f"IBM-IMYB2024-AUCTION-{number:03d}": expected_count
+    for number, expected_count in {
+        59: 7, 60: 11, 62: 4, 63: 13, 64: 4, 65: 4, 66: 4, 67: 4, 68: 5,
+        69: 4, 70: 4, 71: 4, 72: 4, 73: 13, 74: 22, 75: 4, 76: 4, 77: 4,
+        78: 4, 79: 4, 80: 4, 81: 4, 82: 4, 83: 4, 84: 4, 85: 4, 86: 4,
+        87: 4, 88: 4, 89: 7,
+    }.items()
+}
+RAJASTHAN_DMS_ROW = re.compile(
+    r"^\s*([A-Z0-9]+(?:')?)\s+"
+    r"(2[4-7])\s*°\s*(\d{1,2})\s*['’′]\s*(\d{1,2}(?:\.\d+)?)\s*[\"”″']*\s+"
+    r"(7[3-5])\s*°\s*(\d{1,2})\s*['’′]\s*(\d{1,2}(?:\.\d+)?)\s*[\"”″']*\s*$"
+)
+
+
+def extract_rajasthan_points(
+    record_id: str, pages: list[str]
+) -> tuple[list[tuple[float, float]], list[str], list[int]]:
+    """Parse the visually reviewed Rajasthan page-one DMS boundary table.
+
+    Point order is preserved exactly.  Hariyav repeats point A as an explicit
+    closure row, which is removed only after an equality check.  Records with
+    multi-ring or conflicting source geometry are withheld before this parser
+    is called.
+    """
+    points: list[tuple[str, tuple[float, float]]] = []
+    for raw_line in pages[0].splitlines():
+        match = RAJASTHAN_DMS_ROW.match(raw_line)
+        if not match:
+            continue
+        point_id, lat_d, lat_m, lat_s, lon_d, lon_m, lon_s = match.groups()
+        points.append((point_id, (
+            dms(float(lon_d), float(lon_m), float(lon_s)),
+            dms(float(lat_d), float(lat_m), float(lat_s)),
+        )))
+
+    if len(points) > 1 and points[-1] == points[0]:
+        points.pop()
+    expected_count = RAJASTHAN_TEXT_GEOMETRIES[record_id]
+    if len(points) != expected_count:
+        raise ValueError(
+            f"{record_id} expected {expected_count} source-order Rajasthan points, "
+            f"found {len(points)}: {[point_id for point_id, _ in points]}"
+        )
+    point_ids = [point_id for point_id, _ in points]
+    if len(point_ids) != len(set(point_ids)):
+        raise ValueError(f"{record_id} has duplicate non-closure point IDs: {point_ids}")
+    return [coordinate for _, coordinate in points], point_ids, [1]
+
+
 def source_profile(pages: list[str]) -> dict[str, str]:
     text = normalize_text("\n".join(pages))
 
@@ -1847,7 +2323,7 @@ def load_state_shapes() -> dict[str, object]:
     districts = gpd.read_file(DISTRICT_BOUNDARIES).to_crs("EPSG:4326")
     return {
         state: districts.loc[districts["ST_NM"] == state, "geometry"].union_all()
-        for state in {"Chhattisgarh", "Goa", "Gujarat", "Jharkhand", "Karnataka", "Madhya Pradesh", "Maharashtra", "Uttar Pradesh"}
+        for state in {"Chhattisgarh", "Goa", "Gujarat", "Jharkhand", "Karnataka", "Madhya Pradesh", "Maharashtra", "Rajasthan", "Uttar Pradesh"}
     }
 
 
@@ -1880,6 +2356,10 @@ def build_geometry(
         coordinates, point_ids, source_pages = extract_mp_phase_xi_points(record_id, pages)
         coordinate_method = "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326"
         quality_flags = []
+    elif record_id in RAJASTHAN_TEXT_GEOMETRIES:
+        coordinates, point_ids, source_pages = extract_rajasthan_points(record_id, pages)
+        coordinate_method = "reviewed_source_table_text_extraction_geographic_dms_encoded_epsg4326"
+        quality_flags = ["source_coordinate_datum_not_stated"]
     elif record_id in {
         "IBM-IMYB2024-AUCTION-093",
         "IBM-IMYB2024-AUCTION-094",
@@ -1990,7 +2470,7 @@ def upsert_source_registry(access_date: str) -> None:
         "download_url": "Exact PDF URL, file identifier, SHA-256, byte size and page count are retained per matched row.",
         "license_or_access_note": "Public government-owned auction portal; retain document-level attribution and verify current portal and State Government reuse terms.",
         "used_for": "Reviewed document links, source-published concession boundary coordinates, exploration summaries, geological resources, grades, climate, terrain, hydrology and access context.",
-        "limitations": "Alpha.15 reviews 66 of 97 IBM rows: 61 selected State MBS PDFs and five Andhra Pradesh exact-name searches with no match in the current public index. The 22 Madhya Pradesh matches are pinned to the browser-verified Phase-XI file identifiers so later same-name auction uploads cannot silently replace the historical tranche. Mine Block Summaries describe auction-stage technical context and do not independently prove current operation, present legal status, access permission or reserve classification. Source conflicts and failed geometry checks are withheld, not repaired by inference.",
+        "limitations": "Alpha.16 reviews all 97 IBM rows: 92 selected State MBS PDFs and five Andhra Pradesh exact-name searches with no match in the current public index. The 22 Madhya Pradesh Phase-XI and 31 Rajasthan historical matches use browser-verified pinned file identifiers so newer same-name uploads cannot silently replace the IBM 2023-24 tranche. Mine Block Summaries describe auction-stage technical context and do not independently prove current operation, present legal status, access permission or reserve classification. Source conflicts and failed geometry checks are withheld, not repaired by inference.",
     })
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
@@ -2011,8 +2491,8 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         rows = [row for row in reader if row["table"] not in table_columns]
 
     definitions = {
-        "review_scope": "Whether this IBM row received curated document review in alpha.15.",
-        "curated_candidate_count": "Number of MSTC documents matching the reviewed record-specific expression; zero does not mean the portal lacks a relevant document for unreviewed rows.",
+        "review_scope": "Whether this IBM row received curated document review in alpha.16.",
+        "curated_candidate_count": "Number of MSTC documents matching the reviewed record-specific expression; zero can reflect an exact-name search with no match in the current public index.",
         "document_selection_rule": "Rule used to select one official document when a reviewed expression matched multiple versions.",
         "document_match_status": "Outcome of curated IBM-to-MSTC document matching.",
         "selected_mbs_file_id": "Numeric MSTC source-file identifier.",
@@ -2029,7 +2509,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         "normalized_material_names_json": "JSON array of normalized material English names linked from the IBM source wording.",
         "chemical_or_english_names_json": "JSON array using chemical names where defensible and English names otherwise.",
         "formulae_or_symbols_json": "JSON array of defensible element symbols or material formulae; empty when no single formula applies.",
-        "geometry_admission_status": "Whether the source footprint passed the alpha.15 spatial publication gates.",
+        "geometry_admission_status": "Whether the source footprint passed the alpha.16 spatial publication gates.",
         "geometry_admission_reason": "Specific evidence or failure responsible for geometry admission or withholding.",
         "coordinate_method": "Reviewed coordinate extraction and CRS-conversion method.",
         "coordinate_source_pdf_pages_json": "JSON array of one-based physical PDF pages containing the boundary coordinate table.",
@@ -2062,7 +2542,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
         "climate_source": "Concise source-normalized rainfall and temperature statement; explicit source-unit anomalies are retained and labelled.",
         "topography_source": "Mine Block Summary terrain or morphology text.",
         "current_legal_or_operational_status_verified": "Always false in this layer; the source combination does not independently verify present legal or operating status.",
-        "model_evidence_role": "Context only in alpha.15; rows do not enter training, labels, scoring or candidate promotion.",
+        "model_evidence_role": "Context only in alpha.16; rows do not enter training, labels, scoring or candidate promotion.",
         "model_exclusion_reason": "Reason the record is excluded from model evidence.",
     }
     boolean_columns = {
@@ -2105,7 +2585,7 @@ def upsert_data_dictionary(match_fields: list[str], geometry_fields: list[str]) 
 def update_release_validation(validation: dict) -> None:
     path = ROOT / "outputs" / "validation_report.json"
     report = json.loads(path.read_text(encoding="utf-8"))
-    report["development_release_version"] = "v1.0-alpha.15"
+    report["development_release_version"] = RELEASE_VERSION
     report["ibm_auction_mbs_geometry_2023_24"] = {
         "ibm_input_rows": validation["ibm_input_rows"],
         "state_portal_documents_total": validation["state_portal_documents_total"],
@@ -2152,9 +2632,9 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
             "auction_date": row["auction_date"],
             "concession_type_code": row["concession_type_code"],
             "ibm_area_ha": row["area_ha"],
-            "review_scope": "curated_alpha_15" if record_id in CURATED_MATCHES else "not_reviewed_alpha_15",
+            "review_scope": f"curated_{RELEASE_SCOPE}" if record_id in CURATED_MATCHES else f"not_reviewed_{RELEASE_SCOPE}",
             "curated_candidate_count": len(candidates),
-            "document_selection_rule": "pinned_reviewed_mstc_phase_xi_file_id" if record_id in CURATED_FILE_ID_OVERRIDES and selected else "highest_numeric_mstc_file_id" if len(candidates) > 1 else "unique_curated_name_match" if selected else "record_specific_exact_name_search_current_public_state_mbs_index" if no_current_mbs_reason else "",
+            "document_selection_rule": "pinned_reviewed_mstc_phase_xi_file_id" if record_id in MP_PHASE_XI_PINNED_RECORDS and selected else "pinned_reviewed_mstc_historical_rajasthan_file_id" if record_id in RAJASTHAN_HISTORICAL_PINNED_RECORDS and selected else "highest_numeric_mstc_file_id" if len(candidates) > 1 else "unique_curated_name_match" if selected else "record_specific_exact_name_search_current_public_state_mbs_index" if no_current_mbs_reason else "",
             "document_match_status": "selected_curated_name_match" if selected else "reviewed_no_current_public_mbs_match" if no_current_mbs_reason else "not_reviewed_in_this_release",
             "selected_mbs_file_id": "",
             "selected_mbs_title": "",
@@ -2306,7 +2786,7 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
         all(row[field] != "" for field in required_profile_fields) for row in reviewed_rows
     )
     validation = {
-        "release": "v1.0-alpha.15",
+        "release": RELEASE_VERSION,
         "source_portal_url": PORTAL_INDEX,
         "source_access_date": inventory["access_date"],
         "ibm_input_rows": len(rows),
@@ -2332,9 +2812,14 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
         "model_evidence_role": "context_only",
         "outputs": {},
         "limitations": [
-            "This release reviews 66 of the 97 IBM Table 5 records: 61 selected State MBS PDFs and five Andhra Pradesh exact-name searches with no match in the current public index.",
+            "This release reviews all 97 IBM Table 5 records: 92 selected State MBS PDFs and five Andhra Pradesh exact-name searches with no match in the current public index.",
             "The 22 Madhya Pradesh rows are matched to the browser-verified Phase-XI tranche with pinned MSTC file identifiers; later same-name uploads are not substituted.",
+            "The 31 Rajasthan rows are matched to browser-verified historical file identifiers spanning MSTC IDs 10122-11699; later or earlier same-name uploads are not substituted.",
             "The five Andhra Pradesh rows are withheld from geometry because no public boundary document was found in the current State MBS index; their dated official-secondary status evidence is published separately.",
+            "Khakhliya Khera is withheld because its two published mining-lease exclusion rings do not reconcile with the outer boundary or the stated 642.45 ha free area; one exclusion ring also crosses the published outer boundary.",
+            "Pipaliya and Manpura are withheld because IBM assigns 518.65 ha and 1,150 ha respectively, while the named MBS documents publish the opposite areas and their coordinate-derived areas support the MBS names; no IBM row-area swap is silently corrected.",
+            "HPB-20 prints 46.8% CaO in its grade table and 46.89% CaO in its narrative; both source values are retained.",
+            "Toda states that no seasonal nala crosses the block but also describes drainage by a seasonal nala; the internal hydrography tension is retained.",
             "Katni, Dhamani Nana and Katangjhari source-order boundaries form invalid polygons; Pindrai is also invalid and has a material coordinate-derived area mismatch. These geometries are withheld rather than reordered or repaired.",
             "Chorgadi-Puraina is withheld because IBM publishes 378.404 ha while the Phase-XI MBS publishes 332.654 ha.",
             "Bamanbardi and Siluwa-Jhansi are withheld because coordinate-derived areas exceed the MBS areas by 5.24% and 5.12%, respectively.",
@@ -2362,21 +2847,21 @@ def publish_outputs(inventory: dict, rows: list[dict[str, str]], refresh: bool) 
     }
     validation["checks_pass"] = bool(
         validation["ibm_input_rows"] == 97
-        and validation["curated_records"] == 66
-        and validation["selected_document_matches"] == 61
-        and validation["reviewed_profile_complete_rows"] == 61
+        and validation["curated_records"] == 97
+        and validation["selected_document_matches"] == 92
+        and validation["reviewed_profile_complete_rows"] == 92
         and validation["coordinate_evidence_type_counts"] == {
-            "ordered_boundary_vertices": 52,
+            "ordered_boundary_vertices": 82,
             "ordered_boundary_vertices_with_source_error": 4,
             "bounding_extents_only": 4,
             "ordered_boundary_vertices_with_source_omission": 1,
+            "ordered_boundary_vertices_with_excluded_lease_subareas": 1,
         }
-        and validation["published_geometries"] == 39
+        and validation["published_geometries"] == 67
         and validation["geometry_admission_status_counts"] == {
-            "withheld_not_reviewed": 31,
             "withheld_no_public_boundary_document": 5,
-            "admitted_authoritative_source_footprint": 39,
-            "withheld_source_conflict": 9,
+            "admitted_authoritative_source_footprint": 67,
+            "withheld_source_conflict": 12,
             "withheld_insufficient_coordinate_detail": 4,
             "withheld_validation_failure": 9,
         }

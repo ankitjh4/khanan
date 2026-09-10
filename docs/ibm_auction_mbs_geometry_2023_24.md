@@ -1,6 +1,6 @@
 # IBM 2023-24 auction rows: State Mine Block Summary geometry
 
-**Development release:** `v1.0-alpha.15`
+**Development release:** `v1.0-alpha.16`
 
 **Sources:** Indian Bureau of Mines, *Indian Minerals Yearbook 2024*, Table 5; MSTC State mineral-auction Mine Block Summary portal
 
@@ -8,13 +8,13 @@
 
 ## Purpose
 
-IBM Table 5 names 97 mining leases or composite licences described as granted through auction during 2023-24, but it publishes no coordinates. Alpha.15 continues the separate task of locating exact State Mine Block Summaries and admitting a footprint only when the source itself publishes a boundary that survives spatial checks.
+IBM Table 5 names 97 mining leases or composite licences described as granted through auction during 2023-24, but it publishes no coordinates. Alpha.16 completes record-by-record review of all 97 rows and admits a footprint only when the exact historical State Mine Block Summary publishes a boundary that survives spatial checks.
 
 The new outputs are:
 
 - `outputs/india_ibm_auctioned_concession_mbs_match_audit_2023_24.csv`: one row for every IBM Table 5 record, including review scope, selected MBS provenance, coordinate-evidence class, technical profile and geometry-admission outcome;
-- `outputs/india_ibm_auctioned_concession_geometries_2023_24.csv`: 39 admitted source footprints with technical and environmental context;
-- `outputs/india_ibm_auctioned_concession_geometries_2023_24.geojson`: the same 39 footprints as GeoJSON; and
+- `outputs/india_ibm_auctioned_concession_geometries_2023_24.csv`: 67 admitted source footprints with technical and environmental context;
+- `outputs/india_ibm_auctioned_concession_geometries_2023_24.geojson`: the same 67 footprints as GeoJSON; and
 - `outputs/ibm_auction_mbs_geometry_validation.json`: inventory, coverage, gate and output-hash evidence.
 
 ## Portal inventory and matching
@@ -34,13 +34,15 @@ The builder establishes a session with the MSTC State-auction portal, opens the 
 | Uttar Pradesh | 37 |
 | Goa | 18 |
 
-These are link-inventory observations, not 1,124 parsed documents or 1,124 mines. Alpha.15 retains 61 selected PDFs: six Chhattisgarh, six Gujarat, three Jharkhand, six Karnataka, twenty-two Madhya Pradesh, ten Maharashtra, three Uttar Pradesh and five Goa blocks. Record-specific expressions are curated from exact names; the Uttar Pradesh expressions also require the Phase 4 label that corresponds to the IBM reporting period. When a reviewed expression contains several versions, the highest numeric MSTC file identifier is normally selected and the rule is retained in the match audit. This selects the official second-attempt summaries for Timmanahalli, Basavangudda and Niddodi. Gujarat uses exact normalized title anchors for the Phase IX files because later portal phases contain similarly named but distinct blocks.
+These are link-inventory observations, not 1,124 parsed documents or 1,124 mines. Alpha.16 retains 92 selected PDFs: six Chhattisgarh, six Gujarat, three Jharkhand, six Karnataka, twenty-two Madhya Pradesh, ten Maharashtra, thirty-one Rajasthan, three Uttar Pradesh and five Goa blocks. Record-specific expressions are curated from exact names; the Uttar Pradesh expressions also require the Phase 4 label that corresponds to the IBM reporting period. When a reviewed expression contains several versions, the highest numeric MSTC file identifier is normally selected and the rule is retained in the match audit. This selects the official second-attempt summaries for Timmanahalli, Basavangudda and Niddodi. Gujarat uses exact normalized title anchors for the Phase IX files because later portal phases contain similarly named but distinct blocks.
 
-Alpha.15 keeps the five Andhra Pradesh rows in reviewed scope. The live MSTC portal announces that events with bid starts before 5 February 2024 remain on the old portal, while later events use the new portal. The current public Andhra MBS index exposes newer 2025-26 tranches but no exact-name MBS for Adakula, Addankivaripalem, Lakshmakapalle North, Lakshmakapalle South or Mincheri RF. Those rows are marked `reviewed_no_current_public_mbs_match` and `withheld_no_public_boundary_document`; absence from the current index is not treated as evidence that a boundary never existed. Dated official-secondary status evidence is published separately in `outputs/india_ibm_auctioned_concession_status_evidence_2023_24.csv`.
+Alpha.16 keeps the five Andhra Pradesh rows in reviewed scope. The live MSTC portal announces that events with bid starts before 5 February 2024 remain on the old portal, while later events use the new portal. The current public Andhra MBS index exposes newer 2025-26 tranches but no exact-name MBS for Adakula, Addankivaripalem, Lakshmakapalle North, Lakshmakapalle South or Mincheri RF. Those rows are marked `reviewed_no_current_public_mbs_match` and `withheld_no_public_boundary_document`; absence from the current index is not treated as evidence that a boundary never existed. Dated official-secondary status evidence is published separately in `outputs/india_ibm_auctioned_concession_status_evidence_2023_24.csv`.
 
 The Maharashtra review is tranche-aware. The live State index groups the May 2023 Devalmari-Katepalli, Surjagad 1-4 and 6, South Padve and Kondhala summaries in Phase X, while the November 2023 Minzhari and Savali summaries appear in Phase XI. Older phases contain repeated block names; the audit locks each IBM row to the highest file identifier within its exact contemporaneous title pattern instead of combining phases.
 
-The browser-verified Madhya Pradesh batch appears in the State portal's Phase XI section. Because later phases reuse names such as Dhamani Nana, alpha.15 pins each of the 22 IBM rows to its reviewed Phase-XI MSTC file identifier (`10910`–`10955` subset). A numerically newer same-name upload is not allowed to replace the historical tranche. The remaining 31 IBM rows—all in Rajasthan—are labelled `not_reviewed_in_this_release`.
+The browser-verified Madhya Pradesh batch appears in the State portal's Phase XI section. Because later phases reuse names such as Dhamani Nana, alpha.16 pins each of the 22 IBM rows to its reviewed Phase-XI MSTC file identifier (`10910`–`10955` subset). A numerically newer same-name upload is not allowed to replace the historical tranche.
+
+Rajasthan is also phase-aware. Alpha.16 pins the five early named blocks (`10122`–`10624`), the Sikar/Udaipur/Chittorgarh set (`10844`–`10877`), six Nagaur records (`11061`–`11069`) and fifteen PSB/HPB records (`11685`–`11699`) to the historical documents visible in the live State portal. This prevents same-name uploads from other auction attempts from replacing the IBM-period evidence.
 
 ## Coordinate extraction and visual review
 
@@ -57,6 +59,8 @@ Every coordinate-bearing page used by this release was rendered with Poppler at 
 - Timmanahalli is withheld because point C prints `13°35'60.00"N`. Kudarka is withheld because its table prints latitude and longitude values but no hemisphere markers. Neither defect is silently repaired.
 - Eight Maharashtra summaries publish ordered DMS boundary points. Their PDFs do not state a datum, so the audit preserves that omission while encoding the reviewed analytical coordinates in EPSG:4326. Seven pass the admission gates; Kondhala does not.
 - All 22 Madhya Pradesh Phase-XI PDFs were rendered and reviewed. Twelve long DMS tables are parsed with exact expected vertex counts and contiguous point-ID checks; nine short text tables and the image-only 34-point Uberao table are visually transcribed. The source does not state a datum, so that omission remains explicit while analytical coordinates are encoded in EPSG:4326.
+- All 31 Rajasthan PDFs (107 pages) were extracted and rendered. Their page-one DMS tables are parsed in published order with exact point-count and duplicate-ID checks; the repeated Hariyav point A is removed only after an exact closure-row equality check. The source datum is not stated, so that omission remains explicit while analytical coordinates are encoded in EPSG:4326.
+- Rajasthan's Khakhliya Khera source publishes an outer boundary and two existing-lease exclusions. One exclusion ring crosses the outer polygon, coordinate-derived exclusion areas do not match the printed subareas, and neither subtraction reconciles the stated free area. Pipaliya and Manpura have mutually swapped IBM/MBS area values. All three are withheld rather than repaired.
 - Madhya Pradesh source-order validation withholds Katni, Dhamani Nana, Katangjhari and Pindrai because their published point sequences form invalid polygons; Katni, Dhamani Nana and Pindrai also have material computed-area discrepancies. Chorgadi-Puraina has an IBM/MBS area conflict, while Bamanbardi and Siluwa-Jhansi exceed the computed-area tolerance.
 - Bhilapar passes the admission gates but is flagged because the full polygon is not covered by the dissolved 2011 district-derived Madhya Pradesh boundary; its centroid remains in the State and the administrative layer is only a diagnostic.
 - Devalmari-Katepalli publishes only latitude/longitude extents and says that detailed coordinates are in an unincluded cadastral plate. South Padve also publishes only extents. Neither is converted to a rectangle.
@@ -76,7 +80,7 @@ A source footprint is published only when all of the following hold:
 
 Full-footprint State containment is retained separately because the community-maintained 2011 administrative boundary can differ from current or legal boundaries. It is a diagnostic, not a controlling cadastral test.
 
-Thirty-nine footprints pass:
+Sixty-seven footprints pass:
 
 | IBM record | Block | Material | Vertices | Computed area vs MBS |
 |---|---|---|---:|---:|
@@ -113,6 +117,34 @@ Thirty-nine footprints pass:
 | IBM-IMYB2024-AUCTION-055 | Surjagad – 6 | Iron ore | 4 | 0.979% |
 | IBM-IMYB2024-AUCTION-057 | Minzhari | Copper | 5 | 0.193% |
 | IBM-IMYB2024-AUCTION-058 | Savali | Manganese | 4 | 0.259% |
+| IBM-IMYB2024-AUCTION-059 | Nayorana-Dandela | Iron ore | 7 | 0.058% |
+| IBM-IMYB2024-AUCTION-060 | Hariyav Jashpura | Limestone | 11 | 0.438% |
+| IBM-IMYB2024-AUCTION-064 | Ladi Ka Bas | Iron ore | 4 | 0.001% |
+| IBM-IMYB2024-AUCTION-065 | Kalakota | Iron ore | 4 | 0.000% |
+| IBM-IMYB2024-AUCTION-066 | Ladana | Base metal / copper | 4 | 0.764% |
+| IBM-IMYB2024-AUCTION-067 | Bhabhriya ka Kheda | Base metal | 4 | 0.319% |
+| IBM-IMYB2024-AUCTION-068 | Toda | Iron ore | 5 | 0.060% |
+| IBM-IMYB2024-AUCTION-069 | PSB-02 | Limestone | 4 | 0.049% |
+| IBM-IMYB2024-AUCTION-070 | PSB-01 | Limestone | 4 | 0.049% |
+| IBM-IMYB2024-AUCTION-071 | PSB-06 | Limestone | 4 | 0.049% |
+| IBM-IMYB2024-AUCTION-072 | PSB-07 | Limestone | 4 | 0.049% |
+| IBM-IMYB2024-AUCTION-073 | HPB-19 | Limestone | 13 | 0.050% |
+| IBM-IMYB2024-AUCTION-074 | HPB-20 | Limestone | 22 | 0.050% |
+| IBM-IMYB2024-AUCTION-075 | PSB-03 | Limestone | 4 | 0.049% |
+| IBM-IMYB2024-AUCTION-076 | PSB-04 | Limestone | 4 | 0.049% |
+| IBM-IMYB2024-AUCTION-077 | PSB-05 | Limestone | 4 | 0.049% |
+| IBM-IMYB2024-AUCTION-078 | PSB-08 | Limestone | 4 | 0.049% |
+| IBM-IMYB2024-AUCTION-079 | PSB-09 | Limestone | 4 | 0.050% |
+| IBM-IMYB2024-AUCTION-080 | PSB-10 | Limestone | 4 | 0.050% |
+| IBM-IMYB2024-AUCTION-081 | PSB-11 | Limestone | 4 | 0.004% |
+| IBM-IMYB2024-AUCTION-082 | PSB-12 | Limestone | 4 | 0.049% |
+| IBM-IMYB2024-AUCTION-083 | PSB-13 | Limestone | 4 | 0.050% |
+| IBM-IMYB2024-AUCTION-084 | PSB-14 | Limestone | 4 | 0.052% |
+| IBM-IMYB2024-AUCTION-085 | PSB-15 | Limestone | 4 | 0.049% |
+| IBM-IMYB2024-AUCTION-086 | PSB-16 | Limestone | 4 | 0.048% |
+| IBM-IMYB2024-AUCTION-087 | PSB-17 | Limestone | 4 | 0.051% |
+| IBM-IMYB2024-AUCTION-088 | PSB-18 | Limestone | 4 | 0.051% |
+| IBM-IMYB2024-AUCTION-089 | HPB-21 | Limestone | 7 | 0.052% |
 | IBM-IMYB2024-AUCTION-091 | Bharhari | Iron ore | 6 | 0.189% |
 | IBM-IMYB2024-AUCTION-092 | Sona Pahari | Gold | 9 | 0.568% |
 | IBM-IMYB2024-AUCTION-093 | Block V Advalpale-Thivim | Iron ore | 11 | 0.045% |
@@ -120,7 +152,7 @@ Thirty-nine footprints pass:
 | IBM-IMYB2024-AUCTION-096 | Block VIII Thivim-Pirna | Iron ore | 10 | 0.216% |
 | IBM-IMYB2024-AUCTION-097 | Block IX Surla-Sonshi | Iron ore | 65 | 2.549% |
 
-Twenty-two selected-MBS records are withheld rather than repaired:
+Twenty-five selected-MBS records are withheld rather than repaired:
 
 - **Saloni:** IBM publishes 600 ha; the exact-name MBS publishes 670 ha.
 - **Kareli-Chandi:** the MBS prints malformed latitude seconds (`34.4.00`) for two vertices.
@@ -144,6 +176,9 @@ Twenty-two selected-MBS records are withheld rather than repaired:
 - **Bamanbardi:** the six source-order vertices compute to 961.30 ha, 5.24% above the MBS-published 913.3954 ha; the MBS separately prints 948 ha for the coordinates.
 - **Siluwa-Jhansi:** the 44 source-order vertices compute to 4.825 ha, 5.12% above the MBS-published 4.59 ha.
 - **Pindrai:** 117 contiguous source point IDs form a self-intersecting polygon and compute to 6.768 ha; the MBS separately prints a 5.6664 ha DGPS figure while retaining 6 ha as final.
+- **Khakhliya Khera:** the source's two existing-lease exclusion rings do not reconcile with the outer boundary, their printed subareas or the stated 642.45 ha free area; one exclusion ring crosses the outer polygon.
+- **Pipaliya:** the named MBS and its source coordinates support approximately 1,150 ha, while IBM publishes 518.65 ha—the Manpura value.
+- **Manpura:** the named MBS and its source coordinates support approximately 518.66 ha, while IBM publishes 1,150 ha—the Pipaliya value.
 
 ## Technical profile fields
 
@@ -155,7 +190,7 @@ Explicit anomalies remain visible. For example, the Block VII Cudnem MBS prints 
 
 An MBS is an auction-stage technical source, not a present-tense mine-status register. The joined IBM and MBS evidence does not independently establish the controlling grant, current lessee, production, clearances, legal boundary, permission to access land, current resource classification or operating status. Every row therefore sets `current_legal_or_operational_status_verified=false` and remains context only.
 
-The review is incomplete by design and does not imply that the 31 unreviewed Rajasthan rows or the five Andhra status-linked rows lack coordinates. The next Phase 2 increments are the 31 Rajasthan rows, archival Andhra boundary-document recovery where lawfully public, and reconciliation of successful-auction reporting against controlling State grant records.
+The IBM/MBS row review is complete for this source snapshot, but legal and operational verification is not. Next increments are archival Andhra boundary-document recovery where lawfully public, reconciliation of successful-auction reporting against controlling State grant records, and downstream linkage of these context-only footprints to independent geoscience evidence before any model use.
 
 Rebuild with:
 
