@@ -1,0 +1,268 @@
+{
+  "release_version": "v1.0-alpha.30",
+  "audit_scope": "KHANAN v1.0 objective and declared Alpha 3.0 data gates",
+  "scope_boundary": "Completion means the declared open-source intelligence dataset and release are reproducible and independently evaluable. It does not mean India has been exhaustively explored or that any model hypothesis is a discovery.",
+  "summary": {
+    "requirements_total": 12,
+    "requirements_passed": 12,
+    "requirements_failed": 0
+  },
+  "checks_pass": true,
+  "requirements": [
+    {
+      "requirement": "Reliable normalized material catalogue without synthetic count padding",
+      "passed": true,
+      "evidence": {
+        "entities": 254,
+        "entity_types": {
+          "alloy_or_industrial_material": 1,
+          "compound_group": 1,
+          "compound_or_industrial_material": 6,
+          "element": 69,
+          "energy_commodity": 4,
+          "industrial_material": 13,
+          "industrial_material_group": 1,
+          "industrial_mineral_group": 6,
+          "material_group": 7,
+          "mineral_group": 16,
+          "mineral_mixture_or_obsolete_name": 1,
+          "mineral_mixture_or_ore": 6,
+          "mineral_mixture_or_variety": 1,
+          "mineral_species": 89,
+          "mineral_variety": 4,
+          "ore_concentrate_group": 1,
+          "ore_group": 4,
+          "rock": 11,
+          "rock_or_industrial_material": 10,
+          "rock_or_ore": 3
+        },
+        "authority_statuses": {
+          "ima_cnmnc_valid_species": 89,
+          "iupac_element": 69,
+          "source_observed_curated_classification": 72,
+          "source_observed_geological_material_curated_classification": 24
+        },
+        "errors": {},
+        "interpretation": "254 is evidence-derived coverage, not a target padded to a hard ceiling or floor."
+      }
+    },
+    {
+      "requirement": "Every observed material term is mapped or explicitly unresolved",
+      "passed": true,
+      "evidence": {
+        "rows": 611,
+        "mapping_statuses": {
+          "mapped": 602,
+          "unresolved_or_nonspecific": 9
+        }
+      }
+    },
+    {
+      "requirement": "Mine, lease, geochemistry, geophysics, soil and remote-sensing evidence is integrated",
+      "passed": true,
+      "evidence": {
+        "families": {
+          "mine_and_occurrence_evidence": [
+            "outputs/india_ibm_abandoned_mine_sites.csv",
+            "outputs/india_ibm_mcdr_inspection_events_2023_2026.csv",
+            "outputs/india_ibm_mcdr_latest_inspected_mines.csv",
+            "outputs/india_known_mining_sites.csv"
+          ],
+          "lease_and_concession_evidence": [
+            "outputs/india_ibm_auctioned_concession_geometries_2023_24.geojson",
+            "outputs/india_ibm_auctioned_mineral_concessions_2023_24.csv",
+            "outputs/india_ibm_mining_lease_distribution_2024.csv"
+          ],
+          "analytical_geochemistry": [
+            "outputs/india_earthchem_geochemical_observations.csv",
+            "outputs/india_earthchem_geochemical_samples.csv"
+          ],
+          "geophysics": [
+            "outputs/india_emag2v3_magnetic_features_h3_r6.csv"
+          ],
+          "soil": [
+            "outputs/india_soilgrids_v2_soil_features_h3_r6.csv"
+          ],
+          "remote_sensing": [
+            "outputs/india_sentinel2_scene_manifest_2025.csv",
+            "outputs/india_sentinel2_surface_context_h3_r6.csv"
+          ]
+        },
+        "missing": {},
+        "unresolved_source_ids": []
+      }
+    },
+    {
+      "requirement": "Observed evidence, contextual features, validation evidence and model hypotheses are separate",
+      "passed": true,
+      "evidence": {
+        "role_counts": {
+          "contextual_feature": 4,
+          "metadata_governance": 9,
+          "model_hypothesis": 3,
+          "observed_source_evidence": 18,
+          "validation_evidence": 11
+        }
+      }
+    },
+    {
+      "requirement": "Prospectivity models use spatially separated validation and disclose unsupported targets",
+      "passed": true,
+      "evidence": {
+        "targets": 50,
+        "spatially_validated": 15,
+        "meeting_minimum_auc_gate": 14,
+        "unsupported_targets_remain_unscored": true
+      }
+    },
+    {
+      "requirement": "Candidate rankings are complete, unique, provenance-bearing reconnaissance hypotheses",
+      "passed": true,
+      "evidence": {
+        "candidate_rows": 2784,
+        "record_classes": {
+          "high_priority_candidate": 72,
+          "priority_candidate": 2712
+        },
+        "errors": {}
+      }
+    },
+    {
+      "requirement": "Published model outputs remain byte-identical to the frozen v0.6 baseline",
+      "passed": true,
+      "evidence": {
+        "grid_sha256": "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9",
+        "candidate_sha256": "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04"
+      }
+    },
+    {
+      "requirement": "Candidate release preserves uncertainty, validation and exclusion fields",
+      "passed": true,
+      "evidence": {
+        "uncertainty_or_support_fields": [
+          "weather_data_completeness_pct_rolling_12m",
+          "model_support_level",
+          "top_material_spatial_cv_auc",
+          "top_material_spatial_cv_recall_at_background_top5pct",
+          "emag2_error_estimate_nt",
+          "emag2_error_raw_value",
+          "emag2_abs_signal_to_error_ratio",
+          "emag2_uncertainty_interpretation",
+          "soilgrids_phh2o_0_5cm_p05",
+          "soilgrids_phh2o_0_5cm_p95",
+          "soilgrids_phh2o_30_60cm_p05",
+          "soilgrids_phh2o_30_60cm_p95",
+          "soilgrids_clay_0_5cm_p05",
+          "soilgrids_clay_0_5cm_p95",
+          "soilgrids_clay_30_60cm_p05",
+          "soilgrids_clay_30_60cm_p95",
+          "soilgrids_sand_0_5cm_p05",
+          "soilgrids_sand_0_5cm_p95",
+          "soilgrids_sand_30_60cm_p05",
+          "soilgrids_sand_30_60cm_p95",
+          "soilgrids_silt_0_5cm_p05",
+          "soilgrids_silt_0_5cm_p95",
+          "soilgrids_silt_30_60cm_p05",
+          "soilgrids_silt_30_60cm_p95",
+          "soilgrids_soc_0_5cm_p05",
+          "soilgrids_soc_0_5cm_p95",
+          "soilgrids_soc_30_60cm_p05",
+          "soilgrids_soc_30_60cm_p95",
+          "soilgrids_cec_0_5cm_p05",
+          "soilgrids_cec_0_5cm_p95",
+          "soilgrids_cec_30_60cm_p05",
+          "soilgrids_cec_30_60cm_p95",
+          "soilgrids_nitrogen_0_5cm_p05",
+          "soilgrids_nitrogen_0_5cm_p95",
+          "soilgrids_nitrogen_30_60cm_p05",
+          "soilgrids_nitrogen_30_60cm_p95",
+          "soilgrids_bdod_0_5cm_p05",
+          "soilgrids_bdod_0_5cm_p95",
+          "soilgrids_bdod_30_60cm_p05",
+          "soilgrids_bdod_30_60cm_p95",
+          "soilgrids_cfvo_0_5cm_p05",
+          "soilgrids_cfvo_0_5cm_p95",
+          "soilgrids_cfvo_30_60cm_p05",
+          "soilgrids_cfvo_30_60cm_p95",
+          "soilgrids_uncertainty_interpretation"
+        ],
+        "exclusion_or_validation_fields": [
+          "model_validation_tier",
+          "candidate_promotion_rule",
+          "model_limitations",
+          "data_quality_flags_json",
+          "emag2_model_use_status",
+          "emag2_data_quality_flags_json",
+          "soilgrids_model_use_status",
+          "soilgrids_data_quality_flags_json"
+        ],
+        "required_uncertainty_fields_present": [
+          "emag2_error_estimate_nt",
+          "emag2_uncertainty_interpretation",
+          "model_support_level",
+          "soilgrids_phh2o_0_5cm_p05",
+          "soilgrids_phh2o_0_5cm_p95",
+          "soilgrids_uncertainty_interpretation",
+          "top_material_spatial_cv_auc",
+          "top_material_spatial_cv_recall_at_background_top5pct"
+        ],
+        "required_exclusion_fields_present": [
+          "candidate_promotion_rule",
+          "data_quality_flags_json",
+          "emag2_data_quality_flags_json",
+          "emag2_model_use_status",
+          "model_limitations",
+          "model_validation_tier",
+          "soilgrids_data_quality_flags_json",
+          "soilgrids_model_use_status"
+        ]
+      }
+    },
+    {
+      "requirement": "Ranked candidates have an exact typed polygon GeoJSON counterpart",
+      "passed": true,
+      "evidence": {
+        "features": 2784,
+        "coordinate_reference_system": "RFC 7946 WGS84 longitude/latitude",
+        "errors": {}
+      }
+    },
+    {
+      "requirement": "Final coverage report preserves every known source limitation and cross-cutting gap",
+      "passed": true,
+      "evidence": {
+        "registered_sources": 38,
+        "source_specific_gaps": 38,
+        "project_wide_gaps": 20,
+        "required_categories_present": [
+          "geographic_coverage",
+          "licensing",
+          "source_access",
+          "temporal_coverage"
+        ]
+      }
+    },
+    {
+      "requirement": "No model row asserts a discovery, reserve, grade, current operation or legal right",
+      "passed": true,
+      "evidence": {
+        "invalid_verified_statuses": {},
+        "candidate_claim_columns": [],
+        "field_verified_candidate_discoveries_claimed": 0
+      }
+    },
+    {
+      "requirement": "Release schemas, keys, dictionary and source registry are frozen and validated",
+      "passed": true,
+      "evidence": {
+        "manifest_artifacts": 45,
+        "csv_artifacts": 43,
+        "geojson_artifacts": 2,
+        "data_dictionary_rows": 1928,
+        "all_primary_keys_unique": true
+      }
+    }
+  ],
+  "publication_verification": "The public repository and commit-specific artifacts are verified after the final commit is pushed; a commit hash is not embedded to avoid a hash cycle.",
+  "remaining_scientific_and_operational_limitations": "The 58-row coverage-gap register remains authoritative. Open gaps are declared scope limitations, not hidden completion claims."
+}

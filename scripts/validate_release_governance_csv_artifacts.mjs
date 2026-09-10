@@ -10,9 +10,9 @@ const outputDir = path.join(root, "outputs", "diagnostics", "release_governance_
 const targets = [
   {
     file: "release_artifact_manifest.csv",
-    expectedRows: 44,
+    expectedRows: 45,
     expectedColumns: 29,
-    ranges: ["A1:O14", "P1:AC14", "A32:O45", "P32:AC45"],
+    ranges: ["A1:O14", "P1:AC14", "A32:O46", "P32:AC46"],
   },
   {
     file: "coverage_gap_register.csv",

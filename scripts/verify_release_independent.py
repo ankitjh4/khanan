@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Independently verify the KHANAN Alpha.25 release bundle.
+"""Independently verify the KHANAN Alpha 3.0 release bundle.
 
 This verifier uses only the Python standard library.  It deliberately does
 not import any KHANAN builder or packager, and it treats the ZIP, its manifest
@@ -21,7 +21,7 @@ from pathlib import Path, PurePosixPath
 from typing import Any, Iterable
 
 
-RELEASE_VERSION = "v1.0-alpha.25"
+RELEASE_VERSION = "v1.0-alpha.30"
 EXPECTED_GRID_SHA256 = "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9"
 EXPECTED_CANDIDATE_SHA256 = "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04"
 EXPECTED_ROLES = {
@@ -47,8 +47,13 @@ REQUIRED_REPRODUCTION_MEMBERS = {
     "scripts/build_release_governance.py",
     "scripts/build_release.py",
     "scripts/verify_release_independent.py",
+    "scripts/build_candidate_geojson.py",
+    "scripts/build_alpha3_completion_audit.py",
     "docs/independent_release_verification_alpha25.md",
+    "docs/alpha3_final_release_audit.md",
     "assets/maps/khanan-india-prospectivity-overview-v0.6.png",
+    "outputs/india_mining_candidate_areas_validation_gated.geojson",
+    "outputs/alpha3_completion_audit.json",
 }
 STATUS_VERIFICATION_FIELDS = {
     "current_legal_or_operational_status_verified",
@@ -77,6 +82,28 @@ def schema_sha(fields: Iterable[str]) -> str:
         list(fields), ensure_ascii=False, separators=(",", ":"), allow_nan=False
     ).encode("utf-8")
     return hashlib.sha256(encoded).hexdigest()
+
+
+def source_row_sha256(fields: list[str], row: dict[str, str]) -> str:
+    encoded = json.dumps(
+        [row.get(field, "") for field in fields],
+        ensure_ascii=False,
+        separators=(",", ":"),
+        allow_nan=False,
+    ).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
+
+
+def polygon_from_wkt(value: str) -> list[list[list[float]]]:
+    match = re.fullmatch(r"POLYGON \(\((.+)\)\)", value.strip())
+    if not match:
+        raise ValueError("unsupported candidate WKT")
+    return [
+        [
+            [float(part) for part in coordinate.strip().split()]
+            for coordinate in match.group(1).split(",")
+        ]
+    ]
 
 
 def member_text(archive: zipfile.ZipFile, member: str):
@@ -252,7 +279,7 @@ def verify(args: argparse.Namespace) -> dict[str, Any]:
         manifest_ids = [row.get("artifact_id", "") for row in manifest_rows]
         check(
             "manifest_inventory",
-            len(manifest_rows) == 44 and len(manifest_ids) == len(set(manifest_ids)),
+            len(manifest_rows) == 45 and len(manifest_ids) == len(set(manifest_ids)),
             {"rows": len(manifest_rows), "unique_artifact_ids": len(set(manifest_ids))},
         )
         releases = sorted(set(row.get("release_version", "") for row in manifest_rows))
@@ -343,7 +370,7 @@ def verify(args: argparse.Namespace) -> dict[str, Any]:
         failed_artifacts = [result for result in artifact_results if not result["passed"]]
         check(
             "manifest_contracts_recomputed",
-            not failed_artifacts and len(artifact_results) == 44,
+            not failed_artifacts and len(artifact_results) == 45,
             {"verified": len(artifact_results), "failed": failed_artifacts},
         )
         check(
@@ -527,8 +554,55 @@ def verify(args: argparse.Namespace) -> dict[str, Any]:
             },
         )
 
+        candidate_geojson_member = (
+            "outputs/india_mining_candidate_areas_validation_gated.geojson"
+        )
+        candidate_geojson = json.loads(
+            archive.read(candidate_geojson_member).decode("utf-8")
+        )
+        geojson_features = candidate_geojson.get("features", [])
+        geojson_ids = set()
+        geojson_errors: Counter[str] = Counter()
+        for feature in geojson_features:
+            record_id = str(feature.get("id", ""))
+            geojson_ids.add(record_id)
+            source_row_values = candidate_by_id.get(record_id)
+            properties = feature.get("properties", {})
+            if source_row_values is None or properties.get("record_id") != record_id:
+                geojson_errors["unmatched_record_id"] += 1
+                continue
+            source_row = dict(zip(candidate_fields, source_row_values))
+            if properties.get("source_csv_row_sha256") != source_row_sha256(
+                candidate_fields, source_row
+            ):
+                geojson_errors["source_row_hash_mismatch"] += 1
+            geometry = feature.get("geometry", {})
+            if geometry.get("type") != "Polygon":
+                geojson_errors["invalid_geometry_type"] += 1
+            elif geometry.get("coordinates") != polygon_from_wkt(
+                source_row["cell_boundary_wkt"]
+            ):
+                geojson_errors["geometry_mismatch"] += 1
+            if not isinstance(properties.get("latitude"), (int, float)):
+                geojson_errors["latitude_not_numeric"] += 1
+            if not isinstance(properties.get("top_materials_json"), list):
+                geojson_errors["top_materials_not_array"] += 1
+        check(
+            "candidate_geojson_exact_typed_counterpart",
+            candidate_geojson.get("type") == "FeatureCollection"
+            and candidate_geojson.get("release_version") == RELEASE_VERSION
+            and len(geojson_features) == len(candidate_rows)
+            and geojson_ids == candidate_ids
+            and not geojson_errors,
+            {
+                "features": len(geojson_features),
+                "unique_ids": len(geojson_ids),
+                "errors": dict(sorted(geojson_errors.items())),
+            },
+        )
+
         model_rows = [row for row in manifest_rows if row.get("evidence_role") == "model_hypothesis"]
-        model_role_ok = len(model_rows) == 2 and all(
+        model_role_ok = len(model_rows) == 3 and all(
             all(
                 term in (row.get("role_definition", "") + " " + row.get("limitations", "")).lower()
                 for term in ["discovery", "reserve", "grade", "legal"]

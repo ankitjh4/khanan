@@ -1,9 +1,9 @@
 {
-  "release_version": "v1.0-alpha.25",
-  "manifest_rows": 44,
+  "release_version": "v1.0-alpha.30",
+  "manifest_rows": 45,
   "csv_artifacts_registered": 43,
-  "geojson_artifacts_registered": 1,
-  "schemas_matching_frozen_contract": 44,
+  "geojson_artifacts_registered": 2,
+  "schemas_matching_frozen_contract": 45,
   "all_primary_keys_unique": true,
   "primary_key_blank_rows": 0,
   "manifest_self_hash_exception_valid": true,
@@ -18,7 +18,7 @@
   "role_counts": {
     "contextual_feature": 4,
     "metadata_governance": 9,
-    "model_hypothesis": 2,
+    "model_hypothesis": 3,
     "observed_source_evidence": 18,
     "validation_evidence": 11
   },

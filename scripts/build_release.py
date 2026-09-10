@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v1.0-alpha.25"
+VERSION = "v1.0-alpha.30"
 
 BUNDLE_MEMBERS = [
     "README.md",
@@ -27,6 +27,7 @@ BUNDLE_MEMBERS = [
     "docs/material_ontology_v1.md",
     "docs/release_governance_alpha24.md",
     "docs/independent_release_verification_alpha25.md",
+    "docs/alpha3_final_release_audit.md",
     "docs/ibm_mineral_concessions_2024.md",
     "docs/ibm_auction_mbs_geometry_2023_24.md",
     "docs/ibm_auction_status_evidence_2023_24.md",
@@ -76,6 +77,8 @@ BUNDLE_MEMBERS = [
     "scripts/build_release_governance.py",
     "scripts/validate_release_governance_csv_artifacts.mjs",
     "scripts/verify_release_independent.py",
+    "scripts/build_candidate_geojson.py",
+    "scripts/build_alpha3_completion_audit.py",
     "scripts/build_release.py",
     "scripts/build_sentinel2_surface_context.py",
     "scripts/plot_sentinel2_surface_context.py",
@@ -106,6 +109,7 @@ BUNDLE_MEMBERS = [
     "outputs/india_official_critical_mineral_mbs_manifest.csv",
     "outputs/india_mining_prospectivity_grid_h3_r6.csv",
     "outputs/india_mining_candidate_areas_validation_gated.csv",
+    "outputs/india_mining_candidate_areas_validation_gated.geojson",
     "outputs/india_emag2v3_magnetic_features_h3_r6.csv",
     "outputs/india_soilgrids_v2_soil_features_h3_r6.csv",
     "outputs/india_earthchem_geochemical_samples.csv",
@@ -128,6 +132,7 @@ BUNDLE_MEMBERS = [
     "outputs/release_artifact_manifest.csv",
     "outputs/coverage_gap_register.csv",
     "outputs/release_governance_validation.json",
+    "outputs/alpha3_completion_audit.json",
     "outputs/material_model_support.csv",
     "outputs/material_model_validation.csv",
     "outputs/ngdr_service_inventory.csv",
@@ -175,6 +180,7 @@ HASHED_ARTIFACTS = [
     "india_official_critical_mineral_mbs_manifest.csv",
     "india_mining_prospectivity_grid_h3_r6.csv",
     "india_mining_candidate_areas_validation_gated.csv",
+    "india_mining_candidate_areas_validation_gated.geojson",
     "india_emag2v3_magnetic_features_h3_r6.csv",
     "india_soilgrids_v2_soil_features_h3_r6.csv",
     "india_earthchem_geochemical_samples.csv",
@@ -197,6 +203,7 @@ HASHED_ARTIFACTS = [
     "release_artifact_manifest.csv",
     "coverage_gap_register.csv",
     "release_governance_validation.json",
+    "alpha3_completion_audit.json",
     "material_model_support.csv",
     "material_model_validation.csv",
     "ngdr_service_inventory.csv",

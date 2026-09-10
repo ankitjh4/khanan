@@ -17,7 +17,7 @@ KHANAN is intended to generate independent, early-stage hypotheses from lawful p
 
 ## Current status
 
-**Development release: v1.0-alpha.25 · Geospatial feature baseline: v0.12 · Prospectivity model baseline: v0.6 · Active work in progress**
+**Alpha 3.0 completion release: v1.0-alpha.30 · Geospatial feature baseline: v0.12 · Prospectivity model baseline: v0.6 · Declared project scope complete**
 
 The current release covers India with 88,857 H3 resolution-6 cells, approximately 36 km² each. It includes 781 public-source site records, 1,504 IBM MCDR inspection events, 82 IBM abandoned-mine inventory records, 722 IBM NMI resource-inventory rows, 123 IBM 2024 lease-distribution rows, 97 IBM auction-granted concession records, five dated Andhra auction-status evidence rows, 586 IBM State Review occurrence-geography rows expanded into 1,742 district-crosswalk records and 59,872 H3 context rows, 199 central critical-mineral auction events, 78 public-preview rows from eight historical GSI/OGD deposit catalogues, 13 independently published EarthChem geochemical samples represented by 1,323 long-form measurements, 950 selected Sentinel-2 scenes summarized over 8,707,986 requested seasonal sample points, 50 strategic modeling targets, and 2,784 validation-gated candidate cells.
 
@@ -68,6 +68,8 @@ Alpha.23 reconciles those 101 IBM State Review terms with the central ontology. 
 Alpha.24 freezes the current release schemas and consolidates coverage limitations. A 44-row artifact manifest registers all 43 public CSVs plus the auction-footprint GeoJSON with primary keys, schema and content hashes, source lineage, geographic and temporal scope, evidence roles, model-use restrictions, uncertainty fields and exclusion controls. The rebuilt data dictionary has one definition for each of the 1,928 published CSV columns. A separate 58-row coverage register preserves all 38 source-specific limitations and 20 project-wide geographic, temporal, licensing, access, method, validation and operational gaps. All keys and schemas pass, while the national-grid and candidate hashes remain unchanged. See [`docs/release_governance_alpha24.md`](docs/release_governance_alpha24.md).
 
 Alpha.25 independently verifies the portable release without importing any KHANAN builder or packager. It closes a reproducibility gap by adding every manifest-referenced builder, the source downloader, workbook builder, release packager, PDF helper and geospatial requirements file to the ZIP. The verifier recomputes schemas, keys, hashes, dictionary coverage, source-to-gap lineage, validation gates, status guardrails and exact candidate-to-grid parity. No evidence, model score, class or rank changes. See [`docs/independent_release_verification_alpha25.md`](docs/independent_release_verification_alpha25.md).
+
+Alpha 3.0 (`v1.0-alpha.30`) closes the user-defined project scope. It adds an exact typed Polygon GeoJSON counterpart for all 2,784 ranked candidate cells and a machine-readable completion audit. All 12 consolidated completion requirements pass, including reliable 254-entity material coverage, source-term normalization, evidence-family integration, role separation, spatial validation, uncertainty and exclusions, gap disclosure, schema governance and unsupported-claim guardrails. The independent release verifier checks the final ZIP, candidate CSV/GeoJSON parity and frozen model hashes. No evidence, score, class or rank changes. See [`docs/alpha3_final_release_audit.md`](docs/alpha3_final_release_audit.md).
 
 Candidate scores are reconnaissance indices. They are not probabilities of discovery, resource estimates, reserves, grades, economic valuations, legal concessions, or drill targets.
 
@@ -173,12 +175,13 @@ The intended operating model is a continuously scheduled, 24/7 group of speciali
 
 ## Release files
 
-The current portable development release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.25.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.25.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); it is not the current alpha artifact. The uncompressed nationwide prospectivity grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
+The Alpha 3.0 portable release is [`outputs/india_mining_dataset_csv_bundle_v1.0-alpha.30.zip`](outputs/india_mining_dataset_csv_bundle_v1.0-alpha.30.zip). An earlier v0.6 copy is also stored on [Google Drive](https://drive.google.com/file/d/1IpbPo6m7BDNr1rZcyEMelUfCNJneQBIf/view?usp=drivesdk) in the [KHANAN Drive folder](https://drive.google.com/drive/folders/1K3o1FL2Wxoe-Cz8GiohFSYiV2XZ2FsIL); it is not the current Alpha 3.0 artifact. The uncompressed nationwide prospectivity grid is excluded from the Git checkout because it exceeds GitHub's ordinary file-size limit, but it is included in the portable bundle.
 
 | File | Rows | Role |
 |---|---:|---|
 | `outputs/india_mining_prospectivity_grid_h3_r6.csv` | 88,857 | Complete national H3 grid with geology, terrain, climate, population, demographics, EMAG2v3 and SoilGrids context, material scores, validation and quality flags. Included inside the current portable bundle. |
 | `outputs/india_mining_candidate_areas_validation_gated.csv` | 2,784 | Validation-gated priority and high-priority cells, ranked nationally, with non-scoring EMAG2v3 and SoilGrids context appended. |
+| `outputs/india_mining_candidate_areas_validation_gated.geojson` | 2,784 | Exact typed Polygon GeoJSON view of the ranked candidate CSV; each feature includes a SHA-256 of its complete source row. |
 | `outputs/india_emag2v3_magnetic_features_h3_r6.csv` | 88,857 | Standalone H3 magnetic feature table: anomaly, local variability, error, source code, uncertainty and provenance fields. |
 | `outputs/india_soilgrids_v2_soil_features_h3_r6.csv` | 88,857 | Standalone H3 soil table with nine properties, two depths, p05/p95 uncertainty bounds, derived USDA texture classes and provenance. |
 | `outputs/india_sentinel2_surface_context_h3_r6.csv` | 88,857 | Standalone H3 two-season surface-context table with six BOA-reflectance bands, broad indices and ratios, native-SCL support counts, source-scene lineage and explicit model exclusion. |
@@ -244,8 +247,9 @@ The current portable development release is [`outputs/india_mining_dataset_csv_b
 | `outputs/sentinel2_surface_context_validation.json` | 1 | Sentinel catalog scope, scene selection, native-SCL and radiometric checks, national coverage, index ranges, token screening and unchanged-ranking hashes. |
 | `outputs/nasa_power_rolling_12m_validation.json` | 1 | Weather-source checksums, completeness and range checks. |
 | `outputs/india_mining_dataset_companion.xlsx` | — | Legacy v0.6 thirteen-sheet review workbook. It does not yet include the v1 ontology; the CSVs remain authoritative. |
-| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.25.zip` | — | Portable development bundle, including the full grid, reviewed State MBS geometry, reconciled IBM State Review occurrence context, magnetic, soil, EarthChem and Sentinel-2 context, paired feature-ablation and official-block transfer evidence, the partial GSI/OGD deposit preview, the 254-entity ontology, release governance, independent verifier, audits, validations, maps and complete declared reproducibility entry points. |
-| `outputs/independent_release_verification.json` | 1 | Independent ZIP, manifest, schema, key, checksum, provenance, validation and model-guardrail verification report. |
+| `outputs/alpha3_completion_audit.json` | 1 | Machine-readable pass/fail audit of the 12 consolidated Alpha 3.0 requirements and their evidence. |
+| `outputs/india_mining_dataset_csv_bundle_v1.0-alpha.30.zip` | — | Deterministic Alpha 3.0 bundle, including the full grid, candidate CSV/GeoJSON, observed evidence, contextual features, validations, governance, final audit, maps and complete declared reproduction entry points. |
+| `outputs/independent_release_verification.json` | 1 | Independent final ZIP, manifest, schema, key, checksum, provenance, validation, GeoJSON-parity and model-guardrail verification report. |
 | `outputs/SHA256SUMS.txt` | — | Integrity hashes for published artifacts. |
 
 ## Repository structure
@@ -262,6 +266,7 @@ KHANAN/
 ├── docs/
 │   ├── emag2_spatial_ablation.md     # paired spatial feature-admission experiment
 │   ├── earthchem_lithium_geochemistry.md # independent analytical geochemistry layer
+│   ├── alpha3_final_release_audit.md # completion requirements, limitations and evidence
 │   ├── gsi_ogd_mineral_deposit_preview.md # partial historical GSI deposit-catalog preview
 │   ├── ibm_imyb_state_review_occurrences_2024.md # IBM State Review occurrence geography and crosswalk
 │   ├── material_ontology_v1.md       # controlled material identities and source-term mappings
@@ -291,7 +296,7 @@ KHANAN/
 - Publish source manifests, dictionaries, checksums and interpretation guardrails.
 - Recover and validate all 143 central critical-mineral auction-offer footprints for tranches I–VIII.
 
-### Phase 1 — Repository and release discipline (current)
+### Phase 1 — Repository and release discipline (complete for Alpha 3.0)
 
 - Maintain KHANAN as a structured, versioned repository.
 - Publish reproducible overview maps and machine-readable release bundles.
@@ -300,8 +305,9 @@ KHANAN/
 - Add automated schema, provenance, checksum and regression tests.
 - **Completed in alpha.24:** freeze and validate every published CSV/GeoJSON schema and primary key, complete the 1,928-field data dictionary, separate five evidence roles and publish a 58-row consolidated coverage-gap register.
 - **Completed in alpha.25:** independently verify the release bundle and include every declared build entry point and dependency required by the portable reproduction instructions.
-- Introduce changelogs and source freshness reports.
-- Define source-specific redistribution and citation policy before any public release.
+- **Completed in Alpha 3.0:** publish an exact typed candidate GeoJSON, run the machine-readable completion audit, independently verify the deterministic release and publish the declared scope to the public repository.
+- Future extension: introduce rolling changelogs and source-freshness reports.
+- Future extension: expand source-specific redistribution and citation policy as new sources are admitted.
 
 ### Phase 2 — Authoritative mine, lease and grant layer
 
@@ -386,7 +392,7 @@ KHANAN/
 
 ### Alpha 3.0 — Project completion boundary
 
-Alpha 3.0 is the user-defined finish line for the current KHANAN goal. Work stops once that release is built, independently verified, published to the public repository, and accompanied by a final limitations and provenance audit. “Complete” will mean that the declared Alpha 3.0 scope and reproducibility gates are met—not that India has been exhaustively explored, that every deposit is known, or that any model hypothesis is a mineral discovery.
+Alpha 3.0 is the user-defined finish line for the current KHANAN goal. The `v1.0-alpha.30` release is the chronological release identifier for that milestone. Its declared scope and reproducibility gates are complete. This does not mean that India has been exhaustively explored, that every deposit is known, or that any model hypothesis is a mineral discovery.
 
 The Alpha 3.0 release gate requires:
 
@@ -396,6 +402,8 @@ The Alpha 3.0 release gate requires:
 - a final coverage report identifying every known geographic, temporal, licensing and source-access gap;
 - a public map and data-science-ready CSV/geospatial release with uncertainty and exclusion fields intact;
 - zero unsupported claims of reserves, grades, discoveries, operating status or legal rights.
+
+All six release gates are met. The consolidated machine-readable audit passes 12 of 12 requirements; the detailed evidence and remaining scientific limitations are in [`docs/alpha3_final_release_audit.md`](docs/alpha3_final_release_audit.md) and [`outputs/alpha3_completion_audit.json`](outputs/alpha3_completion_audit.json).
 
 ## Reproduce the current baseline
 
@@ -437,12 +445,14 @@ python3 -m venv .venv
 .venv/bin/python scripts/plot_sentinel2_surface_context.py
 .venv/bin/python scripts/plot_sentinel2_ablation.py
 .venv/bin/python scripts/plot_official_block_transfer.py
+.venv/bin/python scripts/build_candidate_geojson.py
 .venv/bin/python scripts/build_release_governance.py
+.venv/bin/python scripts/build_alpha3_completion_audit.py
 node --expose-gc scripts/validate_material_ontology_csv_artifacts.mjs
 node --expose-gc scripts/validate_release_governance_csv_artifacts.mjs
 .venv/bin/python scripts/build_release.py
 shasum -a 256 -c outputs/SHA256SUMS.txt
-.venv/bin/python scripts/verify_release_independent.py --bundle outputs/india_mining_dataset_csv_bundle_v1.0-alpha.25.zip --checksums outputs/SHA256SUMS.txt --workspace . --output outputs/independent_release_verification.json
+.venv/bin/python scripts/verify_release_independent.py --bundle outputs/india_mining_dataset_csv_bundle_v1.0-alpha.30.zip --checksums outputs/SHA256SUMS.txt --workspace . --output outputs/independent_release_verification.json
 ```
 
 The XLSX companion is generated by `scripts/build_workbook.mjs` using the Codex desktop bundled spreadsheet runtime. See `docs/methodology.md` for model construction, validation thresholds and detailed limitations.
@@ -464,4 +474,4 @@ The release is not an exhaustive current mine/lease register. It still lacks dep
 
 One official Biarpalli source table places an Odisha block near 89°E; KHANAN retains and flags the published coordinates. The 143 auction-offer observations reconstruct to 100 distinct published footprints, while the tranche-VIII government release reports 88 cumulative offered blocks. That discrepancy remains explicitly unreconciled.
 
-For the complete provenance and interpretation contract, read [`docs/methodology.md`](docs/methodology.md), [`docs/release_governance_alpha24.md`](docs/release_governance_alpha24.md), [`docs/independent_release_verification_alpha25.md`](docs/independent_release_verification_alpha25.md), [`outputs/source_registry.csv`](outputs/source_registry.csv), [`outputs/release_artifact_manifest.csv`](outputs/release_artifact_manifest.csv), [`outputs/coverage_gap_register.csv`](outputs/coverage_gap_register.csv), [`outputs/data_dictionary.csv`](outputs/data_dictionary.csv), and [`outputs/independent_release_verification.json`](outputs/independent_release_verification.json).
+For the complete provenance and interpretation contract, read [`docs/methodology.md`](docs/methodology.md), [`docs/release_governance_alpha24.md`](docs/release_governance_alpha24.md), [`docs/independent_release_verification_alpha25.md`](docs/independent_release_verification_alpha25.md), [`docs/alpha3_final_release_audit.md`](docs/alpha3_final_release_audit.md), [`outputs/source_registry.csv`](outputs/source_registry.csv), [`outputs/release_artifact_manifest.csv`](outputs/release_artifact_manifest.csv), [`outputs/coverage_gap_register.csv`](outputs/coverage_gap_register.csv), [`outputs/data_dictionary.csv`](outputs/data_dictionary.csv), [`outputs/india_mining_candidate_areas_validation_gated.geojson`](outputs/india_mining_candidate_areas_validation_gated.geojson), [`outputs/alpha3_completion_audit.json`](outputs/alpha3_completion_audit.json), and [`outputs/independent_release_verification.json`](outputs/independent_release_verification.json).

@@ -1,31 +1,31 @@
 {
-  "release_version": "v1.0-alpha.25",
+  "release_version": "v1.0-alpha.30",
   "verification_method": "Python standard library; no KHANAN builder or packager imports",
   "bundle": {
-    "name": "india_mining_dataset_csv_bundle_v1.0-alpha.25.zip",
-    "sha256": "2c8a37626654da34d63114a24487d46d9de9914fb2bcb01e2e52c5e38e17cacf",
-    "members": 149
+    "name": "india_mining_dataset_csv_bundle_v1.0-alpha.30.zip",
+    "sha256": "7c626ded68a9d69c1b6aef10eab1ac2ad3d72d5da6391902a6fe658bd23a1fbe",
+    "members": 154
   },
   "workspace_comparison": {
     "requested": true,
-    "members_compared": 149,
+    "members_compared": 154,
     "missing": [],
     "mismatched": []
   },
   "checksum_verification": {
     "requested": true,
-    "file_sha256": "367c594e213f99b60062cc3deb08706732f151bab11fed298e7cd8dc3b088a4c",
-    "declared": 67,
-    "verified": 67,
+    "file_sha256": "393e19b347059382b221c0ced824e9012504b891be8d8422da76d67c8064051b",
+    "declared": 69,
+    "verified": 69,
     "missing_targets": [],
     "mismatches": [],
     "manifest_artifacts_without_checksum": []
   },
   "summary": {
-    "checks_total": 25,
-    "checks_passed": 25,
+    "checks_total": 26,
+    "checks_passed": 26,
     "checks_failed": 0,
-    "manifest_artifacts_verified": 44,
+    "manifest_artifacts_verified": 45,
     "candidate_rows_verified": 2784
   },
   "checks_pass": true,
@@ -33,13 +33,13 @@
     {
       "check": "bundle_exists",
       "passed": true,
-      "detail": "india_mining_dataset_csv_bundle_v1.0-alpha.25.zip"
+      "detail": "india_mining_dataset_csv_bundle_v1.0-alpha.30.zip"
     },
     {
       "check": "zip_member_names_unique",
       "passed": true,
       "detail": {
-        "members": 149
+        "members": 154
       }
     },
     {
@@ -81,7 +81,7 @@
       "check": "reproduction_inputs_present",
       "passed": true,
       "detail": {
-        "required": 15,
+        "required": 20,
         "missing": []
       }
     },
@@ -94,15 +94,15 @@
       "check": "manifest_inventory",
       "passed": true,
       "detail": {
-        "rows": 44,
-        "unique_artifact_ids": 44
+        "rows": 45,
+        "unique_artifact_ids": 45
       }
     },
     {
       "check": "manifest_release_version",
       "passed": true,
       "detail": [
-        "v1.0-alpha.25"
+        "v1.0-alpha.30"
       ]
     },
     {
@@ -120,7 +120,7 @@
       "check": "manifest_artifacts_present_in_bundle",
       "passed": true,
       "detail": {
-        "registered": 44,
+        "registered": 45,
         "missing": []
       }
     },
@@ -128,7 +128,7 @@
       "check": "manifest_builders_present_in_bundle",
       "passed": true,
       "detail": {
-        "referenced": 22,
+        "referenced": 23,
         "missing": []
       }
     },
@@ -136,7 +136,7 @@
       "check": "manifest_contracts_recomputed",
       "passed": true,
       "detail": {
-        "verified": 44,
+        "verified": 45,
         "failed": []
       }
     },
@@ -174,7 +174,7 @@
       "check": "validation_artifacts_parse_and_pass_declared_gates",
       "passed": true,
       "detail": {
-        "validation_artifacts": 21,
+        "validation_artifacts": 22,
         "failed": [],
         "without_global_gate": 0
       }
@@ -207,11 +207,21 @@
       }
     },
     {
+      "check": "candidate_geojson_exact_typed_counterpart",
+      "passed": true,
+      "detail": {
+        "features": 2784,
+        "unique_ids": 2784,
+        "errors": {}
+      }
+    },
+    {
       "check": "model_hypotheses_disclaim_unsupported_claims",
       "passed": true,
       "detail": {
         "model_hypothesis_artifacts": [
           "outputs/india_mining_candidate_areas_validation_gated.csv",
+          "outputs/india_mining_candidate_areas_validation_gated.geojson",
           "outputs/india_mining_prospectivity_grid_h3_r6.csv"
         ]
       }
@@ -221,7 +231,7 @@
       "passed": true,
       "detail": {
         "requested": true,
-        "members_compared": 149,
+        "members_compared": 154,
         "missing": [],
         "mismatched": []
       }
@@ -231,9 +241,9 @@
       "passed": true,
       "detail": {
         "requested": true,
-        "file_sha256": "367c594e213f99b60062cc3deb08706732f151bab11fed298e7cd8dc3b088a4c",
-        "declared": 67,
-        "verified": 67,
+        "file_sha256": "393e19b347059382b221c0ced824e9012504b891be8d8422da76d67c8064051b",
+        "declared": 69,
+        "verified": 69,
         "missing_targets": [],
         "mismatches": [],
         "manifest_artifacts_without_checksum": []
