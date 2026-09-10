@@ -123,7 +123,7 @@
   "official_critical_mineral_distinct_offer_lineage_keys": 100,
   "official_critical_mineral_pib_reported_cumulative_offer_count": 88,
   "official_critical_mineral_lineage_reconciliation_status": "not_reconciled",
-  "development_release_version": "v1.0-alpha.19",
+  "development_release_version": "v1.0-alpha.20",
   "material_ontology_v1": {
     "ontology_rows": 233,
     "ima_verified_species": 111,
@@ -332,6 +332,24 @@
     "production_scoring_changed": false,
     "candidate_table_sha256_unchanged": true,
     "baseline_parity_with_existing_ablation": true,
+    "checks_pass": true
+  },
+  "official_block_transfer_validation": {
+    "experiment_version": "official-block-transfer-v0.1",
+    "unique_official_footprints_screened": 166,
+    "target_mapped_contributing_footprints": 151,
+    "observation_rows": 221,
+    "materials_with_official_block_pairs": 24,
+    "evaluated_materials": 12,
+    "materials_passing_statistical_gate": 0,
+    "statistical_gate_materials": [],
+    "materials_passing_production_admission_gate": 0,
+    "production_admission_materials": [],
+    "source_label_independence_resolved": false,
+    "candidate_scores_recomputed": false,
+    "production_scoring_changed": false,
+    "candidate_table_sha256_unchanged": true,
+    "national_grid_sha256_unchanged": true,
     "checks_pass": true
   }
 }

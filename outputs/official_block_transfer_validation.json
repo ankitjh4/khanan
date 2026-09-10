@@ -1,0 +1,287 @@
+{
+  "release_version": "v1.0-alpha.20",
+  "experiment_version": "official-block-transfer-v0.1",
+  "model_version": "recon-screening-v0.1.0",
+  "input_sha256": {
+    "national_grid": "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9",
+    "candidate_table": "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04",
+    "known_sites": "3fd4ed34e4d717058d0320e882396afe7b0e39cb4c52d0d6e0b49a7045c379ab",
+    "material_configuration": "a3018a45f9b6a88d0e0529d80b564444b44cf99aa94c0682a9eda2e6f4dd09ed",
+    "material_model_support": "abeab8f612c6696f8792062491d5514c00ff37086b0ab40011246d82e344fe4b",
+    "central_critical_blocks": "cc1a855341166d56067697ae192d496e0a7076526260e32ff5e6a8eb57df3dbc",
+    "state_auction_mbs_geometries": "320a8e365f3504c3b12e167808f80a10abf6202dd5f3f0a40fd3ade23bace79e"
+  },
+  "method": {
+    "unit_of_analysis": "one unique official block footprint and normalized target-material pair; central reoffer events are deduplicated by block_lineage_key",
+    "positive_label": "centroid of an admitted official auction or exploration block naming the target material",
+    "primary_positive_exclusion": ">25.0 km from any MRDS training occurrence for the material",
+    "background": "deterministic India H3 r6 sample >25.0 km from MRDS evidence and >25.0 km from any official block centroid for the material",
+    "score": "exact full-data v0.6 target-material reconnaissance score; no refitting",
+    "uncertainty": "500-replicate separate positive/background H3 r3 group bootstrap",
+    "central_reoffer_handling": "latest event retained as canonical after confirming invariant geometry and normalized material set; all represented event IDs retained",
+    "geometry_sampling": "one H3 r6 cell containing the authoritative block centroid; block size does not weight the result",
+    "known_limitation": "official targeting is source-independent from MRDS publication but not proven knowledge-independent; blocks are not confirmed deposits"
+  },
+  "predeclared_statistical_gate": {
+    "minimum_primary_positive_blocks": 10,
+    "minimum_positive_h3_r3_groups": 4,
+    "minimum_known_evidence_records": 10,
+    "minimum_internal_spatial_cv_auc": 0.6,
+    "minimum_transfer_roc_auc": 0.6,
+    "transfer_auc_ci95_lower_bound_strictly_above": 0.5,
+    "minimum_transfer_recall_at_background_top5pct": 0.2,
+    "minimum_target_material_top5_rate": 0.2
+  },
+  "production_gate": {
+    "statistical_gate_required": true,
+    "complete_source_label_independence_required": true,
+    "source_label_independence_resolved": false,
+    "effect": "None. A statistical pass is diagnostic support only; production admission also requires a genuinely independent confirmed occurrence/deposit set or field validation."
+  },
+  "central_offer_event_rows": 143,
+  "central_accepted_offer_event_rows": 142,
+  "central_unique_accepted_footprints": 99,
+  "state_geometry_rows": 67,
+  "state_admitted_footprints": 67,
+  "unique_official_footprints_screened": 166,
+  "target_mapped_contributing_footprints": 151,
+  "central_target_mapped_contributing_footprints": 87,
+  "state_target_mapped_contributing_footprints": 64,
+  "observation_rows": 221,
+  "materials_with_official_block_pairs": 24,
+  "evaluated_materials": 12,
+  "materials_passing_statistical_gate": 0,
+  "statistical_gate_materials": [],
+  "materials_passing_production_admission_gate": 0,
+  "production_admission_materials": [],
+  "source_label_independence_resolved": false,
+  "candidate_scores_recomputed": false,
+  "production_scoring_changed": false,
+  "candidate_table_sha256_unchanged": true,
+  "national_grid_sha256_unchanged": true,
+  "score_parity": {
+    "top5_value_comparisons": 444285,
+    "score_mismatches": 0,
+    "percentile_mismatches": 0,
+    "distance_mismatches": 0,
+    "exact_published_score_parity": true
+  },
+  "background_exclusion_diagnostics": {
+    "minimum_sampled_background_to_known_evidence_km": 25.10239601135254,
+    "minimum_sampled_background_to_official_block_km": 25.156818718573454
+  },
+  "checks": [
+    {
+      "name": "summary_rows",
+      "passed": true,
+      "observed": 50,
+      "expected": 50
+    },
+    {
+      "name": "unique_summary_ids",
+      "passed": true,
+      "observed": 50,
+      "expected": 50
+    },
+    {
+      "name": "observation_rows",
+      "passed": true,
+      "observed": 221,
+      "expected": 221
+    },
+    {
+      "name": "unique_observation_ids",
+      "passed": true,
+      "observed": 221,
+      "expected": 221
+    },
+    {
+      "name": "data_dictionary_rows",
+      "passed": true,
+      "observed": 1561,
+      "expected": 1561
+    },
+    {
+      "name": "unique_data_dictionary_fields",
+      "passed": true,
+      "observed": 1561,
+      "expected": 1561
+    },
+    {
+      "name": "official_block_target_materials_known",
+      "passed": true,
+      "observed": [
+        "Aluminium",
+        "Calcium and limestone",
+        "Chromium",
+        "Cobalt",
+        "Copper",
+        "Gallium",
+        "Gold",
+        "Graphite",
+        "Iron",
+        "Lead",
+        "Lithium",
+        "Manganese",
+        "Molybdenum",
+        "Nickel",
+        "Phosphorus",
+        "Platinum-group elements",
+        "Potash",
+        "Rare-earth elements",
+        "Tin",
+        "Titanium",
+        "Tungsten",
+        "Vanadium",
+        "Zinc",
+        "Zirconium"
+      ],
+      "expected": "subset of configured v0.6 targets"
+    },
+    {
+      "name": "central_unique_accepted_footprints",
+      "passed": true,
+      "observed": 99,
+      "expected": 99
+    },
+    {
+      "name": "central_reoffer_material_sets_invariant",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "central_reoffer_geometries_invariant",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "state_admitted_footprints",
+      "passed": true,
+      "observed": 67,
+      "expected": 67
+    },
+    {
+      "name": "unique_official_footprints_screened",
+      "passed": true,
+      "observed": 166,
+      "expected": 166
+    },
+    {
+      "name": "target_mapped_contributing_footprints",
+      "passed": true,
+      "observed": 151,
+      "expected": 151
+    },
+    {
+      "name": "all_block_centroids_join_grid",
+      "passed": true,
+      "observed": 221,
+      "expected": 221
+    },
+    {
+      "name": "published_score_parity",
+      "passed": true,
+      "observed": {
+        "top5_value_comparisons": 444285,
+        "score_mismatches": 0,
+        "percentile_mismatches": 0,
+        "distance_mismatches": 0,
+        "exact_published_score_parity": true
+      },
+      "expected": {
+        "score_mismatches": 0,
+        "percentile_mismatches": 0,
+        "distance_mismatches": 0
+      }
+    },
+    {
+      "name": "evaluated_materials",
+      "passed": true,
+      "observed": 12,
+      "expected": ">=5"
+    },
+    {
+      "name": "primary_positive_distance_exclusion",
+      "passed": true,
+      "observed": 25.74639129638672,
+      "expected": ">25.0"
+    },
+    {
+      "name": "sampled_background_known_evidence_exclusion",
+      "passed": true,
+      "observed": 25.10239601135254,
+      "expected": ">25.0"
+    },
+    {
+      "name": "sampled_background_official_block_exclusion",
+      "passed": true,
+      "observed": 25.156818718573454,
+      "expected": ">25.0"
+    },
+    {
+      "name": "central_source_excluded_from_scoring",
+      "passed": true,
+      "observed": [
+        "geometry_available_for_overlay_not_used_in_prospectivity_training_or_scoring"
+      ],
+      "expected": "all contain not_used_in_prospectivity"
+    },
+    {
+      "name": "state_source_context_only",
+      "passed": true,
+      "observed": [
+        "context_only"
+      ],
+      "expected": [
+        "context_only"
+      ]
+    },
+    {
+      "name": "training_source_is_mrds_only",
+      "passed": true,
+      "observed": [
+        "SRC_USGS_MRDS"
+      ],
+      "expected": [
+        "SRC_USGS_MRDS"
+      ]
+    },
+    {
+      "name": "source_label_independence_guardrail",
+      "passed": true,
+      "observed": "unresolved_and_blocks_production_admission",
+      "expected": "unresolved_and_blocks_production_admission"
+    },
+    {
+      "name": "candidate_scores_not_recomputed",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "production_scoring_unchanged",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "candidate_hash_unchanged",
+      "passed": true,
+      "observed": "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04",
+      "expected": "f730ee1c72a72764c49e95b0cf1b29873df4e32f2ceed2610e534915c760cf04"
+    },
+    {
+      "name": "national_grid_hash_unchanged",
+      "passed": true,
+      "observed": "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9",
+      "expected": "13307723efac1054666308c77b52ca0c93820a63ce535f578b23a294906136d9"
+    }
+  ],
+  "checks_pass": true,
+  "output_sha256": {
+    "summary_csv": "4d4244f1dbbb397aff0a69652beae668b3a6549d64ab91a746308f2ac5b65b60",
+    "observation_csv": "08f32c8692a28e14a07f4ac428618b1ae2616b5b54b64ef904ed81a666dcdea2"
+  }
+}

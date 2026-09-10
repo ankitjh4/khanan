@@ -21,7 +21,7 @@ const targets = [
   },
   {
     file: "data_dictionary.csv",
-    expectedRows: 1482,
+    expectedRows: 1561,
     expectedColumns: 6,
     ranges: ["A1425:F1443"],
   },

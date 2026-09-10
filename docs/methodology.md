@@ -159,7 +159,15 @@ The Sentinel extension uses six two-season bare-surface reflectance bands, four 
 
 Fourteen materials produce 70 complete spatial folds. Four improve and ten decline in pooled ROC AUC. Vanadium improves by `+0.2524` with a wholly positive interval but has only 10 positive cells versus the 20-cell admission minimum. Silver improves by `+0.1252` with a wholly positive interval but loses high-score recall. Lead's positive interval crosses zero. Titanium, manganese and phosphorus have wholly negative intervals. No material passes every fixed support, coverage, AUC, uncertainty and recall gate. Candidate rankings remain unchanged and Sentinel-2 remains context only. See [`sentinel2_spatial_ablation.md`](sentinel2_spatial_ablation.md) for the full protocol.
 
-## 18. Material ontology and model eligibility
+## 18. Official-block transfer validation
+
+Alpha.20 evaluates the unchanged v0.6 score against official block geometries that were never used to train, tune or rank the model. It screens 99 unique accepted central critical-mineral auction footprints and 67 admitted State auction MBS footprints. Reoffers are deduplicated by `block_lineage_key` only after confirming that their geometry and normalized material set are invariant; all represented event IDs and name aliases remain in the observation lineage. Of the 166 screened footprints, 151 map to at least one v0.6 target and contribute 221 block-material observations spanning 24 modeled materials.
+
+The unit of analysis is one target-material pair at the H3 resolution-6 cell containing an official polygon centroid, so larger polygons do not receive more weight. The primary cohort is more than 25 km from any same-material MRDS occurrence used by v0.6. Comparison cells are also more than 25 km from every same-material MRDS occurrence and every retained official-block centroid. For each evaluated material, a deterministic background sample and a 500-replicate, separate positive/background H3 resolution-3 group bootstrap produce transfer ROC AUC, precision-recall, high-score recall, target-retrieval and confidence-interval diagnostics.
+
+The evaluator independently reconstructs all 50 material scores from the exact v0.6 recipe and reproduces 444,285 published top-five score, percentile and distance values with zero mismatches. Twelve materials meet the descriptive evaluation threshold. None passes every predeclared statistical gate. Manganese has the strongest point estimate (`AUC 0.9517`) but only seven primary blocks in three broad H3 resolution-3 groups, below the support gates. Iron and phosphorus have positive point estimates but confidence intervals that cross chance. Production admission is additionally blocked because official auction/exploration targeting is not proven independent of all historical geological knowledge, and blocks are not confirmed deposits or discoveries. Scores, candidate classes and ranks remain unchanged. See [`official_block_transfer_validation.md`](official_block_transfer_validation.md) for the full protocol and results.
+
+## 19. Material ontology and model eligibility
 
 The v1.0-alpha.3 ontology contains 233 unique, typed entities derived from material terms actually observed in the India source tables, plus the retained v0.6 targets. It contains 69 elements, 88 mineral species, and 76 other entities spanning ores, rocks, groups, mixtures, varieties, industrial materials, and energy commodities. Stable typed IDs prevent an element, ore, mineral species, and informal group from being silently treated as the same thing.
 
@@ -173,7 +181,7 @@ Ontology inclusion never confers model eligibility. The geospatial prediction co
 
 Ontology arrays identify names, possible compounds, or representative forms; they do not assert assay, grade, recoverability, mineral processing route, or economic value at a site. Formulas are supplied only for elements, verified species, or defensible compounds. Otherwise the English names are preserved in arrays as requested.
 
-## 19. Reconnaissance score
+## 20. Reconnaissance score
 
 For a material with at least five mapped source records, cell score components are:
 
@@ -197,7 +205,7 @@ and clipped to 0–1. Materials with one to four evidence records receive a low-
 
 The score is a relative reconnaissance index. It is **not a calibrated discovery probability**.
 
-## 20. Spatial validation
+## 21. Spatial validation
 
 Materials with at least 10 mapped India evidence records are evaluated with up to five GroupKFold splits grouped by H3 resolution-3 cells. Each fold trains the same score recipe on geographically separated evidence and compares held-out occurrences with a deterministic sample of grid cells more than 25 km from any catalog evidence.
 
@@ -210,7 +218,7 @@ The comparison cells are not confirmed barren, so these metrics measure catalog-
 
 In v0.1, 15 material models have at least 10 records and spatial validation results. Vanadium's holdout AUC was below the promotion threshold and is therefore not labeled as a candidate even when its raw score is high.
 
-## 21. Candidate promotion rules
+## 22. Candidate promotion rules
 
 A cell is never promoted when it is within 5 km of any mapped source site. For all candidate classes, the top material must have at least 10 source records and the nearest same-material evidence must be more than 25 km and no more than 250 km away.
 
@@ -229,7 +237,7 @@ A cell is never promoted when it is within 5 km of any mapped source site. For a
 
 The national rank sorts passing candidates by validation AUC, then percentile, then score. Neighboring high-ranked H3 cells are usually one regional signal and should be dissolved/clustered before field planning.
 
-## 22. Validation and quality controls
+## 23. Validation and quality controls
 
 The release checks:
 
@@ -253,10 +261,11 @@ The release checks:
 - 13 EarthChem sample rows, two published coordinate sites, 1,323 unique source-cell observations, publisher checksum matches, qualifier counts, analytical metadata, H3/admin joins, numeric-range checks, explicit source-conflict flags and mandatory exclusion from v0.6.
 - 88,857 unique Sentinel-2 surface-context rows; 950 unique scenes and matching 475-tile seasonal sets; fixed observation windows; catalog thresholds; product-specific BOA conversion; native 20 m SCL code validity; bounded sample counts and indices; reflectance screening; token-free public URLs; explicit model exclusion; and unchanged grid/candidate hashes.
 - 50 material-level Sentinel-2 ablation rows, 70 purged spatial-fold rows, exact baseline parity with the published SoilGrids experiment, disjoint train/test groups, a minimum 50 km positive buffer, 500 group-bootstrap replicates, exclusion of observation-quality predictors, fold-only Sentinel imputation without missingness indicators, a mandatory unresolved post-label surface-disturbance guardrail, fixed admission gates and unchanged national-grid/candidate hashes.
+- 50 official-block material-summary rows and 221 block-material observations from 151 target-mapped footprints within a screened pool of 99 unique accepted central and 67 admitted State footprints; central-reoffer invariance and deduplication; exact reconstruction of 444,285 published top-five score, percentile and distance values; greater-than-25 km primary and comparison exclusions; 500 H3 resolution-3 group-bootstrap replicates; fixed statistical and knowledge-independence gates; and unchanged national-grid/candidate hashes.
 
 Build-time results are written to `outputs/validation_report.json`. A passing report means the pipeline's structural checks passed; it does not validate mineral occurrence in the field.
 
-## 23. What is required for a defensible discovery model
+## 24. What is required for a defensible discovery model
 
 Before using the output to allocate exploration capital, add:
 
@@ -270,5 +279,6 @@ Before using the output to allocate exploration capital, add:
 - forests, protected areas, land tenure, clearances, displacement risk, and community-impact constraints;
 - deposit-level rather than point-level deduplication;
 - spatially and temporally independent validation, uncertainty calibration, and field confirmation.
+- a genuinely knowledge-independent set of confirmed test deposits or sterile drill outcomes, with time-split evaluation against evidence that postdates the model inputs.
 
 The [National Geoscience Data Repository](https://geodataindia.gov.in/NGDR/register) is the most important next source, but its gated access and terms should be handled explicitly rather than bypassed.

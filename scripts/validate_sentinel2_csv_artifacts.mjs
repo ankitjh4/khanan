@@ -29,7 +29,7 @@ const targets = [
   {
     file: "data_dictionary.csv",
     range: "A1290:F1307",
-    expectedRows: 1482,
+    expectedRows: 1561,
     expectedColumns: 6,
   },
 ];

@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-VERSION = "v1.0-alpha.19"
+VERSION = "v1.0-alpha.20"
 
 BUNDLE_MEMBERS = [
     "README.md",
@@ -19,6 +19,7 @@ BUNDLE_MEMBERS = [
     "assets/figures/khanan-sentinel2-spatial-ablation-v0.1.png",
     "assets/figures/khanan-emag2-spatial-ablation-v0.1.png",
     "assets/figures/khanan-soilgrids-spatial-ablation-v0.1.png",
+    "assets/figures/khanan-official-block-transfer-v0.1.png",
     "data/README.md",
     "docs/methodology.md",
     "docs/ibm_mineral_concessions_2024.md",
@@ -28,6 +29,7 @@ BUNDLE_MEMBERS = [
     "docs/earthchem_lithium_geochemistry.md",
     "docs/sentinel2_surface_context.md",
     "docs/sentinel2_spatial_ablation.md",
+    "docs/official_block_transfer_validation.md",
     "docs/ngdr_access_and_integration.md",
     "docs/soilgrids_features.md",
     "docs/soilgrids_spatial_ablation.md",
@@ -55,6 +57,9 @@ BUNDLE_MEMBERS = [
     "scripts/evaluate_sentinel2_spatial_ablation.py",
     "scripts/plot_sentinel2_ablation.py",
     "scripts/validate_sentinel2_ablation_csv_artifacts.mjs",
+    "scripts/evaluate_official_block_transfer.py",
+    "scripts/plot_official_block_transfer.py",
+    "scripts/validate_official_block_transfer_csv_artifacts.mjs",
     "scripts/build_material_ontology.py",
     "config/materials.json",
     "config/weather_window.json",
@@ -82,6 +87,8 @@ BUNDLE_MEMBERS = [
     "outputs/india_sentinel2_scene_manifest_2025.csv",
     "outputs/material_sentinel2_spatial_ablation.csv",
     "outputs/material_sentinel2_spatial_ablation_folds.csv",
+    "outputs/material_official_block_transfer_validation.csv",
+    "outputs/official_block_transfer_observations.csv",
     "outputs/india_strategic_materials_top50.csv",
     "outputs/india_material_ontology_v1.csv",
     "outputs/material_source_term_crosswalk_v1.csv",
@@ -110,6 +117,7 @@ BUNDLE_MEMBERS = [
     "outputs/earthchem_geochemical_validation.json",
     "outputs/sentinel2_surface_context_validation.json",
     "outputs/sentinel2_spatial_ablation_validation.json",
+    "outputs/official_block_transfer_validation.json",
     "outputs/nasa_power_rolling_12m_validation.json",
     "outputs/official_critical_blocks_validation.json",
 ]
@@ -138,6 +146,8 @@ HASHED_ARTIFACTS = [
     "india_sentinel2_scene_manifest_2025.csv",
     "material_sentinel2_spatial_ablation.csv",
     "material_sentinel2_spatial_ablation_folds.csv",
+    "material_official_block_transfer_validation.csv",
+    "official_block_transfer_observations.csv",
     "india_strategic_materials_top50.csv",
     "india_material_ontology_v1.csv",
     "material_source_term_crosswalk_v1.csv",
@@ -166,6 +176,7 @@ HASHED_ARTIFACTS = [
     "earthchem_geochemical_validation.json",
     "sentinel2_surface_context_validation.json",
     "sentinel2_spatial_ablation_validation.json",
+    "official_block_transfer_validation.json",
     "nasa_power_rolling_12m_validation.json",
     "official_critical_blocks_validation.json",
     f"india_mining_dataset_csv_bundle_{VERSION}.zip",
